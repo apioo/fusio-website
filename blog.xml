@@ -1,0 +1,2966 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>urn:fusio-project-org:blog</id>
+    <title>Fusio Blog</title>
+    <updated>2022-01-27T23:00:00Z</updated>
+    <link rel="self" href="https://www.fusio-project.org/blog/feed" type="application/atom+xml" />
+    <entry>
+        <id>urn:fusio-project-org:blog:46</id>
+        <title>Fusio 2.1.9 released and plans for 3.0</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2022-01-27T23:00:00Z</updated>
+        <summary>
+            This post announces the release of Fusio version 2.1.9 and our plans for 3.0
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>We are happy to announce the release of version 2.1.9 of Fusio. This is probably the last patch release in the 2.x
+release line. This post will cover the most important changes which we have released since the last post.
+
+<ul>
+    <li>
+        <b>Use symfony mailer</b>
+        <p>We have moved from the deprecated <code>swiftmailer/swiftmailer</code> to the new <code>symfony/mailer</code> component for sending mails.
+        Because of this there is also a new <code>FUSIO_MAILER</code> env config which allows you to configure the mailer.</p>
+    </li>
+    <li>
+        <b>Add stripe adapter <a href="https://github.com/apioo/fusio/issues/428">#428</a></b>
+        <p>We have added support for stripe as new payment provider.</p>
+    </li>
+    <li>
+        <b>Update developer portal</b>
+        <p>There are many fixes regarding the developer portal how payments are handled and also all login provider and
+        recaptcha keys are now stored at the backend and Fusio will automatically insert those keys if you update an app.</p>
+    </li>
+    <li>
+        <b>Add OAuth2 connection handling</b>
+        <p>It is now possible to add connections which support an OAuth2 flow. This will be useful in the future if we add
+        more 3rd party API connections where we can use an OAuth2 authorization code flow.</p>
+    </li>
+    <li>
+        <b>Add insomnia importer and improve postman import</b>
+        <p>We have improved the insomnia and postman import over the last releases and they can be now used to easily
+        import data from these systems.</p>
+    </li>
+    <li>
+        <b>Remove sample todo endpoint <a href="https://github.com/apioo/fusio/issues/403">#403</a></b>
+        <p>We have removed the sample todo endpoints so that you have a clean Fusio instance if you simply make a plain
+        installation.</p>
+    </li>
+    <li>
+        <b>Add HttpComposition and HttpLoadBalancer action <a href="https://github.com/apioo/fusio/issues/391">#391</a></b>
+        <p>We have added two new HTTP actions to handle composition of multiple endpoints and load balancing requests
+        between endpoints.</p>
+    </li>
+</ul>
+
+<b>Plans for Fusio 3.0</b>
+<p>As noted before we are currently planing and working on the 3.0 release of Fusio. To share our plans with our
+community we are going through our internal list. Please let us know if you have any other ideas or topics which
+you would like to see in the next 3.0 release.</p>
+
+<ul>
+    <li>
+        <b>Set PHP 8.0 as minimum requirement and improve code basis using type hints</b>
+        <p>We are currently working on this topic in the background. Most of our underlying components are already 8.0
+        compatible. This will improve our code quality. Beside migrating our code base we also update all our
+        dependencies to the latest version. This change is of course only internal but we think it is a great step
+        to improve our code quality.</p>
+    </li>
+    <li>
+        <b>Migrating the backend app to Angular 13</b>
+        <p>This is a feature request which we get from many users and with the next release we finally want to move
+        from our old AngularJS app to a new Angular app. This will take a bit time since the backend app has grown
+        over the time, but it is a needed step. This will also enable us to integrate a visual schema editor into our
+        backend which we have already developed for a different project. Beside the backend app we should also migrate
+        the developer app but this has not the highest priority.</p>
+    </li>
+    <li>
+        <b>Creating a separate Fusio Framework (project Potara)</b>
+        <p>Currently Fusio provides two ways to use the project. The first way is that a user simply installs Fusio and
+        uses the backend to manage all tasks, so it can be used i.e. like a CMS. The other way is that a user can write
+        actual PHP classes and through the deploy command it is possible to provide these classes to Fusio. Internally
+        the deploy command also only talks to the internal API like if you use the backend app.</p>
+        <p>With the project Potara we have the idea to create a separate project which basically provides only the
+        framework. This means it does not work with a database instead it is like a framework where a user only provides
+        .yaml config files to describe the routes, actions and connections etc. This allows the user to use all actions
+        and connections which are already available as adapter. Of course the framework users would be not able to get
+        features like Rate-Limiting etc. since there is no database where we log incoming requests but it would be a
+        great option for users who would like to use Fusio more as a framework.</p>
+    </li>
+    <li>
+        <b>Creating a fusiocasts.com website</b>
+        <p>This is not directly related to the 3.0 release but a topic which we have on our list for a long time. So
+        we would like to create a video series where we cover and explain all aspects of Fusio. This should cover simple
+        things i.e. how to setup a Fusio instance to more complex topics like building custom actions using a worker or
+        setup a payment provider. Maybe we will make some more advanced videos only available to our donators but this
+        is not decided yet.</p>
+    </li>
+    <li>
+        <b>Create a new documentation website</b>
+        <p>Like in many other open source projects the state of our current documentation is not optimal. We would like
+        to move away from readthedocs and create a new dedicated subdomain i.e. docs.fusio-project.org where we serve
+        our documentation. We had some great experiences with <a href="https://docusaurus.io/">Docusaurus</a> which we
+        currently already use at <a href="https://phpsx.org/">phpsx.org</a>. With this step we also would like to improve
+        the documentation and make it more beginner-friendly.</p>
+    </li>
+    <li>
+        <b>Improving our external services</b>
+        <p>Besides the Fusio open source project we have launched the <a href="https://apigen.app/">apigen.app</a> and
+        <a href="https://fusio.cloud/">fusio.cloud</a> project. The APIgen app can basically generate a complete API
+        for you based on an entity definition. The fusio.cloud app is basically a hosting service which you can use to
+        simply get a running Fusio instance in the cloud. We also plan to continue and evolve those services so that
+        they benefit our community.</p>
+    </li>
+    <li>
+        <b>Introducing sdkgen.app</b>
+        <p>This is another project on our todo list which we would like to finalize. Some of our customers would like
+        to have an SDK for their API which they have build with Fusio without manually building any SDK. We really like
+        this idea and we have a plan to create a service where you can login via Github, then the user needs to provide
+        an OpenAPI specification (or maybe also a link to a Fusio instance), the user then also selects the supported
+        languages and for each language the user selects a specific repository. The service then automatically generates
+        a client SDK and pushes those changes to the repository. The user can then register such repos directly at a
+        package manager like npmjs and then he has a system which automatically updates the code if the schema changes.</p>
+    </li>
+</ul>
+
+<p>So these are currently our big topics. Some of them are not directly related to the 3.0 release but I think it is
+interesting for our community to know these topics. Beside those major topics we have of course our
+<a href="https://github.com/apioo/fusio/issues">issue list</a> where we also want to address some issues with the next
+release. So please let us know if you have any specific ideas for the next release and we are looking forward for the
+next 3.0 release.</p>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:45</id>
+        <title>Fusio VSCode extension</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2021-06-26T20:05:00Z</updated>
+        <summary>
+            This post announces the Fusio VSCode extension
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>We are really happy to introduce our new Fusio <a href="https://marketplace.visualstudio.com/items?itemName=Fusio.fusio">VSCode extension</a>.
+This extension integrates into the <a href="https://code.visualstudio.com/">VSCode</a> editor and helps to provide a
+great developer experience to create and update actions. To give you a first insight the following screenshot shows the
+extension in action.</p>
+
+<img src="https://www.fusio-project.org/img/vscode_screenshot.png" width="100%">
+
+<p>Internally the extension uses the automatic generated <a href="https://www.npmjs.com/package/fusio-sdk">javascript SDK</a>
+which operates with the same internal API as all other tools and apps do, so it is again a great example how we can build
+different apps and interfaces for specific use case while only relying on one single API. If you like to know more about
+the internals you can also take a look at the <a href="https://github.com/apioo/fusio-tools-vscode">extension repository</a>.</p>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:44</id>
+        <title>Fusio 2.0 released</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2021-02-06T18:32:00Z</updated>
+        <summary>
+            This post announces the Fusio 2.0 release
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>With this post we are really happy to announce the availability of Fusio 2.0. This release marks a huge milestone
+for the project and we are looking forward to change the way how APIs are build and managed. In the following we provide
+a list of a all important changes, please take a look at the previous RC posts for an in-depth explanation of all
+changes.</p>
+
+<ul>
+    <li>
+        <b>Backend based on actions</b>
+        <p>In previous versions of Fusio the internal backend and consumer API where based on custom controllers which
+        handled the request and response. We have now converted all controllers to Fusio actions, and added the fitting
+        schemas and routes to the database, this means basically that now the complete backend API runs also on Fusio.
+        We have added a new category to most resources so that you dont see all internal actions and schemas at the
+        backend but in the future it might be possible to select such a category. This means also you can easily reuse
+        any internal Fusio action in your API.</p>
+    </li>
+    <li>
+        <b>Improved RPC support</b>
+        <p>RPC is now a first class citizen style to invoke an action. This means you can call every route action also
+        via JsonRPC. It supports also batch calls to improve performance. An action receives now a <code>RequestInterface</code>
+        instance which has two implementations: <code>HttpRequest</code> and <code>RpcRequest</code>. If you invoke an
+        action via a route your action receives a <code>HttpRequest</code>, if you call it via JsonRPC your action
+        receives a <code>RpcRequest</code>. To build actions which work in both ways you can simply use the <code>get</code>
+        and <code>getPayload</code> method which are defined at the <code>RequestInterface</code>. All internal backend
+        actions can be called via HTTP or RPC.</p>
+    </li>
+    <li>
+        <b>Async action</b>
+        <p>It is now possible configure an action as async action. This means Fusio will directly return a 202 Accepted
+        response and puts the request into a queue to execute it at the background. This can be useful for
+        expensive actions. There is a new console command <code>action:queue</code> which executes all queued actions.</p>
+    </li>
+    <li>
+        <b>TypeSchema</b>
+        <p>Fusio uses now <a href="https://typeschema.org/">TypeSchema</a> instead of JsonSchema. TypeSchema is designed
+        to describe data models in a language neutral format. Through this we can now better describe our data and
+        generate much better SDK code.</p>
+    </li>
+    <li>
+        <b>Deploy changes to a remote Fusio instance</b>
+        <p>The deploy command reads all meta files at the resource folder and deploys those resources to the internal
+        API. It is now possible to deploy those change to a remote Fusio instance. By default Fusio uses
+        an internal transport so that the deploy command does not actually send HTTP requests to the server but invokes
+        them internally. If you deploy to a remote instance we send actual HTTP requests. Because of this change you need
+        now to login through the "login" command, which requests a fitting access token.</p>
+    </li>
+    <li>
+        <b>Moved all CLI commands to a separate package fusio/cli</b>
+        <p>We have now moved all CLI commands which talk to the API to a separate <a href="https://github.com/apioo/fusio-cli">package</a>
+        so that you can also use these commands as standalone CLI app. Basically those CLI commands are an alternative
+        to the backend app which allows you to control and configure Fusio via CLI.</p>
+    </li>
+    <li>
+        <b>Added role concept</b>
+        <p>We have implemented a new role system. A role defines the scopes which are allowed for a user. It also
+        assigns a category for a user, a user can then manage only resources in this category. There is a default role
+        which every new user receives.</p>
+    </li>
+    <li>
+        <b>Updated client SDKs</b>
+        <p>We have updated our <a href="https://github.com/apioo/fusio-sdk-php">PHP</a> and
+        <a href="https://github.com/apioo/fusio-sdk-javascript">Javascript</a> client SDK which can be used to access
+        the internal Fusio API. It is also possible to generate such an SDK for the API which you build with Fusio.</p>
+    </li>
+    <li>
+        <b>Moved apps folder to public folder</b>
+        <p>In previous versions the apps folder was separated from the public folder. The idea was that a user has to
+        setup a separate sub-domain to service the apps folder. This makes setup a Fusio instance more complicated,
+        because of this we have moved the apps folder into the public folder. If you want to create such a sub-domain
+        setup you can still easily move the folder to a separate location.</p>
+    </li>
+</ul>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:43</id>
+        <title>Fusio 2.0-RC2 released</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2021-01-15T22:37:00Z</updated>
+        <summary>
+            This post explains the features of the Fusio 2.0-RC2 release
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>We are happy to announce the release of Fusio 2.0-RC2. This is not the final 2.0 release but the second release
+candidate which allows you to test Fusio before the final 2.0 release. In the following we describe all important
+changes:</p>
+
+<ul>
+    <li>
+        <b>It is now possible to deploy changes to a remote Fusio instance #356</b>
+        <p>The deploy command reads all meta files at the resource folder and deploys those resources to the internal
+        API. It is now possible to deploy those change to a remote Fusio instance. By default Fusio uses
+        an internal transport so that the deploy command does not actually send HTTP requests to the server but invokes
+        them internally. If you deploy to a remote instance we send actual HTTP requests. Because of this change you need
+        now to login through the "login" command, which requests a fitting access token.</p>
+    </li>
+    <li>
+        <b>Moved all CLI commands to a separate package fusio/cli #357</b>
+        <p>We have now moved all CLI commands which talk to the API to a separate <a href="https://github.com/apioo/fusio-cli">package</a>
+        so that you can also use these commands as standalone CLI app. Basically those CLI commands are an alternative
+        to the backend app which allows you to control and configure Fusio via CLI.</p>
+    </li>
+    <li>
+        <b>Moved all generated model classes to a separate package fusio/model</b>
+        <p>We have extracted all automatically generated models in to a separate <a href="https://github.com/apioo/fusio-model">package</a>,
+        which is used by the CLI package and which you can also use if you want to talk and work with the internal Fusio
+        API. Basically we use those models internally and you can use them to produce a fitting request payload.</p>
+    </li>
+    <li>
+        <b>Execute all internal periodic tasks through the cron system</b>
+        <p>Previously we had multiple commands which must be called periodically via cron, i.e. to execute async
+        actions or dispatch events. We have build all those tasks now via an action and use the internal cron mechanism.
+        Now a user only needs to setup the cron system and all other periodically tasks work out of the box.</p>
+    </li>
+    <li>
+        <b>Added role concept, a role is assigned to a user and specifies the scopes and category</b>
+        <p>We have implemented a new role system. A role defines the scopes which are allowed for a user. It also
+        assigns a category for a user, a user can then manage only resources in this category. There is a default role
+        which every new user receives.</p>
+    </li>
+    <li>
+        <b>Make category editable, this allows to create new categories for your app</b>
+        <p>It is now possible to create categories for your app. This allows to split up your app into different parts.
+        I.e. the internal API of Fusio has also a separte category where all routes and actions are configured.</p>
+    </li>
+    <li>
+        <b>Consolidate OAuth2 endpoints</b>
+        <p>Previously there was a separate endpoint for the backend and consumer app. Every app uses now the <code>/authorization/token</code>
+        endpoint. This means the endpoints <code>/backend/token</code> and <code>/consumer/token</code> are removed.</p>
+    </li>
+    <li>
+        <b>An adapter can now register only provider classes</b>
+        <p>Currently all adapters register only specific classes. There was an option to register new routes, actions
+        and schemas but this features was now removed. If an adapter wants to provide such resources, the adapter
+        should use a routes provider.</p>
+    </li>
+    <li>
+        <b>Removed webserver config generation</b>
+        <p>Since it is now possible to deploy to a remote instance we have removed the feature to generate a webserver
+        configuration file. This feature was not often used and the config dependes also always on your setup and configuration.</p>
+    </li>
+</ul>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:42</id>
+        <title>Fusio 2.0 first release candidate available</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2020-12-25T11:44:00Z</updated>
+        <summary>
+            This post explains the features of the first Fusio 2.0 release candidate
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>We are really happy to announce the first release candidate of Fusio 2.0. It is not the final 2.0 release but a
+first pre release which gives users the chance to test the new version. Since it is a new major release candidate it
+contains many great changes. The following list will cover the most important changes:</p>
+
+<ul>
+    <li>
+        <b>Backend based on actions</b>
+        <p>In previous versions of Fusio the internal backend and consumer API where based on custom controllers which
+        handled the request and response. We have now converted all controllers to Fusio actions, and added the fitting
+        schemas and routes to the database, this means basically that now the complete backend API runs also on Fusio.
+        We have added a new category to most resources so that you dont see all internal actions and schemas at the
+        backend but in the future it might be possible to select such a category. This means also you can easily reuse
+        any internal Fusio action in your API.</p>
+    </li>
+    <li>
+        <b>Reorganized endpoints</b>
+        <p>The <code>/doc</code> and <code>/export</code> endpoints are now moved under the <code>/system</code> endpoint.
+        This means you can now use the <code>/doc</code> and <code>/export</code> path at your API. The <code>/system</code>
+        endpoint is now reserved for Fusio. The following mapping shows all endpoint changes:</p>
+        <table class="mdl-data-table">
+        <tr>
+            <th>Old Endpoint</th>
+            <th>New Endpoint</th>
+        </tr>
+        <tr>
+            <td>/doc</td>
+            <td>/system/doc</td>
+        </tr>
+        <tr>
+            <td>/doc/:version/*path</td>
+            <td>/system/doc/:version/*path</td>
+        </tr>
+        <tr>
+            <td>/export/debug</td>
+            <td>/system/debug</td>
+        </tr>
+        <tr>
+            <td>/export/health</td>
+            <td>/system/health</td>
+        </tr>
+        <tr>
+            <td>/export/jsonrpc</td>
+            <td>/system/jsonrpc</td>
+        </tr>
+        <tr>
+            <td>/export/routes</td>
+            <td>/system/routes</td>
+        </tr>
+        <tr>
+            <td>/export/schema/:name</td>
+            <td>/system/schema/:name</td>
+        </tr>
+        </table>
+        <br>
+    </li>
+    <li>
+        <b>Improved RPC support</b>
+        <p>RPC is now a first class citizen style to invoke an action. This means you can call every route action also
+        via JsonRPC. It supports also batch calls to improve performance. An action receives now a <code>RequestInterface</code>
+        instance which has two implementations: <code>HttpRequest</code> and <code>RpcRequest</code>. If you invoke an
+        action via a route your action receives a <code>HttpRequest</code>, if you call it via JsonRPC your action
+        receives a <code>RpcRequest</code>. To build actions which work in both ways you can simply use the <code>get</code>
+        and <code>getPayload</code> method which are defined at the <code>RequestInterface</code>. All internal backend
+        actions can be called via HTTP or RPC.</p>
+    </li>
+    <li>
+        <b>Async action</b>
+        <p>It is now possible configure an action as async action. This means Fusio will directly return a 202 Accepted
+        response and puts the request into a queue to execute it at the background. This can be useful for
+        expensive actions. There is a new console command <code>action:queue</code> which executes all queued actions.</p>
+    </li>
+    <li>
+        <b>TypeSchema</b>
+        <p>Fusio uses now <a href="https://typeschema.org/">TypeSchema</a> instead of JsonSchema. TypeSchema is designed
+        to describe data models in a language neutral format. Through this we can now better describe our data and
+        generate much better SDK code.</p>
+    </li>
+    <li>
+        <b>Schema based on PHP class</b>
+        <p>Because of TypeSchema it is now possible to create a PHP class which represents a request schema. Fusio will
+        create an instance of such a class containing the JSON data and pass it to your action. Through this you can work
+        with fully typed code. You can also generate such a class automatically based on a TypeSchema specification. Fusio
+        uses this also internally, please take a look at the <a href="https://github.com/apioo/fusio-impl/tree/master/resources">repository</a>
+        for an example.</p>
+    </li>
+    <li>
+        <b>Improved backend app</b>
+        <p>At the backend app we have improved the schema and action view and we have added new features like async
+        configuration etc.</p>
+    </li>
+    <li>
+        <b>Redesigned adapter actions</b>
+        <p>In previous version Fusio provided i.e. the "Sql-Table" action which allowed to create an API based on a database
+        table. This action could be used on every request method i.e. GET, POST, PUT, DELETE and internally it executed
+        the correct CRUD operation. With the new release we have split up this action into separate actions: <code>Sql-Select-All</code>,
+        <code>Sql-Select-Row</code>, <code>Sql-Insert</code>, <code>Sql-Update</code>, <code>Sql-Delete</code>.</p>
+        <p>Through this redesign every action can now be also called via RPC, since in an RPC context we dont have a
+        HTTP request method. Also it creates better actions where every action executes only a specific task. You can
+        think of an action like a serverless lambda function, which can be also executed via HTTP or direct invocation.</p>
+    </li>
+    <li>
+        <b>Removed migrations and moved all tables to InnoDB</b>
+        <p>We have reduced all migrations so that a new installation is now much faster. Previously we had some log
+        tables based on MyISAM, in the new release we use InnoDB for all tables.</p>
+    </li>
+    <li>
+        <b>Set PHP 7.3 as minimum requirement and 8.0 support</b>
+        <p>Since PHP 7.2 has now reached end of life s. <a href="https://www.php.net/supported-versions.php">supported versions</a>
+        Fusio 2.0 will have PHP 7.3 as minimum requirement, also this release will support version 8.0.</p>
+    </li>
+</ul>
+
+<p>With this new release we have setup Fusio for a great future. Our next big topic is the automatic deployment of a
+Fusio instance to a serverless provider i.e. AWS Lambda. This would allow to develop an API on a simple bare-metal
+server and in case you need the scaling capabilities you would be able to move the entire Fusio app to a serverless
+provider. This means all actions would be converted to a dedicated serverless function which gets invoked on a specific
+route. If you like to use or test this feature please let us know.</p>
+
+<p>Due to so many fundamental changes we have currently no upgrade path from Fusio 1.x to 2.0, so you can only start
+with a fresh installation. If you use the deploy mechanismus you probably dont need an upgrade path since you can simply
+run the <code>deploy</code> command on a new 2.0 installation. If there is a huge demand from the community we may start
+to build such an upgrade path. So feel free to test this new version of Fusio and please report any issue to our
+<a href="https://github.com/apioo/fusio">repository</a>.</p>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:41</id>
+        <title>Thoughts about the upcoming 2.0 release and beyond</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2020-09-05T20:53:00Z</updated>
+        <summary>
+            With this post we want to share the current state and our plans and thoughts for the Fusio 2.0 release and beyond
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>This post should give you an insight about our thoughts for the upcoming 2.0 release and also describe plans which
+we have for the future.</p>
+
+<b>Serverless</b>
+
+<p>The business logic of Fusio is defined inside an action. You can either use and configure an existing action or you
+you can develop a complete custom action. An action can then be assigned to a specific route, which invokes the action
+in case the route gets called. This action concept matches perfectly to the serverless design, so an action is
+equivalent to i.e. an AWS lambda function.</p>
+
+<p>We are planing to build a deploy mechanism which lets you generate a <code>serverless.yaml</code> to deploy your
+complete Fusio application to a <a href="https://www.serverless.com/">serverless</a> platform. Currently we are looking
+at <a href="https://github.com/brefphp/bref">bref</a> which simplifies this process for AWS. In the future it would be
+also possible to support other platforms like OpenWhisk or Google Cloud Functions.</p>
+
+<p>This would enable the great use case, that you can start building your API on a cheaper self hosted bare-metal server
+and in case you need the scalability of a cloud provider you can move your complete API to a serverless version with
+a single command. This feature is probably not directly available for the 2.0 version but it is on our roadmap. Feel
+free to let us know in case you are interested.</p>
+
+<b>API styles</b>
+
+<p>Fusio provides multiple ways to access your action logic. Every style is useful for specific use cases and Fusio
+tries to help you to easily facilitate this for your API. With the 2.0 release we try to improve these ways even
+further. The following list describes the API styles which you get out of the box with Fusio:</p>
+
+<ul>
+    <li>
+        <b>Request/Response style</b>
+        <p>The most common style to access APIs, you send a request to an endpoint and you receive directly the response
+        of the endpoint. Fusio provides automatically an <a href="https://www.openapis.org/">OpenAPI</a> specification
+        of all your endpoints.</p>
+    </li>
+    <li>
+        <b>RPC style</b>
+        <p>Through the <abbr title="Remote-Procedure-Call">RPC</abbr> style you can directly invoke actions based on the
+        defined operation id. Fusio provides an JsonRPC endpoint, it is also possible to invoke multiple actions through
+        a single call. For the 2.0 release we also plan to generate an <a href="https://open-rpc.org/">OpenRPC</a>
+        specification, so that you can easily discover all available methods.</p>
+    </li>
+    <li>
+        <b>Event-based style</b>
+        <p>Through the event based style your consumers register for specific events and all listeners will be notified
+        in case your application triggers this event. For the 2.0 release we also plan to generate an
+        <a href="https://www.asyncapi.com/">AsyncAPI</a> specification.</p>
+    </li>
+</ul>
+
+<b>Generation</b>
+
+<p>In the previous post we have talked about our code generation plans regarding client code. Beside this we have also
+plans to improve our <a href="https://generate.apioo.de/">generator service</a>. This service helps your to generate
+complete Fusio applications based on different sources. Currently we support OpenAPI and Entity as source. In the future
+we will also make it possible to save specific configurations and also provide more sample configurations. Looking
+even further it would be possible to directly deploy such a generated application to a server. So also please let us
+know if you are interested in this feature or if you have specific use cases which we should consider.</p>
+
+<p>So we hope we could share some of our thoughts and plans for Fusio. These are exciting times and we think that Fusio
+has a great future since it is a versatile tool to build APIs with some cool unique features.</p>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:40</id>
+        <title>SDK generation plans for the 2.0 release</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2020-07-11T19:42:00Z</updated>
+        <summary>
+            This post covers the SDK generation plans for the upcoming Fusio 2.0 release
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>With Fusio we want to create an API platform which helps to easily setup a
+great API infrastructure. That means it is easy possible to develop/manage an API
+and also to create an SDK for your customers which helps to work with the API.</p>
+
+<p>SDK generation is a hot topic for our 2.0 roadmap. We are working for a long
+time in the background to create a system which lets you easily generate solid
+client code. As end goal we want to generate the client based on the defined
+request and response schema formats. Currently Fusio uses JsonSchema but we have
+experienced the limitations of JsonSchema and code generation.</p>
+
+<p>Therefore we have started to build a new schema format called <a href="https://typeschema.org/">TypeSchema</a>.
+In fact it is not a new schema format, it basically a stricter version of
+JsonSchema with some optional new keywords. It is easily possible to convert
+a TypeSchema to a JsonSchema but not vice versa.</p>
+
+<p>For the Fusio 2.0 release we plan to migrate the complete schema definition
+to TypeSchema. This will allows us to easily generate client code and all sorts
+of other definitions. This will also allow us to create more Fusio SDK in
+different languages i.e. go, java, c#, etc.</p>
+
+<p>The implications are that some JsonSchema constructs will no longer work. If
+you want to prepare for the 2.0 release you can take a look at our
+<a href="https://github.com/apioo/typeschema/blob/master/migration.md">migration document</a>
+to see whether your schema is affected.</p>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:39</id>
+        <title>Version 1.9.4 released</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2020-06-20T22:28:00Z</updated>
+        <summary>
+            Coverage of the 1.9.4 release
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>We are really happy to announce version 1.9.4 of Fusio. The following list
+covers the most important changes of this release:</p>
+
+<ul>
+    <li>
+        <b>Add driver option to env file</b>
+        <p>We have added a new env config <code>FUSIO_DB_DRIVER</code> which allows to specify the database driver.</p>
+    </li>
+    <li>
+        <b>Add A/B test action <a href="https://github.com/apioo/fusio/issues/314">#314</a></b>
+        <p>Add an action which allows </p>
+    </li>
+    <li>
+        <b>Add JSON patch action <a href="https://github.com/apioo/fusio/issues/315">#315</a></b>
+        <p></p>
+    </li>
+    <li>
+        <b>Add util cache action <a href="https://github.com/apioo/fusio/issues/313">#313</a></b>
+        <p></p>
+    </li>
+</ul>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:38</id>
+        <title>Version 1.9.3 released</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2020-05-09T21:40:00Z</updated>
+        <summary>
+            Coverage of the 1.9.3 release
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>We are really happy to announce version 1.9.3 of Fusio. The following list
+covers the most important changes of this release:</p>
+
+<ul>
+    <li>
+        <b>Migrated all apps to a repo with a fusio-apps prefix</b>
+        <p>We have moved all apps under the apioo organization and prefixed
+        them with fusio-apps.</p>
+    </li>
+    <li>
+        <b>Removed backend app from repo and install backend app through marketplace on install</b>
+        <p>We have removed the backend app from the Fusio repo and install the app now
+        automatically through the install.php script. It is also easy possible to install the
+        app through the command <code>php bin/fusio marketplace:install fusio</code></p>
+    </li>
+    <li>
+        <b>Moved apps from public folder into a dedicated apps folder</b>
+        <p>We have created a separated apps folder where we place all installed apps. Through
+        this we no longer preserve theses paths add the public folder. This has also
+        the advantage that you can create a custom sub-domain for all your
+        apps which is only accessible for specific users.</p>
+    </li>
+    <li>
+        <b>Added no SSL verify option to marketplace install/update command</b>
+        <p>Since the backend app is no longer included we have also added an option to
+        skip the SSL verify option in case your OS has no fitting pem file.</p>
+    </li>
+    <li>
+        <b>Add .htaccess to root dir which redirect all requests to the public/ folder</b>
+        <p>We had many users who want to use Fusio inside a sub-folder i.e. at <code>acme.com/api</code>.
+        To solve this we have added a .htaccess file which redirects all requests to
+        the public folder.</p>
+    </li>
+</ul>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:37</id>
+        <title>Version 1.9.2 released</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2020-04-18T20:34:00Z</updated>
+        <summary>
+            Coverage of the 1.9.2 release
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>We are really excited to announce version 1.9.2 of Fusio. The following list
+covers the most important changes of this release:</p>
+
+<ul>
+    <li>
+        <b>Developer app add user activation</b>
+        <p>We have added an activation page to the developer app, previously
+        users had to implement this manually now it is possible to use the developer
+        app to activate an account.</p>
+    </li>
+    <li>
+        <b>Developer app add password reset <a href="https://github.com/apioo/fusio/issues/303">#303</a></b>
+        <p>The developer app contains now also an option to reset the password
+        for an user account. The API endpoint was already available but now the
+        app has also the option to use the endpoint.</p>
+    </li>
+    <li>
+        <b>Fix and improve user activation and password reset API endpoint</b>
+        <p>We have improved the token handling for the activation and password endpoint.
+        Both endpoints now create a token and the user receive this token via
+        mail and use this token to execute a specific operation.</p>
+    </li>
+    <li>
+        <b>Add captcha check to password reset endpoint</b>
+        <p>It is now also possible to add an captcha to the password reset process.
+        This ensures that it is not possible to abuse this process by an automatic script.</p>
+    </li>
+    <li>
+        <b>Allow dot in event name</b>
+        <p>The dot character is now allowed inside the event name.</p>
+    </li>
+    <li>
+        <b>Fix deletion of active routes <a href="https://github.com/apioo/fusio/issues/300">#300</a></b>
+        <p>Through this fix it is not longer possible to delete a route which has
+        one production version.</p>
+    </li>
+</ul>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:36</id>
+        <title>Version 1.9.1 released</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2020-04-05T22:25:00Z</updated>
+        <summary>
+            Coverage of the 1.9.1 release
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>We are really excited to announce version 1.9.1 of Fusio. The following list
+covers the most important changes of this release:</p>
+
+<ul>
+    <li>
+        <b>Improved the routes overview at the backend app</b>
+        <p>The backend app contains now an improved routes overview which shows all available
+        routes and the configured schema and action settings.</p>
+    </li>
+    <li>
+        <b>Action constructor dependency injection <a href="https://github.com/apioo/fusio/issues/301">#301</a></b>
+        <p>It is now possible to add constructor arguments which are automatically resolved by the DI auto-wire feature. This is now
+        the preferred way to get dependencies from the DI container the <code>ContainerAwareInterface</code> is now deprecated.</p>
+    </li>
+    <li>
+        <b>Publish internal events through webhooks feature <a href="https://github.com/apioo/fusio/issues/288">#288</a></b>
+        <p>We publish now all also all internal events through our webhook system. This allows to register for internal events
+        i.e. a user was created.</p>
+    </li>
+    <li>
+        <b>Add option to deploy a schema class <a href="https://github.com/apioo/fusio/issues/251">#251</a></b>
+        <p>It is now also possible to define a <a href="https://fusio.readthedocs.io/en/latest/development/schema.html">JSON schema</a>
+        as PHP class by using specific annotations.</p>
+    </li>
+    <li>
+        <b>SqlTable provider generate schema based on the table schema <a href="https://github.com/apioo/fusio/issues/294">#294</a></b>
+        <p>The provider generates now the complete JSON schema based on the available table columns.</p>
+    </li>
+    <li>
+        <b>Add Laravel and Symfony adapter <a href="https://github.com/apioo/fusio/issues/246">#246</a></b>
+        <p>We have added a <a href="https://github.com/apioo/fusio-adapter-laravel">Laravel</a> and
+        <a href="https://github.com/apioo/fusio-adapter-symfony">Symfony</a> adapter which helps to
+        build actions based on the specific framework.</p>
+    </li>
+    <li>
+        <b>Add PHP version 7.4 to all test cases</b>
+        <p>We have added PHP 7.4 to all test cases.</p>
+    </li>
+    <li>
+        <b>Make schema TypSchema compatible</b>
+        <p>To improve our code generator we try to move our schema definition from JSON schema
+        to <a href="https://typeschema.org/">TypeSchema</a>. TypeSchema is a stricter JSON schema dialect
+        which is optimized for code generation.</p>
+    </li>
+</ul>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:35</id>
+        <title>Version 1.9.0 released</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2020-02-05T20:30:00Z</updated>
+        <summary>
+            Coverage of the 1.9 release
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>We are really excited to announce version 1.9 of Fusio. The following list
+covers the most important changes of this release:</p>
+
+<ul>
+    <li>
+        <b>Add rest password process for users which have registered through email. The user receives an email containing a link with a token which can be used to change the current password</b>
+        <p>We have added a new endpoint to start a restore process for a user in case he has lost the password. The system then sends a mail to the user with a restore link containing a token. The link can be adjusted through the config. The app then needs to send the token to an endpoint to set a new password.</p>
+    </li>
+    <li>
+        <b>Renamed column period to period_type for MariaDB compatibility <a href="https://github.com/apioo/fusio/issues/252">#252</a></b>
+        <p>This was a long standing issue for MariaDB users so we have finally renamed the column and new users can now also use MariaDB</p>
+    </li>
+    <li>
+        <b>Return refresh token for simple login and add option extend an existing access token <a href="https://github.com/apioo/fusio/issues/264">#264</a></b>
+        <p>The simple login endpoint returns now also a refresh token which can be used at the OAuth2 endpoint to get a new token before it expires. Through this it is possible to extend an existing token.</p>
+    </li>
+    <li>
+        <b>Restructured clean command to remove expired database entries i.e. app token instead of removing the demo files</b>
+        <p>The clean command is now used to remove expired database entries instead of files.</p>
+    </li>
+    <li>
+        <b>Added specific scopes to backend/consumer endpoints to allow access to only specific parts of the backend/consumer API</b>
+        <p>We have now specific scopes for the backend and consumer scopes. This allows to create users which have only access to specific parts of the backend.</p>
+    </li>
+    <li>
+        <b>Add option to request concrete scopes for backend and consumer authorization</b>
+        <p>It is now possible to request specific scopes for the backend and consumer login. Through this an app can request only specific scopes which increases the security.</p>
+    </li>
+    <li>
+        <b>Expired JWT return proper 401 status code <a href="https://github.com/apioo/fusio/issues/268">#268</a></b>
+        <p>In case the JWT is expired the endpoint returns now a proper 401 status code.</p>
+    </li>
+</ul>
+
+<p>Besides these changes we have also created a new <a href="https://github.com/apioo/fusio-integration">integration repository</a>
+which continuously tests the complete upgrade path of the latest 5 releases which
+ensures a smooth upgrade to the next version.</p>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:34</id>
+        <title>Version 1.8.0 released</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2019-09-18T20:50:00Z</updated>
+        <summary>
+            Coverage of the 1.8 release
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>We are really excited to announce version 1.8 of Fusio. The following list
+covers the most important changes of this release:</p>
+
+<ul>
+    <li>
+        <b>Add SQL select action <a href="https://github.com/apioo/fusio/issues/260">#260</a></b>
+        <p>This new action helps to build responses which are based on a plain SQL query.</p>
+    </li>
+    <li>
+        <b>Add option to download the SDK <a href="https://github.com/apioo/fusio/issues/259">#259</a></b>
+        <p>At the backend panel there is now an option to generate and download the
+        SDK for the API.</p>
+    </li>
+    <li>
+        <b>Add log rotate command to copy all logs to an archive table <a href="https://github.com/apioo/fusio/issues/256">#256</a></b>
+        <p>We have added a new command to drop all log tables and move them to an archive table.
+        This can increase the performance in case you have many requests.</p>
+    </li>
+    <li>
+        <b>Add marketplace to backend <a href="https://github.com/apioo/fusio/issues/254">#254</a></b>
+        <p>As mentioned in the last post we have introduced a new marketplace to install apps for Fusio.</p>
+    </li>
+    <li>
+        <b>Update doctrine/dbal to 2.9 <a href="https://github.com/apioo/fusio/issues/252">#252</a></b>
+        <p>We have updated the doctrine DBAL to the latest 2.9 version. Through this we support
+        now also fully MariaDB.</p>
+    </li>
+</ul>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:33</id>
+        <title>Marketplace introduction</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2019-08-29T20:59:00Z</updated>
+        <summary>
+            Short post to introduce the new Fusio marketplace
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>We like to introduce the new Fusio <a href="https://www.fusio-project.org/marketplace">marketplace</a>.
+The marketplace is a new way to install and use apps which work with the Fusio
+API. The great advantage of Fusio is that it is API based and provides apps
+for specific use-cases. I.e. we have the "backend" app to manage Fusio but also an
+app "vscode" which is specifically designed to develop endpoint actions. There
+are many more great possibilities to work with Fusio through such an use-case
+specific app. In combination with the new adapter "provider" feature it would be
+possible to ship a complete application, where the provider defines all API
+endpoints and the app consumes those endpoints.</p>
+
+<p>Until now we have always included all apps at the <code>public/</code> folder
+of Fusio but we have realised that many users dont always need all apps. Instead
+evey user has specific requirements. Because of this we have build the marketplace
+to make it easy for users to install/update such apps. It is also really easy to
+add a new app to the marketplace, therefor you only need to submit a PR to the
+<a href="https://github.com/apioo/fusio/blob/master/marketplace.yaml">marketplace file</a>.</p>
+
+<p>The next 1.8 release of Fusio will include the marketplace at the backend
+panel. Future releases of Fusio will also only include the backend app. All other
+apps can be easily installed through the marketplace. We think this is a great
+way to also involve the community and to discover new use-cases for Fusio by
+building a specialized app. If you have any thoughts or ideas about the
+marketplace please let us know.</p>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:32</id>
+        <title>Version 1.7.0 released</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2019-08-13T21:41:00Z</updated>
+        <summary>
+            Coverage of the 1.7.0 release of Fusio
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>We are really excited to announce version 1.7 of Fusio. This release contains
+many great new features and overall improvements. The following list covers the
+complete changelog:</p>
+
+<ul>
+    <li>
+        <b>Add discover route endpoint <a href="https://github.com/apioo/fusio/issues/249">#249</a></b>
+        <p>A new route was added which allows 3rd party apps to discover available routes and the
+        used actions. Through this it is possible to build apps in the future which work only
+        with specific routes.</p>
+    </li>
+    <li>
+        <b>Add command to clear the cache <a href="https://github.com/apioo/fusio/issues/243">#243</a></b>
+        <p>We added a new command which clears the cache.</p>
+    </li>
+    <li>
+        <b>Add GraphQL proxy <a href="https://github.com/apioo/fusio/issues/238">#238</a></b>
+        <p>Similar to the HTTP-Processor action we have created a GraphQL-Processor which proxies
+        requests to a remote GraphQL endpoint.</p>
+    </li>
+    <li>
+        <b>Add option to specify an operation id for each method <a href="https://github.com/apioo/fusio/issues/236">#236</a></b>
+        <p>It is now possible to specify an operation id for each route method. This operation id is used at
+        the OpenAPI spec and also at the new JsonRPC endpoint.</p>
+    </li>
+    <li>
+        <b>Pre-configured routes <a href="https://github.com/apioo/fusio/issues/233">#233</a></b>
+        <p>We have added a new feature called pre-configured routes. Through a pre-configured route an adapter
+        can add schemas, actions and routes under a specific base path. This simplifies the usage for the
+        user and it also helps to develop complete apps as pre-configured route.</p>
+    </li>
+    <li>
+        <b>Added new vscode app which allows to edit PHP sandbox actions <a href="https://github.com/apioo/fusio/issues/191">#191</a></b>
+        <p>We have added a new app which helps to develop all actions through a simple
+        and easy to use editor with autocomplete support.</p>
+    </li>
+    <li>
+        <b>Add RPC endpoint to execute actions directly <a href="https://github.com/apioo/fusio/issues/167">#167</a></b>
+        <p>We have added a new JsonRPC endpoint which allows to invoke every method also via
+        JsonRPC. This allows to call multiple methods with a single call. The method name is based
+        on the operation id. Since we now have also an RPC way to call methods we can easily
+        extend this to other RPC systems like GRPC or Thrift.</p>
+    </li>
+    <li>
+        <b>Fix issue in SqlTable action to handle null values <a href="https://github.com/apioo/fusio/issues/239">#239</a></b>
+        <p>We fixed an issue to properly handle null values at the SqlTable action.</p>
+    </li>
+</ul>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:31</id>
+        <title>Version 1.6.0 released</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2019-06-01T09:15:00Z</updated>
+        <summary>
+            Coverage of the 1.6.0 release of Fusio
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>We are really happy to announce version 1.6.0 of Fusio. This release improves
+especially the monetization system of Fusio. Without further ado let us take a
+look at the important changes of this release:</p>
+
+<ul>
+    <li>
+        <b>Improved monetization system added contract and invoice to plan <a href="https://github.com/apioo/fusio/issues/217">#217</a></b>
+        <p>We have extended our monetization system so that it is now possible
+        to create contracts with recurring payments. There is also a new console
+        command which triggers a billing run to automatically create new invoices
+        for specific contracts. This was a highly requested feature and the
+        new structure enables us also to implement more complex billing flows in
+        the future.</p>
+    </li>
+    <li>
+        <b>Updated backend and consumer app</b>
+        <p>We have updated the backend and consumer app. Most noticeable we
+        have created a new navigation for the backend app, since the old
+        navigation was not fitting for all navigation entries. Also the backend
+        app considers the expire time of the access token. Besides this both
+        apps work now with the improved monetization system, which means we can
+        work with contracts and invoices.</p>
+    </li>
+    <li>
+        <b>Created Fusio javascript SDK</b>
+        <p>We have created a new <a href="https://github.com/apioo/fusio-sdk-javascript">javascript sdk</a> for Fusio,
+        which is also available on <a href="https://www.npmjs.com/package/fusio-sdk">NPM</a>.
+        This SDK helps to simply talk to the Fusio API. It is based on the automatically
+        generated typescript definitions from all API endpoints schemas. A user can
+        also use the same approach to easily create an SDK for their API. In the
+        future we want to create more SDKs for different languages.</p>
+    </li>
+    <li>
+        <b>Custom user attributes <a href="https://github.com/apioo/fusio/issues/226">#226</a></b>
+        <p>It is now possible to specify custom user attributes. If you want to
+        extend the user table with specific user attributes for your app, you
+        can now simply configure them through the configuration.</p>
+    </li>
+    <li>
+        <b>CLI action add command handle optional arguments <a href="https://github.com/apioo/fusio/issues/230">#230</a></b>
+        <p>Fix handling parameters if you invoke an action through CLI.</p>
+    </li>
+    <li>
+        <b>Add option to get information about the current token i.e. scopes inside an action</b>
+        <p>The Fusio engine context contains now also the array of scopes which
+        are assigned to the token. This enables developers to implement specific
+        behaviour inside an action in case the user has specific scopes.</p>
+    </li>
+    <li>
+        <b>PHP Sandbox allow the definition of functions</b>
+        <p>The PHP sandbox allows now also the creation of simple functions.</p>
+    </li>
+    <li>
+        <b>Update dotenv dependency</b>
+        <p>We have updated the dotenv library to <code>^4.2</code>. Through this
+        you could also use the <code>loadEnv</code> method to handle env files
+        for different environments i.e. dev, prod.</p>
+    </li>
+    <li>
+        <b>Added missing entity id to all backend endpoint schemas<b>
+        <p>For most backend entity API endpoints the variable path fragment for
+        the id was missing at the schema specification which is now fixed.</p>
+    </li>
+    <li>
+        <b>HTTP adapter redirect variable path fragments</b>
+        <p>The HTTP adapter redirects now also variable path fragments.</p>
+    </li>
+</ul>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:30</id>
+        <title>Code-Generator tool released</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2019-04-14T11:24:00Z</updated>
+        <summary>
+            Introducing the Fusio Code-Generator tool
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>We like to announce a project which we have developed over the last months
+which helps to generate Fusio source files based on a simple YAML format. It
+can be used in case you need to create a CRUD API for a relational database. You
+can specify all entities and the relations through a simple YAML format and the
+tool will automatically generate all routes, schemas, actions and migrations
+which then can be deployed at Fusio. If you are interested please checkout the
+tool at: <a href="https://generate.apioo.de/">generate.apioo.de</a></p>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:29</id>
+        <title>Version 1.5.0 released</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2019-01-01T17:46:00Z</updated>
+        <summary>
+            Coverage of the 1.5.0 release of Fusio
+        </summary>
+        <category term="fusio" />
+        <category term="introduction" />
+        <content type="html"><![CDATA[
+
+<p>We are really happy to start the new year with the announcement of version 1.5.
+This release contains many improvements. A major change is that we require
+now PHP 7.1 since 7.0 is not <a href="http://php.net/supported-versions.php">supported</a>
+anymore. The following list contains the most important changes:</p>
+
+<ul>
+    <li>
+        <b>Use connection for sending SMTP mails</b>
+        <p>Previously Fusio had an internal mailer system and a mailer connection, 
+        now it is possible to tell Fusio to use an existing connection to send mails.
+        Through this it is i.e. possible to send mails via a different SMTP connection
+        or sendgrid.</p>
+    </li>
+    <li>
+        <b>Make pub/sub system more customizable</b>
+        <p>Fusio contains a pub/sub system which is currently based on SQL tables
+        and a cronjob which sends the payload to the subscribers. Now it is possible
+        to exchange the sender system so it would be possible to use a message
+        queue system.</p>
+    </li>
+    <li>
+        <b>Set correct CORS header if an exception occurs</b>
+        <p>Previously the CORS headers were not set correctly in case an exception
+        occurred this is now fixed.</p>
+    </li>
+    <li>
+        <b>Use JWT as access token</b>
+        <p>Fusio issues now globally JWTs which contain also some meta information
+        about the user. Previously only the <code>/consumer/login</code> endpoint
+        has returned a JWT. Note this means also that the internal structure of
+        the JWT has changed, in case your app decodes the token you need to check
+        which fields are used. The new token has the following claims:</p>
+        <dl>
+            <dt>iss</dt>
+            <dd>Issuer</dd>
+            <dt>sub</dt>
+            <dd>Subject</dd>
+            <dt>iat</dt>
+            <dd>Issued At</dd>
+            <dt>exp</dt>
+            <dd>Expiration Time</dd>
+            <dt>name</dt>
+            <dd>Full name</dd>
+        </dl>
+    </li>
+    <li>
+        <b>Fix add costs field to the routes schema</b>
+        <p>The costs field is now correctly returned at the detail route.</p>
+    </li>
+    <li>
+        <b>Improve SQL-Table action add possibility to specify default settings
+        and return proper types on all db drivers</b>
+        <p>The SQL-Table action returns now proper types. This means i.e. if
+        a table column is of type int it will now return also an int type. This
+        needs to be explicit casted since some database drivers always return
+        strings.</p>
+    </li>
+    <li>
+        <b>Migrated all unit tests to PHPUnit 6.0</b>
+        <p>We have moved the complete PHPUnit test suite to 6.0. This was especially
+        complicated since PHPUnit has introduced in this release namespaces means
+        we had to adjust every test case. But future updates should be now much
+        simpler.</p>
+    </li>
+    <li>
+        <b>Set all travis tests to check PHP 7.1, 7.2 and 7.3</b>
+        <p>Since we require now PHP 7.1 as minimum version we cover now PHP
+        7.1, 7.2 and 7.3</p>
+    </li>
+    <li>
+        <b>Minimum PHP requirement is now 7.1</b>
+        <p>As mentioned above since PHP 7.0 is not <a href="http://php.net/supported-versions.php">supported</a>
+        anymore we have moved the minimum requirement to PHP 7.1. If you are
+        using still PHP 7.0 please consider to upgrade.</p>
+    </li>
+</ul>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:28</id>
+        <title>Version 1.4.0 released</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2018-10-28T11:08:00Z</updated>
+        <summary>
+            Coverage of the 1.4.0 release of Fusio
+        </summary>
+        <category term="fusio" />
+        <category term="introduction" />
+        <content type="html"><![CDATA[
+
+<p>We are really proud to announce version 1.4.0 of Fusio. The main feature of
+this release is a new payment system which makes it easy to monetize an existing
+API. The following list covers all important changes of the release:</p>
+
+<ul>
+    <li>
+        <b>Added payment system to monetize the API</b>
+        <p>A new payment system was added where it is possible to create plans.
+        Those plans can be purchased by a user to receive points. The points can
+        then be used to call specific routes. The admin can specify how many
+        points a route costs.</p>
+    </li>
+    <li>
+        <b>Added user provider support to easily implement other OAuth2 provider</b>
+        <p>It is now easy possible to implement a remote OAuth2 login provider.
+        By default Fusio supports Facebook, Github and Google but it is now
+        possible to simply implement other providers.</p>
+    </li>
+    <li>
+        <b>Extended dashboard and statistics</b>
+        <p>The dashboard contains now more panels to make all important parts of
+        the system visible.</p>
+    </li>
+    <li>
+        <b>Added provider.php config file which contains PHP classes to extend Fusio</b>
+        <p>We have added a new <code>provider.php</code> file which contains
+        classes to extend Fusio. Through this it is possible to add new user
+        or payment provider.</p>
+    </li>
+    <li>
+        <b>Updated fusio backend and swagger-ui app</b>
+        <p>We have updated the Fusio backend app to include also payment support.
+        Also we have updated the swagger-ui app to the latest version.</p>
+    </li>
+</ul>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:27</id>
+        <title>Version 1.3.1 released</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2018-09-01T17:36:00Z</updated>
+        <summary>
+            Coverage of the 1.3.1 release of Fusio
+        </summary>
+        <category term="fusio" />
+        <category term="introduction" />
+        <content type="html"><![CDATA[
+
+<p>We are happy to announce version 1.3.1 of Fusio. This release adds support
+for mutliple database vendors. Previously it was only possible to install Fusio
+on Mysql now Fusio supports must popular db vendors i.e. PostgreSQL, MSSQL and
+Oracle.</p>
+
+<ul>
+    <li>
+        <b>Improve serialization formats store all data json encoded instead of
+        PHP serialized</b>
+        <p>Previously Fusio stored data through PHPs internal serialization.
+        Since this mechanism has some security flaws we have moved to simple
+        json encoded data.</p>
+    </li>
+    <li>
+        <b>Make Fusio compatible with multiple database vendors and renamed
+        camel case database columns to snake case columns</b>
+        <p>Add support for multiple db vendors because of this we have renamed
+        some camel case columns to snake case.</p>
+    </li>
+</ul>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:26</id>
+        <title>Version 1.2.0 released</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2018-06-08T22:30:00Z</updated>
+        <summary>
+            Coverage of the 1.2 release of Fusio
+        </summary>
+        <category term="fusio" />
+        <category term="introduction" />
+        <content type="html"><![CDATA[
+
+<p>We are really happy to announce version 1.2 of Fusio. This release contains
+some exciting features and overall improvements. In the following we will
+cover the most important parts of the changelog:</p>
+
+<ul>
+    <li>
+        <b>Add subscription support</b>
+        <p>Fusio helps you now building apps supporting webhooks. This means you
+        can define custom events at the backend and on the consumer side users can
+        subscribe to such events with a custom endpoint url. If you dispatch such
+        an event inside an action, Fusio will send a HTTP POST request to each
+        subscriber containing the provided payload.</p>
+    </li>
+    <li>
+        <b>Add PHP sandbox action</b>
+        <p>In previous versions we have always propagated the V8-Action to develop
+        code at the backend. This was a simple and secure way but had the
+        disadvantage that you need to install the <a href="https://github.com/phpv8/php-v8">PHP-V8</a>
+        extension, moreover the author has also abandoned the project. Because of
+        this we have build a new PHP sandbox action which lets you write PHP code
+        at the backend. This should help to quickly develop new endpoints for
+        testing and prototyping.</p>
+        <p>The V8-Action does still exists and if you have the PHP-V8 extension
+        installed everything will work as before. If there is an interest in
+        developing actions in javascript we might investigate other solutions.</p>
+    </li>
+    <li>
+        <b>Add installer script to install Fusio also without access to the CLI</b>
+        <p>We have often received mails from new users who want to install Fusio
+        without access to the CLI. With this release we have build a new browser
+        based installer. Note internally the installer triggers the PHP CLI scripts,
+        so you need to have PHP installed on the command line to use it (which
+        is mostly the case).</p>
+    </li>
+    <li>
+        <b>Updated backend and consumer app to Angular 1.7</b>
+        <p>We have migrated the backend and consumer app to
+        <a href="https://blog.angular.io/stable-angularjs-and-long-term-support-7e077635ee9c">Angular 1.7</a>.
+        This is the latest 1.x release which becomes also a LTS version which is 
+        supported until June 30, 2021. Then we have enough time to migrate these
+        apps to Angular 2.</p>
+    </li>
+    <li>
+        <b>Consumer app add subscription support to allow customers to register
+        HTTP callbacks</b>
+        <p>The consumer app has now a new panel where users can register
+        callbacks for specific events.</p>
+    </li>
+    <li>
+        <b>Backend app add option to provide custom action class</b>
+        <p>It is now possible to provide at the backend a custom PHP class. This
+        can be helpful if you have an action as class and want to add this
+        through the backend interface. Many thanks to <a href="https://github.com/riwin">@riwin</a>
+        for this idea.
+        </p>
+    </li>
+    <li>
+        <b>Reorganized consumer app and grant endpoints</b>
+        <p>We have reorganized some of the consumer API endpoints. In case you
+        are using this API you need to adjust the path to the following table:</p>
+        <pre>
+/consumer/app/developer                 => /consumer/app
+/consumer/app/developer/$app_id<[0-9]+> => /consumer/app/$app_id<[0-9]+>
+/consumer/app/grant                     => /consumer/grant
+/consumer/app/grant/$grant_id<[0-9]+>   => /consumer/grant/$grant_id<[0-9]+>
+/consumer/app/meta                      => /consumer/authorize (GET)
+        </pre>
+    </li>
+</ul>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:25</id>
+        <title>Version 1.0.0 released</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2018-01-13T11:01:00Z</updated>
+        <summary>
+            Coverage of the 1.0 release of Fusio
+        </summary>
+        <category term="fusio" />
+        <category term="introduction" />
+        <content type="html"><![CDATA[
+
+<p>We are really happy to announce the first stable release of Fusio. This is
+an important milestone for the project so I like to take the time to talk
+about the current status and future plans of the project.</p>
+
+<b>Current status</b>
+
+<p>Sometimes I get emails from new users which simply ask me to explain what
+is Fusio, whats the use case and what are the benefits of using Fusio. Since 
+these are such fundamental questions I like to answer them in this post. At 
+first I like to use the quote from the website:</p>
+
+<blockquote>Fusio is an open source API management platform which helps to build 
+and manage REST APIs. Fusio provides all tools to quickly build an API from 
+different data sources yet it is possible to create complete customized 
+responses.</blockquote>
+
+<p>Today there are many use cases which require a REST API. Whether you need an 
+API to expose your business functionality, develop One-Page web applications, 
+Mobile-Apps or Micro-Services. Fusio is a tool which helps to develop such APIs.</p>
+
+<p>Fusio "helps" means that it covers already common topics like versioning, 
+documentation, authorization, analytics, rate limiting, etc. so you can 
+concentrate on writing only the business logic of your API. Please take a look
+at the <a href="https://github.com/apioo/fusio/blob/master/src/Todo/collection.php">demo action</a>
+which shows how a simple endpoint logic looks. Most actions simply get a 
+connection and execute a specific task i.e. in the demo we use the SQL connection
+to select specific data from a table. But Fusio has also many different
+<a href="https://www.fusio-project.org/adapter">connections</a> to connect i.e. 
+to a MongoDB, AMQP, HTTP or ElasticSearch service. Thus also the name Fusio it 
+is a project to fuse different services to create something new.</p>
+
+<p>Fusio simplifies also the developing process by providing a simple and clean
+architecture, so you dont have to build complex class hierarchies and thus the 
+code base remains easy maintainable. The action is the basic building block 
+which contains the business logic. The action should only contain simple logic 
+and use the fitting connections to fulfill the task. In case an action becomes 
+too complicated it is probably a smell that you should either create an external
+service (HTTP) which you can use in your action or move this logic to a composer
+package which you can then simply call in your action. In this way you also 
+develop code which is complete framework independent.</p>
+
+<b>Future plans</b>
+
+<p>With this 1.0 release we think that Fusio has a great feature scope but we 
+have already many great ideas to improve Fusio further. If you are interested in 
+those topics you can checkout our wiki <a href="https://github.com/apioo/fusio/wiki/Todo">Todo</a> 
+and <a href="https://github.com/apioo/fusio/wiki/Connections-(not-implemented)">Connections (not implemented)</a>
+page to see a list of pending topics.</p>
+
+<p>Besides those technical features we really would like to improve our 
+documentation to help new users get started quickly. For this we would like
+to improve our manual but also add new video tutorials and recipes which explain
+a specific topic. So if you have ideas to improve the documentation please 
+let us know.</p>
+
+<p>Also I like to thank every user which has participated in the project. 
+Especially in the last months we got many new followers. We have reached the 
+GitHub trends several times and also the website and Twitter users are rising. 
+So if you like the project and want to see it grow further please checkout the 
+repository on <a href="https://github.com/apioo/fusio">GitHub</a> and follow us 
+on <a href="https://twitter.com/FusioAPI">Twitter</a>. And of course if you plan 
+to start a new API project this is the perfect time to start with Fusio.</p>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:24</id>
+        <title>Thinking language independent through APIs</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2017-12-13T00:00:09Z</updated>
+        <summary>
+            Some thoughts about developing APIs independently of the underlying
+            programming language
+        </summary>
+        <category term="thoughts" />
+        <content type="html"><![CDATA[
+
+<p>Recently I have read a <a href="https://medium.com/@ivanjaros/moving-from-php-to-go-and-back-again-9ea1f57018c4">post</a>
+from a user who has tried to move from <a href="http://php.net/">PHP</a> to <a href="https://golang.org/">go</a>.
+To summarize the post, the user moved back to PHP because he claimed that the go 
+language is not great to write larger applications. Later on another user posted 
+a counter <a href="http://blog.breakthru.solutions/re-moving-from-php-to-go-and-back-again/">post</a>
+to argue why those thoughts are wrong. Those posts got popular on hackernews 
+and reddit which produced many comments where users argued about the better 
+language.</p>
+
+<p>As an API developer I dont want to argue which is the better language instead
+let me explain a different view. At first I think people overvalue the choice of 
+a programming language. For me the most important part is to define a clear 
+request and response schema for every endpoint. The schema is the contract 
+between your data and the user. How you produce this data is actually secondary. 
+If you think this way you can easily start to write an API with PHP (faster development) 
+and if required you can simply exchange the implementation with a go version 
+(faster execution). Through this view you can appreciate both posts and take the
+best out of two worlds.</p>
+
+<p>So my advice to all API developers, dont worry too much about the programming 
+language choice. We are in a great times where the API economy rises and it
+becomes very easy to build an API. Instead take more time to define a clear 
+schema for every endpoint. Also most API tools are already fast enough for 
+normal usages, i.e. Fusio can handle roughly 350 requests/s (which of course 
+depends on the performance of the server). If you need to scale above this you 
+can either scale your hardware or exchange the implementation and in this case 
+you have probably also the resources to do so.</p>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:23</id>
+        <title>Version 1.0.0-RC3 released and future plans</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2017-11-19T20:37:00Z</updated>
+        <summary>
+            Coverage of the 1.0.0-RC3 release
+        </summary>
+        <category term="fusio" />
+        <category term="introduction" />
+        <content type="html"><![CDATA[
+
+<p>We are really excited to announce version <code>1.0.0-RC3</code> of Fusio. 
+First we want to thank our community for the great feedback which we have 
+received in the last month. With the last <code>0.9.9</code> release announcement 
+we got a huge attention boost and increase of our website and github followers. 
+We have received great feedback from many different people and we are ready to 
+push the platform to the next stage.</p>
+
+<p>We have already implemented many useful features and fixed various bugs in 
+the last releases. Since we are on our way to the first stable release we dont want 
+to include any new major changes to the platform. We will use the next upcoming 
+<code>RC*</code> releases to test Fusio on different platforms and for fine-tuning. 
+So if you want to support the project please follow us on <a href="https://github.com/apioo/fusio">GitHub</a> 
+or <a href="https://twitter.com/FusioAPI">Twitter</a>.</p>
+
+<p>If we have reached the first stable release we would like to concentrate on
+documentation and marketing of the project. Our main goal of the project is to 
+enable every developer to build a modern API without implementing the 
+complicated parts of an API like authorization, rate limiting, specifications, 
+documentation, etc. True to this motto we plan to improve the documentation with 
+recipes for specific use cases and we want to extend our video tutorials. If you 
+have any documentation ideas or topics please let us know.</p>
+
+<b>Changelog</b>
+
+<p>There were many great changes between the last blog post and this release. To 
+keep it short I will summarize the important changes to keep you up to date.</p>
+
+<ul>
+    <li>
+        <b>Add swagger-ui as app</b>
+        <p>By default Fusio comes now with the <a href="https://github.com/swagger-api/swagger-ui">Swagger-UI</a>
+        app which should help users to start using the API.</p>
+    </li>
+    <li>
+        <b>Improve generated OpenAPI spec add security scope</b>
+        <p>Because of the Swagger-UI app we have greatly improved our generated OpenAPI specification. We document now
+        all authentication methods and scopes so that its easy possible to call protected endpoints.</p>
+    </li>
+    <li>
+        <b>Improve HEAD and OPTIONS method handling</b>
+        <p>Previously <code>HEAD</code> and <code>OPTIONS</code> requests were not correct
+        handled by the API endpoints which produced some problems for <code>CORS</code>
+        or monitoring services which is now fixed.</p>
+    </li>
+    <li>
+        <b>Add cronjob service</b>
+        <p>We have added a new cronjob service which can be used to call actions
+        in a specific interval. Therefor Fusio generates a custom cron file which can
+        be placed at i.e. <code>/etc/cron.d/fusio</code>. Every time a user creates or updates
+        a cron entry this file gets regenerated.</p>
+    </li>
+    <li>
+        <b>Add PATCH method support</b>
+        <p>Fusio supports now the handling of PATCH requests.</p>
+    </li>
+    <li>
+        <b>Added static file processor</b>
+        <p>We have added a new processor to serve simply static json files. This can
+        be useful for testing and quickly mocking an API.</p>
+    </li>
+    <li>
+        <b>Add OAuth2 refresh token endpoint</b>
+        <p>We have added an OAuth2 refresh token endpoint so that its possible to
+        extend an existing access token at our repository.</p>
+    </li>
+</ul>
+
+<p>You can also take a look at the complete 
+<a href="https://github.com/apioo/fusio/blob/master/CHANGELOG.md">changelog</a>.</p>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:22</id>
+        <title>Version 0.9.4 released</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2017-08-26T11:34:00Z</updated>
+        <summary>
+            Coverage of the version 0.9.4 release
+        </summary>
+        <category term="fusio" />
+        <category term="introduction" />
+        <content type="html"><![CDATA[
+
+<p>We are really happy to release version 0.9.4 of Fusio. This release contains
+several great features which brings us closer to a first stable release. The
+following list covers the changelog:</p>
+
+<ul>
+    <li>
+        <b>Added automatic engine detection</b>
+        <p>Previously we had a config option <code>fusio_engine</code> where a 
+        user could specify the engine for the action string. This is now obsolete 
+        since we automatically detect the engine based on the action string. I.e. 
+        if the action is a class we use the <code>PhpClass</code> engine, if its
+        a file with a php file extension we use the <code>PhpFile</code> engine.
+        Through this change the user must configure less and has the option to
+        use multiple engine types within the same project.
+        </p>
+    </li>
+    <li>
+        <b>Improved backend app</b>
+        <p>We have updated all dependencies of the backend app. It is now based
+        on angular 1.6 and the latest angular bootstrap version. The route 
+        configuration dialog was adjusted to have an option to provide a schema
+        for query parameters and to enter multiple response schemas. Also we 
+        added an openapi import tab added new statistic panels.</p>
+    </li>
+    <li>
+        <b>Log execution time of an action and add new statistics</b>
+        <p>The execution time of an action is now also logged. Based on those
+        values we have added new statistic panels which shows the average 
+        execution time and the execution time per route.</p>
+    </li>
+    <li>
+        <b>Added openapi generation and import support</b>
+        <p>Fusio supports now the recently released OpenAPI 3.0 specification.
+        It is possible to import such a specificaiton through the backend app or 
+        via console command.</p>
+    </li>
+    <li>
+        <b>Handle schema for query parameters</b>
+        <p>It is now possible to provide a JSON Schema to validate query 
+        parameters.</p>
+    </li>
+    <li>
+        <b>Improved route serialization #44</b>
+        <p>If we deploy a route from development to production we store the 
+        complete config (schema and action) into a separate column so that the
+        config does not change. We encode this data now in JSON so it is possible
+        to access those values also from another language.</p>
+    </li>
+    <li>
+        <b>Handle multiple responses for different status codes</b>
+        <p>Each route can now have multiple response schemas based on the status 
+        code. I.e. it is possible to provide a schema for the 200 and 500 status 
+        code.</p>
+    </li>
+    <li>
+        <b>Split up deploy file into separate files</b>
+        <p>We have split up the deploy configuration file into multiple files.
+        Through this the user has an better overview even if the app contains 
+        many routes.</p>
+    </li>
+    <li>
+        <b>Removed routes action and schema relation handling</b>
+        <p>The previously version of Fusio had a internal system to track which
+        action and schema was used in a route. This logic was relatively complex 
+        and was only used in some cases. Since it is now possible to edit a 
+        schema or action within the route dialog we have removed this feature. 
+        This improves the performance and reduces the logic of the backend.</p>
+    </li>
+    <li>
+        <b>Removed old upgrade paths</b>
+        <p>We have removed old upgrade paths since we assume that every user has
+        now at least version 0.8 installed. Note we do this only as preparation 
+        for the first stable release. Once we have a stable release we will never
+        remove an upgrade path for an older version.</p>
+    </li>
+    <li>
+        <b>Execute migration on an empty database schema</b>
+        <p>This is an important change. From now we execute database migrations
+        on an empty schema. This means that all tables which are not defined in
+        the migration file get deleted. So you must create a separate database
+        for each connection.</p>
+    </li>
+</ul>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:21</id>
+        <title>API-Management and serverless development with Fusio</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2017-07-09T21:18:00Z</updated>
+        <summary>
+            A post containing thoughts about API-Management and serverless 
+            development
+        </summary>
+        <category term="fusio" />
+        <category term="introduction" />
+        <content type="html"><![CDATA[
+
+<p>Today the terms API-Gateway/Management are used in many different ways.
+To have an equal understanding we devide the current API-Management landscape in 
+roughly two different implementations:</p>
+
+<ul>
+    <li><b>API-Gateway</b> solutions which act as a proxy between the internet 
+    and your actual endpoint. They can add additional functionality like i.e. 
+    authentication, transformation or rate limiting. But in the end they need to 
+    route the request to an actual endpoint, which is maybe a legacy API or 
+    SOAP endpoint.</li>
+    <li><b>API-Management</b> solutions which help you to build actual API 
+    endpoints by accessing a database or other services to produce a response. 
+    Such solutions could provide an online code editor to develop the endpoint 
+    logic serverless in the cloud. Also it is possible to redirect 
+    the request to another API (and thus building an API Gateway) but you have 
+    the option provide custom code.</li>
+</ul>
+
+<p>With Fusio we try to develop an API-Management solution like defined above.
+At the moment you have basically two possibilities to write an API endpoint. 
+Either you create an actual PHP file (which has also the advantage that the 
+code is under version control) or you use the backend to develop the endpoint. 
+For the backend it is only possible to use the <a href="http://www.fusio-project.org/documentation/v8">javascript</a> 
+runtime since evaluating user provided PHP code is a security risk which could
+potentially harm the server. Through the javascript engine this is not possible.</p>
+
+<p>As you can see Fusio provides first steps to enable serverless development
+but it is not perfect yet, mainly because there is no way to version the source
+code. Because of that it is currently more suitable to quickly develop an API 
+prototype but not for production code. Please take a look at this <a href="https://www.youtube.com/watch?v=k5bFhVOjfiY">video</a> 
+to see a live example how to develop an endpoint on the backend.</p>
+
+<p>Therefore we are also very excited about the <a href="https://orionhub.org">Eclipse Orion</a> 
+project which basically provides a complete online IDE using GIT. For our SAAS
+version of Fusio we are currently evaluating whether to use such an editor.
+This would close any disadvantages and it would be possible to develop API 
+endpoints completely serverless in the cloud.</p>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:20</id>
+        <title>Version 0.9 released</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2017-06-12T12:02:00Z</updated>
+        <summary>
+            Coverage of the 0.9 release of Fusio
+        </summary>
+        <category term="fusio" />
+        <category term="introduction" />
+        <content type="html"><![CDATA[
+
+<p>We are happy to announce version 0.9 of Fusio. In the following we explain
+the important changes from the last coverage.</p>
+
+<ul>
+    <li>
+        <b>Added deploy command</b>
+        <p>In the 0.7.1 release we have introduced the deploy command. The 
+        command reads the configuration from the <code>.fusio.yml</code> file. 
+        This config file contains information about the system i.e. routes, 
+        actions, etc. So it is basically an alternative way to develop an API 
+        without using the backend. Internally the command uses the backend REST 
+        API to create the specified entries.</p>
+    </li>
+    <li>
+        <b>Update api documentation app</b>
+        <p>We have improved the API documentation app. The schema view renders
+        now a JSON like structure so that users can easily understand the 
+        described format.</p>
+    </li>
+    <li>
+        <b>Add action resolver which determines the engine which is used i.e. php or v8</b>
+        <p>In the 0.9 release we have introduced a new config parameter 
+        <code>fusio_engine</code> which specifies how the action value is used.
+        By default we expect a class name as in previous versions of Fusio but 
+        it is also possible to specify another engine. In the 0.9 release we use
+        the <code>PhpFile</code> engine in the configuration. That means that we
+        write our endpoint logic in a simple php file instead of a class.</p>
+    </li>
+</ul>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:19</id>
+        <title>A small introduction post of Fusio</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2017-04-10T11:28:00Z</updated>
+        <summary>
+            With this post we want to give some hints to new users what Fusio 
+            provides
+        </summary>
+        <category term="fusio" />
+        <category term="introduction" />
+        <content type="html"><![CDATA[
+
+<p>For new users it is sometimes not easy to understand what the Fusio platform
+actually is and which problems it solves. This post should help to create a 
+better understanding. To quote the front page: <blockquote>Fusio is an open 
+source API management platform which helps to build and manage REST APIs.</blockquote>
+<p>Instead of writing pages of technical details we have simply build a list 
+with statements about Fusio. If this triggers your interest in the project your 
+are welcome to get more information at the documentation section.</p>
+
+<ul>
+    <li>Fusio is written in PHP an can be therefore self hosted on any VPS 
+    or bare metal server (we are also working on a cloud infrastructure).</li>
+    <li>Fusio is similar to a CMS (Content Management System) but instead of 
+    content it manages an API therefore it is called an API Management Platform.</li>
+    <li>Fusio has an AngularJS backend app where you can configure the system 
+    and see logs and analytical data about the API usage.</li>
+    <li>Fusio is not like a framework it needs a database and you need to run an 
+    installation script. Because of that it provides many features like 
+    Authentication and User/App management out of the box.</li>
+    <li>The single goal of Fusio is to solve all common API tasks so that the 
+    developer has "only" to implement the actual business logic. This means 
+    Fusio provides i.e.: Authentication (OAuth2), Rate-Limiting, API-Documentation, 
+    User management (Developer registration), JSON-Schema validation, Scope handling, 
+    Schema generation (Swagger, OAS).</li>
+    <li>With Fusio you can develop your endpoint logic in PHP. Through an adapter
+    system you can connect to different services i.e.: Mysql, Postgres, MongoDB
+    or RabbitMQ. The endpoints can be deployed through a simple command.</li>
+    <li>Fusio provides also a V8 action to develop your endpoint logic serverless in
+    javascript but this is completely optional. For simple use cases it is also 
+    possible to create endpoints without coding.</li>
+    <li>In Fusio everything works through the internal API. Even the console commands
+    request an access token and trigger internal HTTP calls to i.e. deploy an API.
+    Every interaction with the Fusio system goes through the API.</li>
+    <li>Fusio provides some javascript apps which should help to solve specific 
+    use cases. I.e. it provides a developer app which provides a simple UI where 
+    developer can register and manage their apps.</li>
+    <li>Fusio provides a docker container through which you can install the 
+    complete system with a simple command.</li>
+</ul>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:18</id>
+        <title>Version 0.7 released</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2017-02-24T11:48:00Z</updated>
+        <summary>
+            Coverage of the 0.7 release
+        </summary>
+        <category term="announcement" />
+        <category term="fusio" />
+        <content type="html"><![CDATA[
+
+<p>We are really proud to announce version 0.7 of Fusio. Since this release is
+an important milestone we want to tell you also a little bit about our aims with 
+this project and of course we will cover the changes of the 0.7 release.</p>
+
+<p>Our goal with this project is to enable anybody to setup an API program. Like
+Wordpress enabled anybody to create a blog on the web we want to enable anybody
+to create an API on the web. Of course our audience are still programmer who
+implement the backend logic but the entry should be as easy as possible. That
+means that the developer only needs to implement the actual backend logic and 
+dont need to cover topics like f.e.: Analytics, Documentation, Authorization, 
+Rating. Through the V8 engine we have developed a simple 
+<a href="http://fusio-project.org/documentation/v8">javascript API</a> which 
+enables any frontend developer to implement an API endpoint. While it is
+still possible for advanced developers to implement complex backend endpoints.
+In the future we want to continue this mission by enhancing the Fusio platform,
+adding more examples and create apps which help you building an API program. 
+Depending on the demand we may also start a SAAS around Fusio.</p>
+
+<b>Changes</b>
+
+<p>With this release we have improved the stability of Fusio due to extensive 
+testing. Because of this we are now confident that Fusio can be used in 
+production. In the following we want to cover the important changes from the 
+version 0.6.3 to 0.7.</p>
+
+<ul>
+    <li>
+        <b>Connection try to connect to remote service on creation</b>
+        <p>If a new connection is added the connection tries now to connect to
+        the remote service with the provided credentials. If the connection
+        fails it is not possible to add the connection. This helps to provide
+        the correct credentials to the connection.</p>
+    </li>
+    <li>
+        <b>Add http connection</b>
+        <p>We have removed the general http service. It is now required to add
+        a http connection with a base uri to send http requests.</p>
+    </li>
+    <li>
+        <b>Add schema and action designer</b>
+        <p>During testing we have noticed the slow process of editing and testing
+        an action. Because of this we have added a new action designer UI which 
+        lets you easily develop new actions. A similar UI exists also for 
+        schemas.</p>
+    </li>
+    <li>
+        <b>Update v8 component</b>
+        <p>We have improved the v8 adapter and the underlying library and added 
+        more test cases.</p>
+    </li>
+    <li>
+        <b>Register command add auto confirm option</b>
+        <p>Because of the docker container we needed an option to automatically
+        register a command without user interaction. There is now an option <code>-y</code>
+        which automatically answers all questions with yes.</p>
+    </li>
+    <li>
+        <b>Disable editing the default scopes</b>
+        <p>It is now not longer possible to delete the first three scopes 
+        because without them you are not able to login to the backend.</p>
+    </li>
+    <li>
+        <b>Added error panel</b>
+        <p>Besides the log panel we have added an error panel which shows every
+        error which occurred on an action.</p>
+    </li>
+    <li>
+        <b>Redesigned backend ui and grouped main navigation into categories</b>
+        <p>We have redesigned the backend UI and moved our javascript code base
+        to browserify. Because of this we are now also able to provide an 
+        <a href="https://github.com/apioo/fusio-electron">electron app</a> of 
+        the backend.</p>
+    </li>
+</ul>
+
+<p>Besides the release we have now also a new brand logo and improved the 
+website content with tutorial videos. We hope that you are as excited as we are
+about the potential of Fusio. Feel free to <a href="http://www.fusio-project.org/contact">drop us a line</a> 
+in case you have any questions about Fusio.</p>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:17</id>
+        <title>Version 0.6.3 released</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2017-01-22T20:25:00Z</updated>
+        <summary>
+            Coverage of the 0.6.3 release
+        </summary>
+        <category term="announcement" />
+        <category term="fusio" />
+        <content type="html"><![CDATA[
+
+<p>We like to announce version 0.6.3 of Fusio. This post covers the 0.6.1 to 
+0.6.3 release. The main focus of this release was on the transition of the 
+backend app to browserify. Through this we are now also able to offer an 
+<a href="https://github.com/apioo/fusio-electron">electron app</a> of the 
+backend app. Also we have now an official <a href="https://hub.docker.com/r/fusio/fusio/">docker container</a>. 
+In the following the coverage of the combined changelog:</p>
+
+<ul>
+    <li>
+        <b>Added config tag form</b>
+        <p>A action and connection can now use a tag input element where the 
+        user can add comma separated values. In the action or connection you 
+        receive the value as array.</p>
+    </li>
+    <li>
+        <b>Action and connection config allow scalar and array values</b>
+        <p>It is now possible to provide scalar and array values as config 
+        parameters.</p>
+    </li>
+    <li>
+        <b>Update json schema preview style</b>
+        <p>The style of the preview was improved</p>
+    </li>
+    <li>
+        <b>Add system status check command</b>
+        <p>We have now a new command to check whether all tables are installed or
+        a user was created. This command is used in the docker container to 
+        determine whether we need start the installation process</p>
+    </li>
+    <li>
+        <b>Removed randomlib and use random_bytes to generate token</b>
+        <p>We use now the native PHP <code>random_bytes</code> function to generate
+        a token</p>
+    </li>
+    <li>
+        <b>Transition backend app to browserify and remove bower_components</b>
+        <p>The backend app was transitioned to browserify so we use now only the
+        node modules and could therefore remove the bower components</p>
+    </li>
+    <li>
+        <b>Update v8 adapter</b>
+        <p>The V8 adapter was updated which brings some new methods the V8 API</p>
+    </li>
+</ul>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:16</id>
+        <title>Version 0.6 released</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2017-01-01T21:40:00Z</updated>
+        <summary>
+            Coverage of the 0.6 release
+        </summary>
+        <category term="announcement" />
+        <category term="fusio" />
+        <content type="html"><![CDATA[
+
+<p>We like to announce version 0.6 of Fusio. With this release we focused on the
+json schema implementation and the generation of the Swagger 2.0 and RAML 1.0 
+api specification format. We have also moved the backend app into a separate
+folder.</p>
+
+<ul>
+    <li>
+        <b>Use chartjs 2.0</b>
+        <p>We have upgraded the chartjs library to the latest 2.x version</p>
+    </li>
+    <li>
+        <b>Use psx 3.0 components</b>
+        <p>The latest version of the PSX schema and api component are used</p>
+    </li>
+    <li>
+        <b>Moved backend app to fusio/ folder to use less potential API paths</b>
+        <p>The backend app was moved to the fusio/ folder</p>
+    </li>
+</ul>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:15</id>
+        <title>Version 0.5 released</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2016-11-17T22:50:00Z</updated>
+        <summary>
+            Coverage of the 0.5 release
+        </summary>
+        <category term="announcement" />
+        <category term="fusio" />
+        <content type="html"><![CDATA[
+
+<p>We are really happy to announce the release of Fusio version 0.5. Since our
+first release we are on the mission to build a software which makes it easy 
+possible to build APIs. Previously versions of Fusio contained different actions 
+to implement more complex logic. I.e. the SQL builder action had a custom JSON
+format to produce nested response from SQL queries or the condition action which
+used the symfony expression language to handle conditions. In the end these 
+actions solved some cases but if the complexity grew they weren't enough. 
+Because of that we introduce with this release the V8 processor action where it
+is possible to write the API action in simple javascript. Because of this we 
+have removed many actions which can be now implemented with a few lines of 
+javascript. I.e. to produce a API response from a SQL query you simply could use 
+the following code:</p>
+
+<pre>
+var connection = connector.get('mysql-connection');
+
+response.setBody({
+    entry: connection.fetchAll('SELECT id, title, insertDate FROM app_news ORDER BY insertDate DESC')
+});
+</pre>
+
+<p>As next we want to create more posts and tutorials around the javascript API
+to explain it more in detail. The disadvantage of introducing the v8 engine is 
+that it increases the complexity of the installation since you have to also 
+install the <a href="https://github.com/pinepain/php-v8">PHP V8</a> extension. 
+To help users with this process we currently develop a 
+<a href="https://github.com/apioo/fusio-docker">docker container</a> which 
+basically setups a complete working Fusio installation. That being said in case 
+you want to develop your actions only in PHP you dont have to install the V8 
+processor action.</p>
+
+<p>So we hope you like the direction in which we are moving and stay tune for 
+some exciting upcoming changes. In the following the coverage of the changelog:</p>
+
+<ul>
+    <li>
+        <b>Added v8 processor action</b>
+        <p>We have added a new V8 processor action which helps to implement
+        more complex backend logic.</p>
+    </li>
+    <li>
+        <b>Cleaned up engine</b>
+        <p>We have removed many actions which are now replaced by the V8 action.
+        Also we have removed the template from the engine.</p>
+    </li>
+    <li>
+        <b>Removed database panel</b>
+        <p>Through the database panel it was previously possible to create and
+        change schemas for relational databases. We have removed this features
+        since it is potentially a security issue and there are better tools for 
+        this job.</p>
+    </li>
+    <li>
+        <b>Added swagger import</b>
+        <p>Besides RAML we accept now also Swagger API specifications to import.</p>
+    </li>
+</ul>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:14</id>
+        <title>Version 0.4.1 released</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2016-11-02T11:26:00Z</updated>
+        <summary>
+            Coverage of the 0.4.1 release
+        </summary>
+        <category term="announcement" />
+        <category term="fusio" />
+        <content type="html"><![CDATA[
+
+<p>We are happy to announce version 0.4.1 of Fusio. The biggest feature of this 
+release is that it is now possible to apply rate limit rules to your API. In the 
+following the coverage of the complete changelog:</p>
+
+<ul>
+    <li>
+        <b>Added rate limit</b>
+        <p>It is now possible to create rate limit rules at the backend which 
+        filter the incoming traffic. If a threshold is reached the API consumer 
+        receives a 429 http response.</p>
+    </li>
+    <li>
+        <b>Improved and extended console commands</b>
+        <p>We have added new console commands to i.e. create new actions or 
+        connections.</p>
+    </li>
+    <li>
+        <b>Improved backend app</b>
+        <p>The js code of the backend app was improved</p>
+    </li>
+    <li>
+        <b>Added test cases</b>
+        <p>We have added many new test cases for different parts of the 
+        application</p>
+    </li>
+</ul>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:13</id>
+        <title>Version 0.4 released</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2016-10-09T13:33:00Z</updated>
+        <summary>
+            Coverage of the 0.4 release
+        </summary>
+        <category term="announcement" />
+        <category term="fusio" />
+        <content type="html"><![CDATA[
+
+<p>We like to announce version 0.4 of Fusio. With this release we move all 
+action and connection implementations into seperate adapter projects which can
+be used on demand. This reduces the dependencies of the core project and you can
+install only the adapters which are actually required. We have also added a new 
+adapter page on the website where all available Fusio adapters are listed.
+The following list covers the changelog of this release:</p>
+
+<ul>
+    <li>
+        <b>Moved logic to the fusio engine and extracted action and connection
+        implementation</b>
+        <p>Since we have moved classes into a different package the namespace 
+        of the classes has also changed. If you upgrade from 0.3.x to 0.4 all
+        classes are changed accordingly. There is only a problem with live API 
+        endpoints where the class name is inside the cache which we can not 
+        change. Therefor you have to set the API back to development mode to 
+        update the cache with the correct class name. So please be cautious if
+        you upgrade a 0.3.x installation</p>
+    </li>
+    <li>
+        <b>Improved backend ui use Robot font</b>
+        <p>We have improved the css of the backend</p>
+    </li>
+</ul>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:12</id>
+        <title>Version 0.3.5 released</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2016-09-18T10:40:00Z</updated>
+        <summary>
+            Summary of the 0.3.5 release
+        </summary>
+        <category term="announcement" />
+        <category term="fusio" />
+        <content type="html"><![CDATA[
+
+<p>We like to announce version 0.3.5 of Fusio. The biggest change is the rewrite
+of the consumer app to a API developer portal app. In the following the coverage 
+of the changelog:</p>
+
+<ul>
+    <li>
+        <b>Renamed consumer app to developer and improved the app</b>
+        <p>The developer contains now also a documentation and API reference 
+        page. So it is a great starting point to quickly build an developer
+        portal.</p>
+    </li>
+    <li>
+        <b>Added SQL table action</b>
+        <p>The SQL table action provides a simple way to expose an table as
+        API endpoint. You simply have to provide the table name, columns and
+        a primary key.</p>
+    </li>
+    <li>
+        <b>Option to provide the request method when testing an action</b>
+        <p>When testing an action it is now possible to select the used request
+        method.</p>
+    </li>
+</ul>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:11</id>
+        <title>Released version 0.3.4</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2016-08-25T21:44:00Z</updated>
+        <summary>
+            Coverage of the 0.3.4 release
+        </summary>
+        <category term="announcement" />
+        <category term="fusio" />
+        <content type="html"><![CDATA[
+
+<p>We are happy to announce version 0.3.4 of Fusio. This release contains mostly
+improvements to the backend UI. Also we have added a option to easily test an 
+action. In the following the coverage of the changelog:</p>
+
+<ul>
+    <li>
+        <b>Streamlined backend ui</b>
+        <p>We have improved the layout of the backend UI view. Especially multi-column 
+        layouts have now a more polished look</p>
+    </li>
+    <li>
+        <b>Improved route lookup speed</b>
+        <p>When resolving a path we check whether the route belongs to the 
+        internal system or not. If not we exclude all routes from the query 
+        which speeds up the lookup time</p>
+    </li>
+    <li>
+        <b>Backend add global loading animation</b>
+        <p>We have added a small loading animation to indicate whether a AJAX 
+        request is in progress</p>
+    </li>
+    <li>
+        <b>Fixed detail and schema import/export command</b>
+        <p>Fixed a namespace issue at the schema import/export command</p>
+    </li>
+    <li>
+        <b>Added dialog to test an action</b>
+        <p>It is now possible to test an action. This means you can execute the
+        action without the need to create an route which helps a lot when 
+        developing actions</p>
+    </li>
+    <li>
+        <b>Database ui add auto increment option</b>
+        <p>It is now possible to mark a column as an auto increment column</p>
+    </li>
+    <li>
+        <b>Add repeat password question to adduser command</b>
+        <p>For the adduser command the user has now to repeat the password before
+        a new user gets created</p>
+    </li>
+</ul>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:10</id>
+        <title>Fusio 0.3.3 released</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2016-07-31T01:01:00Z</updated>
+        <summary>
+            Coverage of the 0.3.3 release
+        </summary>
+        <category term="announcement" />
+        <category term="fusio" />
+        <content type="html"><![CDATA[
+
+<p>We are happy to release version 0.3.3 of Fusio. This release contains many 
+improvements and some important bug fixes. In the following as usual the 
+complete changelog of this release. We did not explicit announce the 0.3.1 and 
+0.3.2 version so we include those changes also in the list.</p>
+
+<ul>
+    <li>
+        <b>Added TryCatch action</b>
+        <p>We have added a new try catch action which executes a specific action
+        and in case of an error it returns the response of another action</p>
+    </li>
+    <li>
+        <b>SQL-Connection set utf8 charset and disable emulated prepared statements for mysql</b>
+        <p>For database mysql connections we set the charset to utf8 and disable 
+        emulated prepared statements so that it is possible to use prepared statments
+        also in the limit clause</p>
+    </li>
+    <li>
+        <b>Added more template filters</b>
+        <p>We have added more filters which can be used inside a template i.e.:</p>
+        <pre>{"value": {{ request.getParameter("startIndex")|integer }} }</pre>
+    </li>
+    <li>
+        <b>Added user object to context at the condition action</b>
+        <p>Inside the condition action you can access now the user object</p>
+    </li>
+    <li>
+        <b>Improve SQL-Builder action</b>
+        <p>We throw now a 404 error in case now result is returned</p>
+    </li>
+    <li>
+        <b>Add an option to provide examples for each API endpoint to the documentation</b>
+        <p>It is now possible to define custom example files per API which are 
+        shown in the API documentation</p>
+    </li>
+    <li>
+        <b>Unified url configuration for the backend, consumer and documentation app</b>
+        <p>All three AngularJS apps have now a config provider which can be 
+        configured</p>
+    </li>
+    <li>
+        <b>Add overview doc</b>
+        <p>We have added a Fusio overview chapter to the manual</p>
+    </li>
+    <li>
+        <b>Add config help</b>
+        <p>The missing config help file was added</p>
+    </li>
+    <li>
+        <b>0.3.2</b>
+    </li>
+    <li>
+        <b>Fix route deployment to live</b>
+        <p>There was a problem with the status change from development to live</p>
+    </li>
+    <li>
+        <b>0.3.1</b>
+    </li>
+    <li>
+        <b>Consumer add documentation link</b>
+        <p>We have added a link to the API documentation</p>
+    </li>
+    <li>
+        <b>Fix consumer navigation</b>
+        <p>There was a bug that the consumer navigation was not included in the
+        minified js</p>
+    </li>
+</ul>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:9</id>
+        <title>Fusio 0.3 released</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2016-07-20T10:42:00Z</updated>
+        <summary>
+Coverage of the 0.3 release and upcoming plans
+        </summary>
+        <category term="announcement" />
+        <category term="fusio" />
+        <content type="html"><![CDATA[
+
+<p>We are really proud to announce version 0.3 of Fusio. With this post we want
+to explain the changes of this release and the upcoming plans for the project.</p>
+
+<h3>Changelog</h3>
+
+<ul>
+    <li>
+        <b>Rewrote consumer implementation moved from jQuery to AngularJS</b>
+        <p>We have moved the <a href="http://demo.fusio-project.org/consumer/">consumer</a> 
+        implementation to AngularJS. Thereby we extended the functionality. Most 
+        notable we added a registration option where you can configure a remote 
+        login provider like GitHub and Facebook</p>
+    </li>
+    <li>
+        <b>Add backend database panel to create and edit database schemas</b>
+        <p>It is now possible to manage tables from the provided connections 
+        through the backend</p>
+    </li>
+    <li>
+        <b>Moved route configuration into a seperate table and add deploy 
+        mechanism which copies all route configurations if the API status is set 
+        to production</b>
+        <p>This is an internal change so that APIs which are in production mode 
+        never change even if the referenced schema or action changes</p>
+    </li>
+    <li>
+        <b>Add backend configuration</b>
+        <p>A new configuration panel was added to the backend where the user
+        can configure various system settings</p>
+    </li>
+    <li>
+        <b>Add sqlbuilder action to build a response based on multiple SQL queries</b>
+        <p>We have added a new action which simplifies building a response from
+        multiple SQL queries</p>
+    </li>
+    <li>
+        <b>Improved docs</b>
+        <p>The help docs were improved. But this topic is still on our list to
+        further on improve the documentation of this project</p>
+    </li>
+    <li>
+        <b>Add user to context</b>
+        <p>The user object can be now used in various actions</p>
+    </li>
+    <li>
+        <b>Upgrade backend app to angular 1.5, angular-ui 1.2 and bootstrap 3.3</b>
+        <p>We have upgraded angular to the currect 1.5 version. The next step would
+        be to move to angular 2 but this may take some time since all other depending 
+        projects like angular-bootstrap need to support version 2</p>
+    </li>
+    <li>
+        <b>Add parameters field to app</b>
+        <p>It is now possible to add arbitrary parameters to an app. Theses 
+        parameters can be used in an action</p>
+    </li>
+    <li>
+        <b>Upgrade PSX to 2.0</b>
+        <p>With the 2.0 release the PSX framework moved to a component based 
+        architecture. We have updated the complete code base to work with the 
+        new 2.0 version</p>
+    </li>
+</ul>
+
+<h3>Upcoming</h3>
+
+<p>With this release we move a great step forward to a stable release. There are
+some technical topics which we want to address in a 0.x release. The biggest 
+topic is probably to build an adapter marketplace. The adapter system is a great 
+way to simply provide an REST API for another system or to extend the 
+functionality of Fusio. We want to add a section to the website where all 
+adapters are listed and new developers can add an adapter by simply setting the 
+keyword <code>fusio-adapter</code> into the <code>composer.json</code> file.
+Another great topic is to add a forms point to the backend where a user can build
+a form which uses a specific route. These forms can then be embedded into an app.
+You can checkout the <a href="https://github.com/k42b3/fusio/blob/master/TODO.md">TODO</a> 
+for a complete list of ideas.</p>
+
+<p>Besides these technical issues we also want to work on the marketing part of 
+the project. As first step we have created a <a href="https://twitter.com/FusioAPI">twitter</a> 
+account where we want to share mostly new releases of Fusio. We want to approach 
+this in a grater way if we think that Fusio has reached a stable enough state.</p>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:8</id>
+        <title>Website update and status</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2016-03-03T19:26:00Z</updated>
+        <summary>
+Announcement of some changes on the website and talk about the current status
+of the project
+        </summary>
+        <category term="website" />
+        <category term="fusio" />
+        <content type="html"><![CDATA[
+
+<p>We like to announce some changes on the website. The demo page contains now
+a list of demo apps which demonstrate how to use a Fusio API. We are planing to 
+extend theses demo apps with implementations in different languages. Fell free 
+to contact us if you want to add a sample app in your favorite language.</p>
+
+<p>We have created a <a href="https://groups.google.com/forum/#!forum/fusio">google group</a> 
+as place to share ideas and ask questions about Fusio. With this we have also
+added a documentation section which lists all available documentation resource
+about Fusio.</p>
+
+<p>We have currently all features implemented which we want to have in the first
+stable release. The following list contains the topics which we want to cover
+before making the first stable release:</p>
+
+<ul>
+    <li>
+        <b>Improve documentation</b>
+        <p>We want to extend and improve the documentation so that it becomes 
+        easier for new users to start with Fusio.</p>
+    </li>
+    <li>
+        <b>Add adapter section to the website</b>
+        <p>We have added the adapters system in the 0.1.7 release and we want to
+        make it easy to create and share an adapter. In abstract an adapter is a
+        composer package which extends the functionality of Fusio. So we want
+        to add a adapter section to the website which scans all repositories on
+        packagist with an "fusio-adapter" tag and list them on that page. Also
+        we want to extend the documentation howto build an adapter.</p>
+    </li>
+    <li>
+        <b>Simplify the installation process without composer</b>
+        <p>At the moment it is only possible to install Fusio through composer.
+        We want to come up with a solution to install Fusio also on a system 
+        where you dont have access to the CLI.</p>
+    </li>
+    <li>
+        <b>Testing and increasing code coverage</b>
+        <p>We want continue to test Fusio and increase the code coverage of the
+        GUI and unit tests.</p>
+    </li>
+</ul>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:7</id>
+        <title>Released version 0.2.2</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2016-02-27T20:37:00Z</updated>
+        <summary>
+Coverage of the 0.2.2 release
+        </summary>
+        <category term="announcement" />
+        <category term="fusio" />
+        <content type="html"><![CDATA[
+
+<p>We are happy to introduce version 0.2.2 of Fusio. This release contains a new
+system import and export command through that it is possible to backup the 
+complete system into a json file and import this file into another system. In 
+the following the coverage of the changelog:</p>
+
+<h3>Changelog</h3>
+
+<ul>
+    <li>
+        <b>Add system import/export command</b>
+        <p>Command to export the system into a JSON structure and to import this
+        structure. This JSON structure can also be used as base to build an 
+        adapter</p>
+    </li>
+    <li>
+        <b>Add user to context</b>
+        <p>The context object contains now the user object. Also the logging 
+        table contains the user id if available</p>
+    </li>
+    <li>
+        <b>Add jsonschema import and generate access token command</b>
+        <p>We have added a command to import an arbitrary json schema into the 
+        system and a command to generate an access token</p>
+    </li>
+    <li>
+        <b>Improved services to check whether a resource already exists</b>
+        <p>We check now whether a resource exists and throw an appropriated 
+        exception if a resource is not available</p>
+    </li>
+</ul>
+
+<h3>Upgrade</h3>
+
+<p>This release is backwards compatible to the 0.2.x release. You can simply 
+replace the files and call the <code>php fusio/bin install</code> command.</p>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:6</id>
+        <title>Released version 0.2.1</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2016-01-30T10:50:00Z</updated>
+        <summary>
+Summary of the 0.2.1 release
+        </summary>
+        <category term="announcement" />
+        <category term="fusio" />
+        <content type="html"><![CDATA[
+
+<p>We like to introduce version 0.2.1 of Fusio. This release contains mostly
+improvements to the internal structure and also we have added a documentation
+which should help users to start with Fusio. Also we have added support for the
+oauth2 implicit grant which should simplify the usage of Fusio with javascript 
+applications. In the following the coverage of the changelog:</p>
+
+<h3>Changelog</h3>
+
+<ul>
+    <li>
+        <b>Added documentation and improved help docs</b>
+        <p>We have now a official documentation which is available at 
+        <a href="http://fusio.readthedocs.org">fusio.readthedocs.org</a>. This
+        is only a first step and we are planing to improve the documentation 
+        over time. Also we have improved the internal help docs which are 
+        available at the backend</p>
+    </li>
+    <li>
+        <b>Moved backend code into seperate composer project</b>
+        <p>We have moved the complete backend code into a seperate composer 
+        package. Because of that it is now possible to update the backend code 
+        through composer <code>composer update fusio/impl</code></p>
+    </li>
+    <li>
+        <b>Encrypt connection credentials in database</b>
+        <p>If you add now a new connection the credentials are stored encrypted
+        in the database. As key we use the new <code>fusio_project_key</code> 
+        value from the configuration</p>
+    </li>
+    <li>
+        <b>Added a access token generation method to the app service which is 
+        used globally</b>
+        <p>We have now a service method which generates a new access token. This 
+        makes it in the future easier to add request validation rules or to add 
+        new generation options i.e. a console command which could generate a new
+        access token</p>
+    </li>
+    <li>
+        <b>Add support for implicit grant to simplify the use of Fusio for js 
+        applications</b>
+        <p>This makes it easier for javascript applications to use Fusio</p>
+    </li>
+    <li>
+        <b>Action cache consider also uri fragments and parameters in cache key</b>
+        <p>The action cache adds now also the uri fragments and parameters to 
+        the cache key in case the parameters change the result</p>
+    </li>
+    <li>
+        <b>Removed client credentials grant and use instead password grant</b>
+        <p>We have replaced the <code>client credentials</code> with the 
+        <code>password grant</code> since we need to know the user which 
+        requests the access token so that we can validate the scopes 
+        accordingly</p>
+    </li>
+</ul>
+
+<h3>Upgrade</h3>
+
+<p>This release is complete compatible to the 0.2 release. You can simply 
+replace the files and call the <code>php fusio/bin install</code> command.</p>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:5</id>
+        <title>Fusio 0.2 released</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2016-01-02T17:18:00Z</updated>
+        <summary>
+Coverage of the 0.2 release
+        </summary>
+        <category term="announcement" />
+        <category term="fusio" />
+        <content type="html"><![CDATA[
+
+<p>We are happy to announce the availability of the 0.2 release of Fusio. This
+release contains some great features and overall improvements which move us 
+closer to a stable version. In the following we will explain all important 
+changes:</p>
+
+<h3>Changelog</h3>
+
+<ul>
+    <li>
+        <b>Added consumer API and javascript client implementation (#5)</b>
+        <p>We have added consumer API endpoints which help to integrate the 
+        Fusio API endpoints into existing systems. Also we have added a client 
+        reference implementation whereby it is possible to grant 3rd party 
+        applications access to protected API endpoints and where a developer
+        can manage their apps</p>
+    </li>
+    <li>
+        <b>Improved code architecture</b>
+        <p>A new service layer was introduced which now contains the business 
+        logic of all services. These services are then used in the controller
+        and commands</p>
+    </li>
+    <li>
+        <b>Added RAML import</b>
+        <p>A new backend point <code>import</code> was added where it is 
+        possible to import existing API specifications in the RAML format</p>
+    </li>
+    <li>
+        <b>Added json schema export command</b>
+        <p>In order to provide a way to export a complete json schema from Fusio
+        we have added a new command</p>
+    </li>
+    <li>
+        <b>Generate more secure tokens and passwords</b>
+        <p>We now use the token generator class everywhere which uses a secure 
+        random source</p>
+    </li>
+    <li>
+        <b>Fixed a security issue where the installer installs a test admin 
+        account with a fix username and password</b>
+        <p>In previous releases the installer has created an admin account with
+        a fix username and password. It was possible to change the password but
+        most users have probably not changed it. The account was used mostly for
+        testing and to insert initial entries of the system. In order to provide 
+        a secure system by default we generate now a new random password for  
+        each installation. So it is highly recommended to change the password or 
+        install the new version of Fusio.</p>
+    </li>
+</ul>
+
+<h3>Upgrade</h3>
+
+<p>Because of the many changes and the new API endpoints which we have 
+introduced we provide no direct upgrade path from the 0.1.x releases to 0.2.
+In case you have a <= 0.1.7 installation it is recommended to make a fresh 0.2 
+installation and copy the sql table data to the new system.</p>
+
+<br>
+
+<p>Happy hacking and have fun!</p>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:4</id>
+        <title>Released version 0.1.7</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2015-11-26T23:43:00Z</updated>
+        <summary>
+Introduction of the 0.1.7 release
+        </summary>
+        <category term="announcement" />
+        <category term="fusio" />
+        <content type="html"><![CDATA[
+
+<p>We like to announce version 0.1.7 of Fusio. This release contains some really
+great changes which we will cover in this post.</p>
+
+<h3>Changes</h3>
+
+<ul>
+    <li>
+        <b>Added adapter system</b>
+        <p>The adapter system provides a way to extend and configure Fusio. So
+        there are two usecases for an adapter. The first is to extend the system 
+        by providing new connection and action classes. The second is to provide
+        an easy way to configure an API for a 3rd party system. Take a look at
+        the <a href="https://github.com/k42b3/fusio-adapter/blob/master/definition-reference.json">definition</a>
+        reference to get a first impression of the adapter format.</p>
+    </li>
+    <li>
+        <b>Changing a action or schema which are used by a route in production status is not longer possible</b>
+        <p>With this release we have introduced a lock manager which locks all
+        schemas and actions which are used by a production route. This ensures
+        that it is not possible to change the behaviour of an API endpoint once
+        it in the status production.</p>
+    </li>
+    <li>
+        <b>Added and improved various actions</b>
+        <p>We have added the following actions to the system:</p>
+        <ul>
+            <li>
+                <code>Fusio\Impl\Action\HttpProxy</code>
+                <p>This action is similar to the <code>HttpRequest</code> action
+                except that it parses and redirects the response of the request.</p>
+            </li>
+            <li>
+                <code>Fusio\Impl\Action\MongoDelete</code><br>
+                <code>Fusio\Impl\Action\MongoFetchAll</code><br>
+                <code>Fusio\Impl\Action\MongoFetchRow</code><br>
+                <code>Fusio\Impl\Action\MongoInsert</code><br>
+                <code>Fusio\Impl\Action\MongoUpdate</code><br>
+                <p>Actions to create, receive, update or delete data from a MongoDB</p>
+            </li>
+            <li>
+                <code>Fusio\Impl\Action\Processor</code>
+                <p>Provides a simple way to configure and execute multiple 
+                actions through a YAML syntax.</p>
+            </li>
+            <li>
+                <code>Fusio\Impl\Action\Transform</code>
+                <p>The transform action applies <a href="https://tools.ietf.org/html/rfc6902">JSON patch</a>
+                operations an the request data.</p>
+            </li>
+            <li>
+                <code>Fusio\Impl\Action\Validator</code>
+                <p>Through this action it is possible to apply custom validators
+                for specific fields.</p>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <b>Improve access token generator</b>
+        <p>We use now a <a href="https://github.com/ircmaxell/RandomLib">RandomLib</a> to generate better
+        access tokens.</p>
+    </li>
+    <li>
+        <b>Moved action and connection class definition from config file into a seperate table</b>
+        <p>Previously the available action and connection classes were defined in the
+        <code>configuration.php</code>. With this release we have moved the list in to
+        a database table so that adapter can easily extend the list with 3rd party 
+        implementations.</p>
+    </li>
+</ul>
+
+<h3>Upgrade</h3>
+
+<p>In order to upgrade from a 0.1.6 installation you have to replace all 
+existing files with the new ones. After this you can run <code>php bin/fusio install</code>
+to upgrade your database schema to the 0.1.7 version.</p>
+
+<br>
+
+<p>Have fun with this release!</p>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:3</id>
+        <title>Released version 0.1.6</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2015-10-06T21:25:00Z</updated>
+        <summary>
+Coverage of the 0.1.6 release
+        </summary>
+        <category term="announcement" />
+        <category term="fusio" />
+        <content type="html"><![CDATA[
+
+<p>Today we have released version 0.1.6 of Fusio. The bigest change of this 
+release is that we have rewritten the documentation API viewer client as an 
+AngularJS/Material app which you can see at the 
+<a href="http://demo.fusio-project.org/documentation/#/api/news">demo</a> in 
+action. Also we have added export controllers to export the defined schema into 
+other API specification formats like Swagger, RAML and even WSDL to support 
+legacy systems. So happy hacking!</p>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:2</id>
+        <title>Fusio 0.1.5 released</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2015-09-12T22:47:00Z</updated>
+        <summary>
+Short announcement of the 0.1.5 released
+        </summary>
+        <category term="announcement" />
+        <category term="fusio" />
+        <content type="html"><![CDATA[
+
+<p>We like to announce version 0.1.5 of Fusio. This release contains some bug
+fixes but the most effort went into improving the unit tests and creating
+javascript tests for the backend. Therefor we use <a href="https://angular.github.io/protractor">protractor</a>
+which is an end-to-end test framework for AngularJS. We run these tests also on
+<a href="https://travis-ci.org/k42b3/fusio">travis</a>. This gives us the 
+confidence to move our code-base fast forward and release often without having
+to worry about breaking all things. So stay tuned for more changes.</p>
+
+]]></content>
+    </entry>
+    <entry>
+        <id>urn:fusio-project-org:blog:1</id>
+        <title>Fusio introduction</title>
+        <author>
+            <name>christoph.kappestein</name>
+            <uri>http://github.com/chriskapp</uri>
+        </author>
+        <updated>2015-08-27T22:15:00Z</updated>
+        <summary>
+A first introduction to the Fusio project.
+        </summary>
+        <category term="announcement" />
+        <category term="fusio" />
+        <content type="html"><![CDATA[
+
+<p>Fusio is an open source API management platform which enables you to build,
+manage, document and secure RESTful APIs. It provides a intuitive backend which 
+is based on AngularJS to manage all API endpoints.</p>
+
+<p>Fusio provides common actions which can be assigned to an API endpoint. I.e. 
+you can query data from an SQL database or push data into a message queue. It is 
+also very easy to embed custom actions.</p>
+
+<p>It is possible to define a schema for the request and response data in the 
+flexible JsonSchema format. Fusio uses this schema to validate incoming requests 
+and to build automatically a documentation of your API endpoints.</p>
+
+<p>Fusio manages all apps which can access the protected API endpoints. You can 
+setup fine grained scopes to control which app can access specific API 
+endpoints. Fusio uses the OAuth2 standard for authorization.</p>
+
+<p>Fusio provides also great statistics which give you an insight of the API 
+usage. Also every request to an API endpoint is logged which helps to inspect
+or debug issues.</p>
+
+<p>Fusio is still a young project but we are very excited about the future and
+have great plans to build solid open soure API management platform.</p>
+
+]]></content>
+    </entry>
+</feed>

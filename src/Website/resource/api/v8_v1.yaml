@@ -1,0 +1,942 @@
+version: "1.0"
+api:
+  request:
+    description: "Provides methods to get all information from the request"
+    visible: true
+    methods:
+      getMethod:
+        description: "Returns the request method"
+        return:
+          type: string
+          description: "Returns the request method in uppercase"
+        example: |
+          var method = request.getMethod();
+          if (method === "GET") {
+            // we have a GET request
+          } else if (method === "POST") {
+            // we have a POST request
+          }
+      getHeader:
+        description: "Returns a value from the request header"
+        arguments:
+          - name: name
+            type: string
+            description: "Header name"
+        return:
+          type: string
+          description: "Returns the header value"
+        example: |
+          var header = request.getHeader("X-Custom");
+          if (header === "Foo") {
+            // a custom header was provided
+          }
+      getUriFragment:
+        description: "Through this method it is possible to access dynamic parts of the uri. A dynamic part must be defined in the route as <code>:id</code> i.e. <code>/news/:id</code>"
+        arguments:
+          - name: name
+            type: string
+            description: "Uri fragment name"
+        return:
+          type: string
+          description: "Returns the uri fragment value"
+        example: |
+          var year = request.getUriFragment("year");
+          if (year === "1986") {
+            // url was called with a dynamic fragment
+          }
+      getUriFragments:
+        description: "Returns all available uri fragments as object"
+        return:
+          type: object
+          description: "Object containing all uri fragment values"
+        example: |
+          var fragments = request.getUriFragments();
+          if (fragments.id) {
+            // fragment "id" is available
+          }
+      getParameter:
+        description: "Returns a single request parameter. I.e. if the requested url was <code>/news?foo=bar</code> you can access the foo parameter through <code>request.getParameter('foo')</code>"
+        arguments:
+          - name: name
+            type: string
+            description: "Parameter name"
+        return:
+          type: string
+          description: "Returns the parameter value"
+        example: |
+          var count = parseInt(request.getParameter("count"));
+          if (count > 0) {
+            // query parameter "count" is available
+          }
+      getParameters:
+        description: "Returns all available request parameters as object"
+        return:
+          type: object
+          description: "Object containing all parameter values"
+        example: |
+          var parameters = request.getParameters();
+          if (parameters.startIndex) {
+            // parameter "startIndex" is available
+          }
+      getBody:
+        description: "Returns the request body as object"
+        return:
+          type: object
+          description: "Object containing the request data"
+        example: |
+          var body = request.getBody();
+          if (body.title) {
+            // body "title" is available
+          }
+  response:
+    description: "Provides methods to specify the response"
+    visible: true
+    methods:
+      setStatusCode:
+        description: "Sets the response status code"
+        arguments:
+          - name: code
+            type: integer
+            description: "A valid http status code"
+        example: |
+          // returns a 404 http status code
+          response.setStatusCode(404);
+      setHeaders:
+        description: "Sets the response headers"
+        arguments:
+          - name: headers
+            type: object
+            description: "An object containing only string values"
+        example: |
+          // set a custom response header
+          response.setHeaders({
+            "X-Custom": "foo"
+          });
+      setBody:
+        description: "Sets the response body"
+        arguments:
+          - name: body
+            type: object
+            description: "An arbitrary JSON object"
+        example: |
+          // set the response body
+          response.setBody({
+            success: true,
+            message: "A successful response"
+          });
+  context:
+    description: "Contains information about the app and user who has made the request"
+    visible: true
+    methods:
+      getRouteId:
+        description: "Returns the id of the current route"
+        return:
+          type: integer
+          description: "The id of the route"
+        example: |
+          var routeId = context.getRouteId();
+          if (routeId === 42) {
+            // a specific route was called
+          }
+      getApp:
+        description: "Returns the app which is assigned to the provided OAuth2 token. If no token was provided the <code>isAnonymous</code> method returns true"
+        return:
+          type: app
+          description: "The app object contains informations about the app"
+        example: |
+          var app = context.getApp();
+          if (app.isAnonymous()) {
+            // request was anonymous means no app credentials were provided
+          }
+      getUser:
+        description: "Returns the user which belongs to the app. If the app is anonymous then the user <code>isAnonymous</code> method returns also true"
+        return:
+          type: user
+          description: "The user object provides informations about the user"
+        example: |
+          var user = context.getUser();
+          if (user.getId() === 12) {
+            // a specific user has requested the endpoint
+          }
+  app:
+    description: ""
+    visible: false
+    methods:
+      isAnonymous:
+        description: "Returns whether the app is anonymous or not"
+        return:
+          type: boolean
+          description: ""
+      getId:
+        description: "Returns the id of the app"
+        return:
+          type: integer
+          description: ""
+      getUserId:
+        description: "Returns the user id of the assigned user"
+        return:
+          type: integer
+          description: ""
+      getStatus:
+        description: "Returns the status of the app"
+        return:
+          type: integer
+          description: ""
+      getName:
+        description: "Returns the name of the app"
+        return:
+          type: string
+          description: ""
+      getUrl:
+        description: "Returns the url of the app"
+        return:
+          type: string
+          description: ""
+      getAppKey:
+        description: "Returns the app key of the app"
+        return:
+          type: string
+          description: ""
+      getScopes:
+        description: "Returns the assigned scopes to this app"
+        return:
+          type: array
+          description: ""
+      hasScope:
+        description: "Returns whether the provided scope is available"
+        arguments:
+          - name: name
+            type: string
+            description: "The scope name"
+        return:
+          type: boolean
+          description: ""
+      getParameter:
+        description: "Returns an app specific parameter"
+        arguments:
+          - name: name
+            type: string
+            description: "The parameter name"
+        return:
+          type: string
+          description: ""
+  user:
+    description: ""
+    visible: false
+    methods:
+      isAnonymous:
+        description: "Returns whether the user is anonymous or not"
+        return:
+          type: boolean
+          description: ""
+      getId:
+        description: "Returns the id of the user"
+        return:
+          type: integer
+          description: ""
+      getStatus:
+        description: "Returns the status of the user"
+        return:
+          type: integer
+          description: ""
+      getName:
+        description: "Returns the name of the user"
+        return:
+          type: string
+          description: ""
+  connector:
+    description: "Through the connector it is possible to connect to another service i.e. a MySQL database or MongoDB"
+    visible: true
+    methods:
+      get:
+        description: "Returns the fitting connection object for the provided connection name."
+        arguments:
+          - name: connection
+            type: string
+            description: "Name or id of the connection"
+        return:
+          - type: amqp
+            description: "Connection to push messages to <a href=\"https://www.rabbitmq.com/\">RabbitMQ</a>"
+          - type: beanstalk
+            description: "Connection to push messages to <a href=\"http://kr.github.io/beanstalkd/\">Beanstalkd</a>"
+          - type: elasticsearch
+            description: "Connection to find or update entries from a <a href=\"https://www.elastic.co/\">Elasticsearch</a> server"
+          - type: http
+            description: "Connection to execute HTTP requests"
+          - type: memcache
+            description: "Connection to set and get values from a <a href=\"https://memcached.org/\">Memcache</a> server"
+          - type: mongodb
+            description: "Connection to work with a <a href=\"https://www.mongodb.com/\">MongoDB</a>"
+          - type: redis
+            description: "Connection to set and get values from a <a href=\"https://redis.io/\">Redis</a> server"
+          - type: soap
+            description: "Connection to execute SOAP requests"
+          - type: sql
+            description: "Connection to execute SQL queries"
+        example: |
+          var connection = connector.get("Mysql-Connection");
+          var row = connection.fetchAssoc('SELECT * FROM acme_news WHERE id = :id', {
+            id: request.getUriFragment("id")
+          });
+
+          if (row) {
+            response.setBody(row);
+          } else {
+            response.setStatusCode(404);
+            response.setBody({
+              message: "Entry not available"
+            });
+          }
+  processor:
+    description: "The processor allows you to execute another action"
+    visible: true
+    methods:
+      execute:
+        description: "Executes another defined action and returns the response body"
+        arguments:
+          - name: action
+            type: string
+            description: "Name or id of the action"
+          - name: body
+            type: object
+            description: "Optional the request body object"
+          - name: uriFragments
+            type: object
+            description: "Optional an object with uri fragments"
+          - name: parameters
+            type: object
+            description: "Optional an object with request parameters"
+          - name: method
+            type: string
+            description: "Optional the used request method"
+        return:
+          type: object
+          description: "The response of the action"
+        example: |
+          // execute another action and set the response
+          var response = processor.execute("Action-1");
+
+          response.setBody(response);
+  cache:
+    description: "Provides methods to cache expensive calls"
+    visible: true
+    methods:
+      get:
+        description: "Returns a previously cached value"
+        arguments:
+          - name: name
+            type: string
+            description: ""
+        return:
+          type: mixed
+          description: ""
+      set:
+        description: "Persists a value under a specific name"
+        arguments:
+          - name: name
+            type: string
+            description: ""
+          - name: value
+            type: mixed
+            description: ""
+      has:
+        description: "Checks whether a cache entry is available for the provided name"
+        arguments:
+          - name: name
+            type: string
+            description: ""
+        return:
+          type: boolean
+          description: ""
+      delete:
+        description: "Deletes an entry from the cache"
+        arguments:
+          - name: name
+            type: string
+            description: ""
+  console:
+    description: "Provides methods to cache expensive calls"
+    visible: true
+    methods:
+      log:
+        description: "Creates a log entry with a specific log level"
+        arguments:
+          - name: name
+            type: string
+            description: "The log message"
+          - name: level
+            type: string
+            description: "The debug level must be one of DEBUG, INFO, NOTICE, WARNING, ERROR, CRITICAL, ALERT, EMERGENCY"
+      info:
+        description: "Creates a info log entry"
+        arguments:
+          - name: message
+            type: string
+            description: "The log message"
+      error:
+        description: "Creates a error log entry"
+        arguments:
+          - name: message
+            type: string
+            description: "The log message"
+      warn:
+        description: "Creates a warn log entry"
+        arguments:
+          - name: message
+            type: string
+            description: "The log message"
+
+  # connection services
+  amqp:
+    description: ""
+    visible: false
+    methods:
+      basicPublish:
+        description: "Pushes a new entry to the provided queue"
+        arguments:
+          - name: queue
+            type: string
+            description: "Name of the queue"
+          - name: body
+            type: string
+            description: "The data of the message as string"
+        example: |
+          var amqp = connector.get("amqp-connection");
+
+          // push the current request body to a queue
+          amqp.basicPublish("request_queue", JSON.stringify(request.getBody()));
+  beanstalk:
+    description: ""
+    visible: false
+    methods:
+      putInTube:
+        description: ""
+        arguments:
+          - name: tube
+            type: string
+            description: "Name of the tube"
+          - name: data
+            type: string
+            description: "The data of the message as string"
+        example: |
+          var beanstalk = connector.get("beanstalk-connection");
+
+          // push the current request body to a queue
+          beanstalk.putInTube("request_queue", JSON.stringify(request.getBody()));
+  elasticsearch:
+    description: ""
+    visible: false
+    methods:
+      index:
+        description: ""
+        arguments:
+          - name: params
+            type: object
+            description: ""
+        example: |
+          var elasticsearch = connector.get("elasticsearch-connection");
+
+          // index the current request body
+          elasticsearch.index({
+            index: "my_index",
+            type: "my_type",
+            id: request.getParameter("id"),
+            body: request.getBody()
+          });
+      delete:
+        description: ""
+        arguments:
+          - name: params
+            type: object
+            description: ""
+        example: |
+          var elasticsearch = connector.get("elasticsearch-connection");
+
+          // delete a document
+          elasticsearch.delete({
+            index: "my_index",
+            type: "my_type",
+            id: request.getParameter("id")
+          });
+      count:
+        description: ""
+        arguments:
+          - name: params
+            type: object
+            description: ""
+        example: |
+          var elasticsearch = connector.get("elasticsearch-connection");
+
+          // count matching entries
+          var data = elasticsearch.count({
+            index: "my_index",
+            type: "my_type",
+            body: {
+              query: {
+                match: {
+                  testField: "abc"
+                }
+              }
+            }
+          });
+      exists:
+        description: ""
+        arguments:
+          - name: params
+            type: object
+            description: ""
+        example: |
+          var elasticsearch = connector.get("elasticsearch-connection");
+
+          // check whether a document exists
+          var data = elasticsearch.exists({
+            index: "my_index",
+            type: "my_type",
+            id: request.getParameter("id")
+          });
+      create:
+        description: ""
+        arguments:
+          - name: params
+            type: object
+            description: ""
+        example: |
+          var elasticsearch = connector.get("elasticsearch-connection");
+
+          // create a document with the current request body
+          elasticsearch.create({
+            index: "my_index",
+            type: "my_type",
+            id: request.getParameter("id"),
+            body: request.getBody()
+          });
+      search:
+        description: ""
+        arguments:
+          - name: params
+            type: object
+            description: ""
+        example: |
+          var elasticsearch = connector.get("elasticsearch-connection");
+
+          // search documents
+          var data = elasticsearch.search({
+            index: "my_index",
+            type: "my_type",
+            body: {
+              query: {
+                match: {
+                  testField: "abc"
+                }
+              }
+            }
+          });
+      update:
+        description: ""
+        arguments:
+          - name: params
+            type: object
+            description: ""
+        example: |
+          var elasticsearch = connector.get("elasticsearch-connection");
+
+          // update a document to the current request body
+          elasticsearch.update({
+            index: "my_index",
+            type: "my_type",
+            id: request.getParameter("id"),
+            body: request.getBody()
+          });
+  http:
+    description: "Provides a method to send a HTTP request and return the response"
+    visible: false
+    methods:
+      request:
+        description: "Sends a HTTP request and return the response"
+        arguments:
+          - name: method
+            type: string
+            description: "A valid HTTP method"
+          - name: url
+            type: string
+            description: "An absolute url"
+          - name: headers
+            type: object
+            description: "Optional request headers"
+          - name: body
+            type: string
+            description: "Optional the request body"
+        return:
+          type: http_response
+          description: "The HTTP response object"
+        example: |
+          // execute another action and set the response
+          var http = connector.get("http-connection");
+          var resp = http.request("GET", "http://localhost/acme/api");
+
+          if (resp.getStatusCode() === 200) {
+            var data = JSON.parse(resp.getBody());
+
+            response.setBody(data);
+          } else {
+            response.setBody({
+              success: false,
+              message: "The request was not successful"
+            });
+          }
+  http_response:
+    description: ""
+    visible: false
+    methods:
+      getStatusCode:
+        description: "Returns the status code of the http response"
+        return:
+          type: integer
+          description: ""
+      getHeaders:
+        description: "Returns all response headers"
+        return:
+          type: object
+          description: ""
+      getHeader:
+        description: "Returns a specific response header"
+        arguments:
+          - name: name
+            type: string
+            description: ""
+        return:
+          type: string
+          description: ""
+      getBody:
+        description: "Returns the response body"
+        return:
+          type: string
+          description: ""
+  memcache:
+    description: ""
+    visible: false
+    methods:
+      get:
+        description: ""
+        arguments:
+          - name: name
+            type: string
+            description: ""
+        return:
+          type: mixed
+          description: ""
+      set:
+        description: ""
+        arguments:
+          - name: name
+            type: string
+            description: ""
+          - name: value
+            type: mixed
+            description: ""
+      delete:
+        description: ""
+        arguments:
+          - name: name
+            type: string
+            description: ""
+  mongodb:
+    description: ""
+    visible: false
+    methods:
+      find:
+        description: ""
+        arguments:
+          - name: collection
+            type: string
+            description: ""
+          - name: filter
+            type: object
+            description: ""
+        return:
+          type: array
+          description: ""
+      findOne:
+        description: ""
+        arguments:
+          - name: collection
+            type: string
+            description: ""
+          - name: filter
+            type: object
+            description: ""
+        return:
+          type: object
+          description: ""
+      findOneAndDelete:
+        description: ""
+        arguments:
+          - name: collection
+            type: string
+            description: ""
+          - name: filter
+            type: object
+            description: ""
+        return:
+          type: array
+          description: ""
+      findOneAndUpdate:
+        description: ""
+        arguments:
+          - name: collection
+            type: string
+            description: ""
+          - name: filter
+            type: object
+            description: ""
+          - name: update
+            type: object
+            description: ""
+        return:
+          type: array
+          description: ""
+      findOneAndReplace:
+        description: ""
+        arguments:
+          - name: collection
+            type: string
+            description: ""
+          - name: filter
+            type: object
+            description: ""
+          - name: replacement
+            type: object
+            description: ""
+        return:
+          type: array
+          description: ""
+      insertOne:
+        description: ""
+        arguments:
+          - name: collection
+            type: string
+            description: ""
+          - name: document
+            type: object
+            description: ""
+      insertMany:
+        description: ""
+        arguments:
+          - name: collection
+            type: string
+            description: ""
+          - name: documents
+            type: array
+            description: ""
+      updateOne:
+        description: ""
+        arguments:
+          - name: collection
+            type: string
+            description: ""
+          - name: filter
+            type: object
+            description: ""
+          - name: update
+            type: object
+            description: ""
+      updateMany:
+        description: ""
+        arguments:
+          - name: collection
+            type: string
+            description: ""
+          - name: filter
+            type: object
+            description: ""
+          - name: update
+            type: array
+            description: ""
+      deleteOne:
+        description: ""
+        arguments:
+          - name: collection
+            type: string
+            description: ""
+          - name: filter
+            type: object
+            description: ""
+      deleteMany:
+        description: ""
+        arguments:
+          - name: collection
+            type: string
+            description: ""
+          - name: filter
+            type: object
+            description: ""
+      replaceOne:
+        description: ""
+        arguments:
+          - name: collection
+            type: string
+            description: ""
+          - name: filter
+            type: object
+            description: ""
+          - name: replacement
+            type: object
+            description: ""
+      count:
+        description: ""
+        arguments:
+          - name: collection
+            type: string
+            description: ""
+          - name: filter
+            type: object
+            description: ""
+        return:
+          type: integer
+          description: ""
+  redis:
+    description: ""
+    visible: false
+    methods:
+      get:
+        description: ""
+        arguments:
+          - name: key
+            type: string
+            description: ""
+        return:
+          type: string
+          description: ""
+      exists:
+        description: ""
+        arguments:
+          - name: key
+            type: string
+            description: ""
+        return:
+          type: boolean
+          description: ""
+      set:
+        description: ""
+        arguments:
+          - name: key
+            type: string
+            description: ""
+          - name: value
+            type: string
+            description: ""
+          - name: expiration
+            type: integer
+            description: "Optional the number of seconds when the entry expires"
+      del:
+        description: ""
+        arguments:
+          - name: key
+            type: string
+            description: ""
+  soap:
+    description: ""
+    visible: false
+    methods:
+      call:
+        description: ""
+        arguments:
+          - name: functionName
+            type: string
+            description: ""
+          - name: arguments
+            type: object
+            description: ""
+        return:
+          type: mixed
+          description: ""
+  sql:
+    description: ""
+    visible: false
+    methods:
+      fetchAll:
+        description: ""
+        arguments:
+          - name: sql
+            type: string
+            description: ""
+          - name: params
+            type: object
+            description: ""
+        return:
+          type: array
+          description: ""
+        example: |
+          var sql = connector.get("sql-connection");
+
+          var result = sql.fetchAll("SELECT * FROM acme_news WHERE title LIKE :title LIMIT 10", {
+            title: "%" + request.getParameter("search") + "%"
+          });
+
+          response.setBody({
+            result: result
+          });
+      fetchAssoc:
+        description: ""
+        arguments:
+          - name: sql
+            type: string
+            description: ""
+          - name: params
+            type: object
+            description: ""
+        return:
+          type: object
+          description: ""
+        example: |
+          var sql = connector.get("sql-connection");
+
+          var row = sql.fetchAssoc("SELECT * FROM acme_news WHERE id = :id", {
+            id: request.getUriFragment("news_id")
+          });
+
+          if (row) {
+            response.setBody(row);
+          } else {
+            response.setStatusCode(404);
+            response.setBody({
+              message: "Entry not found!"
+            });
+          }
+      fetchColumn:
+        description: ""
+        arguments:
+          - name: sql
+            type: string
+            description: ""
+          - name: params
+            type: object
+            description: ""
+        return:
+          type: string
+          description: ""
+      executeUpdate:
+        description: ""
+        arguments:
+          - name: sql
+            type: string
+            description: ""
+          - name: params
+            type: object
+            description: ""
+        return:
+          type: integer
+          description: ""
+        example: |
+          var sql = connector.get("sql-connection");
+          var body = request.getBody();
+
+          sql.executeUpdate("INSERT INTO acme_news SET title = :title, content = :content", {
+            title: body.title,
+            content: body.content
+          });
+
+          response.setStatusCode(201);
+          response.setBody({
+            message: "Create successful!"
+          });

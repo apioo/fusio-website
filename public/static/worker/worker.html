@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<title>Thrift module: worker</title></head><body>
+<div class="container-fluid">
+<h1>Thrift module: worker</h1>
+<table class="table-bordered table-striped table-condensed"><thead><tr><th>Module</th><th>Services</th><th>Data types</th><th>Constants</th></tr></thead><tbody>
+<tr>
+<td>worker</td><td><a href="#Svc_Worker">Worker</a><br/>
+<ul>
+<li><a href="#Fn_Worker_executeAction">executeAction</a></li>
+<li><a href="#Fn_Worker_setAction">setAction</a></li>
+<li><a href="#Fn_Worker_setConnection">setConnection</a></li>
+</ul>
+</td>
+<td><a href="#Struct_Action">Action</a><br/>
+<a href="#Struct_App">App</a><br/>
+<a href="#Struct_Connection">Connection</a><br/>
+<a href="#Struct_Context">Context</a><br/>
+<a href="#Struct_Event">Event</a><br/>
+<a href="#Struct_Execute">Execute</a><br/>
+<a href="#Struct_HttpRequest">HttpRequest</a><br/>
+<a href="#Struct_Log">Log</a><br/>
+<a href="#Struct_Message">Message</a><br/>
+<a href="#Struct_Request">Request</a><br/>
+<a href="#Struct_Response">Response</a><br/>
+<a href="#Struct_Result">Result</a><br/>
+<a href="#Struct_RpcRequest">RpcRequest</a><br/>
+<a href="#Struct_User">User</a><br/>
+</td>
+<td></td>
+</tr></tbody></table>
+<hr/><h2 id="Structs">Data structures</h2>
+<div class="definition"><h3 id="Struct_Message">Struct: Message</h3>
+<table class="table-bordered table-striped table-condensed"><thead><tr><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></tr></thead><tbody>
+<tr><td>1</td><td>success</td><td><code>bool</code></td><td></td><td>default</td><td></td></tr>
+<tr><td>2</td><td>message</td><td><code>string</code></td><td></td><td>default</td><td></td></tr>
+</tbody></table><br/></div><div class="definition"><h3 id="Struct_Connection">Struct: Connection</h3>
+<table class="table-bordered table-striped table-condensed"><thead><tr><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></tr></thead><tbody>
+<tr><td>1</td><td>name</td><td><code>string</code></td><td></td><td>default</td><td></td></tr>
+<tr><td>2</td><td>type</td><td><code>string</code></td><td></td><td>default</td><td></td></tr>
+<tr><td>3</td><td>config</td><td><code>map&lt;<code>string</code>, <code>string</code>&gt;</code></td><td></td><td>default</td><td></td></tr>
+</tbody></table><br/></div><div class="definition"><h3 id="Struct_Action">Struct: Action</h3>
+<table class="table-bordered table-striped table-condensed"><thead><tr><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></tr></thead><tbody>
+<tr><td>1</td><td>name</td><td><code>string</code></td><td></td><td>default</td><td></td></tr>
+<tr><td>2</td><td>code</td><td><code>string</code></td><td></td><td>default</td><td></td></tr>
+</tbody></table><br/></div><div class="definition"><h3 id="Struct_Execute">Struct: Execute</h3>
+<table class="table-bordered table-striped table-condensed"><thead><tr><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></tr></thead><tbody>
+<tr><td>1</td><td>action</td><td><code>string</code></td><td></td><td>default</td><td></td></tr>
+<tr><td>2</td><td>request</td><td><code><a href="#Struct_Request">Request</a></code></td><td></td><td>default</td><td></td></tr>
+<tr><td>3</td><td>context</td><td><code><a href="#Struct_Context">Context</a></code></td><td></td><td>default</td><td></td></tr>
+</tbody></table><br/></div><div class="definition"><h3 id="Struct_Request">Union: Request</h3>
+<table class="table-bordered table-striped table-condensed"><thead><tr><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></tr></thead><tbody>
+<tr><td>1</td><td>http</td><td><code><a href="#Struct_HttpRequest">HttpRequest</a></code></td><td></td><td>optional</td><td></td></tr>
+<tr><td>2</td><td>rpc</td><td><code><a href="#Struct_RpcRequest">RpcRequest</a></code></td><td></td><td>optional</td><td></td></tr>
+</tbody></table><br/></div><div class="definition"><h3 id="Struct_HttpRequest">Struct: HttpRequest</h3>
+<table class="table-bordered table-striped table-condensed"><thead><tr><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></tr></thead><tbody>
+<tr><td>1</td><td>method</td><td><code>string</code></td><td></td><td>default</td><td></td></tr>
+<tr><td>2</td><td>headers</td><td><code>map&lt;<code>string</code>, <code>string</code>&gt;</code></td><td></td><td>default</td><td></td></tr>
+<tr><td>3</td><td>uriFragments</td><td><code>map&lt;<code>string</code>, <code>string</code>&gt;</code></td><td></td><td>default</td><td></td></tr>
+<tr><td>4</td><td>parameters</td><td><code>map&lt;<code>string</code>, <code>string</code>&gt;</code></td><td></td><td>default</td><td></td></tr>
+<tr><td>5</td><td>body</td><td><code>string</code></td><td></td><td>default</td><td></td></tr>
+</tbody></table><br/></div><div class="definition"><h3 id="Struct_RpcRequest">Struct: RpcRequest</h3>
+<table class="table-bordered table-striped table-condensed"><thead><tr><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></tr></thead><tbody>
+<tr><td>1</td><td>arguments</td><td><code>string</code></td><td></td><td>default</td><td></td></tr>
+</tbody></table><br/></div><div class="definition"><h3 id="Struct_Context">Struct: Context</h3>
+<table class="table-bordered table-striped table-condensed"><thead><tr><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></tr></thead><tbody>
+<tr><td>1</td><td>routeId</td><td><code>i64</code></td><td></td><td>default</td><td></td></tr>
+<tr><td>2</td><td>baseUrl</td><td><code>string</code></td><td></td><td>default</td><td></td></tr>
+<tr><td>3</td><td>app</td><td><code><a href="#Struct_App">App</a></code></td><td></td><td>default</td><td></td></tr>
+<tr><td>4</td><td>user</td><td><code><a href="#Struct_User">User</a></code></td><td></td><td>default</td><td></td></tr>
+</tbody></table><br/></div><div class="definition"><h3 id="Struct_App">Struct: App</h3>
+<table class="table-bordered table-striped table-condensed"><thead><tr><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></tr></thead><tbody>
+<tr><td>1</td><td>id</td><td><code>i64</code></td><td></td><td>default</td><td></td></tr>
+<tr><td>2</td><td>userId</td><td><code>i64</code></td><td></td><td>default</td><td></td></tr>
+<tr><td>3</td><td>status</td><td><code>i32</code></td><td></td><td>default</td><td></td></tr>
+<tr><td>4</td><td>name</td><td><code>string</code></td><td></td><td>default</td><td></td></tr>
+<tr><td>5</td><td>url</td><td><code>string</code></td><td></td><td>default</td><td></td></tr>
+<tr><td>6</td><td>appKey</td><td><code>string</code></td><td></td><td>default</td><td></td></tr>
+<tr><td>7</td><td>scopes</td><td><code>list&lt;<code>string</code>&gt;</code></td><td></td><td>default</td><td></td></tr>
+<tr><td>8</td><td>parameters</td><td><code>list&lt;<code>string</code>&gt;</code></td><td></td><td>default</td><td></td></tr>
+</tbody></table><br/></div><div class="definition"><h3 id="Struct_User">Struct: User</h3>
+<table class="table-bordered table-striped table-condensed"><thead><tr><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></tr></thead><tbody>
+<tr><td>1</td><td>id</td><td><code>i64</code></td><td></td><td>default</td><td></td></tr>
+<tr><td>2</td><td>roleId</td><td><code>i64</code></td><td></td><td>default</td><td></td></tr>
+<tr><td>3</td><td>categoryId</td><td><code>i64</code></td><td></td><td>default</td><td></td></tr>
+<tr><td>4</td><td>status</td><td><code>i32</code></td><td></td><td>default</td><td></td></tr>
+<tr><td>5</td><td>name</td><td><code>string</code></td><td></td><td>default</td><td></td></tr>
+<tr><td>6</td><td>email</td><td><code>string</code></td><td></td><td>default</td><td></td></tr>
+<tr><td>7</td><td>points</td><td><code>i32</code></td><td></td><td>default</td><td></td></tr>
+</tbody></table><br/></div><div class="definition"><h3 id="Struct_Result">Struct: Result</h3>
+<table class="table-bordered table-striped table-condensed"><thead><tr><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></tr></thead><tbody>
+<tr><td>1</td><td>response</td><td><code><a href="#Struct_Response">Response</a></code></td><td></td><td>default</td><td></td></tr>
+<tr><td>2</td><td>events</td><td><code>list&lt;<code><a href="#Struct_Event">Event</a></code>&gt;</code></td><td></td><td>default</td><td></td></tr>
+<tr><td>3</td><td>logs</td><td><code>list&lt;<code><a href="#Struct_Log">Log</a></code>&gt;</code></td><td></td><td>default</td><td></td></tr>
+</tbody></table><br/></div><div class="definition"><h3 id="Struct_Response">Struct: Response</h3>
+<table class="table-bordered table-striped table-condensed"><thead><tr><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></tr></thead><tbody>
+<tr><td>1</td><td>statusCode</td><td><code>i32</code></td><td></td><td>default</td><td></td></tr>
+<tr><td>2</td><td>headers</td><td><code>map&lt;<code>string</code>, <code>string</code>&gt;</code></td><td></td><td>default</td><td></td></tr>
+<tr><td>3</td><td>body</td><td><code>string</code></td><td></td><td>default</td><td></td></tr>
+</tbody></table><br/></div><div class="definition"><h3 id="Struct_Event">Struct: Event</h3>
+<table class="table-bordered table-striped table-condensed"><thead><tr><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></tr></thead><tbody>
+<tr><td>1</td><td>eventName</td><td><code>string</code></td><td></td><td>default</td><td></td></tr>
+<tr><td>2</td><td>data</td><td><code>string</code></td><td></td><td>default</td><td></td></tr>
+</tbody></table><br/></div><div class="definition"><h3 id="Struct_Log">Struct: Log</h3>
+<table class="table-bordered table-striped table-condensed"><thead><tr><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></tr></thead><tbody>
+<tr><td>1</td><td>level</td><td><code>string</code></td><td></td><td>default</td><td></td></tr>
+<tr><td>2</td><td>message</td><td><code>string</code></td><td></td><td>default</td><td></td></tr>
+</tbody></table><br/></div><hr/><h2 id="Services">Services</h2>
+<h3 id="Svc_Worker">Service: Worker</h3>
+<pre>The Fusio Worker provides a simple interface so that the Fusio instance can interact with the worker.
+</pre><br/><div class="definition"><h4 id="Fn_Worker_setConnection">Function: Worker.setConnection</h4>
+<pre><code><a href="#Struct_Message">Message</a></code> setConnection(<code><a href="#Struct_Connection">Connection</a></code> connection)
+</pre><pre>Sets a specific connection to the worker. This method is invoked everytime a connection is created or updated at
+the Fusio instance. The worker must persist the connection so at it can be reused on execution
+</pre><br/></div><div class="definition"><h4 id="Fn_Worker_setAction">Function: Worker.setAction</h4>
+<pre><code><a href="#Struct_Message">Message</a></code> setAction(<code><a href="#Struct_Action">Action</a></code> action)
+</pre><pre>Sets a specific action to the worker. This method is invoked everytime an action is created or updated at the Fusio
+instance. The worker must persist the action code at a file which then can be executed. If your language needs a
+compile step it should be invoked at this call
+</pre><br/></div><div class="definition"><h4 id="Fn_Worker_executeAction">Function: Worker.executeAction</h4>
+<pre><code><a href="#Struct_Result">Result</a></code> executeAction(<code><a href="#Struct_Execute">Execute</a></code> execute)
+</pre><pre>Is called if an user invokes a route at Fusio and this routes has a worker action assigned. The worker must then
+execute the provided action name and return the response
+</pre><br/></div></div></body></html>

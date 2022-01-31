@@ -1,0 +1,42 @@
+backend:
+    version: 0.8.0
+    downloadUrl: 'https://github.com/apioo/fusio-apps-backend/archive/v0.8.0.zip'
+    sha1Hash: cbea7412c9da6ecd2f0ac1bae0a368486732f1da
+    description: 'The backend app is the official app to develop, configure and maintain your API.'
+    screenshot: 'https://raw.githubusercontent.com/apioo/fusio/master/doc/_static/backend.png'
+    website: 'https://github.com/apioo/fusio-apps-backend'
+developer:
+    version: 0.4.0
+    downloadUrl: 'https://github.com/apioo/fusio-apps-developer/archive/v0.4.0.zip'
+    sha1Hash: a04bbeeea90d6eb59522a4620e824743e5f47caf
+    description: 'The developer app is designed to quickly setup an API program where new developers can register and create/manage their apps.'
+    screenshot: 'https://raw.githubusercontent.com/apioo/fusio/master/doc/_static/developer.png'
+    website: 'https://github.com/apioo/fusio-apps-developer'
+documentation:
+    version: 0.5.0
+    downloadUrl: 'https://github.com/apioo/fusio-apps-documentation/archive/v0.5.0.zip'
+    sha1Hash: 90382f0424bdd0d6c653f36294af54bff32962bf
+    description: 'The documentation app simply provides an overview of all available endpoints. It is possible to export the API definition into other schema formats like i.e. OpenAPI.'
+    screenshot: 'https://raw.githubusercontent.com/apioo/fusio/master/doc/_static/documentation.png'
+    website: 'https://github.com/apioo/fusio-apps-documentation'
+swagger-ui:
+    version: 0.2.0
+    downloadUrl: 'https://github.com/apioo/fusio-apps-swaggerui/archive/v0.2.0.zip'
+    sha1Hash: c8919120f76cedf3407c8fd41de05b7221b109b4
+    description: 'The Swagger UI app renders a documentation based on the OpenAPI specification.'
+    screenshot: 'https://raw.githubusercontent.com/apioo/fusio/master/doc/_static/swagger-ui.png'
+    website: 'https://github.com/apioo/fusio-apps-swaggerui'
+vscode:
+    version: 0.3.0
+    downloadUrl: 'https://github.com/apioo/fusio-apps-vscode/archive/v0.3.0.zip'
+    sha1Hash: 4e243741d50592962e1f40bb671b33bbe0b1af91
+    description: 'The VSCode app helps to develop all endpoint logic online using the monaco editor.'
+    screenshot: 'https://raw.githubusercontent.com/apioo/fusio/master/doc/_static/vscode.png'
+    website: 'https://github.com/apioo/fusio-apps-vscode'
+pma:
+    version: 0.2.0
+    downloadUrl: 'https://github.com/apioo/fusio-apps-pma/archive/v0.2.0.zip'
+    sha1Hash: 2d3996358df440b7dd215017346c6ef03d43660d
+    description: 'phpMyAdmin app to handle the administration of MySQL over the Web.'
+    screenshot: 'https://raw.githubusercontent.com/apioo/fusio/master/doc/_static/pma.png'
+    website: 'https://github.com/apioo/fusio-apps-pma'
