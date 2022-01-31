@@ -12,7 +12,7 @@
     <h5>Basic</h5>
     <ul>
       <li>
-        <a href="<?php echo $router->getAbsolutePath('Fusio\Website\Application\Bootstrap::doIndex'); ?>">Getting started</a>
+        <a href="<?php echo $router->getAbsolutePath(\App\Website\Bootstrap::class); ?>">Getting started</a>
         <br>
         <small>Quick introduction tutorial to get started</small>
       </li>
@@ -22,17 +22,17 @@
         <small>Link to the official manual</small>
       </li>
       <li>
-        <a href="<?php echo $router->getAbsolutePath('Fusio\Website\Application\Documentation\Recipes::doIndex'); ?>">Recipes</a>
+        <a href="<?php echo $router->getAbsolutePath(\App\Website\Documentation\Recipes::class); ?>">Recipes</a>
         <br>
         <small>Short tutorials to quickly explain a specific use case</small>
       </li>
       <li>
-        <a href="<?php echo $router->getAbsolutePath('Fusio\Website\Application\Documentation\Videos::doIndex'); ?>">Videos</a>
+        <a href="<?php echo $router->getAbsolutePath(\App\Website\Documentation\Videos::class); ?>">Videos</a>
         <br>
         <small>Videos which demonstrate a certain topic</small>
       </li>
       <li>
-        <a href="<?php echo $router->getAbsolutePath('Fusio\Website\Application\Demo::doIndex'); ?>">Demo</a>
+        <a href="<?php echo $router->getAbsolutePath(\App\Website\Demo::class); ?>">Demo</a>
         <br>
         <small>Fusio demo instance to test and experiment</small>
       </li>
@@ -72,12 +72,12 @@
         <small>Documentation of the internal backend REST API</small>
       </li>
       <li>
-        <a href="<?php echo $router->getAbsolutePath('Fusio\Website\Application\Documentation\Worker::doIndex'); ?>">Worker API</a>
+        <a href="<?php echo $router->getAbsolutePath(\App\Website\Documentation\Worker::class); ?>">Worker API</a>
         <br>
         <small>Documentation of the worker API</small>
       </li>
       <li>
-        <a href="<?php echo $router->getAbsolutePath('Fusio\Website\Application\Documentation\PHP::doIndex'); ?>">PHP API</a>
+        <a href="<?php echo $router->getAbsolutePath(\App\Website\Documentation\PHP::class); ?>">PHP API</a>
         <br>
         <small>API of the PHP file and sandbox action</small>
       </li>
@@ -97,6 +97,12 @@
         <small>GitHub project to report issues</small>
       </li>
     </ul>
+  </div>
+</div>
+
+<div class="fusio-content fusio-edit mdl-grid">
+  <div class="mdl-cell mdl-cell--12-col">
+    <a href="https://github.com/apioo/fusio-website/blob/main/src/Website/resource/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"><i class="material-icons">edit</i> Edit this page</a>
   </div>
 </div>
 

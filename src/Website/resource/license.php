@@ -86,7 +86,13 @@
     <p>With this license choice we are following the footsteps of great projects like Wordpress or Nextcloud. Like Wordpress
     enables every human to be able to publish content on the web, we want to enable everybody to build high quality
     APIs, which makes the digitalization of the world possible. If you have any further questions please use our
-    <a href="<?php echo $router->getAbsolutePath('Fusio\Website\Application\Contact::doIndex'); ?>">contact</a> page.</p>
+    <a href="<?php echo $router->getAbsolutePath(\App\Website\Contact::class); ?>">contact</a> page.</p>
+  </div>
+</div>
+
+<div class="fusio-content fusio-edit mdl-grid">
+  <div class="mdl-cell mdl-cell--12-col">
+    <a href="https://github.com/apioo/fusio-website/blob/main/src/Website/resource/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"><i class="material-icons">edit</i> Edit this page</a>
   </div>
 </div>
 

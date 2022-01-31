@@ -82,6 +82,17 @@ html, body {
   max-width: 1000px;
 }
 
+.fusio-edit {
+  text-align: right;
+}
+
+.fusio-edit i {
+  font-size:16px;
+  margin-top:8px;
+}
+
+
+
 .fusio-block {
   margin-top: 16px;
   max-width: 968px;

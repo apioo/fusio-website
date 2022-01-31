@@ -3,10 +3,10 @@
 <div class="fusio-block mdl-grid mdl-shadow--2dp">
   <div class="mdl-cell mdl-cell--12-col">
     <h4>Requirements</h4>
-    <p>Fusio is written in PHP and requires at least version 7.3 and a database.</p>
+    <p>Fusio is written in PHP and requires at least version 7.4 and a database.</p>
     <ul>
       <li>
-        <b>PHP &gt;= 7.3</b>
+        <b>PHP &gt;= 7.4</b>
       </li>
       <li>
         <b>Database (supports: MySQL, PostgreSQL, MSSQL, Oracle)</b>
@@ -21,7 +21,7 @@
     <p>There are two ways of downloading Fusio:</p>
     <ul>
       <li>
-        <a href="<?php echo $router->getAbsolutePath('Fusio\Website\Application\Download::doIndex'); ?>">Download</a>
+        <a href="<?php echo $router->getAbsolutePath(\App\Website\Download::class); ?>">Download</a>
         the latest release from Github
       </li>
       <li>
@@ -172,8 +172,14 @@ Content-Type: application/json
   <div class="mdl-cell mdl-cell--12-col">
     <h4>Summarize</h4>
     <p>This was a quick introduction how to build and consume an API with Fusio.
-    Please take a look at the <a href="<?php echo $router->getAbsolutePath('Fusio\Website\Application\Documentation::doIndex'); ?>">documentation</a>
+    Please take a look at the <a href="<?php echo $router->getAbsolutePath(\App\Website\Documentation::class); ?>">documentation</a>
     section for more resources.</p>
+  </div>
+</div>
+
+<div class="fusio-content fusio-edit mdl-grid">
+  <div class="mdl-cell mdl-cell--12-col">
+    <a href="https://github.com/apioo/fusio-website/blob/main/src/Website/resource/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"><i class="material-icons">edit</i> Edit this page</a>
   </div>
 </div>
 

@@ -1,5 +1,11 @@
 <?php include(__DIR__ . '/inc/header.php'); ?>
 
+<!--
+Hey developer, if you want to add an adapter you only need to set the keyword "fusio-adapter" in your composer.json file
+see also https://github.com/apioo/fusio-adapter-sql/blob/master/composer.json as example. Our fetcher will then
+automatically find your repository and add it to this list.
+-->
+
 <div class="fusio-block mdl-grid mdl-shadow--2dp">
   <div class="mdl-cell mdl-cell--12-col">
     <h4>Adapter</h4>
@@ -29,36 +35,10 @@ php bin/fusio system:register "Fusio\Adapter\Mongodb\Adapter"</code></pre>
   <?php endforeach; ?>
 </div>
 
-<!--
-<div class="fusio-content mdl-grid">
+<div class="fusio-content fusio-edit mdl-grid">
   <div class="mdl-cell mdl-cell--12-col">
-    <div class="fusio-card-app mdl-shadow--2dp mdl-card">
-      <div class="mdl-card__title">Capabilities</div>
-      <div class="mdl-card__supporting-text">
-        <dl>
-          <dt><span class="mdl-chip"><span class="mdl-chip__text">actionClass</span></span></dt>
-          <dd>Provides a custom action class which processes a request and produces a response. 
-          This is used in most cases if the basic actions can not solve the problem.</dd>
-          <dt><span class="mdl-chip"><span class="mdl-chip__text">connectionClass</span></span></dt>
-          <dd>Provides a custom connection class which is mostly used to connect to remote systems
-          i.e. a different NoSQL Database or Message Queue.</dd>
-          <dt><span class="mdl-chip"><span class="mdl-chip__text">routes</span></span></dt>
-          <dd>Provides routes which are inserted into the system. On installation it is possible
-          to specify a base path under which these routes are inserted.</dd>
-          <dt><span class="mdl-chip"><span class="mdl-chip__text">action</span></span></dt>
-          <dd>Provides actions which are inserted into the system.</dd>
-          <dt><span class="mdl-chip"><span class="mdl-chip__text">schema</span></span></dt>
-          <dd>Provides JSON Schemas which are inserted into the system.</dd>
-          <dt><span class="mdl-chip"><span class="mdl-chip__text">database</span></span></dt>
-          <dd>Contains database specifications. On installation you can choose the connection 
-          where theses schemas should be created.</dd>
-          <dt><span class="mdl-chip"><span class="mdl-chip__text">connection</span></span></dt>
-          <dd>Provides connections which are inserted into the system.</dd>
-        </dl>
-      </div>
-    </div>
+    <a href="https://github.com/apioo/fusio-website/blob/main/src/Website/resource/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"><i class="material-icons">edit</i> Edit this page</a>
   </div>
 </div>
--->
 
 <?php include(__DIR__ . '/inc/footer.php'); ?>

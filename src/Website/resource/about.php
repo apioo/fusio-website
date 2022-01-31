@@ -31,7 +31,7 @@
     <p>Fusio uses the backend services to produce the API response or to handle
     the request data. A backend service can be i.e. a database, message queue or 
     another API. It is also very easy to implement a custom 
-    <a href="<?php echo $router->getAbsolutePath('Fusio\Website\Application\Adapter::doIndex'); ?>">connection</a> 
+    <a href="<?php echo $router->getAbsolutePath(\App\Website\Adapter::class); ?>">connection</a>
     to support any kind of service.</p>
 
     <p>The API can then be used by apps which are developed by yourself or by 
@@ -168,7 +168,7 @@ return $response->build(200, [], [
       <div class="mdl-card__title">Consulting</div>
       <div class="mdl-card__supporting-text">
         If you are a company or freelancer and want to get detailed information
-        how you can use Fusio you can <a href="<?php echo $router->getAbsolutePath('Fusio\Website\Application\Contact::doIndex'); ?>">contact us</a>
+        how you can use Fusio you can <a href="<?php echo $router->getAbsolutePath(\App\Website\Contact::class); ?>">contact us</a>
         for consulting. In the workshop we try to find the best way how you can
         use/integrate Fusio also we try to explain the functionality and answer
         your questions.
@@ -184,6 +184,12 @@ return $response->build(200, [], [
         guide on <a href="https://github.com/apioo/fusio">GitHub</a>.
       </div>
     </div>
+  </div>
+</div>
+
+<div class="fusio-content fusio-edit mdl-grid">
+  <div class="mdl-cell mdl-cell--12-col">
+    <a href="https://github.com/apioo/fusio-website/blob/main/src/Website/resource/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"><i class="material-icons" style="">edit</i> Edit this page</a>
   </div>
 </div>
 

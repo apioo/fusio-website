@@ -5,8 +5,8 @@
     <div class="mdl-mega-footer--bottom-section">
       <div class="mdl-logo mdl-color-text--grey-500">Fusio is made in Düsseldorf</div>
       <ul class="mdl-mega-footer--link-list">
-        <li><a href="<?php echo $router->getAbsolutePath('Fusio\Website\Application\Imprint::doIndex'); ?>">Imprint</a></li>
-        <li><a href="<?php echo $router->getAbsolutePath('Fusio\Website\Application\Contact::doIndex'); ?>">Contact</a></li>
+        <li><a href="<?php echo $router->getAbsolutePath(\App\Website\Imprint::class); ?>">Imprint</a></li>
+        <li><a href="<?php echo $router->getAbsolutePath(\App\Website\Contact::class); ?>">Contact</a></li>
         <li><a href="https://www.youtube.com/channel/UC64ltsPc27t_UjLjLI6y-Cg">Youtube</a></li>
         <li><a href="https://twitter.com/FusioAPI">Twitter</a></li>
         <li><a href="https://github.com/apioo/fusio">GitHub</a></li>

@@ -97,4 +97,10 @@
   </div>
 </div>
 
+<div class="fusio-content fusio-edit mdl-grid">
+  <div class="mdl-cell mdl-cell--12-col">
+    <a href="https://github.com/apioo/fusio-website/blob/main/src/Website/resource/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"><i class="material-icons">edit</i> Edit this page</a>
+  </div>
+</div>
+
 <?php include(__DIR__ . '/inc/footer.php'); ?>

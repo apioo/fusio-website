@@ -1,5 +1,11 @@
 <?php include(__DIR__ . '/inc/header.php'); ?>
 
+<!--
+Hey developer, like Fusio our complete website is also open source. If you find any errors or you want to improve
+specific parts feel free to simply create a PR at this repository. If you want to see the Fusio repository s.
+https://github.com/apioo/fusio
+-->
+
 <div class="fusio-intro">
   <div class="fusio-content mdl-grid">
     <div class="mdl-cell mdl-cell--12-col">
@@ -8,7 +14,7 @@
       Through Fusio you can quickly build a state of the art API, set up a developer portal and monetize your API.</p>
       <div class="fusio-call-for-action">
         <a href="#" id="subscribe" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">Subscribe</a>
-        <a href="<?php echo $router->getAbsolutePath('Fusio\Website\Application\Demo::doIndex'); ?>" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">Demo</a>
+        <a href="<?php echo $router->getAbsolutePath(\App\Website\Demo::class); ?>" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">Demo</a>
         <a href="<?php echo $base; ?>/static/Fusio_Flyer.pdf" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">Flyer</a>
       </div>
     </div>
@@ -103,7 +109,7 @@
           <h2 class="mdl-card__title-text">Marketplace</h2>
         </div>
         <div class="mdl-card__supporting-text">
-          <p>Fusio provides an <a href="<?php echo $router->getAbsolutePath('Fusio\Website\Application\Marketplace::doIndex'); ?>">Apps Marketplace</a> where you can install different apps for your API.</p>
+          <p>Fusio provides an <a href="<?php echo $router->getAbsolutePath(\App\Website\Marketplace::class); ?>">Apps Marketplace</a> where you can install different apps for your API.</p>
           <p>An App is mostly a simple Javascript app which provides specific functionality. The previously mentioned backend and developer app are also only apps which work with the internal API of Fusio.</p>
         </div>
       </div>
@@ -118,7 +124,7 @@
       <div class="fusio-index-badge-circle"><i class="material-icons fusio-tab-icon">build</i></div>
       <h4 itemprop="name">API management</h4>
       <p class="mdl-typography--subhead" itemprop="description">Fusio provides a powerful 
-      <a href="<?php echo $router->getAbsolutePath('Fusio\Website\Application\Demo::doIndex'); ?>">backend</a> 
+      <a href="<?php echo $router->getAbsolutePath(\App\Website\Demo::class); ?>">backend</a>
       app to control and monitor your API.</p>
     </div>
     <div class="mdl-cell mdl-cell--4-col fusio-index-badge" itemprop="itemListElement" itemscope itemtype="http://schema.org/Text">
@@ -176,6 +182,12 @@
       <p class="mdl-typography--subhead" itemprop="description">Fusio can automatically generate a client SDK
       for your API based on the defined schema.</p>
     </div>
+  </div>
+</div>
+
+<div class="fusio-content fusio-edit mdl-grid">
+  <div class="mdl-cell mdl-cell--12-col">
+    <a href="https://github.com/apioo/fusio-website/blob/main/src/Website/resource/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"><i class="material-icons">edit</i> Edit this page</a>
   </div>
 </div>
 
