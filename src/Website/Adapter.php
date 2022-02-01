@@ -2,6 +2,7 @@
 
 namespace App\Website;
 
+use App\Table;
 use PSX\Dependency\Attribute\Inject;
 use PSX\Framework\Controller\ViewAbstract;
 use PSX\Http\Environment\HttpContextInterface;
@@ -16,50 +17,11 @@ class Adapter extends ViewAbstract
 
     protected function doGet(HttpContextInterface $context): mixed
     {
-        $table        = $this->tableManager->getTable(Table\Adapter::class);
-        $totalResults = $table->getCount();
-        $selfUrl      = $this->reverseRouter->getUrl(__METHOD__);
-        $startIndex   = $this->getStartIndex();
+        $table = $this->tableManager->getTable(Table\Adapter::class);
 
         return $this->render(__DIR__ . '/resource/adapter.php', [
-            'totalResults' => $totalResults,
-            'startIndex'   => $startIndex,
-            'entry'        => $table->getIndexEntries($startIndex),
-            'links'        => $this->getLinks($selfUrl, $startIndex, $totalResults),
+            'fusio'     => $table->findIndexEntriesFusio(),
+            'community' => $table->findIndexEntriesCommunity(),
         ]);
-    }
-
-    /**
-     * Returns the HATEOAS links for further navigation
-     */
-    private function getLinks(string $selfUrl, int $startIndex, int $totalResults): array
-    {
-        $prev = $startIndex - self::ITEMS_PER_PAGE;
-        $prev = max($prev, 0);
-        $next = $startIndex + self::ITEMS_PER_PAGE;
-        $next = $next >= $totalResults ? $startIndex : $next;
-
-        return [[
-            'rel'  => 'self',
-            'href' => $selfUrl,
-        ],[
-            'rel'  => 'next',
-            'href' => $selfUrl . '?startIndex=' . $next,
-        ],[
-            'rel'  => 'prev',
-            'href' => $selfUrl . '?startIndex=' . $prev,
-        ]];
-    }
-
-    /**
-     * Returns the startIndex GET parameter
-     */
-    private function getStartIndex(HttpContextInterface $context): int
-    {
-        $startIndex = (int) $context->getParameter('startIndex');
-        $startIndex = max($startIndex, 0);
-        $startIndex = $startIndex % self::ITEMS_PER_PAGE !== 0 ? $startIndex - ($startIndex % self::ITEMS_PER_PAGE) : $startIndex;
-
-        return $startIndex;
     }
 }

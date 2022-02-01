@@ -85,10 +85,10 @@ function parseTags($data)
 
     foreach ($lines as $line) {
         $parts    = explode(' ', $line);
-        $sha1     = isset($parts[0]) ? $parts[0] : null;
-        $rawTag   = isset($parts[1]) ? $parts[1] : null;
+        $sha1     = $parts[0] ?? null;
+        $rawTag   = $parts[1] ?? null;
         $tagParts = explode('/', $rawTag);
-        $tagName  = isset($tagParts[2]) ? $tagParts[2] : null;
+        $tagName  = $tagParts[2] ?? null;
         $tagName  = rtrim($tagName, '^{}');
 
         if (!empty($sha1) && !empty($tagName)) {

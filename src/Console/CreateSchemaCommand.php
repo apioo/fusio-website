@@ -22,7 +22,7 @@ class CreateSchemaCommand extends Command
     protected function configure()
     {
         $this
-            ->setName('website:create_schema')
+            ->setName('app:create_schema')
             ->setDescription('Creates the sqlite database schema');
     }
 
@@ -36,5 +36,7 @@ class CreateSchemaCommand extends Command
 
             $this->connection->executeQuery($query);
         }
+
+        return 0;
     }
 }

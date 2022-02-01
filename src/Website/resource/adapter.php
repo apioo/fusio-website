@@ -21,14 +21,36 @@ php bin/fusio system:register "Fusio\Adapter\Mongodb\Adapter"</code></pre>
 </div>
 
 <div class="fusio-content mdl-grid">
-  <?php foreach($entry as $row): ?>
+  <?php foreach($fusio as $row): ?>
   <div class="mdl-cell mdl-cell--4-col">
-    <div class="fusio-card-app mdl-shadow--2dp mdl-card <?php echo str_replace('/', '_', $row['name']); ?>">
-      <div class="mdl-card__title"><?php echo $row['name']; ?></div>
-      <div class="mdl-card__supporting-text"><?php echo $row['description']; ?></div>
+    <div class="fusio-card-app mdl-shadow--2dp mdl-card <?php echo str_replace('/', '_', $row->name); ?>">
+      <div class="mdl-card__title"><?php echo $row->name; ?></div>
+      <div class="mdl-card__supporting-text"><?php echo $row->description; ?></div>
       <div class="mdl-card__actions mdl-card--border">
-        <a href="<?php echo $row['url']; ?>" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Packagist</a>
-        <a href="<?php echo $row['repository']; ?>" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">GitHub</a>
+        <a href="<?php echo $row->url; ?>" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Packagist</a>
+        <a href="<?php echo $row->repository; ?>" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">GitHub</a>
+      </div>
+    </div>
+  </div>
+  <?php endforeach; ?>
+</div>
+
+<div class="fusio-block mdl-grid mdl-shadow--2dp">
+  <div class="mdl-cell mdl-cell--12-col">
+    <h4>Community</h4>
+    <p>The following adapter are provided by the community.</p>
+  </div>
+</div>
+
+<div class="fusio-content mdl-grid">
+  <?php foreach($community as $row): ?>
+  <div class="mdl-cell mdl-cell--4-col">
+    <div class="fusio-card-app mdl-shadow--2dp mdl-card <?php echo str_replace('/', '_', $row->name); ?>">
+      <div class="mdl-card__title"><?php echo $row->name; ?></div>
+      <div class="mdl-card__supporting-text"><?php echo $row->description; ?></div>
+      <div class="mdl-card__actions mdl-card--border">
+        <a href="<?php echo $row->url; ?>" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Packagist</a>
+        <a href="<?php echo $row->repository; ?>" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">GitHub</a>
       </div>
     </div>
   </div>

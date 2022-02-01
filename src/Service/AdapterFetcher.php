@@ -6,6 +6,7 @@ use App\Table;
 use DateTime;
 use PSX\Http\Client\ClientInterface;
 use PSX\Http\Client\GetRequest;
+use PSX\Http\Client\Options;
 use PSX\Json\Parser;
 
 class AdapterFetcher
@@ -29,33 +30,18 @@ class AdapterFetcher
 
     protected function fetch(string $url): \Generator
     {
-        $request = new GetRequest($url, [
-            'Accept'     => 'application/json',
-            'User-Agent' => self::USER_AGENT,
-        ]);
-        $response = $this->httpClient->request($request);
-        if ($response->getStatusCode() !== 200) {
-            return;
-        }
-
-        $data = Parser::decode((string) $response->getBody(), false);
-
+        $data = $this->request($url);
         if (isset($data->results) && is_array($data->results)) {
             foreach ($data->results as $package) {
-                // get all capabilties of the definition
-                try {
-                    $capabilities = $this->getDefinitionCapabilities($package->repository);
-                } catch (\Exception $e) {
-                    continue;
-                }
-
+                // get all capabilities of the definition
+                $capabilities = $this->getDefinitionCapabilities($package->repository);
                 if (empty($capabilities)) {
                     continue;
                 }
 
-                $existingPackage = $this->adapterTable->findByName($package->name);
+                $existingPackage = $this->adapterTable->findOneByName($package->name);
                 if (empty($existingPackage)) {
-                    $this->adapterTable->create([
+                    $this->adapterTable->create(new Table\Generated\AdapterRow([
                         'name'         => $package->name,
                         'description'  => $package->description,
                         'url'          => $package->url,
@@ -65,7 +51,7 @@ class AdapterFetcher
                         'capabilities' => implode(',', $capabilities),
                         'updateDate'   => new DateTime(),
                         'insertDate'   => new DateTime(),
-                    ]);
+                    ]));
 
                     yield 'created' => $package->name;
                 } else {
@@ -84,12 +70,30 @@ class AdapterFetcher
             }
         }
 
-        if (isset($data->next) && $data->next != $url) {
+        if (isset($data->next) && $data->next !== $url) {
             yield from $this->fetch($data->next);
         }
     }
 
-    protected function getDefinitionCapabilities(string $githubUrl): array
+    private function request(string $url): mixed
+    {
+        $request = new GetRequest($url, [
+            'Accept'     => 'application/json',
+            'User-Agent' => self::USER_AGENT,
+        ]);
+
+        $options = new Options();
+        $options->setVerify(false);
+
+        $response = $this->httpClient->request($request, $options);
+        if ($response->getStatusCode() !== 200) {
+            throw new \RuntimeException('Could not request url ' . $url);
+        }
+
+        return Parser::decode((string) $response->getBody());
+    }
+
+    private function getDefinitionCapabilities(string $githubUrl): array
     {
         if (!str_contains($githubUrl, 'github.com')) {
             // @TODO at the moment we support only github we should clone the
@@ -97,26 +101,29 @@ class AdapterFetcher
             return [];
         }
 
-        $types     = ['actionClass', 'connectionClass', 'routes', 'action', 'schema', 'database', 'connection'];
+        $types     = ['actionClass', 'connectionClass', 'paymentClass', 'userClass', 'routesClass'];
         $provides  = [];
 
         $githubUrl = str_replace('https://github.com/', 'https://api.github.com/repos/', $githubUrl);
         $githubUrl = $githubUrl . '/contents/definition.json';
+
+        $options = new Options();
+        $options->setVerify(false);
 
         $request = new GetRequest($githubUrl, [
             'Accept'     => 'application/json',
             'User-Agent' => self::USER_AGENT,
             'X-GitHub-Media-Type' => 'github.v3',
         ]);
-        $response = $this->httpClient->request($request);
+        $response = $this->httpClient->request($request, $options);
 
         if ($response->getStatusCode() !== 200) {
             return [];
         }
 
-        $file = Parser::decode((string) $response->getBody(), false);
+        $file = Parser::decode((string) $response->getBody());
         if ($file instanceof \stdClass && isset($file->content)) {
-            $definition = Parser::decode(base64_decode($file->content), false);
+            $definition = Parser::decode(base64_decode($file->content));
             if ($definition instanceof \stdClass) {
                 foreach ($types as $type) {
                     if (isset($definition->$type) && is_array($definition->$type)) {

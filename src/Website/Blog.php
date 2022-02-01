@@ -19,13 +19,13 @@ class Blog extends ViewAbstract
     {
         $table        = $this->tableManager->getTable(Table\Blog::class);
         $totalResults = $table->getCount();
-        $selfUrl      = $this->reverseRouter->getUrl(__METHOD__);
-        $startIndex   = $this->getStartIndex();
+        $selfUrl      = $this->reverseRouter->getUrl(__CLASS__);
+        $startIndex   = $this->getStartIndex($context);
 
         return $this->render(__DIR__ . '/resource/blog.php', [
             'totalResults' => $totalResults,
             'startIndex'   => $startIndex,
-            'entry'        => $table->getIndexEntries($startIndex),
+            'entry'        => $table->findIndexEntries($startIndex),
             'links'        => $this->getLinks($selfUrl, $startIndex, $totalResults),
         ]);
     }

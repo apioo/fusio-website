@@ -1,42 +1,49 @@
-backend:
-    version: 0.8.0
-    downloadUrl: 'https://github.com/apioo/fusio-apps-backend/archive/v0.8.0.zip'
-    sha1Hash: cbea7412c9da6ecd2f0ac1bae0a368486732f1da
+fusio:
+    version: 1.0.3
+    downloadUrl: 'https://github.com/apioo/fusio-apps-backend/archive/v1.0.3.zip'
+    sha1Hash: fd8e254bf1f1afed0100363b5743207a51c67900
     description: 'The backend app is the official app to develop, configure and maintain your API.'
     screenshot: 'https://raw.githubusercontent.com/apioo/fusio/master/doc/_static/backend.png'
     website: 'https://github.com/apioo/fusio-apps-backend'
 developer:
-    version: 0.4.0
-    downloadUrl: 'https://github.com/apioo/fusio-apps-developer/archive/v0.4.0.zip'
-    sha1Hash: a04bbeeea90d6eb59522a4620e824743e5f47caf
+    version: 1.0.9
+    downloadUrl: 'https://github.com/apioo/fusio-apps-developer/archive/v1.0.9.zip'
+    sha1Hash: dee833b4fabe68f4f5eca7eb0d39cd603ced4a13
     description: 'The developer app is designed to quickly setup an API program where new developers can register and create/manage their apps.'
     screenshot: 'https://raw.githubusercontent.com/apioo/fusio/master/doc/_static/developer.png'
     website: 'https://github.com/apioo/fusio-apps-developer'
 documentation:
-    version: 0.5.0
-    downloadUrl: 'https://github.com/apioo/fusio-apps-documentation/archive/v0.5.0.zip'
-    sha1Hash: 90382f0424bdd0d6c653f36294af54bff32962bf
+    version: 1.0.5
+    downloadUrl: 'https://github.com/apioo/fusio-apps-documentation/archive/v1.0.5.zip'
+    sha1Hash: 04aee743620bd465ded1c922ac9dd5f85fdc06d8
     description: 'The documentation app simply provides an overview of all available endpoints. It is possible to export the API definition into other schema formats like i.e. OpenAPI.'
     screenshot: 'https://raw.githubusercontent.com/apioo/fusio/master/doc/_static/documentation.png'
     website: 'https://github.com/apioo/fusio-apps-documentation'
 swagger-ui:
-    version: 0.2.0
-    downloadUrl: 'https://github.com/apioo/fusio-apps-swaggerui/archive/v0.2.0.zip'
-    sha1Hash: c8919120f76cedf3407c8fd41de05b7221b109b4
+    version: 1.0.0
+    downloadUrl: 'https://github.com/apioo/fusio-apps-swaggerui/archive/v1.0.0.zip'
+    sha1Hash: ad33b82c16d6e16f30e1ea3bac8c63fa86b6a31b
     description: 'The Swagger UI app renders a documentation based on the OpenAPI specification.'
     screenshot: 'https://raw.githubusercontent.com/apioo/fusio/master/doc/_static/swagger-ui.png'
     website: 'https://github.com/apioo/fusio-apps-swaggerui'
 vscode:
-    version: 0.3.0
-    downloadUrl: 'https://github.com/apioo/fusio-apps-vscode/archive/v0.3.0.zip'
-    sha1Hash: 4e243741d50592962e1f40bb671b33bbe0b1af91
+    version: 1.0.0
+    downloadUrl: 'https://github.com/apioo/fusio-apps-vscode/archive/v1.0.0.zip'
+    sha1Hash: 14c492eaeaf8f970008cfdfa40383d55fa042005
     description: 'The VSCode app helps to develop all endpoint logic online using the monaco editor.'
     screenshot: 'https://raw.githubusercontent.com/apioo/fusio/master/doc/_static/vscode.png'
     website: 'https://github.com/apioo/fusio-apps-vscode'
 pma:
-    version: 0.2.0
-    downloadUrl: 'https://github.com/apioo/fusio-apps-pma/archive/v0.2.0.zip'
-    sha1Hash: 2d3996358df440b7dd215017346c6ef03d43660d
-    description: 'phpMyAdmin app to handle the administration of MySQL over the Web.'
-    screenshot: 'https://raw.githubusercontent.com/apioo/fusio/master/doc/_static/pma.png'
-    website: 'https://github.com/apioo/fusio-apps-pma'
+    version: 0.3.0
+    downloadUrl: 'https://github.com/apioo/fusio-apps-pma/archive/v0.3.0.zip'
+    sha1Hash: 6f095f5a210aacf04127f6f0e9ff40a4972ea51c
+    description: ''
+    screenshot: ''
+    website: ''
+redoc:
+    version: 0.1.0
+    downloadUrl: 'https://github.com/apioo/fusio-apps-redoc/archive/v0.1.0.zip'
+    sha1Hash: f04dabe03581c9c888c516391ee2352a2e7ef48f
+    description: 'ReDoc app to generate OpenAPI/Swagger documentation'
+    screenshot: 'https://raw.githubusercontent.com/apioo/fusio/master/doc/_static/redoc.png'
+    website: 'https://github.com/apioo/fusio-apps-redoc'

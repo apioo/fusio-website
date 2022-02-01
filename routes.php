@@ -8,7 +8,6 @@ return [
     [['ANY'], '/download', App\Website\Download::class],
     [['ANY'], '/documentation', App\Website\Documentation::class],
     [['ANY'], '/demo', App\Website\Demo::class],
-    [['ANY'], '/forum', App\Website\Forum::class],
     [['ANY'], '/use-cases', App\Website\UseCases::class],
     [['ANY'], '/license', App\Website\License::class],
     [['ANY'], '/marketplace', App\Website\Marketplace::class],

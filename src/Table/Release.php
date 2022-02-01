@@ -2,43 +2,22 @@
 
 namespace App\Table;
 
-use PSX\Sql;
-use PSX\Sql\TableAbstract;
+use App\Table\Generated\ReleaseRow;
+use App\Table\Generated\ReleaseTable;
+use PSX\Sql\Sql;
 
 /**
  * Release
  *
  * @see http://phpsx.org/doc/concept/table.html
  */
-class Release extends TableAbstract
+class Release extends ReleaseTable
 {
-    public function getName()
+    public function findLatestRelease(): ?ReleaseRow
     {
-        return 'release';
-    }
+        $releases = $this->findAll(null, 0, 1, 'publishedAt', Sql::SORT_DESC);
+        $release  = reset($releases);
 
-    public function getColumns()
-    {
-        return array(
-            'id' => self::TYPE_VARCHAR | self::PRIMARY_KEY,
-            'tagName' => self::TYPE_VARCHAR,
-            'htmlUrl' => self::TYPE_VARCHAR,
-            'publishedAt' => self::TYPE_DATETIME,
-            'authorName' => self::TYPE_VARCHAR,
-            'authorUri' => self::TYPE_VARCHAR,
-            'body' => self::TYPE_TEXT,
-            'assetName' => self::TYPE_VARCHAR,
-            'assetUrl' => self::TYPE_VARCHAR,
-            'assetSize' => self::TYPE_VARCHAR,
-            'assetMime' => self::TYPE_VARCHAR,
-        );
-    }
-
-    public function getLatestRelease()
-    {
-        $releases = $this->getAll(0, 1, 'publishedAt', Sql::SORT_DESC);
-        $release  = current($releases);
-
-        return $release;
+        return $release instanceof ReleaseRow ? $release : null;
     }
 }

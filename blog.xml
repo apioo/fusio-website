@@ -8,8 +8,8 @@
         <id>urn:fusio-project-org:blog:46</id>
         <title>Fusio 2.1.9 released and plans for 3.0</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2022-01-27T23:00:00Z</updated>
         <summary>
@@ -141,8 +141,8 @@ next 3.0 release.</p>
         <id>urn:fusio-project-org:blog:45</id>
         <title>Fusio VSCode extension</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2021-06-26T20:05:00Z</updated>
         <summary>
@@ -170,8 +170,8 @@ the internals you can also take a look at the <a href="https://github.com/apioo/
         <id>urn:fusio-project-org:blog:44</id>
         <title>Fusio 2.0 released</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2021-02-06T18:32:00Z</updated>
         <summary>
@@ -259,8 +259,8 @@ changes.</p>
         <id>urn:fusio-project-org:blog:43</id>
         <title>Fusio 2.0-RC2 released</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2021-01-15T22:37:00Z</updated>
         <summary>
@@ -336,8 +336,8 @@ changes:</p>
         <id>urn:fusio-project-org:blog:42</id>
         <title>Fusio 2.0 first release candidate available</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2020-12-25T11:44:00Z</updated>
         <summary>
@@ -477,8 +477,8 @@ to build such an upgrade path. So feel free to test this new version of Fusio an
         <id>urn:fusio-project-org:blog:41</id>
         <title>Thoughts about the upcoming 2.0 release and beyond</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2020-09-05T20:53:00Z</updated>
         <summary>
@@ -554,8 +554,8 @@ has a great future since it is a versatile tool to build APIs with some cool uni
         <id>urn:fusio-project-org:blog:40</id>
         <title>SDK generation plans for the 2.0 release</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2020-07-11T19:42:00Z</updated>
         <summary>
@@ -596,8 +596,8 @@ to see whether your schema is affected.</p>
         <id>urn:fusio-project-org:blog:39</id>
         <title>Version 1.9.4 released</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2020-06-20T22:28:00Z</updated>
         <summary>
@@ -635,8 +635,8 @@ covers the most important changes of this release:</p>
         <id>urn:fusio-project-org:blog:38</id>
         <title>Version 1.9.3 released</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2020-05-09T21:40:00Z</updated>
         <summary>
@@ -687,8 +687,8 @@ covers the most important changes of this release:</p>
         <id>urn:fusio-project-org:blog:37</id>
         <title>Version 1.9.2 released</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2020-04-18T20:34:00Z</updated>
         <summary>
@@ -742,8 +742,8 @@ covers the most important changes of this release:</p>
         <id>urn:fusio-project-org:blog:36</id>
         <title>Version 1.9.1 released</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2020-04-05T22:25:00Z</updated>
         <summary>
@@ -805,8 +805,8 @@ covers the most important changes of this release:</p>
         <id>urn:fusio-project-org:blog:35</id>
         <title>Version 1.9.0 released</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2020-02-05T20:30:00Z</updated>
         <summary>
@@ -860,8 +860,8 @@ ensures a smooth upgrade to the next version.</p>
         <id>urn:fusio-project-org:blog:34</id>
         <title>Version 1.8.0 released</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2019-09-18T20:50:00Z</updated>
         <summary>
@@ -906,8 +906,8 @@ covers the most important changes of this release:</p>
         <id>urn:fusio-project-org:blog:33</id>
         <title>Marketplace introduction</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2019-08-29T20:59:00Z</updated>
         <summary>
@@ -947,8 +947,8 @@ marketplace please let us know.</p>
         <id>urn:fusio-project-org:blog:32</id>
         <title>Version 1.7.0 released</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2019-08-13T21:41:00Z</updated>
         <summary>
@@ -1013,8 +1013,8 @@ complete changelog:</p>
         <id>urn:fusio-project-org:blog:31</id>
         <title>Version 1.6.0 released</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2019-06-01T09:15:00Z</updated>
         <summary>
@@ -1099,8 +1099,8 @@ look at the important changes of this release:</p>
         <id>urn:fusio-project-org:blog:30</id>
         <title>Code-Generator tool released</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2019-04-14T11:24:00Z</updated>
         <summary>
@@ -1124,8 +1124,8 @@ tool at: <a href="https://generate.apioo.de/">generate.apioo.de</a></p>
         <id>urn:fusio-project-org:blog:29</id>
         <title>Version 1.5.0 released</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2019-01-01T17:46:00Z</updated>
         <summary>
@@ -1218,8 +1218,8 @@ anymore. The following list contains the most important changes:</p>
         <id>urn:fusio-project-org:blog:28</id>
         <title>Version 1.4.0 released</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2018-10-28T11:08:00Z</updated>
         <summary>
@@ -1271,8 +1271,8 @@ API. The following list covers all important changes of the release:</p>
         <id>urn:fusio-project-org:blog:27</id>
         <title>Version 1.3.1 released</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2018-09-01T17:36:00Z</updated>
         <summary>
@@ -1309,8 +1309,8 @@ Oracle.</p>
         <id>urn:fusio-project-org:blog:26</id>
         <title>Version 1.2.0 released</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2018-06-08T22:30:00Z</updated>
         <summary>
@@ -1396,8 +1396,8 @@ cover the most important parts of the changelog:</p>
         <id>urn:fusio-project-org:blog:25</id>
         <title>Version 1.0.0 released</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2018-01-13T11:01:00Z</updated>
         <summary>
@@ -1476,8 +1476,8 @@ to start a new API project this is the perfect time to start with Fusio.</p>
         <id>urn:fusio-project-org:blog:24</id>
         <title>Thinking language independent through APIs</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2017-12-13T00:00:09Z</updated>
         <summary>
@@ -1521,8 +1521,8 @@ you have probably also the resources to do so.</p>
         <id>urn:fusio-project-org:blog:23</id>
         <title>Version 1.0.0-RC3 released and future plans</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2017-11-19T20:37:00Z</updated>
         <summary>
@@ -1608,8 +1608,8 @@ keep it short I will summarize the important changes to keep you up to date.</p>
         <id>urn:fusio-project-org:blog:22</id>
         <title>Version 0.9.4 released</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2017-08-26T11:34:00Z</updated>
         <summary>
@@ -1709,8 +1709,8 @@ following list covers the changelog:</p>
         <id>urn:fusio-project-org:blog:21</id>
         <title>API-Management and serverless development with Fusio</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2017-07-09T21:18:00Z</updated>
         <summary>
@@ -1765,8 +1765,8 @@ endpoints completely serverless in the cloud.</p>
         <id>urn:fusio-project-org:blog:20</id>
         <title>Version 0.9 released</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2017-06-12T12:02:00Z</updated>
         <summary>
@@ -1812,8 +1812,8 @@ the important changes from the last coverage.</p>
         <id>urn:fusio-project-org:blog:19</id>
         <title>A small introduction post of Fusio</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2017-04-10T11:28:00Z</updated>
         <summary>
@@ -1869,8 +1869,8 @@ are welcome to get more information at the documentation section.</p>
         <id>urn:fusio-project-org:blog:18</id>
         <title>Version 0.7 released</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2017-02-24T11:48:00Z</updated>
         <summary>
@@ -1966,8 +1966,8 @@ in case you have any questions about Fusio.</p>
         <id>urn:fusio-project-org:blog:17</id>
         <title>Version 0.6.3 released</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2017-01-22T20:25:00Z</updated>
         <summary>
@@ -2028,8 +2028,8 @@ In the following the coverage of the combined changelog:</p>
         <id>urn:fusio-project-org:blog:16</id>
         <title>Version 0.6 released</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2017-01-01T21:40:00Z</updated>
         <summary>
@@ -2065,8 +2065,8 @@ folder.</p>
         <id>urn:fusio-project-org:blog:15</id>
         <title>Version 0.5 released</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2016-11-17T22:50:00Z</updated>
         <summary>
@@ -2140,8 +2140,8 @@ some exciting upcoming changes. In the following the coverage of the changelog:<
         <id>urn:fusio-project-org:blog:14</id>
         <title>Version 0.4.1 released</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2016-11-02T11:26:00Z</updated>
         <summary>
@@ -2184,8 +2184,8 @@ following the coverage of the complete changelog:</p>
         <id>urn:fusio-project-org:blog:13</id>
         <title>Version 0.4 released</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2016-10-09T13:33:00Z</updated>
         <summary>
@@ -2226,8 +2226,8 @@ The following list covers the changelog of this release:</p>
         <id>urn:fusio-project-org:blog:12</id>
         <title>Version 0.3.5 released</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2016-09-18T10:40:00Z</updated>
         <summary>
@@ -2267,8 +2267,8 @@ of the changelog:</p>
         <id>urn:fusio-project-org:blog:11</id>
         <title>Released version 0.3.4</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2016-08-25T21:44:00Z</updated>
         <summary>
@@ -2326,8 +2326,8 @@ action. In the following the coverage of the changelog:</p>
         <id>urn:fusio-project-org:blog:10</id>
         <title>Fusio 0.3.3 released</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2016-07-31T01:01:00Z</updated>
         <summary>
@@ -2412,8 +2412,8 @@ complete changelog of this release. We did not explicit announce the 0.3.1 and
         <id>urn:fusio-project-org:blog:9</id>
         <title>Fusio 0.3 released</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2016-07-20T10:42:00Z</updated>
         <summary>
@@ -2511,8 +2511,8 @@ this in a grater way if we think that Fusio has reached a stable enough state.</
         <id>urn:fusio-project-org:blog:8</id>
         <title>Website update and status</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2016-03-03T19:26:00Z</updated>
         <summary>
@@ -2571,8 +2571,8 @@ before making the first stable release:</p>
         <id>urn:fusio-project-org:blog:7</id>
         <title>Released version 0.2.2</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2016-02-27T20:37:00Z</updated>
         <summary>
@@ -2624,8 +2624,8 @@ replace the files and call the <code>php fusio/bin install</code> command.</p>
         <id>urn:fusio-project-org:blog:6</id>
         <title>Released version 0.2.1</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2016-01-30T10:50:00Z</updated>
         <summary>
@@ -2702,8 +2702,8 @@ replace the files and call the <code>php fusio/bin install</code> command.</p>
         <id>urn:fusio-project-org:blog:5</id>
         <title>Fusio 0.2 released</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2016-01-02T17:18:00Z</updated>
         <summary>
@@ -2780,8 +2780,8 @@ installation and copy the sql table data to the new system.</p>
         <id>urn:fusio-project-org:blog:4</id>
         <title>Released version 0.1.7</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2015-11-26T23:43:00Z</updated>
         <summary>
@@ -2877,8 +2877,8 @@ to upgrade your database schema to the 0.1.7 version.</p>
         <id>urn:fusio-project-org:blog:3</id>
         <title>Released version 0.1.6</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2015-10-06T21:25:00Z</updated>
         <summary>
@@ -2902,8 +2902,8 @@ legacy systems. So happy hacking!</p>
         <id>urn:fusio-project-org:blog:2</id>
         <title>Fusio 0.1.5 released</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2015-09-12T22:47:00Z</updated>
         <summary>
@@ -2927,8 +2927,8 @@ to worry about breaking all things. So stay tuned for more changes.</p>
         <id>urn:fusio-project-org:blog:1</id>
         <title>Fusio introduction</title>
         <author>
-            <name>christoph.kappestein</name>
-            <uri>http://github.com/chriskapp</uri>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
         </author>
         <updated>2015-08-27T22:15:00Z</updated>
         <summary>
