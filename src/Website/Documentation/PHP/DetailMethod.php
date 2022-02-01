@@ -2,28 +2,28 @@
 
 namespace App\Website\Documentation\PHP;
 
-use PSX\Framework\Controller\ViewAbstract;
+use App\Website\Documentation\PHP;
 use PSX\Http\Environment\HttpContextInterface;
+use PSX\Http\Exception\NotFoundException;
 
-class DetailMethod extends ViewAbstract
+class DetailMethod extends PHP
 {
     protected function doGet(HttpContextInterface $context): mixed
     {
-        $data   = $this->getApi();
-        $class  = $this->getUriFragment('class');
-        $method = $this->getUriFragment('method');
+        $data = $this->apiReader->getApi($this->getName());
+        $class  = $context->getUriFragment('class');
+        $method = $context->getUriFragment('method');
 
-        if (isset($data['api'][$class]['methods'][$method])) {
-            $this->template->assign('className', $class);
-            $this->template->assign('methodName', $method);
-            $this->template->assign('api', $data['api']);
-            $this->template->assign('method', $data['api'][$class]['methods'][$method]);
-
-            $this->template->assign('name', $this->getName());
-            $this->template->set(__DIR__ . '/../../Resource/documentation/api.php');
-        } else {
-            throw new StatusCode\NotFoundException('Method not available');
+        if (!isset($data['api'][$class]['methods'][$method])) {
+            throw new NotFoundException('Method not available');
         }
-    }
 
+        return $this->render(__DIR__ . '/../../resource/documentation/api.php', [
+            'className' => $class,
+            'methodName' => $method,
+            'api' => $data['api'],
+            'method' => $data['api'][$class]['methods'][$method],
+            'name' => $this->getName(),
+        ]);
+    }
 }

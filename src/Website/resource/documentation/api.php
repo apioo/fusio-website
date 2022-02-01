@@ -4,11 +4,11 @@
   <div class="mdl-cell mdl-cell--3-col mdl-color--grey-100">
     <ul class="fusio-api-nav">
       <?php foreach ($api as $classKey => $row): ?>
-      <?php if ($row['visible']): ?>
+      <?php if ($row->visible): ?>
       <li>
         <a href="<?php echo $url . 'documentation/' . $name . '/' . $classKey; ?>"><?php echo $classKey; ?></a>
         <ul>
-          <?php foreach ($row['methods'] as $methodKey => $row): ?>
+          <?php foreach ($row->methods as $methodKey => $row): ?>
           <li><a href="<?php echo $url . 'documentation/' . $name . '/' . $classKey . '/' . $methodKey; ?>"><?php echo $methodKey; ?></a></li>
           <?php endforeach; ?>
         </ul>
@@ -18,11 +18,11 @@
     </ul>
     <ul class="fusio-api-nav">
       <?php foreach ($api as $classKey => $row): ?>
-      <?php if (!$row['visible']): ?>
+      <?php if (!$row->visible): ?>
       <li>
         <a href="<?php echo $url . 'documentation/' . $name . '/' . $classKey; ?>"><?php echo $classKey; ?></a>
         <ul>
-          <?php foreach ($row['methods'] as $methodKey => $row): ?>
+          <?php foreach ($row->methods as $methodKey => $row): ?>
           <li><a href="<?php echo $url . 'documentation/' . $name . '/' . $classKey . '/' . $methodKey; ?>"><?php echo $methodKey; ?></a></li>
           <?php endforeach; ?>
         </ul>
@@ -34,8 +34,8 @@
   <div class="mdl-cell mdl-cell--9-col">
     <?php if (isset($class)): ?>
     <h4><a href="<?php echo $url . 'documentation/' . $name; ?>">API</a> / <?php echo $className; ?></h4>
-    <?php if (isset($class['description'])): ?>
-    <p><?php echo $class['description']; ?></p>
+    <?php if (isset($class->description)): ?>
+    <p><?php echo $class->description; ?></p>
     <?php endif; ?>
 
     <h5>Methods</h5>
@@ -51,21 +51,21 @@
       </tr>
       </thead>
       <tbody>
-      <?php foreach ($class['methods'] as $methodKey => $row): ?>
+      <?php foreach ($class->methods as $methodKey => $row): ?>
       <tr>
         <td class="mdl-data-table__cell--non-numeric"><a href="<?php echo $url . 'documentation/' . $name . '/' . $className . '/' . $methodKey; ?>"><?php echo $methodKey; ?></a></td>
-        <td class="mdl-data-table__cell--non-numeric"><?php echo $row['description']; ?></td>
+        <td class="mdl-data-table__cell--non-numeric"><?php echo $row->description; ?></td>
       </tr>
       <?php endforeach; ?>
       </tbody>
     </table>
     <?php elseif (isset($method)): ?>
     <h4><a href="<?php echo $url . 'documentation/' . $name; ?>">API</a> / <a href="<?php echo $url . 'documentation/' . $name . '/' . $className; ?>"><?php echo $className; ?></a>.<?php echo $methodName; ?></h4>
-    <?php if (isset($method['description'])): ?>
-    <p><?php echo $method['description']; ?></p>
+    <?php if (isset($method->description)): ?>
+    <p><?php echo $method->description; ?></p>
     <?php endif; ?>
 
-    <?php if (isset($method['arguments'])): ?>
+    <?php if (isset($method->arguments)): ?>
     <h5>Arguments</h5>
     <table class="mdl-data-table mdl-js-data-table fusio-api-table">
       <colgroup>
@@ -81,18 +81,18 @@
       </tr>
       </thead>
       <tbody>
-      <?php foreach ($method['arguments'] as $argument): ?>
+      <?php foreach ($method->arguments as $argument): ?>
       <tr>
-        <td class="mdl-data-table__cell--non-numeric"><?php echo $argument['name']; ?></td>
-        <td class="mdl-data-table__cell--non-numeric"><?php echo $argument['type']; ?></td>
-        <td class="mdl-data-table__cell--non-numeric"><?php echo isset($argument['description']) ? $argument['description'] : ''; ?></td>
+        <td class="mdl-data-table__cell--non-numeric"><?php echo $argument->name; ?></td>
+        <td class="mdl-data-table__cell--non-numeric"><?php echo $argument->type; ?></td>
+        <td class="mdl-data-table__cell--non-numeric"><?php echo $argument->description ?? ''; ?></td>
       </tr>
       <?php endforeach; ?>
       </tbody>
     </table>
     <?php endif; ?>
 
-    <?php if (isset($method['return'])): ?>
+    <?php if (isset($method->return)): ?>
     <h5>Return</h5>
     <table class="mdl-data-table mdl-js-data-table fusio-api-table">
       <colgroup>
@@ -106,34 +106,34 @@
       </tr>
       </thead>
       <tbody>
-      <?php if (isset($method['return'][0])): ?>
-      <?php foreach ($method['return'] as $return): ?>
+      <?php if (is_array($method->return)): ?>
+      <?php foreach ($method->return as $return): ?>
       <tr>
-        <?php if (in_array($return['type'], array_keys($api))): ?>
-        <td class="mdl-data-table__cell--non-numeric"><a href="<?php echo $url . 'documentation/' . $name . '/' . $return['type']; ?>"><?php echo $return['type']; ?></a></td>
+        <?php if (in_array($return->type, array_keys((array) $api))): ?>
+        <td class="mdl-data-table__cell--non-numeric"><a href="<?php echo $url . 'documentation/' . $name . '/' . $return->type; ?>"><?php echo $return->type; ?></a></td>
         <?php else: ?>
-        <td class="mdl-data-table__cell--non-numeric"><?php echo $return['type']; ?></td>
+        <td class="mdl-data-table__cell--non-numeric"><?php echo $return->type; ?></td>
         <?php endif; ?>
-        <td class="mdl-data-table__cell--non-numeric"><?php echo $return['description']; ?></td>
+        <td class="mdl-data-table__cell--non-numeric"><?php echo $return->description; ?></td>
       </tr>
       <?php endforeach; ?>
       <?php else: ?>
       <tr>
-        <?php if (in_array($method['return']['type'], array_keys($api))): ?>
-        <td class="mdl-data-table__cell--non-numeric"><a href="<?php echo $url . 'documentation/' . $name . '/' . $method['return']['type']; ?>"><?php echo $method['return']['type']; ?></a></td>
+        <?php if (in_array($method->return->type, array_keys((array) $api))): ?>
+        <td class="mdl-data-table__cell--non-numeric"><a href="<?php echo $url . 'documentation/' . $name . '/' . $method->return->type; ?>"><?php echo $method->return->type; ?></a></td>
         <?php else: ?>
-        <td class="mdl-data-table__cell--non-numeric"><?php echo $method['return']['type']; ?></td>
+        <td class="mdl-data-table__cell--non-numeric"><?php echo $method->return->type; ?></td>
         <?php endif; ?>
-        <td class="mdl-data-table__cell--non-numeric"><?php echo isset($method['return']['description']) ? $method['return']['description'] : ''; ?></td>
+        <td class="mdl-data-table__cell--non-numeric"><?php echo $method->return->description ?? ''; ?></td>
       </tr>
       <?php endif; ?>
       </tbody>
     </table>
     <?php endif; ?>
 
-    <?php if (isset($method['example'])): ?>
+    <?php if (isset($method->example)): ?>
     <h5>Example</h5>
-    <pre><code class="hljs javascript"><?php echo $method['example']; ?></code></pre>
+    <pre><code class="hljs javascript"><?php echo $method->example; ?></code></pre>
     <?php endif; ?>
     <?php else: ?>
     <h4><a href="<?php echo $url . 'documentation/' . $name . ''; ?>">API</a></h4>
@@ -153,10 +153,10 @@
       </thead>
       <tbody>
       <?php foreach ($api as $classKey => $row): ?>
-      <?php if ($row['visible']): ?>
+      <?php if ($row->visible): ?>
       <tr>
         <td class="mdl-data-table__cell--non-numeric"><code><a href="<?php echo $url . 'documentation/' . $name . '/' . $classKey; ?>"><?php echo $classKey; ?></a></code></td>
-        <td class="mdl-data-table__cell--non-numeric"><?php echo $row['description']; ?></td>
+        <td class="mdl-data-table__cell--non-numeric"><?php echo $row->description; ?></td>
       </tr>
       <?php endif; ?>
       <?php endforeach; ?>

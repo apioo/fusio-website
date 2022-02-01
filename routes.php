@@ -28,7 +28,7 @@ return [
     [['ANY'], '/documentation/recipes/:recipe', App\Website\Documentation\Recipes\Detail::class],
     [['ANY'], '/documentation/videos', App\Website\Documentation\Videos::class],
     [['ANY'], '/documentation/videos/:video', App\Website\Documentation\Videos\Detail::class],
-    [['ANY'], '/documentation/php', App\Website\Documentation\PHP::class],
+    [['ANY'], '/documentation/php', App\Website\Documentation\PHP\Index::class],
     [['ANY'], '/documentation/php/:class', App\Website\Documentation\PHP\DetailClass::class],
     [['ANY'], '/documentation/php/:class/:method', App\Website\Documentation\PHP\DetailMethod::class],
 

@@ -38,25 +38,25 @@
       case. The action file must be placed inside the <code>src/</code> 
       directory.</p>
     <?php else: ?>
-      <h4><a href="<?php echo $url . 'documentation/recipes'; ?>">Recipes</a> / <?php echo $subType; ?> / <?php echo $chapter['title']; ?></h4>
-      <p><?php echo $chapter['description']; ?></p>
+      <h4><a href="<?php echo $url . 'documentation/recipes'; ?>">Recipes</a> / <?php echo $subType; ?> / <?php echo $chapter->title; ?></h4>
+      <p><?php echo $chapter->description; ?></p>
   
-      <?php if (isset($chapter['routes'])): ?>
+      <?php if (isset($chapter->routes)): ?>
       <h5>Routes</h5>
       <small><code>resources/routes.yaml</code></small>
-      <pre><code class="hljs yaml"><?php echo htmlspecialchars($chapter['routes']); ?></code></pre>
+      <pre><code class="hljs yaml"><?php echo htmlspecialchars($chapter->routes); ?></code></pre>
       <?php endif; ?>
   
-      <?php if (isset($chapter['connection'])): ?>
+      <?php if (isset($chapter->connection)): ?>
       <h5>Connection</h5>
       <small><code>resources/connections.yaml</code></small>
-      <pre><code class="hljs yaml"><?php echo htmlspecialchars($chapter['connection']); ?></code></pre>
+      <pre><code class="hljs yaml"><?php echo htmlspecialchars($chapter->connection); ?></code></pre>
       <?php endif; ?>
   
-      <?php if (isset($chapter['action'])): ?>
+      <?php if (isset($chapter->action)): ?>
       <h5>Action</h5>
-      <small><code>resources/<?php echo $chapter['actionFile']; ?></code></small>
-      <pre><code class="hljs php"><?php echo htmlspecialchars($chapter['action']); ?></code></pre>
+      <small><code>resources/<?php echo $chapter->actionFile; ?></code></small>
+      <pre><code class="hljs php"><?php echo htmlspecialchars($chapter->action); ?></code></pre>
       <?php endif; ?>
     <?php endif; ?>
   </div>

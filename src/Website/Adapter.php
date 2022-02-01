@@ -10,8 +10,6 @@ use PSX\Sql\TableManagerInterface;
 
 class Adapter extends ViewAbstract
 {
-    private const ITEMS_PER_PAGE = 9;
-
     #[Inject]
     private TableManagerInterface $tableManager;
 

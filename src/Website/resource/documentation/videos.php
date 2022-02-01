@@ -7,7 +7,7 @@
         <a>Videos</a>
         <ul>
           <?php foreach ($videos as $key => $row): ?>
-          <li><a href="<?php echo $url . 'documentation/videos/' . $key; ?>"><?php echo $row['title']; ?></a></li>
+          <li><a href="<?php echo $url . 'documentation/videos/' . $key; ?>"><?php echo $row->title; ?></a></li>
           <?php endforeach; ?>
         </ul>
       </li>
@@ -15,8 +15,8 @@
   </div>
   <div class="mdl-cell mdl-cell--9-col">
     <?php if (!empty($video)): ?>
-      <h4><?php echo $video['title']; ?></h4>
-      <iframe width="560" height="500" src="<?php echo $video['href']; ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <h4><?php echo $video->title; ?></h4>
+      <iframe width="560" height="500" src="<?php echo $video->href; ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     <?php else: ?>
       <h4>Videos</h4>
       <p>Please select a video from the left navigation. Each video tries to

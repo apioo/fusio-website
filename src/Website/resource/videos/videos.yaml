@@ -1,12 +1,18 @@
 installation:
-  title: Installation
+  title: Fusio 2.0 installation
   href: https://www.youtube.com/embed/wxytxuBn0Bw
-create_simple_route:
-  title: Create a simple route
+simple_route:
+  title: Fusio 2.0 create a simple route
   href: https://www.youtube.com/embed/kwacNAU1E-I
-deployment:
-  title: Deployment
-  href: https://www.youtube.com/embed/w0fKtrrZjzM
+fusio_cloud:
+  title: Fusio Cloud introduction
+  href: https://www.youtube.com/embed/tSRCYWNasa8
+apigen:
+  title: Fusio APIgen introduction
+  href: https://www.youtube.com/embed/U1DEkAT-l_Q
 event:
   title: Event
   href: https://www.youtube.com/embed/MnidLe2cZa0
+deployment:
+  title: Deployment
+  href: https://www.youtube.com/embed/w0fKtrrZjzM

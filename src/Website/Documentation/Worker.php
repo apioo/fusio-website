@@ -9,5 +9,6 @@ class Worker extends ViewAbstract
 {
     protected function doGet(HttpContextInterface $context): mixed
     {
+        return $this->render(__DIR__ . '/../resource/documentation/worker.php', []);
     }
 }

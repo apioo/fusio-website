@@ -4,7 +4,7 @@ namespace App\Website\Documentation;
 
 class PHP extends ApiAbstract
 {
-    protected function getName()
+    protected function getName(): string
     {
         return 'php';
     }

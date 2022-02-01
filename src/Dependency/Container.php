@@ -4,9 +4,12 @@ namespace App\Dependency;
 
 use App\Console;
 use App\Service\AdapterFetcher;
+use App\Service\ApiReader;
 use App\Service\BlogUpdater;
 use App\Service\CaptchaVerifier;
+use App\Service\RecipeReader;
 use App\Service\ReleaseFetcher;
+use App\Service\VideoReader;
 use App\Slugify;
 use App\Table\Adapter;
 use App\Table\Blog;
@@ -63,6 +66,27 @@ class Container extends DefaultContainer
             $this->get('table_manager')->getTable(Release::class),
             $this->get('config'),
             $this->get('http_client')
+        );
+    }
+
+    public function getApiReader(): ApiReader
+    {
+        return new ApiReader(
+            $this->get('cache')
+        );
+    }
+
+    public function getRecipeReader(): RecipeReader
+    {
+        return new RecipeReader(
+            $this->get('cache')
+        );
+    }
+
+    public function getVideoReader(): VideoReader
+    {
+        return new VideoReader(
+            $this->get('cache')
         );
     }
 
