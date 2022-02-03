@@ -76,20 +76,6 @@ class Container extends DefaultContainer
         );
     }
 
-    public function getRecipeReader(): RecipeReader
-    {
-        return new RecipeReader(
-            $this->get('cache')
-        );
-    }
-
-    public function getVideoReader(): VideoReader
-    {
-        return new VideoReader(
-            $this->get('cache')
-        );
-    }
-
     public function getConnection(): Connection
     {
         $config = new Configuration();

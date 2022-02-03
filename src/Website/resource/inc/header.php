@@ -49,7 +49,7 @@
       <a href="<?php echo $router->getAbsolutePath(\App\Website\UseCases::class); ?>" class="mdl-navigation__link">Use-Cases</a>
       <a href="<?php echo $router->getAbsolutePath(\App\Website\About::class); ?>" class="mdl-navigation__link">About</a>
       <a href="<?php echo $router->getAbsolutePath(\App\Website\License::class); ?>" class="mdl-navigation__link">License</a>
-      <a href="<?php echo $router->getAbsolutePath(\App\Website\Documentation::class); ?>" class="mdl-navigation__link">Documentation</a>
+      <a href="https://docs.fusio-project.org" class="mdl-navigation__link">Documentation</a>
       <a href="<?php echo $router->getAbsolutePath(\App\Website\Download::class); ?>" class="mdl-navigation__link">Download</a>
       <a href="<?php echo $router->getAbsolutePath(\App\Website\Marketplace::class); ?>" class="mdl-navigation__link">Marketplace</a>
       <a href="https://fusio.cloud/" class="mdl-navigation__link">Cloud</a>
