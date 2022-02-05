@@ -80,7 +80,7 @@ class Container extends DefaultContainer
     {
         $config = new Configuration();
         $params = array(
-            'path'   => PSX_PATH_CACHE . '/blog.db',
+            'path'   => $this->get('config')->get('files_folder') . '/blog.db',
             'driver' => 'pdo_sqlite',
         );
 

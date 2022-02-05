@@ -1,6 +1,6 @@
 FROM php:8.0-apache
 MAINTAINER Christoph Kappestein <christoph.kappestein@apioo.de>
-LABEL description="Personal website"
+LABEL description="Fusio website"
 
 ENV COMPOSER_VERSION "2.1.9"
 ENV COMPOSER_SHA256 "4d00b70e146c17d663ad2f9a21ebb4c9d52b021b1ac15f648b4d371c04d648ba"
@@ -35,7 +35,12 @@ RUN sed -ri -e "s!/var/www/html!${APACHE_DOCUMENT_ROOT}!g" /etc/apache2/sites-av
 RUN sed -ri -e "s!/var/www/!${APACHE_DOCUMENT_ROOT}!g" /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
 RUN a2enmod rewrite
 
+# configure cron
+COPY ./cron/website /etc/cron.d/website
+
 # install app
 COPY . /var/www/html
 RUN cd /var/www/html && /usr/bin/composer install
 RUN chown -R www-data: /var/www/html
+
+VOLUME /var/www/html/files

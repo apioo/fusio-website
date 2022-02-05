@@ -15,11 +15,13 @@ if (!getenv('APP_ENV')) {
 
 return array(
 
-    'app_sendgrid_key'         => getenv('APP_SENDGRID_KEY'),
-    'app_recaptcha_secret'     => getenv('APP_RECAPTCHA_SECRET'),
+    'app_sendgrid_key'        => getenv('APP_SENDGRID_KEY'),
+    'app_recaptcha_secret'    => getenv('APP_RECAPTCHA_SECRET'),
 
     // File which contains an atom feed with blog entries
     'blog_file'               => __DIR__ . '/blog.xml',
+
+    'files_folder'            => __DIR__ . '/files',
 
     // GIT repo data
     'git_api'                 => 'https://api.github.com',
