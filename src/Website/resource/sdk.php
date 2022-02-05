@@ -6,7 +6,7 @@
     <p>To build and integrate apps with Fusio we provide several SDKs which help
     you to easily work with the REST API of Fusio. These SDKs are also automatically
     generated based on the schema of the API, you can use the same technique
-    to <a href="https://fusio.readthedocs.io/en/latest/concept/sdk_generation.html">build a SDK</a> for your API.</p>
+    to build a SDK for your API.</p>
   </div>
 </div>
 

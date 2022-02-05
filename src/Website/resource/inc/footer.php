@@ -7,7 +7,7 @@
       <ul class="mdl-mega-footer--link-list">
         <li><a href="<?php echo $router->getAbsolutePath(\App\Website\Imprint::class); ?>">Imprint</a></li>
         <li><a href="<?php echo $router->getAbsolutePath(\App\Website\Contact::class); ?>">Contact</a></li>
-        <li><a href="https://www.youtube.com/channel/UC64ltsPc27t_UjLjLI6y-Cg">Youtube</a></li>
+        <li><a href="https://www.youtube.com/c/FusioAPI">Youtube</a></li>
         <li><a href="https://twitter.com/FusioAPI">Twitter</a></li>
         <li><a href="https://github.com/apioo/fusio">GitHub</a></li>
       </ul>

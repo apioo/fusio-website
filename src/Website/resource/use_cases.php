@@ -82,8 +82,7 @@
                 <p>The initial use case of Fusio was to create a great API beside an existing web app. We have many users which
                 run a traditional web app and they use Fusio to create a state of the art API beside there existing product.
                 Fusio can create an API directly on your tables and there are also multiple ways to integrate your
-                <a href="https://fusio.readthedocs.io/en/latest/development/business_logic.html">existing business logic</a>
-                into the API. Fusio provides also a <a href="https://demo.fusio-project.org/apps/developer/#!/">developer app</a>
+                existing business logic into the API. Fusio provides also a <a href="https://demo.fusio-project.org/apps/developer/#!/">developer app</a>
                 which helps to on board new users to use your API i.e.</p>
                 <a href="https://demo.fusio-project.org/apps/developer"><img src="<?php echo $base; ?>/img/use_cases/developer.png" width="100%"></a>
             </div>
