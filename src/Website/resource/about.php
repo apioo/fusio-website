@@ -3,13 +3,15 @@
 <div class="fusio-block mdl-grid mdl-shadow--2dp">
   <div class="mdl-cell mdl-cell--12-col">
     <h4>About</h4>
-    <p>Fusio is an open source API management platform which helps to build and 
-    manage RESTful APIs. We think that there is a huge potential in the API 
-    economy. Whether you need an API to expose your business functionality, 
-    develop One-Page web applications, Mobile-Apps or Microservices. Because of 
-    this we think that Fusio is a great tool to build such APIs. If you like the
-    project and want to see it grow please checkout the 
-    <a href="https://github.com/apioo/fusio">repository</a>.</p>
+    <p>Fusio is an open source API management platform which helps to build and manage RESTful APIs. We think that there
+    is a huge potential in the API economy. Whether you need an API to expose your business functionality, develop
+    one-page web applications, mobile-apps or microservices. Because of this we think that Fusio is a great tool to
+    build such APIs.</p>
+    <p>We also truly believe in open source software. Fusio is a solution which is open source and self-hosted to
+    protect you from vendor lock-in. Today there are many cloud solutions available which lock you in to a specific
+    platform. With Fusio you have the freedom to choose the fitting hosting environment which can be either a simple
+    virtual server or an autoscaling environment in the cloud.</p>
+    <p>If you like the project and want to see it grow please checkout the <a href="https://github.com/apioo/fusio">repository</a>.</p>
   </div>
 </div>
 
@@ -41,95 +43,6 @@
     the system. Because of that it is also very easy to integrate Fusio into an 
     existing system, since you actually could also configure the complete system 
     through the API.</p>
-
-    <h5>Request lifecycle</h5>
-    
-    <p>To give you a first overview, every request which arrives at Fusio goes 
-    through the following lifecycle:</p>
-
-    <div style="text-align:center">
-      <img src="<?php echo $base; ?>/img/request_flow.png">
-    </div>
-
-    <p>Fusio tries to assign the incoming request to a fitting route. The route 
-    contains all schema information about the incoming request and outgoing 
-    responses. Those schemas are also used at the documentation which is 
-    automatically available. If a request schema was provided the incoming 
-    request body gets validated after this schema. In case everything is ok the 
-    action which is assigned to the route gets executed.</p>
-
-    <p>An action represents the code which handles an incoming request and 
-    produces a response. Each action can use connections to accomplish this 
-    task. A connection uses a library which helps to work with a remote service. 
-    I.e. the SQL connection uses the Doctrine DBAL library to work with a 
-    database (it returns a <code>Doctrine\DBAL\Connection</code> instance). A 
-    connection always returns a fully configured object so you never have to 
-    deal with any credentials in an action. Besides that there are already many 
-    different actions available which you can use i.e. to create an API based on 
-    a database table.</p>
-
-    <p>With Fusio we want to remove as many layers as possible so that you can 
-    work in your action directly with a specific library. Because of this Fusio 
-    has no model or entity system like many other frameworks, instead we 
-    recommend to write plain SQL in case you work with a relational database. We 
-    think that building API endpoints based on models/entities limits the way 
-    how you would design a response. You only need to describe the request and 
-    response in the JSON schema format. This schema is then the contract of your 
-    API endpoint, how you produce this response technically is secondary. Fusio 
-    provides the mentioned connections, which help you to create complete 
-    customized responses based on complicated SQL queries, message queue inserts 
-    or multiple remote HTTP calls.</p>
-  </div>
-</div>
-
-<div class="fusio-block mdl-grid mdl-shadow--2dp">
-  <div class="mdl-cell mdl-cell--12-col">
-    <h4>Development</h4>
-    
-    <p>Fusio provides two ways to develop an API. The first way is to build API 
-    endpoints only through the backend interface by using all available actions. 
-    Through this you can solve already many tasks especially through the usage 
-    of the worker actions.</p>
-
-    <p>The other way is to use the deploy mechanism. Through this you can use 
-    normal PHP files to implement your business logic and thus you can use the 
-    complete PHP ecosystem. Therefor you need to define a <code>.fusio.yml</code> 
-    deploy file which specifies the available routes and actions of the system. 
-    This file can be deployed with the following command:</p>
-
-    <pre><code class="bash">php bin/fusio deploy</code></pre>
-
-    <p>The action of each route contains the source which handles the business 
-    logic. This can be i.e. a simple php file, php class or a url. More 
-    information in the src/ folder. In the following an example action to build 
-    an API response from a database:</p>
-
-    <pre><code class="php">&lt;?php
-/**
- * @var \Fusio\Engine\ConnectorInterface $connector
- * @var \Fusio\Engine\RequestInterface $request
- * @var \Fusio\Engine\Response\FactoryInterface $response
- * @var \Fusio\Engine\ProcessorInterface $processor
- * @var \Psr\Log\LoggerInterface $logger
- * @var \Psr\SimpleCache\CacheInterface $cache
- */
-
-/** @var \Doctrine\DBAL\Connection $connection */
-$connection = $connector-&gt;getConnection('Default-Connection');
-
-$count   = $connection->fetchColumn('SELECT COUNT(*) FROM app_todo');
-$entries = $connection->fetchAll('SELECT * FROM app_todo WHERE status = 1 ORDER BY insertDate DESC LIMIT 16');
-
-return $response->build(200, [], [
-    'totalResults' => $count,
-    'entry' => $entries,
-]);</code></pre>
-    
-    <p>In the code we get the Default-Connection which we have defined 
-    previously in our .fusio.yml deploy file. In this case the connection 
-    returns a <code>Doctrine\DBAL\</code> Connection instance but we have 
-    already many adapters to connect to different services. Then we simply fire 
-    some queries and return the response.</p>
   </div>
 </div>
 
@@ -180,8 +93,8 @@ return $response->build(200, [], [
       <div class="mdl-card__title">Community</div>
       <div class="mdl-card__supporting-text">
         <img src="<?php echo $base; ?>/img/community.png" class="fusio-avatar" />
-        If you like to contribute to the project please check the contribution
-        guide on <a href="https://github.com/apioo/fusio">GitHub</a>.
+        If you like to contribute to the project please visit our <a href="https://github.com/apioo/fusio">repository</a>.
+        To improve the documentation you can also take a look at <a href="https://docs.fusio-project.org/">documentation</a> repository.
       </div>
     </div>
   </div>
