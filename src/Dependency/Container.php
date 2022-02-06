@@ -7,16 +7,11 @@ use App\Service\AdapterFetcher;
 use App\Service\ApiReader;
 use App\Service\BlogUpdater;
 use App\Service\CaptchaVerifier;
-use App\Service\RecipeReader;
 use App\Service\ReleaseFetcher;
-use App\Service\VideoReader;
 use App\Slugify;
 use App\Table\Adapter;
 use App\Table\Blog;
 use App\Table\Release;
-use Doctrine\DBAL\Configuration;
-use Doctrine\DBAL\Connection;
-use Doctrine\DBAL\DriverManager;
 use PSX\Framework\Dependency\DefaultContainer;
 use PSX\Sql\Console\GenerateCommand;
 use Symfony\Component\Console\Application;
@@ -27,7 +22,7 @@ class Container extends DefaultContainer
 {
     public function getMailer(): Mailer
     {
-        return new Mailer(Transport::fromDsn($this->get('config')->get('app_mailer')));
+        return new Mailer(Transport::fromDsn('sendgrid://' . $this->get('config')->get('app_sendgrid_key') . '@default'));
     }
 
     public function getSlugify(): Slugify
