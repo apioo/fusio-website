@@ -21,8 +21,6 @@ return array(
     // File which contains an atom feed with blog entries
     'blog_file'               => __DIR__ . '/blog.xml',
 
-    'files_folder'            => __DIR__ . '/files',
-
     // GIT repo data
     'git_api'                 => 'https://api.github.com',
     'git_owner'               => 'apioo',
