@@ -76,17 +76,6 @@ class Container extends DefaultContainer
         );
     }
 
-    public function getConnection(): Connection
-    {
-        $config = new Configuration();
-        $params = array(
-            'path'   => $this->get('config')->get('files_folder') . '/blog.db',
-            'driver' => 'pdo_sqlite',
-        );
-
-        return DriverManager::getConnection($params, $config);
-    }
-
     protected function appendConsoleCommands(Application $application): void
     {
         parent::appendConsoleCommands($application);

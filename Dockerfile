@@ -36,8 +36,8 @@ RUN sed -ri -e "s!/var/www/!${APACHE_DOCUMENT_ROOT}!g" /etc/apache2/apache2.conf
 RUN a2enmod rewrite
 
 # configure cron
-COPY ./cron/website /etc/cron.d/website
-RUN chmod 0744 /etc/cron.d/website
+COPY ./cron/app /etc/cron.d/app
+RUN chmod 0744 /etc/cron.d/app
 RUN service cron start
 
 # install app
@@ -46,6 +46,7 @@ RUN cd /var/www/html && /usr/bin/composer install
 RUN chown -R www-data: /var/www/html
 
 # run commands
-RUN cd /var/www/html && ./vendor/bin/psx website:fetch_adapter
-RUN cd /var/www/html && ./vendor/bin/psx website:update_blog
+RUN cd /var/www/html && ./vendor/bin/psx app:create_schema
+RUN cd /var/www/html && ./vendor/bin/psx app:fetch_adapter
+RUN cd /var/www/html && ./vendor/bin/psx app:update_blog
 RUN cd /var/www/html && /usr/bin/php build.php
