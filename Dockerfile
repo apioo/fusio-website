@@ -37,10 +37,17 @@ RUN a2enmod rewrite
 
 # configure cron
 COPY ./cron/website /etc/cron.d/website
+RUN chmod 0744 /etc/cron.d/website
+RUN service cron start
 
 # install app
 COPY . /var/www/html
 RUN cd /var/www/html && /usr/bin/composer install
 RUN chown -R www-data: /var/www/html
+
+# run
+RUN cd /var/www/html && ./vendor/bin/psx website:fetch_adapter
+RUN cd /var/www/html && ./vendor/bin/psx website:update_blog
+RUN cd /var/www/html && /usr/bin/php build.php
 
 VOLUME /var/www/html/files
