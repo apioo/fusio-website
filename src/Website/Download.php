@@ -2,37 +2,31 @@
 
 namespace App\Website;
 
+use App\Table\Release;
+use PSX\Dependency\Attribute\Inject;
 use PSX\Framework\Controller\ViewAbstract;
 use PSX\Http\Environment\HttpContextInterface;
+use PSX\Http\Exception\InternalServerErrorException;
+use PSX\Sql\TableManagerInterface;
 
 class Download extends ViewAbstract
 {
-    /**
-     * @Inject
-     * @var \PSX\Sql\TableManager
-     */
-    protected $tableManager;
+    #[Inject]
+    private TableManagerInterface $tableManager;
 
     protected function doGet(HttpContextInterface $context): mixed
     {
-        return $this->render(__DIR__ . '/resource/download.php', []);
-    }
+        $release = $this->tableManager->getTable(Release::class)->findLatestRelease();
+        if (empty($release)) {
+            throw new InternalServerErrorException('Could not find latest release');
+        }
 
-    public function doIndex()
-    {
-        /*
-        $release = $this->tableManager->getTable('Fusio\Website\Table\Release')->getLatestRelease();
-
-        $this->setBody([
-            'links' => [[
-                'rel'         => 'download',
-                'title'       => $release['tagName'],
-                'href'        => $release['htmlUrl'],
-                'size'        => $release['assetSize'],
-                'releaseDate' => $release['publishedAt']->format('Y-m-d'),
-                'description' => 'Latest repository tag',
-            ]]
+        return $this->render(__DIR__ . '/resource/download.php', [
+            'tagName'     => $release['tagName'],
+            'htmlUrl'     => $release['htmlUrl'],
+            'assetSize'   => $release['assetSize'],
+            'assetName'   => $release['assetName'],
+            'publishedAt' => $release['publishedAt']->format('Y-m-d'),
         ]);
-        */
     }
 }

@@ -11,7 +11,7 @@
     <table class="mdl-data-table mdl-js-data-table" style="width:100%">
     <colgroup>
       <col width="120" />
-      <col width="120" />
+      <col width="200" />
       <col width="*" />
       <col width="120" />
     </colgroup>
@@ -19,16 +19,16 @@
     <tr>
       <th>Version</th>
       <th>Download</th>
-      <th class="hidden-xs">Checksum (SHA256)</th>
+      <th class="hidden-xs">Size</th>
       <th>Date</th>
     </tr>
     </thead>
     <tbody>
     <tr>
-      <td>2.1.9</td>
-      <td><a href="https://github.com/apioo/fusio/releases/download/v2.1.9/fusio_2.1.9.zip">zip</a></td>
-      <td class="hidden-xs">5B8F35F973FC5628310C0BB7D894EEF9C4DD0381607769E13CC6FD65C63999D2</td>
-      <td>2022-01-24</td>
+      <td><?php echo $tagName; ?></td>
+      <td><a href="<?php echo $htmlUrl; ?>"><?php echo $assetName; ?></a></td>
+      <td class="hidden-xs"><?php echo round($assetSize / 1024 / 1024, 2); ?> MiB</td>
+      <td><?php echo $publishedAt; ?></td>
     </tr>
     </tbody>
     </table>

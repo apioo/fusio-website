@@ -1,3 +1,4 @@
 @daily /var/www/html/vendor/bin/psx app:fetch_adapter
+@daily /var/www/html/vendor/bin/psx app:fetch_release
 @daily /var/www/html/vendor/bin/psx app:update_blog
 @daily /usr/bin/php /var/www/html/build.php
