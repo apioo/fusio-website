@@ -32,7 +32,7 @@ class CaptchaVerifier
 
         if ($response->getStatusCode() == 200) {
             $data = Json\Parser::decode((string) $response->getBody());
-            if (isset($data['success']) && $data['success'] === true) {
+            if (isset($data->success) && $data->success === true) {
                 return true;
             }
         }

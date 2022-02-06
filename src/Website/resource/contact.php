@@ -6,9 +6,7 @@
     <h4>Contact</h4>
     <?php if(isset($error)): ?>
       <p class="mdl-color--accent" style="padding:8px;"><?php echo $error; ?></p>
-    <?php endif; ?>
-
-    <?php if(isset($success)): ?>
+    <?php elseif(isset($success)): ?>
       <p><b>Thanks for your request, we will answer your request as soon as possible.</b></p>
     <?php endif; ?>
 
