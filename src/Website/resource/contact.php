@@ -45,7 +45,7 @@
     <div class="mdl-cell mdl-cell--12-col">
       <br>
       <br>
-      <div class="g-recaptcha" data-sitekey="6LcoZQoTAAAAAPE6fWloKOQieeggPS61L-nJBVz4"></div>
+      <div class="g-recaptcha" data-sitekey="6LcO6UweAAAAAI1TE-gLrEZ5tH8sa-fmgdL_o9fc"></div>
       <br>
     </div>
 
