@@ -1,2 +1,4 @@
 .env
+apps
+cache
 vendor
