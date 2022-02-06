@@ -43,8 +43,7 @@
     and run the following command:</p>
     <pre><code class="bash">docker-compose up -d</code></pre>
     <p>You can also checkout the plain <a href="https://hub.docker.com/r/fusio/fusio/">fusio/fusio</a> 
-    image but then you need to provide also a mysql and memcache container. The 
-    docker-compose command automatically starts these services.</p>
+    image.</p>
 
     <h5>Electron</h5>
     <p>We provide the backend app as <a href="https://github.com/apioo/fusio-electron">electron app</a> 
