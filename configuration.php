@@ -34,7 +34,7 @@ return array(
     'psx_url'                 => getenv('APP_URL'),
 
     // The input path 'index.php/' or '' if you use mod_rewrite
-    'psx_dispatch'            => 'index.php/',
+    'psx_dispatch'            => '',
 
     // The default timezone
     'psx_timezone'            => 'UTC',
