@@ -49,4 +49,4 @@ RUN chown -R www-data: /var/www/html
 RUN cd /var/www/html && ./vendor/bin/psx app:create_schema
 RUN cd /var/www/html && ./vendor/bin/psx app:fetch_adapter
 RUN cd /var/www/html && ./vendor/bin/psx app:update_blog
-RUN cd /var/www/html && /usr/bin/php build.php
+RUN cd /var/www/html && php build.php
