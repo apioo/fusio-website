@@ -45,9 +45,7 @@ COPY . /var/www/html
 RUN cd /var/www/html && /usr/bin/composer install
 RUN chown -R www-data: /var/www/html
 
-# run
+# run commands
 RUN cd /var/www/html && ./vendor/bin/psx website:fetch_adapter
 RUN cd /var/www/html && ./vendor/bin/psx website:update_blog
 RUN cd /var/www/html && /usr/bin/php build.php
-
-VOLUME /var/www/html/files
