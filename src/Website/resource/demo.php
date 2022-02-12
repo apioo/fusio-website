@@ -13,10 +13,10 @@
       <dd><a href="https://demo.fusio-project.org">https://demo.fusio-project.org</a></dd>
       <dt>Fusio Backend</dt>
       <dd><a href="https://demo.fusio-project.org/apps/fusio/">https://demo.fusio-project.org/apps/fusio</a></dd>
-      <dt>Documentation</dt>
-      <dd><a href="https://demo.fusio-project.org/apps/documentation/">https://demo.fusio-project.org/apps/documentation</a></dd>
       <dt>Developer Portal</dt>
       <dd><a href="https://demo.fusio-project.org/apps/developer/">https://demo.fusio-project.org/apps/developer</a></dd>
+      <dt>Documentation</dt>
+      <dd><a href="https://demo.fusio-project.org/apps/documentation/">https://demo.fusio-project.org/apps/documentation</a></dd>
       <dt>Swagger-UI</dt>
       <dd><a href="https://demo.fusio-project.org/apps/swagger-ui/">https://demo.fusio-project.org/apps/swagger-ui</a></dd>
     </dl>
