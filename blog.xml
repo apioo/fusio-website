@@ -2,8 +2,106 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>urn:fusio-project-org:blog</id>
     <title>Fusio Blog</title>
-    <updated>2022-01-27T23:00:00Z</updated>
+    <updated>2022-04-02T20:00:00Z</updated>
     <link rel="self" href="https://www.fusio-project.org/blog/feed" type="application/atom+xml" />
+    <entry>
+        <id>urn:fusio-project-org:blog:47</id>
+        <title>Fusio 3.0 released</title>
+        <author>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
+        </author>
+        <updated>2022-04-02T20:00:00Z</updated>
+        <summary>
+            This post announces the release of Fusio version 3.0
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>We are really happy to announce the release of version 3.0 of Fusio. This release contains may fixes and improvements
+to Fusio. We like to thank all our users and customers who have greatly shaped Fusio to one of the best and simplest
+tools to create an API product. The following list covers the most important changes of this release:</p>
+
+<ul>
+    <li>
+        <b>PHP 8.0 as minimum requirement</b>
+        <p>The minimum PHP requirement of Fusio is now PHP 8.0</p>
+    </li>
+    <li>
+        <b>Updated code base and underling dependencies to PHP 8.0</b>
+        <p>We have improved our complete code base by making use of new PHP 8.0 features and also updated all dependencies
+        to support PHP 8</p>
+    </li>
+    <li>
+        <b>Improved handling of social login credentials</b>
+        <p>The social login credentials are now placed at the settings panel. Through this you can configure a social
+        login provider even if you have no access to the filesystem</p>
+    </li>
+    <li>
+        <b>Improved cron system</b>
+        <p>We have improved our cron system so that you now only need to invoke a single command which internally
+        triggers all cronjobs</p>
+    </li>
+    <li>
+        <b>Removed internal scopes from OpenAPI spec <a href="https://github.com/apioo/fusio/issues/443">#443</a></b>
+        <p>The OpenAPI spec no longer shows all Fusio internal scopes and only the scope which are related to your app</p>
+    </li>
+    <li>
+        <b>Reset password link in email incorrect <a href="https://github.com/apioo/fusio/issues/436">#436</a></b>
+        <p>We have adjusted the password reset link to the correct url</p>
+    </li>
+    <li>
+        <b>Notification in case a user runs out of points <a href="https://github.com/apioo/fusio/issues/427">#427</a></b>
+        <p>We now send a mail in case a user runs out of points, you can also configure the threshold at the settings
+        panel</p>
+    </li>
+    <li>
+        <b>"Entry successful deleted" incorrectly reported <a href="https://github.com/apioo/fusio/issues/429">#429</a></b>
+        <p>The SQLDelete action now returns a proper 404 response in case the entry which you try to delete does not
+        exist</p>
+    </li>
+    <li>
+        <b>Added an option to deactivate the marketplace</b>
+        <p>We have added config flag to activate or deactivate the marketplace</p>
+    </li>
+    <li>
+        <b>Updated docker image which now contains all apps and adapter</b>
+        <p>We have improved our docker image which now contains by default all apps. Previously we have installed the
+        apps dynamically on start up but this makes it more difficult to run a container in a restricted environment.
+        Now the image contains all apps and the marketplace is deactivated. If you need other apps you need to include
+        them in the image</p>
+    </li>
+    <li>
+        <b>Include Swagger-UI in developer portal</b>
+        <p>We have included the Swagger-UI app into the developer portal which makes it more easier for users to
+        explore your API</p>
+    </li>
+    <li>
+        <b>Updated help in backend app using now our docs.fusio-project.org website</b>
+        <p>We have migrated all of our documentation to the new <a href="https://docs.fusio-project.org/">docs.fusio-project.org</a>
+        website which is now also embedded into the backend app</p>
+    </li>
+    <li>
+        <b>Improved file upload handling</b>
+        <p>We have improved the way how to handle file uploads at an action</p>
+    </li>
+    <li>
+        <b>Add files directory routes provider and actions</b>
+        <p>It is now possible to create a REST API based on a folder. This can be helpful in case you want to expose a
+        directory of i.e. CSV files</p>
+    </li>
+</ul>
+
+<p>So we hope that you like this release and we are really happy and excited about the future of Fusio.</p>
+
+<p>Besides all those technical changes we have also greatly improved the content of our <a href="https://www.youtube.com/c/FusioAPI">YouTube channel</a>
+and <a href="https://docs.fusio-project.org/">documentation website</a> which should help all users to work with Fusio.
+All our websites are complete open so please feel free to make any changes in case you have found an error or you want
+to improve the documentation.</p>
+
+]]></content>
+    </entry>
     <entry>
         <id>urn:fusio-project-org:blog:46</id>
         <title>Fusio 2.1.9 released and plans for 3.0</title>
