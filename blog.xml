@@ -2,8 +2,91 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>urn:fusio-project-org:blog</id>
     <title>Fusio Blog</title>
-    <updated>2022-04-02T20:00:00Z</updated>
+    <updated>2022-06-05T19:33:00Z</updated>
     <link rel="self" href="https://www.fusio-project.org/blog/feed" type="application/atom+xml" />
+    <entry>
+        <id>urn:fusio-project-org:blog:48</id>
+        <title>Fusio 3.1 released</title>
+        <author>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
+        </author>
+        <updated>2022-06-05T19:33:00Z</updated>
+        <summary>
+            This post announces the release of Fusio version 3.1
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>We are really happy to announce the release of version 3.1 of Fusio. This release contains mostly improvements to our
+existing payment system. In the last months we have gathered many experiences and feedback regarding our payment system
+from many users and integrations which we have supported. Based on this feedback we have revamped our existing payment
+system which allows our users to create more complex payment models and make Fusio more usable for different use cases.
+The following list covers the most important changes of this release:</p>
+
+<ul>
+    <li>
+        <b>Reworked payment system</b>
+        <p>As mentioned we have reworked our payment system. We have learned that payment systems are a really complicated
+        topic and many users have complete different use cases. Initially Fusio included a simple payment system which handled
+        recurring payments. To support all those different use cases we would have to extend and rebuild our existing system.
+        Since Fusio is an API management system and not a payment system we came to the conclusion that the best solution is
+        to outsource those tasks to a dedicated payment provider. With <a href="https://stripe.com/">Stripe</a> we have
+        found a really great default payment provider which provides many features. In the end all payment provider actions
+        are abstracted through an adapter so if you like you can also implement support for a different provider. Please
+        take a look at our <a href="https://github.com/apioo/fusio-adapter-stripe">stripe-adapter</a> to get more information
+        how a payment provider works</p>
+    </li>
+    <li>
+        <b>Added deeper Stripe integration handle now complex pricing models through Stripe</b>
+        <p>If you create a plan it is now possible to reference an external id. For Stripe this is a <a href="https://stripe.com/docs/api/prices/object">price id</a>.
+        If a user purchases such a plan we use the provided price id. The external id can contain all the different modalities
+        which are supported by the payment provider</p>
+    </li>
+    <li>
+        <b>Removed contract and invoice handling inside Fusio and outsource those to the payment provider</b>
+        <p>The contract and invoice endpoints are removed from the backend API</p>
+    </li>
+    <li>
+        <b>Use the Stripe billing portal where a user can manage all subscriptions</b>
+        <p>We have removed the contract and invoice panel from the developer portal and it is now possible to use the
+        Stripe billing portal to manage all subscriptions</p>
+    </li>
+    <li>
+        <b>Remove contract and invoice panel from the backend app</b>
+        <p>We have also removed the contract and invoice panel from the backend app</p>
+    </li>
+    <li>
+        <b>Added payment provider webhook support where Fusio receives events from the payment provider</b>
+        <p>Fusio is now able to receive webhook events from the payment provider. The payment adapter needs to process
+        the webhook and tell Fusio whether an invoice was payed or canceled</p>
+    </li>
+    <li>
+        <b>Added a trash panel to the backend app where user can restore a deleted record</b>
+        <p>We have now a new panel at the backend which allows you to restore a deleted record. Previously this was only
+        possible through the CLI</p>
+    </li>
+    <li>
+        <b>Add autoload to src/ folder</b>
+        <p>Since many users add new custom actions and connections at the src/ folder we have now added the "autoload"
+        config by default</p>
+    </li>
+    <li>
+        <b>Handle gracefully in case the apps dir does not exist</b>
+        <p>In case the apps folder does not exist we dont throw any exception</p>
+    </li>
+    <li>
+        <b>Added SqlBuilder action</b>
+        <p>We have added by default the <a href="https://docs.fusio-project.org/docs/backend/api/action/sql-builder/">SqlBuilder</a>
+        action which allows you to write complex SQL queries using a JSON notation</p>
+    </li>
+</ul>
+
+<p>We are really happy with this release and please let us know if you have any ideas regarding Fusio.</p>
+
+]]></content>
+    </entry>
     <entry>
         <id>urn:fusio-project-org:blog:47</id>
         <title>Fusio 3.0 released</title>
