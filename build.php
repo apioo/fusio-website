@@ -91,6 +91,11 @@ function parseTags($data)
         $tagName  = $tagParts[2] ?? null;
         $tagName  = rtrim($tagName, '^{}');
 
+        if (str_contains($tagName, '-RC')) {
+            // skip RC releases
+            continue;
+        }
+
         if (!empty($sha1) && !empty($tagName)) {
             $result[] = $tagName;
         }
