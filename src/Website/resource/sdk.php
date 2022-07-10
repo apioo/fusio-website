@@ -57,7 +57,7 @@
         Documentation of the REST API in case you want directly talk to the endpoints.
       </div>
       <div class="mdl-card__actions mdl-card--border">
-        <a href="https://demo.fusio-project.org/apps/internal/#!/page/about" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Reference</a>
+        <a href="https://demo.fusio-project.org/apps/documentation/#!/api/" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Reference</a>
       </div>
     </div>
   </div>
