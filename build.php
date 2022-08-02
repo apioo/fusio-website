@@ -13,7 +13,11 @@ foreach ($data->repositories as $name => $vendor) {
     $git = 'https://github.com/' . $vendor . '.git';
     $version = checkout($appsDir . '/' . $name, $git);
     $meta = getMeta($appsDir . '/' . $name);
-    $downloadUrl = 'https://github.com/' . $vendor . '/archive/' . $version . '.zip';
+
+    $downloadUrl = getAssetUrlForTag($version, $vendor, $httpClient);
+    if (empty($downloadUrl)) {
+        $downloadUrl = 'https://github.com/' . $vendor . '/archive/' . $version . '.zip';
+    }
 
     $appFile = $appsDir . '/' . $name . '.zip';
     $httpClient->get($downloadUrl, [
@@ -28,7 +32,7 @@ foreach ($data->repositories as $name => $vendor) {
 
     $marketplace[$name] = array_merge([
         'version' => trim($version, 'v'),
-        'downloadUrl' => 'https://github.com/' . $vendor . '/archive/' . $version . '.zip',
+        'downloadUrl' => $downloadUrl,
         'sha1Hash' => sha1_file($appFile),
     ], $meta);
 
@@ -102,4 +106,31 @@ function parseTags($data)
     }
 
     return $result;
+}
+
+function getAssetUrlForTag(string $tagName, string $vendor, \GuzzleHttp\Client $httpClient): ?string
+{
+    $response = $httpClient->get(sprintf('https://api.github.com/repos/' . $vendor . '/releases'), [
+        'verify' => false
+    ]);
+
+    if ($response->getStatusCode() !== 200) {
+        return null;
+    }
+
+    $releases = \json_decode($response->getBody(), true);
+    if (!is_array($releases)) {
+        return null;
+    }
+
+    foreach ($releases as $release) {
+        if ($release['tag_name'] === $tagName) {
+            $url = $release['assets'][0]['browser_download_url'] ?? null;
+            if (!empty($url)) {
+                return $url;
+            }
+        }
+    }
+
+    return null;
 }
