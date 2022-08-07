@@ -54,7 +54,8 @@ function checkout($name, $url)
     }
 
     shell_exec('git fetch');
-    
+    shell_exec('git pull');
+
     $data = shell_exec('git show-ref --tags -d');
     $tags = parseTags($data);
 
@@ -69,16 +70,26 @@ function checkout($name, $url)
 
 function getMeta($dir)
 {
-    $appFile = $dir . '/app.yaml';
-    $data = [];
-    if (is_file($appFile)) {
-        $data = \Symfony\Component\Yaml\Yaml::parse(file_get_contents($appFile));
+    $files = [
+        $dir . '/app.yaml',
+        $dir . '/src/app.yaml',
+    ];
+
+    foreach ($files as $appFile) {
+        if (is_file($appFile)) {
+            $data = \Symfony\Component\Yaml\Yaml::parse(file_get_contents($appFile));
+            return [
+                'description' => $data['description'] ?? '',
+                'screenshot' => $data['screenshot'] ?? '',
+                'website' => $data['website'] ?? '',
+            ];
+        }
     }
 
     return [
-        'description' => $data['description'] ?? '',
-        'screenshot' => $data['screenshot'] ?? '',
-        'website' => $data['website'] ?? '',
+        'description' => '',
+        'screenshot' => '',
+        'website' => '',
     ];
 }
 
