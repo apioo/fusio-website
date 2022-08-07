@@ -26,59 +26,17 @@
 
   <div class="mdl-cell mdl-cell--6-col">
     <div class="fusio-card-app mdl-shadow--2dp mdl-card">
-      <div class="mdl-card__title">PixAPI</div>
+      <div class="mdl-card__title">Laravel</div>
       <div class="mdl-card__supporting-text">
-        <img src="<?php echo $base; ?>/img/jquery.png" class="fusio-avatar" />
-        A fun demo JQuery app which uses Fusio as API backend. It shows how you
-        can build a simple game using Fusio as backend.
+        <img src="<?php echo $base; ?>/img/laravel.png" class="fusio-avatar" />
+        A sample Laravel app which shows how you can integrate Fusio.
       </div>
       <div class="mdl-card__actions mdl-card--border">
-        <a href="https://pixapi.apioo.de/" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Website</a>
+        <a href="https://github.com/apioo/fusio-sample-laravel" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">GitHub</a>
       </div>
     </div>
   </div>
-  
-  <div class="mdl-cell mdl-cell--6-col">
-    <div class="fusio-card-app mdl-shadow--2dp mdl-card">
-      <div class="mdl-card__title">Todo-App</div>
-      <div class="mdl-card__supporting-text">
-        <img src="<?php echo $base; ?>/img/angularjs.png" class="fusio-avatar" />
-        Sample AngularJS app which can read, create and delete todo entries. It
-        uses the demo todo API of Fusio.
-      </div>
-      <div class="mdl-card__actions mdl-card--border">
-        <a href="https://github.com/apioo/fusio-sample-angularjs" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">GitHub</a>
-      </div>
-    </div>
-  </div>
-  
-  <div class="mdl-cell mdl-cell--6-col">
-    <div class="fusio-card-app mdl-shadow--2dp mdl-card">
-      <div class="mdl-card__title">Todo-CLI</div>
-      <div class="mdl-card__supporting-text">
-        <img src="<?php echo $base; ?>/img/java.png" class="fusio-avatar" />
-        Sample CLI app which reads all todo entries and provides a way to post
-        new ones. It uses the default todo API of Fusio.
-      </div>
-      <div class="mdl-card__actions mdl-card--border">
-        <a href="https://github.com/apioo/fusio-sample-javacli" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">GitHub</a>
-      </div>
-    </div>
-  </div>
-  
-  <div class="mdl-cell mdl-cell--6-col">
-    <div class="fusio-card-app mdl-shadow--2dp mdl-card">
-      <div class="mdl-card__title">Authentication</div>
-      <div class="mdl-card__supporting-text">
-        <img src="<?php echo $base; ?>/img/jquery.png" class="fusio-avatar" />
-        Simple JQuery app which shows how to authenticate and access a Fusio
-        based API.
-      </div>
-      <div class="mdl-card__actions mdl-card--border">
-        <a href="https://github.com/apioo/fusio-sample-jquery" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">GitHub</a>
-      </div>
-    </div>
-  </div>
+
 </div>
 
 <div class="fusio-content fusio-edit mdl-grid">
