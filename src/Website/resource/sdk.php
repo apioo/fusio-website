@@ -51,6 +51,18 @@
   </div>
   <div class="mdl-cell mdl-cell--6-col">
     <div class="fusio-card-app mdl-shadow--2dp mdl-card">
+      <div class="mdl-card__title">Wordpress</div>
+      <div class="mdl-card__supporting-text">
+        <img src="<?php echo $base; ?>/img/wordpress.png" class="fusio-avatar" />
+        Integrates Fusio into Wordpress. It helps to use your Wordpress-Site as Developer-Portal and Fusio as API management tool.
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <a href="https://github.com/apioo/fusio-sdk-php-wordpress" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">GitHub</a>
+      </div>
+    </div>
+  </div>
+  <div class="mdl-cell mdl-cell--6-col">
+    <div class="fusio-card-app mdl-shadow--2dp mdl-card">
       <div class="mdl-card__title">REST</div>
       <div class="mdl-card__supporting-text">
         <img src="<?php echo $base; ?>/img/openapi.png" class="fusio-avatar" />
