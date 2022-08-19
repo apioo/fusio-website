@@ -37,8 +37,8 @@
     to support any kind of service.</p>
 
     <p>The API can then be used by apps which are developed by yourself or by 
-    3rd party developers. The apps can be i.e. javascript apps (like AngularJS,
-    React, etc.), mobile apps or actual desktop apps which need to communicate
+    3rd party developers. The apps can be i.e. javascript apps (like Angular,
+    React, Vue etc.), mobile apps or actual desktop apps which need to communicate
     with your API. The Fusio backend app uses also an internal API to configure 
     the system. Because of that it is also very easy to integrate Fusio into an 
     existing system, since you actually could also configure the complete system 
