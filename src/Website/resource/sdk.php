@@ -4,9 +4,7 @@
   <div class="mdl-cell mdl-cell--12-col">
     <h4>SDK</h4>
     <p>To build and integrate apps with Fusio we provide several SDKs which help
-    you to easily work with the REST API of Fusio. These SDKs are also automatically
-    generated based on the schema of the API, you can use the same technique
-    to build a SDK for your API.</p>
+    you to easily work with the REST API of Fusio.</p>
   </div>
 </div>
 
@@ -34,6 +32,19 @@
       <div class="mdl-card__actions mdl-card--border">
         <a href="https://github.com/apioo/fusio-sdk-php" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">GitHub</a>
         <a href="https://packagist.org/packages/fusio/sdk" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Packagist</a>
+      </div>
+    </div>
+  </div>
+  <div class="mdl-cell mdl-cell--6-col">
+    <div class="fusio-card-app mdl-shadow--2dp mdl-card">
+      <div class="mdl-card__title">Java</div>
+      <div class="mdl-card__supporting-text">
+        <img src="<?php echo $base; ?>/img/java.png" class="fusio-avatar" />
+        The official Java SDK to talk to the Fusio API.
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <a href="https://github.com/apioo/fusio-sdk-java" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">GitHub</a>
+        <a href="https://github.com/apioo/fusio-sdk-java/packages/1614164" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Package</a>
       </div>
     </div>
   </div>
