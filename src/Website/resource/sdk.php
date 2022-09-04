@@ -50,6 +50,18 @@
   </div>
   <div class="mdl-cell mdl-cell--6-col">
     <div class="fusio-card-app mdl-shadow--2dp mdl-card">
+      <div class="mdl-card__title">Go</div>
+      <div class="mdl-card__supporting-text">
+        <img src="<?php echo $base; ?>/img/go.png" class="fusio-avatar" />
+        The official Go SDK to talk to the Fusio API.
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <a href="https://github.com/apioo/fusio-sdk-go" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">GitHub</a>
+      </div>
+    </div>
+  </div>
+  <div class="mdl-cell mdl-cell--6-col">
+    <div class="fusio-card-app mdl-shadow--2dp mdl-card">
       <div class="mdl-card__title">Angular</div>
       <div class="mdl-card__supporting-text">
         <img src="<?php echo $base; ?>/img/angular.png" class="fusio-avatar" />
