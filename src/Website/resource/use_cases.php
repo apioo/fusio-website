@@ -17,7 +17,7 @@
             <div class="mdl-tabs__panel is-active" id="api-product">
                 <p>The initial use case of Fusio was to be able to quickly create a great API product beside an existing
                 web app. We have many users which run a traditional web app and they use Fusio to create a state of the
-                art API beside there existing product. Fusio provdies many ways to make your business logic available
+                art API beside there existing product. Fusio provides many ways to make your business logic available
                 as API.</p>
                 <p>Fusio provides a <a href="https://demo.fusio-project.org/apps/developer/#!/">developer app</a>
                 which helps to on board new users to use your API i.e.</p>
