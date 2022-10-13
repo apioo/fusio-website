@@ -2,8 +2,84 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>urn:fusio-project-org:blog</id>
     <title>Fusio Blog</title>
-    <updated>2022-08-07T20:40:00Z</updated>
+    <updated>2022-10-13T13:18:00Z</updated>
     <link rel="self" href="https://www.fusio-project.org/blog/feed" type="application/atom+xml" />
+    <entry>
+        <id>urn:fusio-project-org:blog:51</id>
+        <title>Fusio 3.3 released</title>
+        <author>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
+        </author>
+        <updated>2022-10-13T13:18:00Z</updated>
+        <summary>
+            This post announces the release of Fusio version 3.3
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>We like to announce version 3.3 of Fusio. This release contains some great changes regarding code generation and our
+SDKs. The following post covers all important changes of this release:</p>
+
+<ul>
+    <li>
+        <b>Updated developer app to latest sdk version</b>
+        <p>The developer app now uses the latest version of our <a href="https://www.npmjs.com/package/ngx-fusio-sdk">Angular SDK</a>
+        which you can also use to build an Angular App based on Fusio. It provides already many services and components to
+        handle user registration and app management. Please take a look at the <a href="https://github.com/apioo/fusio-apps-developer">developer app</a>
+        to see how you can integrate the SDK</p>
+    </li>
+    <li>
+        <b>Fix link of the default developer portal content <a href="https://github.com/apioo/fusio/issues/474">#474</a></b>
+        <p>We have fixed the links of the default content from the developer app</p>
+    </li>
+    <li>
+        <b>Add metadata property to important models and remove fusio_user_attributes config <a href="https://github.com/apioo/fusio/issues/470">#470</a></b>
+        <p>We have removed the <code>fusio_user_attributes</code> config and added a general "metadata" concept to important
+        models of Fusio. This means i.e. if you create a user, app or route via API you can attach additional metadata to this entity,
+        like a reference id from the remote system which has issued the request. This should help to better integrate Fusio
+        programmatically into your system</p>
+    </li>
+    <li>
+        <b>Record period start/end date of subscriptions to get a list of active plans for a user</b>
+        <p>Our transaction table now also logs the start and end date of a subscription period. Through this we can now
+        also return all active subscriptions for a user</p>
+    </li>
+    <li>
+        <b>Add option to configure a return url for the payment portal</b>
+        <p>It is now possible to configure a return url for the payment portal in case it is not possible to globally
+        configure such an url</p>
+    </li>
+    <li>
+        <b>Include plan scopes in user account response</b>
+        <p>It is possible to assign scopes at a plan, a user then receives those scopes if the plan is assigned to the
+        user. The account response now also contains those scopes obtained through a plan</p>
+    </li>
+    <li>
+        <b>Add generate SDK command</b>
+        <p>We have added a new command which helps to automatically generate the sdk by simply using the command <code>php bin/fusio generate:sdk</code>.</p>
+    </li>
+    <li>
+        <b>Add generate model command</b>
+        <p>We have added a new command which generates models based on a <a href="https://typeschema.org/">TypeSchema</a> specification.
+        The file must be located at <code>resources/typeschema.json</code> and all models are automatically generated at <code>src/Model</code></p>
+    </li>
+    <li>
+        <b>Add generate table command</b>
+        <p>The generate table command generates all table classes for the tables which you have defined in your migration file.
+        All tables classes are generated at <code>src/Table</code></p>
+    </li>
+</ul>
+
+<p>Have fun with this release and please feel free to provide any feedback either on <a href="https://github.com/apioo/fusio">Github</a>
+or at our <a href="https://groups.google.com/g/fusio">Forum</a>.</p>
+
+<p>Best regards<br>
+Christoph</p>
+
+]]></content>
+    </entry>
     <entry>
         <id>urn:fusio-project-org:blog:50</id>
         <title>Fusio 3.2 released</title>
