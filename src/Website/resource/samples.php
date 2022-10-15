@@ -12,6 +12,45 @@
 
   <div class="mdl-cell mdl-cell--6-col">
     <div class="fusio-card-app mdl-shadow--2dp mdl-card">
+      <div class="mdl-card__title">PHP CLI</div>
+      <div class="mdl-card__supporting-text">
+        <img src="<?php echo $base; ?>/img/php.png" class="fusio-avatar" />
+        A sample PHP CLI app which outputs all routes of your Fusio instance.
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <a href="https://github.com/apioo/fusio-sample-php-cli" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mdl-cell mdl-cell--6-col">
+    <div class="fusio-card-app mdl-shadow--2dp mdl-card">
+      <div class="mdl-card__title">Java CLI</div>
+      <div class="mdl-card__supporting-text">
+        <img src="<?php echo $base; ?>/img/java.png" class="fusio-avatar" />
+        A sample Java CLI app which outputs all routes of your Fusio instance.
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <a href="https://github.com/apioo/fusio-sample-java-cli" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mdl-cell mdl-cell--6-col">
+    <div class="fusio-card-app mdl-shadow--2dp mdl-card">
+      <div class="mdl-card__title">Go CLI</div>
+      <div class="mdl-card__supporting-text">
+        <img src="<?php echo $base; ?>/img/go.png" class="fusio-avatar" />
+        A sample Go CLI app which outputs all routes of your Fusio instance.
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <a href="https://github.com/apioo/fusio-sample-go-cli" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mdl-cell mdl-cell--6-col">
+    <div class="fusio-card-app mdl-shadow--2dp mdl-card">
       <div class="mdl-card__title">Headless CMS</div>
       <div class="mdl-card__supporting-text">
         <img src="<?php echo $base; ?>/img/openapi.png" class="fusio-avatar" />
@@ -33,19 +72,6 @@
       </div>
       <div class="mdl-card__actions mdl-card--border">
         <a href="https://github.com/apioo/fusio-sample-laravel" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">GitHub</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="mdl-cell mdl-cell--6-col">
-    <div class="fusio-card-app mdl-shadow--2dp mdl-card">
-      <div class="mdl-card__title">Java CLI</div>
-      <div class="mdl-card__supporting-text">
-        <img src="<?php echo $base; ?>/img/java.png" class="fusio-avatar" />
-        A sample Java CLI app which outputs all routes of your Fusio instance.
-      </div>
-      <div class="mdl-card__actions mdl-card--border">
-        <a href="https://github.com/apioo/fusio-sample-javacli" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">GitHub</a>
       </div>
     </div>
   </div>
