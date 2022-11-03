@@ -1,5 +1,13 @@
 <?php include(__DIR__ . '/inc/header.php'); ?>
 
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="display-6 fw-normal">Use-Cases</h1>
+    </div>
+  </div>
+</div>
+
 <div class="fusio-block mdl-grid mdl-shadow--2dp">
     <div class="mdl-cell mdl-cell--12-col">
         <h4>Use-Cases</h4>

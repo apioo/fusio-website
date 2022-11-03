@@ -44,7 +44,7 @@
       </div>
       <div class="mdl-card__actions mdl-card--border">
         <a href="https://github.com/apioo/fusio-sdk-java" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">GitHub</a>
-        <a href="https://github.com/apioo/fusio-sdk-java/packages/1614164" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Package</a>
+        <a href="https://mvnrepository.com/artifact/org.fusio-project/sdk" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Package</a>
       </div>
     </div>
   </div>
