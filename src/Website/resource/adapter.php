@@ -6,6 +6,16 @@ see also https://github.com/apioo/fusio-adapter-sql/blob/master/composer.json as
 automatically find your repository and add it to this list.
 -->
 
+<div style="background-image:url('<?php echo $base; ?>/img/intro.jpg');background-size:cover">
+  <div class="container">
+    <div class="row">
+      <div class="col p-lg-4 mx-auto text-center">
+        <h1 class="display-4 fw-normal">Adapter</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="fusio-block mdl-grid mdl-shadow--2dp">
   <div class="mdl-cell mdl-cell--12-col">
     <h4>Adapter</h4>

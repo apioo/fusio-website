@@ -6,7 +6,7 @@ specific parts feel free to simply create a PR at this repository. If you want t
 https://github.com/apioo/fusio
 -->
 
-<div style="background-image: url('<?php echo $base; ?>/img/intro.jpg'); background-size: cover">
+<div style="background-image:url('<?php echo $base; ?>/img/intro.jpg');background-size:cover">
   <div class="container">
     <div class="row">
       <div class="col p-lg-5 mx-auto my-5 text-center">
@@ -60,9 +60,8 @@ https://github.com/apioo/fusio
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
         <i class="bi bi-card-image p-4"></i>
       </div>
-      <h3 class="fs-2">Documentation</h3>
-      <p>Fusio provides a <a href="https://demo.fusio-project.org/apps/documentation/#!/api/">documentation</a>
-        app which shows all available API endpoints.</p>
+      <h3 class="fs-2">API Generator</h3>
+      <p>Fusio provides multiple generators to build complete APIs without coding from different sources.</p>
     </div>
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
@@ -73,10 +72,10 @@ https://github.com/apioo/fusio
     </div>
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
-        <i class="bi bi-calendar-event-fill p-4"></i>
+        <i class="bi bi-code p-4"></i>
       </div>
-      <h3 class="fs-2">OAuth2 authorization</h3>
-      <p>App developer can obtain an access token to access non-public API endpoints.</p>
+      <h3 class="fs-2">SDK generation</h3>
+      <p>Fusio can automatically generate a client SDK for your API based on the defined schema.</p>
     </div>
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
@@ -102,10 +101,10 @@ https://github.com/apioo/fusio
     </div>
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
-        <i class="bi bi-code p-4"></i>
+        <i class="bi bi-calendar-event-fill p-4"></i>
       </div>
-      <h3 class="fs-2">SDK generation</h3>
-      <p>Fusio can automatically generate a client SDK for your API based on the defined schema.</p>
+      <h3 class="fs-2">OAuth2 authorization</h3>
+      <p>App developer can obtain an access token to access non-public API endpoints.</p>
     </div>
   </div>
 </div>

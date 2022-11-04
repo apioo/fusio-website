@@ -1,13 +1,77 @@
 <?php include(__DIR__ . '/inc/header.php'); ?>
 
+<div style="background-image:url('<?php echo $base; ?>/img/intro.jpg');background-size:cover">
+  <div class="container">
+    <div class="row">
+      <div class="col p-lg-4 mx-auto text-center">
+        <h1 class="display-4 fw-normal">License</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4 pt-4 mb-4 pb-4">
+  <div class="row">
+    <div class="col">
+      <p>Fusio is an open source project which you can use freely also for commercial projects under the terms of the
+      <a href="https://github.com/apioo/fusio/blob/master/LICENSE">AGPLv3</a>. We want to build a sustainable open source
+      project with a long term relationship to our users.</p>
+    </div>
+  </div>
+</div>
+
+<div class="bg-light mt-4 pt-4 mb-4 pb-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg">
+      </div>
+      <div class="col">
+        <div class="card">
+          <h5 class="card-header">AGPLv3</h5>
+          <div class="card-body">
+            <p class="card-text">If you are a blogger or magazine we would be happy if you like to cover
+              Fusio. You can <a href="<?php echo $base; ?>/media/fusio_icon.zip">download</a>
+              the official icon set to represent Fusio.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <h5 class="card-header">Business</h5>
+          <div class="card-body">
+            <p class="card-text">If you are a blogger or magazine we would be happy if you like to cover
+              Fusio. You can <a href="<?php echo $base; ?>/media/fusio_icon.zip">download</a>
+              the official icon set to represent Fusio.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4 pt-4 mb-4 pb-4">
+  <div class="row">
+    <div class="col">
+      <h4>AGPLv3</h4>
+      <p>If you are not familiar with the <a href="https://tldrlegal.com/license/gnu-affero-general-public-license-v3-(agpl-3.0)">AGPLv3</a>
+        license we got you covered. Basically it means that you can do everything with the project but if you make modifications
+        to the source code you need to publish those changes also as open source under the AGPLv3 license. In the case of Fusio,
+        configuring an action at the backend is _not_ a modification to the source code, it is only a configuration, so you don`t
+        need to publish such actions. A modification is if you actually create a PHP source file.</p>
+      <p>With this license choice we are following the footsteps of great projects like Wordpress or Nextcloud. Like Wordpress
+        enables every human to be able to publish content on the web, we want to enable everybody to build high quality
+        APIs, which makes the digitalization of the world possible. If you have any further questions please use our
+        <a href="<?php echo $router->getAbsolutePath(\App\Website\Contact::class); ?>">contact</a> page.</p>
+    </div>
+  </div>
+</div>
+
+
 <div class="fusio-block mdl-grid mdl-shadow--2dp">
   <div class="mdl-cell mdl-cell--12-col">
-    <h4>License</h4>
-    <p>Fusio is an open source project which you can use freely also for commercial projects under the terms of the
-    <a href="https://github.com/apioo/fusio/blob/master/LICENSE">AGPL</a>. We want to build a sustainable open source
-    project with a long term relationship to our users. This means that we are able to develop and build tools around
-    the Fusio ecosystem and that our users can benefit from this. As additional perks we provide some services to our
-    donors to be even more productive with Fusio.</p>
+
   </div>
 </div>
 
@@ -76,17 +140,7 @@
 
 <div class="fusio-block mdl-grid mdl-shadow--2dp">
   <div class="mdl-cell mdl-cell--12-col">
-    <h4>AGPL</h4>
-    <p>If you are not familiar with the <a href="https://tldrlegal.com/license/gnu-affero-general-public-license-v3-(agpl-3.0)">AGPL</a>
-    license we got you covered. Basically it means that you can do everything with the project but if you make modifications
-    to the source code you need to publish those changes also as open source under the AGPL license. In the case of Fusio,
-    configuring an action at the backend is _not_ a modification to the source code, it is only a configuration, so you don`t
-    need to publish such actions. A modification is if you actually create a PHP source file and change the behaviour of
-    Fusio.</p>
-    <p>With this license choice we are following the footsteps of great projects like Wordpress or Nextcloud. Like Wordpress
-    enables every human to be able to publish content on the web, we want to enable everybody to build high quality
-    APIs, which makes the digitalization of the world possible. If you have any further questions please use our
-    <a href="<?php echo $router->getAbsolutePath(\App\Website\Contact::class); ?>">contact</a> page.</p>
+
   </div>
 </div>
 
