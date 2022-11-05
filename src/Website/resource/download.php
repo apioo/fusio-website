@@ -13,11 +13,7 @@
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <p>Here we provide the offical releases of Fusio. You can also checkout the
-        GitHub <a href="https://github.com/apioo/fusio">repository</a>.</p>
-
-      <h5>Releases</h5>
-
+      <h4>Releases</h4>
       <table class="table">
         <colgroup>
           <col width="120" />
@@ -42,24 +38,46 @@
         </tr>
         </tbody>
       </table>
+    </div>
+  </div>
+</div>
 
-      <h5>Composer</h5>
-      <p>It is also possible to quickly setup a Fusio project through composer:</p>
-      <pre><code class="bash">composer create-project fusio/fusio</code></pre>
+<div class="bg-light mt-4 pt-4 mb-4 pb-4">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h4>Composer</h4>
+        <p>It is also possible to quickly setup a Fusio project through composer:</p>
+        <pre><code class="bash">composer create-project fusio/fusio</code></pre>
+      </div>
+    </div>
+  </div>
+</div>
 
-      <h5>Docker</h5>
+<div class="container mt-4 pt-4 mb-4 pb-4">
+  <div class="row">
+    <div class="col">
+      <h4>Docker</h4>
       <p>We provide also a docker container for Fusio. To setup the container you
         have to checkout the <a href="https://github.com/apioo/fusio-docker">repository</a>
         and run the following command:</p>
       <pre><code class="bash">docker-compose up -d</code></pre>
       <p>You can also checkout the plain <a href="https://hub.docker.com/r/fusio/fusio/">fusio/fusio</a>
         image.</p>
+    </div>
+  </div>
+</div>
 
-      <h5>Electron</h5>
-      <p>We provide the backend app as <a href="https://github.com/apioo/fusio-electron">electron app</a>
-        so you dont have to host the javascript files on a server. Instead you can
-        connect from you local computer to the Fusio instance. Please checkout the
-        repository for installation instructions.</p>
+<div class="bg-light mt-4 pt-4 mb-4 pb-4">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h4>Electron</h4>
+        <p>We provide the backend app as <a href="https://github.com/apioo/fusio-electron">electron app</a>
+          so you dont have to host the javascript files on a server. Instead you can
+          connect from you local computer to the Fusio instance. Please checkout the
+          repository for installation instructions.</p>
+      </div>
     </div>
   </div>
 </div>

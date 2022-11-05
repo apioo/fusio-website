@@ -14,38 +14,58 @@
   <div class="row">
     <div class="col">
       <p>Fusio is an open source project which you can use freely also for commercial projects under the terms of the
-      <a href="https://github.com/apioo/fusio/blob/master/LICENSE">AGPLv3</a>. We want to build a sustainable open source
-      project with a long term relationship to our users.</p>
+      <a href="https://github.com/apioo/fusio/blob/master/LICENSE">AGPLv3</a>. If your company is not able to use the
+      AGPLv3 license we provide a monthly or yearly business license for a small fee which basically allows you to keep
+      all source code closed. With this license model we try to generate a small revenue stream to build a sustainable
+      open source project with a long term relationship to our users.</p>
     </div>
   </div>
 </div>
 
 <div class="bg-light mt-4 pt-4 mb-4 pb-4">
   <div class="container">
-    <div class="row">
-      <div class="col-lg">
-      </div>
+    <div class="row row-cols-1 row-cols-md-3 text-center">
       <div class="col">
-        <div class="card">
-          <h5 class="card-header">AGPLv3</h5>
+        <div class="card mb-3">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Open-Source</h4>
+          </div>
           <div class="card-body">
-            <p class="card-text">If you are a blogger or magazine we would be happy if you like to cover
-              Fusio. You can <a href="<?php echo $base; ?>/media/fusio_icon.zip">download</a>
-              the official icon set to represent Fusio.</p>
+            <h1 class="card-title pricing-card-title">Free</h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li></li>
+            </ul>
+            <a href="https://github.com/apioo/fusio" class="w-100 btn btn-lg btn-primary">Github</a>
           </div>
         </div>
       </div>
       <div class="col">
-        <div class="card">
-          <h5 class="card-header">Business</h5>
+        <div class="card mb-3">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Evaluation</h4>
+          </div>
           <div class="card-body">
-            <p class="card-text">If you are a blogger or magazine we would be happy if you like to cover
-              Fusio. You can <a href="<?php echo $base; ?>/media/fusio_icon.zip">download</a>
-              the official icon set to represent Fusio.</p>
+            <h1 class="card-title pricing-card-title">$10<small class="text-muted fw-light">/month</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li></li>
+            </ul>
+            <a href="https://github.com/apioo/fusio" class="w-100 btn btn-lg btn-primary">Purchase</a>
           </div>
         </div>
       </div>
-      <div class="col-lg">
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Foresight</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$100<small class="text-muted fw-light">/year</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li></li>
+            </ul>
+            <a href="https://github.com/apioo/fusio" class="w-100 btn btn-lg btn-primary">Purchase</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -65,88 +85,6 @@
         APIs, which makes the digitalization of the world possible. If you have any further questions please use our
         <a href="<?php echo $router->getAbsolutePath(\App\Website\Contact::class); ?>">contact</a> page.</p>
     </div>
-  </div>
-</div>
-
-
-<div class="fusio-block mdl-grid mdl-shadow--2dp">
-  <div class="mdl-cell mdl-cell--12-col">
-
-  </div>
-</div>
-
-<div class="fusio-content mdl-grid">
-  <div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--2dp fusio-license fusio-license-opensource">
-    <div class="mdl-card__title">
-      <h2 class="mdl-card__title-text">Support</h2>
-    </div>
-    <div class="mdl-card__supporting-text">
-      <div style="height:220px;">
-        <ul>
-          <li>Support our ongoing effort to improve Fusio</li>
-          <li>Get a Sponsor badge on your profile</li>
-        </ul>
-      </div>
-      <span class="mdl-chip">
-        <span class="mdl-chip__text"><b>$10 a month</b></span>
-      </span>
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-      <a href="https://github.com/sponsors/chriskapp" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Donate</a>
-    </div>
-  </div>
-  <div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--2dp fusio-license fusio-license-starter">
-    <div class="mdl-card__title">
-      <h2 class="mdl-card__title-text">Generation</h2>
-    </div>
-    <div class="mdl-card__supporting-text">
-      <div style="height:220px;">
-        <ul>
-          <li>Access to our <a href="https://apigen.app/">apigen.app</a> code generator</li>
-          <li>Generate complete APIs based on Entity or OpenAPI definitions</li>
-          <li>Create simple CRUD APIs in minutes</li>
-          <li>Deploy the generated code directly to a remote Fusio instance</li>
-        </ul>
-      </div>
-      <span class="mdl-chip">
-        <span class="mdl-chip__text"><b>$20 a month</b></span>
-      </span>
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-      <a href="https://github.com/sponsors/chriskapp" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Donate</a>
-    </div>
-  </div>
-  <div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--2dp fusio-license fusio-license-enterprise">
-    <div class="mdl-card__title">
-      <h2 class="mdl-card__title-text">Cloud</h2>
-    </div>
-    <div class="mdl-card__supporting-text">
-      <div style="height:220px;">
-        <ul>
-          <li>Access to our <a href="https://fusio.cloud/">fusio.cloud</a> platform</li>
-          <li>Allows you to easily create a Fusio instance in the cloud</li>
-          <li>Great for testing and evaluation of Fusio</li>
-        </ul>
-      </div>
-      <span class="mdl-chip">
-          <span class="mdl-chip__text"><b>$50 a month</b></span>
-      </span>
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-      <a href="https://github.com/sponsors/chriskapp" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Donate</a>
-    </div>
-  </div>
-</div>
-
-<div class="fusio-block mdl-grid mdl-shadow--2dp">
-  <div class="mdl-cell mdl-cell--12-col">
-
-  </div>
-</div>
-
-<div class="fusio-content fusio-edit mdl-grid">
-  <div class="mdl-cell mdl-cell--12-col">
-    <a href="https://github.com/apioo/fusio-website/blob/main/src/Website/resource/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"><i class="material-icons">edit</i> Edit this page</a>
   </div>
 </div>
 

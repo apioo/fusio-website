@@ -20,30 +20,30 @@ Then your app is easy installable via the Fusio backend app and can be used by a
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <p>Fusio contains a variety of apps for specific use cases. Every app can be
-        directly installed from the backend app under System / Marketplace. The
-        following list contains all available apps. If you want to add an app please open
-        an issue at our <a href="https://github.com/apioo/fusio">repository</a>.
-      </p>
+      <p>Fusio contains a variety of apps for specific use cases, an app is basically a javascript app which interacts
+      with the API of Fusio. Every app can be directly installed from the backend app under System / Marketplace. The
+      following list contains all available apps.</p>
     </div>
   </div>
 </div>
 
-<div class="container mt-4 pt-4 mb-4 pb-4">
-  <div class="row row-cols-3">
-      <?php foreach($apps as $name => $app): ?>
-        <div class="col">
-          <div class="card mb-4">
-            <img src="<?php echo $app->screenshot; ?>" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title"><?php echo $name; ?></h5>
-              <p class="card-text"><?php echo $app->description; ?></p>
-              <a href="<?php echo $app->website; ?>" class="btn btn-secondary">Website</a>
-              <a href="<?php echo $app->downloadUrl; ?>" class="btn btn-primary">Download</a>
+<div class="bg-light mt-4 pt-4 mb-4 pb-4">
+  <div class="container">
+    <div class="row row-cols-3">
+        <?php foreach($apps as $name => $app): ?>
+          <div class="col">
+            <div class="card mb-4">
+              <img src="<?php echo $app->screenshot; ?>" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><?php echo $name; ?></h5>
+                <p class="card-text"><?php echo $app->description; ?></p>
+                <a href="<?php echo $app->website; ?>" class="btn btn-secondary">Website</a>
+                <a href="<?php echo $app->downloadUrl; ?>" class="btn btn-primary">Download</a>
+              </div>
             </div>
           </div>
-        </div>
-      <?php endforeach; ?>
+        <?php endforeach; ?>
+    </div>
   </div>
 </div>
 
