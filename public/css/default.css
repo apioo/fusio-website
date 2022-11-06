@@ -5,6 +5,13 @@
   box-shadow:rgba(0, 0, 0, 0.16) 2px 2px 4px;
 }
 
+.fusio-outro {
+  background: url('../img/intro.jpg') no-repeat;
+  background-position:top center;
+  transform:rotate(180deg);
+  height:400px;
+}
+
 /*
 Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
 */
