@@ -67,7 +67,9 @@
         license we got you covered. Basically it means, if you make modifications to the source code, then you need to
         publish those changes also as open source under the AGPLv3 license, because of this it is a copyleft license. In
         the case of Fusio configuring an action at the backend is _not_ a modification to the source code, it is only a configuration,
-        so you don`t need to publish such actions. A modification is if you actually create a PHP source file i.e. at the src/ folder.</p>
+        so you don`t need to publish such actions. A modification is if you actually create a PHP source file i.e. at the src/ folder.
+        In general if you need to integrate a specific service we recommend to create an adapter as open source project
+        so that you can still use the AGPLv3 version, this benefits you and our complete community.</p>
       <p>With this license choice we are following the footsteps of great projects like Wordpress or Nextcloud. Like Wordpress
         enables every human to be able to publish content on the web, we want to enable everybody to build high quality
         APIs, which makes the digitalization of the world possible. If you have any further questions please use our
