@@ -30,6 +30,7 @@
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath(\App\Website\Tools::class); ?>">Tools</a></li>
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath(\App\Website\Worker::class); ?>">Worker</a></li>
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath(\App\Website\Samples::class); ?>">Samples</a></li>
+          <li class="mb-2"><a href="<?php echo $router->getAbsolutePath(\App\Website\Demo::class); ?>">Demo</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 mb-3">
