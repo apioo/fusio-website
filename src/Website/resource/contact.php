@@ -1,62 +1,44 @@
 <?php include(__DIR__ . '/inc/header.php'); ?>
 
-<form method="post">
-<div class="fusio-block mdl-grid mdl-shadow--2dp">
-  <div class="mdl-cell mdl-cell--12-col">
-    <h4>Contact</h4>
-    <?php if(isset($error)): ?>
-      <p class="mdl-color--accent" style="padding:8px;"><?php echo $error; ?></p>
-    <?php elseif(isset($success)): ?>
-      <p><b>Thanks for your request, we will answer your request as soon as possible.</b></p>
-    <?php endif; ?>
-
-    <p>If you have ideas, questions or suggestions you can use this form to contact us. 
-    You can also use the <a href="https://groups.google.com/forum/#!forum/fusio">forum</a> or 
-    <a href="https://github.com/apioo/fusio/issues">issue</a> tracker to provide
-    public feedback. Please provide an email so we can get in contact with you.</p>
-
-    <div class="mdl-cell mdl-cell--12-col">
-      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <input class="mdl-textfield__input" type="email" id="email" name="email">
-        <label class="mdl-textfield__label" for="email">Your email</label>
-        <span class="mdl-textfield__error">Please provide a valid email i.e. foo@bar.com</span>
+<div style="background-image:url('<?php echo $base; ?>/img/intro.jpg');background-size:cover">
+  <div class="container">
+    <div class="row">
+      <div class="col p-lg-4 mx-auto text-center">
+        <h1 class="display-4 fw-normal">Contact</h1>
       </div>
-    </div>
-
-    <div class="mdl-cell mdl-cell--12-col">
-      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <textarea class="mdl-textfield__input" type="text" rows="5" id="message" name="message"></textarea>
-        <label class="mdl-textfield__label" for="message">Your message</label>
-      </div>
-    </div>
-
-    <div class="mdl-cell mdl-cell--12-col">
-      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="ack">
-        <input type="checkbox" name="ack" id="ack" class="mdl-checkbox__input" value="1">
-        <span class="mdl-checkbox__label">I consent that this contact form uses
-        the provided data to send directly an email to a specific address. This
-        means we dont store the provided data in a database.
-        </span>
-      </label>
-    </div>
-
-    <div class="mdl-cell mdl-cell--12-col">
-      <br>
-      <br>
-      <div class="g-recaptcha" data-sitekey="6LcO6UweAAAAAI1TE-gLrEZ5tH8sa-fmgdL_o9fc"></div>
-      <br>
-    </div>
-
-    <div class="mdl-cell mdl-cell--12-col">
-      <button type="submit" class="mdl-button mdl-js-button mdl-button--raised">Submit</button>
     </div>
   </div>
 </div>
-</form>
 
-<div class="fusio-content fusio-edit mdl-grid">
-  <div class="mdl-cell mdl-cell--12-col">
-    <a href="https://github.com/apioo/fusio-website/blob/main/src/Website/resource/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"><i class="material-icons">edit</i> Edit this page</a>
+<div class="container mt-4 pt-4 mb-4 pb-4">
+  <div class="row">
+    <div class="col">
+        <?php if(isset($error)): ?>
+          <div class="alert alert-danger"><?php echo $error; ?></div>
+        <?php elseif(isset($success)): ?>
+          <div class="alert alert-success"><b>Thanks for your request, we will answer your request as soon as possible.</b></div>
+        <?php endif; ?>
+
+      <p>Please use this form to contact us. You can also take a look at our <a href="https://docs.fusio-project.org/">documentation</a>
+        website or use the <a href="https://groups.google.com/forum/#!forum/fusio">forum</a> or
+        <a href="https://github.com/apioo/fusio/issues">issue</a> tracker to solve your issue. Please provide an email
+        so that we can get in contact with you.</p>
+
+      <form method="post">
+        <div class="mb-3">
+          <label for="email" class="form-label fw-bold">Your email</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="user@acme.com" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label fw-bold">Your message</label>
+          <textarea id="message" name="message" rows="5" class="form-control" placeholder="My message" required></textarea>
+        </div>
+        <div class="mb-4 mt-4">
+          <div class="g-recaptcha" data-sitekey="6LcO6UweAAAAAI1TE-gLrEZ5tH8sa-fmgdL_o9fc"></div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
   </div>
 </div>
 

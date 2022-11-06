@@ -2,10 +2,14 @@
 
 namespace App\Website\Documentation;
 
-class PHP extends ApiAbstract
+use PSX\Framework\Controller\ViewAbstract;
+use PSX\Http\Environment\HttpContextInterface;
+use PSX\Http\Exception\MovedPermanentlyException;
+
+class PHP extends ViewAbstract
 {
-    protected function getName(): string
+    protected function doGet(HttpContextInterface $context): mixed
     {
-        return 'php';
+        throw new MovedPermanentlyException('https://docs.fusio-project.org/docs/concepts/php_api');
     }
 }

@@ -30,11 +30,6 @@ class Contact extends ViewAbstract
     protected function doPost(mixed $body, HttpContextInterface $context): mixed
     {
         try {
-            $ack = $body->ack ?? false;
-            if (!$ack) {
-                throw new \RuntimeException('Please acknowledge our terms');
-            }
-
             if (!$this->captchaVerifier->verify($body->{'g-recaptcha-response'})) {
                 throw new \RuntimeException('Invalid captcha');
             }

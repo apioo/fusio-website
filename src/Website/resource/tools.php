@@ -1,76 +1,63 @@
 <?php include(__DIR__ . '/inc/header.php'); ?>
 
-<div class="fusio-block mdl-grid mdl-shadow--2dp">
-  <div class="mdl-cell mdl-cell--12-col">
-    <h4>Tools</h4>
-    <p>The following list shows tools which work with the Fusio API. They help
-    you to build new apps or can also be used to learn how you can integrate
-    Fusio with your app. Please contact us if you want to add a new tool or app
-    to this list.</p>
-  </div>
-</div>
-
-<div class="fusio-content mdl-grid">
-  <div class="mdl-cell mdl-cell--6-col">
-    <div class="fusio-card-app mdl-shadow--2dp mdl-card">
-      <div class="mdl-card__title">VSCode</div>
-      <div class="mdl-card__supporting-text">
-        <img src="<?php echo $base; ?>/img/vscode.png" class="fusio-avatar" />
-        Fusio VSCode extension which provides a more advanced development environment for action developers.
-      </div>
-      <div class="mdl-card__actions mdl-card--border">
-        <a href="https://marketplace.visualstudio.com/items?itemName=Fusio.fusio" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Marketplace</a>
-        <a href="https://github.com/apioo/fusio-tools-vscode" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">GitHub</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="mdl-cell mdl-cell--6-col">
-    <div class="fusio-card-app mdl-shadow--2dp mdl-card">
-      <div class="mdl-card__title">Electron</div>
-      <div class="mdl-card__supporting-text">
-        <img src="<?php echo $base; ?>/img/electron.png" class="fusio-avatar" />
-        Electron app of the backend whereby it is possible to control and
-        access a Fusio instance by running the app locally.
-      </div>
-      <div class="mdl-card__actions mdl-card--border">
-        <a href="https://github.com/apioo/fusio-tools-electron" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">GitHub</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="mdl-cell mdl-cell--6-col">
-    <div class="fusio-card-app mdl-shadow--2dp mdl-card">
-      <div class="mdl-card__title">Code-Generator</div>
-      <div class="mdl-card__supporting-text">
-        <img src="<?php echo $base; ?>/img/es6.png" class="fusio-avatar" />
-        A service which helps to generate source files to build a CRUD API based
-        on a relational database.
-      </div>
-      <div class="mdl-card__actions mdl-card--border">
-        <a href="https://generate.apioo.de/" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Website</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="mdl-cell mdl-cell--6-col">
-    <div class="fusio-card-app mdl-shadow--2dp mdl-card">
-      <div class="mdl-card__title">Table Plugin</div>
-      <div class="mdl-card__supporting-text">
-        <img src="<?php echo $base; ?>/img/jquery.png" class="fusio-avatar" />
-        JQuery Plugin which can be used to render paginated tables based on the
-        response of the SQL-Table Adapter.
-      </div>
-      <div class="mdl-card__actions mdl-card--border">
-        <a href="https://github.com/kidino/fusioTable" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">GitHub</a>
+<div style="background-image:url('<?php echo $base; ?>/img/intro.jpg');background-size:cover">
+  <div class="container">
+    <div class="row">
+      <div class="col p-lg-4 mx-auto text-center">
+        <h1 class="display-4 fw-normal">Tools</h1>
       </div>
     </div>
   </div>
 </div>
 
-<div class="fusio-content fusio-edit mdl-grid">
-  <div class="mdl-cell mdl-cell--12-col">
-    <a href="https://github.com/apioo/fusio-website/blob/main/src/Website/resource/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"><i class="material-icons">edit</i> Edit this page</a>
+<div class="container mt-4 pt-4 mb-4 pb-4">
+  <div class="row">
+    <div class="col">
+      <p>The following list shows tools which work with the Fusio API. They help
+        you to build new apps or can also be used to learn how you can integrate
+        Fusio with your app.</p>
+    </div>
+  </div>
+</div>
+
+<div class="bg-light mt-4 pt-4 mb-4 pb-4">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-3 text-center">
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">VSCode</h4>
+          </div>
+          <img src="<?php echo $base; ?>/img/vscode.png" class="rounded mx-auto d-block mt-3" />
+          <div class="card-body">
+            <p>Fusio VSCode extension which provides a more advanced development environment for action developers.</p>
+            <a href="https://marketplace.visualstudio.com/items?itemName=Fusio.fusio" class="btn btn-secondary">Marketplace</a>
+            <a href="https://github.com/apioo/fusio-tools-vscode" class="btn btn-primary">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Electron</h4>
+          </div>
+          <img src="<?php echo $base; ?>/img/electron.png" class="rounded mx-auto d-block mt-3" />
+          <div class="card-body">
+            <p>Electron app of the backend whereby it is possible to control and
+              access a Fusio instance by running the app locally.</p>
+            <a href="https://github.com/apioo/fusio-tools-electron" class="btn btn-primary">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col text-end">
+      <a href="https://github.com/apioo/fusio-website/blob/main/src/Website/resource/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"><i class="bi bi-pen-fill"></i> Edit this page</a>
+    </div>
   </div>
 </div>
 

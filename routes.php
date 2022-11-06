@@ -24,8 +24,8 @@ return [
     [['ANY'], '/imprint', App\Website\Imprint::class],
     [['ANY'], '/ping', App\Website\Ping::class],
     [['ANY'], '/documentation/worker', App\Website\Documentation\Worker::class],
-    [['ANY'], '/documentation/php', App\Website\Documentation\PHP\Index::class],
-    [['ANY'], '/documentation/php/:class', App\Website\Documentation\PHP\DetailClass::class],
-    [['ANY'], '/documentation/php/:class/:method', App\Website\Documentation\PHP\DetailMethod::class],
+    [['ANY'], '/documentation/php', App\Website\Documentation\PHP::class],
+    [['ANY'], '/documentation/php/:class', App\Website\Documentation\PHP::class],
+    [['ANY'], '/documentation/php/:class/:method', App\Website\Documentation\PHP::class],
 
 ];
