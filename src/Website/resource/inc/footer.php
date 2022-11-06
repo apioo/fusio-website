@@ -8,15 +8,10 @@
           <span class="fs-5">Fusio</span>
         </a>
         <ul class="list-unstyled small text-muted">
-          <li class="mb-2">Fusio is an open source API management platform which helps to build and manage REST APIs.</li>
+          <li class="mb-2">Fusio is an open source API management platform which helps to create innovative API solutions.</li>
           <li class="mb-2">Code licensed <a href="https://github.com/apioo/fusio/blob/master/LICENSE" target="_blank" rel="license noopener">AGPLv3</a>.</li>
           <li class="mb-2">Fusio is made in Düsseldorf / Germany.</li>
         </ul>
-
-        <li class="nav-item">
-
-        </li>
-
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">
         <h5>Links</h5>

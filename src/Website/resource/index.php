@@ -113,7 +113,7 @@ https://github.com/apioo/fusio
   <div class="container">
     <div class="row">
       <div class="col text-center">
-        <blockquote class="display-4">"Fusio is an innovative tool which tries to in the API landscape"</blockquote>
+        <blockquote class="display-4">"With Fusio we innovate the API economy to make the digitalization happen"</blockquote>
         <cite class="text-secondary">Christoph Kappestein, Developer of Fusio</cite>
       </div>
     </div>
