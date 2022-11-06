@@ -26,11 +26,11 @@
 
       <form method="post">
         <div class="mb-3">
-          <label for="email" class="form-label">Your email</label>
+          <label for="email" class="form-label fw-bold">Your email</label>
           <input type="email" class="form-control" id="email" name="email" placeholder="user@acme.com" required>
         </div>
         <div class="mb-3">
-          <label for="message" class="form-label">Your message</label>
+          <label for="message" class="form-label fw-bold">Your message</label>
           <textarea id="message" name="message" rows="5" class="form-control" placeholder="My message" required></textarea>
         </div>
         <div class="mb-4 mt-4">
