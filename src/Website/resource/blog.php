@@ -20,7 +20,7 @@
     <div class="row">
       <div class="col">
         <h4><a href="<?php echo $router->getAbsolutePath(\App\Website\Blog\Detail::class, ['title' => $row->titleSlug]); ?>"><?php echo $row->title; ?></a></h4>
-        <p><small>posted by <a href="<?php echo $row->authorUri; ?>"><?php echo $row->authorName; ?></a> on <time datetime="<?php echo $row->updated; ?>"><?php echo $row->updated; ?></time></small></p>
+        <p><small class="text-secondary">posted by <a href="<?php echo $row->authorUri; ?>"><?php echo $row->authorName; ?></a> on <time datetime="<?php echo $row->updated; ?>"><?php echo $row->updated; ?></time></small></p>
         <p><?php echo $row->summary; ?></p>
       </div>
     </div>

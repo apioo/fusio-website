@@ -20,9 +20,8 @@ Then your app is easy installable via the Fusio backend app and can be used by a
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <p>Fusio contains a variety of apps for specific use cases, an app is basically a javascript app which interacts
-      with the API of Fusio. Every app can be directly installed from the backend app under System / Marketplace. The
-      following list contains all available apps.</p>
+      <p>Fusio contains a variety of apps which help to interact with the API of Fusio. Every app can be directly
+      installed from the backend app under System / Marketplace. The following list contains all available apps.</p>
     </div>
   </div>
 </div>

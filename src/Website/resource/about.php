@@ -13,15 +13,14 @@
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <p>Fusio is an open source API management platform which helps to build and manage RESTful APIs. We think that there
-        is a huge potential in the API economy. Whether you need an API to expose your business functionality, develop
-        one-page web applications, mobile-apps or microservices. Because of this we think that Fusio is a great tool to
-        build such APIs.</p>
-      <p>We also truly believe in open source software. Fusio is a solution which is open source and self-hosted to
-        protect you from vendor lock-in. Today there are many cloud solutions available which lock you in to a specific
+      <p>Fusio is an open source API management platform which helps to create innovative API solutions. We think that there
+        is a huge potential in the API economy, whether you need an API to expose your business functionality, develop
+        one-page web applications, mobile-apps or microservices.</p>
+      <p>We truly believe in open source software. Fusio is a solution which is open source and self-hosted to protect
+        you from vendor lock-in. Today there are many cloud solutions available which lock you in to a specific
         platform. With Fusio you have the freedom to choose the fitting hosting environment which can be either a simple
         virtual server or an autoscaling environment in the cloud.</p>
-      <p>If you like the project and want to see it grow please checkout the <a href="https://github.com/apioo/fusio">repository</a>.</p>
+      <p>If you like the project and want to see it grow please check out the <a href="https://github.com/apioo/fusio">repository</a>.</p>
     </div>
   </div>
 </div>
@@ -54,7 +53,7 @@
           React, Vue etc.), mobile apps or actual desktop apps which need to communicate
           with your API. The Fusio backend app uses also the internal API to configure
           the system. Because of that it is also very easy to integrate Fusio into an
-          existing system, since you actually could also configure the complete system
+          existing system, since you actually can configure the complete system
           through the API.</p>
       </div>
     </div>

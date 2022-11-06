@@ -13,9 +13,9 @@
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <p>The following list shows worker which allow you to implement actions in a
-        different programming languages. Please contact us if you want to add support
-        for a different programming language.</p>
+      <p>The following list shows worker which allow you to implement actions in a different programming languages. More
+        information about the <a href="https://docs.fusio-project.org/docs/concepts/worker_api/">worker system</a> at
+        our documentation.</p>
     </div>
   </div>
 </div>
@@ -32,6 +32,7 @@
           <div class="card-body">
             <p>Worker implementation written in Java.</p>
             <a href="https://github.com/apioo/fusio-worker-java" class="btn btn-primary">GitHub</a>
+            <a href="https://hub.docker.com/r/fusio/worker-java" class="btn btn-secondary">Docker</a>
           </div>
         </div>
       </div>
@@ -44,6 +45,7 @@
           <div class="card-body">
             <p>Worker implementation written in Javascript running on Nodejs.</p>
             <a href="https://github.com/apioo/fusio-worker-javascript" class="btn btn-primary">GitHub</a>
+            <a href="https://hub.docker.com/r/fusio/worker-javascript" class="btn btn-secondary">Docker</a>
           </div>
         </div>
       </div>
@@ -56,6 +58,7 @@
           <div class="card-body">
             <p>Worker implementation written in PHP.</p>
             <a href="https://github.com/apioo/fusio-worker-php" class="btn btn-primary">GitHub</a>
+            <a href="https://hub.docker.com/r/fusio/worker-php" class="btn btn-secondary">Docker</a>
           </div>
         </div>
       </div>
@@ -68,6 +71,7 @@
           <div class="card-body">
             <p>Worker implementation written in Python.</p>
             <a href="https://github.com/apioo/fusio-worker-python" class="btn btn-primary">GitHub</a>
+            <a href="https://hub.docker.com/r/fusio/worker-javascript" class="btn btn-secondary">Docker</a>
           </div>
         </div>
       </div>

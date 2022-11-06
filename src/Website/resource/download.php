@@ -68,20 +68,6 @@
   </div>
 </div>
 
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h4>Electron</h4>
-        <p>We provide the backend app as <a href="https://github.com/apioo/fusio-electron">electron app</a>
-          so you dont have to host the javascript files on a server. Instead you can
-          connect from you local computer to the Fusio instance. Please checkout the
-          repository for installation instructions.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
 <div class="container">
   <div class="row">
     <div class="col text-end">

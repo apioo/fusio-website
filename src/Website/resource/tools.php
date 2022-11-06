@@ -15,8 +15,7 @@
     <div class="col">
       <p>The following list shows tools which work with the Fusio API. They help
         you to build new apps or can also be used to learn how you can integrate
-        Fusio with your app. Please contact us if you want to add a new tool or app
-        to this list.</p>
+        Fusio with your app.</p>
     </div>
   </div>
 </div>

@@ -11,7 +11,7 @@ https://github.com/apioo/fusio
     <div class="row">
       <div class="col p-lg-5 mx-auto my-5 text-center">
         <h1 class="display-4 fw-normal">Open Source API Management</h1>
-        <p class="lead fw-normal">Fusio is an open source API management platform which helps to build and manage REST APIs.</p>
+        <p class="lead fw-normal">Fusio is an open source API management platform which helps to create innovative API solutions.</p>
         <a href="#" id="subscribe" class="btn btn-dark">Subscribe</a>
         <a href="<?php echo $router->getAbsolutePath(\App\Website\Demo::class); ?>" class="btn btn-primary">Demo</a>
       </div>
@@ -105,6 +105,17 @@ https://github.com/apioo/fusio
       </div>
       <h3 class="fs-2">OAuth2 authorization</h3>
       <p>App developer can obtain an access token to access non-public API endpoints.</p>
+    </div>
+  </div>
+</div>
+
+<div class="bg-light mt-4 pt-5 mb-4 pb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <blockquote class="display-4">"Fusio is an innovative tool which tries to in the API landscape"</blockquote>
+        <cite class="text-secondary">Christoph Kappestein, Developer of Fusio</cite>
+      </div>
     </div>
   </div>
 </div>

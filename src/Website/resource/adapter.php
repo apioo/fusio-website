@@ -19,10 +19,9 @@ automatically find your repository and add it to this list.
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <p>Through an Adapter it is possible to connect to different data sources or
-        extend specific capabilities of the system. The following page lists
-        available adapters. You can install an adapter through composer and then
-        register the adapter class at the system:</p>
+      <p>An Adapter provides a way to extend the functionality of Fusio. It is i.e. possible to connect to different
+      data sources or extend specific capabilities of the system. The following page lists available adapters. You can
+      install an adapter through composer and then register the adapter class at the system:</p>
       <pre><code class="bash">composer require fusio/adapter-mongodb
 php bin/fusio system:register "Fusio\Adapter\Mongodb\Adapter"</code></pre>
       <p>This page lists all adapters which have the keyword <code>fusio-adapter</code>
