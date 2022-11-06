@@ -15,16 +15,17 @@
     <div class="col">
       <p>Fusio is an open source project which you can use freely also for commercial projects under the terms of the
       <a href="https://github.com/apioo/fusio/blob/master/LICENSE">AGPLv3</a>. If your company is not able to use the
-      AGPLv3 license we provide a monthly or yearly business license for a small fee which basically allows you to keep
-      all source code closed. With this license model we try to generate a small revenue stream to build a sustainable
-      open source project with a long term relationship to our users.</p>
+      AGPLv3 license we provide a dual license for a small fee which basically allows you to keep all source code closed.
+      With this license model we try to generate a small revenue stream to build a sustainable open source project with
+      a long term relationship to our users.</p>
     </div>
   </div>
 </div>
 
 <div class="bg-light mt-4 pt-4 mb-4 pb-4">
   <div class="container">
-    <div class="row row-cols-1 row-cols-md-3 text-center">
+    <div class="row row-cols-1 row-cols-lg-4 text-center">
+      <div class="col-md"></div>
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
@@ -35,21 +36,7 @@
             <ul class="list-unstyled mt-3 mb-4">
               <li>Use Fusio under the <a href="https://github.com/apioo/fusio/blob/master/LICENSE">AGPLv3</a> license</li>
             </ul>
-            <a href="https://github.com/apioo/fusio" class="w-100 btn btn-lg btn-primary">Github</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">Wandering</h4>
-          </div>
-          <div class="card-body">
-            <h1 class="card-title pricing-card-title">$10<small class="text-muted fw-light">/month</small></h1>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li></li>
-            </ul>
-            <a href="https://github.com/apioo/fusio" class="w-100 btn btn-lg btn-primary">Purchase</a>
+            <a href="https://github.com/sponsors/chriskapp" class="w-100 btn btn-lg btn-primary">Donate</a>
           </div>
         </div>
       </div>
@@ -59,14 +46,15 @@
             <h4 class="my-0 fw-normal">Foresight</h4>
           </div>
           <div class="card-body">
-            <h1 class="card-title pricing-card-title">$100<small class="text-muted fw-light">/year</small></h1>
+            <h1 class="card-title pricing-card-title">$10<small class="text-muted fw-light">/mo</small></h1>
             <ul class="list-unstyled mt-3 mb-4">
-              <li></li>
+              <li>Keep source code closed</li>
             </ul>
-            <a href="https://github.com/apioo/fusio" class="w-100 btn btn-lg btn-primary">Purchase</a>
+            <a href="<?php echo $router->getAbsolutePath(\App\Website\Contact::class); ?>" class="w-100 btn btn-lg btn-primary">Contact</a>
           </div>
         </div>
       </div>
+      <div class="col-md"></div>
     </div>
   </div>
 </div>
