@@ -40,6 +40,7 @@
           <li class="mb-2"><a href="https://twitter.com/FusioAPI">Twitter</a></li>
           <li class="mb-2"><a href="https://www.youtube.com/c/FusioAPI">Youtube</a></li>
           <li class="mb-2"><a href="https://groups.google.com/g/fusio">Forum</a></li>
+          <li class="mb-2"><a href="https://discord.gg/eMrMgwsc6e">Discord</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 mb-3">
