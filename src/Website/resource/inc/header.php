@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="description" content="Fusio is an open source API management platform which helps to build and manage RESTful APIs" />
+  <meta name="description" content="Fusio is an open source API management platform which helps to create innovative API solutions" />
   <meta name="keywords" content="API, API Gateway, API Management, API Platform, REST API, Serverless, PHP, OpenAPI, Swagger" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta property="og:url" content="https://www.fusio-project.org/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Fusio - Open source API management platform" />
-  <meta property="og:description" content="Fusio is an open source API management platform which helps to build and manage RESTful APIs" />
+  <meta property="og:description" content="Fusio is an open source API management platform which helps to create innovative API solutions" />
   <meta property="og:image" content="https://www.fusio-project.org/img/github_preview.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@FusioAPI" />
@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="<?php echo $base; ?>/css/default.css" />
   <link rel="alternate" href="https://www.fusio-project.org/blog/feed" type="application/atom+xml" title="Fusio Blog" />
-  <!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-K58XVFTP9N"></script>-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K58XVFTP9N"></script>
   <?php if (isset($analytics) && $analytics === true): ?>
   <script>
     window.dataLayer = window.dataLayer || [];
