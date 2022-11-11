@@ -12,7 +12,14 @@
 
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
-    <div class="col">
+    <div class="col-lg-2">
+      <div class="text-center mt-4 mb-4">
+        <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-1 p-1 rounded-5">
+          <i class="bi bi-wrench-adjustable p-4"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-10">
       <h2 id="api-product" class="display-6 fw-normal">API-Product</h2>
       <p>The initial use case of Fusio was to be able to quickly create a great API product beside an existing web app.
         We have many users which run a traditional web app and they use Fusio to create a state-of-the-art API beside
@@ -27,7 +34,14 @@
 <div class="bg-light mt-4 pt-4 mb-4 pb-4">
   <div class="container">
     <div class="row">
-      <div class="col">
+      <div class="col-lg-2">
+        <div class="text-center mt-4 mb-4">
+          <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-1 p-1 rounded-5">
+            <i class="bi bi-arrow-up-right-circle-fill p-4"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-10">
         <h2 id="api-gateway" class="display-6 fw-normal">API-Gateway</h2>
         <p>You can use Fusio as API-Gateway. In this case Fusio acts as the single entrypoint for all your
           internal APIs / microservices. Through this you get a complete overview about your API landscape and
@@ -41,7 +55,14 @@
 
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
-    <div class="col">
+    <div class="col-lg-2">
+      <div class="text-center mt-4 mb-4">
+        <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-1 p-1 rounded-5">
+          <i class="bi bi-bullseye p-4"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-10">
       <h2 id="spa-backend" class="display-6 fw-normal">SPA-Backend</h2>
       <p>You can use Fusio as backend to build <abbr title="Single-Page-Application">SPAs</abbr> using popular
         Javascript-Frameworks like i.e. Angular, React or Vue. Fusio is especially designed to work with Angular,
@@ -57,7 +78,14 @@
 <div class="bg-light mt-4 pt-4 mb-4 pb-4">
   <div class="container">
     <div class="row">
-      <div class="col">
+      <div class="col-lg-2">
+        <div class="text-center mt-4 mb-4">
+          <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-1 p-1 rounded-5">
+            <i class="bi bi-check-circle-fill p-4"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-10">
         <h2 id="low-code-platform" class="display-6 fw-normal">Low-Code-Platform</h2>
         <p>You can use Fusio as a Low-Code-Platform. This means that also beginners can use Fusio to build great
           APIs without coding. Fusio provides out of the box many actions to implement common API related features,
@@ -71,7 +99,14 @@
 
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
-    <div class="col">
+    <div class="col-lg-2">
+      <div class="text-center mt-4 mb-4">
+        <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-1 p-1 rounded-5">
+          <i class="bi bi-droplet-fill p-4"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-10">
       <h2 id="api-framework" class="display-6 fw-normal">API-Framework</h2>
       <p>You can use Fusio also simply as framework to build an API from scratch. In this case you can develop custom
         actions and use the deploy mechanism. Please take a look at our <a href="https://github.com/apioo/fusio-sample-cms">sample headless CMS</a>

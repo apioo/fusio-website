@@ -13,9 +13,7 @@
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <p>We provide a hosted demo of Fusio where you can explore the API, backend
-        and documentation. We have also installed the developer app which shows how
-        to quickly create a developer portal around a Fusio API.</p>
+      <p>We provide a hosted demo of Fusio where you can explore the API and all available apps.</p>
 
       <dl>
         <dt>API</dt>
