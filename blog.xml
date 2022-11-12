@@ -2,8 +2,67 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>urn:fusio-project-org:blog</id>
     <title>Fusio Blog</title>
-    <updated>2022-10-13T13:18:00Z</updated>
+    <updated>2022-11-12T19:32:00Z</updated>
     <link rel="self" href="https://www.fusio-project.org/blog/feed" type="application/atom+xml" />
+    <entry>
+        <id>urn:fusio-project-org:blog:52</id>
+        <title>Fusio 3.3.1 released</title>
+        <author>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
+        </author>
+        <updated>2022-11-12T19:32:00Z</updated>
+        <summary>
+            This post announces the release of Fusio version 3.3.1
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>We like to announce version 3.3.1 of Fusio. This patch release improves many small parts of Fusio, the following list
+covers all important changes of this release:</p>
+
+<ul>
+    <li>
+        <b>Improve generator always set prefix to route, action and schema</b>
+        <p>Fusio provides several generator to i.e. create endpoints based on an existing database or to import an OpenAPI
+        specification, all actions and schemas which are created by such a generator are now prefixed by the base path.</p>
+    </li>
+    <li>
+        <b>Improve SQL adapter</b>
+        <p>We have fixed several problems with SQL adapter and also added a new SqlDatabase generator which allow you
+        to create endpoints for an existing database</p>
+    </li>
+    <li>
+        <b>Update model package and use model classes according to naming convention</b>
+        <p>We now use the latest version of the model package and updated all schemas accordingly</p>
+    </li>
+    <li>
+        <b>Add local log folder instead of using the system log</b>
+        <p>All logs files are now stored at the <code>log/app.log</code> file and not the syslog</p>
+    </li>
+    <li>
+        <b>Handle CORS headers on OpenAPI export</b>
+        <p>The OpenAPI export endpoint handles now also the CORS headers correctly</p>
+    </li>
+    <li>
+        <b>Add currency to system about</b>
+        <p>The system about API response contains also the configured currency</p>
+    </li>
+    <li>
+        <b>Increase Psalm level</b>
+        <p>We have increased the psalm level from 4 to 3 on our complete <code>fusio/impl</code> code base</p>
+    </li>
+</ul>
+
+<p>Have fun with this release and please feel free to provide any feedback either on <a href="https://github.com/apioo/fusio">Github</a>
+or at our <a href="https://groups.google.com/g/fusio">Forum</a>.</p>
+
+<p>Best regards<br>
+Christoph</p>
+
+]]></content>
+    </entry>
     <entry>
         <id>urn:fusio-project-org:blog:51</id>
         <title>Fusio 3.3 released</title>
