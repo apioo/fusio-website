@@ -28,7 +28,7 @@ Then your app is easy installable via the Fusio backend app and can be used by a
 
 <div class="bg-light mt-4 pt-4 mb-4 pb-4">
   <div class="container">
-    <div class="row row-cols-3">
+    <div class="row row-cols-1 row-cols-lg-3">
         <?php foreach($apps as $name => $app): ?>
           <div class="col">
             <div class="card mb-4">
