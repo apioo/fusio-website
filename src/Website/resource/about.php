@@ -39,7 +39,7 @@
           overview.</p>
 
         <div class="mt-4 mb-4 text-center">
-          <img src="<?php echo $base; ?>/img/arch.png">
+          <img src="<?php echo $base; ?>/img/arch.png" alt="Fusio Architecture" class="img-fluid">
         </div>
 
         <p>Fusio uses the backend services to produce an API response or to handle
@@ -61,9 +61,9 @@
 </div>
 
 <div class="container mt-4 pt-4 mb-4 pb-4">
-  <div class="row">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
     <div class="col">
-      <div class="card">
+      <div class="card mb-4">
         <h5 class="card-header">Media</h5>
         <div class="card-body">
           <p class="card-text">If you are a blogger or magazine we would be happy if you like to cover
@@ -73,7 +73,7 @@
       </div>
     </div>
     <div class="col">
-      <div class="card">
+      <div class="card mb-4">
         <h5 class="card-header">Donations</h5>
         <div class="card-body">
           <p class="card-text">If you like to sponsor our project please take a look at our
@@ -84,7 +84,7 @@
       </div>
     </div>
     <div class="col">
-      <div class="card">
+      <div class="card mb-4">
         <h5 class="card-header">Consulting</h5>
         <div class="card-body">
           <p class="card-text">If you are a company or freelancer and want to get detailed information
@@ -95,7 +95,7 @@
       </div>
     </div>
     <div class="col">
-      <div class="card">
+      <div class="card mb-4">
         <h5 class="card-header">Community</h5>
         <div class="card-body">
           <p class="card-text">If you like to contribute to the project please visit our <a href="https://github.com/apioo/fusio">repository</a>.
