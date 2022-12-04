@@ -10,6 +10,6 @@ class Worker extends ViewAbstract
 {
     protected function doGet(HttpContextInterface $context): mixed
     {
-        throw new MovedPermanentlyException('https://docs.fusio-project.org/docs/concepts/worker_api');
+        throw new MovedPermanentlyException('https://docs.fusio-project.org/docs/concepts/worker_api/');
     }
 }

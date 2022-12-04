@@ -10,6 +10,6 @@ class PHP extends ViewAbstract
 {
     protected function doGet(HttpContextInterface $context): mixed
     {
-        throw new MovedPermanentlyException('https://docs.fusio-project.org/docs/concepts/php_api');
+        throw new MovedPermanentlyException('https://docs.fusio-project.org/docs/concepts/php_api/');
     }
 }
