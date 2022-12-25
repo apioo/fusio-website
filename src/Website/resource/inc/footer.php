@@ -18,8 +18,9 @@
         <ul class="list-unstyled text-small">
           <li class="mb-2"><a href="https://docs.fusio-project.org/">Documentation</a></li>
           <li class="mb-2"><a href="https://fusio.cloud/">Cloud</a></li>
-          <li class="mb-2"><a href="https://typeschema.org/">TypeSchema</a></li>
+          <li class="mb-2"><a href="https://apigen.app/">APIgen</a></li>
           <li class="mb-2"><a href="https://typehub.cloud/">TypeHub</a></li>
+          <li class="mb-2"><a href="https://typeschema.org/">TypeSchema</a></li>
           <li class="mb-2"><a href="https://phpsx.org/">PSX</a></li>
         </ul>
       </div>
