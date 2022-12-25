@@ -2,8 +2,46 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>urn:fusio-project-org:blog</id>
     <title>Fusio Blog</title>
-    <updated>2022-11-12T19:32:00Z</updated>
+    <updated>2022-12-25T12:40:00Z</updated>
     <link rel="self" href="https://www.fusio-project.org/blog/feed" type="application/atom+xml" />
+    <entry>
+        <id>urn:fusio-project-org:blog:53</id>
+        <title>Introducing APIgen an API code generator</title>
+        <author>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
+        </author>
+        <updated>2022-12-25T12:40:00Z</updated>
+        <summary>
+            This post introduces our new service <a href="https://apigen.app/">APIgen</a>, which helps to generate complete APIs.
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>I`am happy to introduce you to our new service <a href="https://apigen.app/">APIgen</a>. APIgen helps you to generate
+complete APIs based on a model definition. The generated API is based on Fusio and it helps to quickly bootstrap an API
+project. You can design the model definition at the APIgen backend through a simple web editor s.</p>
+
+<div class="mt-4 mb-4 text-center">
+  <img src="/img/apigen_backend.png" alt="APIgen backend" class="img-fluid">
+</div>
+
+<p>After modelling your entities and the relations you can generate the Fusio code through the "Generate" Button.
+The generated code is ready to use and is basically a complete customized API tailored to your use case.
+We have also wrote a small <a href="https://medium.com/@chriskapp/generative-backend-an-alternative-to-backend-as-a-service-providers-like-firebase-or-supabase-ecb3e1cb13f">blog post</a>
+about the motivation to build APIgen.</p>
+
+<p>So this is just a first introduction to our new service and we are really excited about the future and what is
+possible to build with APIgen. If you are interested in the service please feel free to register, the service is free
+and ready to use. If you have any problems or want to provide feedback please create directly an issue at our
+<a href="https://github.com/apioo/fusio">repository</a>.</p>
+
+<p>Best regards<br>
+Christoph</p>
+
+]]></content>
+    </entry>
     <entry>
         <id>urn:fusio-project-org:blog:52</id>
         <title>Fusio 3.3.1 released</title>
