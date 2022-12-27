@@ -7,6 +7,7 @@ use App\Table\Generated\BlogRow;
 use PSX\Dependency\Attribute\Inject;
 use PSX\Framework\Controller\ViewAbstract;
 use PSX\Http\Environment\HttpContextInterface;
+use PSX\Http\Exception as StatusCode;
 use PSX\Sql\TableManagerInterface;
 
 class Detail extends ViewAbstract
