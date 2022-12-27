@@ -13,7 +13,6 @@ return [
     [['ANY'], '/marketplace', App\Website\Marketplace::class],
     [['ANY'], '/blog', App\Website\Blog::class],
     [['ANY'], '/blog/post/:title', App\Website\Blog\Detail::class],
-    [['ANY'], '/blog/category/:category', App\Website\Blog\Category::class],
     [['ANY'], '/blog/feed', App\Website\Blog\Feed::class],
     [['ANY'], '/adapter', App\Website\Adapter::class],
     [['ANY'], '/sdk', App\Website\Sdk::class],
