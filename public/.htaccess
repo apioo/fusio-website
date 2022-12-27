@@ -3,3 +3,22 @@ RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule (.*) /index.php/$1 [L]
+
+Redirect 301 /blog/post/fusio-2.1-released https://www.fusio-project.org/blog
+Redirect 301 /blog/category/fusio https://www.fusio-project.org/blog
+Redirect 301 /documentation/recipes/select-complex-rows https://docs.fusio-project.org/
+Redirect 301 /documentation/recipes/select-row https://docs.fusio-project.org/
+Redirect 301 /documentation/recipes/select-rows https://docs.fusio-project.org/
+Redirect 301 /documentation/recipes/find-documents https://docs.fusio-project.org/
+Redirect 301 /documentation/recipes/send-request https://docs.fusio-project.org/
+Redirect 301 /documentation/recipes/insert-document https://docs.fusio-project.org/
+Redirect 301 /documentation/recipes/insert-row https://docs.fusio-project.org/
+Redirect 301 /documentation/videos https://www.youtube.com/@FusioAPI
+Redirect 301 ^/documentation/videos/(.*)$ https://www.youtube.com/@FusioAPI
+Redirect 301 /labels/bug https://docs.fusio-project.org/
+Redirect 301 /labels/design https://docs.fusio-project.org/
+Redirect 301 /labels/feature https://docs.fusio-project.org/
+Redirect 301 /labels/documentation https://docs.fusio-project.org/
+Redirect 301 /forum https://groups.google.com/g/fusio
+Redirect 301 /documentation/v8 https://docs.fusio-project.org/
+Redirect 301 ^/documentation/v8/(.*)$ https://docs.fusio-project.org/
