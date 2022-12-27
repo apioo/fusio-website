@@ -18,6 +18,7 @@ class Adapter extends ViewAbstract
         $table = $this->tableManager->getTable(Table\Adapter::class);
 
         return $this->render(__DIR__ . '/resource/adapter.php', [
+            'canonical' => $this->reverseRouter->getUrl(self::class),
             'fusio'     => $table->findIndexEntriesFusio(),
             'community' => $table->findIndexEntriesCommunity(),
         ]);

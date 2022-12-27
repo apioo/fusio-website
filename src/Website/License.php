@@ -9,6 +9,8 @@ class License extends ViewAbstract
 {
     protected function doGet(HttpContextInterface $context): mixed
     {
-        return $this->render(__DIR__ . '/resource/license.php', []);
+        return $this->render(__DIR__ . '/resource/license.php', [
+            'canonical' => $this->reverseRouter->getUrl(self::class),
+        ]);
     }
 }

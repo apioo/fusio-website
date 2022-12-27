@@ -9,6 +9,8 @@ class Imprint extends ViewAbstract
 {
     protected function doGet(HttpContextInterface $context): mixed
     {
-        return $this->render(__DIR__ . '/resource/imprint.php', []);
+        return $this->render(__DIR__ . '/resource/imprint.php', [
+            'canonical' => $this->reverseRouter->getUrl(self::class),
+        ]);
     }
 }

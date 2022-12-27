@@ -9,6 +9,8 @@ class Worker extends ViewAbstract
 {
     protected function doGet(HttpContextInterface $context): mixed
     {
-        return $this->render(__DIR__ . '/resource/worker.php', []);
+        return $this->render(__DIR__ . '/resource/worker.php', [
+            'canonical' => $this->reverseRouter->getUrl(self::class),
+        ]);
     }
 }

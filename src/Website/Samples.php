@@ -9,6 +9,8 @@ class Samples extends ViewAbstract
 {
     protected function doGet(HttpContextInterface $context): mixed
     {
-        return $this->render(__DIR__ . '/resource/samples.php', []);
+        return $this->render(__DIR__ . '/resource/samples.php', [
+            'canonical' => $this->reverseRouter->getUrl(self::class),
+        ]);
     }
 }

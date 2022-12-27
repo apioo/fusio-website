@@ -9,6 +9,8 @@ class Tools extends ViewAbstract
 {
     protected function doGet(HttpContextInterface $context): mixed
     {
-        return $this->render(__DIR__ . '/resource/tools.php', []);
+        return $this->render(__DIR__ . '/resource/tools.php', [
+            'canonical' => $this->reverseRouter->getUrl(self::class),
+        ]);
     }
 }

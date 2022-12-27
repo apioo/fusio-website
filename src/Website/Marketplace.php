@@ -16,7 +16,8 @@ class Marketplace extends ViewAbstract
     protected function doGet(HttpContextInterface $context): mixed
     {
         return $this->render(__DIR__ . '/resource/marketplace.php', [
-            'apps' => $this->getApps()
+            'canonical' => $this->reverseRouter->getUrl(self::class),
+            'apps'      => $this->getApps()
         ]);
     }
 

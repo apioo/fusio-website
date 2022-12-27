@@ -9,6 +9,8 @@ class UseCases extends ViewAbstract
 {
     protected function doGet(HttpContextInterface $context): mixed
     {
-        return $this->render(__DIR__ . '/resource/use_cases.php', []);
+        return $this->render(__DIR__ . '/resource/use_cases.php', [
+            'canonical' => $this->reverseRouter->getUrl(self::class),
+        ]);
     }
 }

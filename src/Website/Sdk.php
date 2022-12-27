@@ -9,6 +9,8 @@ class Sdk extends ViewAbstract
 {
     protected function doGet(HttpContextInterface $context): mixed
     {
-        return $this->render(__DIR__ . '/resource/sdk.php', []);
+        return $this->render(__DIR__ . '/resource/sdk.php', [
+            'canonical' => $this->reverseRouter->getUrl(self::class),
+        ]);
     }
 }

@@ -23,7 +23,9 @@ class Contact extends ViewAbstract
 
     protected function doGet(HttpContextInterface $context): mixed
     {
-        return $this->render(__DIR__ . '/resource/contact.php', []);
+        return $this->render(__DIR__ . '/resource/contact.php', [
+            'canonical' => $this->reverseRouter->getUrl(self::class),
+        ]);
     }
 
     #[Incoming(schema: Passthru::class)]

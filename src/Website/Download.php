@@ -22,6 +22,7 @@ class Download extends ViewAbstract
         }
 
         return $this->render(__DIR__ . '/resource/download.php', [
+            'canonical'   => $this->reverseRouter->getUrl(self::class),
             'tagName'     => $release['tagName'],
             'htmlUrl'     => $release['htmlUrl'],
             'assetSize'   => $release['assetSize'],

@@ -9,6 +9,8 @@ class About extends ViewAbstract
 {
     protected function doGet(HttpContextInterface $context): mixed
     {
-        return $this->render(__DIR__ . '/resource/about.php', []);
+        return $this->render(__DIR__ . '/resource/about.php', [
+            'canonical' => $this->reverseRouter->getUrl(self::class),
+        ]);
     }
 }
