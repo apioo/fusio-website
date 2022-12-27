@@ -83,7 +83,7 @@ class ReleaseFetcher
         $response = $this->httpClient->request($request);
 
         if ($response->getStatusCode() !== 200) {
-            throw new \RuntimeException('Could not fetch releases');
+            throw new \RuntimeException('Could not fetch releases, got status code: ' . $response->getStatusCode());
         }
 
         $releases = Parser::decode((string) $response->getBody(), true);
