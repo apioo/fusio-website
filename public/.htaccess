@@ -4,95 +4,14 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule (.*) /index.php/$1 [L]
 
-Redirect 301 /blog/post/fusio-2.1-released https://www.fusio-project.org/blog
-Redirect 301 /blog/category/fusio https://www.fusio-project.org/blog
-Redirect 301 /labels/bug https://docs.fusio-project.org/
-Redirect 301 /labels/design https://docs.fusio-project.org/
-Redirect 301 /labels/feature https://docs.fusio-project.org/
-Redirect 301 /labels/documentation https://docs.fusio-project.org/
-Redirect 301 /forum https://groups.google.com/g/fusio
+RewriteCond %{REQUEST_URI} /documentation/(.*)
+RewriteRule ^(.*)$ https://docs.fusio-project.org/ [R=301]
 
-Redirect 301 /documentation/recipes https://docs.fusio-project.org/
-Redirect 301 /documentation/recipes/insert-row https://docs.fusio-project.org/
-Redirect 301 /documentation/recipes/select-complex-rows https://docs.fusio-project.org/
-Redirect 301 /documentation/recipes/select-rows https://docs.fusio-project.org/
-Redirect 301 /documentation/recipes/find-documents https://docs.fusio-project.org/
-Redirect 301 /documentation/recipes/insert-document https://docs.fusio-project.org/
-Redirect 301 /documentation/recipes/select-row https://docs.fusio-project.org/
-Redirect 301 /documentation/recipes/send-request https://docs.fusio-project.org/
+RewriteCond %{REQUEST_URI} /labels/(.*)
+RewriteRule ^(.*)$ /blog [R=301]
 
-Redirect 301 /documentation/videos https://www.youtube.com/@FusioAPI
-Redirect 301 /documentation/videos/create_simple_route https://www.youtube.com/@FusioAPI
-Redirect 301 /documentation/videos/deployment https://www.youtube.com/@FusioAPI
-Redirect 301 /documentation/videos/event https://www.youtube.com/@FusioAPI
-Redirect 301 /documentation/videos/installation https://www.youtube.com/@FusioAPI
+RewriteCond %{REQUEST_URI} /blog/category/(.*)
+RewriteRule ^(.*)$ /blog [R=301]
 
-Redirect 301 /documentation/v8 https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/request/getParameters https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/app/getId https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/http_response/getBody https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/sql/executeUpdate https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/mongodb/updateOne https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/user/getId https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/mongodb/findOneAndReplace https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/beanstalk https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/mongodb/findOneAndDelete https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/request/getUriFragment https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/soap/call https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/user/isAnonymous https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/app/hasScope https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/redis https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/beanstalk/putInTube https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/sql/fetchAll https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/redis/set https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/response/setStatusCode https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/http https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/sql/fetchColumn https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/mongodb/deleteMany https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/elasticsearch/exists https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/processor/execute https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/soap https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/elasticsearch/delete https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/memcache/get https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/memcache https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/elasticsearch https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/response https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/elasticsearch/update https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/connector https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/mongodb/insertMany https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/console/log https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/elasticsearch/search https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/elasticsearch/create https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/context/getApp https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/request/getParameter https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/sql/fetchAssoc https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/elasticsearch/index https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/app/getStatus https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/cache/get https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/app/getName https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/context/getUser https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/cache/delete https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/http_response/getStatusCode https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/cache/set https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/memcache/delete https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/mongodb/deleteOne https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/http_response/getHeader https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/console/warn https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/redis/del https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/context https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/request/getMethod https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/redis/get https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/http_response https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/connector/get https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/app/getScopes https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/context/getRouteId https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/console/error https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/http/request https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/console https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/mongodb/count https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/app/getParameter https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/cache/has https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/mongodb/updateMany https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/request https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/context https://docs.fusio-project.org/
-Redirect 301 /documentation/v8/sql/fetchAll https://docs.fusio-project.org/
+RewriteCond %{REQUEST_URI} /forum/(.*)
+RewriteRule ^(.*)$ https://groups.google.com/g/fusio [R=301]
