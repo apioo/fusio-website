@@ -23,7 +23,7 @@ class Blog extends ViewAbstract
         $startIndex   = $this->getStartIndex($context);
 
         return $this->render(__DIR__ . '/resource/blog.php', [
-            'canonical'    => $this->reverseRouter->getUrl(self::class),
+            'canonical'    => $this->reverseRouter->getUrl(self::class) . (($startIndex > 0) ? '?startIndex=' . $startIndex : ''),
             'totalResults' => $totalResults,
             'startIndex'   => $startIndex,
             'entry'        => $table->findIndexEntries($startIndex),
