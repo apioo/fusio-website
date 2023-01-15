@@ -24,6 +24,9 @@ class Detail extends ViewAbstract
             throw new StatusCode\NotFoundException('Entry not found');
         }
 
-        return $this->render(__DIR__ . '/../resource/blog/detail.php', $entry);
+        return $this->render(__DIR__ . '/../resource/blog/detail.php', [
+            'canonical' => $this->reverseRouter->getUrl(self::class, [$entry->getTitleSlug()]),
+            'entry' => $entry
+        ]);
     }
 }
