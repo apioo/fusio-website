@@ -100,10 +100,10 @@ function parseTags($data)
 
     foreach ($lines as $line) {
         $parts    = explode(' ', $line);
-        $sha1     = $parts[0] ?? null;
-        $rawTag   = $parts[1] ?? null;
+        $sha1     = $parts[0] ?? '';
+        $rawTag   = $parts[1] ?? '';
         $tagParts = explode('/', $rawTag);
-        $tagName  = $tagParts[2] ?? null;
+        $tagName  = $tagParts[2] ?? '';
         $tagName  = rtrim($tagName, '^{}');
 
         if (str_contains($tagName, '-RC')) {
