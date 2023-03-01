@@ -1,14 +1,14 @@
 fusio:
-    version: 2.0.1
-    downloadUrl: 'https://github.com/apioo/fusio-apps-backend/releases/download/v2.0.1/fusio.zip'
-    sha1Hash: 6d50d265366c00d164d700a04f6b455e78ef7c95
+    version: 2.1.1
+    downloadUrl: 'https://github.com/apioo/fusio-apps-backend/releases/download/v2.1.1/fusio.zip'
+    sha1Hash: cb4810b00de5b589194b14c56a6c763b0e00a9df
     description: 'The backend app is the official app to develop, configure and maintain your API.'
     screenshot: 'https://www.fusio-project.org/media/apps/backend.png'
     website: 'https://github.com/apioo/fusio-apps-backend'
 developer:
-    version: 1.1.2
-    downloadUrl: 'https://github.com/apioo/fusio-apps-developer/archive/v1.1.2.zip'
-    sha1Hash: c8ae6a4adcbeb1e2033e1811d02f81b0b35ca1d6
+    version: 2.0.4
+    downloadUrl: 'https://github.com/apioo/fusio-apps-developer/releases/download/v2.0.4/developer.zip'
+    sha1Hash: 6e87e74b5c0968b152ae735aae09a61ae98a0e71
     description: 'The developer app is designed to quickly setup an API program where new developers can register and create/manage their apps.'
     screenshot: 'https://www.fusio-project.org/media/apps/developer.png'
     website: 'https://github.com/apioo/fusio-apps-developer'
@@ -20,9 +20,9 @@ documentation:
     screenshot: 'https://www.fusio-project.org/media/apps/documentation.png'
     website: 'https://github.com/apioo/fusio-apps-documentation'
 swagger-ui:
-    version: 1.0.2
-    downloadUrl: 'https://github.com/apioo/fusio-apps-swaggerui/archive/v1.0.2.zip'
-    sha1Hash: b9bc371dcb6c710e2ec787a5240f4746a02821cc
+    version: 1.0.5
+    downloadUrl: 'https://github.com/apioo/fusio-apps-swaggerui/archive/v1.0.5.zip'
+    sha1Hash: 2107ad7121dfeaf4725cb64f84dc0630dad24ff0
     description: 'The Swagger UI app renders a documentation based on the OpenAPI specification.'
     screenshot: 'https://www.fusio-project.org/media/apps/swagger-ui.png'
     website: 'https://github.com/apioo/fusio-apps-swaggerui'
@@ -41,9 +41,9 @@ pma:
     screenshot: 'https://www.fusio-project.org/media/apps/pma.png'
     website: 'https://github.com/apioo/fusio-apps-pma'
 redoc:
-    version: 0.2.0
-    downloadUrl: 'https://github.com/apioo/fusio-apps-redoc/archive/v0.2.0.zip'
-    sha1Hash: 9619929d0882f98c20738fbe6c833b6c1f15e580
+    version: 0.3.0
+    downloadUrl: 'https://github.com/apioo/fusio-apps-redoc/archive/v0.3.0.zip'
+    sha1Hash: 9945927a02ed890677bd8585367efdecb486b70d
     description: 'ReDoc app to generate OpenAPI/Swagger documentation'
     screenshot: 'https://www.fusio-project.org/media/apps/redoc.png'
     website: 'https://github.com/apioo/fusio-apps-redoc'
