@@ -42,9 +42,10 @@ RUN service cron start
 COPY . /var/www/html
 RUN cd /var/www/html && /usr/bin/composer install
 RUN chown -R www-data: /var/www/html
+RUN chmod +x /var/www/html/bin/psx
 
 # run commands
-RUN cd /var/www/html && ./vendor/bin/psx migration:migrate --no-interaction
-RUN cd /var/www/html && ./vendor/bin/psx app:fetch_adapter
-RUN cd /var/www/html && ./vendor/bin/psx app:fetch_release
-RUN cd /var/www/html && ./vendor/bin/psx app:update_blog
+RUN cd /var/www/html && ./bin/psx migration:migrate --no-interaction
+RUN cd /var/www/html && ./bin/psx app:fetch_adapter
+RUN cd /var/www/html && ./bin/psx app:fetch_release
+RUN cd /var/www/html && ./bin/psx app:update_blog
