@@ -43,6 +43,7 @@ COPY . /var/www/html
 RUN cd /var/www/html && /usr/bin/composer install
 RUN chown -R www-data: /var/www/html
 RUN chmod +x /var/www/html/bin/psx
+RUN chmod 777 -R /var/www/html/cache
 
 # run commands
 RUN cd /var/www/html && ./bin/psx migration:migrate --no-interaction
