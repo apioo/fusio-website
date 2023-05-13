@@ -4,6 +4,7 @@ namespace App\Service;
 
 use App\Table;
 use DateTime;
+use PSX\DateTime\LocalDateTime;
 use PSX\Http\Client\ClientInterface;
 use PSX\Http\Client\GetRequest;
 use PSX\Http\Client\Options;
@@ -33,36 +34,27 @@ class AdapterFetcher
         $data = $this->request($url);
         if (isset($data->results) && is_array($data->results)) {
             foreach ($data->results as $package) {
-                // get all capabilities of the definition
-                $capabilities = $this->getDefinitionCapabilities($package->repository);
-                if (empty($capabilities)) {
-                    continue;
-                }
-
                 $existingPackage = $this->adapterTable->findOneByName($package->name);
-                if (empty($existingPackage)) {
-                    $this->adapterTable->create(new Table\Generated\AdapterRow([
-                        'name'         => $package->name,
-                        'description'  => $package->description,
-                        'url'          => $package->url,
-                        'repository'   => $package->repository,
-                        'downloads'    => $package->downloads,
-                        'favers'       => $package->favers,
-                        'capabilities' => implode(',', $capabilities),
-                        'updateDate'   => new DateTime(),
-                        'insertDate'   => new DateTime(),
-                    ]));
+                if (!$existingPackage instanceof Table\Generated\AdapterRow) {
+                    $row = new Table\Generated\AdapterRow();
+                    $row->setName($package->name);
+                    $row->setDescription($package->description);
+                    $row->setUrl($package->url);
+                    $row->setRepository($package->repository);
+                    $row->setDownloads($package->downloads);
+                    $row->setFavers($package->favers);
+                    $row->setUpdateDate(LocalDateTime::now());
+                    $row->setInsertDate(LocalDateTime::now());
+                    $this->adapterTable->create($row);
 
                     yield 'created' => $package->name;
                 } else {
-                    $existingPackage['description']  = $package->description;
-                    $existingPackage['url']          = $package->url;
-                    $existingPackage['repository']   = $package->repository;
-                    $existingPackage['downloads']    = $package->downloads;
-                    $existingPackage['favers']       = $package->favers;
-                    $existingPackage['capabilities'] = implode(',', $capabilities);
-                    $existingPackage['updateDate']   = new DateTime();
-
+                    $existingPackage->setDescription($package->description);
+                    $existingPackage->setUrl($package->url);
+                    $existingPackage->setRepository($package->repository);
+                    $existingPackage->setDownloads($package->downloads);
+                    $existingPackage->setFavers($package->favers);
+                    $existingPackage->setUpdateDate(LocalDateTime::now());
                     $this->adapterTable->update($existingPackage);
 
                     yield 'updated' => $package->name;
@@ -91,48 +83,5 @@ class AdapterFetcher
         }
 
         return Parser::decode((string) $response->getBody());
-    }
-
-    private function getDefinitionCapabilities(string $githubUrl): array
-    {
-        if (!str_contains($githubUrl, 'github.com')) {
-            // @TODO at the moment we support only github we should clone the
-            // repo and look for the file for a more general approach
-            return [];
-        }
-
-        $types     = ['actionClass', 'connectionClass', 'paymentClass', 'userClass', 'routesClass'];
-        $provides  = [];
-
-        $githubUrl = str_replace('https://github.com/', 'https://api.github.com/repos/', $githubUrl);
-        $githubUrl = $githubUrl . '/contents/definition.json';
-
-        $options = new Options();
-        $options->setVerify(false);
-
-        $request = new GetRequest($githubUrl, [
-            'Accept'     => 'application/json',
-            'User-Agent' => self::USER_AGENT,
-            'X-GitHub-Media-Type' => 'github.v3',
-        ]);
-        $response = $this->httpClient->request($request, $options);
-
-        if ($response->getStatusCode() !== 200) {
-            return [];
-        }
-
-        $file = Parser::decode((string) $response->getBody());
-        if ($file instanceof \stdClass && isset($file->content)) {
-            $definition = Parser::decode(base64_decode($file->content));
-            if ($definition instanceof \stdClass) {
-                foreach ($types as $type) {
-                    if (isset($definition->$type) && is_array($definition->$type)) {
-                        $provides[] = $type;
-                    }
-                }
-            }
-        }
-
-        return $provides;
     }
 }

@@ -3,7 +3,7 @@
 require_once __DIR__ . '/vendor/autoload.php';
 
 $httpClient = new \GuzzleHttp\Client();
-$data = json_decode(file_get_contents(__DIR__ . '/repositories.json'));
+$data = json_decode(file_get_contents(__DIR__ . '/resources/repositories.json'));
 $marketplace = [];
 $appsDir = __DIR__ . '/apps';
 

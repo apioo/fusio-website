@@ -2,9 +2,10 @@
 
 namespace App\Service;
 
+use App\Table;
 use App\Table\Generated\ReleaseRow;
-use App\Table\Release;
-use PSX\Framework\Config\Config;
+use PSX\DateTime\LocalDateTime;
+use PSX\Framework\Config\ConfigInterface;
 use PSX\Http\Client\ClientInterface;
 use PSX\Http\Client\GetRequest;
 use PSX\Json\Parser;
@@ -13,11 +14,11 @@ class ReleaseFetcher
 {
     private const USER_AGENT = 'Fusio-Updater (https://www.fusio-project.org)';
 
-    private Release $releaseTable;
-    private Config $config;
+    private Table\Release $releaseTable;
+    private ConfigInterface $config;
     private ClientInterface $httpClient;
 
-    public function __construct(Release $releaseTable, Config $config, ClientInterface $httpClient)
+    public function __construct(Table\Release $releaseTable, ConfigInterface $config, ClientInterface $httpClient)
     {
         $this->releaseTable = $releaseTable;
         $this->config = $config;
@@ -42,19 +43,19 @@ class ReleaseFetcher
                 continue;
             }
 
-            $this->releaseTable->create(new ReleaseRow([
-                'id'          => $release['id'],
-                'tagName'     => $release['tag_name'],
-                'htmlUrl'     => $release['html_url'],
-                'publishedAt' => new \DateTime($release['published_at']),
-                'authorName'  => $release['author']['login'],
-                'authorUri'   => $release['author']['html_url'],
-                'body'        => $release['body'],
-                'assetName'   => $asset['name'] ?? null,
-                'assetUrl'    => $asset['browser_download_url'] ?? null,
-                'assetSize'   => $asset['size'] ?? null,
-                'assetMime'   => $asset['content_type'] ?? null,
-            ]));
+            $row = new ReleaseRow();
+            $row->setId($release['id']);
+            $row->setTagName($release['tag_name']);
+            $row->setHtmlUrl($release['html_url']);
+            $row->setPublishedAt(LocalDateTime::parse($release['published_at']));
+            $row->setAuthorName($release['author']['html_url']);
+            $row->setAuthorUri($release['author']['html_url']);
+            $row->setBody($release['body']);
+            $row->setAssetName($asset['name'] ?? throw new \RuntimeException('Provided no asset name'));
+            $row->setAssetUrl($asset['browser_download_url'] ?? throw new \RuntimeException('Provided no asset url'));
+            $row->setAssetSize($asset['size'] ?? throw new \RuntimeException('Provided no asset size'));
+            $row->setAssetMime($asset['content_type'] ?? throw new \RuntimeException('Provided no asset mime'));
+            $this->releaseTable->create($row);
 
             yield 'Added release ' . $release['tag_name'];
         }
@@ -65,7 +66,7 @@ class ReleaseFetcher
         if (isset($release['assets']) && is_array($release['assets'])) {
             $asset = current($release['assets']);
 
-            if (isset($asset['state']) && $asset['state'] == 'uploaded') {
+            if (is_array($asset) && isset($asset['state']) && $asset['state'] == 'uploaded') {
                 return $asset;
             }
         }
@@ -75,7 +76,7 @@ class ReleaseFetcher
 
     private function fetchReleases(): array
     {
-        $url      = sprintf('%s/repos/%s/%s/releases', $this->config['git_api'], $this->config['git_owner'], $this->config['git_repo']);
+        $url      = sprintf('%s/repos/%s/%s/releases', $this->config->get('git_api'), $this->config->get('git_owner'), $this->config->get('git_repo'));
         $request  = new GetRequest($url, [
             'Accept'     => 'application/vnd.github.v3+json',
             'User-Agent' => self::USER_AGENT,

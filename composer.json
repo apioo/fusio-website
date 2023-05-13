@@ -1,28 +1,17 @@
 {
-  "name": "psx/sample",
-  "description": "PSX sample project",
-  "homepage": "https://phpsx.org",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Christoph Kappestein",
-      "email": "christoph.kappestein@gmail.com",
-      "homepage": "https://chrisk.app"
-    }
-  ],
   "require": {
-    "php": ">=8.0",
-    "psx/psx": "^6.0",
+    "php": ">=8.1",
+    "psx/framework": "^7.0",
     "symfony/dotenv": "^6.0",
     "symfony/mailer": "^6.0",
     "symfony/sendgrid-mailer": "^6.0"
+  },
+  "require-dev": {
+    "vimeo/psalm": "^5.9"
   },
   "autoload": {
     "psr-4": {
       "App\\": "src/"
     }
-  },
-  "require-dev": {
-    "vimeo/psalm": "^4.19"
   }
 }

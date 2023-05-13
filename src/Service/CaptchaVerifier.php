@@ -3,6 +3,7 @@
 namespace App\Service;
 
 use GuzzleHttp\Client;
+use PSX\Framework\Config\ConfigInterface;
 use PSX\Json;
 
 class CaptchaVerifier
@@ -10,13 +11,13 @@ class CaptchaVerifier
     private Client $httpClient;
     private string $secret;
 
-    public function __construct(string $secret)
+    public function __construct(ConfigInterface $config)
     {
         $this->httpClient = new Client();
-        $this->secret = $secret;
+        $this->secret = $config->get('recaptcha_secret');
     }
 
-    public function verify($recaptchaResponse)
+    public function verify(string $recaptchaResponse): bool
     {
         $response = $this->httpClient->post('https://www.google.com/recaptcha/api/siteverify', [
             'headers' => [
@@ -25,7 +26,7 @@ class CaptchaVerifier
             'form_params' => [
                 'secret'   => $this->secret,
                 'response' => $recaptchaResponse,
-                'remoteip' => $_SERVER['REMOTE_ADDR'],
+                'remoteip' => $_SERVER['REMOTE_ADDR'] ?? '',
             ],
             'verify' => false
         ]);

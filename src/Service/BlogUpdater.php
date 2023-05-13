@@ -5,96 +5,113 @@ namespace App\Service;
 use App\Slugify;
 use App\Table\Blog;
 use App\Table\Generated\BlogRow;
-use PSX\Data\Payload;
-use PSX\Data\Processor;
-use PSX\Model\Atom\Atom;
-use PSX\Model\Atom\Entry;
-use PSX\Model\Atom\Person;
+use PSX\DateTime\LocalDateTime;
+use PSX\Framework\Config\ConfigInterface;
 
 class BlogUpdater
 {
-    private Processor $processor;
-    private string $feedFile;
+    private ConfigInterface $config;
     private Slugify $slugify;
     private Blog $blogTable;
 
-    public function __construct(Processor $processor, string $feedFile, Slugify $slugify, Blog $blogTable)
+    public function __construct(ConfigInterface $config, Slugify $slugify, Blog $blogTable)
     {
-        $this->processor = $processor;
-        $this->feedFile = $feedFile;
+        $this->config = $config;
         $this->slugify = $slugify;
         $this->blogTable = $blogTable;
     }
 
     public function updateAll(bool $force = false): \Generator
     {
-        $feed = file_get_contents($this->feedFile);
-        /** @var Atom $atom */
-        $atom = $this->processor->read(Atom::class, Payload::create($feed, 'application/atom+xml'));
+        $dom = new \DOMDocument();
+        $dom->load($this->config->get('blog_file'));
 
-        foreach ($atom->getEntry() as $entry) {
-            $row    = $this->blogTable->findOneById($entry->getId());
-            $author = $this->getFirstAuthor($entry);
-
-            if (!$author instanceof Person) {
-                throw new \RuntimeException(sprintf('No author provided for entry %s', $entry->getId()));
+        foreach ($dom->getElementsByTagName('entry') as $entry) {
+            if (!$entry instanceof \DOMElement) {
+                continue;
             }
 
+            $id = $this->getChildElementByName($entry, 'id')?->textContent ?? throw new \RuntimeException('Provided no id');
+            $title = $this->getChildElementByName($entry, 'title')?->textContent ?? throw new \RuntimeException('Provided no title');
+            $updated = LocalDateTime::parse($this->getChildElementByName($entry, 'updated')?->textContent ?? throw new \RuntimeException('Provided no updated'));
+            $summary = $this->getChildElementByName($entry, 'summary')?->textContent ?? throw new \RuntimeException('Provided no summary');
+            $content = $this->getChildElementByName($entry, 'content')?->textContent ?? throw new \RuntimeException('Provided no content');
+            $categories = $this->getCategories($entry);
+
+            $author = $this->getChildElementByName($entry, 'author') ?? throw new \RuntimeException('Provided no author');
+            $authorName = $this->getChildElementByName($author, 'name')?->textContent ?? throw new \RuntimeException('Provided no author name');
+            $authorUri = $this->getChildElementByName($author, 'uri')?->textContent ?? throw new \RuntimeException('Provided no author uri');
+
+            $row = $this->blogTable->findOneById($id);
             if (!$row instanceof BlogRow) {
                 // the blog entry does not exist create it
-                $this->blogTable->create(new BlogRow([
-                    'id'         => $entry->getId(),
-                    'title'      => $entry->getTitle(),
-                    'titleSlug'  => $this->slugify->slugify($entry->getTitle()),
-                    'authorName' => $author->getName(),
-                    'authorUri'  => $author->getUri(),
-                    'updated'    => $entry->getUpdated(),
-                    'summary'    => $entry->getSummary()->getContent(),
-                    'category'   => implode(',', $this->getCategories($entry)),
-                    'content'    => $entry->getContent()->getContent(),
-                ]));
+                $row = new BlogRow();
+                $row->setId($id);
+                $row->setTitle($title);
+                $row->setTitleSlug($this->slugify->slugify($title));
+                $row->setAuthorName($authorName);
+                $row->setAuthorUri($authorUri);
+                $row->setUpdated($updated);
+                $row->setSummary($summary);
+                $row->setCategory(implode(',', $categories));
+                $row->setContent($content);
+                $this->blogTable->create($row);
 
-                yield 'Created ' . $entry->getTitle();
+                yield 'Created ' . $title;
             } else {
-                if ($force || $entry->getUpdated() > $row->getUpdated()) {
+                if ($force || $updated > $row->getUpdated()) {
                     // if the update date has change update the entry
-                    $this->blogTable->update(new BlogRow([
-                        'id'         => $entry->getId(),
-                        'title'      => $entry->getTitle(),
-                        'titleSlug'  => $this->slugify->slugify($entry->getTitle()),
-                        'authorName' => $author->getName(),
-                        'authorUri'  => $author->getUri(),
-                        'updated'    => $entry->getUpdated(),
-                        'summary'    => $entry->getSummary()->getContent(),
-                        'category'   => implode(',', $this->getCategories($entry)),
-                        'content'    => $entry->getContent()->getContent(),
-                    ]));
+                    $row = new BlogRow();
+                    $row->setId($id);
+                    $row->setTitle($title);
+                    $row->setTitleSlug($this->slugify->slugify($title));
+                    $row->setAuthorName($authorName);
+                    $row->setAuthorUri($authorUri);
+                    $row->setUpdated($updated);
+                    $row->setSummary($summary);
+                    $row->setCategory(implode(',', $categories));
+                    $row->setContent($content);
+                    $this->blogTable->update($row);
 
-                    yield 'Updated ' . $entry->getTitle();
+                    yield 'Updated ' . $title;
                 }
             }
         }
     }
 
-    protected function getCategories(Entry $entry): array
+    protected function getCategories(\DOMElement $element): array
     {
-        $result = [];
-        $categories = $entry->getCategory();
-
-        if (!empty($categories)) {
-            foreach ($categories as $category) {
-                $result[] = $this->slugify->slugify($category->getTerm());
+        $terms = [];
+        foreach ($element->childNodes as $childNode) {
+            if (!$childNode instanceof \DOMElement) {
+                continue;
             }
+
+            if ($childNode->nodeName !== 'category') {
+                continue;
+            }
+
+            $term = trim($element->getAttribute('term'));
+            if (empty($term)) {
+                continue;
+            }
+
+            $terms[] = $this->slugify->slugify($term);
         }
 
-        return $result;
+        return $terms;
     }
 
-    protected function getFirstAuthor(Entry $entry): ?Person
+    private function getChildElementByName(\DOMElement $parent, string $name): ?\DOMElement
     {
-        $authors = $entry->getAuthor();
-        if (!empty($authors)) {
-            return reset($authors);
+        foreach ($parent->childNodes as $childNode) {
+            if (!$childNode instanceof \DOMElement) {
+                continue;
+            }
+
+            if ($childNode->nodeName === $name) {
+                return $childNode;
+            }
         }
 
         return null;

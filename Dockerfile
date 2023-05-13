@@ -1,9 +1,9 @@
-FROM php:8.0-apache
+FROM php:8.1-apache
 MAINTAINER Christoph Kappestein <christoph.kappestein@apioo.de>
-LABEL description="Fusio website"
+LABEL description="TypeAPI website"
 
-ENV COMPOSER_VERSION "2.1.9"
-ENV COMPOSER_SHA256 "4d00b70e146c17d663ad2f9a21ebb4c9d52b021b1ac15f648b4d371c04d648ba"
+ENV COMPOSER_VERSION "2.5.5"
+ENV COMPOSER_SHA256 "566a6d1cf4be1cc3ac882d2a2a13817ffae54e60f5aa7c9137434810a5809ffc"
 
 ENV APACHE_DOCUMENT_ROOT "/var/www/html/public"
 
@@ -12,8 +12,6 @@ RUN apt-get update && apt-get -y install \
     wget \
     git \
     cron \
-    certbot \
-    python3-certbot-apache \
     libcurl3-dev \
     libzip-dev \
     libonig-dev
@@ -46,7 +44,7 @@ RUN cd /var/www/html && /usr/bin/composer install
 RUN chown -R www-data: /var/www/html
 
 # run commands
-RUN cd /var/www/html && ./vendor/bin/psx app:create_schema
+RUN cd /var/www/html && ./vendor/bin/psx migration:migrate --no-interaction
 RUN cd /var/www/html && ./vendor/bin/psx app:fetch_adapter
 RUN cd /var/www/html && ./vendor/bin/psx app:fetch_release
 RUN cd /var/www/html && ./vendor/bin/psx app:update_blog
