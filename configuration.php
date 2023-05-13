@@ -5,7 +5,7 @@ use function Symfony\Component\DependencyInjection\Loader\Configurator\env;
 
 return [
 
-    'recaptcha_secret'        => getenv('APP_RECAPTCHA_SECRET'),
+    'recaptcha_secret'        => env('APP_RECAPTCHA_SECRET')->string(),
 
     // File which contains an atom feed with blog entries
     'blog_file'               => __DIR__ . '/resources/blog.xml',
