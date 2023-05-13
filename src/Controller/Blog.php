@@ -25,7 +25,7 @@ class Blog extends ControllerAbstract
 
     #[Get]
     #[Path('/blog')]
-    public function show(int $startIndex): mixed
+    public function show(?int $startIndex): mixed
     {
         $totalResults = $this->blogTable->getCount();
         $selfUrl      = $this->reverseRouter->getUrl([self::class, 'show']) ?? throw new \RuntimeException('Could not find controller');
