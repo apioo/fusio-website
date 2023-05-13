@@ -14,6 +14,8 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@FusioAPI" />
   <title>Fusio - Open source API management platform</title>
+  <link rel="preload" href="<?php echo $base; ?>/css/app.min.css" as="style" />
+  <link rel="preload" href="<?php echo $base; ?>/js/app.min.js" as="script" />
   <link rel="icon" href="<?php echo $base; ?>/img/fusio_32px.png" type="image/png" />
   <link rel="stylesheet" href="<?php echo $base; ?>/css/app.min.css" />
   <link rel="alternate" href="https://www.fusio-project.org/blog/feed" type="application/atom+xml" title="Fusio Blog" />

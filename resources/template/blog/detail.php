@@ -1,6 +1,6 @@
 <?php include(__DIR__ . '/../inc/header.php'); ?>
 
-<div style="background-image:url('<?php echo $base; ?>/img/intro.jpg');background-size:cover">
+<div class="fusio-headline">
   <div class="container">
     <div class="row">
       <div class="col p-lg-4 mx-auto text-center">

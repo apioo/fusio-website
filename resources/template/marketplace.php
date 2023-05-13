@@ -7,7 +7,7 @@ information about your app see also https://github.com/apioo/fusio-apps-backend/
 Then your app is easy installable via the Fusio backend app and can be used by all our users.
 -->
 
-<div style="background-image:url('<?php echo $base; ?>/img/intro.jpg');background-size:cover">
+<div class="fusio-headline">
   <div class="container">
     <div class="row">
       <div class="col p-lg-4 mx-auto text-center">

@@ -6,7 +6,7 @@ specific parts feel free to simply create a PR at this repository. If you want t
 https://github.com/apioo/fusio
 -->
 
-<div style="background-image:url('<?php echo $base; ?>/img/intro.jpg');background-size:cover">
+<div class="fusio-headline">
   <div class="container">
     <div class="row">
       <div class="col p-lg-5 mx-auto my-5 text-center">

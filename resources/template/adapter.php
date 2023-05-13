@@ -6,7 +6,7 @@ see also https://github.com/apioo/fusio-adapter-sql/blob/master/composer.json as
 automatically find your repository and add it to this list.
 -->
 
-<div style="background-image:url('<?php echo $base; ?>/img/intro.jpg');background-size:cover">
+<div class="fusio-headline">
   <div class="container">
     <div class="row">
       <div class="col p-lg-4 mx-auto text-center">
