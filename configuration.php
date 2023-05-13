@@ -19,7 +19,7 @@ return [
     'psx_url'                 => env('APP_URL')->string(),
 
     // The input path 'index.php/' or '' if every request is served to the index.php file
-    'psx_dispatch'            => 'index.php/',
+    'psx_dispatch'            => '',
 
     // Defines the current environment i.e. prod or dev
     'psx_env'                 => env('APP_ENV')->string()->default('prod'),
@@ -30,7 +30,7 @@ return [
 
     // Database parameters which are used for the doctrine DBAL connection
     // https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html
-    'psx_connection'          => env('APP_CONNECTION')->string(),
+    'psx_connection'          => 'pdo-sqlite:///' . __DIR__ . '/cache/app.db',
 
     // Mailer connection which is used to send mails
     // https://symfony.com/doc/current/mailer.html#using-built-in-transports
