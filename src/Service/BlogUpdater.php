@@ -2,7 +2,7 @@
 
 namespace App\Service;
 
-use App\Slugify;
+use App\Service\Slugify;
 use App\Table\Blog;
 use App\Table\Generated\BlogRow;
 use PSX\DateTime\LocalDateTime;
