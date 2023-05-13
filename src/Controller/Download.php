@@ -40,7 +40,7 @@ class Download extends ControllerAbstract
             'htmlUrl'     => $release->getHtmlUrl(),
             'assetSize'   => $release->getAssetSize(),
             'assetName'   => $release->getAssetName(),
-            'publishedAt' => $release->getPublishedAt()->toString(),
+            'publishedAt' => $release->getPublishedAt()->toDateTime()->format('Y-m-d'),
         ];
 
         $templateFile = __DIR__ . '/../../resources/template/download.php';

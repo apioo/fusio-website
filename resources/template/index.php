@@ -23,15 +23,15 @@ https://github.com/apioo/fusio
   <div class="container">
     <div class="row">
       <div class="col-4">
-        <img src="<?php echo $base; ?>/img/youtube-32.png" alt="Youtube">
+        <img src="<?php echo $base; ?>/img/youtube-32.png" width="32" height="32" alt="Youtube">
         <a href="https://youtube.com/@FusioAPI" class="text-decoration-none text-light">Fusio on Youtube</a>
       </div>
       <div class="col-4">
-        <img src="<?php echo $base; ?>/img/github-32.png" alt="Github">
+        <img src="<?php echo $base; ?>/img/github-32.png" width="32" height="32" alt="Github">
         <a href="https://github.com/apioo/fusio" class="text-decoration-none text-light">Fusio on Github</a>
       </div>
       <div class="col-4">
-        <img src="<?php echo $base; ?>/img/twitter-32.png" alt="Twitter">
+        <img src="<?php echo $base; ?>/img/twitter-32.png" width="32" height="32" alt="Twitter">
         <a href="https://twitter.com/FusioAPI" class="text-decoration-none text-light">@FusioAPI on Twitter</a>
       </div>
     </div>

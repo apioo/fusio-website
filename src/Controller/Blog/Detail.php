@@ -25,7 +25,7 @@ class Detail extends ControllerAbstract
 
     #[Get]
     #[Path('/blog/post/:title')]
-    protected function show(string $title): mixed
+    public function show(string $title): mixed
     {
         $entry = $this->blogTable->findOneByTitleSlug($title);
         if (!$entry instanceof BlogRow) {

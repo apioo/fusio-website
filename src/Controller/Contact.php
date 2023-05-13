@@ -3,7 +3,10 @@
 namespace App\Controller;
 
 use App\Service\CaptchaVerifier;
+use PSX\Api\Attribute\Get;
 use PSX\Api\Attribute\Incoming;
+use PSX\Api\Attribute\Path;
+use PSX\Api\Attribute\Post;
 use PSX\Api\Model\Passthru;
 use PSX\Framework\Config\ConfigInterface;
 use PSX\Framework\Controller\ControllerAbstract;
@@ -29,6 +32,8 @@ class Contact extends ControllerAbstract
         $this->config = $config;
     }
 
+    #[Get]
+    #[Path('/contact')]
     public function show(): mixed
     {
         $data = [
@@ -39,16 +44,18 @@ class Contact extends ControllerAbstract
         return new Template($data, $templateFile, $this->reverseRouter);
     }
 
+    #[Post]
+    #[Path('/contact')]
     #[Incoming(schema: Passthru::class)]
-    public function send(mixed $body): mixed
+    public function send(mixed $payload): mixed
     {
         try {
-            if (!$this->captchaVerifier->verify($body->{'g-recaptcha-response'})) {
+            if (!$this->captchaVerifier->verify($payload->{'g-recaptcha-response'})) {
                 throw new \RuntimeException('Invalid captcha');
             }
 
-            $message = 'Email: ' . $body->email . "\n";
-            $message.= 'Message: ' . $body->message;
+            $message = 'Email: ' . $payload->email . "\n";
+            $message.= 'Message: ' . $payload->message;
 
             $message = (new Email())
                 ->subject('[Fusio] Contact')

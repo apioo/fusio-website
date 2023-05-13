@@ -14,7 +14,7 @@
   <div class="row">
     <div class="col">
       <h4><?php echo $entry->title; ?></h4>
-      <p><small class="text-secondary">posted by <a href="<?php echo $entry->authorUri; ?>"><?php echo $entry->authorName; ?></a> on <time datetime="<?php echo $entry->updated; ?>"><?php echo $entry->updated; ?></time></small></p>
+      <p><small class="text-secondary">posted by <a href="<?php echo $entry->author_uri; ?>"><?php echo $entry->author_name; ?></a> on <time datetime="<?php echo $entry->updated; ?>"><?php echo $entry->updated; ?></time></small></p>
       <?php echo $entry->content; ?>
     </div>
   </div>

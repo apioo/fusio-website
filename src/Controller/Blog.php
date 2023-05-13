@@ -46,7 +46,7 @@ class Blog extends ControllerAbstract
     /**
      * Returns the HATEOAS links for further navigation
      */
-    private function getLinks(string $selfUrl, int $startIndex, int $totalResults): array
+    private function getLinks(string $selfUrl, ?int $startIndex, int $totalResults): array
     {
         $prev = $startIndex - self::ITEMS_PER_PAGE;
         $prev = max($prev, 0);
@@ -68,9 +68,9 @@ class Blog extends ControllerAbstract
     /**
      * Returns the startIndex GET parameter
      */
-    private function getStartIndex(int $startIndex): int
+    private function getStartIndex(?int $startIndex): int
     {
-        $startIndex = max($startIndex, 0);
+        $startIndex = max((int) $startIndex, 0);
         $startIndex = $startIndex % self::ITEMS_PER_PAGE !== 0 ? $startIndex - ($startIndex % self::ITEMS_PER_PAGE) : $startIndex;
 
         return $startIndex;

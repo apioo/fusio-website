@@ -20,6 +20,7 @@
           <li class="mb-2"><a href="https://fusio.cloud/">Cloud</a></li>
           <li class="mb-2"><a href="https://apigen.app/">APIgen</a></li>
           <li class="mb-2"><a href="https://typehub.cloud/">TypeHub</a></li>
+          <li class="mb-2"><a href="https://typeapi.org/">TypeAPI</a></li>
           <li class="mb-2"><a href="https://typeschema.org/">TypeSchema</a></li>
           <li class="mb-2"><a href="https://phpsx.org/">PSX</a></li>
         </ul>
@@ -56,12 +57,6 @@
 </footer>
 
 <div class="fusio-outro"></div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="<?php echo $base; ?>/js/bootstrap.min.js"></script>
-<script src="<?php echo $base; ?>/js/highlight.min.js"></script>
-<script src="<?php echo $base; ?>/js/yaml.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 
 </body>
 </html>

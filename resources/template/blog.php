@@ -19,8 +19,8 @@
   <?php endif; ?>
     <div class="row">
       <div class="col">
-        <h4><a href="<?php echo $router->getAbsolutePath([\App\Controller\Blog\Detail::class, 'show'], ['title' => $row->titleSlug]); ?>"><?php echo $row->title; ?></a></h4>
-        <p><small class="text-secondary">posted by <a href="<?php echo $row->authorUri; ?>"><?php echo $row->authorName; ?></a> on <time datetime="<?php echo $row->updated; ?>"><?php echo $row->updated; ?></time></small></p>
+        <h4><a href="<?php echo $router->getAbsolutePath([\App\Controller\Blog\Detail::class, 'show'], ['title' => $row->title_slug]); ?>"><?php echo $row->title; ?></a></h4>
+        <p><small class="text-secondary">posted by <a href="<?php echo $row->author_uri; ?>"><?php echo $row->author_name; ?></a> on <time datetime="<?php echo $row->updated; ?>"><?php echo $row->updated; ?></time></small></p>
         <p><?php echo $row->summary; ?></p>
       </div>
     </div>
