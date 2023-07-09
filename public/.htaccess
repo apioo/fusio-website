@@ -4,6 +4,9 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule (.*) /index.php/$1 [L]
 
+RewriteCond %{REQUEST_URI} /license
+RewriteRule ^(.*)$ https://github.com/apioo/fusio/blob/master/LICENSE [R=301]
+
 RewriteCond %{REQUEST_URI} /documentation/(.*)
 RewriteRule ^(.*)$ https://docs.fusio-project.org/ [R=301]
 
