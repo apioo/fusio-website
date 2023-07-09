@@ -9,7 +9,7 @@
         </a>
         <ul class="list-unstyled small text-muted">
           <li class="mb-2">Fusio is an open source API management platform which helps to create innovative API solutions.</li>
-          <li class="mb-2">Code licensed <a href="https://github.com/apioo/fusio/blob/master/LICENSE" target="_blank" rel="license noopener">AGPLv3</a>.</li>
+          <li class="mb-2">Code licensed <a href="https://github.com/apioo/fusio/blob/master/LICENSE" target="_blank" rel="license noopener">Apache 2.0</a>.</li>
           <li class="mb-2">Fusio is made in Düsseldorf / Germany.</li>
         </ul>
       </div>
@@ -17,8 +17,6 @@
         <h5>Links</h5>
         <ul class="list-unstyled text-small">
           <li class="mb-2"><a href="https://docs.fusio-project.org/">Documentation</a></li>
-          <li class="mb-2"><a href="https://fusio.cloud/">Cloud</a></li>
-          <li class="mb-2"><a href="https://apigen.app/">APIgen</a></li>
           <li class="mb-2"><a href="https://typehub.cloud/">TypeHub</a></li>
           <li class="mb-2"><a href="https://typeapi.org/">TypeAPI</a></li>
           <li class="mb-2"><a href="https://typeschema.org/">TypeSchema</a></li>

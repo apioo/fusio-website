@@ -8,7 +8,7 @@ use PSX\Framework\Controller\ControllerAbstract;
 use PSX\Framework\Http\Writer\Template;
 use PSX\Framework\Loader\ReverseRouter;
 
-class License extends ControllerAbstract
+class Ecosystem extends ControllerAbstract
 {
     private ReverseRouter $reverseRouter;
 
@@ -18,14 +18,14 @@ class License extends ControllerAbstract
     }
 
     #[Get]
-    #[Path('/license')]
+    #[Path('/ecosystem')]
     public function show(): mixed
     {
         $data = [
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
         ];
 
-        $templateFile = __DIR__ . '/../../resources/template/license.php';
+        $templateFile = __DIR__ . '/../../resources/template/ecosystem.php';
         return new Template($data, $templateFile, $this->reverseRouter);
     }
 }
