@@ -41,6 +41,48 @@
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">TypeHub</h4>
+          </div>
+          <div class="card-body">
+            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
+              <i class="bi bi-box-fill p-4"></i>
+            </div>
+            <p>A collaborative platform to design open data specifications, it is like GitHub for data modelling.</p>
+            <a href="https://typehub.cloud/" class="btn btn-primary">Website</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">TypeAPI</h4>
+          </div>
+          <div class="card-body">
+            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
+              <i class="bi bi-droplet-fill p-4"></i>
+            </div>
+            <p>An OpenAPI alternative to describe REST APIs for type-safe code generation.</p>
+            <a href="https://typeapi.org/" class="btn btn-primary">Website</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">TypeSchema</h4>
+          </div>
+          <div class="card-body">
+            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
+              <i class="bi bi-file-post p-4"></i>
+            </div>
+            <p>A JSON format to describe data models in a language neutral format.</p>
+            <a href="https://typeschema.org/" class="btn btn-primary">Website</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
             <h4 class="my-0 fw-normal">SDKgen</h4>
           </div>
           <div class="card-body">
