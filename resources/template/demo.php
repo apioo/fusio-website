@@ -22,10 +22,8 @@
         <dd><a href="https://demo.fusio-project.org/apps/fusio/">https://demo.fusio-project.org/apps/fusio</a></dd>
         <dt>Developer Portal</dt>
         <dd><a href="https://demo.fusio-project.org/apps/developer/">https://demo.fusio-project.org/apps/developer</a></dd>
-        <dt>Documentation</dt>
-        <dd><a href="https://demo.fusio-project.org/apps/documentation/">https://demo.fusio-project.org/apps/documentation</a></dd>
-        <dt>Swagger-UI</dt>
-        <dd><a href="https://demo.fusio-project.org/apps/swagger-ui/">https://demo.fusio-project.org/apps/swagger-ui</a></dd>
+        <dt>ReDoc</dt>
+        <dd><a href="https://demo.fusio-project.org/apps/redoc/">https://demo.fusio-project.org/apps/redoc</a></dd>
       </dl>
 
       <p>The backend can be accessed with the following user credentials:</p>
