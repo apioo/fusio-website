@@ -2,8 +2,92 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>urn:fusio-project-org:blog</id>
     <title>Fusio Blog</title>
-    <updated>2023-06-08T09:48:00Z</updated>
+    <updated>2023-07-28T19:48:00Z</updated>
     <link rel="self" href="https://www.fusio-project.org/blog/feed" type="application/atom+xml" />
+    <entry>
+        <id>urn:fusio-project-org:blog:56</id>
+        <title>Fusio 4.0 released</title>
+        <author>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
+        </author>
+        <updated>2023-07-28T19:48:00Z</updated>
+        <summary>
+            This post announces the release of the Fusio major version 4.0
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>I'am happy to announce the next major version 4.0 of Fusio. We have worked the last 9 month at this new release and
+it contains many innovative features to challenge the current API tooling landscape. In the following we will cover the
+most important changes:</p>
+
+<ul>
+    <li>
+        <b>Transition from routes to operations</b>
+        <p>The new Fusio version is tightly integrated with <a href="https://typeapi.org/">TypeAPI</a> a new specification
+        which we have developed to describe REST APIs and which is optimized for code generation. At TypeAPI the basic
+        building block is an operation, an operation executes your business logic and is assigned to a specific HTTP
+        method and path. This is then also reflected at Fusio where you can now create an operation at the backend instead
+        of a route. Through this we are able to generate developer friendly and ready to use client SDKs for your API.</p>
+    </li>
+    <li>
+        <b>Use the Symfony DI container to manage all dependencies</b>
+        <p>We use now for all dependencies the <a href="https://symfony.com/doc/current/components/dependency_injection.html">Symfony DI</a>
+        component. This is a great improvement for our internal code quality and it also helps you if you want to build
+        new actions or adapters. We can now simply load specific paths and the DIC auto-wires all services. It brings us
+        also a great performance benefit since the container gets compiled into highly optimized code.</p>
+    </li>
+    <li>
+        <b>Updated the underlying PSX framework to version 7.0</b>
+        <p>We have updated the underlying <a href="https://phpsx.org/">PSX</a> framework to the latest version. This
+        improves our schema an API generation tooling since we now use the latest version of those components.</p>
+    </li>
+    <li>
+        <b>Changed license from AGPLv3 to Apache 2.0</b>
+        <p>With this version we have changed our license from AGPL to Apache 2.0, this gives our users much more freedom
+        to use Fusio also in a commercial context without the need to make all code public. We like to thank every user
+        in the past who has purchased an enterprise plan, this is no longer needed. If you still want to support the
+        Fusio project please take a look at the donation options.</p>
+    </li>
+    <li>
+        <b>Upgrade backend apps to latest Angular 16</b>
+        <p>We have updated the Backend and Developer app to Angular 16. With this we have also updated our javascript SDK
+        to the latest version which now works with the Fusio 4.0 API. For simplicity we have removed the documentation
+        app and use now the ReDoc app as default API documentation app.</p>
+    </li>
+    <li>
+        <b>Option to support multiple action types</b>
+        <p>The new version allows you to specify different action types. Previously it was required to create an action
+        for every case, now it is possible to directly reference a class or HTTP URL without the need to create an action
+        at an operation.</p>
+    </li>
+    <li>
+        <b>Identity and OpenID Connect improvements</b>
+        <p>It is now possible to configure an Identity Provider at the backend, this allows a user to register i.e. at
+        the developer portal or backend without the need to register an account. We have also added a general OpenID
+        Connect provider which helps to integrate other identity provider.</p>
+    </li>
+</ul>
+
+<p>We are really happy with this release and think that it is a great milestone for Fusio to make API development easier
+and more accessible for many users. Especially our internal SDK code generator, to generate high quality and ready to
+use client SDKs, is a great unique feature of Fusio. In the background we have already a great list of cool new features
+which we like to add within the next 4.x releases.</p>
+
+<p>If you like to support our project you can give us a star on <a href="https://github.com/apioo/fusio">GitHub</a>, there
+you can also find available donation options. If you have questions or problems regarding Fusio you can also join our
+<a href="https://discord.gg/eMrMgwsc6e">discord server</a> or create an issue at Github.</p>
+
+<p>Please take a look at our <a href="https://github.com/apioo/fusio/blob/master/UPGRADE.md">upgrade document</a> if you
+want to upgrade an older Fusio 3.x version to 4.x.</p>
+
+<p>Best regards<br>
+Christoph</p>
+
+]]></content>
+    </entry>
     <entry>
         <id>urn:fusio-project-org:blog:55</id>
         <title>Status and development of Fusio 4.0</title>
