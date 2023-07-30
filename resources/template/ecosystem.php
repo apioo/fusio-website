@@ -94,6 +94,20 @@
           </div>
         </div>
       </div>
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">PSX</h4>
+          </div>
+          <div class="card-body">
+            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
+              <i class="bi bi-wrench p-4"></i>
+            </div>
+            <p>An innovative PHP framework dedicated to build fully typed REST APIs.</p>
+            <a href="https://phpsx.org/" class="btn btn-primary">Website</a>
+          </div>
+        </div>
+      </div>
       <!--
       <div class="col">
         <div class="card mb-3">
