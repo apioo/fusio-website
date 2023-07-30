@@ -1,28 +1,28 @@
 fusio:
-    version: 2.1.1
-    downloadUrl: 'https://github.com/apioo/fusio-apps-backend/releases/download/v2.1.1/fusio.zip'
-    sha1Hash: cb4810b00de5b589194b14c56a6c763b0e00a9df
+    version: 3.0.2
+    downloadUrl: 'https://github.com/apioo/fusio-apps-backend/releases/download/v3.0.2/fusio.zip'
+    sha1Hash: 519faef00dee37e27adc15ce28f3f5886474ed4d
     description: 'The backend app is the official app to develop, configure and maintain your API.'
     screenshot: 'https://www.fusio-project.org/media/apps/backend.png'
     website: 'https://github.com/apioo/fusio-apps-backend'
 developer:
-    version: 2.0.4
-    downloadUrl: 'https://github.com/apioo/fusio-apps-developer/releases/download/v2.0.4/developer.zip'
-    sha1Hash: 6e87e74b5c0968b152ae735aae09a61ae98a0e71
+    version: 3.0.1
+    downloadUrl: 'https://github.com/apioo/fusio-apps-developer/releases/download/v3.0.1/developer.zip'
+    sha1Hash: e131b48f85752a95c399d46a35a81f8a959c7382
     description: 'The developer app is designed to quickly setup an API program where new developers can register and create/manage their apps.'
     screenshot: 'https://www.fusio-project.org/media/apps/developer.png'
     website: 'https://github.com/apioo/fusio-apps-developer'
 redoc:
-    version: 0.3.0
-    downloadUrl: 'https://github.com/apioo/fusio-apps-redoc/archive/v0.3.0.zip'
-    sha1Hash: 9945927a02ed890677bd8585367efdecb486b70d
+    version: 1.0.0
+    downloadUrl: 'https://github.com/apioo/fusio-apps-redoc/archive/v1.0.0.zip'
+    sha1Hash: dfb7dfd2cd7de4798ef55780c0958986707e1bac
     description: 'ReDoc app to generate OpenAPI/Swagger documentation'
     screenshot: 'https://www.fusio-project.org/media/apps/redoc.png'
     website: 'https://github.com/apioo/fusio-apps-redoc'
 swagger-ui:
-    version: 1.0.5
-    downloadUrl: 'https://github.com/apioo/fusio-apps-swaggerui/archive/v1.0.5.zip'
-    sha1Hash: 2107ad7121dfeaf4725cb64f84dc0630dad24ff0
+    version: 2.0.0
+    downloadUrl: 'https://github.com/apioo/fusio-apps-swaggerui/archive/v2.0.0.zip'
+    sha1Hash: 3b57da679e1dc6ff396cf0d5fdfab314572eb277
     description: 'The Swagger UI app renders a documentation based on the OpenAPI specification.'
     screenshot: 'https://www.fusio-project.org/media/apps/swagger-ui.png'
     website: 'https://github.com/apioo/fusio-apps-swaggerui'
