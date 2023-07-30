@@ -12,13 +12,13 @@ developer:
     description: 'The developer app is designed to quickly setup an API program where new developers can register and create/manage their apps.'
     screenshot: 'https://www.fusio-project.org/media/apps/developer.png'
     website: 'https://github.com/apioo/fusio-apps-developer'
-documentation:
-    version: 1.0.6
-    downloadUrl: 'https://github.com/apioo/fusio-apps-documentation/archive/v1.0.6.zip'
-    sha1Hash: 5fa87f806dbb5a522521f38fd35e3be3423d6e37
-    description: 'The documentation app simply provides an overview of all available endpoints. It is possible to export the API definition into other schema formats like i.e. OpenAPI.'
-    screenshot: 'https://www.fusio-project.org/media/apps/documentation.png'
-    website: 'https://github.com/apioo/fusio-apps-documentation'
+redoc:
+    version: 0.3.0
+    downloadUrl: 'https://github.com/apioo/fusio-apps-redoc/archive/v0.3.0.zip'
+    sha1Hash: 9945927a02ed890677bd8585367efdecb486b70d
+    description: 'ReDoc app to generate OpenAPI/Swagger documentation'
+    screenshot: 'https://www.fusio-project.org/media/apps/redoc.png'
+    website: 'https://github.com/apioo/fusio-apps-redoc'
 swagger-ui:
     version: 1.0.5
     downloadUrl: 'https://github.com/apioo/fusio-apps-swaggerui/archive/v1.0.5.zip'
@@ -40,10 +40,3 @@ pma:
     description: 'phpMyAdmin app to handle the administration of MySQL over the Web.'
     screenshot: 'https://www.fusio-project.org/media/apps/pma.png'
     website: 'https://github.com/apioo/fusio-apps-pma'
-redoc:
-    version: 0.3.0
-    downloadUrl: 'https://github.com/apioo/fusio-apps-redoc/archive/v0.3.0.zip'
-    sha1Hash: 9945927a02ed890677bd8585367efdecb486b70d
-    description: 'ReDoc app to generate OpenAPI/Swagger documentation'
-    screenshot: 'https://www.fusio-project.org/media/apps/redoc.png'
-    website: 'https://github.com/apioo/fusio-apps-redoc'
