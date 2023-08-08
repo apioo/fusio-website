@@ -85,42 +85,6 @@
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">Laravel</h4>
-          </div>
-          <img src="<?php echo $base; ?>/img/laravel.png" class="rounded mx-auto d-block mt-3" />
-          <div class="card-body">
-            <p>Integration of the PHP SDK into Laravel.</p>
-            <a href="https://github.com/apioo/fusio-sdk-php-laravel" class="btn btn-primary">GitHub</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">Wordpress</h4>
-          </div>
-          <img src="<?php echo $base; ?>/img/wordpress.png" class="rounded mx-auto d-block mt-3" />
-          <div class="card-body">
-            <p>Integrates Fusio into Wordpress. It helps to use your Wordpress-Site as Developer-Portal and Fusio as API management tool.</p>
-            <a href="https://github.com/apioo/fusio-sdk-php-wordpress" class="btn btn-primary">GitHub</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">REST</h4>
-          </div>
-          <img src="<?php echo $base; ?>/img/openapi.png" class="rounded mx-auto d-block mt-3" />
-          <div class="card-body">
-            <p>Documentation of the REST API in case you want directly talk to the endpoints.</p>
-            <a href="https://demo.fusio-project.org/apps/documentation/#!/api/" class="btn btn-primary">Reference</a>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </div>
