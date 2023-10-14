@@ -54,6 +54,10 @@ class Contact extends ControllerAbstract
                 throw new \RuntimeException('Invalid captcha');
             }
 
+            if (str_ends_with($payload->email, '.ru')) {
+                throw new \RuntimeException('The contact form is temporary disabled, please join our discord server https://discord.gg/eMrMgwsc6e or create an issue at our GitHub repository');
+            }
+
             $message = 'Email: ' . $payload->email . "\n";
             $message.= 'Message: ' . $payload->message;
 
