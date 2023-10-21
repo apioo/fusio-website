@@ -8,12 +8,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta property="og:url" content="https://www.fusio-project.org/" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Fusio - Open source API management platform" />
+  <meta property="og:title" content="<?php echo $title; ?>" />
   <meta property="og:description" content="Fusio is an open source API management platform which helps to create innovative API solutions" />
   <meta property="og:image" content="https://www.fusio-project.org/img/github_preview.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@FusioAPI" />
-  <title>Fusio - Open source API management platform</title>
+  <title><?php echo $title ?? 'Fusio - Open source API management platform'; ?></title>
   <link rel="preload" href="<?php echo $base; ?>/css/app.min.css" as="style" />
   <link rel="preload" href="<?php echo $base; ?>/js/app.min.js" as="script" />
   <link rel="icon" href="<?php echo $base; ?>/img/fusio_32px.png" type="image/png" />
@@ -65,6 +65,9 @@
         </li>
         <li class="nav-item">
           <a href="<?php echo $router->getAbsolutePath([\App\Controller\Sdk::class, 'show']); ?>" class="nav-link">SDK</a>
+        </li>
+        <li class="nav-item">
+          <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'show']); ?>" class="nav-link">Comparison</a>
         </li>
         <li class="nav-item">
           <a href="<?php echo $router->getAbsolutePath([\App\Controller\Blog::class, 'show']); ?>" class="nav-link">Blog</a>

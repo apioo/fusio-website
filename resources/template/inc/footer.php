@@ -31,6 +31,8 @@
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Worker::class, 'show']); ?>">Worker</a></li>
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Samples::class, 'show']); ?>">Samples</a></li>
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Demo::class, 'show']); ?>">Demo</a></li>
+          <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Contact::class, 'show']); ?>">Contact</a></li>
+          <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Imprint::class, 'show']); ?>">Imprint</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 mb-3">
@@ -44,10 +46,12 @@
         </ul>
       </div>
       <div class="col-6 col-lg-2 mb-3">
-        <h5>About</h5>
+        <h5>Comparison</h5>
         <ul class="list-unstyled">
-          <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Imprint::class, 'show']); ?>">Imprint</a></li>
-          <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Contact::class, 'show']); ?>">Contact</a></li>
+          <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'kong']); ?>">Kong</a></li>
+          <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'tyk']); ?>">Tyk</a></li>
+          <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'firebase']); ?>">Firebase</a></li>
+          <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'supabase']); ?>">Supabase</a></li>
         </ul>
       </div>
     </div>
