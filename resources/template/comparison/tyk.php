@@ -25,8 +25,8 @@
       and SDK generation.</p>
       <h4>Fusio</h4>
       <ul>
-        <li>Implement action logic in different programming languages.</li>
-        <li>Easy self-hosting on a simple VHost or large cloud provider</li>
+        <li>Implement action logic in different programming languages</li>
+        <li>Simple setup which can be easily managed</li>
         <li>API Gateway features like Authorization, Analytics, Rate-Limiting</li>
         <li>API monetization</li>
         <li>Developer portal to onboard new developers</li>
