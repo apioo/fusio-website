@@ -55,6 +55,10 @@ class Contact extends ControllerAbstract
                 throw new \RuntimeException('Invalid captcha');
             }
 
+            if (!filter_var($payload->email, FILTER_VALIDATE_EMAIL)) {
+                throw new \RuntimeException('Provided an invalid email');
+            }
+
             if (str_ends_with($payload->email, '.ru')) {
                 throw new \RuntimeException('The contact form is temporary disabled, please join our discord server https://discord.gg/eMrMgwsc6e or create an issue at our GitHub repository');
             }
@@ -66,6 +70,7 @@ class Contact extends ControllerAbstract
                 ->subject('[Fusio] Contact')
                 ->from('info@fusio-project.org')
                 ->to(self::TO_RECEIVER)
+                ->replyTo($payload->email)
                 ->text($message);
             $this->mailer->send($message);
 
