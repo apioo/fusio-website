@@ -9,7 +9,7 @@ automatically find your repository and add it to this list.
 <div class="fusio-headline">
   <div class="container">
     <div class="row">
-      <div class="col p-lg-4 mx-auto text-center">
+      <div class="col p-4 mx-auto text-center">
         <h1 class="display-4 fw-normal">Adapter</h1>
       </div>
     </div>

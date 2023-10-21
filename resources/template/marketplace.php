@@ -10,7 +10,7 @@ Then your app is easy installable via the Fusio backend app and can be used by a
 <div class="fusio-headline">
   <div class="container">
     <div class="row">
-      <div class="col p-lg-4 mx-auto text-center">
+      <div class="col p-4 mx-auto text-center">
         <h1 class="display-4 fw-normal">Marketplace</h1>
       </div>
     </div>
