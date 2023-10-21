@@ -87,7 +87,7 @@
           </div>
           <div class="card-body">
             <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
-              <i class="bi bi-gear p-4"></i>
+              <i class="bi bi-archive-fill p-4"></i>
             </div>
             <p>SDKgen is a powerful code generator to automatically build client SDKs for your REST API.</p>
             <a href="https://sdkgen.app/" class="btn btn-primary">Website</a>
