@@ -22,6 +22,7 @@ class About extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
+            'title' => 'About | Fusio',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
         ];
 

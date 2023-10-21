@@ -26,8 +26,9 @@ class Marketplace extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
+            'title' => 'Marketplace | Fusio',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
-            'apps'      => $this->getApps(),
+            'apps' => $this->getApps(),
         ];
 
         $templateFile = __DIR__ . '/../../resources/template/marketplace.php';

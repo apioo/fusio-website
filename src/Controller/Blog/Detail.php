@@ -33,6 +33,7 @@ class Detail extends ControllerAbstract
         }
 
         $data = [
+            'title' => $entry->getTitle() . ' | Fusio',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show'], [$entry->getTitleSlug()]),
             'entry' => $entry,
         ];

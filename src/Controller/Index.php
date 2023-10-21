@@ -22,6 +22,7 @@ class Index extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
+            'title' => 'Open source API management platform | Fusio',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
         ];
 

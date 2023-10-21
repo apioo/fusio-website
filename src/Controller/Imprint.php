@@ -22,6 +22,7 @@ class Imprint extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
+            'title' => 'Imprint | Fusio',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
         ];
 

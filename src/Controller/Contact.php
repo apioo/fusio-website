@@ -37,6 +37,7 @@ class Contact extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
+            'title' => 'Contact | Fusio',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
         ];
 
@@ -80,6 +81,7 @@ class Contact extends ControllerAbstract
         }
 
         $data = [
+            'title' => 'Fusio - Open source API management platform',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
             'success' => $success,
             'error' => $error,

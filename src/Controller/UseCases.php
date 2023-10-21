@@ -22,6 +22,7 @@ class UseCases extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
+            'title' => 'Use-Cases | Fusio',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
         ];
 

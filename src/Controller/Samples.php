@@ -22,6 +22,7 @@ class Samples extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
+            'title' => 'Samples | Fusio',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
         ];
 

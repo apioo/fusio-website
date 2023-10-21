@@ -32,11 +32,12 @@ class Blog extends ControllerAbstract
         $startIndex   = $this->getStartIndex($startIndex);
 
         $data = [
-            'canonical'    => $this->reverseRouter->getUrl([self::class, 'show']) . (($startIndex > 0) ? '?startIndex=' . $startIndex : ''),
+            'title' => 'Blog | Fusio',
+            'canonical' => $this->reverseRouter->getUrl([self::class, 'show']) . (($startIndex > 0) ? '?startIndex=' . $startIndex : ''),
             'totalResults' => $totalResults,
-            'startIndex'   => $startIndex,
-            'entry'        => $this->blogTable->findIndexEntries($startIndex),
-            'links'        => $this->getLinks($selfUrl, $startIndex, $totalResults),
+            'startIndex' => $startIndex,
+            'entry' => $this->blogTable->findIndexEntries($startIndex),
+            'links' => $this->getLinks($selfUrl, $startIndex, $totalResults),
         ];
 
         $templateFile = __DIR__ . '/../../resources/template/blog.php';

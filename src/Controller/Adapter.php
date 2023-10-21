@@ -25,8 +25,9 @@ class Adapter extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
+            'title' => 'Adapter | Fusio',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
-            'fusio'     => $this->adapterTable->findIndexEntriesFusio(),
+            'fusio' => $this->adapterTable->findIndexEntriesFusio(),
             'community' => $this->adapterTable->findIndexEntriesCommunity(),
         ];
 

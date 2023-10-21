@@ -35,11 +35,12 @@ class Download extends ControllerAbstract
         }
 
         $data = [
-            'canonical'   => $this->reverseRouter->getUrl([self::class, 'show']),
-            'tagName'     => $release->getTagName(),
-            'htmlUrl'     => $release->getHtmlUrl(),
-            'assetSize'   => $release->getAssetSize(),
-            'assetName'   => $release->getAssetName(),
+            'title' => 'Download | Fusio',
+            'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
+            'tagName' => $release->getTagName(),
+            'htmlUrl' => $release->getHtmlUrl(),
+            'assetSize' => $release->getAssetSize(),
+            'assetName' => $release->getAssetName(),
             'publishedAt' => $release->getPublishedAt()->toDateTime()->format('Y-m-d'),
         ];
 
