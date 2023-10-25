@@ -1776,7 +1776,7 @@ tool at: <a href="https://generate.apioo.de/">generate.apioo.de</a></p>
             <name>chriskapp</name>
             <uri>https://chrisk.app</uri>
         </author>
-        <updated>2019-01-01T17:46:00Z</updated>
+        <updated>2019-01-01T17:47:00Z</updated>
         <summary>
             Coverage of the 1.5.0 release of Fusio
         </summary>
@@ -1786,7 +1786,7 @@ tool at: <a href="https://generate.apioo.de/">generate.apioo.de</a></p>
 
 <p>We are really happy to start the new year with the announcement of version 1.5.
 This release contains many improvements. A major change is that we require
-now PHP 7.1 since 7.0 is not <a href="http://php.net/supported-versions.php">supported</a>
+now PHP 7.1 since 7.0 is not <a href="https://php.net/supported-versions.php">supported</a>
 anymore. The following list contains the most important changes:</p>
 
 <ul>
@@ -1855,7 +1855,7 @@ anymore. The following list contains the most important changes:</p>
     </li>
     <li>
         <b>Minimum PHP requirement is now 7.1</b>
-        <p>As mentioned above since PHP 7.0 is not <a href="http://php.net/supported-versions.php">supported</a>
+        <p>As mentioned above since PHP 7.0 is not <a href="https://php.net/supported-versions.php">supported</a>
         anymore we have moved the minimum requirement to PHP 7.1. If you are
         using still PHP 7.0 please consider to upgrade.</p>
     </li>
@@ -2128,7 +2128,7 @@ to start a new API project this is the perfect time to start with Fusio.</p>
             <name>chriskapp</name>
             <uri>https://chrisk.app</uri>
         </author>
-        <updated>2017-12-13T00:00:09Z</updated>
+        <updated>2017-12-13T00:01:09Z</updated>
         <summary>
             Some thoughts about developing APIs independently of the underlying
             programming language
@@ -2137,10 +2137,10 @@ to start a new API project this is the perfect time to start with Fusio.</p>
         <content type="html"><![CDATA[
 
 <p>Recently I have read a <a href="https://medium.com/@ivanjaros/moving-from-php-to-go-and-back-again-9ea1f57018c4">post</a>
-from a user who has tried to move from <a href="http://php.net/">PHP</a> to <a href="https://golang.org/">go</a>.
+from a user who has tried to move from <a href="https://php.net/">PHP</a> to <a href="https://golang.org/">go</a>.
 To summarize the post, the user moved back to PHP because he claimed that the go 
 language is not great to write larger applications. Later on another user posted 
-a counter <a href="http://blog.breakthru.solutions/re-moving-from-php-to-go-and-back-again/">post</a>
+a counter <a href="https://blog.breakthru.solutions/re-moving-from-php-to-go-and-back-again/">post</a>
 to argue why those thoughts are wrong. Those posts got popular on hackernews 
 and reddit which produced many comments where users argued about the better 
 language.</p>
@@ -2361,7 +2361,7 @@ following list covers the changelog:</p>
             <name>chriskapp</name>
             <uri>https://chrisk.app</uri>
         </author>
-        <updated>2017-07-09T21:18:00Z</updated>
+        <updated>2017-07-09T21:19:00Z</updated>
         <summary>
             A post containing thoughts about API-Management and serverless 
             development
@@ -2392,7 +2392,7 @@ roughly two different implementations:</p>
 At the moment you have basically two possibilities to write an API endpoint. 
 Either you create an actual PHP file (which has also the advantage that the 
 code is under version control) or you use the backend to develop the endpoint. 
-For the backend it is only possible to use the <a href="http://www.fusio-project.org/documentation/v8">javascript</a> 
+For the backend it is only possible to use the <a href="https://docs.fusio-project.org/">javascript</a>
 runtime since evaluating user provided PHP code is a security risk which could
 potentially harm the server. Through the javascript engine this is not possible.</p>
 
@@ -2521,7 +2521,7 @@ are welcome to get more information at the documentation section.</p>
             <name>chriskapp</name>
             <uri>https://chrisk.app</uri>
         </author>
-        <updated>2017-02-24T11:48:00Z</updated>
+        <updated>2017-02-24T11:49:00Z</updated>
         <summary>
             Coverage of the 0.7 release
         </summary>
@@ -2540,7 +2540,7 @@ implement the backend logic but the entry should be as easy as possible. That
 means that the developer only needs to implement the actual backend logic and 
 dont need to cover topics like f.e.: Analytics, Documentation, Authorization, 
 Rating. Through the V8 engine we have developed a simple 
-<a href="http://fusio-project.org/documentation/v8">javascript API</a> which 
+<a href="https://docs.fusio-project.org/">javascript API</a> which
 enables any frontend developer to implement an API endpoint. While it is
 still possible for advanced developers to implement complex backend endpoints.
 In the future we want to continue this mission by enhancing the Fusio platform,
@@ -2606,7 +2606,7 @@ version 0.6.3 to 0.7.</p>
 
 <p>Besides the release we have now also a new brand logo and improved the 
 website content with tutorial videos. We hope that you are as excited as we are
-about the potential of Fusio. Feel free to <a href="http://www.fusio-project.org/contact">drop us a line</a> 
+about the potential of Fusio. Feel free to <a href="https://www.fusio-project.org/contact">drop us a line</a>
 in case you have any questions about Fusio.</p>
 
 ]]></content>
@@ -3064,7 +3064,7 @@ complete changelog of this release. We did not explicit announce the 0.3.1 and
             <name>chriskapp</name>
             <uri>https://chrisk.app</uri>
         </author>
-        <updated>2016-07-20T10:42:00Z</updated>
+        <updated>2016-07-20T10:43:00Z</updated>
         <summary>
 Coverage of the 0.3 release and upcoming plans
         </summary>
@@ -3080,7 +3080,7 @@ to explain the changes of this release and the upcoming plans for the project.</
 <ul>
     <li>
         <b>Rewrote consumer implementation moved from jQuery to AngularJS</b>
-        <p>We have moved the <a href="http://demo.fusio-project.org/consumer/">consumer</a> 
+        <p>We have moved the <a href="https://demo.fusio-project.org/apps/developer/">consumer</a>
         implementation to AngularJS. Thereby we extended the functionality. Most 
         notable we added a registration option where you can configure a remote 
         login provider like GitHub and Facebook</p>
@@ -3146,7 +3146,7 @@ adapters are listed and new developers can add an adapter by simply setting the
 keyword <code>fusio-adapter</code> into the <code>composer.json</code> file.
 Another great topic is to add a forms point to the backend where a user can build
 a form which uses a specific route. These forms can then be embedded into an app.
-You can checkout the <a href="https://github.com/k42b3/fusio/blob/master/TODO.md">TODO</a> 
+You can checkout the <a href="https://github.com/apioo/fusio/issues">TODO</a>
 for a complete list of ideas.</p>
 
 <p>Besides these technical issues we also want to work on the marketing part of 
@@ -3276,7 +3276,7 @@ replace the files and call the <code>php fusio/bin install</code> command.</p>
             <name>chriskapp</name>
             <uri>https://chrisk.app</uri>
         </author>
-        <updated>2016-01-30T10:50:00Z</updated>
+        <updated>2016-01-30T10:51:00Z</updated>
         <summary>
 Summary of the 0.2.1 release
         </summary>
@@ -3296,7 +3296,7 @@ applications. In the following the coverage of the changelog:</p>
     <li>
         <b>Added documentation and improved help docs</b>
         <p>We have now a official documentation which is available at 
-        <a href="http://fusio.readthedocs.org">fusio.readthedocs.org</a>. This
+        <a href="https://docs.fusio-project.org/">fusio.readthedocs.org</a>. This
         is only a first step and we are planing to improve the documentation 
         over time. Also we have improved the internal help docs which are 
         available at the backend</p>
@@ -3432,7 +3432,7 @@ installation and copy the sql table data to the new system.</p>
             <name>chriskapp</name>
             <uri>https://chrisk.app</uri>
         </author>
-        <updated>2015-11-26T23:43:00Z</updated>
+        <updated>2015-11-26T23:44:00Z</updated>
         <summary>
 Introduction of the 0.1.7 release
         </summary>
@@ -3452,7 +3452,7 @@ great changes which we will cover in this post.</p>
         there are two usecases for an adapter. The first is to extend the system 
         by providing new connection and action classes. The second is to provide
         an easy way to configure an API for a 3rd party system. Take a look at
-        the <a href="https://github.com/k42b3/fusio-adapter/blob/master/definition-reference.json">definition</a>
+        the <a href="https://github.com/apioo/fusio">definition</a>
         reference to get a first impression of the adapter format.</p>
     </li>
     <li>
@@ -3529,7 +3529,7 @@ to upgrade your database schema to the 0.1.7 version.</p>
             <name>chriskapp</name>
             <uri>https://chrisk.app</uri>
         </author>
-        <updated>2015-10-06T21:25:00Z</updated>
+        <updated>2015-10-06T21:26:00Z</updated>
         <summary>
 Coverage of the 0.1.6 release
         </summary>
@@ -3540,7 +3540,7 @@ Coverage of the 0.1.6 release
 <p>Today we have released version 0.1.6 of Fusio. The bigest change of this 
 release is that we have rewritten the documentation API viewer client as an 
 AngularJS/Material app which you can see at the 
-<a href="http://demo.fusio-project.org/documentation/#/api/news">demo</a> in 
+<a href="https://demo.fusio-project.org/apps/redoc/">demo</a> in
 action. Also we have added export controllers to export the defined schema into 
 other API specification formats like Swagger, RAML and even WSDL to support 
 legacy systems. So happy hacking!</p>
@@ -3554,7 +3554,7 @@ legacy systems. So happy hacking!</p>
             <name>chriskapp</name>
             <uri>https://chrisk.app</uri>
         </author>
-        <updated>2015-09-12T22:47:00Z</updated>
+        <updated>2015-09-12T22:48:00Z</updated>
         <summary>
 Short announcement of the 0.1.5 released
         </summary>
@@ -3566,7 +3566,7 @@ Short announcement of the 0.1.5 released
 fixes but the most effort went into improving the unit tests and creating
 javascript tests for the backend. Therefor we use <a href="https://angular.github.io/protractor">protractor</a>
 which is an end-to-end test framework for AngularJS. We run these tests also on
-<a href="https://travis-ci.org/k42b3/fusio">travis</a>. This gives us the 
+<a href="https://github.com/apioo/fusio/actions">GitHub</a>. This gives us the
 confidence to move our code-base fast forward and release often without having
 to worry about breaking all things. So stay tuned for more changes.</p>
 
