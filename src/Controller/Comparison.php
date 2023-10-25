@@ -23,7 +23,7 @@ class Comparison extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
-            'title' => 'Fusio - Compare',
+            'title' => 'Comparison | Fusio',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
         ];
 
