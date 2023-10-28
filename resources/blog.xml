@@ -5,6 +5,99 @@
     <updated>2023-07-30T17:02:00Z</updated>
     <link rel="self" href="https://www.fusio-project.org/blog/feed" type="application/atom+xml" />
     <entry>
+        <id>urn:fusio-project-org:blog:57</id>
+        <title>Fusio 4.0.3 released</title>
+        <author>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
+        </author>
+        <updated>2023-10-28T17:03:00Z</updated>
+        <summary>
+            This post announces the release of Fusio version 4.0.3
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>We are happy to announce version 4.0.3 of Fusio. In the following we will cover the most important changes of the
+4.0.3 release and also the last two minor updates which we have not yet covered:</p>
+
+<ul>
+    <li><b>4.0.3</b></li>
+    <li>
+        <b>Fix backend sdk download button</b>
+        <p>The SDK download button was not show correctly at the backend app, the SDK was generated in background but
+        the button to download the SDK was not available, this is now fixed.</p>
+    </li>
+    <li>
+        <b>OAuth2 endpoint use seconds for "expires_in" instead of unix timestamp</b>
+        <p>The "expires_in" property of the OAuth2 token response contained previously a unix timestamp. This behaviour
+        was wrong according to the <a href="https://datatracker.ietf.org/doc/html/rfc6749#section-4.4.3">OAuth2 specification</a>,
+        we have adjusted the response so that the "expires_in" property only contains the lifetime in seconds of the
+        access token. Note if you use this property please adjust the behaviour accordingly.</p>
+    </li>
+    <li>
+        <b>Add sdkgen integration</b>
+        <p>We have recently launched <a href="https://sdkgen.app/">SDKgen</a>, a new project which we have developed
+        to help everybody generate production ready SDKs for their API. Fusio contains now an SDKgen integration, this
+        means that you can enter your SDKgen credentials at the <code>.env</code> file and you can then automatically
+        use our advanced code generator which we provide through SDKgen, this means you can also generate i.e. Java or
+        CSharp client SDKs for your API.</p>
+    </li>
+    <li><b>4.0.2</b></li>
+    <li>
+        <b>Implemented symfony/messenger to support async work queues</b>
+        <p>We now use internally the <a href="https://symfony.com/doc/current/messenger.html">Symfony Messenger</a>
+        component to handle background tasks. This means that you can now also easily configure an actual message queue
+        like RabbitMQ. Fusio uses by default a database based message queue which works out of the box.</p>
+    </li>
+    <li>
+        <b>Improved client SDK grouping</b>
+        <p>We have improved the internal client SDK generator to group your operations based on the operation name. If
+        the operation name contains a dot all operations are grouped under this name. I.e. you operation name could be
+        <code>product.execute</code> and the execute operation will be placed in a separate product class.</p>
+    </li>
+    <li>
+        <b>Added composite app filter</b>
+        <p>By default we use now the app filter which contains your app and authorization routes which are mostly
+        required to work with your API.</p>
+    </li>
+    <li>
+        <b>Change migration execution order to always execute the internal Fusio migration and then the App migrations</b>
+        <p>Fusio now executes always at first the internal Fusio migrations and after this your app migrations.</p>
+    </li>
+    <li><b>4.0.1</b></li>
+    <li>
+        <b>Improved Passthru handing for file uploads</b>
+        <p>File upload handling was improved using the Passthru schema.</p>
+    </li>
+    <li>
+        <b>Add new model SDK generator</b>
+        <p>We have now included all model generators which can be also used directly at the backend.</p>
+    </li>
+    <li>
+        <b>Add default robots.txt</b>
+        <p>A default robots.txt was added to prevent all crawler indexing your API and apps. Our developer portal and
+        documentation apps are not SEO optimized so this might have a negative impact on your website serving those
+        pages directly. Because of this we have added a robots.txt to disallow crawling by default, if this is intended
+        we recommend to create a dedicated subdomain where you can also use a fitting robots.txt.</p>
+    </li>
+    <li>
+        <b>Updated TypeSchema editor</b>
+        <p>The TypeSchema editor was improved, including better import and export possibilies.</p>
+    </li>
+    <li>
+        <b>Updated backend and developer app dependencies</b>
+        <p>All backend and developer app dependencies are updated to the latest version.</p>
+    </li>
+</ul>
+
+<p>Best regards<br>
+Christoph</p>
+
+]]></content>
+    </entry>
+    <entry>
         <id>urn:fusio-project-org:blog:56</id>
         <title>Fusio 4.0 released</title>
         <author>
