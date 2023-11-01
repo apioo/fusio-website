@@ -18,9 +18,3 @@ RewriteRule ^(.*)$ /blog [R=301]
 
 RewriteCond %{REQUEST_URI} /forum/(.*)
 RewriteRule ^(.*)$ https://groups.google.com/g/fusio [R=301]
-
-<IfModule mod_headers.c>
-<FilesMatch "\.(ico|jpg|jpeg|gif|png|webp|js|css)$">
-Header set Cache-Control "public, max-age=604800, no-transform"
-</FilesMatch>
-</IfModule>
