@@ -36,6 +36,3 @@ RewriteRule ^(.*)$ https://github.com/apioo/fusio/issues [R=301]
 
 RewriteCond %{REQUEST_URI} /forum/(.*)
 RewriteRule ^(.*)$ https://github.com/apioo/fusio/issues [R=301]
-
-RewriteCond %{REQUEST_URI} /bootstrap
-RewriteRule ^(.*)$ https://docs.fusio-project.org/docs/bootstrap [R=301]
