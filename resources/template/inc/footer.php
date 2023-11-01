@@ -14,7 +14,7 @@
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">
-        <h5>Links</h5>
+        <p class="fs-5 fw-normal">Links</p>
         <ul class="list-unstyled text-small">
           <li class="mb-2"><a href="https://docs.fusio-project.org/">Documentation</a></li>
           <li class="mb-2"><a href="https://typehub.cloud/">TypeHub</a></li>
@@ -24,7 +24,7 @@
         </ul>
       </div>
       <div class="col-6 col-lg-2 mb-3">
-        <h5>Resources</h5>
+        <p class="fs-5 fw-normal">Resources</p>
         <ul class="list-unstyled">
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Adapter::class, 'show']); ?>">Adapter</a></li>
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Tools::class, 'show']); ?>">Tools</a></li>
@@ -36,7 +36,7 @@
         </ul>
       </div>
       <div class="col-6 col-lg-2 mb-3">
-        <h5>Community</h5>
+        <p class="fs-5 fw-normal">Community</p>
         <ul class="list-unstyled">
           <li class="mb-2"><a href="https://github.com/apioo/fusio">GitHub</a></li>
           <li class="mb-2"><a href="https://twitter.com/FusioAPI">Twitter</a></li>
@@ -46,7 +46,7 @@
         </ul>
       </div>
       <div class="col-6 col-lg-2 mb-3">
-        <h5>Comparison</h5>
+        <p class="fs-5 fw-normal">Comparison</p>
         <ul class="list-unstyled">
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'kong']); ?>">Kong</a></li>
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'tyk']); ?>">Tyk</a></li>
