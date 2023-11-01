@@ -1,5 +1,5 @@
 
-<footer class="bd-footer py-4 py-md-5 mt-5 bg-light">
+<footer class="fusio-footer bd-footer py-4 py-md-5 mt-5 bg-light">
   <div class="container mt-4">
     <div class="row">
       <div class="col-lg-3 mb-3">
@@ -15,7 +15,7 @@
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">
         <p class="fs-5 fw-normal">Links</p>
-        <ul class="list-unstyled text-small">
+        <ul class="list-unstyled">
           <li class="mb-2"><a href="https://docs.fusio-project.org/">Documentation</a></li>
           <li class="mb-2"><a href="https://typehub.cloud/">TypeHub</a></li>
           <li class="mb-2"><a href="https://typeapi.org/">TypeAPI</a></li>

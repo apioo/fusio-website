@@ -99,12 +99,6 @@ lite-youtube.lyt-activated > .lty-playbtn {
     width: 1px;
 }
 
-.fusio-image {
-    height: 400px;
-    border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.16) 2px 2px 4px;
-}
-
 .fusio-headline {
     background-image: url('../img/intro.webp');
     background-size: cover;
@@ -114,4 +108,13 @@ lite-youtube.lyt-activated > .lty-playbtn {
     background: url('../img/intro.webp') no-repeat top center;
     transform: rotate(180deg);
     height: 400px;
+}
+
+.fusio-footer a {
+    color: #222;
+    text-decoration: none;
+}
+
+.fusio-footer a:hover {
+    text-decoration: underline;
 }
