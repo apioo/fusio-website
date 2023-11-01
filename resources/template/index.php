@@ -118,7 +118,7 @@ https://github.com/apioo/fusio
 </div>
 
 <div class="px-4 py-5 my-5 bg-dark">
-  <div style="width:720px;margin:0 auto;">
+  <div style="max-width:720px;margin:0 auto;">
     <lite-youtube videoid="MeJu6F4OWQE"></lite-youtube>
   </div>
 </div>
