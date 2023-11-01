@@ -136,7 +136,7 @@ https://github.com/apioo/fusio
     "@context": "http://schema.org",
     "@type": "SoftwareApplication",
     "name": "Fusio",
-    "description": "Fusio is an open source API management platform which helps to build and manage REST APIs. Through Fusio you can quickly build a state of the art API, set up a developer portal and monetize your API.",
+    "description": "Fusio is an open source API management platform which helps to create innovative API solutions.",
     "url": "https://www.fusio-project.org/",
     "applicationCategory": "API Management",
     "downloadUrl": "https://www.fusio-project.org/download",
