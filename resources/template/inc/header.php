@@ -40,7 +40,7 @@
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container">
     <a class="navbar-brand" href="<?php echo $router->getAbsolutePath([\App\Controller\Index::class, 'show']); ?>">
-      <img src="<?php echo $base; ?>/img/fusio_64px.png" width="32" height="32" class="d-inline-block align-text-top">
+      <img src="<?php echo $base; ?>/img/fusio_64px.png" alt="Logo" width="32" height="32" class="d-inline-block align-text-top">
       Fusio
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
