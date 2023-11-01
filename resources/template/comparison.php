@@ -24,7 +24,7 @@
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <h1 class="display-4 fw-normal">API Gateway</h1>
+      <h2 class="display-4 fw-normal">API Gateway</h2>
       <p>API Gateways act as a single entrypoint for all your APIs and microservices, they provide often features like
       proxy, authentication, developer portal, analytics and rate-limiting. Fusio can be used as alternative to such
       API gateway providers since it also implements common API gateway features. In addition, Fusio also covers topics
@@ -39,7 +39,7 @@
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">Kong</h4>
+            <h3 class="my-0 fw-bold">Kong</h3>
           </div>
           <img src="<?php echo $base; ?>/img/compare/kong.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
@@ -51,7 +51,7 @@
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">Tyk</h4>
+            <h3 class="my-0 fw-bold">Tyk</h3>
           </div>
           <img src="<?php echo $base; ?>/img/compare/tyk.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
@@ -67,7 +67,7 @@
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <h1 class="display-4 fw-normal">BaaS</h1>
+      <h2 class="display-4 fw-normal">BaaS</h2>
       <p>Backend-as-a-Service provider help developers to build apps without building a backend and by simply using an
       API. BaaS providers offer features like database, storage and functions. Fusio can be used as alternative to such
       BaaS providers, but it only simplifies backend development. It is open-source, self-hosted and targets developers
@@ -83,7 +83,7 @@
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">Firebase</h4>
+            <h3 class="my-0 fw-bold">Firebase</h3>
           </div>
           <img src="<?php echo $base; ?>/img/compare/firebase.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
@@ -95,7 +95,7 @@
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">Supabase</h4>
+            <h3 class="my-0 fw-bold">Supabase</h3>
           </div>
           <img src="<?php echo $base; ?>/img/compare/supabase.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">

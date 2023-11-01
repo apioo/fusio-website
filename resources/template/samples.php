@@ -25,7 +25,7 @@
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">PHP CLI</h4>
+            <h2 class="my-0 fw-normal fs-5">PHP CLI</h2>
           </div>
           <img src="<?php echo $base; ?>/img/php.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
@@ -37,7 +37,7 @@
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">Java CLI</h4>
+            <h2 class="my-0 fw-normal fs-5">Java CLI</h2>
           </div>
           <img src="<?php echo $base; ?>/img/java.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
@@ -49,7 +49,7 @@
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">Go CLI</h4>
+            <h2 class="my-0 fw-normal fs-5">Go CLI</h2>
           </div>
           <img src="<?php echo $base; ?>/img/go.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
@@ -61,7 +61,7 @@
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">Headless CMS</h4>
+            <h2 class="my-0 fw-normal fs-5">Headless CMS</h2>
           </div>
           <img src="<?php echo $base; ?>/img/openapi.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
@@ -73,7 +73,7 @@
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">Laravel</h4>
+            <h2 class="my-0 fw-normal fs-5">Laravel</h2>
           </div>
           <img src="<?php echo $base; ?>/img/laravel.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">

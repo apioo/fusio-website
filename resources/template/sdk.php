@@ -25,7 +25,7 @@
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">Javascript</h4>
+            <h2 class="my-0 fw-normal">Javascript</h2>
           </div>
           <img src="<?php echo $base; ?>/img/typescript.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
@@ -38,7 +38,7 @@
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">PHP</h4>
+            <h2 class="my-0 fw-normal">PHP</h2>
           </div>
           <img src="<?php echo $base; ?>/img/php.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
@@ -51,7 +51,7 @@
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">Java</h4>
+            <h2 class="my-0 fw-normal">Java</h2>
           </div>
           <img src="<?php echo $base; ?>/img/java.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
@@ -64,7 +64,7 @@
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">Go</h4>
+            <h2 class="my-0 fw-normal">Go</h2>
           </div>
           <img src="<?php echo $base; ?>/img/go.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
@@ -76,7 +76,7 @@
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">Angular</h4>
+            <h2 class="my-0 fw-normal">Angular</h2>
           </div>
           <img src="<?php echo $base; ?>/img/angular.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">

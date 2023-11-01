@@ -13,7 +13,7 @@
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <h4>Releases</h4>
+      <h2 class="display-6 fw-normal">Releases</h2>
       <table class="table">
         <colgroup>
           <col width="120" />
@@ -46,7 +46,7 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <h4>Composer</h4>
+        <h2 class="display-6 fw-normal">Composer</h2>
         <p>It is also possible to quickly setup a Fusio project through composer:</p>
         <pre><code class="bash">composer create-project fusio/fusio</code></pre>
       </div>
@@ -57,7 +57,7 @@
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <h4>Docker</h4>
+      <h2 class="display-6 fw-normal">Docker</h2>
       <p>We provide also a docker container for Fusio. To setup the container you
         have to checkout the <a href="https://github.com/apioo/fusio-docker">repository</a>
         and run the following command:</p>

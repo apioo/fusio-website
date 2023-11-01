@@ -26,7 +26,7 @@
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">VSCode</h4>
+            <h2 class="my-0 fw-normal fs-5">VSCode</h2>
           </div>
           <img src="<?php echo $base; ?>/img/vscode.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
@@ -39,7 +39,7 @@
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">Electron</h4>
+            <h2 class="my-0 fw-normal fs-5">Electron</h2>
           </div>
           <img src="<?php echo $base; ?>/img/electron.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">

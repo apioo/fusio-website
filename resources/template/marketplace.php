@@ -34,7 +34,7 @@ Then your app is easy installable via the Fusio backend app and can be used by a
             <div class="card mb-4">
               <img src="<?php echo $app->screenshot; ?>" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title"><?php echo $name; ?></h5>
+                <div class="card-title"><h2 class="fs-2"><?php echo ucfirst($name); ?></h2></div>
                 <p class="card-text"><?php echo $app->description; ?></p>
                 <a href="<?php echo $app->website; ?>" class="btn btn-secondary">Website</a>
                 <a href="<?php echo $app->downloadUrl; ?>" class="btn btn-primary">Download</a>

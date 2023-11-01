@@ -7,7 +7,7 @@
           <img src="<?php echo $base; ?>/img/fusio_64px.png" alt="Logo" width="32" height="32" class="d-inline-block align-text-top me-2">
           <span class="fs-5">Fusio</span>
         </a>
-        <ul class="list-unstyled small text-muted">
+        <ul class="list-unstyled small">
           <li class="mb-2">Fusio is an open source API management platform which helps to create innovative API solutions.</li>
           <li class="mb-2">Code licensed <a href="https://github.com/apioo/fusio/blob/master/LICENSE" target="_blank" rel="license noopener">Apache 2.0</a>.</li>
           <li class="mb-2">Fusio is made in Düsseldorf / Germany.</li>

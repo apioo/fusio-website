@@ -16,6 +16,9 @@
   <title><?php echo $title ?? 'Fusio - Open source API management platform'; ?></title>
   <link rel="preload" href="<?php echo $base; ?>/dist/app.min.css" as="style" />
   <link rel="preload" href="<?php echo $base; ?>/dist/app.min.js" as="script" />
+  <link rel="preload" href="<?php echo $base; ?>/img/intro.webp" as="image" />
+  <link rel="preload" href="https://www.googletagmanager.com/gtag/js?id=G-K58XVFTP9N" as="script">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com/">
   <link rel="icon" href="<?php echo $base; ?>/img/fusio_32px.png" type="image/png" />
   <link rel="stylesheet" href="<?php echo $base; ?>/dist/app.min.css" />
   <link rel="alternate" href="https://www.fusio-project.org/blog/feed" type="application/atom+xml" title="Fusio Blog" />
@@ -37,7 +40,7 @@
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container">
     <a class="navbar-brand" href="<?php echo $router->getAbsolutePath([\App\Controller\Index::class, 'show']); ?>">
-      <img src="<?php echo $base; ?>/img/fusio_64px.png" alt="Logo" width="32" height="32" class="d-inline-block align-text-top">
+      <img src="<?php echo $base; ?>/img/fusio_64px.png" alt="Fusio" width="32" height="32" class="d-inline-block align-text-top">
       Fusio
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

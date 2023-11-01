@@ -29,7 +29,7 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <h4>Architecture</h4>
+        <h2 class="display-6 fw-normal">Architecture</h2>
 
         <p>If you are researching API solutions you probably hear often the term
           <b>API-Gateway/Proxy</b> and <b>API-Management</b>. Fusio is an API-Management
@@ -64,7 +64,9 @@
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
     <div class="col">
       <div class="card mb-4">
-        <h5 class="card-header">Media</h5>
+        <div class="card-header py-3">
+          <h2 class="my-0 fw-normal">Media</h2>
+        </div>
         <div class="card-body">
           <p class="card-text">If you are a blogger or magazine we would be happy if you like to cover
             Fusio. You can <a href="<?php echo $base; ?>/media/fusio_icon.zip">download</a>
@@ -74,7 +76,9 @@
     </div>
     <div class="col">
       <div class="card mb-4">
-        <h5 class="card-header">Donations</h5>
+        <div class="card-header py-3">
+          <h2 class="my-0 fw-normal">Donations</h2>
+        </div>
         <div class="card-body">
           <p class="card-text">If you like to sponsor our project please take a look at our
           <a href="https://github.com/apioo/fusio">repository</a> to see all available donation options. We like to
@@ -85,7 +89,9 @@
     </div>
     <div class="col">
       <div class="card mb-4">
-        <h5 class="card-header">Consulting</h5>
+        <div class="card-header py-3">
+          <h2 class="my-0 fw-normal">Consulting</h2>
+        </div>
         <div class="card-body">
           <p class="card-text">If you are a company or freelancer and want to get detailed information
             how you can use Fusio you can <a href="<?php echo $router->getAbsolutePath([\App\Controller\Contact::class, 'show']); ?>">contact us</a>
@@ -96,7 +102,9 @@
     </div>
     <div class="col">
       <div class="card mb-4">
-        <h5 class="card-header">Community</h5>
+        <div class="card-header py-3">
+          <h2 class="my-0 fw-normal">Community</h2>
+        </div>
         <div class="card-body">
           <p class="card-text">If you like to contribute to the project please visit our <a href="https://github.com/apioo/fusio">repository</a>.
             To improve the documentation you can also take a look at our <a href="https://docs.fusio-project.org/">documentation</a> website.

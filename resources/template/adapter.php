@@ -37,7 +37,7 @@ php bin/fusio system:register "Fusio\Adapter\Mongodb\Adapter"</code></pre>
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
-            <h4 class="my-0 fw-normal"><?php echo $row->name; ?></h4>
+            <h2 class="my-0 fw-normal fs-5"><?php echo $row->name; ?></h2>
           </div>
           <div class="card-body">
             <p><?php echo $row->description; ?></p>
@@ -47,36 +47,6 @@ php bin/fusio system:register "Fusio\Adapter\Mongodb\Adapter"</code></pre>
         </div>
       </div>
       <?php endforeach; ?>
-    </div>
-  </div>
-</div>
-
-<div class="container mt-4 pt-4 mb-4 pb-4">
-  <div class="row">
-    <div class="col">
-      <h4>Community</h4>
-      <p>The following adapter are provided by the community.</p>
-    </div>
-  </div>
-</div>
-
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-4 text-center">
-        <?php foreach($community as $row): ?>
-          <div class="col">
-            <div class="card mb-3">
-              <div class="card-header py-3">
-                <h4 class="my-0 fw-normal"><?php echo $row->name; ?></h4>
-              </div>
-              <div class="card-body">
-                <p><?php echo $row->description; ?></p>
-                <a href="<?php echo $row->url; ?>" class="btn btn-secondary">Packagist</a>
-                <a href="<?php echo $row->repository; ?>" class="btn btn-primary">GitHub</a>
-              </div>
-            </div>
-          </div>
-        <?php endforeach; ?>
     </div>
   </div>
 </div>
