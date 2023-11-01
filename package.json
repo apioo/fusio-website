@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "purgecss": "^5.0.0"
+  },
+  "scripts": {
+    "build": "purgecss --css 'public/css/**/*.css' --content 'resources/template/**/*.php' --output public/dist/"
+  }
+}

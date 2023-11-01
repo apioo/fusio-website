@@ -14,14 +14,14 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@FusioAPI" />
   <title><?php echo $title ?? 'Fusio - Open source API management platform'; ?></title>
-  <link rel="preload" href="<?php echo $base; ?>/css/app.min.css" as="style" />
-  <link rel="preload" href="<?php echo $base; ?>/js/app.min.js" as="script" />
+  <link rel="preload" href="<?php echo $base; ?>/dist/app.min.css" as="style" />
+  <link rel="preload" href="<?php echo $base; ?>/dist/app.min.js" as="script" />
   <link rel="icon" href="<?php echo $base; ?>/img/fusio_32px.png" type="image/png" />
-  <link rel="stylesheet" href="<?php echo $base; ?>/css/app.min.css" />
+  <link rel="stylesheet" href="<?php echo $base; ?>/dist/app.min.css" />
   <link rel="alternate" href="https://www.fusio-project.org/blog/feed" type="application/atom+xml" title="Fusio Blog" />
   <?php if(isset($canonical)): ?><link rel="canonical" href="<?php echo $canonical; ?>" />
 <?php endif; ?>
-  <script async src="<?php echo $base; ?>/js/app.min.js"></script>
+  <script async src="<?php echo $base; ?>/dist/app.min.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-K58XVFTP9N"></script>
   <?php if (isset($analytics) && $analytics === true): ?>
   <script>
