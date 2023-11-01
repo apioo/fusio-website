@@ -145,13 +145,19 @@ https://github.com/apioo/fusio
   }
 </script>
 
-<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
 <script type="text/javascript">
 function showDialog() {
-  window.dojoRequire(["mojo/signup-forms/Loader"], function(L) {
-    L.start({"baseUrl":"mc.us20.list-manage.com","uuid":"13a030c73b877188ebe28f86f","lid":"8706c1f9e7","uniqueMethods":true});
-    document.cookie = "MCPopupClosed=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/";
+  var mailchimpEl = document.createElement('script');
+  mailchimpEl.setAttribute('type', 'text/javascript');
+  mailchimpEl.setAttribute('src', '//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js');
+  mailchimpEl.setAttribute('data-dojo-config', 'usePlainJson: true, isDebug: false');
+  mailchimpEl.addEventListener('load', function(){
+    window.dojoRequire(["mojo/signup-forms/Loader"], function(L) {
+      L.start({"baseUrl":"mc.us20.list-manage.com","uuid":"13a030c73b877188ebe28f86f","lid":"8706c1f9e7","uniqueMethods":true});
+      document.cookie = "MCPopupClosed=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/";
+    });
   });
+  document.head.append(mailchimpEl);
 }
 document.getElementById("subscribe").onclick = showDialog;
 </script>
