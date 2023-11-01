@@ -3,7 +3,7 @@
   <div class="container mt-4">
     <div class="row">
       <div class="col-lg-3 mb-3">
-        <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/" aria-label="Fusio">
+        <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/">
           <img src="<?php echo $base; ?>/img/fusio_64px.png" alt="Logo" width="32" height="32" class="d-inline-block align-text-top me-2">
           <span class="fs-5">Fusio</span>
         </a>
