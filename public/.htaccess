@@ -4,35 +4,29 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule (.*) /index.php/$1 [L]
 
-RewriteCond %{REQUEST_URI} ^/license
+RewriteCond %{REQUEST_URI} ^/?license
 RewriteRule ^(.*)$ https://github.com/apioo/fusio/blob/master/LICENSE [R=301]
 
-RewriteCond %{REQUEST_URI} ^/documentation
+RewriteCond %{REQUEST_URI} ^/?documentation
 RewriteRule ^(.*)$ https://docs.fusio-project.org/ [R=301]
 
-RewriteCond %{REQUEST_URI} ^/documentation/php
+RewriteCond %{REQUEST_URI} ^/?documentation/php
 RewriteRule ^(.*)$ https://docs.fusio-project.org/docs/concepts/php_api/ [R=301]
 
-RewriteCond %{REQUEST_URI} ^/documentation/worker
+RewriteCond %{REQUEST_URI} ^/?documentation/worker
 RewriteRule ^(.*)$ https://docs.fusio-project.org/docs/concepts/worker_api/ [R=301]
 
-RewriteCond %{REQUEST_URI} ^/documentation/(.*)
-RewriteRule ^(.*)$ https://docs.fusio-project.org/ [R=301]
-
-RewriteCond %{REQUEST_URI} ^/labels/(.*)
+RewriteCond %{REQUEST_URI} ^/?labels/(.*)
 RewriteRule ^(.*)$ /blog [R=301]
 
-RewriteCond %{REQUEST_URI} ^/blog/category/(.*)
+RewriteCond %{REQUEST_URI} ^/?blog/category/(.*)
 RewriteRule ^(.*)$ /blog [R=301]
 
-RewriteCond %{REQUEST_URI} ^/apps
+RewriteCond %{REQUEST_URI} ^/?apps
 RewriteRule ^(.*)$ /marketplace [R=301]
 
-RewriteCond %{REQUEST_URI} ^/amp
+RewriteCond %{REQUEST_URI} ^/?amp
 RewriteRule ^(.*)$ / [R=301]
 
-RewriteCond %{REQUEST_URI} ^/forum
-RewriteRule ^(.*)$ https://github.com/apioo/fusio/issues [R=301]
-
-RewriteCond %{REQUEST_URI} ^/forum/(.*)
+RewriteCond %{REQUEST_URI} ^/?forum
 RewriteRule ^(.*)$ https://github.com/apioo/fusio/issues [R=301]
