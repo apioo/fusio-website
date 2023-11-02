@@ -73,6 +73,9 @@
           <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'show']); ?>" class="nav-link">Comparison</a>
         </li>
         <li class="nav-item">
+          <a href="<?php echo $router->getAbsolutePath([\App\Controller\Partner::class, 'show']); ?>" class="nav-link">Partner</a>
+        </li>
+        <li class="nav-item">
           <a href="<?php echo $router->getAbsolutePath([\App\Controller\Blog::class, 'show']); ?>" class="nav-link">Blog</a>
         </li>
       </ul>
