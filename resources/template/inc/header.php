@@ -26,7 +26,7 @@
 <?php endif; ?>
   <script async src="<?php echo $base; ?>/dist/app.min.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-K58XVFTP9N"></script>
-  <?php if (isset($analytics) && $analytics === true): ?>
+  <?php if (!str_contains($url, '127.0.0.1')): ?>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
