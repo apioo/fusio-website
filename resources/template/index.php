@@ -155,6 +155,7 @@ function showDialog() {
     window.dojoRequire(["mojo/signup-forms/Loader"], function(L) {
       L.start({"baseUrl":"mc.us20.list-manage.com","uuid":"13a030c73b877188ebe28f86f","lid":"8706c1f9e7","uniqueMethods":true});
       document.cookie = "MCPopupClosed=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/";
+      gtag("event", "join_group");
     });
   });
   document.head.append(mailchimpEl);
