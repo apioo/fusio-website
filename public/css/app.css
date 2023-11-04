@@ -18,3 +18,7 @@
 .fusio-footer a:hover {
     text-decoration: underline;
 }
+
+.mc-layout__modalContent {
+    background-color: #eee;
+}

@@ -25,15 +25,15 @@
   <?php if(isset($canonical)): ?><link rel="canonical" href="<?php echo $canonical; ?>" />
 <?php endif; ?>
   <script async src="<?php echo $base; ?>/dist/app.min.js"></script>
+<?php if (!str_contains($url, '127.0.0.1')): ?>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-K58XVFTP9N"></script>
-  <?php if (!str_contains($url, '127.0.0.1')): ?>
+<?php endif; ?>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-K58XVFTP9N', {anonymize_ip: true});
   </script>
-  <?php endif; ?>
 </head>
 <body>
 
