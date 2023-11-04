@@ -17,6 +17,9 @@
           <div class="alert alert-danger"><?php echo $error; ?></div>
         <?php elseif(isset($success)): ?>
           <div class="alert alert-success"><b>Thanks for your request, we will answer your request as soon as possible.</b></div>
+          <script>
+            gtag('contact', new Date());
+          </script>
         <?php endif; ?>
 
       <p>Please use this form to contact us. You can also take a look at our <a href="https://docs.fusio-project.org/">documentation</a>
