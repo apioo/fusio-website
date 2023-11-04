@@ -24,9 +24,10 @@
       <p>The initial use case of Fusio was to be able to quickly create a great API product beside an existing web app.
         We have many users which run a traditional web app and they use Fusio to create a state-of-the-art API beside
         there existing product. Fusio provides many ways to make your business logic available as API.</p>
-      <p>Fusio provides a <a href="https://demo.fusio-project.org/apps/developer/#!/">developer app</a> which helps to
+      <p>Fusio provides a <a href="https://demo.fusio-project.org/apps/developer/">developer app</a> which helps to
         on board new users to use your API. It is also possible to completely integrate Fusio into your existing product
         since the app also only works with the internal Fusio API.</p>
+      <a href="https://youtu.be/aq4pI0LIBFc" class="btn btn-primary"><img src="<?php echo $base; ?>/img/youtube-32.png" width="32" height="32" alt="Youtube"> Video</a>
     </div>
   </div>
 </div>
@@ -48,6 +49,7 @@
           you can cover topics like authorization, rate limiting and monetization.</p>
         <p>Fusio contains also a schema store which then contains all schema data for each request and response.
           Based on these schemas Fusio can automatically generate an OpenAPI specification or also client SDKs.</p>
+        <a href="https://youtu.be/S-mneuDPNzg" class="btn btn-primary"><img src="<?php echo $base; ?>/img/youtube-32.png" width="32" height="32" alt="Youtube"> Video</a>
       </div>
     </div>
   </div>
@@ -111,6 +113,7 @@
       <p>You can use Fusio also simply as framework to build an API from scratch. In this case you can develop custom
         actions and use the deploy mechanism. Please take a look at our <a href="https://github.com/apioo/fusio-sample-cms">sample headless CMS</a>
         which shows how to build and structure a complex app using Fusio.</p>
+      <a href="https://youtu.be/2E9YnAaXq5s" class="btn btn-primary"><img src="<?php echo $base; ?>/img/youtube-32.png" width="32" height="32" alt="Youtube"> Video</a>
     </div>
   </div>
 </div>
