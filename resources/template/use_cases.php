@@ -67,12 +67,11 @@
     <div class="col-10">
       <h2 id="spa-backend" class="display-6 fw-normal">SPA-Backend</h2>
       <p>You can use Fusio as backend to build <abbr title="Single-Page-Application">SPAs</abbr> using popular
-        Javascript-Frameworks like i.e. Angular, React or Vue. Fusio is especially designed to work with Angular,
-        it provides a great <a href="https://www.npmjs.com/package/ngx-fusio-sdk">SDK</a> to build complete type safe
-        Angular apps.</p>
-      <p>In this sense Fusio can be seen as a self-hosted alternative solution to services like Firebase. We also
-        provide a general <a href="https://www.npmjs.com/package/fusio-sdk">Javascript SDK</a> which you can use for
-        any javascript app.</p>
+        Javascript-Frameworks like i.e. Angular, React or Vue. Fusio is really great as backend for those frontend
+        frameworks since it is possible to automatically generate a complete type-safe javascript client SDK which can
+        be directly used at those frontends.</p>
+      <p>In this sense Fusio can be seen as a self-hosted alternative solution to services like Firebase or Supabase.</p>
+      <a href="https://youtu.be/syRmovex3rE" class="btn btn-primary"><img src="<?php echo $base; ?>/img/youtube-32.png" width="32" height="32" alt="Youtube"> Video</a>
     </div>
   </div>
 </div>
