@@ -22,10 +22,20 @@
           </script>
         <?php endif; ?>
 
-      <p>Please use this form to contact us. You can also take a look at our <a href="https://docs.fusio-project.org/">documentation</a>
-        website or use the <a href="https://groups.google.com/forum/#!forum/fusio">forum</a> or
-        <a href="https://github.com/apioo/fusio/issues">issue</a> tracker to solve your issue. Please provide an email
-        so that we can get in contact with you.</p>
+      <p>Please use this form for business inquiries. If you are interested in consulting regarding Fusio, take a look
+      at our <a href="https://github.com/sponsors/chriskapp/sponsorships?sponsor=chriskapp&tier_id=335022&preview=false">GitHub sponsor</a>
+      consulting tier. Note this is not a support form, please use the following public resources in case of issues
+      regarding Fusio:</p>
+
+      <ul>
+        <li><a href="https://docs.fusio-project.org/">Documentation</a></li>
+        <li><a href="https://github.com/apioo/fusio/issues">Issue</a></li>
+        <li><a href="https://discord.gg/eMrMgwsc6e">Discord</a></li>
+        <li><a href="https://www.youtube.com/c/FusioAPI">Youtube</a></li>
+        <li><a href="https://groups.google.com/forum/#!forum/fusio">Forum</a></li>
+      </ul>
+
+      <hr>
 
       <form method="post">
         <div class="mb-3">

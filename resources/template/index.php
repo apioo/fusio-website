@@ -14,6 +14,7 @@ https://github.com/apioo/fusio
         <p class="lead fw-normal">Fusio is an open source API management platform which helps to create innovative API solutions.</p>
         <a href="#" id="subscribe" class="btn btn-dark">Subscribe</a>
         <a href="<?php echo $router->getAbsolutePath([\App\Controller\Demo::class, 'show']); ?>" class="btn btn-primary">Demo</a>
+        <a href="<?php echo $router->getAbsolutePath([\App\Controller\Contact::class, 'show']); ?>" class="btn btn-primary">Contact</a>
       </div>
     </div>
   </div>

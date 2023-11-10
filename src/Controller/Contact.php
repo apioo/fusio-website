@@ -63,15 +63,16 @@ class Contact extends ControllerAbstract
                 throw new \RuntimeException('The contact form is temporary disabled, please join our discord server https://discord.gg/eMrMgwsc6e or create an issue at our GitHub repository');
             }
 
-            $message = 'Email: ' . $payload->email . "\n";
-            $message.= 'Message: ' . $payload->message;
+            if (empty($payload->message)) {
+                throw new \RuntimeException('Provided an invalid message');
+            }
 
             $message = (new Email())
                 ->subject('[Fusio] Contact')
                 ->from('info@fusio-project.org')
                 ->to(self::TO_RECEIVER)
                 ->replyTo($payload->email)
-                ->text($message);
+                ->text($payload->message);
             $this->mailer->send($message);
 
             $success = true;
