@@ -30,3 +30,9 @@ RewriteRule (.*) / [R=301]
 
 RewriteCond %{PATH_INFO} ^/forum
 RewriteRule (.*) https://github.com/apioo/fusio/issues [R=301]
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(ico|jpg|jpeg|gif|png|pdf|webp)$">
+        Header set Cache-Control "public, max-age=172800, no-transform"
+    </FilesMatch>
+</IfModule>
