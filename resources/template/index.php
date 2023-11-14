@@ -24,7 +24,7 @@ https://github.com/apioo/fusio
   <div class="container">
     <div class="row">
       <div class="col-4">
-        <a href="https://youtube.com/@FusioAPI" class="text-decoration-none text-light"><img src="<?php echo $base; ?>/img/youtube-64.png" width="32" height="32" alt="Youtube"> <span class="d-none d-lg-inline">Fusio on Youtube</span></a>
+        <a href="https://youtube.com/@FusioAPI" class="text-decoration-none text-light"><img src="<?php echo $base; ?>/img/youtube-64.png" width="32" height="32" alt="Youtube"> <span class="d-none d-lg-inline">@FusioAPI on Youtube</span></a>
       </div>
       <div class="col-4">
         <a href="https://github.com/apioo/fusio" class="text-decoration-none text-light"><img src="<?php echo $base; ?>/img/github-64.png" width="32" height="32" alt="Github"> <span class="d-none d-lg-inline">Fusio on Github</span></a>
