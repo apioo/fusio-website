@@ -36,15 +36,6 @@ https://github.com/apioo/fusio
   </div>
 </div>
 
-<div class="container mt-4">
-  <div class="row">
-    <div class="col-12 text-center">
-      <a class="github-button" href="https://github.com/sponsors/chriskapp" data-icon="octicon-heart" data-size="large" aria-label="Sponsor @chriskapp on GitHub">Sponsor</a>
-      <a class="github-button" href="https://github.com/apioo/fusio" data-size="large" data-show-count="true" aria-label="Star apioo/fusio on GitHub">Star</a>
-    </div>
-  </div>
-</div>
-
 <div class="container mt-4 mb-4">
   <div class="row g-4 py-4 row-cols-1 row-cols-lg-3 text-center">
     <div class="feature col">

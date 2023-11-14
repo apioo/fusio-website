@@ -34,7 +34,6 @@
     gtag('js', new Date());
     gtag('config', 'G-K58XVFTP9N', {anonymize_ip: true});
   </script>
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
 <body>
 
