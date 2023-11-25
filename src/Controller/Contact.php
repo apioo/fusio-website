@@ -39,6 +39,7 @@ class Contact extends ControllerAbstract
         $data = [
             'title' => 'Contact | Fusio',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
+            'recaptcha_key' => $this->config->get('recaptcha_key'),
         ];
 
         $templateFile = __DIR__ . '/../../resources/template/contact.php';
@@ -57,10 +58,6 @@ class Contact extends ControllerAbstract
 
             if (!filter_var($payload->email, FILTER_VALIDATE_EMAIL)) {
                 throw new \RuntimeException('Provided an invalid email');
-            }
-
-            if (str_ends_with($payload->email, '.ru')) {
-                throw new \RuntimeException('The contact form is temporary disabled, please join our discord server https://discord.gg/eMrMgwsc6e or create an issue at our GitHub repository');
             }
 
             if (empty($payload->message)) {
@@ -87,10 +84,11 @@ class Contact extends ControllerAbstract
         }
 
         $data = [
-            'title' => 'Fusio - Open source API management platform',
+            'title' => 'Contact | Fusio',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
             'success' => $success,
             'error' => $error,
+            'recaptcha_key' => $this->config->get('recaptcha_key'),
         ];
 
         $templateFile = __DIR__ . '/../../resources/template/contact.php';

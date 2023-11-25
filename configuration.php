@@ -5,6 +5,7 @@ use function Symfony\Component\DependencyInjection\Loader\Configurator\env;
 
 return [
 
+    'recaptcha_key'           => env('APP_RECAPTCHA_KEY')->string(),
     'recaptcha_secret'        => env('APP_RECAPTCHA_SECRET')->string(),
 
     // File which contains an atom feed with blog entries

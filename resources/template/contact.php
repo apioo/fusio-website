@@ -37,7 +37,7 @@
 
       <hr>
 
-      <form method="post">
+      <form method="post" id="contactForm">
         <div class="mb-3">
           <label for="email" class="form-label fw-bold">Your email</label>
           <input type="email" class="form-control" id="email" name="email" placeholder="user@acme.com" required>
@@ -46,15 +46,16 @@
           <label for="message" class="form-label fw-bold">Your message</label>
           <textarea id="message" name="message" rows="5" class="form-control" placeholder="My message" required></textarea>
         </div>
-        <div class="mb-4 mt-4">
-          <div class="g-recaptcha" data-sitekey="6LcO6UweAAAAAI1TE-gLrEZ5tH8sa-fmgdL_o9fc"></div>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button class="g-recaptcha btn btn-primary" data-sitekey="<?php echo $recaptcha_key; ?>" data-callback="onSubmit" data-action="submit">Submit</button>
       </form>
     </div>
   </div>
 </div>
 
-<script src="//www.google.com/recaptcha/api.js"></script>
+<script>
+function onSubmit(token) {
+  document.getElementById("contactForm").submit();
+}
+</script>
 
 <?php include(__DIR__ . '/inc/footer.php'); ?>
