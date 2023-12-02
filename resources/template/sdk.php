@@ -13,8 +13,8 @@
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <p>To build and integrate apps with Fusio we provide several SDKs which help
-      you to easily work with the REST API of Fusio.</p>
+      <p>To build and integrate apps with Fusio we provide several SDKs which you can use to work with a Fusio instance
+        or you can also simply manually work with the REST API.</p>
     </div>
   </div>
 </div>
@@ -82,6 +82,20 @@
           <div class="card-body">
             <p>Provides services and components to integrate Fusio into an Angular app.</p>
             <a href="https://github.com/apioo/fusio-sdk-javascript-angular" class="btn btn-primary">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
+            <h2 class="my-0 fw-normal">REST API</h2>
+          </div>
+          <img src="<?php echo $base; ?>/img/openapi.png" class="rounded mx-auto d-block mt-3" />
+          <div class="card-body">
+            <p>The internal Fusio REST API consists of three main components.</p>
+            <a href="<?php echo $router->getAbsolutePath([\App\Controller\API\Backend::class, 'show']); ?>" class="btn btn-primary">Backend</a>
+            <a href="<?php echo $router->getAbsolutePath([\App\Controller\API\Consumer::class, 'show']); ?>" class="btn btn-primary">Consumer</a>
+            <a href="<?php echo $router->getAbsolutePath([\App\Controller\API\System::class, 'show']); ?>" class="btn btn-primary">System</a>
           </div>
         </div>
       </div>
