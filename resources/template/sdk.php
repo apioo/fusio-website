@@ -14,7 +14,7 @@
   <div class="row">
     <div class="col">
       <p>To build and integrate apps with Fusio we provide several SDKs which you can use to work with a Fusio instance
-        or you can also simply manually work with the REST API.</p>
+        or you can also simply manually talk to the REST API.</p>
     </div>
   </div>
 </div>
