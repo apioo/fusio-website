@@ -26,17 +26,6 @@
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
-            <h2 class="my-0 fw-normal fs-5">Fern</h2>
-          </div>
-          <img src="<?php echo $base; ?>/img/partner/fern_logo_tagline.png" class="rounded mx-auto d-block mt-3" />
-          <div class="card-body">
-            <a href="https://www.devmark.ai/fern/?utm_source=fusio&utm_loc=website&utm_type=logo" class="btn btn-primary">Website</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
             <h2 class="my-0 fw-normal fs-5">JetBrains</h2>
           </div>
           <img src="<?php echo $base; ?>/img/partner/phpstorm.svg" class="rounded mx-auto d-block mt-3" />
