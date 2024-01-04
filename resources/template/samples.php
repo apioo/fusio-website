@@ -25,6 +25,18 @@
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
+            <h2 class="my-0 fw-normal fs-5">Javascript Angular</h2>
+          </div>
+          <img src="<?php echo $base; ?>/img/angular.png" class="rounded mx-auto d-block mt-3" />
+          <div class="card-body">
+            <p>Angular app which uses the Fusio Angular SDK to quickly build a complete backend app.</p>
+            <a href="https://github.com/apioo/fusio-sample-javascript-angular" class="btn btn-primary">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
             <h2 class="my-0 fw-normal fs-5">PHP CLI</h2>
           </div>
           <img src="<?php echo $base; ?>/img/php.png" class="rounded mx-auto d-block mt-3" />
