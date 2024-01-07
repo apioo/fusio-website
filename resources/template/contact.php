@@ -32,7 +32,6 @@
         <li><a href="https://github.com/apioo/fusio/issues">Issue</a></li>
         <li><a href="https://discord.gg/eMrMgwsc6e">Discord</a></li>
         <li><a href="https://www.youtube.com/c/FusioAPI">Youtube</a></li>
-        <li><a href="https://groups.google.com/forum/#!forum/fusio">Forum</a></li>
       </ul>
 
       <hr>
