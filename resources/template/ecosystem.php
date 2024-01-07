@@ -26,15 +26,14 @@
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
-            <h2 class="my-0 fw-normal">Fusio</h2>
+            <h2 class="my-0 fw-normal">TypeSchema</h2>
           </div>
           <div class="card-body">
             <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
-              <i class="bi bi-house p-4"></i>
+              <i class="bi bi-file-post p-4"></i>
             </div>
-            <p>Open source API management platform which helps to create innovative API solutions.</p>
-            <a href="https://github.com/apioo/fusio" class="btn btn-secondary">GitHub</a>
-            <a href="https://github.com/sponsors/chriskapp" class="btn btn-primary">Donate</a>
+            <p>A JSON format to describe data models in a language neutral format.</p>
+            <a href="https://typeschema.org/" class="btn btn-primary">Website</a>
           </div>
         </div>
       </div>
@@ -49,20 +48,6 @@
             </div>
             <p>An OpenAPI alternative to describe REST APIs for type-safe code generation.</p>
             <a href="https://typeapi.org/" class="btn btn-primary">Website</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h2 class="my-0 fw-normal">TypeSchema</h2>
-          </div>
-          <div class="card-body">
-            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
-              <i class="bi bi-file-post p-4"></i>
-            </div>
-            <p>A JSON format to describe data models in a language neutral format.</p>
-            <a href="https://typeschema.org/" class="btn btn-primary">Website</a>
           </div>
         </div>
       </div>
@@ -111,6 +96,35 @@
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
+            <h2 class="my-0 fw-normal">APImon</h2>
+          </div>
+          <div class="card-body">
+            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
+              <i class="bi bi-search p-4"></i>
+            </div>
+            <p>APImon provides an intuitive service to monitor and analyze API endpoints.</p>
+            <a href="https://apimon.app/" class="btn btn-primary">Website</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
+            <h2 class="my-0 fw-normal">Fusio</h2>
+          </div>
+          <div class="card-body">
+            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
+              <i class="bi bi-house p-4"></i>
+            </div>
+            <p>Open source API management platform which helps to create innovative API solutions.</p>
+            <a href="https://github.com/apioo/fusio" class="btn btn-secondary">GitHub</a>
+            <a href="https://github.com/sponsors/chriskapp" class="btn btn-primary">Donate</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
             <h2 class="my-0 fw-normal">PSX</h2>
           </div>
           <div class="card-body">
@@ -122,50 +136,7 @@
           </div>
         </div>
       </div>
-      <!--
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">SDKgen</h4>
-          </div>
-          <div class="card-body">
-            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
-              <i class="bi bi-code p-4"></i>
-            </div>
-            <p>Advanced SDK code generator to support many different programming languages.</p>
-            <a href="https://sdkgen.app/" class="btn btn-primary">Website</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">Cloud</h4>
-          </div>
-          <div class="card-body">
-            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
-              <i class="bi bi-cloud p-4"></i>
-            </div>
-            <p>Simple cloud hosting solution for Fusio.</p>
-            <a href="https://www.fusio.cloud/" class="btn btn-primary">Website</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">Monitoring</h4>
-          </div>
-          <div class="card-body">
-            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
-              <i class="bi bi-search p-4"></i>
-            </div>
-            <p>Advanced monitoring and analytics for your Fusio app.</p>
-            <a href="#" class="btn btn-primary disabled">Upcoming</a>
-          </div>
-        </div>
-      </div>
-      -->
+      <div class="col"></div>
     </div>
   </div>
 </div>

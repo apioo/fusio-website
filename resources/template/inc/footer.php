@@ -26,10 +26,11 @@
       <div class="col-6 col-lg-2 mb-3">
         <p class="fs-5 fw-normal">Resources</p>
         <ul class="list-unstyled">
+          <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\About::class, 'show']); ?>">About</a></li>
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Adapter::class, 'show']); ?>">Adapter</a></li>
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Tools::class, 'show']); ?>">Tools</a></li>
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Worker::class, 'show']); ?>">Worker</a></li>
-          <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Samples::class, 'show']); ?>">Samples</a></li>
+          <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Integration::class, 'show']); ?>">Integration</a></li>
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Demo::class, 'show']); ?>">Demo</a></li>
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Contact::class, 'show']); ?>">Contact</a></li>
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Imprint::class, 'show']); ?>">Imprint</a></li>
@@ -41,7 +42,6 @@
           <li class="mb-2"><a href="https://github.com/apioo/fusio">GitHub</a></li>
           <li class="mb-2"><a href="https://twitter.com/FusioAPI">Twitter</a></li>
           <li class="mb-2"><a href="https://www.youtube.com/c/FusioAPI">Youtube</a></li>
-          <li class="mb-2"><a href="https://groups.google.com/g/fusio">Forum</a></li>
           <li class="mb-2"><a href="https://discord.gg/eMrMgwsc6e">Discord</a></li>
         </ul>
       </div>

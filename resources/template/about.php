@@ -20,7 +20,10 @@
         you from vendor lock-in. Today there are many cloud solutions available which lock you in to a specific
         platform. With Fusio you have the freedom to choose the fitting hosting environment which can be either a simple
         virtual server or an autoscaling environment in the cloud.</p>
-      <p>If you like the project and want to see it grow please check out the <a href="https://github.com/apioo/fusio">repository</a>.</p>
+      <p>To get started please take a look at our <a href="https://docs.fusio-project.org/">documentation website</a> or
+        dive directly into the <a href="<?php echo $router->getAbsolutePath([\App\Controller\Integration::class, 'show']); ?>">integration examples</a>
+        or <a href="<?php echo $router->getAbsolutePath([\App\Controller\Sdk::class, 'show']); ?>">SDKs</a>. If you like
+        the project and want to see it grow please check out the <a href="https://github.com/apioo/fusio">repository</a>.</p>
     </div>
   </div>
 </div>
