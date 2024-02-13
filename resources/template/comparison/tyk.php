@@ -19,7 +19,7 @@
       with Tyk. At Tyk only the actual API Gateway is complete open-source, if you want to use the Developer-Portal
       or Backend-Admin UI component you need to buy a license. Tyk provides also a way to write plugins to add
       additional logic.</p>
-      <p>Fusio provides out-of-the boy many actions to handle common endpoint logic and it is also easy possible to
+      <p>Fusio provides out-of-the box many actions to handle common endpoint logic and it is also easy possible to
       implement a custom logic. Fusio is completely open-source and we provide only one product which contains all
       features. Fusio also goes beyond the classical API Gateway feature scope and handles topics like API monetization
       and SDK generation.</p>
