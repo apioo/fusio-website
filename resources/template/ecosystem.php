@@ -49,6 +49,7 @@
             </div>
             <p>Generate fully working and customizable APIs based on your data model.</p>
             <a href="https://apigen.app/" class="btn btn-primary">Website</a>
+            <a href="https://www.youtube.com/watch?v=2E7f6Nfn2qU" class="btn btn-secondary">Video</a>
           </div>
         </div>
       </div>
