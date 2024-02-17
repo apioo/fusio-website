@@ -33,8 +33,8 @@
               <i class="bi bi-archive-fill p-4"></i>
             </div>
             <p>SDKgen is a powerful code generator to automatically build client SDKs for your REST API.</p>
-            <a href="https://www.youtube.com/watch?v=Pxz9ltl9n1c" class="btn btn-secondary">Video</a>
             <a href="https://sdkgen.app/" class="btn btn-primary">Website</a>
+            <a href="https://www.youtube.com/watch?v=Pxz9ltl9n1c" class="btn btn-secondary">Video</a>
           </div>
         </div>
       </div>
@@ -118,8 +118,8 @@
               <i class="bi bi-house p-4"></i>
             </div>
             <p>Open source API management platform which helps to create innovative API solutions.</p>
-            <a href="https://github.com/apioo/fusio" class="btn btn-secondary">GitHub</a>
             <a href="https://github.com/sponsors/chriskapp" class="btn btn-primary">Donate</a>
+            <a href="https://github.com/apioo/fusio" class="btn btn-secondary">GitHub</a>
           </div>
         </div>
       </div>
