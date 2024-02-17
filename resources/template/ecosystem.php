@@ -33,6 +33,7 @@
               <i class="bi bi-archive-fill p-4"></i>
             </div>
             <p>SDKgen is a powerful code generator to automatically build client SDKs for your REST API.</p>
+            <a href="https://www.youtube.com/watch?v=Pxz9ltl9n1c" class="btn btn-secondary">Video</a>
             <a href="https://sdkgen.app/" class="btn btn-primary">Website</a>
           </div>
         </div>
