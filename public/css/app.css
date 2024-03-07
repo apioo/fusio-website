@@ -1,13 +1,30 @@
 
-.fusio-headline {
-    background-image: url('../img/intro.webp');
-    background-size: cover;
+@media (min-width: 992px) {
+    .fusio-headline {
+        background-image: url('../img/intro_medium.webp');
+        background-size: cover;
+    }
+
+    .fusio-outro {
+        background: url('../img/intro_medium.webp') no-repeat top center;
+        background-size: cover;
+        transform: rotate(180deg);
+        height: 400px;
+    }
 }
 
-.fusio-outro {
-    background: url('../img/intro.webp') no-repeat top center;
-    transform: rotate(180deg);
-    height: 400px;
+@media (max-width: 991px) {
+    .fusio-headline {
+        background-image: url('../img/intro_small.webp');
+        background-size: cover;
+    }
+
+    .fusio-outro {
+        background: url('../img/intro_small.webp') no-repeat top center;
+        background-size: cover;
+        transform: rotate(180deg);
+        height: 400px;
+    }
 }
 
 .fusio-footer a {

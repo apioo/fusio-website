@@ -16,7 +16,6 @@
   <title><?php echo $title ?? 'Fusio - Open source API management platform'; ?></title>
   <link rel="preload" href="<?php echo $base; ?>/dist/app.min.css" as="style" />
   <link rel="preload" href="<?php echo $base; ?>/dist/app.min.js" as="script" />
-  <link rel="preload" href="<?php echo $base; ?>/img/intro.webp" as="image" />
   <link rel="preload" href="https://www.googletagmanager.com/gtag/js?id=G-K58XVFTP9N" as="script">
   <link rel="dns-prefetch" href="https://www.googletagmanager.com/">
   <link rel="icon" href="<?php echo $base; ?>/img/fusio_32px.png" type="image/png" />
