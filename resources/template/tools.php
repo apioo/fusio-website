@@ -28,7 +28,7 @@
           <div class="card-header py-3">
             <h2 class="my-0 fw-normal fs-5">VSCode</h2>
           </div>
-          <img src="<?php echo $base; ?>/img/vscode.png" class="rounded mx-auto d-block mt-3" />
+          <img src="<?php echo $base; ?>/img/sdk/vscode.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
             <p>Fusio VSCode extension which provides a more advanced development environment for action developers.</p>
             <a href="https://marketplace.visualstudio.com/items?itemName=Fusio.fusio" class="btn btn-secondary">Marketplace</a>
@@ -41,7 +41,7 @@
           <div class="card-header py-3">
             <h2 class="my-0 fw-normal fs-5">Electron</h2>
           </div>
-          <img src="<?php echo $base; ?>/img/electron.png" class="rounded mx-auto d-block mt-3" />
+          <img src="<?php echo $base; ?>/img/sdk/electron.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
             <p>Electron app of the backend whereby it is possible to control and
               access a Fusio instance by running the app locally.</p>

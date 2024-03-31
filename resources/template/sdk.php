@@ -13,8 +13,12 @@
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <p>To build and integrate apps with Fusio we provide several SDKs which you can use to work with a Fusio instance
-        or you can also simply manually talk to the REST API.</p>
+      <p>To build and integrate apps with Fusio we provide several SDKs which help you to work with the Fusio API.
+        Through the API you can for example integrate the developer app into your existing application or you can also
+        configure the complete system through the backend API. It is also possible to automatically generate an SDK
+        for the API which you have build with Fusio, therefor please take a look at the
+        <a href="https://docs.fusio-project.org/docs/backend/consumer/sdk">SDK documentation</a>.
+      </p>
     </div>
   </div>
 </div>
@@ -25,11 +29,48 @@
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
+            <h2 class="my-0 fw-normal">C#</h2>
+          </div>
+          <img src="<?php echo $base; ?>/img/sdk/csharp.png" class="rounded mx-auto d-block mt-3" />
+          <div class="card-body">
+            <a href="https://github.com/apioo/fusio-sample-csharp-cli" class="btn btn-secondary">Example</a>
+            <a href="https://github.com/apioo/fusio-sdk-csharp" class="btn btn-secondary">GitHub</a>
+            <a href="https://www.nuget.org/packages/Fusio.SDK" class="btn btn-primary">NuGet</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
+            <h2 class="my-0 fw-normal">Go</h2>
+          </div>
+          <img src="<?php echo $base; ?>/img/sdk/go.png" class="rounded mx-auto d-block mt-3" />
+          <div class="card-body">
+            <a href="https://github.com/apioo/fusio-sample-go-cli" class="btn btn-secondary">Example</a>
+            <a href="https://github.com/apioo/fusio-sdk-go" class="btn btn-primary">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
+            <h2 class="my-0 fw-normal">Java</h2>
+          </div>
+          <img src="<?php echo $base; ?>/img/sdk/java.png" class="rounded mx-auto d-block mt-3" />
+          <div class="card-body">
+            <a href="https://github.com/apioo/fusio-sample-java-cli" class="btn btn-secondary">Example</a>
+            <a href="https://github.com/apioo/fusio-sdk-java" class="btn btn-secondary">GitHub</a>
+            <a href="https://central.sonatype.com/artifact/org.fusio-project/sdk" class="btn btn-primary">Sonatype</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
             <h2 class="my-0 fw-normal">Javascript</h2>
           </div>
-          <img src="<?php echo $base; ?>/img/typescript.png" class="rounded mx-auto d-block mt-3" />
+          <img src="<?php echo $base; ?>/img/sdk/typescript.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
-            <p>The official javascript SDK to talk to the Fusio API.</p>
             <a href="https://github.com/apioo/fusio-sdk-javascript" class="btn btn-secondary">GitHub</a>
             <a href="https://www.npmjs.com/package/fusio-sdk" class="btn btn-primary">NPM</a>
           </div>
@@ -40,9 +81,9 @@
           <div class="card-header py-3">
             <h2 class="my-0 fw-normal">PHP</h2>
           </div>
-          <img src="<?php echo $base; ?>/img/php.png" class="rounded mx-auto d-block mt-3" />
+          <img src="<?php echo $base; ?>/img/sdk/php.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
-            <p>The official PHP SDK to talk to the Fusio API.</p>
+            <a href="https://github.com/apioo/fusio-sample-php-cli" class="btn btn-secondary">Example</a>
             <a href="https://github.com/apioo/fusio-sdk-php" class="btn btn-secondary">GitHub</a>
             <a href="https://packagist.org/packages/fusio/sdk" class="btn btn-primary">Packagist</a>
           </div>
@@ -51,37 +92,13 @@
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
-            <h2 class="my-0 fw-normal">Java</h2>
+            <h2 class="my-0 fw-normal">Python</h2>
           </div>
-          <img src="<?php echo $base; ?>/img/java.png" class="rounded mx-auto d-block mt-3" />
+          <img src="<?php echo $base; ?>/img/sdk/python.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
-            <p>The official Java SDK to talk to the Fusio API.</p>
-            <a href="https://github.com/apioo/fusio-sdk-java" class="btn btn-secondary">GitHub</a>
-            <a href="https://mvnrepository.com/artifact/org.fusio-project/sdk" class="btn btn-primary">Package</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h2 class="my-0 fw-normal">Go</h2>
-          </div>
-          <img src="<?php echo $base; ?>/img/go.png" class="rounded mx-auto d-block mt-3" />
-          <div class="card-body">
-            <p>The official Go SDK to talk to the Fusio API.</p>
-            <a href="https://github.com/apioo/fusio-sdk-go" class="btn btn-primary">GitHub</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h2 class="my-0 fw-normal">Angular</h2>
-          </div>
-          <img src="<?php echo $base; ?>/img/angular.png" class="rounded mx-auto d-block mt-3" />
-          <div class="card-body">
-            <p>Provides services and components to integrate Fusio into an Angular app.</p>
-            <a href="https://github.com/apioo/fusio-sdk-javascript-angular" class="btn btn-primary">GitHub</a>
+            <a href="https://github.com/apioo/fusio-sample-python-cli" class="btn btn-secondary">Example</a>
+            <a href="https://github.com/apioo/fusio-sdk-python" class="btn btn-secondary">GitHub</a>
+            <a href="https://pypi.org/project/fusio-sdk/" class="btn btn-primary">PyPI</a>
           </div>
         </div>
       </div>
@@ -90,12 +107,70 @@
           <div class="card-header py-3">
             <h2 class="my-0 fw-normal">REST API</h2>
           </div>
-          <img src="<?php echo $base; ?>/img/openapi.png" class="rounded mx-auto d-block mt-3" />
+          <img src="<?php echo $base; ?>/img/sdk/openapi.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
-            <p>The internal Fusio REST API consists of three main components.</p>
             <a href="<?php echo $router->getAbsolutePath([\App\Controller\API\Backend::class, 'show']); ?>" class="btn btn-primary">Backend</a>
             <a href="<?php echo $router->getAbsolutePath([\App\Controller\API\Consumer::class, 'show']); ?>" class="btn btn-primary">Consumer</a>
             <a href="<?php echo $router->getAbsolutePath([\App\Controller\API\System::class, 'show']); ?>" class="btn btn-primary">System</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-4 pt-4 mb-4 pb-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="display-6 fw-normal">Frameworks</h2>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 text-center">
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
+            <h2 class="my-0 fw-normal">Angular</h2>
+          </div>
+          <img src="<?php echo $base; ?>/img/sdk/angular.png" class="rounded mx-auto d-block mt-3" />
+          <div class="card-body">
+            <a href="https://github.com/apioo/fusio-sample-javascript-angular" class="btn btn-secondary">Example</a>
+            <a href="https://github.com/apioo/fusio-sdk-javascript-angular" class="btn btn-primary">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-4 pt-4 mb-4 pb-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="display-6 fw-normal">Tools</h2>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 text-center">
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
+            <h2 class="my-0 fw-normal">VSCode</h2>
+          </div>
+          <img src="<?php echo $base; ?>/img/vscode.png" class="rounded mx-auto d-block mt-3" />
+          <div class="card-body">
+            <a href="https://github.com/apioo/fusio-tools-vscode" class="btn btn-secondary">GitHub</a>
+            <a href="https://marketplace.visualstudio.com/items?itemName=Fusio.fusio" class="btn btn-primary">Marketplace</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
+            <h2 class="my-0 fw-normal">Electron</h2>
+          </div>
+          <img src="<?php echo $base; ?>/img/electron.png" class="rounded mx-auto d-block mt-3" />
+          <div class="card-body">
+            <a href="https://github.com/apioo/fusio-tools-electron" class="btn btn-primary">GitHub</a>
           </div>
         </div>
       </div>

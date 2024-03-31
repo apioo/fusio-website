@@ -28,7 +28,6 @@
         <ul class="list-unstyled">
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\About::class, 'show']); ?>">About</a></li>
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Adapter::class, 'show']); ?>">Adapter</a></li>
-          <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Tools::class, 'show']); ?>">Tools</a></li>
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Worker::class, 'show']); ?>">Worker</a></li>
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Integration::class, 'show']); ?>">Integration</a></li>
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Demo::class, 'show']); ?>">Demo</a></li>
