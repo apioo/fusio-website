@@ -4,7 +4,7 @@
     "developer": "apioo/fusio-apps-developer",
     "redoc": "apioo/fusio-apps-redoc",
     "swagger-ui": "apioo/fusio-apps-swaggerui",
-    "vscode": "apioo/fusio-apps-vscode",
-    "pma": "apioo/fusio-apps-pma"
+    "pma": "apioo/fusio-apps-pma",
+    "adminer": "apioo/fusio-apps-adminer"
   }
 }

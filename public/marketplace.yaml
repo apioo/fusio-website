@@ -1,21 +1,21 @@
 fusio:
-    version: 3.0.2
-    downloadUrl: 'https://github.com/apioo/fusio-apps-backend/releases/download/v3.0.2/fusio.zip'
-    sha1Hash: 519faef00dee37e27adc15ce28f3f5886474ed4d
+    version: 3.1.0
+    downloadUrl: 'https://github.com/apioo/fusio-apps-backend/releases/download/v3.1.0/fusio.zip'
+    sha1Hash: c66773a2152bd91d7d081aad99ff783bb642c308
     description: 'The backend app is the official app to develop, configure and maintain your API.'
     screenshot: 'https://www.fusio-project.org/media/apps/backend.png'
     website: 'https://github.com/apioo/fusio-apps-backend'
 developer:
-    version: 3.0.1
-    downloadUrl: 'https://github.com/apioo/fusio-apps-developer/releases/download/v3.0.1/developer.zip'
-    sha1Hash: e131b48f85752a95c399d46a35a81f8a959c7382
+    version: 3.1.0
+    downloadUrl: 'https://github.com/apioo/fusio-apps-developer/releases/download/v3.1.0/developer.zip'
+    sha1Hash: a9da49d59c3080f7707919c1477a60d9dccb63ab
     description: 'The developer app is designed to quickly setup an API program where new developers can register and create/manage their apps.'
     screenshot: 'https://www.fusio-project.org/media/apps/developer.png'
     website: 'https://github.com/apioo/fusio-apps-developer'
 redoc:
-    version: 1.0.0
-    downloadUrl: 'https://github.com/apioo/fusio-apps-redoc/archive/v1.0.0.zip'
-    sha1Hash: dfb7dfd2cd7de4798ef55780c0958986707e1bac
+    version: 1.0.1
+    downloadUrl: 'https://github.com/apioo/fusio-apps-redoc/archive/v1.0.1.zip'
+    sha1Hash: eb9efcc6cbc7218e8d1d7c2d009fdc5d61815965
     description: 'ReDoc app to generate OpenAPI/Swagger documentation'
     screenshot: 'https://www.fusio-project.org/media/apps/redoc.png'
     website: 'https://github.com/apioo/fusio-apps-redoc'
@@ -26,17 +26,17 @@ swagger-ui:
     description: 'The Swagger UI app renders a documentation based on the OpenAPI specification.'
     screenshot: 'https://www.fusio-project.org/media/apps/swagger-ui.png'
     website: 'https://github.com/apioo/fusio-apps-swaggerui'
-vscode:
-    version: 1.0.1
-    downloadUrl: 'https://github.com/apioo/fusio-apps-vscode/archive/v1.0.1.zip'
-    sha1Hash: 42ce3c917c8d8e06b36967d4ef72fba1c502de14
-    description: 'The VSCode app helps to develop all endpoint logic online using the monaco editor.'
-    screenshot: 'https://www.fusio-project.org/media/apps/vscode.png'
-    website: 'https://github.com/apioo/fusio-apps-vscode'
 pma:
-    version: 0.4.0
-    downloadUrl: 'https://github.com/apioo/fusio-apps-pma/archive/v0.4.0.zip'
-    sha1Hash: a9b881fe314e38c701e0863f098b31a06c8814e7
+    version: 0.5.0
+    downloadUrl: 'https://github.com/apioo/fusio-apps-pma/archive/v0.5.0.zip'
+    sha1Hash: 87094e313fa6a7d5a69edc23427ad1c88de59d9b
     description: 'phpMyAdmin app to handle the administration of MySQL over the Web.'
     screenshot: 'https://www.fusio-project.org/media/apps/pma.png'
     website: 'https://github.com/apioo/fusio-apps-pma'
+adminer:
+    version: 0.1.0
+    downloadUrl: 'https://github.com/apioo/fusio-apps-adminer/archive/v0.1.0.zip'
+    sha1Hash: 4513960f51f42fc87626f4ec72fca6aedf90d3f8
+    description: 'Database management in a single PHP file.'
+    screenshot: 'https://www.fusio-project.org/media/apps/adminer.png'
+    website: 'https://github.com/apioo/fusio-apps-adminer'
