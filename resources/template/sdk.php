@@ -156,7 +156,7 @@
           <div class="card-header py-3">
             <h2 class="my-0 fw-normal">VSCode</h2>
           </div>
-          <img src="<?php echo $base; ?>/img/vscode.png" class="rounded mx-auto d-block mt-3" />
+          <img src="<?php echo $base; ?>/img/sdk/vscode.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
             <a href="https://github.com/apioo/fusio-tools-vscode" class="btn btn-secondary">GitHub</a>
             <a href="https://marketplace.visualstudio.com/items?itemName=Fusio.fusio" class="btn btn-primary">Marketplace</a>
@@ -168,7 +168,7 @@
           <div class="card-header py-3">
             <h2 class="my-0 fw-normal">Electron</h2>
           </div>
-          <img src="<?php echo $base; ?>/img/electron.png" class="rounded mx-auto d-block mt-3" />
+          <img src="<?php echo $base; ?>/img/sdk/electron.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
             <a href="https://github.com/apioo/fusio-tools-electron" class="btn btn-primary">GitHub</a>
           </div>
