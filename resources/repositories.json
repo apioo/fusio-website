@@ -2,6 +2,7 @@
   "repositories": {
     "fusio": "apioo/fusio-apps-backend",
     "developer": "apioo/fusio-apps-developer",
+    "account": "apioo/fusio-apps-account",
     "redoc": "apioo/fusio-apps-redoc",
     "swagger-ui": "apioo/fusio-apps-swaggerui",
     "pma": "apioo/fusio-apps-pma",

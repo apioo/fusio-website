@@ -12,6 +12,13 @@ developer:
     description: 'The developer app is designed to quickly setup an API program where new developers can register and create/manage their apps.'
     screenshot: 'https://www.fusio-project.org/media/apps/developer.png'
     website: 'https://github.com/apioo/fusio-apps-developer'
+account:
+    version: 0.1.2
+    downloadUrl: 'https://github.com/apioo/fusio-apps-account/archive/v0.1.2.zip'
+    sha1Hash: 37c5546e92ff7a1ab582a16d277b622f400360c9
+    description: 'The account app is a simple app which provides all tools for a 3rd party developer to consume your API, it can be also easily embedded into an existing application.'
+    screenshot: 'https://www.fusio-project.org/media/apps/account.png'
+    website: 'https://github.com/apioo/fusio-apps-account'
 redoc:
     version: 1.0.1
     downloadUrl: 'https://github.com/apioo/fusio-apps-redoc/archive/v1.0.1.zip'
