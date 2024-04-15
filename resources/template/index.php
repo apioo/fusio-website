@@ -94,8 +94,8 @@ https://github.com/apioo/fusio
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
         <i class="bi bi-cursor-fill p-4"></i>
       </div>
-      <h2 class="fs-2">Event support</h2>
-      <p>Fusio contains a subscription layer which helps to build pub/sub for your API.</p>
+      <h2 class="fs-2">Webhook support</h2>
+      <p>Fusio contains a webhook system which helps to build publish/subscribe for your API.</p>
     </div>
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
