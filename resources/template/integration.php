@@ -25,11 +25,43 @@
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
+            <h2 class="my-0 fw-normal fs-5">C#</h2>
+          </div>
+          <img src="<?php echo $base; ?>/img/sdk/csharp.png" class="rounded mx-auto d-block mt-3" />
+          <div class="card-body">
+            <a href="https://github.com/apioo/fusio-sample-csharp-cli" class="btn btn-primary">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
+            <h2 class="my-0 fw-normal fs-5">Go CLI</h2>
+          </div>
+          <img src="<?php echo $base; ?>/img/sdk/go.png" class="rounded mx-auto d-block mt-3" />
+          <div class="card-body">
+            <a href="https://github.com/apioo/fusio-sample-go-cli" class="btn btn-primary">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
+            <h2 class="my-0 fw-normal fs-5">Java CLI</h2>
+          </div>
+          <img src="<?php echo $base; ?>/img/sdk/java.png" class="rounded mx-auto d-block mt-3" />
+          <div class="card-body">
+            <a href="https://github.com/apioo/fusio-sample-java-cli" class="btn btn-primary">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
             <h2 class="my-0 fw-normal fs-5">Javascript Angular</h2>
           </div>
-          <img src="<?php echo $base; ?>/img/angular.png" class="rounded mx-auto d-block mt-3" />
+          <img src="<?php echo $base; ?>/img/sdk/angular.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
-            <p>Angular app which uses the Fusio Angular SDK to quickly build a complete backend app.</p>
             <a href="https://github.com/apioo/fusio-sample-javascript-angular" class="btn btn-primary">GitHub</a>
           </div>
         </div>
@@ -39,9 +71,8 @@
           <div class="card-header py-3">
             <h2 class="my-0 fw-normal fs-5">PHP CLI</h2>
           </div>
-          <img src="<?php echo $base; ?>/img/php.png" class="rounded mx-auto d-block mt-3" />
+          <img src="<?php echo $base; ?>/img/sdk/php.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
-            <p>A sample PHP CLI app which outputs all operations of your Fusio instance.</p>
             <a href="https://github.com/apioo/fusio-sample-php-cli" class="btn btn-primary">GitHub</a>
           </div>
         </div>
@@ -49,36 +80,22 @@
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
-            <h2 class="my-0 fw-normal fs-5">Java CLI</h2>
+            <h2 class="my-0 fw-normal fs-5">PHP Fusio</h2>
           </div>
-          <img src="<?php echo $base; ?>/img/java.png" class="rounded mx-auto d-block mt-3" />
+          <img src="<?php echo $base; ?>/img/sdk/openapi.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
-            <p>A sample Java CLI app which outputs all operations of your Fusio instance.</p>
-            <a href="https://github.com/apioo/fusio-sample-java-cli" class="btn btn-primary">GitHub</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h2 class="my-0 fw-normal fs-5">Go CLI</h2>
-          </div>
-          <img src="<?php echo $base; ?>/img/go.png" class="rounded mx-auto d-block mt-3" />
-          <div class="card-body">
-            <p>A sample Go CLI app which outputs all operations of your Fusio instance.</p>
-            <a href="https://github.com/apioo/fusio-sample-go-cli" class="btn btn-primary">GitHub</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h2 class="my-0 fw-normal fs-5">Headless CMS</h2>
-          </div>
-          <img src="<?php echo $base; ?>/img/openapi.png" class="rounded mx-auto d-block mt-3" />
-          <div class="card-body">
-            <p>Fusio headless CMS sample app which shows how to structure and design a larger API.</p>
             <a href="https://github.com/apioo/fusio-sample-cms" class="btn btn-primary">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
+            <h2 class="my-0 fw-normal fs-5">Python CLI</h2>
+          </div>
+          <img src="<?php echo $base; ?>/img/sdk/python.png" class="rounded mx-auto d-block mt-3" />
+          <div class="card-body">
+            <a href="https://github.com/apioo/fusio-sample-python-cli" class="btn btn-primary">GitHub</a>
           </div>
         </div>
       </div>

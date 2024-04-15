@@ -127,6 +127,17 @@
           </div>
         </div>
       </div>
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
+            <h2 class="my-0 fw-normal">Fusio</h2>
+          </div>
+          <img src="<?php echo $base; ?>/img/sdk/php.png" class="rounded mx-auto d-block mt-3" />
+          <div class="card-body">
+            <a href="https://github.com/apioo/fusio-sample-cms" class="btn btn-secondary">Example</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
