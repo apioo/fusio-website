@@ -1,22 +1,22 @@
 fusio:
-    version: 3.1.0
-    downloadUrl: 'https://github.com/apioo/fusio-apps-backend/releases/download/v3.1.0/fusio.zip'
-    sha1Hash: c66773a2152bd91d7d081aad99ff783bb642c308
+    version: 5.0.0
+    downloadUrl: 'https://github.com/apioo/fusio-apps-backend/releases/download/v5.0.0/fusio.zip'
+    sha1Hash: 58e3dcaade4cd79ee6804cf230e209247ddb7ce4
     description: 'The backend app is the official app to develop, configure and maintain your API.'
     screenshot: 'https://www.fusio-project.org/media/apps/backend.png'
     website: 'https://github.com/apioo/fusio-apps-backend'
 developer:
-    version: 3.1.0
-    downloadUrl: 'https://github.com/apioo/fusio-apps-developer/releases/download/v3.1.0/developer.zip'
-    sha1Hash: a9da49d59c3080f7707919c1477a60d9dccb63ab
+    version: 5.0.0
+    downloadUrl: 'https://github.com/apioo/fusio-apps-developer/releases/download/v5.0.0/developer.zip'
+    sha1Hash: 59e8a9f8ed0e06f9d8288b1e8ea1cb59663e34c1
     description: 'The developer app is designed to quickly setup an API program where new developers can register and create/manage their apps.'
     screenshot: 'https://www.fusio-project.org/media/apps/developer.png'
     website: 'https://github.com/apioo/fusio-apps-developer'
 account:
-    version: 0.1.2
-    downloadUrl: 'https://github.com/apioo/fusio-apps-account/archive/v0.1.2.zip'
-    sha1Hash: 37c5546e92ff7a1ab582a16d277b622f400360c9
-    description: 'The account app is a simple app which provides all tools for a 3rd party developer to consume your API, it can be also easily embedded into an existing application.'
+    version: 1.0.0
+    downloadUrl: 'https://github.com/apioo/fusio-apps-account/releases/download/v1.0.0/account.zip'
+    sha1Hash: 1e9f813dcfbc095b2e4c91419651becec5565c47
+    description: 'The account app provides a simple user interface for 3rd party developers to consume your API.'
     screenshot: 'https://www.fusio-project.org/media/apps/account.png'
     website: 'https://github.com/apioo/fusio-apps-account'
 redoc:
