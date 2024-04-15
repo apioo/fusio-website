@@ -102,19 +102,6 @@
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h2 class="my-0 fw-normal">REST API</h2>
-          </div>
-          <img src="<?php echo $base; ?>/img/sdk/openapi.png" class="rounded mx-auto d-block mt-3" />
-          <div class="card-body">
-            <a href="<?php echo $router->getAbsolutePath([\App\Controller\API\Backend::class, 'show']); ?>" class="btn btn-primary">Backend</a>
-            <a href="<?php echo $router->getAbsolutePath([\App\Controller\API\Consumer::class, 'show']); ?>" class="btn btn-primary">Consumer</a>
-            <a href="<?php echo $router->getAbsolutePath([\App\Controller\API\System::class, 'show']); ?>" class="btn btn-primary">System</a>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </div>
@@ -136,6 +123,55 @@
           <div class="card-body">
             <a href="https://github.com/apioo/fusio-sample-javascript-angular" class="btn btn-secondary">Example</a>
             <a href="https://github.com/apioo/fusio-sdk-javascript-angular" class="btn btn-primary">GitHub</a>
+            <a href="https://www.npmjs.com/package/ngx-fusio-sdk" class="btn btn-primary">NPM</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-4 pt-4 mb-4 pb-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="display-6 fw-normal">REST API</h2>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 text-center">
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
+            <h2 class="my-0 fw-normal">Backend</h2>
+          </div>
+          <img src="<?php echo $base; ?>/img/sdk/openapi.png" class="rounded mx-auto d-block mt-3" />
+          <div class="card-body">
+            <a href="<?php echo $router->getAbsolutePath([\App\Controller\API\Backend::class, 'show']); ?>" class="btn btn-secondary">ReDoc</a>
+            <a href="https://demo.fusio-project.org/system/generator/spec-openapi?filter=backend" class="btn btn-primary">OpenAPI</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
+            <h2 class="my-0 fw-normal">Consumer</h2>
+          </div>
+          <img src="<?php echo $base; ?>/img/sdk/openapi.png" class="rounded mx-auto d-block mt-3" />
+          <div class="card-body">
+            <a href="<?php echo $router->getAbsolutePath([\App\Controller\API\Consumer::class, 'show']); ?>" class="btn btn-secondary">ReDoc</a>
+            <a href="https://demo.fusio-project.org/system/generator/spec-openapi?filter=consumer" class="btn btn-primary">OpenAPI</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
+            <h2 class="my-0 fw-normal">System</h2>
+          </div>
+          <img src="<?php echo $base; ?>/img/sdk/openapi.png" class="rounded mx-auto d-block mt-3" />
+          <div class="card-body">
+            <a href="<?php echo $router->getAbsolutePath([\App\Controller\API\System::class, 'show']); ?>" class="btn btn-secondary">ReDoc</a>
+            <a href="https://demo.fusio-project.org/system/generator/spec-openapi?filter=system" class="btn btn-primary">OpenAPI</a>
           </div>
         </div>
       </div>
