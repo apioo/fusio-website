@@ -29,7 +29,7 @@
         since the app also only works with the internal Fusio API.</p>
       <div class="btn-group btn-group-lg">
         <a href="https://youtu.be/aq4pI0LIBFc" class="btn btn-primary">Video</a>
-        <a href="https://docs.fusio-project.org/docs/use_cases/api_product" class="btn btn-secondary">Documentation</a>
+        <a href="https://docs.fusio-project.org/docs/use_cases/api_product/" class="btn btn-secondary">Documentation</a>
       </div>
     </div>
   </div>
@@ -54,7 +54,7 @@
           Based on these schemas Fusio can automatically generate an OpenAPI specification or also client SDKs.</p>
         <div class="btn-group btn-group-lg">
           <a href="https://youtu.be/S-mneuDPNzg" class="btn btn-primary">Video</a>
-          <a href="https://docs.fusio-project.org/docs/use_cases/api_gateway" class="btn btn-secondary">Documentation</a>
+          <a href="https://docs.fusio-project.org/docs/use_cases/api_gateway/" class="btn btn-secondary">Documentation</a>
         </div>
       </div>
     </div>
@@ -79,7 +79,7 @@
       <p>In this sense Fusio can be seen as a self-hosted alternative solution to services like Firebase or Supabase.</p>
       <div class="btn-group btn-group-lg">
         <a href="https://youtu.be/syRmovex3rE" class="btn btn-primary">Video</a>
-        <a href="https://docs.fusio-project.org/docs/use_cases/spa_backend" class="btn btn-secondary">Documentation</a>
+        <a href="https://docs.fusio-project.org/docs/use_cases/spa_backend/" class="btn btn-secondary">Documentation</a>
       </div>
     </div>
   </div>
@@ -103,7 +103,7 @@
         <p>Through this you can rapidly build REST APIs and it is also possible to extend all endpoints with custom
           logic.</p>
         <div class="btn-group btn-group-lg">
-          <a href="https://docs.fusio-project.org/docs/use_cases/api_builder" class="btn btn-secondary">Documentation</a>
+          <a href="https://docs.fusio-project.org/docs/use_cases/api_builder/" class="btn btn-secondary">Documentation</a>
         </div>
       </div>
     </div>
@@ -127,7 +127,7 @@
       <p>Besides this Fusio has also a great API generator which allows you to build complete APIs by different
         sources. I.e. you can use the generator to create a complete API by an entity definition.</p>
       <div class="btn-group btn-group-lg">
-        <a href="https://docs.fusio-project.org/docs/use_cases/low_code_platform" class="btn btn-secondary">Documentation</a>
+        <a href="https://docs.fusio-project.org/docs/use_cases/low_code_platform/" class="btn btn-secondary">Documentation</a>
       </div>
     </div>
   </div>
@@ -150,7 +150,7 @@
           which shows how to build and structure a complex app using Fusio.</p>
         <div class="btn-group btn-group-lg">
           <a href="https://youtu.be/2E9YnAaXq5s" class="btn btn-primary">Video</a>
-          <a href="https://docs.fusio-project.org/docs/use_cases/api_framework" class="btn btn-secondary">Documentation</a>
+          <a href="https://docs.fusio-project.org/docs/use_cases/api_framework/" class="btn btn-secondary">Documentation</a>
         </div>
       </div>
     </div>

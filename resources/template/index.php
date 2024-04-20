@@ -56,9 +56,9 @@ https://github.com/apioo/fusio
     </div>
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
-        <i class="bi bi-card-image p-4"></i>
+        <i class="bi bi-hammer p-4"></i>
       </div>
-      <h2 class="fs-2">API Generator</h2>
+      <h2 class="fs-2">API Builder</h2>
       <p>Fusio provides multiple generators to build complete APIs without coding from different sources.</p>
     </div>
     <div class="feature col">
@@ -88,14 +88,14 @@ https://github.com/apioo/fusio
       </div>
       <h2 class="fs-2">Schema generation</h2>
       <p>Fusio provides an endpoint to automatically generate <a href="https://www.openapis.org/">OAI</a> and
-        <a href="https://raml.org/">RAML</a> specifications.</p>
+        <a href="https://typeapi.org/">TypeAPI</a> specifications.</p>
     </div>
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
         <i class="bi bi-cursor-fill p-4"></i>
       </div>
       <h2 class="fs-2">Webhook support</h2>
-      <p>Fusio contains a webhook system which helps to build publish/subscribe for your API.</p>
+      <p>Fusio contains a webhook system which helps to build a publish/subscribe pattern for your API.</p>
     </div>
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
