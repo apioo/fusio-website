@@ -115,43 +115,18 @@
     <div class="col-lg-2">
       <div class="text-center mt-4 mb-4">
         <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-1 p-1 rounded-5">
-          <i class="bi bi-check-circle-fill p-4"></i>
+          <i class="bi bi-droplet-fill p-4"></i>
         </div>
       </div>
     </div>
     <div class="col-10">
-      <h2 id="low-code-platform" class="display-6 fw-normal">Low-Code Platform</h2>
-      <p>You can use Fusio as a Low-Code Platform. This means that also beginners can use Fusio to build great
-        APIs without coding. Fusio provides out of the box many actions to implement common API related features,
-        i.e. request/transform data from a database or proxy an HTTP request</p>
-      <p>Besides this Fusio has also a great API generator which allows you to build complete APIs by different
-        sources. I.e. you can use the generator to create a complete API by an entity definition.</p>
+      <h2 id="api-framework" class="display-6 fw-normal">API Framework</h2>
+      <p>You can use Fusio also simply as framework to build an API from scratch. In this case you can develop custom
+        actions and use the deploy mechanism. Please take a look at our <a href="https://github.com/apioo/fusio-sample-cms">sample headless CMS</a>
+        which shows how to build and structure a complex app using Fusio.</p>
       <div class="btn-group btn-group-lg">
-        <a href="https://docs.fusio-project.org/docs/use_cases/low_code_platform/" class="btn btn-secondary">Documentation</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-2">
-        <div class="text-center mt-4 mb-4">
-          <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-1 p-1 rounded-5">
-            <i class="bi bi-droplet-fill p-4"></i>
-          </div>
-        </div>
-      </div>
-      <div class="col-10">
-        <h2 id="api-framework" class="display-6 fw-normal">API Framework</h2>
-        <p>You can use Fusio also simply as framework to build an API from scratch. In this case you can develop custom
-          actions and use the deploy mechanism. Please take a look at our <a href="https://github.com/apioo/fusio-sample-cms">sample headless CMS</a>
-          which shows how to build and structure a complex app using Fusio.</p>
-        <div class="btn-group btn-group-lg">
-          <a href="https://youtu.be/2E9YnAaXq5s" class="btn btn-primary">Video</a>
-          <a href="https://docs.fusio-project.org/docs/use_cases/api_framework/" class="btn btn-secondary">Documentation</a>
-        </div>
+        <a href="https://youtu.be/2E9YnAaXq5s" class="btn btn-primary">Video</a>
+        <a href="https://docs.fusio-project.org/docs/use_cases/api_framework/" class="btn btn-secondary">Documentation</a>
       </div>
     </div>
   </div>
