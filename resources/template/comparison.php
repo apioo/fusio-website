@@ -69,7 +69,6 @@
           </div>
           <img src="<?php echo $base; ?>/img/compare/wso2.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
-            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'wso2']); ?>" class="btn btn-primary">Compare</a>
             <a href="https://wso2.com/" class="btn btn-secondary">Website</a>
           </div>
         </div>
@@ -128,7 +127,6 @@
           </div>
           <img src="<?php echo $base; ?>/img/compare/appwrite.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
-            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'appwrite']); ?>" class="btn btn-primary">Compare</a>
             <a href="https://appwrite.io/" class="btn btn-secondary">Website</a>
           </div>
         </div>
@@ -161,7 +159,6 @@
           </div>
           <img src="<?php echo $base; ?>/img/compare/postgrest.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
-            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'postgrest']); ?>" class="btn btn-primary">Compare</a>
             <a href="https://postgrest.org/" class="btn btn-secondary">Website</a>
           </div>
         </div>
@@ -173,7 +170,6 @@
           </div>
           <img src="<?php echo $base; ?>/img/compare/dreamfactory.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
-            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'dreamfactory']); ?>" class="btn btn-primary">Compare</a>
             <a href="https://www.dreamfactory.com/" class="btn btn-secondary">Website</a>
           </div>
         </div>
@@ -207,7 +203,6 @@
           </div>
           <img src="<?php echo $base; ?>/img/compare/strapi.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
-            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'strapi']); ?>" class="btn btn-primary">Compare</a>
             <a href="https://strapi.io/" class="btn btn-secondary">Website</a>
           </div>
         </div>
@@ -219,7 +214,6 @@
           </div>
           <img src="<?php echo $base; ?>/img/compare/ghost.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
-            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'ghost']); ?>" class="btn btn-primary">Compare</a>
             <a href="https://ghost.org/" class="btn btn-secondary">Website</a>
           </div>
         </div>
@@ -231,7 +225,6 @@
           </div>
           <img src="<?php echo $base; ?>/img/compare/directus.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
-            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'directus']); ?>" class="btn btn-primary">Compare</a>
             <a href="https://directus.io/" class="btn btn-secondary">Website</a>
           </div>
         </div>
@@ -263,7 +256,6 @@
           </div>
           <img src="<?php echo $base; ?>/img/compare/aws.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
-            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'aws']); ?>" class="btn btn-primary">Compare</a>
             <a href="https://aws.amazon.com/" class="btn btn-secondary">Website</a>
           </div>
         </div>
@@ -275,7 +267,6 @@
           </div>
           <img src="<?php echo $base; ?>/img/compare/gcp.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
-            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'gcp']); ?>" class="btn btn-primary">Compare</a>
             <a href="https://cloud.google.com/" class="btn btn-secondary">Website</a>
           </div>
         </div>
@@ -287,7 +278,6 @@
           </div>
           <img src="<?php echo $base; ?>/img/compare/azure.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
-            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'azure']); ?>" class="btn btn-primary">Compare</a>
             <a href="https://azure.microsoft.com/" class="btn btn-secondary">Website</a>
           </div>
         </div>
