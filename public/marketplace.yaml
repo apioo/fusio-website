@@ -1,21 +1,21 @@
 fusio:
-    version: 5.0.0
-    downloadUrl: 'https://github.com/apioo/fusio-apps-backend/releases/download/v5.0.0/fusio.zip'
-    sha1Hash: 58e3dcaade4cd79ee6804cf230e209247ddb7ce4
+    version: 5.0.1
+    downloadUrl: 'https://github.com/apioo/fusio-apps-backend/releases/download/v5.0.1/fusio.zip'
+    sha1Hash: bfa37f0b37d883025269889d7c88d826b6558981
     description: 'The backend app is the official app to develop, configure and maintain your API.'
     screenshot: 'https://www.fusio-project.org/media/apps/backend.png'
     website: 'https://github.com/apioo/fusio-apps-backend'
 developer:
-    version: 5.0.0
-    downloadUrl: 'https://github.com/apioo/fusio-apps-developer/releases/download/v5.0.0/developer.zip'
-    sha1Hash: 59e8a9f8ed0e06f9d8288b1e8ea1cb59663e34c1
+    version: 5.0.1
+    downloadUrl: 'https://github.com/apioo/fusio-apps-developer/releases/download/v5.0.1/developer.zip'
+    sha1Hash: 5e957bda0719ef8246aec4d12f81ce52f9cf0dff
     description: 'The developer app is designed to quickly setup an API program where new developers can register and create/manage their apps.'
     screenshot: 'https://www.fusio-project.org/media/apps/developer.png'
     website: 'https://github.com/apioo/fusio-apps-developer'
 account:
-    version: 1.0.0
-    downloadUrl: 'https://github.com/apioo/fusio-apps-account/releases/download/v1.0.0/account.zip'
-    sha1Hash: 1e9f813dcfbc095b2e4c91419651becec5565c47
+    version: 1.0.1
+    downloadUrl: 'https://github.com/apioo/fusio-apps-account/releases/download/v1.0.1/account.zip'
+    sha1Hash: 7d97508b9d1cecae0345cc963916597a47b1f015
     description: 'The account app provides a simple user interface for 3rd party developers to consume your API.'
     screenshot: 'https://www.fusio-project.org/media/apps/account.png'
     website: 'https://github.com/apioo/fusio-apps-account'
