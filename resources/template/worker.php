@@ -14,7 +14,7 @@
   <div class="row">
     <div class="col">
       <p>The following list shows worker which allow you to implement actions in a different programming languages. More
-        information about the <a href="https://docs.fusio-project.org/docs/concepts/worker_api/">worker system</a> at
+        information about the <a href="https://docs.fusio-project.org/docs/use_cases/api_gateway/worker">worker system</a> at
         our documentation.</p>
     </div>
   </div>
@@ -28,7 +28,7 @@
           <div class="card-header py-3">
             <h2 class="my-0 fw-normal fs-5">Java</h2>
           </div>
-          <img src="<?php echo $base; ?>/img/java.png" class="rounded mx-auto d-block mt-3" />
+          <img src="<?php echo $base; ?>/img/sdk/java.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
             <p>Worker implementation written in Java.</p>
             <a href="https://github.com/apioo/fusio-worker-java" class="btn btn-primary">GitHub</a>
@@ -41,7 +41,7 @@
           <div class="card-header py-3">
             <h2 class="my-0 fw-normal fs-5">Javascript</h2>
           </div>
-          <img src="<?php echo $base; ?>/img/es6.png" class="rounded mx-auto d-block mt-3" />
+          <img src="<?php echo $base; ?>/img/sdk/es6.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
             <p>Worker implementation written in Javascript running on Nodejs.</p>
             <a href="https://github.com/apioo/fusio-worker-javascript" class="btn btn-primary">GitHub</a>
@@ -54,7 +54,7 @@
           <div class="card-header py-3">
             <h2 class="my-0 fw-normal fs-5">PHP</h2>
           </div>
-          <img src="<?php echo $base; ?>/img/php.png" class="rounded mx-auto d-block mt-3" />
+          <img src="<?php echo $base; ?>/img/sdk/php.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
             <p>Worker implementation written in PHP.</p>
             <a href="https://github.com/apioo/fusio-worker-php" class="btn btn-primary">GitHub</a>
@@ -67,7 +67,7 @@
           <div class="card-header py-3">
             <h2 class="my-0 fw-normal fs-5">Python</h2>
           </div>
-          <img src="<?php echo $base; ?>/img/python.png" class="rounded mx-auto d-block mt-3" />
+          <img src="<?php echo $base; ?>/img/sdk/python.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
             <p>Worker implementation written in Python.</p>
             <a href="https://github.com/apioo/fusio-worker-python" class="btn btn-primary">GitHub</a>
