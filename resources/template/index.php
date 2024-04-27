@@ -42,7 +42,7 @@ https://github.com/apioo/fusio
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
         <i class="bi bi-cloud-fill p-4"></i>
       </div>
-      <h2 class="fs-2">API management</h2>
+      <h2 class="fs-2">API Management</h2>
       <p>Fusio provides a powerful <a href="<?php echo $router->getAbsolutePath([\App\Controller\Demo::class, 'show']); ?>">backend</a>
         app to control and monitor your API.</p>
     </div>
@@ -50,7 +50,7 @@ https://github.com/apioo/fusio
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
         <i class="bi bi-box-fill p-4"></i>
       </div>
-      <h2 class="fs-2">Developer portal</h2>
+      <h2 class="fs-2">Developer Portal</h2>
       <p>Fusio provides a <a href="https://demo.fusio-project.org/apps/developer/">developer portal</a>
         app where developer can register to use your API.</p>
     </div>
@@ -72,21 +72,21 @@ https://github.com/apioo/fusio
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
         <i class="bi bi-code p-4"></i>
       </div>
-      <h2 class="fs-2">SDK generation</h2>
+      <h2 class="fs-2">SDK Generation</h2>
       <p>Fusio can automatically generate a client SDK for your API based on the defined schema.</p>
     </div>
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
         <i class="bi bi-bar-chart-fill p-4"></i>
       </div>
-      <h2 class="fs-2">Rate limiting</h2>
+      <h2 class="fs-2">Rate Limiting</h2>
       <p>Fusio provides a way to rate limit requests based on the user or app.</p>
     </div>
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
         <i class="bi bi-cpu-fill p-4"></i>
       </div>
-      <h2 class="fs-2">Schema generation</h2>
+      <h2 class="fs-2">Schema Generation</h2>
       <p>Fusio provides an endpoint to automatically generate <a href="https://www.openapis.org/">OAI</a> and
         <a href="https://typeapi.org/">TypeAPI</a> specifications.</p>
     </div>
@@ -94,14 +94,14 @@ https://github.com/apioo/fusio
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
         <i class="bi bi-cursor-fill p-4"></i>
       </div>
-      <h2 class="fs-2">Webhook support</h2>
+      <h2 class="fs-2">Webhook</h2>
       <p>Fusio contains a webhook system which helps to build a publish/subscribe pattern for your API.</p>
     </div>
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
         <i class="bi bi-calendar-event-fill p-4"></i>
       </div>
-      <h2 class="fs-2">OAuth2 authorization</h2>
+      <h2 class="fs-2">OAuth2 Authorization</h2>
       <p>App developer can obtain an access token to access non-public API endpoints.</p>
     </div>
   </div>
