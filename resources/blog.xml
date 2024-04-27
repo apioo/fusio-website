@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>urn:fusio-project-org:blog</id>
     <title>Fusio Blog</title>
-    <updated>2024-04-27T12:03:00Z</updated>
+    <updated>2024-04-27T19:27:00Z</updated>
     <link rel="self" href="https://www.fusio-project.org/blog/feed" type="application/atom+xml" />
     <entry>
         <id>urn:fusio-project-org:blog:60</id>
@@ -11,7 +11,7 @@
             <name>chriskapp</name>
             <uri>https://chrisk.app</uri>
         </author>
-        <updated>2024-04-27T12:03:00Z</updated>
+        <updated>2024-04-27T19:27:00Z</updated>
         <summary>
             This post explains the latest website updates and our plans for the next 5.0 release.
         </summary>
