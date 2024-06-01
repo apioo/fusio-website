@@ -1,7 +1,7 @@
 fusio:
-    version: 5.0.3
-    downloadUrl: 'https://github.com/apioo/fusio-apps-backend/releases/download/v5.0.3/fusio.zip'
-    sha1Hash: 1ad5ef355a8bf3e591ec905ae903f19072f14b27
+    version: 5.0.4
+    downloadUrl: 'https://github.com/apioo/fusio-apps-backend/releases/download/v5.0.4/fusio.zip'
+    sha1Hash: 641750a2f4be53bba66bc4e62e93378e36598951
     description: 'The backend app is the official app to develop, configure and maintain your API.'
     screenshot: 'https://www.fusio-project.org/media/apps/backend.png'
     website: 'https://github.com/apioo/fusio-apps-backend'
