@@ -2,8 +2,121 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>urn:fusio-project-org:blog</id>
     <title>Fusio Blog</title>
-    <updated>2024-04-27T19:27:00Z</updated>
+    <updated>2024-06-01T12:55:00Z</updated>
     <link rel="self" href="https://www.fusio-project.org/blog/feed" type="application/atom+xml" />
+    <entry>
+        <id>urn:fusio-project-org:blog:61</id>
+        <title>Fusio 5.0 released</title>
+        <author>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
+        </author>
+        <updated>2024-06-01T12:55:00Z</updated>
+        <summary>
+            This post announces the release of the next major version 5.0
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>We are really excited to finally release the next major version 5.0 of Fusio.</p>
+<p>This release provides some great new features, and we continue our mission to build one of the best tools to build
+innovative API solutions. Like always we will cover all important features of this new release in the following list.</p>
+
+<ul>
+    <li>
+        <b>Multi tenancy</b>
+        <p>Fusio now supports multi tenancy on the database level. This helps to efficiently run multiple Fusio
+        instances on a single large server or cluster. To configure a tenant you only need to set the
+        <code>APP_TENANT_ID</code> environment variable and all database calls will only select rows with the fitting
+        tenant id. There are also API endpoints to setup or remove a tenant.</p>
+    </li>
+    <li>
+        <b>Worker redesign</b>
+        <p>We have redesigned the worker system. In general the worker system allows to write backend logic in different
+        programming languages. Previously we have used the Thrift RPC system to manage the communication between
+        Fusio and the worker. We have moved away from this to a simple <a href="https://app.typehub.cloud/d/fusio/worker">REST API</a>
+        which gives us the benefit to run such a worker in different environments like on a serverless platform which
+        is a natural fit for a worker.</p>
+    </li>
+    <li>
+        <b>Personal access token</b>
+        <p>It is now possible at the user panel to create a personal access token. Through this a user can easily obtain
+        an access token to access private endpoints. It is possible to select specific scopes for the token and how long
+        the token is valid.</p>
+    </li>
+    <li>
+        <b>Config add option to exclude specific actions and connections</b>
+        <p>The config file contains two new options <code>fusio_action_exclude</code> and <code>fusio_connection_exclude</code>
+        which can be used to exclude specific connections or actions at your instance. I.e. by default Fusio offers some
+        "unsafe" actions like the CLI or PHP-Sandbox action which can be a security issue. Through the new config it is
+        possible to exclude such actions.</p>
+    </li>
+    <li>
+        <b>Add account app</b>
+        <p>We have added a new dedicated account app which can be integrated into an existing web app to manage all
+        developer account details. This app is also included at the developer and backend app.</p>
+    </li>
+    <li>
+        <b>Access metadata in action</b>
+        <p>Inside your action it is now possible to access the metadata of the action. You can set this metadata
+        if you create an action through our backend API.</p>
+    </li>
+    <li>
+        <b>Backup import/export</b>
+        <p>At the backend we have a new panel under System / Backend which can be used to import/export the complete
+        configuration. This makes it also easier to move configurations from test to production environments. Note this
+        only exports the database configuration, custom classes at the src folder are not exported and must be synced
+        separately.</p>
+    </li>
+    <li>
+        <b>Every create, update and delete operation now returns the affected id</b>
+        <p>The backend API now returns the affected primary key for every create, update and delete operation. This
+        can be useful if you want to directly further work with an entity which you have created.</p>
+    </li>
+    <li>
+        <b>Added and improved actions</b>
+        <p>We have added the following two new actions, besides this we have also improved several other actions.</p>
+        <ul>
+            <li>
+                <p><code>Fusio\Adapter\Http\Action\HttpRaw</code></p>
+                <p>A new action to send complete customized HTTP requests. This allows i.e. to send XML payloads to
+                invoke legacy web services.</p>
+            </li>
+            <li>
+                <p><code>Fusio\Adapter\Util\Action\UtilCondition</code></p>
+                <p>A new action to invoke different actions depending on a logic expression. Through this it is possible
+                to invoke different actions depending on a condition.</p>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <b>Improved OAuth2 connection handling</b>
+        <p>We have improved the OAuth2 connection handling so that it is now easier to add connections which needs
+        OAuth2 authorization. In the future we will add new connections to external services so that our users can
+        easily integrate those external services into Fusio.</p>
+    </li>
+</ul>
+
+<p>At the end I like to give you a short insight into our future plans. We are working for some time in the background
+on a new project called <a href="https://sdk-fabric.org/">SDK-Fabric</a>, this project basically tries to build a global
+SDK infrastructure for different provides. We plan to integrate those SDKs into Fusio so that you can easily work with
+those services in your actions. You can think of it like Zapier where you can configure your connections and then create
+actions to execute specific tasks. The SDK-Fabric project contains currently only some provides but we hope to extend
+this in the future also with the help of our community. Despite this we plan to reboot our Fusio cloud platform using
+our new tenant and worker system. We try to build a platform where every user can easily get a new Fusio instance in the
+cloud.</p>
+
+<p>Finally I like to thank every user who supports our project. In the last year we have seen many activities and I had
+also lots of great conversations which also influenced this release. To support our project feel free to give it a
+star on <a href="https://github.com/apioo/fusio">GitHub</a> and you can also financially support the project through a
+<a href="https://github.com/sponsors/chriskapp">donation</a>.</p>
+
+<p>Best regards<br>
+Christoph</p>
+
+]]></content>
+    </entry>
     <entry>
         <id>urn:fusio-project-org:blog:60</id>
         <title>Website update and preparing the 5.0 release</title>
