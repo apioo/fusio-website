@@ -2,8 +2,87 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>urn:fusio-project-org:blog</id>
     <title>Fusio Blog</title>
-    <updated>2024-06-01T12:55:00Z</updated>
+    <updated>2024-07-14T01:32:00Z</updated>
     <link rel="self" href="https://www.fusio-project.org/blog/feed" type="application/atom+xml" />
+    <entry>
+        <id>urn:fusio-project-org:blog:62</id>
+        <title>Fusio 5.1.0 released</title>
+        <author>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
+        </author>
+        <updated>2024-07-14T01:32:00Z</updated>
+        <summary>
+            This post announces the release of the next major version 5.1.0
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>We are happy to release the next minor version 5.1.0 of Fusio.</p>
+<p>In the following list we cover all important features of this new release:</p>
+
+<ul>
+    <li>
+        <b>Add backend database panel</b>
+        <p>A new database panel was added which allows you to view and edit the database schema of every SQL connection.
+        This new database panel replaces the phpMyAdmin and Adminer app which are no longer needed to modify your
+        database schema. This improves also the developer experience since you can now build your complete API inside the backend.</p>
+        <div class="mt-4 mb-4 text-center">
+            <img src="/img/blog/62/database_panel.png" alt="Database panel" class="img-fluid">
+        </div>
+    </li>
+    <li>
+        <b>Integrate the new marketplace</b>
+        <p>We have introduced a new <a href="https://marketplace.fusio-project.org/">marketplace</a> where every user can
+        register and provide actions and apps which can then be installed through the marketplace panel. Previously the
+        marketplace contained only apps, the new marketplace also contains actions.</p>
+        <div class="mt-4 mb-4 text-center">
+            <img src="/img/blog/62/marketplace_panel.png" alt="Marketplace panel" class="img-fluid">
+        </div>
+    </li>
+    <li>
+        <b>Add development section to the backend app</b>
+        <p>To keep the menu clearer we have introduced a new "development" section which now contains the new Database panel
+        and we have also moved the SDK, Generator and Marketplace to this section.</p>
+    </li>
+    <li>
+        <b>Add SDK Fabric adapter</b>
+        <p>The SDK Fabric adapter is based on our new <a href="https://sdk-fabric.org/">SDK-Fabric</a> project which is our
+        attempt to integrate external APIs into Fusio. Initially we have added some services like Airtable/Notion and
+        we plan to extend this on demand, so please let us know if you like to see support for a specific service. Every
+        SDK connection can then be used in an action to work with the service.</p>
+        <div class="mt-4 mb-4 text-center">
+            <img src="/img/blog/62/connection_sdk.png" alt="Connection SDK" class="img-fluid">
+        </div>
+    </li>
+    <li>
+        <b>Add PHP local worker</b>
+        <p>A new PHP local worker was added which works exactly like the normal PHP worker, the only difference is that
+        the code gets executed on the server where Fusio runs and not at a dedicated worker service, this means you can
+        use this worker directly out of the box without configuring a worker.</p>
+        <div class="mt-4 mb-4 text-center">
+            <img src="/img/blog/62/php_local_worker.png" alt="PHP Local Worker" class="img-fluid">
+        </div>
+    </li>
+    <li>
+        <b>Improve PHP worker use engine interface</b>
+        <p>The PHP worker services now also implement the interfaces of the <code>fusio/engine</code> package which are
+        used on internal actions. This makes it easier to move action code into different environments.</p>
+    </li>
+</ul>
+
+<p>With this release we greatly improve the developer experience by providing a database panel, and we have started to
+integrate external service SDKs. In the future we plan to extend those services so that Fusio can be used to easily
+integrate and build new services based on those SDKs. Have fun with this release, if you want to provide some feedback
+take a look at our GitHub <a href="https://github.com/apioo/fusio/discussions">discussions</a> or
+<a href="https://github.com/apioo/fusio/issues">issues</a> page.</p>
+
+<p>Best regards<br>
+Christoph</p>
+
+]]></content>
+    </entry>
     <entry>
         <id>urn:fusio-project-org:blog:61</id>
         <title>Fusio 5.0 released</title>
