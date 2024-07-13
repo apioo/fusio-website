@@ -1,10 +1,9 @@
 <?php include(__DIR__ . '/inc/header.php'); ?>
 
 <!--
-Hey developer, if you want to add an app to the marketplace you need to add your repository to the repositories.json
-file at the root of this repository. Then your app repository needs also an app.yaml file where you provide some meta
-information about your app see also https://github.com/apioo/fusio-apps-backend/blob/master/app.yaml
-Then your app is easy installable via the Fusio backend app and can be used by all our users.
+Hey developer, if you want to add an app to the marketplace you need to register at https://marketplace.fusio-project.org/
+there you can create and test new actions or apps and publish them to the global directory. Then your app is easy
+installable via the Fusio backend app and can be used by all our users.
 -->
 
 <div class="fusio-headline">
