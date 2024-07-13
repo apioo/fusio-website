@@ -1,11 +1,5 @@
 <?php
 
-use App\Service\AdapterFetcher;
-use App\Service\ApiReader;
-use App\Service\BlogUpdater;
-use App\Service\CaptchaVerifier;
-use App\Service\ReleaseFetcher;
-use App\Service\Slugify;
 use PSX\Framework\Dependency\Configurator;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 

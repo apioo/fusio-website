@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "28b196f60bbb1786bdaeaa8b5688a6cf",
+    "content-hash": "04ef135d0607bc1f604e6b7caaadf3f2",
     "packages": [
         {
             "name": "doctrine/cache",
@@ -595,6 +595,50 @@
                 }
             ],
             "time": "2023-10-06T06:47:41+00:00"
+        },
+        {
+            "name": "fusio/marketplace",
+            "version": "v0.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/apioo/fusio-marketplace-sdk-php.git",
+                "reference": "f5aa16e653a62490956b71b2bc3a4b8a25f485ca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/apioo/fusio-marketplace-sdk-php/zipball/f5aa16e653a62490956b71b2bc3a4b8a25f485ca",
+                "reference": "f5aa16e653a62490956b71b2bc3a4b8a25f485ca",
+                "shasum": ""
+            },
+            "require": {
+                "sdkgen/client": "^1.0"
+            },
+            "require-dev": {
+                "vimeo/psalm": "^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Fusio\\Marketplace\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "The Marketplace helps distributing actions and apps across the global Fusio ecosystem",
+            "homepage": "https://www.fusio-project.org/",
+            "support": {
+                "issues": "https://github.com/apioo/fusio-marketplace-sdk-php/issues",
+                "source": "https://github.com/apioo/fusio-marketplace-sdk-php/tree/v0.1.4"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/chriskapp",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-07-12T20:03:04+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -1645,6 +1689,57 @@
                 "source": "https://github.com/php-fig/log/tree/3.0.0"
             },
             "time": "2021-07-14T16:46:02+00:00"
+        },
+        {
+            "name": "psr/simple-cache",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/simple-cache.git",
+                "reference": "764e0b3939f5ca87cb904f570ef9be2d78a07865"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/simple-cache/zipball/764e0b3939f5ca87cb904f570ef9be2d78a07865",
+                "reference": "764e0b3939f5ca87cb904f570ef9be2d78a07865",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\SimpleCache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interfaces for simple caching",
+            "keywords": [
+                "cache",
+                "caching",
+                "psr",
+                "psr-16",
+                "simple-cache"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/simple-cache/tree/3.0.0"
+            },
+            "time": "2021-10-29T13:26:27+00:00"
         },
         {
             "name": "psx/api",
@@ -2747,6 +2842,77 @@
                 "source": "https://github.com/ralouphie/getallheaders/tree/develop"
             },
             "time": "2019-03-08T08:55:37+00:00"
+        },
+        {
+            "name": "sdkgen/client",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/apioo/sdkgen-php.git",
+                "reference": "3a3e8cb788972ea580eb9997bb4e468f1cf4e083"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/apioo/sdkgen-php/zipball/3a3e8cb788972ea580eb9997bb4e468f1cf4e083",
+                "reference": "3a3e8cb788972ea580eb9997bb4e468f1cf4e083",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.4",
+                "php": ">=8.1",
+                "psr/simple-cache": "^3.0",
+                "psx/json": "^3.0",
+                "psx/model": "^5.0",
+                "psx/schema": "^5.0|^6.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.0",
+                "vimeo/psalm": "^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Sdkgen\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christoph Kappestein",
+                    "email": "christoph.kappestein@gmail.com",
+                    "homepage": "https://chrisk.app"
+                }
+            ],
+            "description": "SDKgen client",
+            "homepage": "https://sdkgen.app",
+            "keywords": [
+                "client",
+                "generator",
+                "sdk",
+                "sdkgen"
+            ],
+            "support": {
+                "issues": "https://github.com/apioo/sdkgen-php/issues",
+                "source": "https://github.com/apioo/sdkgen-php/tree/v1.1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://www.paypal.me/fusioapi",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/chriskapp",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/fusio",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2024-03-24T18:16:15+00:00"
         },
         {
             "name": "symfony/cache",

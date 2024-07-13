@@ -4,7 +4,8 @@
     "psx/framework": "^7.0",
     "symfony/dotenv": "^6.0",
     "symfony/mailer": "^6.0",
-    "symfony/sendgrid-mailer": "^6.0"
+    "symfony/sendgrid-mailer": "^6.0",
+    "fusio/marketplace": "^0.1.4"
   },
   "require-dev": {
     "vimeo/psalm": "^5.9"

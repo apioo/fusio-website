@@ -23,6 +23,8 @@
   <link rel="alternate" href="https://www.fusio-project.org/blog/feed" type="application/atom+xml" title="Fusio Blog" />
   <?php if(isset($canonical)): ?><link rel="canonical" href="<?php echo $canonical; ?>" />
 <?php endif; ?>
+  <?php if(isset($bootstrap_icons)): ?><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<?php endif; ?>
   <script async src="<?php echo $base; ?>/dist/app.min.js"></script>
   <?php if (!str_contains($url, '127.0.0.1')): ?><script async src="https://www.googletagmanager.com/gtag/js?id=G-K58XVFTP9N"></script>
 <?php endif; ?>
