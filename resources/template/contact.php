@@ -18,7 +18,7 @@
         <?php elseif(isset($success)): ?>
           <div class="alert alert-success"><b>Thanks for your request, we will answer your request as soon as possible.</b></div>
           <script>
-            gtag("event", "ads_conversion_Lead_Formular_senden_1");
+            gtag("event", "conversion_event_submit_lead_form");
           </script>
         <?php endif; ?>
 
