@@ -70,6 +70,49 @@
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
+            <h2 class="my-0 fw-normal">Marketplace</h2>
+          </div>
+          <div class="card-body">
+            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
+              <i class="bi bi-shop-window p-4"></i>
+            </div>
+            <p>Marketplace to distribute actions and apps across the global Fusio ecosystem.</p>
+            <a href="https://marketplace.fusio-project.org" class="btn btn-primary">Website</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
+            <h2 class="my-0 fw-normal">Fusio</h2>
+          </div>
+          <div class="card-body">
+            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
+              <i class="bi bi-house p-4"></i>
+            </div>
+            <p>Open source API management platform which helps to create innovative API solutions.</p>
+            <a href="https://github.com/sponsors/chriskapp" class="btn btn-primary">Donate</a>
+            <a href="https://github.com/apioo/fusio" class="btn btn-secondary">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
+            <h2 class="my-0 fw-normal">PSX</h2>
+          </div>
+          <div class="card-body">
+            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
+              <i class="bi bi-wrench p-4"></i>
+            </div>
+            <p>An innovative PHP framework dedicated to build fully typed REST APIs.</p>
+            <a href="https://phpsx.org/" class="btn btn-primary">Website</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
             <h2 class="my-0 fw-normal">TypeSchema</h2>
           </div>
           <div class="card-body">
@@ -109,36 +152,6 @@
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h2 class="my-0 fw-normal">Fusio</h2>
-          </div>
-          <div class="card-body">
-            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
-              <i class="bi bi-house p-4"></i>
-            </div>
-            <p>Open source API management platform which helps to create innovative API solutions.</p>
-            <a href="https://github.com/sponsors/chriskapp" class="btn btn-primary">Donate</a>
-            <a href="https://github.com/apioo/fusio" class="btn btn-secondary">GitHub</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h2 class="my-0 fw-normal">PSX</h2>
-          </div>
-          <div class="card-body">
-            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
-              <i class="bi bi-wrench p-4"></i>
-            </div>
-            <p>An innovative PHP framework dedicated to build fully typed REST APIs.</p>
-            <a href="https://phpsx.org/" class="btn btn-primary">Website</a>
-          </div>
-        </div>
-      </div>
-      <div class="col"></div>
     </div>
   </div>
 </div>
