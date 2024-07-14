@@ -50,6 +50,5 @@ RUN cd /var/www/html && ./bin/psx migration:migrate --no-interaction
 RUN cd /var/www/html && ./bin/psx app:fetch_adapter
 RUN cd /var/www/html && ./bin/psx app:fetch_release
 RUN cd /var/www/html && ./bin/psx app:update_blog
-RUN cd /var/www/html && php build.php
 
 RUN chmod 777 -R /var/www/html/cache
