@@ -2,8 +2,74 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>urn:fusio-project-org:blog</id>
     <title>Fusio Blog</title>
-    <updated>2024-07-28T20:52:00Z</updated>
+    <updated>2024-08-05T20:58:00Z</updated>
     <link rel="self" href="https://www.fusio-project.org/blog/feed" type="application/atom+xml" />
+    <entry>
+        <id>urn:fusio-project-org:blog:64</id>
+        <title>Fusio 5.1.3 released</title>
+        <author>
+            <name>chriskapp</name>
+            <uri>https://chrisk.app</uri>
+        </author>
+        <updated>2024-08-05T20:58:00Z</updated>
+        <summary>
+            This post announces the release of the next version 5.1.3
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>We are happy to release the next version 5.1.3 of Fusio.</p>
+<p>The following list covers all important features of this release:</p>
+
+<ul>
+    <li>
+        <b>Add category id to connection</b>
+        <p>The connection contains now a category id, this means users assigned to a specific category also only see the
+        connections assigned to this category.</p>
+    </li>
+    <li>
+        <b>Add option to disable a specific test case</b>
+        <p>It is now possible to disable specific tests in case it is not possible to test them.</p>
+    </li>
+    <li>
+        <b>Streamline worker response return</b>
+        <p>The Java/Javascript and Python worker were adjusted to require a return of the response, previously this was not required.
+        In most cases you probably have this already in your action but in case you need to return the <code>response.build(...)</code> response.
+        Also the Java worker has changed that you now need to implement a <code>def handle(...)</code> method,
+        the documentation contains also an <a href="https://docs.fusio-project.org/docs/backend/api/action/worker-javascript">example</a>.</p>
+    </li>
+    <li>
+        <b>Test use transaction around main connection</b>
+        <p>The main connection starts now also a transaction so that running tests creates no log entries etc.</p>
+    </li>
+    <li>
+        <b>Fix set HTTP code on existing operation</b>
+        <p>Previously it was not possible to change the HTTP code of an existing operation which is now fixed.</p>
+    </li>
+    <li>
+        <b>SQL action handle UUID as primary key</b>
+        <p>The SQL actions work now also with UUID as primary key instead of auto increments.</p>
+    </li>
+    <li>
+        <b>Add GraphQL-Query action</b>
+        <p>A new GraphQL-Query action was added which executes a define GraphQL query and returns the response. This
+        has the advantage that your endpoint only returns a specific response which you can describe with a schema.</p>
+    </li>
+    <li>
+        <b>Improve marketplace env handling to replace only string values</b>
+        <p>We have made the env replace logic more robust by only handling scalar values.</p>
+    </li>
+</ul>
+
+<p>If you want to provide some feedback take a look at our GitHub <a href="https://github.com/apioo/fusio/discussions">discussions</a> or
+<a href="https://github.com/apioo/fusio/issues">issues</a> page.</p>
+
+<p>Best regards<br>
+Christoph</p>
+
+]]></content>
+    </entry>
     <entry>
         <id>urn:fusio-project-org:blog:63</id>
         <title>Fusio 5.1.2 released</title>
