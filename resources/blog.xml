@@ -37,7 +37,7 @@
         <p>The Java/Javascript and Python worker were adjusted to require a return of the response, previously this was not required.
         In most cases you probably have this already in your action but in case you need to return the <code>response.build(...)</code> response.
         Also the Java worker has changed that you now need to implement a <code>def handle(...)</code> method,
-        the documentation contains also an <a href="https://docs.fusio-project.org/docs/backend/api/action/worker-javascript">example</a>.</p>
+        the documentation contains also an <a href="https://docs.fusio-project.org/docs/backend/api/action/worker-java">example</a>.</p>
     </li>
     <li>
         <b>Test use transaction around main connection</b>
