@@ -35,7 +35,7 @@
     <li>
         <b>Streamline worker response return</b>
         <p>The Java/Javascript and Python worker were adjusted to require a return of the response, previously this was not required.
-        In most cases you probably have this already in your action but in case you need to return the <code>response.build(...)</code> response.
+        In most cases you probably have this already in your action but if not you need to return the <code>response.build(...)</code> response.
         Also the Java worker has changed that you now need to implement a <code>def handle(...)</code> method,
         the documentation contains also an <a href="https://docs.fusio-project.org/docs/backend/api/action/worker-java">example</a>.</p>
     </li>
@@ -53,7 +53,7 @@
     </li>
     <li>
         <b>Add GraphQL-Query action</b>
-        <p>A new GraphQL-Query action was added which executes a define GraphQL query and returns the response. This
+        <p>A new GraphQL-Query action was added which executes a defined GraphQL query and returns the response. This
         has the advantage that your endpoint only returns a specific response which you can describe with a schema.</p>
     </li>
     <li>
