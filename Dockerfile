@@ -1,6 +1,6 @@
-FROM php:8.1-apache
+FROM php:8.2-apache
 MAINTAINER Christoph Kappestein <christoph.kappestein@apioo.de>
-LABEL description="TypeAPI website"
+LABEL description="Fusio website"
 
 ENV COMPOSER_VERSION "2.5.5"
 ENV COMPOSER_SHA256 "566a6d1cf4be1cc3ac882d2a2a13817ffae54e60f5aa7c9137434810a5809ffc"
