@@ -8,8 +8,17 @@ return [
     'recaptcha_key'           => env('APP_RECAPTCHA_KEY')->string(),
     'recaptcha_secret'        => env('APP_RECAPTCHA_SECRET')->string(),
 
-    // File which contains an atom feed with blog entries
+    // the blog source xml file containing all posts
     'blog_file'               => __DIR__ . '/resources/blog.xml',
+    'blog_title'              => 'Fusio',
+
+    // the default author of the blog posts
+    'blog_author_name'        => 'chriskapp',
+    'blog_author_uri'         => 'https://chrisk.app/',
+
+    // the blog template files
+    'blog_template_index'     => 'blog.php',
+    'blog_template_detail'    => 'blog/detail.php',
 
     // GIT repo data
     'git_api'                 => 'https://api.github.com',

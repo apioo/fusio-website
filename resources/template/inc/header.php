@@ -20,7 +20,7 @@
   <link rel="dns-prefetch" href="https://www.googletagmanager.com/">
   <link rel="icon" href="<?php echo $base; ?>/img/fusio_32px.png" type="image/png" />
   <link rel="stylesheet" href="<?php echo $base; ?>/dist/app.min.css" />
-  <link rel="alternate" href="https://www.fusio-project.org/blog/feed" type="application/atom+xml" title="Fusio Blog" />
+  <link rel="alternate" href="<?php echo $router->getAbsolutePath([\Chriskapp\Blog\Controller\Feed::class, 'show']); ?>" type="application/atom+xml" title="Fusio Blog" />
   <?php if(isset($canonical)): ?><link rel="canonical" href="<?php echo $canonical; ?>" />
 <?php endif; ?>
   <?php if(isset($bootstrap_icons)): ?><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -84,7 +84,7 @@
           <a href="<?php echo $router->getAbsolutePath([\App\Controller\Partner::class, 'show']); ?>" class="nav-link">Partner</a>
         </li>
         <li class="nav-item">
-          <a href="<?php echo $router->getAbsolutePath([\App\Controller\Blog::class, 'show']); ?>" class="nav-link">Blog</a>
+          <a href="<?php echo $router->getAbsolutePath([\Chriskapp\Blog\Controller\Index::class, 'show']); ?>" class="nav-link">Blog</a>
         </li>
       </ul>
     </div>

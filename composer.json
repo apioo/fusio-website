@@ -5,7 +5,8 @@
     "symfony/dotenv": "^6.0",
     "symfony/mailer": "^6.0",
     "symfony/sendgrid-mailer": "^6.0",
-    "fusio/marketplace": "^0.1.4"
+    "fusio/marketplace": "^0.1.4",
+    "chriskapp/blog": "^0.1.2"
   },
   "require-dev": {
     "vimeo/psalm": "^5.9"

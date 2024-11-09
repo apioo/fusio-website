@@ -49,6 +49,6 @@ RUN chmod +x /var/www/html/bin/psx
 RUN cd /var/www/html && ./bin/psx migration:migrate --no-interaction
 RUN cd /var/www/html && ./bin/psx app:fetch_adapter
 RUN cd /var/www/html && ./bin/psx app:fetch_release
-RUN cd /var/www/html && ./bin/psx app:update_blog
+RUN cd /var/www/html && ./bin/psx blog:update
 
 RUN chmod 777 -R /var/www/html/cache
