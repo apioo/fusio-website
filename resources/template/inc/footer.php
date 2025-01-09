@@ -57,7 +57,7 @@
   </div>
 </footer>
 
-<div class="fusio-outro"></div>
+<div class="apioo-brand">part of the <a href="https://apioo.de">Apioo-Project</a></div>
 
 </body>
 </html>
