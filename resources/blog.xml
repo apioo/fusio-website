@@ -1,6 +1,73 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <entry>
+        <title>Fusio 5.2.0 released</title>
+        <updated>2025-03-08T18:17:00Z</updated>
+        <summary>
+            This post announces the release of the next version 5.2.0
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>We are happy to release the next version 5.2.0 of Fusio. This release took a little bit longer then expected
+but it is packed with great new features and improvements. The following list covers all important features of this
+release:</p>
+
+<ul>
+    <li>
+        <b>Update Angular SDK</b>
+        <p>We have redesigned our Angular SDK which is used at the backend and also at the <a href="https://www.apigen.app/">APIgen</a> project
+        to automatically generate Angular backend apps. In this new version we moved away from the modal to a dedicated url where the form is shown,
+        this makes our code cleaner and you can also now send and share links to a form. The list and detail component are now also dedicated components
+        with a route, previously the list and detail component where combined in one view, this again makes also the code cleaner and you can share
+        links to those components. Another improvement is the auto-complete, previously we had many drop-down where we had displayed every entry, we
+        now have an auto-complete for every entity.</p>
+    </li>
+    <li>
+        <b>Update backend app using the new Angular SDK</b>
+        <p>We have migrated the complete backend app to the new Angular SDK, during this migration we have added 6.236 and deleted 7.512 lines of code,
+        so it was a big undertaking. If you notice any problems with the new backend app do not hesitate to open an issue at our
+        <a href="https://github.com/apioo/fusio">repository</a>.</p>
+    </li>
+    <li>
+        <b>Update chart response schema and data</b>
+        <p>We have updated the response schema of the chart endpoints to match with the latest version of the ApexCharts which we have also updated.</p>
+    </li>
+    <li>
+        <b>SQL-Query-All and SQL-Query-Row action add support for {user_id} and {user_name} placeholder which contains the user id and name of the current user</b>
+        <p>It is now possible to use the <code>{user_id}</code> and <code>{user_name}</code> placeholder at the SQL-Query-All and SQL-Query-Row action.</p>
+    </li>
+    <li>
+        <b>Use SQL generated column enum</b>
+        <p>We have update to the <a href="https://github.com/apioo/psx-sql">psx/sql</a> dependency to the latest version, through this we get an enum class
+        for each table which contains all columns. These enums are now used in case we accept a column name via query parameters so that we can get sure
+        that we only receive valid column names.</p>
+    </li>
+    <li>
+        <b>Update PHP-Sandbox</b>
+        <p>The <a href="https://github.com/apioo/psx-sandbox">psx/sandbox</a> dependency was update to the latest version. The PHP-Sandbox action was intended
+        for prototyping and quick testing, in general we recommend to use a worker action or a dedicated PHP class for production code.</p>
+    </li>
+    <li>
+        <b>Update PHP dependencies and full PHP 8.4 support</b>
+        <p>With this release we have made our code and all dependencies compatible with PHP 8.4.</p>
+    </li>
+    <li>
+        <b>PHP 8.3 as minimum requirement</b>
+        <p>We have now set PHP 8.3 as minimum requirement.</p>
+    </li>
+</ul>
+
+<p>If you want to provide some feedback take a look at our GitHub <a href="https://github.com/apioo/fusio/discussions">discussions</a> or
+<a href="https://github.com/apioo/fusio/issues">issues</a> page.</p>
+
+<p>Best regards<br>
+Christoph</p>
+
+]]></content>
+    </entry>
+    <entry>
         <title>Fusio 5.1.6 released</title>
         <updated>2024-11-09T21:53:00Z</updated>
         <summary>
