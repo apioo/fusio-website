@@ -1,6 +1,58 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <entry>
+        <title>Fusio 5.2.1 released</title>
+        <updated>2025-03-22T17:27:00Z</updated>
+        <summary>
+            This post announces the release of the next version 5.2.1
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>We like to announce the next version 5.2.1 of Fusio. The following list covers all important features of this
+release:</p>
+
+<ul>
+    <li>
+        <b>Add Content-Type handling</b>
+        <p>It is now possible to configure different Content-Types as request/response schema at an operation. This can be used in case you
+        action consumes or produces content which is not JSON. A content type basically only describes the content of the body but it is not
+        possible to specify specific fields. In general we recommend to use JSON payloads which can be described in detail but this can be
+        used for cases where this is not possible. The content type is also reflected at the generated client SDK.</p>
+        <div class="mt-4 mb-4 text-center">
+            <img src="/img/blog/fusio-5.2.1-released/operation_content_type.png" alt="Operation edit" class="img-fluid">
+        </div>
+    </li>
+    <li>
+        <b>Update all adapter dependencies</b>
+        <p>We have updated all adapter dependencies and added PHP 8.4 tests.</p>
+    </li>
+    <li>
+        <b>Improved marketplace list view</b>
+        <p>The marketplace list view was improved and the SDK was updated. The <a href="https://marketplace.fusio-project.org/login">marketplace</a> itself
+        was also updated so feel free to register in case you want to distribute actions or apps to the Fusio ecosystem.</p>
+    </li>
+    <li>
+        <b>Fix user role select <a href="https://github.com/apioo/fusio/issues/615">#615</a></b>
+        <p>A critical bug was fixed which prevented to select a role when creating a new user.</p>
+    </li>
+    <li>
+        <b>Add option to specify operations as PHP config files instead of YAML</b>
+        <p>Besides YAML files it is now possible to specify the operation config as PHP file. This can improve type-safety since it
+        is possible to reference PHP classes with the <code>::class</code> notation.</p>
+    </li>
+</ul>
+
+<p>If you want to provide some feedback take a look at our GitHub <a href="https://github.com/apioo/fusio/discussions">discussions</a> or
+<a href="https://github.com/apioo/fusio/issues">issues</a> page.</p>
+
+<p>Best regards<br>
+Christoph</p>
+
+]]></content>
+    </entry>
+    <entry>
         <title>Fusio 5.2.0 released</title>
         <updated>2025-03-09T11:23:00Z</updated>
         <summary>
