@@ -71,6 +71,7 @@
           </div>
           <img src="<?php echo $base; ?>/img/sdk/typescript.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
+            <a href="https://github.com/apioo/fusio-sample-javascript-cli" class="btn btn-secondary">Example</a>
             <a href="https://github.com/apioo/fusio-sdk-javascript" class="btn btn-secondary">GitHub</a>
             <a href="https://www.npmjs.com/package/fusio-sdk" class="btn btn-primary">NPM</a>
           </div>
