@@ -12,7 +12,7 @@ https://github.com/apioo/fusio
       <div class="col p-lg-5 mx-auto my-5 text-center">
         <h1 class="display-4 fw-normal">Open Source API Management</h1>
         <p class="lead fw-normal">Fusio is an open source API management platform which helps to create innovative API solutions.</p>
-        <a href="#" id="subscribe" class="btn btn-dark">Subscribe</a>
+        <a href="https://mailchi.mp/948c47451634/fusio" class="btn btn-dark">Subscribe</a>
         <a href="<?php echo $router->getAbsolutePath([\App\Controller\Demo::class, 'show']); ?>" class="btn btn-primary">Demo</a>
         <a href="<?php echo $router->getAbsolutePath([\App\Controller\Contact::class, 'show']); ?>" class="btn btn-primary">Contact</a>
       </div>
@@ -144,24 +144,6 @@ https://github.com/apioo/fusio
     "license": "https://github.com/apioo/fusio/blob/master/LICENSE",
     "operatingSystem": "Windows, Linux, OSX"
   }
-</script>
-
-<script type="text/javascript">
-function showDialog() {
-  var mailchimpEl = document.createElement('script');
-  mailchimpEl.setAttribute('type', 'text/javascript');
-  mailchimpEl.setAttribute('src', '//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js');
-  mailchimpEl.setAttribute('data-dojo-config', 'usePlainJson: true, isDebug: false');
-  mailchimpEl.addEventListener('load', function(){
-    window.dojoRequire(["mojo/signup-forms/Loader"], function(L) {
-      L.start({"baseUrl":"mc.us20.list-manage.com","uuid":"13a030c73b877188ebe28f86f","lid":"8706c1f9e7","uniqueMethods":true});
-      document.cookie = "MCPopupClosed=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/";
-      gtag("event", "join_group");
-    });
-  });
-  document.head.append(mailchimpEl);
-}
-document.getElementById("subscribe").onclick = showDialog;
 </script>
 
 <?php include(__DIR__ . '/inc/footer.php'); ?>
