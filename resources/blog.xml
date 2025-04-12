@@ -21,7 +21,7 @@ release:</p>
         this endpoint so that users can create product entries. At the core to create a new form you need to select an operation and
         specific an UI schema.</p>
         <div class="mt-4 mb-4 text-center">
-            <img src="/img/blog/fusio-5.2.2-released/form-panel.png" alt="Operation edit" class="img-fluid">
+            <img src="/img/blog/fusio-5.2.2-released/form-panel.png" alt="Form panel" class="img-fluid">
         </div>
         <p>The UI schema is basically an arbitrary JSON to describe the form, this format depends on the used frontend form library
         i.e. we could use <a href="https://github.com/eclipsesource/jsonforms">JSON Forms</a>. We can then request the
