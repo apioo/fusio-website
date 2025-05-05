@@ -10,7 +10,7 @@
         <ul class="list-unstyled small">
           <li class="mb-2">Fusio is an open source API management platform which helps to create innovative API solutions.</li>
           <li class="mb-2">Code licensed <a href="https://github.com/apioo/fusio/blob/master/LICENSE" target="_blank" rel="license noopener" class="fw-bold">Apache 2.0</a>.</li>
-          <li class="mb-2">Made by <a href="https://chrisk.app/">chrisk.app</a> in Germany.</li>
+          <li class="mb-2">Made by <a href="https://chrisk.app/" class="fw-bold">chrisk.app</a> in Germany.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">
