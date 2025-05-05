@@ -24,19 +24,19 @@ https://github.com/apioo/fusio
   <div class="container">
     <div class="row">
       <div class="col">
-        <a href="https://youtube.com/@FusioAPI" class="text-decoration-none text-light"><img src="<?php echo $base; ?>/img/youtube-64.png" width="32" height="32" alt="Youtube"> <span class="d-none d-lg-inline">Youtube</span></a>
+        <a href="https://youtube.com/@FusioAPI" class="text-decoration-none text-light"><img src="<?php echo $base; ?>/img/youtube-64.png" width="32" height="32" alt="Youtube Logo"> <span class="d-none d-lg-inline">Youtube</span></a>
       </div>
       <div class="col">
-        <a href="https://github.com/apioo/fusio" class="text-decoration-none text-light"><img src="<?php echo $base; ?>/img/github-64.png" width="32" height="32" alt="Github"> <span class="d-none d-lg-inline">Github</span></a>
+        <a href="https://github.com/apioo/fusio" class="text-decoration-none text-light"><img src="<?php echo $base; ?>/img/github-64.png" width="32" height="32" alt="Github Logo"> <span class="d-none d-lg-inline">Github</span></a>
       </div>
       <div class="col">
-        <a href="https://twitter.com/FusioAPI" class="text-decoration-none text-light"><img src="<?php echo $base; ?>/img/twitter-64.png" width="32" height="32" alt="Twitter"> <span class="d-none d-lg-inline">Twitter</span></a>
+        <a href="https://twitter.com/FusioAPI" class="text-decoration-none text-light"><img src="<?php echo $base; ?>/img/twitter-64.png" width="32" height="32" alt="Twitter Logo"> <span class="d-none d-lg-inline">Twitter</span></a>
       </div>
       <div class="col">
-        <a href="https://bsky.app/profile/fusioapi.bsky.social" class="text-decoration-none text-light"><img src="<?php echo $base; ?>/img/bluesky-64.png" width="32" height="32" alt="Bluesky"> <span class="d-none d-lg-inline">Bluesky</span></a>
+        <a href="https://bsky.app/profile/fusioapi.bsky.social" class="text-decoration-none text-light"><img src="<?php echo $base; ?>/img/bluesky-64.png" width="32" height="32" alt="Bluesky Logo"> <span class="d-none d-lg-inline">Bluesky</span></a>
       </div>
       <div class="col">
-        <a href="https://fosstodon.org/@fusio" class="text-decoration-none text-light"><img src="<?php echo $base; ?>/img/mastodon-64.png" width="32" height="32" alt="Mastodon"> <span class="d-none d-lg-inline">Mastodon</span></a>
+        <a href="https://fosstodon.org/@fusio" class="text-decoration-none text-light"><img src="<?php echo $base; ?>/img/mastodon-64.png" width="32" height="32" alt="Mastodon Logo"> <span class="d-none d-lg-inline">Mastodon</span></a>
       </div>
     </div>
   </div>
@@ -148,7 +148,11 @@ https://github.com/apioo/fusio
     "applicationCategory": "API Management",
     "downloadUrl": "https://www.fusio-project.org/download",
     "license": "https://github.com/apioo/fusio/blob/master/LICENSE",
-    "operatingSystem": "Windows, Linux, OSX"
+    "operatingSystem": "Windows, Linux, OSX",
+    "author": {
+      "@type": "Person",
+      "@id": "https://chrisk.app"
+    }
   }
 </script>
 
