@@ -19,10 +19,10 @@ installable via the Fusio backend app and can be used by all our users.
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <p>Fusio provides a <a href="https://marketplace.fusio-project.org/">Marketplace</a> where every user can provide
-        actions and apps which can be installed at every local Fusio instance. Every action or app can be directly
+      <p>Fusio provides a <a href="https://marketplace.fusio-project.org/">Marketplace</a> for our community where users can
+        offer apps and actions which can be installed at every local Fusio instance. Every action or app can be directly
         installed from the backend app under Development / Marketplace or also via CLI i.e. <code>php bin/fusio marketplace:install fusio</code>.
-        The following list contains some apps from the live marketplace.</p>
+        The following list contains some apps and actions from the live marketplace.</p>
       <div class="text-center">
         <a href="https://marketplace.fusio-project.org/login" class="btn btn-primary">Login</a>
         <a href="https://marketplace.fusio-project.org/register" class="btn btn-secondary">Register</a>
