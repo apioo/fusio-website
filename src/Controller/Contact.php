@@ -52,7 +52,9 @@ class Contact extends ControllerAbstract
     public function send(mixed $payload): mixed
     {
         try {
-            if (!$this->captchaVerifier->verify($payload->{'g-recaptcha-response'})) {
+            $captcha = $payload->{'g-recaptcha-response'} ?? null;
+
+            if (!$this->captchaVerifier->verify($captcha)) {
                 throw new \RuntimeException('Invalid captcha');
             }
 
