@@ -19,11 +19,12 @@ installable via the Fusio backend app and can be used by all our users.
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <p>Fusio provides a <a href="https://marketplace.fusio-project.org/">Marketplace</a> for our community where users can
-        offer apps and actions which can be installed at every local Fusio instance. Every action or app can be directly
+      <p>We provide a <a href="https://marketplace.fusio-project.org/">Marketplace</a> for our community where users can
+        offer apps and actions which can be installed at every local Fusio instance. Every app or action can be directly
         installed from the backend app under Development / Marketplace or also via CLI i.e. <code>php bin/fusio marketplace:install fusio</code>.
-        The following list contains some apps and actions from the live marketplace.</p>
-      <div class="text-center">
+        The following list contains some apps and actions from the live marketplace. The marketplace is of course also built with Fusio
+        and you can integrate it through the <a href="https://api.fusio-project.org/apps/redoc/">API</a>.</p>
+      <div class="text-center mt-4">
         <a href="https://marketplace.fusio-project.org/login" class="btn btn-primary">Login</a>
         <a href="https://marketplace.fusio-project.org/register" class="btn btn-secondary">Register</a>
       </div>
@@ -43,7 +44,7 @@ installable via the Fusio backend app and can be used by all our users.
           <div class="col">
             <div class="card mb-4">
               <div class="card-body">
-                <div class="card-title"><h2 class="fs-2"><i class="bi bi-<?php echo $app->icon; ?>"></i> <?php echo $app->name; ?></h2></div>
+                <div class="card-title"><b><i class="bi bi-<?php echo $app->icon; ?>"></i> <?php echo $app->author->name . '/' . $app->name; ?></b></div>
                 <p class="card-text"><?php echo $app->summary; ?></p>
                 <a href="https://marketplace.fusio-project.org/marketplace/directory/app/<?php echo $app->author->name; ?>/<?php echo $app->name; ?>" class="btn btn-primary">Details</a>
               </div>
@@ -66,7 +67,7 @@ installable via the Fusio backend app and can be used by all our users.
           <div class="col">
             <div class="card mb-4">
               <div class="card-body">
-                <div class="card-title"><h2 class="fs-2"><i class="bi bi-<?php echo $action->icon; ?>"></i> <?php echo $action->name; ?></h2></div>
+                <div class="card-title"><b><i class="bi bi-<?php echo $action->icon; ?>"></i> <?php echo $action->author->name . '/' . $action->name; ?></b></div>
                 <p class="card-text"><?php echo $action->summary; ?></p>
                 <a href="https://marketplace.fusio-project.org/marketplace/directory/action/<?php echo $action->author->name; ?>/<?php echo $action->name; ?>" class="btn btn-primary">Details</a>
               </div>
