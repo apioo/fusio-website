@@ -13,36 +13,127 @@
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <h4>Technology</h4>
-      <p><a href="https://firebase.google.com/">Firebase</a> provides its own NoSQL database where all your data is
-      stored, it is an easy-to-use and scalable way to store your data but this means your data is stored in a proprietary
-      database. You can then use the SDK of Firebase to i.e. set <code>db.collection("cities").doc("[ID]").set(docData)</code>
-      or get <code>db.collection("cities").doc("[id]").get()</code> data in your app. To handle additional business logic
-      you can use Cloud Functions which can be called directly from your app.</p>
-      <p>Fusio has a different approach, instead of directly working with a database you need to define operations,
-      an operation is assigned to a specific HTTP route like <code>GET /cities</code> which then invokes an action on
-      invocation. An action is basically like a Cloud Function which contains your business logic and which produces
-      a response. Through this approach Fusio generates fully typed client SDKs. This means your SDK is not generic
-      instead it represents your concrete use-case. I.e. the generated SDK would look like <code>client.cities().create(docData)</code>
-      or <code>client.cities().get("[id]")</code> with complete type-safe models.</p>
-      <h4>Fusio</h4>
+      <h4>🔍 Overview</h4>
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Fusio</th>
+          <th>Firebase</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Type</td>
+          <td>Open-source API management platform</td>
+          <td>Backend-as-a-Service (BaaS)</td>
+        </tr>
+        <tr>
+          <td>Primary Use Case</td>
+          <td>Build, manage, and expose REST APIs</td>
+          <td>Rapid mobile/web app backend development</td>
+        </tr>
+        <tr>
+          <td>Language</td>
+          <td>PHP</td>
+          <td>Cloud-native (JavaScript/TypeScript)</td>
+        </tr>
+        <tr>
+          <td>Open Source</td>
+          <td>✅ Yes (Apache 2.0)</td>
+          <td>❌ Proprietary</td>
+        </tr>
+        <tr>
+          <td>Hosting</td>
+          <td>Self-hosted (Docker, Composer)</td>
+          <td>Google Cloud (managed)</td>
+        </tr>
+        <tr>
+          <td>Database</td>
+          <td>SQL (MySQL, PostgreSQL, etc.)</td>
+          <td>NoSQL (Firestore, Realtime DB)</td>
+        </tr>
+        <tr>
+          <td>API Documentation</td>
+          <td>✅ Auto-generated OpenAPI docs</td>
+          <td>❌ Manual creation</td>
+        </tr>
+        <tr>
+          <td>Custom Logic</td>
+          <td>PHP/JS/SQL-based actions</td>
+          <td>Cloud Functions (JavaScript/TypeScript)</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <h4>🎯 Key Differences</h4>
+    </div>
+    <div class="col-6">
+      <p><b>Fusio</b> is an open-source API management system designed to:</p>
       <ul>
-        <li>Classical relational database like Mysql or Postgres</li>
-        <li>Easy self-hosting on a simple VHost or large cloud provider</li>
-        <li>Generate fully type-safe TypeScript definitions</li>
-        <li>Build a cleaner design for your app by using a DI container</li>
-        <li>Handle authorization and supports multiple external identity provider</li>
-        <li>Provides Javascript, PHP, Java, Go and Angular SDKs</li>
+        <li>Create structured REST APIs with full backend logic</li>
+        <li>Expose SQL databases through auto-generated endpoints</li>
+        <li>Provide OAuth2-based access control and role-based scopes</li>
+        <li>Generate OpenAPI documentation for developers</li>
+        <li>Be fully self-hosted and customizable</li>
       </ul>
-      <h4>Firebase</h4>
+      <p>Fusio is ideal when you want fine-grained control over your backend, database integration, and long-term self-ownership of your stack.</p>
+    </div>
+    <div class="col-6">
+      <p><b>Firebase</b>, by Google, is a fully managed Backend-as-a-Service (BaaS) for web and mobile apps. It provides:</p>
       <ul>
-        <li>Easy to get started</li>
-        <li>Hosted in the Google Cloud which provides great performance and scaling</li>
-        <li>Use Cloud Functions to handle additional business logic</li>
-        <li>High usage based pricing</li>
-        <li>Vendor lock-in</li>
-        <li>Proprietary database</li>
+        <li>Real-time and Firestore NoSQL databases</li>
+        <li>User authentication, file storage, and cloud functions</li>
+        <li>Integration with Google Cloud services</li>
+        <li>Client SDKs for Android, iOS, and JavaScript</li>
       </ul>
+      <p>Firebase is best suited for rapid app development, especially for teams building MVPs or real-time apps on Google Cloud infrastructure.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <p>Choose <b>Fusio</b> if:</p>
+      <ul>
+        <li>You want to build your own API infrastructure</li>
+        <li>You prefer working with SQL databases and relational models</li>
+        <li>You need full control over authentication, rate limiting, scopes, and API security</li>
+        <li>You’re deploying in environments that require self-hosting or data sovereignty</li>
+      </ul>
+      <p>Great for:</p>
+      <ul>
+        <li>Enterprises and agencies</li>
+        <li>PHP/SQL developers</li>
+        <li>Teams with security or compliance needs</li>
+      </ul>
+    </div>
+    <div class="col-6">
+      <p>Choose <b>Firebase</b> if:</p>
+      <ul>
+        <li>You’re building a real-time web or mobile app</li>
+        <li>You want fast development with minimal backend setup</li>
+        <li>You're working in JavaScript/TypeScript and prefer a BaaS approach</li>
+        <li>You're fine with vendor lock-in and Google Cloud infrastructure</li>
+      </ul>
+      <p>Great for:</p>
+      <ul>
+        <li>MVPs and prototypes</li>
+        <li>Mobile app developers</li>
+        <li>Real-time chat or game apps</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h4>💡 Final Thoughts</h4>
+      <p><b>Fusio</b> and <b>Firebase</b> are both powerful — but built for different development styles:</p>
+      <ul>
+        <li><b>Fusio</b> gives you full control over your backend, authentication, and data. It’s ideal for developers who want structured APIs and control over hosting and scaling.</li>
+        <li><b>Firebase</b> is great for building front-end-centric apps quickly, especially with real-time features and Google Cloud services.</li>
+      </ul>
+      <p>If you value custom logic, SQL integration, and long-term flexibility, Fusio is your best bet.</p>
     </div>
   </div>
 </div>

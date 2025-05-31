@@ -69,6 +69,7 @@
           </div>
           <img src="<?php echo $base; ?>/img/compare/wso2.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
+            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'wso2']); ?>" class="btn btn-primary">Compare</a>
             <a href="https://wso2.com/" class="btn btn-secondary">Website</a>
           </div>
         </div>
@@ -127,6 +128,7 @@
           </div>
           <img src="<?php echo $base; ?>/img/compare/appwrite.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
+            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'appwrite']); ?>" class="btn btn-primary">Compare</a>
             <a href="https://appwrite.io/" class="btn btn-secondary">Website</a>
           </div>
         </div>
@@ -159,6 +161,7 @@
           </div>
           <img src="<?php echo $base; ?>/img/compare/postgrest.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
+            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'postgrest']); ?>" class="btn btn-primary">Compare</a>
             <a href="https://postgrest.org/" class="btn btn-secondary">Website</a>
           </div>
         </div>
