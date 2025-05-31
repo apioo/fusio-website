@@ -49,8 +49,10 @@
         <ul class="list-unstyled">
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'kong']); ?>">Kong</a></li>
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'tyk']); ?>">Tyk</a></li>
+          <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'wso2']); ?>">WSO2</a></li>
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'firebase']); ?>">Firebase</a></li>
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'supabase']); ?>">Supabase</a></li>
+          <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'appwrite']); ?>">Appwrite</a></li>
         </ul>
       </div>
     </div>
