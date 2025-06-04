@@ -19,7 +19,7 @@
   <?php endif; ?>
     <div class="row">
       <div class="col">
-        <h2 class="display-6 fw-normal"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Blog\Detail::class, 'show'], ['title' => $row->title_slug]); ?>"><?php echo $row->title; ?></a></h2>
+        <h2 class="fusio-sub-headline h4 fw-normal"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Blog\Detail::class, 'show'], ['title' => $row->title_slug]); ?>"><?php echo $row->title; ?></a></h2>
         <p><small>posted by <a href="<?php echo $row->author_uri; ?>"><?php echo $row->author_name; ?></a> on <time datetime="<?php echo $row->updated; ?>"><?php echo $row->updated; ?></time></small></p>
         <p><?php echo $row->summary; ?></p>
       </div>

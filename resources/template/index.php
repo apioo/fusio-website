@@ -10,8 +10,8 @@ https://github.com/apioo/fusio
   <div class="container">
     <div class="row">
       <div class="col p-lg-5 mx-auto my-5 text-center">
-        <h1 class="display-4 fw-normal">Open Source API Management</h1>
-        <p class="lead fw-normal">Fusio is an open source API management platform which helps to create innovative API solutions.</p>
+        <h1 class="display-4 fw-normal">Fusio</h1>
+        <p class="lead fw-normal">Open Source API Management Made Easy.</p>
         <a href="https://mailchi.mp/948c47451634/fusio" class="btn btn-dark">Subscribe</a>
         <a href="<?php echo $router->getAbsolutePath([\App\Controller\Demo::class, 'show']); ?>" class="btn btn-primary">Demo</a>
         <a href="<?php echo $router->getAbsolutePath([\App\Controller\Contact::class, 'show']); ?>" class="btn btn-primary">Contact</a>
@@ -45,70 +45,67 @@ https://github.com/apioo/fusio
 <div class="container mt-4 mb-4">
   <div class="row g-4 py-4 row-cols-1 row-cols-lg-3 text-center">
     <div class="feature col">
-      <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
-        <i class="bi bi-cloud-fill p-4"></i>
+      <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-1 mb-3 rounded-5">
+        <span class="m-3">🔄</span>
       </div>
-      <h2 class="fs-2">API Management</h2>
-      <p>Fusio provides a powerful <a href="<?php echo $router->getAbsolutePath([\App\Controller\Demo::class, 'show']); ?>">backend</a>
-        app to control and monitor your API.</p>
+      <h2 class="fs-4">Database API Gateway</h2>
+      <p>Great for unlocking legacy data systems or enabling mobile app access.</p>
     </div>
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
-        <i class="bi bi-box-fill p-4"></i>
+        <span class="m-3">🧠</span>
       </div>
-      <h2 class="fs-2">Developer Portal</h2>
-      <p>Fusio provides a <a href="https://demo.fusio-project.org/apps/developer/">developer portal</a>
-        app where developer can register to use your API.</p>
+      <h2 class="fs-4">API Business Logic</h2>
+      <p>Perfect for enterprise use cases requiring tailored backend logic.</p>
     </div>
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
-        <i class="bi bi-hammer p-4"></i>
+        <span class="m-3">🕸️</span>
       </div>
-      <h2 class="fs-2">API Builder</h2>
-      <p>Fusio provides multiple generators to build complete APIs without coding from different sources.</p>
+      <h2 class="fs-4">Gateway for Microservices</h2>
+      <p>Useful for modern service-oriented architectures or hybrid systems.</p>
     </div>
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
-        <i class="bi bi-cash p-4"></i>
+        <span class="m-3">🌐</span>
       </div>
-      <h2 class="fs-2">Monetization</h2>
-      <p>Fusio provides a simple payment system to charge for specific routes.</p>
+      <h2 class="fs-4">API Developer Portal</h2>
+      <p>Ideal for SaaS providers offering APIs to external developers.</p>
     </div>
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
-        <i class="bi bi-code p-4"></i>
+        <span class="m-3">💸</span>
       </div>
-      <h2 class="fs-2">SDK Generation</h2>
-      <p>Fusio can automatically generate a client SDK for your API based on the defined schema.</p>
+      <h2 class="fs-4">API Monetization</h2>
+      <p>Enable freemium or tiered access models with minimal effort.</p>
     </div>
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
-        <i class="bi bi-bar-chart-fill p-4"></i>
+        <span class="m-3">⚡</span>
       </div>
-      <h2 class="fs-2">Rate Limiting</h2>
-      <p>Fusio provides a way to rate limit requests based on the user or app.</p>
+      <h2 class="fs-4">Fast API Prototyping</h2>
+      <p>Speeds up frontend/backend collaboration and rapid iteration.</p>
     </div>
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
-        <i class="bi bi-cpu-fill p-4"></i>
+        <span class="m-3">📊</span>
       </div>
-      <h2 class="fs-2">Schema Generation</h2>
-      <p>Fusio provides an endpoint to automatically generate <a href="https://www.openapis.org/">OAI</a> and
-        <a href="https://typeapi.org/">TypeAPI</a> specifications.</p>
+      <h2 class="fs-4">API Usage Analytics</h2>
+      <p>Essential for maintaining quality of service and detecting issues early.</p>
     </div>
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
-        <i class="bi bi-cursor-fill p-4"></i>
+        <span class="m-3">📰</span>
       </div>
-      <h2 class="fs-2">Webhook</h2>
-      <p>Fusio contains a webhook system which helps to build a publish/subscribe pattern for your API.</p>
+      <h2 class="fs-4">Headless CMS Backend</h2>
+      <p>Great for CMS-like applications where content is managed through APIs.</p>
     </div>
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
-        <i class="bi bi-calendar-event-fill p-4"></i>
+        <span class="m-3">📰</span>
       </div>
-      <h2 class="fs-2">OAuth2 Authorization</h2>
-      <p>App developer can obtain an access token to access non-public API endpoints.</p>
+      <h2 class="fs-4">SDK Automation</h2>
+      <p>Automatically generate SDKs (e.g., PHP, TypeScript, Python) based on your defined API schema.</p>
     </div>
   </div>
 </div>
@@ -117,7 +114,7 @@ https://github.com/apioo/fusio
   <div class="container">
     <div class="row">
       <div class="col text-center">
-        <blockquote class="display-4">"With Fusio we innovate the API economy to make the digitalization happen"</blockquote>
+        <blockquote class="display-4">"With Fusio, we’re empowering the API economy to drive real digital transformation."</blockquote>
         <cite>Christoph Kappestein, Developer of Fusio</cite>
       </div>
     </div>

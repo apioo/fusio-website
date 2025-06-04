@@ -13,16 +13,13 @@
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <p>Fusio is an open source API management platform which helps to create innovative API solutions. We think that there
-        is a huge potential in the API economy, whether you need an API to expose your business functionality, develop
-        one-page web applications, mobile-apps or microservices.</p>
-      <p>We truly believe in open source software. Fusio is a solution which is open source and self-hosted to protect
-        you from vendor lock-in. Today there are many cloud solutions available which lock you in to a specific
-        platform. With Fusio you have the freedom to choose the fitting hosting environment which can be either a simple
-        virtual server or an autoscaling environment in the cloud.</p>
-      <p>To get started please take a look at our <a href="https://docs.fusio-project.org/">documentation website</a> or
-        dive directly into the <a href="<?php echo $router->getAbsolutePath([\App\Controller\Sdk::class, 'show']); ?>">SDKs</a>.
-        If you like the project and want to see it grow please check out the <a href="https://github.com/apioo/fusio">repository</a>.</p>
+      <h2 class="fusio-sub-headline h4 fw-normal">💡 Why Choose Fusio?</h2>
+      <ul class="fusio-list lead">
+        <li><b>Open Source & Self-Hosted</b>: Avoid vendor lock-in with a platform you can host on your own infrastructure, giving you full control over your API ecosystem.</li>
+        <li><b>Comprehensive API Management</b>: From backend services to developer portals, Fusio offers a complete suite of tools to manage your APIs effectively.</li>
+        <li><b>Flexible Architecture</b>: Connect to various backend services like databases, message queues, or other APIs. Easily implement custom connections to support third-party services.</li>
+        <li><b>Developer-Friendly</b>: Fusio's internal API allows for seamless integration into existing systems, enabling configuration and management through API calls.</li>
+      </ul>
     </div>
   </div>
 </div>
@@ -31,87 +28,49 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <h2 class="display-6 fw-normal">Architecture</h2>
-
-        <p>If you are researching API solutions you probably hear often the term
-          <b>API-Gateway/Proxy</b> and <b>API-Management</b>. Fusio is an API-Management
-          system in the sense that it helps to develop actual API endpoints (which i.e.
-          request and transform data from a database). It is not limited to proxy
-          requests to another API. The following diagram should give you a better
-          overview.</p>
-
-        <div class="mt-4 mb-4 text-center">
-          <img src="<?php echo $base; ?>/img/arch.png" alt="Fusio Architecture" class="img-fluid">
-        </div>
-
-        <p>Fusio uses the backend services to produce an API response or to handle
-          the request data. A backend service can be i.e. a database, message queue or
-          another API. It is also very easy to implement a custom
-          <a href="<?php echo $router->getAbsolutePath([\App\Controller\Adapter::class, 'show']); ?>">connection</a>
-          to support any 3rd party service.</p>
-
-        <p>The API can then be used by apps which are developed by yourself or by
-          3rd party developers. The apps can be i.e. javascript apps (like Angular,
-          React, Vue etc.), mobile apps or actual desktop apps which need to communicate
-          with your API. The Fusio backend app uses also the internal API to configure
-          the system. Because of that it is also very easy to integrate Fusio into an
-          existing system, since you actually can configure the complete system
-          through the API.</p>
+        <h2 class="fusio-sub-headline h4 fw-normal">🌟 Key Features</h2>
+        <ul class="fusio-list lead">
+          <li><b>API Builder</b>: Automatically generate REST APIs based on different data sources, including relational databases and NoSQL systems.</li>
+          <li><b>Developer Portal</b>: Provide a dedicated portal where developers can register, obtain access tokens, and manage their applications.</li>
+          <li><b>Monetization</b>: Implement a simple payment system to charge for specific API routes, opening new revenue streams.</li>
+          <li><b>Rate Limiting</b>: Control the number of requests to your API based on user or application, ensuring fair usage and protecting resources.</li>
+          <li><b>SDK Generation</b>: Automatically generate client SDKs for your API based on defined schemas, facilitating easier integration for developers.</li>
+          <li><b>Schema Generation</b>: Generate OpenAPI and TypeAPI specifications to provide clear documentation and support for your API consumers.</li>
+          <li><b>Webhook Support</b>: Implement a publish/subscribe pattern for your API using Fusio's webhook system, enabling real-time notifications.</li>
+          <li><b>OAuth2 Authorization</b>: Secure your APIs by allowing developers to obtain access tokens for non-public endpoints.</li>
+        </ul>
       </div>
     </div>
   </div>
 </div>
 
 <div class="container mt-4 pt-4 mb-4 pb-4">
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+  <div class="row">
     <div class="col">
-      <div class="card mb-4">
-        <div class="card-header py-3">
-          <h2 class="my-0 fw-normal">Media</h2>
-        </div>
-        <div class="card-body">
-          <p class="card-text">If you are a blogger or magazine we would be happy if you like to cover
-            Fusio. You can <a href="<?php echo $base; ?>/media/fusio_icon.zip">download</a>
-            the official icon set to represent Fusio.</p>
-        </div>
-      </div>
+      <h2 class="fusio-sub-headline h4 fw-normal">🧭 Getting Started</h2>
+      <p class="lead">To begin your journey with Fusio:</p>
+      <ul class="fusio-list lead">
+        <li><b>Explore the <a href="https://docs.fusio-project.org/">Documentation</a></b>: Comprehensive guides to help you set up and utilize Fusio effectively.</li>
+        <li><b>Visit the <a href="<?php echo $router->getAbsolutePath([\App\Controller\Marketplace::class, 'show']); ?>">Marketplace</a></b>: Discover apps and actions to extend Fusio's functionality.</li>
+        <li><b>Check Out the <a href="<?php echo $router->getAbsolutePath([\App\Controller\Demo::class, 'show']); ?>">Demo</a></b>: Experience Fusio firsthand through a hosted demo environment.</li>
+        <li><b>Download Fusio</b>: Get the latest version from the <a href="<?php echo $router->getAbsolutePath([\App\Controller\Download::class, 'show']); ?>">Download Page</a></li>
+      </ul>
     </div>
-    <div class="col">
-      <div class="card mb-4">
-        <div class="card-header py-3">
-          <h2 class="my-0 fw-normal">Donations</h2>
-        </div>
-        <div class="card-body">
-          <p class="card-text">If you like to sponsor our project please take a look at our
-          <a href="https://github.com/apioo/fusio">repository</a> to see all available donation options. We like to
-            thank every user who has donated to the project.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card mb-4">
-        <div class="card-header py-3">
-          <h2 class="my-0 fw-normal">Consulting</h2>
-        </div>
-        <div class="card-body">
-          <p class="card-text">If you are a company or freelancer and want to get detailed information
-            how you can use Fusio you can <a href="<?php echo $router->getAbsolutePath([\App\Controller\Contact::class, 'show']); ?>">contact us</a>
-            for consulting.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card mb-4">
-        <div class="card-header py-3">
-          <h2 class="my-0 fw-normal">Community</h2>
-        </div>
-        <div class="card-body">
-          <p class="card-text">If you like to contribute to the project please visit our <a href="https://github.com/apioo/fusio">repository</a>.
-            To improve the documentation you can also take a look at our <a href="https://docs.fusio-project.org/">documentation</a> website.
-          </p>
-        </div>
+  </div>
+</div>
+
+<div class="bg-light mt-4 pt-4 mb-4 pb-4">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2 class="fusio-sub-headline h4 fw-normal">🤝 Join the Community</h2>
+        <p class="lead">Fusio thrives on community collaboration. Whether you're a developer, blogger, or company, there are numerous ways to get involved:</p>
+        <ul class="fusio-list lead">
+          <li><b>Contribute</b>: Visit our <a href="https://github.com/apioo/fusio">GitHub repository</a> to contribute code, report issues, or suggest features.</li>
+          <li><b>Engage</b>: Join discussions on <a href="https://discord.gg/eMrMgwsc6e">Discord</a> or follow us on <a href="https://twitter.com/FusioAPI">Twitter</a> and <a href="https://www.youtube.com/c/FusioAPI">YouTube</a>.</li>
+          <li><b>Support</b>: Consider <a href="https://github.com/apioo/fusio">donating</a> to help sustain and grow the project.</li>
+          <li><b>Consulting</b>: For businesses seeking tailored solutions, <a href="https://www.fusio-project.org/contact">contact us</a> for consulting services.</li>
+        </ul>
       </div>
     </div>
   </div>

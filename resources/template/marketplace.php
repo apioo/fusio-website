@@ -36,7 +36,7 @@ installable via the Fusio backend app and can be used by all our users.
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h2 class="display-6 fw-normal mb-4">Apps</h2>
+        <h2 class="fusio-sub-headline h4 fw-normal">🧩 Apps</h2>
       </div>
     </div>
     <div class="row row-cols-1 row-cols-lg-3">
@@ -55,26 +55,24 @@ installable via the Fusio backend app and can be used by all our users.
   </div>
 </div>
 
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h2 class="display-6 fw-normal mb-4">Actions</h2>
-      </div>
+<div class="container mt-4 pt-4 mb-4 pb-4">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="fusio-sub-headline h4 fw-normal">🛠️ Actions</h2>
     </div>
-    <div class="row row-cols-1 row-cols-lg-3">
-        <?php foreach($actions->entry as $action): ?>
-          <div class="col">
-            <div class="card mb-4">
-              <div class="card-body">
-                <div class="card-title"><b><i class="bi bi-<?php echo $action->icon; ?>"></i> <?php echo $action->author->name . '/' . $action->name; ?></b></div>
-                <p class="card-text"><?php echo $action->summary; ?></p>
-                <a href="https://marketplace.fusio-project.org/marketplace/directory/action/<?php echo $action->author->name; ?>/<?php echo $action->name; ?>" class="btn btn-primary">Details</a>
-              </div>
+  </div>
+  <div class="row row-cols-1 row-cols-lg-3">
+      <?php foreach($actions->entry as $action): ?>
+        <div class="col">
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="card-title"><b><i class="bi bi-<?php echo $action->icon; ?>"></i> <?php echo $action->author->name . '/' . $action->name; ?></b></div>
+              <p class="card-text"><?php echo $action->summary; ?></p>
+              <a href="https://marketplace.fusio-project.org/marketplace/directory/action/<?php echo $action->author->name; ?>/<?php echo $action->name; ?>" class="btn btn-primary">Details</a>
             </div>
           </div>
-        <?php endforeach; ?>
-    </div>
+        </div>
+      <?php endforeach; ?>
   </div>
 </div>
 

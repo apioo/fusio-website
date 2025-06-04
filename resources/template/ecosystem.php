@@ -13,9 +13,7 @@
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <p>Fusio is an open source project which you can use freely for private and commercial projects under the terms of
-      the <a href="https://github.com/apioo/fusio/blob/master/LICENSE">Apache 2.0</a> license. Besides our core product
-      we offer additional services to augment the functionality of Fusio.</p>
+      <p class="text-center lead">Explore tools, libraries, and services built around Fusio, the open source API management platform.</p>
     </div>
   </div>
 </div>
@@ -23,6 +21,48 @@
 <div class="bg-light mt-4 pt-4 mb-4 pb-4">
   <div class="container">
     <div class="row row-cols-1 row-cols-md-3 text-center">
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
+            <h2 class="my-0 fw-normal">Fusio</h2>
+          </div>
+          <div class="card-body">
+            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
+              <i class="bi bi-house p-4"></i>
+            </div>
+            <p>Open Source API Management Made Easy.</p>
+            <a href="https://github.com/apioo/fusio" class="btn btn-primary">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
+            <h2 class="my-0 fw-normal">Framework</h2>
+          </div>
+          <div class="card-body">
+            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
+              <i class="bi bi-play-circle-fill p-4"></i>
+            </div>
+            <p>Starter repository to use Fusio as a framework.</p>
+            <a href="https://github.com/apioo/fusio-framework" class="btn btn-primary">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-header py-3">
+            <h2 class="my-0 fw-normal">Plant</h2>
+          </div>
+          <div class="card-body">
+            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
+              <i class="bi bi-server p-4"></i>
+            </div>
+            <p>Plant is a server panel to easily self-host Fusio and other apps on your server.</p>
+            <a href="https://github.com/apioo/fusio-plant" class="btn btn-primary">GitHub</a>
+          </div>
+        </div>
+      </div>
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
@@ -78,21 +118,6 @@
             </div>
             <p>Marketplace to distribute actions and apps across the global Fusio ecosystem.</p>
             <a href="https://marketplace.fusio-project.org" class="btn btn-primary">Website</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h2 class="my-0 fw-normal">Fusio</h2>
-          </div>
-          <div class="card-body">
-            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
-              <i class="bi bi-house p-4"></i>
-            </div>
-            <p>Open source API management platform which helps to create innovative API solutions.</p>
-            <a href="https://github.com/sponsors/chriskapp" class="btn btn-primary">Donate</a>
-            <a href="https://github.com/apioo/fusio" class="btn btn-secondary">GitHub</a>
           </div>
         </div>
       </div>

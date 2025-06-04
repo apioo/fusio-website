@@ -24,7 +24,7 @@
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <h2 class="display-4 fw-normal">API Gateway</h2>
+      <h2 class="fusio-sub-headline h4 fw-normal">API Gateway</h2>
       <p>An API gateway acts as a single entry point for clients to access various backend services or APIs in a unified
       manner, common features of an API gateway are: Request Routing, Load Balancing, Authentication, Rate Limiting,
       Monitoring and Transformation and Aggregation.</p>
@@ -81,7 +81,7 @@
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <h2 class="display-4 fw-normal">Backend as a Service</h2>
+      <h2 class="fusio-sub-headline h4 fw-normal">Backend as a Service</h2>
       <p>Backend as a Service (BaaS) is a cloud computing model that provides developers with a way to outsource backend
       infrastructure and services, allowing them to focus more on building the frontend and application logic. In a
       BaaS model, the cloud service provider manages and hosts the backend infrastructure, databases, server-side logic,
@@ -140,7 +140,7 @@
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <h2 class="display-4 fw-normal">API Builder</h2>
+      <h2 class="fusio-sub-headline h4 fw-normal">API Builder</h2>
       <p>An API builder is a tool which can automatically generate ready to use REST APIs based on various data sources.
       Most times an API builder simply offers a REST API on top of a database, so that your frontend application can
       directly work with the exposed tables.</p>
@@ -184,7 +184,7 @@
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <h2 class="display-4 fw-normal">Headless CMS</h2>
+      <h2 class="fusio-sub-headline h4 fw-normal">Headless CMS</h2>
       <p>A Headless CMS is a content management system that provides an interface for creating, managing, and organizing
       digital content, but it differs from traditional CMSs in that it does not dictate how content is presented or
       delivered to users. Instead of generating HTML pages for display, a headless CMS stores content in a structured
@@ -239,7 +239,7 @@
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <h2 class="display-4 fw-normal">Cloud Provider</h2>
+      <h2 class="fusio-sub-headline h4 fw-normal">Cloud Provider</h2>
       <p>The major cloud providers offer API Gateway products as part of their suite of cloud services. These API Gateway
       products provide a managed solution for building, deploying, and managing APIs in the cloud.</p>
       <p>Fusio should be not seen as an alternative to these cloud providers but since they also provide an API Gateway
