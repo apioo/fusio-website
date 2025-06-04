@@ -36,6 +36,16 @@
     text-decoration: underline;
 }
 
+.fusio-list > li {
+    margin-bottom:8px;
+}
+
+.fusio-sub-headline {
+    padding-bottom:12px;
+    margin-bottom:12px;
+    border-bottom:1px solid #ccc;
+}
+
 .apioo-brand {
     background-color:#000;
     text-align: center;
