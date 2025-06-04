@@ -13,7 +13,7 @@
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <h2 class="display-6 fw-normal">Using the Fusio Logo</h2>
+      <h2 class="fusio-sub-headline h4 fw-normal">💡 Using the Fusio Logo</h2>
       <p>Below you’ll find <a href="<?php echo $base; ?>/media/fusio_icon.zip">downloadable</a> versions of the logo:</p>
       <h3>32px</h3>
       <a href="<?php echo $base; ?>/media/fusio_32.png"><img src="<?php echo $base; ?>/media/fusio_32.png" alt="Fusio Logo 32px"></a>

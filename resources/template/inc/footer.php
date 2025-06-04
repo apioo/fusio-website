@@ -31,6 +31,7 @@
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Worker::class, 'show']); ?>">Worker</a></li>
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Integration::class, 'show']); ?>">Integration</a></li>
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Demo::class, 'show']); ?>">Demo</a></li>
+          <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Media::class, 'show']); ?>">Media</a></li>
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Contact::class, 'show']); ?>">Contact</a></li>
           <li class="mb-2"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Imprint::class, 'show']); ?>">Imprint</a></li>
         </ul>
