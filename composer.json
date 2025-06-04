@@ -8,9 +8,6 @@
     "fusio/marketplace": "^0.1.4",
     "chriskapp/blog": "^0.1.2"
   },
-  "require-dev": {
-    "vimeo/psalm": "^5.9"
-  },
   "autoload": {
     "psr-4": {
       "App\\": "src/"
