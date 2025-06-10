@@ -22,10 +22,11 @@
           </script>
         <?php endif; ?>
 
-      <p>Please use this form for business inquiries. If you are interested in consulting regarding Fusio, take a look
-      at our <a href="https://github.com/sponsors/chriskapp/sponsorships?sponsor=chriskapp&tier_id=335022&preview=false">GitHub sponsor</a>
-      consulting tier. Note this is not a support form, please use the following public resources in case of issues
-      regarding Fusio:</p>
+      <p>Have questions about Fusio or need help getting started? We're here to help! Whether you're a developer exploring API management
+        or a business looking to integrate powerful backend tools, feel free to reach out. Use the form or one of the links below — we’d
+        love to hear from you. In case you are interested in consulting regarding Fusio, take a look
+        at our <a href="https://github.com/sponsors/chriskapp/sponsorships?sponsor=chriskapp&tier_id=335022&preview=false">GitHub sponsor</a>
+        consulting tier.</p>
 
       <ul>
         <li><a href="https://docs.fusio-project.org/">Documentation</a></li>
