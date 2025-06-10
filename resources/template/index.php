@@ -102,7 +102,7 @@ https://github.com/apioo/fusio
     </div>
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
-        <span class="m-3">📰</span>
+        <span class="m-3">📡</span>
       </div>
       <h2 class="fs-4">SDK Automation</h2>
       <p>Automatically generate SDKs (e.g., PHP, TypeScript, Python) based on your defined API schema.</p>
