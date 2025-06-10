@@ -19,11 +19,8 @@ installable via the Fusio backend app and can be used by all our users.
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <p>We provide a <a href="https://marketplace.fusio-project.org/">Marketplace</a> for our community where users can
-        offer apps and actions which can be installed at every local Fusio instance. Every app or action can be directly
-        installed from the backend app under Development / Marketplace or also via CLI i.e. <code>php bin/fusio marketplace:install fusio</code>.
-        The following list contains some apps and actions from the live marketplace. The marketplace is of course also built with Fusio
-        and you can integrate it through the <a href="https://api.fusio-project.org/apps/redoc/">API</a>.</p>
+      <p>The Fusio <a href="https://marketplace.fusio-project.org/">Marketplace</a> is your central hub to explore and install community-contributed apps and actions that extend the functionality of your local Fusio instance.
+        Whether you're a developer or API manager, the Marketplace makes it easy to enhance your Fusio environment. You can install any listed app or action directly through the Fusio backend under Development / Marketplace, or by using the command line interface: <code>php bin/fusio marketplace:install fusio</code></p>
       <div class="text-center mt-4">
         <a href="https://marketplace.fusio-project.org/login" class="btn btn-primary">Login</a>
         <a href="https://marketplace.fusio-project.org/register" class="btn btn-secondary">Register</a>

@@ -13,7 +13,7 @@
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <p class="text-center lead">Explore tools, libraries, and services built around Fusio, the open source API management platform.</p>
+      <p class="text-center lead">Explore tools and services built around Fusio.</p>
     </div>
   </div>
 </div>

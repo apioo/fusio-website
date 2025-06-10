@@ -47,7 +47,7 @@
     <div class="row">
       <div class="col">
         <h2 class="fusio-sub-headline h4 fw-normal">📦 Composer</h2>
-        <p>It is also possible to quickly setup a Fusio project through composer:</p>
+        <p>Install Fusio through Composer:</p>
         <pre><code class="bash">composer create-project fusio/fusio</code></pre>
       </div>
     </div>
@@ -58,12 +58,7 @@
   <div class="row">
     <div class="col">
       <h2 class="fusio-sub-headline h4 fw-normal">🐳 Docker</h2>
-      <p>We provide also a docker container for Fusio. To setup the container you
-        have to checkout the <a href="https://github.com/apioo/fusio-docker">repository</a>
-        and run the following command:</p>
-      <pre><code class="bash">docker-compose up -d</code></pre>
-      <p>You can also checkout the plain <a href="https://hub.docker.com/r/fusio/fusio/">fusio/fusio</a>
-        image.</p>
+      <p>Use our <a href="https://hub.docker.com/r/fusio/fusio">Docker-Image</a> to quickly set up a Fusio instance. Take a look at the example <a href="https://github.com/apioo/fusio-docker/blob/main/docker-compose.yml">Docker-Compose</a> YAML file to start Fusio with a Database.</p>
     </div>
   </div>
 </div>
