@@ -30,7 +30,7 @@
             <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
               <i class="bi bi-house p-4"></i>
             </div>
-            <p>Open Source API Management Made Easy.</p>
+            <p>Self-Hosted API Management for Builders.</p>
             <a href="https://github.com/apioo/fusio" class="btn btn-primary">GitHub</a>
           </div>
         </div>
