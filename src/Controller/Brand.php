@@ -8,7 +8,7 @@ use PSX\Framework\Controller\ControllerAbstract;
 use PSX\Framework\Http\Writer\Template;
 use PSX\Framework\Loader\ReverseRouter;
 
-class Media extends ControllerAbstract
+class Brand extends ControllerAbstract
 {
     private ReverseRouter $reverseRouter;
 
@@ -18,15 +18,15 @@ class Media extends ControllerAbstract
     }
 
     #[Get]
-    #[Path('/media')]
+    #[Path('/brand')]
     public function show(): mixed
     {
         $data = [
-            'title' => 'Media | Fusio',
+            'title' => 'Brand | Fusio',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
         ];
 
-        $templateFile = __DIR__ . '/../../resources/template/media.php';
+        $templateFile = __DIR__ . '/../../resources/template/brand.php';
         return new Template($data, $templateFile, $this->reverseRouter);
     }
 }

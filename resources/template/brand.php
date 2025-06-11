@@ -4,7 +4,7 @@
   <div class="container">
     <div class="row">
       <div class="col p-4 mx-auto text-center">
-        <h1 class="display-4 fw-normal">Media</h1>
+        <h1 class="display-4 fw-normal">Brand</h1>
       </div>
     </div>
   </div>
