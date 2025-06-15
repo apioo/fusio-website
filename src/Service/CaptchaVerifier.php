@@ -4,14 +4,15 @@ namespace App\Service;
 
 use GuzzleHttp\Client;
 use PSX\Framework\Config\ConfigInterface;
+use PSX\Framework\Environment\IPResolver;
 use PSX\Json;
 
-class CaptchaVerifier
+readonly class CaptchaVerifier
 {
     private Client $httpClient;
     private string $secret;
 
-    public function __construct(ConfigInterface $config)
+    public function __construct(ConfigInterface $config, private IPResolver $ipResolver)
     {
         $this->httpClient = new Client();
         $this->secret = $config->get('recaptcha_secret');
@@ -35,7 +36,7 @@ class CaptchaVerifier
             'form_params' => [
                 'secret'   => $this->secret,
                 'response' => $recaptchaResponse,
-                'remoteip' => $_SERVER['REMOTE_ADDR'] ?? '',
+                'remoteip' => $this->ipResolver->resolveByEnvironment(),
             ],
             'verify' => false
         ]);
