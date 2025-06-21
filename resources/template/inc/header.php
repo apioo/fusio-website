@@ -13,6 +13,7 @@
   <meta property="og:image" content="https://www.fusio-project.org/img/github_preview.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@FusioAPI" />
+  <meta name="fediverse:creator" content="@fusio@fosstodon.org">
   <title><?php echo $title ?? 'Fusio - Open source API management platform'; ?></title>
   <link rel="preload" href="<?php echo $base; ?>/dist/app.min.css" as="style" />
   <link rel="preload" href="<?php echo $base; ?>/dist/app.min.js" as="script" />
