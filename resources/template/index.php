@@ -36,7 +36,7 @@ https://github.com/apioo/fusio
         <a href="https://bsky.app/profile/fusioapi.bsky.social" class="text-decoration-none text-light"><img src="<?php echo $base; ?>/img/bluesky-64.png" width="32" height="32" alt="Bluesky Logo"> <span class="d-none d-lg-inline">Bluesky</span></a>
       </div>
       <div class="col">
-        <a href="https://fosstodon.org/@fusio" class="text-decoration-none text-light"><img src="<?php echo $base; ?>/img/mastodon-64.png" width="32" height="32" alt="Mastodon Logo"> <span class="d-none d-lg-inline">Mastodon</span></a>
+        <a rel="me" href="https://fosstodon.org/@fusio" class="text-decoration-none text-light"><img src="<?php echo $base; ?>/img/mastodon-64.png" width="32" height="32" alt="Mastodon Logo"> <span class="d-none d-lg-inline">Mastodon</span></a>
       </div>
     </div>
   </div>
