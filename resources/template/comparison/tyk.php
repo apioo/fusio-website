@@ -120,9 +120,9 @@
   <div class="row">
     <div class="col">
       <h4>💡 Final Thoughts</h4>
-      <p><b>Fusio</b> is ideal for developers who want a self-hosted, all-in-one API platform — especially if you're building APIs from scratch or managing data-driven endpoints. It handles the entire API lifecycle, from design to deployment.</p>
+      <p><b>Fusio</b> is ideal for developers who want a self-hosted, all-in-one API platform, especially if you're building APIs from scratch or managing data-driven endpoints. It handles the entire API lifecycle, from design to deployment.</p>
       <p><b>Tyk</b>, on the other hand, is a powerful proxy gateway, best suited for managing existing services, applying rate limits, securing traffic, and scaling distributed systems.</p>
-      <p>Both are open source — the right choice depends on whether you're creating APIs (Fusio) or managing traffic for APIs (Tyk).</p>
+      <p>Both are open source, the right choice depends on whether you're creating APIs (Fusio) or managing traffic for APIs (Tyk).</p>
     </div>
   </div>
 </div>

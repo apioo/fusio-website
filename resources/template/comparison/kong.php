@@ -84,7 +84,7 @@
         <li>Built-in OAuth2 server for authentication and token management</li>
         <li>Auto-generated OpenAPI documentation</li>
         <li>Support for direct database APIs, RPC, or custom logic</li>
-        <li>Developer-focused workflow — ideal for building backend APIs from scratch</li>
+        <li>Developer-focused workflow, ideal for building backend APIs from scratch</li>
       </ul>
       <p><b>Best for:</b> Developers and teams who want full control over their API lifecycle, from definition to deployment.</p>
     </div>
@@ -138,7 +138,7 @@
   <div class="row">
     <div class="col">
       <h4>💡 Final Thoughts</h4>
-      <p>Both Fusio and Kong are powerful — but designed for different needs.</p>
+      <p>Both Fusio and Kong are powerful, but designed for different needs.</p>
       <ul>
         <li>Fusio is ideal if you’re building APIs from the ground up and want full lifecycle management.</li>
         <li>Kong is best when you already have APIs and need a gateway to secure, monitor, and route traffic at scale.</li>

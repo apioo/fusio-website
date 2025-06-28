@@ -23,7 +23,7 @@
         <?php endif; ?>
 
       <p>Have questions about Fusio or need help getting started? We're here to help! Whether you're a developer exploring API management
-        or a business looking to integrate powerful backend tools, feel free to reach out. Use the form or one of the links below — we’d
+        or a business looking to integrate powerful backend tools, feel free to reach out. Use the form or one of the links below, we’d
         love to hear from you. In case you are interested in consulting regarding Fusio, take a look
         at our <a href="https://github.com/sponsors/chriskapp/sponsorships?sponsor=chriskapp&tier_id=335022&preview=false">GitHub sponsor</a>
         consulting tier.</p>

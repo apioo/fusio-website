@@ -90,7 +90,7 @@
         <li>Automatically generate documentation</li>
         <li>Extend logic using PHP, JavaScript, or SQL</li>
       </ul>
-      <p>It’s a full-stack solution tailored to developers who need to quickly build, deploy, and manage RESTful APIs — without relying on a complex external service mesh.</p>
+      <p>It’s a full-stack solution tailored to developers who need to quickly build, deploy, and manage RESTful APIs, without relying on a complex external service mesh.</p>
       <p><b>Best for:</b> Small teams, developers, startups, and PHP shops that want full control over their APIs with minimal infrastructure overhead.</p>
     </div>
     <div class="col-6">
@@ -141,7 +141,7 @@
   <div class="row">
     <div class="col">
       <h4>💡 Final Thoughts</h4>
-      <p><b>Fusio</b> and <b>WSO2</b> are both excellent — but serve different needs:</p>
+      <p><b>Fusio</b> and <b>WSO2</b> are both excellent, but serve different needs:</p>
       <ul>
         <li><b>Fusio</b> is perfect for developers who want to build and manage APIs quickly with full backend support and minimal overhead.</li>
         <li><b>WSO2</b> is ideal for enterprises that need robust governance, security, and high-volume infrastructure support.</li>

@@ -133,7 +133,7 @@
   <div class="row">
     <div class="col">
       <h4>💡 Final Thoughts</h4>
-      <p><b>Fusio</b> and <b>PostgREST</b> both shine when working with SQL data — but their goals differ:</p>
+      <p><b>Fusio</b> and <b>PostgREST</b> both shine when working with SQL data, but their goals differ:</p>
       <ul>
         <li><b>Fusio</b> offers a complete platform for customizable, secure, and documented APIs, great for long-term backend development.</li>
         <li><b>PostgREST</b> provides a fast and elegant way to immediately expose a PostgreSQL database, best for database-centric applications.</li>

@@ -128,7 +128,7 @@
   <div class="row">
     <div class="col">
       <h4>💡 Final Thoughts</h4>
-      <p><b>Fusio</b> and <b>Firebase</b> are both powerful — but built for different development styles:</p>
+      <p><b>Fusio</b> and <b>Firebase</b> are both powerful, but built for different development styles:</p>
       <ul>
         <li><b>Fusio</b> gives you full control over your backend, authentication, and data. It’s ideal for developers who want structured APIs and control over hosting and scaling.</li>
         <li><b>Firebase</b> is great for building front-end-centric apps quickly, especially with real-time features and Google Cloud services.</li>

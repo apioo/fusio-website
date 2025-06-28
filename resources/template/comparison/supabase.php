@@ -133,7 +133,7 @@
   <div class="row">
     <div class="col">
       <h4>💡 Final Thoughts</h4>
-      <p><b>Fusio</b> and <b>Supabase</b> share the open-source spirit — but they solve different problems:</p>
+      <p><b>Fusio</b> and <b>Supabase</b> share the open-source spirit, but they solve different problems:</p>
       <ul>
         <li><b>Fusio</b> is for developers who want to build, control, and manage APIs at a granular level with a strong backend-first approach.</li>
         <li><b>Supabase</b> is for teams who want fast, frontend-centric app development with minimal backend setup and PostgreSQL automation.</li>
