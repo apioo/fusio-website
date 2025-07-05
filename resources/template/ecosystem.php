@@ -32,6 +32,7 @@
             </div>
             <p>Self-Hosted API Management for Builders.</p>
             <a href="https://github.com/apioo/fusio" class="btn btn-primary">GitHub</a>
+            <a href="https://docs.fusio-project.org/" class="btn btn-secondary">Docs</a>
           </div>
         </div>
       </div>
@@ -46,6 +47,7 @@
             </div>
             <p>Starter repository to use Fusio as a framework.</p>
             <a href="https://github.com/apioo/fusio-framework" class="btn btn-primary">GitHub</a>
+            <a href="https://docs.fusio-project.org/docs/ecosystem/framework" class="btn btn-secondary">Docs</a>
           </div>
         </div>
       </div>
@@ -60,6 +62,7 @@
             </div>
             <p>Plant is a server panel to easily self-host Fusio and other apps on your server.</p>
             <a href="https://github.com/apioo/fusio-plant" class="btn btn-primary">GitHub</a>
+            <a href="https://docs.fusio-project.org/docs/ecosystem/plant" class="btn btn-secondary">Docs</a>
           </div>
         </div>
       </div>
