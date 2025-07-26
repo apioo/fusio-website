@@ -83,8 +83,8 @@ https://github.com/apioo/fusio
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
         <span class="m-3">⚡</span>
       </div>
-      <h2 class="fs-4">Fast API Prototyping</h2>
-      <p>Speeds up frontend/backend collaboration and rapid iteration.</p>
+      <h2 class="fs-4">MCP Integration</h2>
+      <p>Leverage the Model Context Protocol to enable AI-driven access and control of API endpoints.</p>
     </div>
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
