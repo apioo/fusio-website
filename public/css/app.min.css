@@ -97,13 +97,13 @@ lite-youtube.lyt-activated > .lty-playbtn {
 
 @media (min-width: 992px) {
     .fusio-headline {
-        background-image: url('../img/intro_medium.webp');
-        background-size: cover;
+        background-image: url('../img/intro_new_medium.webp');
+        background-position: left bottom;
+        color: #fff;
     }
 
     .fusio-outro {
-        background: url('../img/intro_medium.webp') no-repeat top center;
-        background-size: cover;
+        background-image: url('../img/intro_new_medium.webp');
         transform: rotate(180deg);
         height: 400px;
     }
@@ -111,13 +111,14 @@ lite-youtube.lyt-activated > .lty-playbtn {
 
 @media (max-width: 991px) {
     .fusio-headline {
-        background-image: url('../img/intro_small.webp');
-        background-size: cover;
+        background-image: url('../img/intro_new_small.webp');
+        background-position: left bottom;
+        color: #fff;
     }
 
     .fusio-outro {
-        background: url('../img/intro_small.webp') no-repeat top center;
-        background-size: cover;
+        background-image: url('../img/intro_new_small.webp');
+        background-position: left bottom;
         transform: rotate(180deg);
         height: 400px;
     }

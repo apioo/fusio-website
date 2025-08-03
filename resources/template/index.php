@@ -12,7 +12,7 @@ https://github.com/apioo/fusio
       <div class="col p-lg-5 mx-auto my-5 text-center">
         <h1 class="display-4 fw-normal">Fusio</h1>
         <p class="lead fw-normal">Self-Hosted API Management for Builders.</p>
-        <a href="https://mailchi.mp/948c47451634/fusio" class="btn btn-dark">Subscribe</a>
+        <a href="https://mailchi.mp/948c47451634/fusio" class="btn btn-secondary">Subscribe</a>
         <a href="<?php echo $router->getAbsolutePath([\App\Controller\Demo::class, 'show']); ?>" class="btn btn-primary">Demo</a>
         <a href="<?php echo $router->getAbsolutePath([\App\Controller\Contact::class, 'show']); ?>" class="btn btn-primary">Contact</a>
       </div>
