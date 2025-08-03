@@ -13,12 +13,13 @@
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <h2 id="api-product" class="fusio-sub-headline h4 fw-normal">🌐 API Product: Transform Legacy Systems into Modern API Offerings</h2>
-      <p class="lead">Fusio enables you to expose your existing web application's business logic through modern RESTful APIs. By integrating Fusio, you can:</p>
+      <h2 id="api-product" class="fusio-sub-headline h4 fw-normal">🌐 API Product: Transform Legacy Systems into Modern APIs</h2>
+      <p class="lead">Fusio helps you turn your existing web apps into modern, easy-to-use RESTful APIs. With Fusio, you can:</p>
       <ul class="fusio-list lead">
-        <li>Create a developer portal for onboarding and managing API consumers.</li>
-        <li>Leverage built-in authentication methods, including email and social logins.</li>
-        <li>Monetize your APIs with integrated payment systems.</li>
+        <li>Build a developer portal to onboard and manage API users.</li>
+        <li>Use built-in login options, including email and social media accounts.</li>
+        <li>Monetize your APIs with payment system support.</li>
+        <li>Support for <abbr title="Model Context Protocol">MCP</abbr>, allowing developers to explore and use your API through natural language with LLMs.</li>
       </ul>
       <p class="lead">This approach allows for seamless integration with your current infrastructure, providing a state-of-the-art API experience for your users.</p>
       <div class="btn-group btn-group-lg">
@@ -34,14 +35,14 @@
     <div class="row">
       <div class="col">
         <h2 id="api-gateway" class="fusio-sub-headline h4 fw-normal">🔐 API Gateway: Centralize and Secure Your Microservices</h2>
-        <p class="lead">Acting as a centralized API gateway, Fusio offers:</p>
+        <p class="lead">Fusio acts as a central entry point for all your APIs and microservices. It helps you:</p>
         <ul class="fusio-list lead">
-          <li>A single entry point for all internal APIs and microservices.</li>
-          <li>Comprehensive monitoring and analytics of API traffic.</li>
-          <li>Advanced features like rate limiting, authorization, and monetization.</li>
-          <li>Automatic generation of OpenAPI specifications and client SDKs through its schema store.</li>
+          <li>Route all internal APIs through one secure gateway.</li>
+          <li>Monitor and analyze API traffic in one place.</li>
+          <li>Use built-in tools like rate limiting, access control, and monetization.</li>
+          <li>Automatically generate OpenAPI documentation and client SDKs.</li>
         </ul>
-        <p class="lead">This centralized approach simplifies API management and enhances security across your services.</p>
+        <p class="lead">This makes it easier to manage your APIs and keep your services secure and organized.</p>
         <div class="btn-group btn-group-lg">
           <a href="https://youtu.be/S-mneuDPNzg" class="btn btn-primary">Video</a>
           <a href="https://docs.fusio-project.org/docs/use_cases/api_gateway/" class="btn btn-secondary">Documentation</a>
@@ -54,14 +55,15 @@
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <h2 id="spa-backend" class="fusio-sub-headline h4 fw-normal">🖥️ SPA Backend: Powering Single-Page Applications with Robust APIs</h2>
-      <p class="lead">Fusio serves as an efficient backend for single-page applications (SPAs) built with frameworks like Angular, React, or Vue. Key benefits include:</p>
+      <h2 id="spa-backend" class="fusio-sub-headline h4 fw-normal">🖥️ SPA Backend: Power Your Single-Page App with a Flexible API</h2>
+      <p class="lead">Fusio is a powerful backend solution for single-page applications built with <a href="https://angular.dev/">Angular</a>, <a href="https://react.dev/">React</a>, <a href="https://vuejs.org/">Vue</a>, and more. With Fusio, you get:</p>
       <ul class="fusio-list lead">
-        <li>Automatic generation of type-safe JavaScript client SDKs.</li>
-        <li>Simplified creation of CRUD endpoints using the entity generator.</li>
-        <li>Support for authentication and authorization mechanisms.</li>
+        <li>Automatically generated JavaScript clients with type checking for safer development.</li>
+        <li>Simple tools to create <abbr title="Create, Read, Update, Delete">CRUD</abbr> API endpoints.</li>
+        <li>Built-in support for user authentication and access control.</li>
+        <li>Trigger real-time updates or external services through an HTTP webhook event system that responds to API actions.</li>
       </ul>
-      <p class="lead">This setup provides a self-hosted alternative to platforms like Firebase or Supabase, offering greater control and customization.</p>
+      <p class="lead">Fusio offers a self-hosted alternative to Firebase or Supabase, giving you full control over how your backend works and how your data is managed.</p>
       <div class="btn-group btn-group-lg">
         <a href="https://youtu.be/syRmovex3rE" class="btn btn-primary">Video</a>
         <a href="https://docs.fusio-project.org/docs/use_cases/spa_backend/" class="btn btn-secondary">Documentation</a>
@@ -74,15 +76,15 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <h2 id="api-builder" class="fusio-sub-headline h4 fw-normal">⚙️ API Builder: Rapid API Generation from Diverse Data Sources</h2>
-        <p class="lead">With Fusio's API Builder, you can swiftly create RESTful APIs from various data sources, including:</p>
+        <h2 id="api-builder" class="fusio-sub-headline h4 fw-normal">⚙️ API Builder: Quickly Generate APIs from Your Data</h2>
+        <p class="lead">Using the API Builder in Fusio, you can quickly turn your data into working RESTful APIs using sources like:</p>
         <ul class="fusio-list lead">
-          <li>Relational databases (MySQL, PostgreSQL).</li>
-          <li>NoSQL databases (MongoDB, Elasticsearch).</li>
-          <li>File systems and directories.</li>
-          <li>Existing OpenAPI or Postman specifications.</li>
+          <li>Relational databases (MySQL, PostgreSQL)</li>
+          <li>NoSQL databases (MongoDB, Elasticsearch)</li>
+          <li>File systems or local directories</li>
+          <li>Existing API definitions (OpenAPI or Postman files)</li>
         </ul>
-        <p class="lead">The platform's generators automate the creation of routes, actions, and schemas, accelerating development and reducing manual effort.</p>
+        <p class="lead">Fusio automatically creates the API endpoints, logic, and data structure, helping you save time and avoid repetitive coding.</p>
         <div class="btn-group btn-group-lg">
           <a href="https://docs.fusio-project.org/docs/use_cases/api_builder/" class="btn btn-secondary">Documentation</a>
         </div>
@@ -95,13 +97,14 @@
   <div class="row">
     <div class="col">
       <h2 id="api-framework" class="fusio-sub-headline h4 fw-normal">🛠️ API Framework: Build Custom APIs from the Ground Up</h2>
-      <p class="lead">For complex or unique requirements, Fusio functions as a comprehensive API framework, allowing you to:</p>
+      <p class="lead">Fusio offers a powerful yet developer-friendly API framework that helps you build advanced APIs with ease. You can:</p>
       <ul class="fusio-list lead">
-        <li>Develop custom actions using PHP or other supported languages.</li>
-        <li>Utilize a deployment system to manage configurations via YAML files.</li>
-        <li>Implement a recommended folder structure for organized project management.</li>
+        <li>Write clean, organized code by using the Symfony dependency injection container.</li>
+        <li>Store your entire setup in simple YAML files for easy deployment and version control.</li>
+        <li>Quickly generate models, database tables, SDKs, and migrations with a single command.</li>
+        <li>Use a clear folder structure that gives your project a solid foundation as it grows.</li>
       </ul>
-      <p class="lead">This flexibility ensures that you can tailor your API solutions to meet specific business needs.</p>
+      <p class="lead">This flexibility helps you build APIs that fit your exact business requirements.</p>
       <div class="btn-group btn-group-lg">
         <a href="https://youtu.be/2E9YnAaXq5s" class="btn btn-primary">Video</a>
         <a href="https://docs.fusio-project.org/docs/use_cases/api_framework/" class="btn btn-secondary">Documentation</a>
