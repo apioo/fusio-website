@@ -14,7 +14,6 @@ https://github.com/apioo/fusio
         <p class="lead fw-normal">Self-Hosted API Management for Builders.</p>
         <a href="https://mailchi.mp/948c47451634/fusio" class="btn btn-secondary">Subscribe</a>
         <a href="<?php echo $router->getAbsolutePath([\App\Controller\Demo::class, 'show']); ?>" class="btn btn-primary">Demo</a>
-        <a href="<?php echo $router->getAbsolutePath([\App\Controller\Contact::class, 'show']); ?>" class="btn btn-primary">Contact</a>
       </div>
     </div>
   </div>
