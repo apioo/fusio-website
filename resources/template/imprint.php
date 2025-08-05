@@ -12,7 +12,7 @@
 
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
-    <iframe src="https://apioo.de/files/imprint.html" height="800"></iframe>
+    <?php echo $imprint; ?>
   </div>
 </div>
 
