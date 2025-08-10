@@ -133,7 +133,7 @@
           </div>
           <img src="<?php echo $base; ?>/img/sdk/php.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
-            <a href="https://github.com/apioo/fusio-sample-cms" class="btn btn-secondary">Example</a>
+            <a href="https://github.com/apioo/fusio-framework" class="btn btn-secondary">GitHub</a>
           </div>
         </div>
       </div>
