@@ -23,6 +23,8 @@ class Ecosystem extends ControllerAbstract
     {
         $data = [
             'title' => 'Ecosystem | Fusio',
+            'description' => 'Explore the Fusio Ecosystem: a suite of tools and services including SDKgen, APIgen, APImon, TypeHub, and more. Enhance your API development with seamless integrations and community-driven apps.',
+            'keywords' => 'Fusio, API management, SDKgen, APIgen, APImon, TypeHub, TypeAPI, TypeSchema, PSX, Fusio Marketplace, Fusio Framework, Plant server panel, API tools, API integrations, open-source API tools, API development ecosystem',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
         ];
 

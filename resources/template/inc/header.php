@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="description" content="Fusio is an open source API management platform which helps to create innovative API solutions" />
-  <meta name="keywords" content="API, API Gateway, API Management, API Platform, REST API, Serverless, PHP, OpenAPI, Swagger" />
+  <meta name="description" content="<?php echo $description ?? 'Fusio is an open source API management platform designed for API builders and developers.'; ?>" />
+  <meta name="keywords" content="<?php echo $keywords ?? 'API, API Gateway, API Management, API Platform, REST API, Serverless, PHP, JavaScript, OpenAPI, Swagger, MCP'; ?>" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta property="og:url" content="https://www.fusio-project.org/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="<?php echo $title; ?>" />
-  <meta property="og:description" content="Fusio is an open source API management platform which helps to create innovative API solutions" />
+  <meta property="og:description" content="Fusio is an open source API management platform designed for API builders and developers." />
   <meta property="og:image" content="https://www.fusio-project.org/img/github_preview.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@FusioAPI" />

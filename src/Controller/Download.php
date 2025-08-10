@@ -36,6 +36,8 @@ class Download extends ControllerAbstract
 
         $data = [
             'title' => 'Download | Fusio',
+            'description' => 'Download Fusio as a standalone file or Docker image for easy installation and deployment of the open-source API management platform.',
+            'keywords' => 'Fusio, API management, open-source API platform, Fusio download, Docker image, Fusio setup, Fusio installation, API development tools, Fusio API platform, Fusio Docker Compose, Fusio database setup, Fusio deployment guide',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
             'tagName' => $release->getTagName(),
             'htmlUrl' => $release->getHtmlUrl(),

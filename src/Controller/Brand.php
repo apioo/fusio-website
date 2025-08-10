@@ -23,6 +23,8 @@ class Brand extends ControllerAbstract
     {
         $data = [
             'title' => 'Brand | Fusio',
+            'description' => 'Access the official Fusio brand assets to help maintain consistency in your communications and marketing materials.',
+            'keywords' => 'Fusio brand, Fusio logo, branding guidelines, Fusio colors, API platform branding, Fusio visual identity, Fusio design assets, Fusio marketing materials',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
         ];
 

@@ -38,6 +38,8 @@ class Contact extends ControllerAbstract
     {
         $data = [
             'title' => 'Contact | Fusio',
+            'description' => 'Contact Fusio for support, consulting, or questions. Connect via form, Discord, GitHub, and YouTube to get help with your API projects.',
+            'keywords' => 'Fusio contact, Fusio support, Fusio inquiries, Fusio consulting, Fusio community, Fusio Discord, Fusio GitHub, Fusio YouTube, Fusio API management, Fusio assistance',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
             'recaptcha_key' => $this->config->get('recaptcha_key'),
         ];

@@ -23,6 +23,8 @@ class Worker extends ControllerAbstract
     {
         $data = [
             'title' => 'Worker | Fusio',
+            'description' => 'Run custom actions in Java, JavaScript, PHP, or Python with Fusio worker system. Easily integrate and extend Fusio API management platform.',
+            'keywords' => 'Fusio Worker, API actions, Java worker, JavaScript worker, PHP worker, Python worker, Fusio API, custom actions, Fusio integrations, Fusio backend',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
         ];
 

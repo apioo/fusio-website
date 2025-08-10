@@ -30,14 +30,17 @@
       <div class="col">
         <h2 class="fusio-sub-headline h4 fw-normal">🌟 Key Features</h2>
         <ul class="fusio-list lead">
-          <li><b>API Builder</b>: Automatically generate REST APIs based on different data sources, including relational databases and NoSQL systems.</li>
+          <li><b>API Gateway</b>: Manage, route, and secure API traffic efficiently through a centralized gateway, enhancing scalability and control over your API ecosystem.</li>
           <li><b>Developer Portal</b>: Provide a dedicated portal where developers can register, obtain access tokens, and manage their applications.</li>
+          <li><b>API Builder</b>: Automatically generate <abbr title="Representational State Transfer">REST</abbr> APIs based on different data sources, including relational databases and NoSQL systems.</li>
           <li><b>Monetization</b>: Implement a simple payment system to charge for specific API routes, opening new revenue streams.</li>
           <li><b>Rate Limiting</b>: Control the number of requests to your API based on user or application, ensuring fair usage and protecting resources.</li>
-          <li><b>SDK Generation</b>: Automatically generate client SDKs for your API based on defined schemas, facilitating easier integration for developers.</li>
-          <li><b>Schema Generation</b>: Generate OpenAPI and TypeAPI specifications to provide clear documentation and support for your API consumers.</li>
-          <li><b>Webhook Support</b>: Implement a publish/subscribe pattern for your API using Fusio's webhook system, enabling real-time notifications.</li>
-          <li><b>OAuth2 Authorization</b>: Secure your APIs by allowing developers to obtain access tokens for non-public endpoints.</li>
+          <li><b>SDK Generation</b>: Automatically generate client <abbr title="Software Development Kits">SDKs</abbr> for your API based on defined schemas, facilitating easier integration for developers.</li>
+          <li><b><a href="https://www.openapis.org/">OpenAPI</a> Generation</b>: Automatically generate OpenAPI specification to provide clear documentation and support for your API consumers.</li>
+          <li><b>SPA Backend</b>: Provide a robust backend framework specifically optimized to support <abbr title="Single Page Applications">SPAs</abbr>, enabling smooth API communication and efficient data handling.</li>
+          <li><b><a href="https://www.standardwebhooks.com/">Webhook</a> Support</b>: Implement a publish/subscribe pattern for your API using Fusio's webhook system, enabling real-time notifications.</li>
+          <li><b><a href="https://datatracker.ietf.org/doc/html/rfc6749">OAuth2</a> Authorization</b>: Secure your APIs by allowing developers to obtain access tokens for non-public endpoints.</li>
+          <li><b><a href="https://modelcontextprotocol.io/">MCP</a> Integration</b>: Enable seamless integration with the <abbr title="Model Context Protocol">MCP</abbr> to facilitate advanced interactions with large language models (LLMs).</li>
         </ul>
       </div>
     </div>

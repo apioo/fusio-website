@@ -26,6 +26,8 @@ class Adapter extends ControllerAbstract
     {
         $data = [
             'title' => 'Adapter | Fusio',
+            'description' => 'Explore Fusio adapters to connect APIs with services like MongoDB, AWS, and Redis. Extend Fusio capabilities easily using Composer.',
+            'keywords' => 'Fusio adapters, API integrations, MongoDB adapter, AWS adapter, Redis adapter, Fusio extensions, Fusio Composer, Fusio API connections, Fusio services',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
             'fusio' => $this->adapterTable->findIndexEntriesFusio(),
             'community' => $this->adapterTable->findIndexEntriesCommunity(),

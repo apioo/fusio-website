@@ -24,6 +24,8 @@ class Comparison extends ControllerAbstract
     {
         $data = [
             'title' => 'Comparison | Fusio',
+            'description' => 'Compare Fusio with leading API management platforms like Supabase, Firebase, Kong, Tyk, and WSO2.',
+            'keywords' => 'Fusio, API management, Supabase, Firebase, Kong, Tyk, WSO2, API gateway, backend-as-a-service, open-source API platform, self-hosted API, API development, API comparison, Fusio vs Supabase, Fusio vs Firebase, API management platforms',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
         ];
 

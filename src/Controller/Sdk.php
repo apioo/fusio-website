@@ -23,6 +23,8 @@ class Sdk extends ControllerAbstract
     {
         $data = [
             'title' => 'SDK | Fusio',
+            'description' => 'Access Fusio SDKs to seamlessly integrate your applications with the Fusio API. Available in C#, Go, Java, JavaScript, PHP, Python, and frameworks like Angular, along with tools for Electron and VSCode.',
+            'keywords' => 'Fusio SDK, API SDKs, C# SDK, Go SDK, Java SDK, JavaScript SDK, PHP SDK, Python SDK, Angular SDK, Electron SDK, VSCode SDK, Fusio API integration, SDKgen, API client libraries, Fusio backend SDK, Fusio frontend SDK, open-source SDKs, Fusio tools',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
         ];
 

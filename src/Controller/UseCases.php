@@ -23,6 +23,8 @@ class UseCases extends ControllerAbstract
     {
         $data = [
             'title' => 'Use-Cases | Fusio',
+            'description' => 'Explore real-world use cases of Fusio, the open-source API management platform. Discover how businesses build, manage, and scale powerful APIs effortlessly.',
+            'keywords' => 'Fusio, Use-Cases, API management, Open-Source, API management platform, API use cases, Fusio API examples, Open-Source API Gateway, Fusio API solutions',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
         ];
 

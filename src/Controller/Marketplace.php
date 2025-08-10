@@ -32,6 +32,8 @@ class Marketplace extends ControllerAbstract
     {
         $data = [
             'title' => 'Marketplace | Fusio',
+            'description' => 'Explore the Fusio Marketplace to find and install community-contributed apps and actions that enhance your Fusio API instance. Easily extend functionality via the backend or CLI.',
+            'keywords' => 'Fusio Marketplace, Fusio apps, API extensions, Fusio actions, community apps, Fusio backend, Fusio CLI, API management tools, Fusio integrations, open-source API apps, Fusio developer portal, Fusio extensions',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
             'actions' => $this->getActions(),
             'apps' => $this->getApps(),
