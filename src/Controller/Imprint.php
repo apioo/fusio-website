@@ -26,7 +26,7 @@ class Imprint extends ControllerAbstract
         if ($item->isHit()) {
             $imprint = $item->get();
         } else {
-            $response = $this->httpClient->request(new GetRequest('https://www.apioo.de/files/imprint.html'));
+            $response = $this->httpClient->request(new GetRequest('https://apioo.de/files/imprint.html'));
 
             $imprint = (string) $response->getBody();
 
