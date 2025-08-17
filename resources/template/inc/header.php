@@ -38,7 +38,7 @@
         ad_storage: 'denied',
         ad_personalization: 'denied',
         ad_user_data: 'denied',
-        analytics_storage: 'granted',
+        analytics_storage: 'denied',
     });
     gtag('js', new Date());
     gtag('config', 'G-K58XVFTP9N', {anonymize_ip: true});

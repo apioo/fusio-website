@@ -63,3 +63,12 @@
 .mc-layout__modalContent {
     background-color: #eee;
 }
+
+.fusio-consent {
+    position:fixed;
+    bottom:0;
+    width:100%;
+    height:110px;
+    background-color:rgb(255, 255, 187);
+    font-weight:bold;
+}

@@ -10,6 +10,7 @@ concat(__DIR__ . '/public/css/app.min.css', [
 concat(__DIR__ . '/public/dist/app.min.js', [
     __DIR__ . '/public/js/bootstrap.min.js',
     __DIR__ . '/public/js/lite-yt-embed.js',
+    __DIR__ . '/public/js/app.js',
 ]);
 
 function concat(string $targetFile, array $files) {
