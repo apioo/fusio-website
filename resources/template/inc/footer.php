@@ -64,7 +64,7 @@
 
 <div class="fusio-consent text-center shadow-lg" style="display:none;" id="fusio_consent">
   <div class="m-3">
-    <p>Our website uses Google-Analytics to analyze traffic, do you allow the usage of Cookies:</p>
+    <p>We use Google-Analytics to analyze our traffic, do you allow the usage of Cookies:</p>
     <button onclick="setConsent(true)" class="btn btn-primary">Yes</button>
     <button onclick="setConsent(false)" class="btn btn-primary">No</button>
   </div>
