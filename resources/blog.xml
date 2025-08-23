@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <entry>
         <title>Fusio 6.0 released</title>
-        <updated>2025-08-16T12:17:00Z</updated>
+        <updated>2025-08-16T12:18:00Z</updated>
         <summary>
             This post announces the release of the next major version 6.0
         </summary>
@@ -65,7 +65,8 @@ As usual the following list covers all important features of this release:</p>
 </ul>
 
 <p>If you want to provide some feedback take a look at our GitHub <a href="https://github.com/apioo/fusio/discussions">discussions</a> or
-<a href="https://github.com/apioo/fusio/issues">issues</a> page.</p>
+<a href="https://github.com/apioo/fusio/issues">issues</a> page. For more details and background information about the release you can also
+take a look at <a href="https://chrisk.app/blog/fusio-6.0-released">my personal blog</a>, where I have published a post about the new 6.0 release.</p>
 
 <p>Best regards<br>
 Christoph</p>
