@@ -122,7 +122,7 @@ https://github.com/apioo/fusio
 
 <div class="px-4 py-5 my-5 bg-dark">
   <div style="max-width:720px;margin:0 auto;">
-    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Iz-VmMYviaY?si=dJ1SFjG5z2r8H8IP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe loading="lazy" width="560" height="315" src="https://www.youtube-nocookie.com/embed/Iz-VmMYviaY?si=dJ1SFjG5z2r8H8IP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
 </div>
 
