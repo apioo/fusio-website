@@ -122,7 +122,7 @@ https://github.com/apioo/fusio
 
 <div class="px-4 py-5 my-5 bg-dark">
   <div style="max-width:720px;margin:0 auto;">
-    <lite-youtube videoid="Iz-VmMYviaY"></lite-youtube>
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Iz-VmMYviaY?si=dJ1SFjG5z2r8H8IP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
 </div>
 
@@ -139,7 +139,7 @@ https://github.com/apioo/fusio
     "@context": "http://schema.org",
     "@type": "SoftwareApplication",
     "name": "Fusio",
-    "description": "Fusio is an open source API management platform which helps to create innovative API solutions.",
+    "description": "Self-Hosted API Management for Builders",
     "url": "https://www.fusio-project.org/",
     "applicationCategory": "API Management",
     "downloadUrl": "https://www.fusio-project.org/download",
