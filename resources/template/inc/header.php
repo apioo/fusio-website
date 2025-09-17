@@ -17,8 +17,6 @@
   <title><?php echo $title ?? 'Fusio - Open source API management platform'; ?></title>
   <link rel="preload" href="<?php echo $base; ?>/dist/app.min.css" as="style" />
   <link rel="preload" href="<?php echo $base; ?>/dist/app.min.js" as="script" />
-  <link rel="preload" href="https://www.googletagmanager.com/gtag/js?id=G-K58XVFTP9N" as="script">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com/">
   <link rel="icon" href="<?php echo $base; ?>/img/fusio_32px.png" type="image/png" />
   <link rel="stylesheet" href="<?php echo $base; ?>/dist/app.min.css" />
   <link rel="alternate" href="<?php echo $router->getAbsolutePath([\Chriskapp\Blog\Controller\Feed::class, 'show']); ?>" type="application/atom+xml" title="Fusio Blog" />
@@ -27,8 +25,6 @@
   <?php if(isset($bootstrap_icons)): ?><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <?php endif; ?>
   <script async src="<?php echo $base; ?>/dist/app.min.js"></script>
-  <?php if (!str_contains($url, '127.0.0.1')): ?><script async src="https://www.googletagmanager.com/gtag/js?id=G-K58XVFTP9N"></script>
-<?php endif; ?>
   <?php if(isset($recaptcha_key)): ?><script src="https://www.google.com/recaptcha/api.js"></script>
 <?php endif; ?>
   <script>
