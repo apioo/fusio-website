@@ -62,13 +62,5 @@
 
 <div class="apioo-brand">part of the <a href="https://apioo.de">Apioo-Project</a></div>
 
-<div class="fusio-consent text-center shadow-lg" style="display:none;" id="fusio_consent">
-  <div class="m-3">
-    <p>We use Google-Analytics to analyze our traffic, do you allow the usage of Cookies:</p>
-    <button onclick="setConsent(true)" class="btn btn-primary">Yes</button>
-    <button onclick="setConsent(false)" class="btn btn-primary">No</button>
-  </div>
-</div>
-
 </body>
 </html>

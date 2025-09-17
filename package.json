@@ -3,6 +3,6 @@
     "purgecss": "^5.0.0"
   },
   "scripts": {
-    "build": "purgecss --css 'public/css/*.css' --content 'resources/template/**/*.php' --output public/dist/ -s 'lty-playbtn' 'lyt-activated' 'lyt-visually-hidden' 'mc-layout__modalContent'"
+    "build": "purgecss --css 'public/css/*.css' --content 'resources/template/**/*.php' --output public/dist/"
   }
 }

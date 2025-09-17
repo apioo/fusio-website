@@ -32,16 +32,16 @@
   <?php if(isset($recaptcha_key)): ?><script src="https://www.google.com/recaptcha/api.js"></script>
 <?php endif; ?>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('consent', 'default', {
-        ad_storage: 'denied',
-        ad_personalization: 'denied',
-        ad_user_data: 'denied',
-        analytics_storage: 'denied',
-    });
-    gtag('js', new Date());
-    gtag('config', 'G-K58XVFTP9N', {anonymize_ip: true});
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//matomo.apioo.de/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '1']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
   </script>
 </head>
 <body>
