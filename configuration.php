@@ -10,7 +10,7 @@ return [
 
     // the blog source xml file containing all posts
     'blog_file'               => __DIR__ . '/resources/blog.xml',
-    'blog_title'              => 'Fusio',
+    'blog_title'              => 'Blog | Fusio',
 
     // the default author of the blog posts
     'blog_author_name'        => 'chriskapp',
