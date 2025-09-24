@@ -8,8 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta property="og:url" content="https://www.fusio-project.org/" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="<?php echo $title; ?>" />
-  <meta property="og:description" content="Fusio is an open source API management platform designed for API builders and developers." />
+  <meta property="og:title" content="<?php echo $title ?? 'Fusio - Open source API management platform'; ?>" />
+  <meta property="og:description" content="<?php echo $description ?? 'Fusio is an open source API management platform designed for API builders and developers.'; ?>" />
   <meta property="og:image" content="https://www.fusio-project.org/img/github_preview.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@FusioAPI" />
