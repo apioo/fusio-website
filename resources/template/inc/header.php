@@ -6,7 +6,7 @@
   <meta name="description" content="<?php echo $description ?? 'Fusio is an open source API management platform designed for API builders and developers.'; ?>" />
   <meta name="keywords" content="<?php echo $keywords ?? 'API, API Gateway, API Management, API Platform, REST API, Serverless, PHP, JavaScript, OpenAPI, Swagger, MCP'; ?>" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta property="og:url" content="https://www.fusio-project.org/" />
+  <meta property="og:url" content="<?php echo $canonical; ?>" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="<?php echo $title ?? 'Fusio - Open source API management platform'; ?>" />
   <meta property="og:description" content="<?php echo $description ?? 'Fusio is an open source API management platform designed for API builders and developers.'; ?>" />
