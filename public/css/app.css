@@ -84,33 +84,29 @@
 
 @media (width >= 1200px) {
     .fusio-right-image {
-        background-image:url('../img/screens/backend_dashboard_small.png');
         background-repeat: no-repeat;
         width:100%;
-        height:280px;
+        height:380px;
     }
 
     .fusio-left-image {
-        background-image:url('../img/screens/backend_action_designer_small.png');
         background-repeat: no-repeat;
         width:100%;
-        height:280px;
+        height:380px;
         float:right;
     }
 }
 
 @media (width < 1200px) {
     .fusio-right-image {
-        background-image:url('../img/screens/backend_dashboard_small.png');
         background-repeat: no-repeat;
-        height:280px;
+        height:380px;
         margin:2em;
     }
 
     .fusio-left-image {
-        background-image:url('../img/screens/backend_action_designer_small.png');
         background-repeat: no-repeat;
-        height:280px;
+        height:380px;
         margin:2em;
     }
 }
