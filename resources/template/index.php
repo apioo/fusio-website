@@ -57,12 +57,12 @@ https://github.com/apioo/fusio
             <p class="lead">Monitor all essential API metrics at a glance through the Fusio dashboard.</p>
         </div>
         <div class="col-lg-6">
-            <div class="fusio-right-image shadow-lg rounded-5 border-1"></div>
+            <div class="fusio-right-image shadow-lg rounded-5 border-1" style="background-image:url('<?php echo $base; ?>/img/screens/backend_dashboard_small.png');"></div>
         </div>
     </div>
     <div class="row g-4 py-4">
         <div class="col-lg-6">
-            <div class="fusio-left-image shadow-lg rounded-5 border-1"></div>
+            <div class="fusio-left-image shadow-lg rounded-5 border-1" style="background-image:url('<?php echo $base; ?>/img/screens/backend_action_designer_small.png');"></div>
         </div>
         <div class="col-lg-6 text-center text-lg-start">
             <h3 class="display-6">Development</h3>
