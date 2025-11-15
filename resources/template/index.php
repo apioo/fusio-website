@@ -41,81 +41,111 @@ https://github.com/apioo/fusio
   </div>
 </div>
 
+<div class="bg-light pt-5 mb-4 pb-5">
+    <div class="container">
+        <div class="text-center mt-5 mb-5">
+            <h2 class="display-5 fw-bold text-body-emphasis">Build efficient API solutions with <span class="fusio-text-animation">Fusio</span>.</h2>
+            <p class="lead mb-4">Whether you're creating an API gateway, powering your <abbr title="Single-Page-Application">SPA</abbr> backend, or launching an API product, Fusio provides the tools to build it efficiently.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-4 mb-4">
+    <div class="row g-4 py-4">
+        <div class="col-lg-6 text-center text-lg-end">
+            <h3 class="display-6">Analytics</h3>
+            <p class="lead">Monitor all essential API metrics at a glance through the Fusio dashboard.</p>
+        </div>
+        <div class="col-lg-6">
+            <div class="fusio-right-image shadow-lg rounded-5 border-1"></div>
+        </div>
+    </div>
+    <div class="row g-4 py-4">
+        <div class="col-lg-6">
+            <div class="fusio-left-image shadow-lg rounded-5 border-1"></div>
+        </div>
+        <div class="col-lg-6 text-center text-lg-start">
+            <h3 class="display-6">Development</h3>
+            <p class="lead">Develop endpoints effortlessly using built-in actions or by crafting your own custom logic.</p>
+        </div>
+    </div>
+</div>
+
+<div class="bg-light mt-4 pt-5 mb-4 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <blockquote class="display-4">"With Fusio, we’re empowering the API economy to drive real digital transformation."</blockquote>
+                <cite>Christoph Kappestein, Developer of Fusio</cite>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="container mt-4 mb-4">
   <div class="row g-4 py-4 row-cols-1 row-cols-lg-3 text-center">
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-1 mb-3 rounded-5">
         <span class="m-3">🔄</span>
       </div>
-      <h2 class="fs-4">Database API Gateway</h2>
+      <h3 class="fs-4">Database API Gateway</h3>
       <p>Great for unlocking legacy data systems or enabling mobile app access.</p>
     </div>
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
         <span class="m-3">🧠</span>
       </div>
-      <h2 class="fs-4">API Business Logic</h2>
+      <h3 class="fs-4">API Business Logic</h3>
       <p>Perfect for enterprise use cases requiring tailored backend logic.</p>
     </div>
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
         <span class="m-3">🕸️</span>
       </div>
-      <h2 class="fs-4">Gateway for Microservices</h2>
+      <h3 class="fs-4">Gateway for Microservices</h3>
       <p>Useful for modern service-oriented architectures or hybrid systems.</p>
     </div>
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
         <span class="m-3">🌐</span>
       </div>
-      <h2 class="fs-4">API Developer Portal</h2>
+      <h3 class="fs-4">API Developer Portal</h3>
       <p>Ideal for SaaS providers offering APIs to external developers.</p>
     </div>
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
         <span class="m-3">💸</span>
       </div>
-      <h2 class="fs-4">API Monetization</h2>
+      <h3 class="fs-4">API Monetization</h3>
       <p>Enable freemium or tiered access models with minimal effort.</p>
     </div>
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
         <span class="m-3">⚡</span>
       </div>
-      <h2 class="fs-4">MCP Integration</h2>
+      <h3 class="fs-4">MCP Integration</h3>
       <p>Leverage the Model Context Protocol to enable AI-driven access and control of API endpoints.</p>
     </div>
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
         <span class="m-3">📊</span>
       </div>
-      <h2 class="fs-4">API Usage Analytics</h2>
+      <h3 class="fs-4">API Usage Analytics</h3>
       <p>Essential for maintaining quality of service and detecting issues early.</p>
     </div>
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
         <span class="m-3">📰</span>
       </div>
-      <h2 class="fs-4">Headless CMS Backend</h2>
+      <h3 class="fs-4">Headless CMS Backend</h3>
       <p>Great for CMS-like applications where content is managed through APIs.</p>
     </div>
     <div class="feature col">
       <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
         <span class="m-3">📡</span>
       </div>
-      <h2 class="fs-4">SDK Automation</h2>
+      <h3 class="fs-4">SDK Automation</h3>
       <p>Automatically generate SDKs (e.g., PHP, TypeScript, Python) based on your defined API schema.</p>
-    </div>
-  </div>
-</div>
-
-<div class="bg-light mt-4 pt-5 mb-4 pb-5">
-  <div class="container">
-    <div class="row">
-      <div class="col text-center">
-        <blockquote class="display-4">"With Fusio, we’re empowering the API economy to drive real digital transformation."</blockquote>
-        <cite>Christoph Kappestein, Developer of Fusio</cite>
-      </div>
     </div>
   </div>
 </div>
