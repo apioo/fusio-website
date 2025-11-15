@@ -11,15 +11,66 @@
 </div>
 
 <div class="container mt-4 pt-4 mb-4 pb-4">
-  <div class="row">
-    <div class="col">
-      <p class="text-center lead">Explore tools and services built around Fusio.</p>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="text-center lead">Besides our core product, we offer additional services to augment the functionality of Fusio.</p>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 <div class="bg-light mt-4 pt-4 mb-4 pb-4">
-  <div class="container">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+            <h2 id="marketplace" class="fusio-sub-headline h4 fw-normal"><i class="bi bi-shop-window"></i> <a href="https://www.fusio-project.org/marketplace">Marketplace</a></h2>
+            <p class="lead mb-5">The Fusio marketplace is the place to share apps and actions with other Fusio users,
+            it helps to quickly build your API by using existing code from other users. You can register and configure
+            the credentials at your local Fusio installation under System / Config s. <code>marketplace_client_id</code>
+            and <code>marketplace_client_secret</code> then you can use the panel under Development / Marketplace to
+            install apps or actions.</p>
+
+            <h2 id="marketplace" class="fusio-sub-headline h4 fw-normal"><i class="bi bi-archive-fill"></i> <a href="https://sdkgen.app/">SDKgen</a></h2>
+            <p class="lead mb-5">SDK as a service platform which helps you to generate client SDKs for your API in
+            different languages like <code>CSharp</code>, <code>Go</code>, <code>Java</code> and <code>Python</code>
+            which helps your customers to interact with your API. Therefor you need to register at the SDKgen app and
+            provide the credentials under System / Config s. <code>sdkgen_client_id</code> and <code>sdkgen_client_secret</code>.
+            Then you can generate the SDK directly at the backend under Development / SDK.</p>
+
+            <h2 id="marketplace" class="fusio-sub-headline h4 fw-normal"><i class="bi bi-box-fill"></i> <a href="https://typehub.cloud/">TypeHub</a></h2>
+            <p class="lead mb-5">API and data design platform, basically you can push your API specification to this
+            platform so that users can simply discover your API. It tracks all changes of your API so that you have
+            always a clean history how your API evolves.</p>
+
+            <h2 id="marketplace" class="fusio-sub-headline h4 fw-normal"><i class="bi bi-gear"></i> <a href="https://apigen.app/">APIgen</a></h2>
+            <p class="lead mb-5">Service which generates fully working Fusio APIs based on a data model. It also
+            includes a simple Angular frontend app to CRUD your models. It can be seen as low-code generator to quickly
+            generate CRUD APIs but the generated code is clean and can be also used as foundation for your next app.</p>
+
+            <h2 id="marketplace" class="fusio-sub-headline h4 fw-normal"><i class="bi bi-search"></i> <a href="https://apimon.app/">APImon</a></h2>
+            <p class="lead mb-5">Simple API monitoring service which helps to monitor your Fusio installation. It is
+            optimized for Fusio, but it can be also used for different API endpoints. APImon invokes your endpoints in
+            specific intervals and notifies you about changes. It also includes an uptime page for your users for
+            example take a look at the <a href="https://api.apimon.app/status/fusio_marketplace">uptime page</a> of the
+            marketplace API.</p>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="container mt-4 pt-4 mb-4 pb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="text-center lead">The following list shows interesting open-source projects related to Fusio.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-light mt-4 pt-4 mb-4 pb-4">
+  <div class="container mt-4 pt-4 mb-4 pb-4">
     <div class="row row-cols-1 row-cols-md-3 text-center">
       <div class="col">
         <div class="card mb-3">
@@ -69,64 +120,6 @@
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
-            <h2 class="my-0 fw-normal">SDKgen</h2>
-          </div>
-          <div class="card-body">
-            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
-              <i class="bi bi-archive-fill p-4"></i>
-            </div>
-            <p>SDKgen is a powerful code generator to automatically build client SDKs for your REST API.</p>
-            <a href="https://sdkgen.app/" class="btn btn-primary">Website</a>
-            <a href="https://www.youtube.com/watch?v=Pxz9ltl9n1c" class="btn btn-secondary">Video</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h2 class="my-0 fw-normal">APIgen</h2>
-          </div>
-          <div class="card-body">
-            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
-              <i class="bi bi-gear p-4"></i>
-            </div>
-            <p>Generate fully working and customizable APIs based on your data model.</p>
-            <a href="https://apigen.app/" class="btn btn-primary">Website</a>
-            <a href="https://www.youtube.com/watch?v=2E7f6Nfn2qU" class="btn btn-secondary">Video</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h2 class="my-0 fw-normal">APImon</h2>
-          </div>
-          <div class="card-body">
-            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
-              <i class="bi bi-search p-4"></i>
-            </div>
-            <p>APImon provides an intuitive service to monitor and analyze API endpoints.</p>
-            <a href="https://apimon.app/" class="btn btn-primary">Website</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h2 class="my-0 fw-normal">Marketplace</h2>
-          </div>
-          <div class="card-body">
-            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
-              <i class="bi bi-shop-window p-4"></i>
-            </div>
-            <p>Marketplace to distribute actions and apps across the global Fusio ecosystem.</p>
-            <a href="https://marketplace.fusio-project.org" class="btn btn-primary">Website</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
             <h2 class="my-0 fw-normal">PSX</h2>
           </div>
           <div class="card-body">
@@ -163,20 +156,6 @@
             </div>
             <p>An OpenAPI alternative to describe REST APIs for type-safe code generation.</p>
             <a href="https://typeapi.org/" class="btn btn-primary">Website</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h2 class="my-0 fw-normal">TypeHub</h2>
-          </div>
-          <div class="card-body">
-            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
-              <i class="bi bi-box-fill p-4"></i>
-            </div>
-            <p>A collaborative platform to design and build API models and client SDKs.</p>
-            <a href="https://typehub.cloud/" class="btn btn-primary">Website</a>
           </div>
         </div>
       </div>
