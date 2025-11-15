@@ -54,9 +54,6 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a href="<?php echo $router->getAbsolutePath([\App\Controller\UseCases::class, 'show']); ?>" class="nav-link">Use-Cases</a>
-        </li>
-        <li class="nav-item">
           <a href="<?php echo $router->getAbsolutePath([\App\Controller\About::class, 'show']); ?>" class="nav-link">About</a>
         </li>
         <li class="nav-item">
