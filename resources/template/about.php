@@ -27,7 +27,7 @@
                 <div class="fusio-left-image shadow-lg rounded-5 border-1" style="background-image:url('<?php echo $base; ?>/img/screens/backend_operation_small.png');"></div>
             </div>
             <div class="col-lg-6 text-center text-lg-start">
-                <h3 class="display-6" id="operation"><i class="bi bi-router"></i> Operation</h3>
+                <h3 class="display-6" id="operation"><i class="bi bi-terminal"></i> Operation</h3>
                 <p class="lead">An operation provides a way to invoke an action which executes the business logic of your API,
                 it is assigned to a specific HTTP method and path i.e. <code>GET /hello/world</code>. Besides this the operation
                 describes through a <a href="#schema">schema</a> how the incoming and outgoing data of your endpoint is designed. Fusio
