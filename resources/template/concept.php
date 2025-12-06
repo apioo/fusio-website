@@ -96,7 +96,7 @@ return function(Worker\ExecuteRequest $request, Worker\ExecuteContext $context, 
 
     connection = connector.get_connection('my_database')
 
-    // @TODO implement my API endpoint logic
+    # @TODO implement my API endpoint logic
 
     return response.build(200, None, {
         'hello': 'world'
@@ -113,6 +113,8 @@ import org.fusioproject.worker.runtime.Logger;
 def handle(ExecuteRequest request, ExecuteContext context, Connector connector, ResponseBuilder response, Dispatcher dispatcher, Logger logger) {
 
     def connection = connector.getConnection("my_database");
+
+    // @TODO implement my API endpoint logic
 
     return response.build(200, [:], [
         hello: "world"
