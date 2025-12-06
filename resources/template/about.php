@@ -28,19 +28,20 @@
             </div>
             <div class="col-lg-6 text-center text-lg-start">
                 <h3 class="display-6" id="operation"><i class="bi bi-terminal"></i> Operation</h3>
-                <p class="lead">An operation provides a way to invoke an action which executes the business logic of your API,
-                it is assigned to a specific HTTP method and path i.e. <code>GET /hello/world</code>. Besides this the operation
-                describes through a <a href="#schema">schema</a> how the incoming and outgoing data of your endpoint is designed. Fusio
-                then also uses those schemas to validate request data and to automatically generate an OpenAPI specification or client SDK.</p>
+                <p class="lead">An Operation defines an API endpoint: it ties together an HTTP method and a path (for example, <code>GET /hello/world</code>)
+                with an underlying action. The operation uses a <a href="#schema">Schema</a> to describe the shape of request and response payloads.
+                Fusio uses these schemas to validate incoming data, and can automatically produce an OpenAPI specification
+                or client SDK for the defined endpoints.</p>
             </div>
         </div>
         <div class="row g-4 py-4">
             <div class="col-lg-6 text-center text-lg-end">
                 <h3 class="display-6" id="action"><i class="bi bi-code"></i> Action</h3>
-                <p class="lead">The action contains the actual business logic of your API i.e. to proxy a request to a
-                remote API or directly select data from a database table. You can use either one of our <a href="https://docs.fusio-project.org/docs/backend/api/action/">existing actions</a>
-                to solve your problem or you can also easily <a href="https://docs.fusio-project.org/docs/use_cases/api_framework/develop_custom_action">build</a>
-                your own action.</p>
+                <p class="lead">An Action implements the actual business logic behind an endpoint. This could mean proxying
+                a request to a remote service, querying a database, performing transformations, or executing custom code.
+                Fusio comes with a variety of <a href="https://docs.fusio-project.org/docs/backend/api/action/">built-in actions</a>
+                and if needed, you can also <a href="https://docs.fusio-project.org/docs/use_cases/api_framework/develop_custom_action">create custom actions</a>
+                tailored to your use case.</p>
             </div>
             <div class="col-lg-6">
                 <div class="fusio-right-image shadow-lg rounded-5 border-1" style="background-image:url('<?php echo $base; ?>/img/screens/backend_action_small.png');"></div>
@@ -52,21 +53,18 @@
             </div>
             <div class="col-lg-6 text-center text-lg-start">
                 <h3 class="display-6" id="schema"><i class="bi bi-star"></i> Schema</h3>
-                <p class="lead">The schema simply describes a JSON payload. We use a schema to describe i.e. request/response
-                data of an operation or also event payloads which are dispatched by the system. Every schema is based on <a href="https://typeschema.org/">TypeSchema</a>
-                which we also use to generate a client SDK or other specifications like OpenAPI.</p>
+                <p class="lead">A Schema defines the structure of a JSON payload. You use schemas to describe request and
+                response data for operations and also payloads of internal events. All schemas are based on <a href="https://typeschema.org/">TypeSchema</a>.
+                Fusio also uses these schemas to generate client SDKs or API specifications such as OpenAPI.</p>
             </div>
         </div>
         <div class="row g-4 py-4">
             <div class="col-lg-6 text-center text-lg-end">
                 <h3 class="display-6" id="connection"><i class="bi bi-cloud"></i> Connection</h3>
-                <p class="lead">A connection provides access to a remote service. I.e. we have a SQL connection which works
-                with a SQL database or a HTTP connection which works with a remote HTTP server. One key concept is that
-                a connection always uses an external library to connect to the remote service i.e for the SQL connection
-                we use the <code>doctrine/dbal</code> library and for the HTTP connection we use <code>guzzlehttp/guzzle</code>.
-                A connection returns always a fully configured client which you can use in your action. A remote service
-                can be also an external API i.e. we provide connections to Stripe or also AWS which works with the official SDK.
-                In your action you can then use those connections to implement your business logic.</p>
+                <p class="lead">A Connection defines how to reach an external service. For example, a SQL connection lets
+                you talk to a database, while an HTTP connection lets you communicate with a remote HTTP API. When used
+                in an action, a connection is resolved into a fully configured client, which the action code can use to
+                interact with the external service.</p>
             </div>
             <div class="col-lg-6">
                 <div class="fusio-right-image shadow-lg rounded-5 border-1" style="background-image:url('<?php echo $base; ?>/img/screens/backend_connection_small.png');"></div>
@@ -78,17 +76,17 @@
             </div>
             <div class="col-lg-6 text-center text-lg-start">
                 <h3 class="display-6" id="event"><i class="bi bi-calendar-event"></i> Event</h3>
-                <p class="lead">An event gets dispatched by an action in your API, it can be used to create an async
-                workflow where external parties are notified in case a specific event occurred at your API. I.e. you
-                could create an event "contract_created" and dispatch this event everytime a contract was created at
-                your API, then external users can register a webhook and Fusio will invoke this webhook once a contract
-                was created. You can describe the payload of your event also by a <a href="#schema">schema</a>.</p>
+                <p class="lead">An Event is a named occurrence emitted by an action when something significant happens
+                for example, <code>contract_created</code> after a new contract is stored. Events enable asynchronous workflows:
+                interested external parties can register webhooks, and Fusio will call them when the event occurs.
+                The events payload can be described via a <a href="#schema">Schema</a>.</p>
             </div>
         </div>
         <div class="row g-4 py-4">
             <div class="col-lg-6 text-center text-lg-end">
                 <h3 class="display-6" id="cronjob"><i class="bi bi-alarm"></i> Cronjob</h3>
-                <p class="lead">A cronjob provides a way to invoke an action at a periodical interval.</p>
+                <p class="lead">A Cronjob schedules an action to run at regular intervals (e.g. every hour or every day).
+                This is useful for tasks such as maintenance, background jobs, batch processing, or scheduled notifications.</p>
             </div>
             <div class="col-lg-6">
                 <div class="fusio-right-image shadow-lg rounded-5 border-1" style="background-image:url('<?php echo $base; ?>/img/screens/backend_cronjob_small.png');"></div>
@@ -100,7 +98,9 @@
             </div>
             <div class="col-lg-6 text-center text-lg-start">
                 <h3 class="display-6" id="trigger"><i class="bi bi-disc"></i> Trigger</h3>
-                <p class="lead">A trigger gets invoked if an event was dispatched. Each trigger has an assigned action which then gets executed.</p>
+                <p class="lead">A Trigger listens for a specific <a href="#event">Event</a>. When that Event occurs, the
+                Trigger executes a configured Action. In this way, you can build automated, event-driven workflows for example:
+                when <code>order_placed</code> is dispatched, a trigger runs an action to send a confirmation email.</p>
             </div>
         </div>
     </div>
