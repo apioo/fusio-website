@@ -31,24 +31,24 @@
             and <code>marketplace_client_secret</code> then you can use the panel under Development / Marketplace to
             install apps or actions.</p>
 
-            <h2 id="marketplace" class="fusio-sub-headline h4 fw-normal"><i class="bi bi-archive-fill"></i> <a href="https://sdkgen.app/">SDKgen</a></h2>
+            <h2 id="sdkgen" class="fusio-sub-headline h4 fw-normal"><i class="bi bi-archive-fill"></i> <a href="https://sdkgen.app/">SDKgen</a></h2>
             <p class="lead mb-5">SDK as a service platform which helps you to generate client SDKs for your API in
             different languages like <code>CSharp</code>, <code>Go</code>, <code>Java</code> and <code>Python</code>
             which helps your customers to interact with your API. Therefor you need to register at the SDKgen app and
             provide the credentials under System / Config s. <code>sdkgen_client_id</code> and <code>sdkgen_client_secret</code>.
             Then you can generate the SDK directly at the backend under Development / SDK.</p>
 
-            <h2 id="marketplace" class="fusio-sub-headline h4 fw-normal"><i class="bi bi-box-fill"></i> <a href="https://typehub.cloud/">TypeHub</a></h2>
+            <h2 id="typehub" class="fusio-sub-headline h4 fw-normal"><i class="bi bi-box-fill"></i> <a href="https://typehub.cloud/">TypeHub</a></h2>
             <p class="lead mb-5">API and data design platform, basically you can push your API specification to this
             platform so that users can simply discover your API. It tracks all changes of your API so that you have
             always a clean history how your API evolves.</p>
 
-            <h2 id="marketplace" class="fusio-sub-headline h4 fw-normal"><i class="bi bi-gear"></i> <a href="https://apigen.app/">APIgen</a></h2>
+            <h2 id="apigen" class="fusio-sub-headline h4 fw-normal"><i class="bi bi-gear"></i> <a href="https://apigen.app/">APIgen</a></h2>
             <p class="lead mb-5">Service which generates fully working Fusio APIs based on a data model. It also
             includes a simple Angular frontend app to CRUD your models. It can be seen as low-code generator to quickly
             generate CRUD APIs but the generated code is clean and can be also used as foundation for your next app.</p>
 
-            <h2 id="marketplace" class="fusio-sub-headline h4 fw-normal"><i class="bi bi-search"></i> <a href="https://apimon.app/">APImon</a></h2>
+            <h2 id="apimon" class="fusio-sub-headline h4 fw-normal"><i class="bi bi-search"></i> <a href="https://apimon.app/">APImon</a></h2>
             <p class="lead mb-5">Simple API monitoring service which helps to monitor your Fusio installation. It is
             optimized for Fusio, but it can be also used for different API endpoints. APImon invokes your endpoints in
             specific intervals and notifies you about changes. It also includes an uptime page for your users for
