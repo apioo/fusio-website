@@ -14,7 +14,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <p class="text-center lead">This page describes the seven core entities of Fusio to give you a better insight how it works.</p>
+                <p class="text-center lead">An overview of the seven core entities that form the foundation of Fusio.</p>
             </div>
         </div>
     </div>

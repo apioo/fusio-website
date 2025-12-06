@@ -57,6 +57,9 @@
           <a href="<?php echo $router->getAbsolutePath([\App\Controller\About::class, 'show']); ?>" class="nav-link">About</a>
         </li>
         <li class="nav-item">
+          <a href="<?php echo $router->getAbsolutePath([\App\Controller\Concept::class, 'show']); ?>" class="nav-link">Concept</a>
+        </li>
+        <li class="nav-item">
           <a href="<?php echo $router->getAbsolutePath([\App\Controller\Ecosystem::class, 'show']); ?>" class="nav-link">Ecosystem</a>
         </li>
         <li class="nav-item">
