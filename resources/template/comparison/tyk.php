@@ -11,120 +11,143 @@
 </div>
 
 <div class="container mt-4 pt-4 mb-4 pb-4">
-  <div class="row">
-    <div class="col">
-      <h4>🔍 Overview</h4>
-      <table class="table">
-        <thead>
-        <tr>
-          <th>Feature</th>
-          <th>Fusio</th>
-          <th>Tyk</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>Type</td>
-          <td>Full API management system</td>
-          <td>API gateway / traffic manager</td>
-        </tr>
-        <tr>
-          <td>Language</td>
-          <td>PHP</td>
-          <td>Go</td>
-        </tr>
-        <tr>
-          <td>Open Source</td>
-          <td>✅ Yes (Apache 2.0)</td>
-          <td>✅ Yes (with commercial offerings)</td>
-        </tr>
-        <tr>
-          <td>Admin Interface</td>
-          <td>✅ Built-in web UI</td>
-          <td>✅ Admin dashboard available</td>
-        </tr>
-        <tr>
-          <td>OAuth2 Support</td>
-          <td>✅ Built-in OAuth2 server</td>
-          <td>✅ OAuth2 with external identity provider</td>
-        </tr>
-        <tr>
-          <td>API Documentation</td>
-          <td>✅ Auto-generated OpenAPI docs</td>
-          <td>⚠️ Manual setup or with plugins</td>
-        </tr>
-        <tr>
-          <td>Extensibility</td>
-          <td>✅ PHP & JavaScript-based actions</td>
-          <td>✅ Middleware in Go, JavaScript, Python</td>
-        </tr>
-        <tr>
-          <td>Analytics & Logging</td>
-          <td>✅ Integrated logging and monitoring</td>
-          <td>✅ Detailed analytics, quota, and rate limits</td>
-        </tr>
-        <tr>
-          <td>Deployment Options</td>
-          <td>Self-hosted via Docker or Composer</td>
-          <td>Self-hosted, Hybrid Cloud, Tyk Cloud</td>
-        </tr>
-        </tbody>
-      </table>
-  </div>
-  </div>
-  <div class="row">
-    <div class="col-12">
-      <h4>🎯 Key Differences</h4>
+    <div class="row">
+        <p class="lead">This comparison explores the differences between <a href="https://www.fusio-project.org/">Fusio</a>, an open-source API management platform, and <a href="https://tyk.io/">Tyk</a>, an open-source API gateway and management solution. While both tools support APIs, they focus on different parts of the API lifecycle with Fusio centered on creating and managing APIs and Tyk emphasizing traffic control and scalability.</p>
     </div>
-    <div class="col-6">
-      <p><b>Fusio</b> is an open-source API management system that allows developers to design, implement, and manage RESTful APIs with ease. It offers:</p>
-      <ul>
-        <li>A user-friendly admin UI to manage endpoints, apps, and scopes</li>
-        <li>Built-in OAuth2 server for securing APIs</li>
-        <li>Automatic OpenAPI documentation for all routes</li>
-        <li>Powerful backend actions: CRUD from databases, custom logic, remote calls</li>
-        <li>Plugin system to extend functionality with PHP or JavaScript</li>
-      </ul>
+</div>
+
+<div class="bg-light mt-4 pt-4 mb-4 pb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="fusio-sub-headline h4 fw-normal">🔍 Feature Comparison</h2>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Fusio</th>
+                        <th>Tyk</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Type</td>
+                        <td>Full API management platform</td>
+                        <td>API gateway / API management</td>
+                    </tr>
+                    <tr>
+                        <td>Primary Use Case</td>
+                        <td>Design, implement, and host APIs</td>
+                        <td>Route, secure, and scale API traffic</td>
+                    </tr>
+                    <tr>
+                        <td>Admin UI</td>
+                        <td>✅ Built-in web interface</td>
+                        <td>✅ Dashboard available (OSS + extended UI)</td>
+                    </tr>
+                    <tr>
+                        <td>Authentication Support</td>
+                        <td>✅ Built-in OAuth2</td>
+                        <td>✅ OAuth2 & JWT (with external IdP)</td>
+                    </tr>
+                    <tr>
+                        <td>API Documentation</td>
+                        <td>✅ Auto-generated OpenAPI</td>
+                        <td>⚠️ OpenAPI supported (import/export), not auto-generated</td>
+                    </tr>
+                    <tr>
+                        <td>Extensibility</td>
+                        <td>✅ Custom actions (PHP/JS)</td>
+                        <td>✅ Middleware/plugins (Go, JS, Python)</td>
+                    </tr>
+                    <tr>
+                        <td>Analytics & Logging</td>
+                        <td>✅ Integrated</td>
+                        <td>✅ Detailed with quotas & rate limits</td>
+                    </tr>
+                    <tr>
+                        <td>Protocol Support</td>
+                        <td>REST APIs</td>
+                        <td>REST, GraphQL, gRPC, TCP</td>
+                    </tr>
+                    <tr>
+                        <td>Deployment Options</td>
+                        <td>Self-hosted, Docker</td>
+                        <td>Self-hosted, hybrid, cloud, Kubernetes native</td>
+                    </tr>
+                    <tr>
+                        <td>Scalability Focus</td>
+                        <td>Moderate / application-level</td>
+                        <td>High / edge gateway & distributed systems</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
-    <div class="col-6">
-      <p><b>Tyk</b> is an open-source API gateway built for high performance and flexibility. It acts primarily as a traffic proxy and policy engine, focused on:</p>
-      <ul>
-        <li>Routing, rate-limiting, and securing API traffic</li>
-        <li>Authentication through JWT, OAuth2, HMAC, and mor</li>
-        <li>Middleware customization via Go, JS, or Python</li>
-        <li>Detailed analytics and usage monitoring</li>
-        <li>Enterprise features like developer portals and multi-tenant dashboards</li>
-      </ul>
+</div>
+
+<div class="container mt-4 pt-4 mb-4 pb-4">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="fusio-sub-headline h4 fw-normal">🎯 Key Differences</h2>
+            <p class="lead">The main difference between Fusio and Tyk lies in what part of the API stack they manage.</p>
+        </div>
+        <div class="col-6">
+            <p><b>Fusio</b> is a full API management platform that focuses on the complete API lifecycle:</p>
+            <ul>
+                <li>Design and implement APIs from scratch</li>
+                <li>Define request and response schemas</li>
+                <li>Secure APIs using a built-in OAuth2 server and scopes</li>
+                <li>Manage users and applications through a centralized admin UI</li>
+                <li>Automatically generate OpenAPI documentation</li>
+                <li>Execute backend logic using extensible actions (PHP or JavaScript)</li>
+            </ul>
+            <p>Fusio is responsible for API logic, lifecycle, and developer workflows.</p>
+        </div>
+        <div class="col-6">
+            <p><b>Tyk</b> is an API gateway and traffic management solution that focuses on API delivery and scalability:</p>
+            <ul>
+                <li>Route and proxy requests to existing APIs and microservices</li>
+                <li>Enforce authentication, rate limiting, and quotas</li>
+                <li>Apply policies and transformations through middleware and plugins</li>
+                <li>Support multiple protocols such as REST, GraphQL, and gRPC</li>
+                <li>Scale API traffic in cloud-native and Kubernetes environments</li>
+                <li>Integrate with external identity providers and enterprise systems</li>
+            </ul>
+            <p>Tyk is responsible for API access control, traffic enforcement, and scalability.</p>
+        </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-6">
-      <p>Use Fusio if you want:</p>
-      <ul>
-        <li>A complete solution for creating and managing APIs</li>
-        <li>Built-in authentication and documentation out of the box</li>
-        <li>Tight integration with SQL databases and backend workflows</li>
-        <li>A developer-friendly, open-source alternative to commercial API tools</li>
-      </ul>
+</div>
+
+<div class="bg-light mt-4 pt-4 mb-4 pb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="fusio-sub-headline h4 fw-normal">📌 When to Choose Which</h2>
+            </div>
+            <div class="col-6">
+                <p>Choose <b>Fusio</b> if:</p>
+                <ul>
+                    <li>You need a single platform to design, implement, and manage APIs from scratch.</li>
+                    <li>Built-in OAuth2 authentication, documentation, and developer workflows matter.</li>
+                    <li>You want a self-contained UI for API lifecycle tasks without assembling separate tools.</li>
+                    <li>Your API project is backend-centric with tight integration to application logic and data stores.</li>
+                </ul>
+                <p>Fusio is particularly suited for teams focused on API product development, backend services, and integrated API governance.</p>
+            </div>
+            <div class="col-6">
+                <p>Choose <b>Tyk</b> if:</p>
+                <ul>
+                    <li>You already have APIs or microservices and need a high-performance gateway in front of them.</li>
+                    <li>Your priority is scalability, traffic control, and advanced policy enforcement.</li>
+                    <li>You want support for GraphQL or gRPC protocols, multi-cloud deployments, or Kubernetes-native workflows.</li>
+                    <li>You plan to leverage middleware plugins and enterprise features for large distributed systems.</li>
+                </ul>
+                <p>Tyk is especially valuable for DevOps teams, cloud-native environments, and large-scale API infrastructures.</p>
+            </div>
+        </div>
     </div>
-    <div class="col-6">
-      <p>Use Tyk if you need:</p>
-      <ul>
-        <li>A scalable and performant API gateway for existing services</li>
-        <li>Fine-grained control over request policies</li>
-        <li>Integration with enterprise identity providers</li>
-        <li>Hosted or hybrid deployments at scale</li>
-      </ul>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <h4>💡 Final Thoughts</h4>
-      <p><b>Fusio</b> is ideal for developers who want a self-hosted, all-in-one API platform, especially if you're building APIs from scratch or managing data-driven endpoints. It handles the entire API lifecycle, from design to deployment.</p>
-      <p><b>Tyk</b>, on the other hand, is a powerful proxy gateway, best suited for managing existing services, applying rate limits, securing traffic, and scaling distributed systems.</p>
-      <p>Both are open source, the right choice depends on whether you're creating APIs (Fusio) or managing traffic for APIs (Tyk).</p>
-    </div>
-  </div>
 </div>
 
 <div class="container">

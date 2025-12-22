@@ -11,145 +11,156 @@
 </div>
 
 <div class="container mt-4 pt-4 mb-4 pb-4">
-  <div class="row">
-    <div class="col">
-      <h4>🔍 Overview</h4>
-      <table class="table">
-        <thead>
-        <tr>
-          <th>Feature</th>
-          <th>Fusio</th>
-          <th>Supabase</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>Type</td>
-          <td>Open-source API management platform</td>
-          <td>Open-source Backend-as-a-Service (BaaS)</td>
-        </tr>
-        <tr>
-          <td>Primary Focus</td>
-          <td>Expose and manage REST APIs</td>
-          <td>Full-stack backend: DB, auth, real-time, API</td>
-        </tr>
-        <tr>
-          <td>Language/Stack</td>
-          <td>PHP, SQL</td>
-          <td>PostgreSQL, TypeScript, Go</td>
-        </tr>
-        <tr>
-          <td>Open Source</td>
-          <td>✅ Yes (Apache 2.0)</td>
-          <td>✅ Yes (MIT)</td>
-        </tr>
-        <tr>
-          <td>Hosting</td>
-          <td>Self-hosted (Docker, Composer)</td>
-          <td>Supabase Cloud or self-hosted (Docker)</td>
-        </tr>
-        <tr>
-          <td>Database</td>
-          <td>SQL (MySQL, PostgreSQL, etc.)</td>
-          <td>PostgreSQL</td>
-        </tr>
-        <tr>
-          <td>API Generation</td>
-          <td>Manual config or CRUD actions</td>
-          <td>Auto-generated REST/GraphQL API from DB</td>
-        </tr>
-        <tr>
-          <td>Custom Logic</td>
-          <td>Actions in PHP/JavaScript/SQL</td>
-          <td>Edge Functions (Deno/TypeScript)</td>
-        </tr>
-        </tbody>
-      </table>
+    <div class="row">
+        <p class="lead">This page compares <a href="https://www.fusio-project.org/">Fusio</a>, an open-source API management platform focused on building and managing APIs, with <a href="https://supabase.com/">Supabase</a>, an open-source Backend-as-a-Service (BaaS) platform that provides a managed PostgreSQL backend, real-time features, authentication, storage, and auto-generated APIs.</p>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-12">
-      <h4>🎯 Key Differences</h4>
+</div>
+
+<div class="bg-light mt-4 pt-4 mb-4 pb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="fusio-sub-headline h4 fw-normal">🔍 Feature Comparison</h2>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Fusio</th>
+                        <th>Supabase</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Type</td>
+                        <td>API management platform</td>
+                        <td>Backend-as-a-Service (BaaS)</td>
+                    </tr>
+                    <tr>
+                        <td>Primary Focus</td>
+                        <td>Build, expose, and secure REST APIs</td>
+                        <td>Full backend: DB, auth, real-time, storage, functions</td>
+                    </tr>
+                    <tr>
+                        <td>Open Source</td>
+                        <td>✅ Yes (Apache 2.0)</td>
+                        <td>✅ Yes (MIT)</td>
+                    </tr>
+                    <tr>
+                        <td>Hosting</td>
+                        <td>Self-hosted (Docker, Composer)</td>
+                        <td>Supabase Cloud or self-hosted (Docker)</td>
+                    </tr>
+                    <tr>
+                        <td>Database</td>
+                        <td>Connects to SQL DBs</td>
+                        <td>Built-in PostgreSQL</td>
+                    </tr>
+                    <tr>
+                        <td>API Generation</td>
+                        <td>Manual or CRUD actions</td>
+                        <td>Auto-generated REST; GraphQL is supported via the pg_graphql extension</td>
+                    </tr>
+                    <tr>
+                        <td>Authentication</td>
+                        <td>Built-in OAuth2</td>
+                        <td>Built-in Supabase Auth (JWT, OAuth)</td>
+                    </tr>
+                    <tr>
+                        <td>Real-time</td>
+                        <td>⚠️ Possible via custom logic</td>
+                        <td>✅ Built-in real-time via Postgres events</td>
+                    </tr>
+                    <tr>
+                        <td>Custom Logic</td>
+                        <td>PHP/JS/SQL actions</td>
+                        <td>Edge Functions (TypeScript)</td>
+                    </tr>
+                    <tr>
+                        <td>Storage</td>
+                        <td>⚠️ External via filesystem or connectors</td>
+                        <td>✅ Object storage (S3-compatible)</td>
+                    </tr>
+                    <tr>
+                        <td>Preferred Use Case</td>
+                        <td>API first & backend logic</td>
+                        <td>Full backend for web/mobile apps</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
-    <div class="col-6">
-      <p><b>Fusio</b> is an open-source API management system designed to let you:</p>
-      <ul>
-        <li>Create and manage REST APIs</li>
-        <li>Connect to existing SQL databases (MySQL, PostgreSQL, SQLite, etc.)</li>
-        <li>Handle authentication and scopes via OAuth2</li>
-        <li>Auto-generate OpenAPI documentation</li>
-        <li>Write custom backend logic in PHP, JavaScript, or SQL</li>
-      </ul>
-      <p>Fusio is ideal for developers who want full control over the backend while offering secure, structured APIs.</p>
+</div>
+
+<div class="container mt-4 pt-4 mb-4 pb-4">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="fusio-sub-headline h4 fw-normal">🎯 Key Differences</h2>
+            <p class="lead">The main difference between Fusio and Supabase lies in their architectural focus and backend responsibilities.</p>
+        </div>
+        <div class="col-6">
+            <p><b>Fusio</b> is an API management platform designed to give developers direct control over creating, managing, and securing APIs:</p>
+            <ul>
+                <li>Create structured REST APIs with custom logic</li>
+                <li>Connect to external SQL databases (MySQL, PostgreSQL, etc.)</li>
+                <li>Secure endpoints with a built-in OAuth2 server and scopes</li>
+                <li>Automatically generate OpenAPI documentation</li>
+                <li>Implement backend workflows using PHP, JavaScript, or SQL</li>
+            </ul>
+            <p>Fusio is focused on API design, backend logic, and lifecycle workflows, making it suitable for structured API systems.</p>
+        </div>
+        <div class="col-6">
+            <p><b>Supabase</b> is a full-stack backend platform that provides a ready-to-use PostgreSQL database with auto-generated APIs and integrated backend services:</p>
+            <ul>
+                <li>Managed PostgreSQL database with REST and GraphQL APIs</li>
+                <li>Built-in user authentication and access control</li>
+                <li>Real-time database subscriptions and events</li>
+                <li>Object storage for files</li>
+                <li>Edge Functions for serverless logic</li>
+            </ul>
+            <p>Supabase is focused on providing a complete backend stack that handles database, auth, real-time updates, storage, and serverless functions out-of-the-box.</p>
+        </div>
     </div>
-    <div class="col-6">
-      <p><b>Supabase</b> is an open-source Firebase alternative that offers a real-time backend with:</p>
-      <ul>
-        <li>PostgreSQL database</li>
-        <li>Auto-generated REST and GraphQL APIs</li>
-        <li>Authentication and user management</li>
-        <li>Realtime subscriptions</li>
-        <li>Serverless Edge Functions</li>
-        <li>Storage and file uploads</li>
-      </ul>
-      <p>Supabase is ideal for rapid full-stack app development, especially when you're working with PostgreSQL and JavaScript/TypeScript.</p>
+</div>
+
+<div class="bg-light mt-4 pt-4 mb-4 pb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="fusio-sub-headline h4 fw-normal">📌 When to Choose Which</h2>
+            </div>
+            <div class="col-6">
+                <p>Choose <b>Fusio</b> if:</p>
+                <ul>
+                    <li>You need full control over API design, security, and logic</li>
+                    <li>You want to self-host or integrate existing databases</li>
+                    <li>You prefer structured API management with OAuth2 and OpenAPI workflows</li>
+                    <li>Your project is API-first or backend developer-centric</li>
+                    <li>You want a provider-independent stack (no hosted BaaS required)</li>
+                </ul>
+                <p>Fusio is ideal for building custom, secure, production APIs with fine-grained access controls.</p>
+            </div>
+            <div class="col-6">
+                <p>Choose <b>Supabase</b> if:</p>
+                <ul>
+                    <li>You want a complete backend platform for web or mobile apps</li>
+                    <li>You prefer instant API generation from your database schema</li>
+                    <li>You need built-in authentication, real-time features, and storage</li>
+                    <li>You’re comfortable with PostgreSQL and JavaScript/TypeScript workflows</li>
+                    <li>You want the option of managed hosting with minimal setup</li>
+                </ul>
+                <p>Supabase is excellent for rapidly building full-stack applications with less backend overhead.</p>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-6">
-      <p>Pick <b>Fusio</b> if:</p>
-      <ul>
-        <li>You need full control over the API layer, logic, and access control</li>
-        <li>You want to integrate and expose existing SQL databases</li>
-        <li>You prefer manual API design over auto-generated endpoints</li>
-        <li>You require a self-hosted, compliant solution with an OAuth2 server</li>
-        <li>You're working in a PHP or SQL-heavy environment</li>
-      </ul>
-      <p>Ideal for:</p>
-      <ul>
-        <li>API-first platforms</li>
-        <li>Backend-focused teams</li>
-        <li>Enterprise integration scenarios</li>
-        <li>Developers migrating from legacy systems</li>
-      </ul>
-    </div>
-    <div class="col-6">
-      <p>Pick <b>Supabase</b> if:</p>
-      <ul>
-        <li>You're building a full-stack app and need instant REST/GraphQL APIs</li>
-        <li>You're comfortable with PostgreSQL and want rapid prototyping</li>
-        <li>You want tight integration with frontend tools (React, Next.js, etc.)</li>
-        <li>You need realtime updates, Edge Functions, and file storage</li>
-        <li>You're comfortable working in JavaScript/TypeScript</li>
-      </ul>
-      <p>Ideal for:</p>
-      <ul>
-        <li>Startups and MVPs</li>
-        <li>Jamstack and frontend developers</li>
-        <li>Firebase alternatives with open-source freedom</li>
-      </ul>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <h4>💡 Final Thoughts</h4>
-      <p><b>Fusio</b> and <b>Supabase</b> share the open-source spirit, but they solve different problems:</p>
-      <ul>
-        <li><b>Fusio</b> is for developers who want to build, control, and manage APIs at a granular level with a strong backend-first approach.</li>
-        <li><b>Supabase</b> is for teams who want fast, frontend-centric app development with minimal backend setup and PostgreSQL automation.</li>
-      </ul>
-      <p>Choose <b>Fusio</b> for custom, secure, production-grade APIs.</p>
-      <p>Choose <b>Supabase</b> for rapid app development with built-in auth and real-time features.</p>
-    </div>
-  </div>
 </div>
 
 <div class="container">
-  <div class="row">
-    <div class="col text-end">
-      <a href="https://github.com/apioo/fusio-website/blob/main/resources/template/compare/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"><i class="bi bi-pen-fill"></i> Edit this page</a>
+    <div class="row">
+        <div class="col text-end">
+            <a href="https://github.com/apioo/fusio-website/blob/main/resources/template/compare/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"><i class="bi bi-pen-fill"></i> Edit this page</a>
+        </div>
     </div>
-  </div>
 </div>
 
 <?php include(__DIR__ . '/../inc/footer.php'); ?>

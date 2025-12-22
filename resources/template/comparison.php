@@ -13,7 +13,7 @@
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <p>On this page, we provide a clear comparison between Fusio and other popular tools in the API ecosystem. We break down different categories of API solutions such as API gateways, management platforms, and developer portals and explain where Fusio fits within each.
+      <p class="lead">On this page, we provide a clear comparison between Fusio and other popular tools in the API ecosystem. We break down different categories of API solutions and explain where Fusio fits within each.
         Our goal is to help you quickly understand the strengths and focus of each tool, so you can determine whether Fusio is the right open-source API management solution for your project or business needs.
         Please note that every technology has its unique advantages and limitations. This comparison is designed to give you a balanced overview and guide you in choosing the best solution for your specific use case.</p>
     </div>
@@ -172,6 +172,7 @@
           </div>
           <img src="<?php echo $base; ?>/img/compare/dreamfactory.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
+            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'dreamfactory']); ?>" class="btn btn-primary">Compare</a>
             <a href="https://www.dreamfactory.com/" class="btn btn-secondary">Website</a>
           </div>
         </div>
@@ -205,6 +206,7 @@
           </div>
           <img src="<?php echo $base; ?>/img/compare/strapi.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
+            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'strapi']); ?>" class="btn btn-primary">Compare</a>
             <a href="https://strapi.io/" class="btn btn-secondary">Website</a>
           </div>
         </div>
@@ -216,6 +218,7 @@
           </div>
           <img src="<?php echo $base; ?>/img/compare/ghost.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
+            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'ghost']); ?>" class="btn btn-primary">Compare</a>
             <a href="https://ghost.org/" class="btn btn-secondary">Website</a>
           </div>
         </div>
@@ -227,6 +230,7 @@
           </div>
           <img src="<?php echo $base; ?>/img/compare/directus.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
+            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'directus']); ?>" class="btn btn-primary">Compare</a>
             <a href="https://directus.io/" class="btn btn-secondary">Website</a>
           </div>
         </div>
@@ -238,12 +242,11 @@
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <h2 class="fusio-sub-headline h4 fw-normal">☁️ Cloud Provider</h2>
-      <p>The major cloud providers offer API Gateway products as part of their suite of cloud services. These API Gateway
-      products provide a managed solution for building, deploying, and managing APIs in the cloud.</p>
-      <p>Fusio should be not seen as an alternative to these cloud providers but since they also provide an API Gateway
-        offering we list them here for completion. Those API Gateways are more infrastructure gateways and you would
-        run Fusio behind such a gateway.</p>
+      <h2 class="fusio-sub-headline h4 fw-normal">☁️ API Framework</h2>
+      <p>API frameworks provide code-level tools to build APIs, but leave lifecycle management, governance, and API product concerns to the developer.</p>
+      <p>Fusio provides also the possibility to store the complete Fusio configuration as config files in a GIT repository
+      so that there is no need to use the backend UI, take a look at our <a href="https://github.com/apioo/fusio-framework">example repository</a>
+      to see how this works.</p>
     </div>
   </div>
 </div>
@@ -254,33 +257,36 @@
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
-            <h3 class="my-0 fw-bold">AWS</h3>
+            <h3 class="my-0 fw-bold">Symfony</h3>
           </div>
-          <img src="<?php echo $base; ?>/img/compare/aws.png" class="rounded mx-auto d-block mt-3" />
+          <img src="<?php echo $base; ?>/img/compare/symfony.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
-            <a href="https://aws.amazon.com/" class="btn btn-secondary">Website</a>
+            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'symfony']); ?>" class="btn btn-primary">Compare</a>
+            <a href="https://symfony.com/" class="btn btn-secondary">Website</a>
           </div>
         </div>
       </div>
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
-            <h3 class="my-0 fw-bold">GCP</h3>
+            <h3 class="my-0 fw-bold">Laravel</h3>
           </div>
-          <img src="<?php echo $base; ?>/img/compare/gcp.png" class="rounded mx-auto d-block mt-3" />
+          <img src="<?php echo $base; ?>/img/compare/laravel.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
-            <a href="https://cloud.google.com/" class="btn btn-secondary">Website</a>
+            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'laravel']); ?>" class="btn btn-primary">Compare</a>
+            <a href="https://laravel.com/" class="btn btn-secondary">Website</a>
           </div>
         </div>
       </div>
       <div class="col">
         <div class="card mb-3">
           <div class="card-header py-3">
-            <h3 class="my-0 fw-bold">Azure</h3>
+            <h3 class="my-0 fw-bold">API Platform</h3>
           </div>
-          <img src="<?php echo $base; ?>/img/compare/azure.png" class="rounded mx-auto d-block mt-3" />
+          <img src="<?php echo $base; ?>/img/compare/api-platform.png" class="rounded mx-auto d-block mt-3" />
           <div class="card-body">
-            <a href="https://azure.microsoft.com/" class="btn btn-secondary">Website</a>
+            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'api-platform']); ?>" class="btn btn-primary">Compare</a>
+            <a href="https://api-platform.com/" class="btn btn-secondary">Website</a>
           </div>
         </div>
       </div>
