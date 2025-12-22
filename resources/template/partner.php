@@ -13,7 +13,7 @@
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <p>The following list shows all partners of the Fusio project. We like to thank every partner supporting us in our
+      <p class="lead">The following list shows all partners of the Fusio project. We like to thank every partner supporting us in our
         vision to move API development to the next level. If you are interested in getting listed here feel free to
         <a href="https://github.com/sponsors/chriskapp">sponsor</a> our project.</p>
     </div>

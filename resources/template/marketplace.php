@@ -19,8 +19,8 @@ installable via the Fusio backend app and can be used by all our users.
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <p>The Fusio <a href="https://marketplace.fusio-project.org/">Marketplace</a> is your central hub to explore and install community-contributed apps and actions that extend the functionality of your local Fusio instance.
-        Whether you're a developer or API manager, the Marketplace makes it easy to enhance your Fusio environment. You can install any listed app or action directly through the Fusio backend under Development / Marketplace, or by using the command line interface: <code>php bin/fusio marketplace:install fusio</code></p>
+      <p class="lead">The Fusio <a href="https://marketplace.fusio-project.org/">Marketplace</a> is your central hub to explore and install community-contributed bundles and apps that extend the functionality of your local Fusio instance.
+        Whether you're a developer or API manager, the Marketplace makes it easy to enhance your Fusio environment. You can install any listed app or action directly through the Fusio backend under Development / Marketplace.</p>
       <div class="text-center mt-4">
         <a href="https://marketplace.fusio-project.org/login" class="btn btn-primary">Login</a>
         <a href="https://marketplace.fusio-project.org/register" class="btn btn-secondary">Register</a>
@@ -55,17 +55,17 @@ installable via the Fusio backend app and can be used by all our users.
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col-12">
-      <h2 class="fusio-sub-headline h4 fw-normal">🛠️ Actions</h2>
+      <h2 class="fusio-sub-headline h4 fw-normal">🛠️ Bundles</h2>
     </div>
   </div>
   <div class="row row-cols-1 row-cols-lg-3">
-      <?php foreach($actions->entry as $action): ?>
+      <?php foreach($bundles->entry as $bundle): ?>
         <div class="col">
           <div class="card mb-4">
             <div class="card-body">
-              <div class="card-title"><b><i class="bi bi-<?php echo $action->icon; ?>"></i> <?php echo $action->author->name . '/' . $action->name; ?></b></div>
-              <p class="card-text"><?php echo $action->summary; ?></p>
-              <a href="https://marketplace.fusio-project.org/marketplace/directory/action/<?php echo $action->author->name; ?>/<?php echo $action->name; ?>" class="btn btn-primary">Details</a>
+              <div class="card-title"><b><i class="bi bi-<?php echo $bundle->icon; ?>"></i> <?php echo $bundle->author->name . '/' . $bundle->name; ?></b></div>
+              <p class="card-text"><?php echo $bundle->summary; ?></p>
+              <a href="https://marketplace.fusio-project.org/marketplace/directory/action/<?php echo $bundle->author->name; ?>/<?php echo $bundle->name; ?>" class="btn btn-primary">Details</a>
             </div>
           </div>
         </div>

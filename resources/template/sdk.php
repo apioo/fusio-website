@@ -13,7 +13,7 @@
 <div class="container mt-4 pt-4 mb-4 pb-4">
   <div class="row">
     <div class="col">
-      <p>Fusio offers a range of Software Development Kits (SDKs) to help developers easily connect with the Fusio API.
+      <p class="lead">Fusio offers a range of Software Development Kits (SDKs) to help developers easily connect with the Fusio API.
         Whether you're looking to integrate the Developer App into your existing platform or fully configure your backend using the API,
         our SDKs simplify the process. You can also automatically generate an SDK for any API you create with Fusio. For details on
         supported languages and how to generate SDKs, please refer to our <a href="https://docs.fusio-project.org/docs/backend/consumer/sdk">SDK documentation</a>.</p>
