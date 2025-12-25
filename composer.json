@@ -5,7 +5,7 @@
     "symfony/dotenv": "^7.0",
     "symfony/mailer": "^7.0",
     "symfony/aha-send-mailer": "^7.0",
-    "fusio/marketplace": "^0.1.4",
+    "fusio/marketplace": "^0.2.0",
     "chriskapp/blog": "^0.1.2"
   },
   "autoload": {
