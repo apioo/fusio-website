@@ -3,8 +3,8 @@
 namespace App\Controller;
 
 use Fusio\Marketplace\Client;
-use Fusio\Marketplace\MarketplaceActionCollection;
 use Fusio\Marketplace\MarketplaceAppCollection;
+use Fusio\Marketplace\MarketplaceBundleCollection;
 use Psr\Cache\CacheItemPoolInterface;
 use PSX\Api\Attribute\Get;
 use PSX\Api\Attribute\Path;
@@ -35,7 +35,7 @@ class Marketplace extends ControllerAbstract
             'description' => 'Explore the Fusio Marketplace to find and install community-contributed apps and actions that enhance your Fusio API instance. Easily extend functionality via the backend or CLI.',
             'keywords' => 'Fusio Marketplace, Fusio apps, API extensions, Fusio actions, community apps, Fusio backend, Fusio CLI, API management tools, Fusio integrations, open-source API apps, Fusio developer portal, Fusio extensions',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
-            'actions' => $this->getActions(),
+            'bundles' => $this->getBundles(),
             'apps' => $this->getApps(),
             'bootstrap_icons' => true,
         ];
@@ -44,14 +44,14 @@ class Marketplace extends ControllerAbstract
         return new Template($data, $templateFile, $this->reverseRouter);
     }
 
-    private function getActions(): MarketplaceActionCollection
+    private function getBundles(): MarketplaceBundleCollection
     {
-        $item = $this->cache->getItem('fusio-marketplace-actions');
+        $item = $this->cache->getItem('fusio-marketplace-bundles');
 
         if ($item->isHit()) {
             $data = $item->get();
         } else {
-            $data = $this->client->marketplace()->directory()->action()->getAll(0, 16);
+            $data = $this->client->marketplace()->directory()->bundle()->getAll(0, 16);
 
             $item->expiresAfter(60 * 60 * 24);
             $item->set($data);
