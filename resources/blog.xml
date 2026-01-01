@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <entry>
         <title>Fusio 6.2 released</title>
-        <updated>2025-12-31T12:04:00Z</updated>
+        <updated>2026-01-01T16:29:00Z</updated>
         <summary>
             This post announces the release of the next version 6.2
         </summary>
@@ -28,7 +28,7 @@ problem. The following list covers all important features of this release:</p>
         <b>Added backend code editor view and improved code completion</b>
         <p>We have implemented a new code editor view to develop actions.</p>
         <div class="mt-4 mb-4 text-center">
-            <img src="/website/fusio-project.org/public/img/blog/fusio-6.2-released/action_designer_editor.png" alt="Action Designer Editor" class="img-fluid">
+            <img src="/img/blog/fusio-6.2-released/action_designer_editor.png" alt="Action Designer Editor" class="img-fluid">
         </div>
         <p>This view is dedicated to the Worker actions and improves the development experience for users who like to
         use the backend. The editor has now more space and on the right side panel you can select a connection to get
@@ -43,7 +43,7 @@ problem. The following list covers all important features of this release:</p>
         where a user could provide a raw <a href="https://typeschema.org/">TypeSchema</a> specification but this is now
         replaced with the editor since it is much easier for new users to create a schema.</p>
         <div class="mt-4 mb-4 text-center">
-            <img src="/website/fusio-project.org/public/img/blog/fusio-6.2-released/schema_editor.png" alt="Schema Editor" class="img-fluid">
+            <img src="/img/blog/fusio-6.2-released/schema_editor.png" alt="Schema Editor" class="img-fluid">
         </div>
         <p>We use this editor already in many projects and it helps to improve the user experience. The editor has also
         an import option so if the user likes to provide a raw TypeSchema specification this is still possible.</p>
@@ -55,7 +55,7 @@ problem. The following list covers all important features of this release:</p>
         new option you can now create a bundle at your local Fusio installation and submit these entities to the
         marketplace.</p>
         <div class="mt-4 mb-4 text-center">
-            <img src="/website/fusio-project.org/public/img/blog/fusio-6.2-released/bundle_details.png" alt="Bundle Details" class="img-fluid">
+            <img src="/img/blog/fusio-6.2-released/bundle_details.png" alt="Bundle Details" class="img-fluid">
         </div>
         <p>Basically a bundle contains a reference to your local entities and if you submit the bundle to the
         marketplace Fusio will convert those references into a fitting object. A third user can then install this bundle
