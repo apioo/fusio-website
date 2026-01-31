@@ -130,12 +130,16 @@ def handle(ExecuteRequest request, ExecuteContext context, Connector connector, 
     <div class="container">
         <div class="row">
             <div class="col">
-                <h2 id="sdk" class="fusio-sub-headline h4 fw-normal">📦 SDK</h2>
-                <p class="lead mb-5">Fusio includes a sophisticated <a href="https://docs.fusio-project.org/docs/use_cases/api_gateway/generate_sdk">code generator</a>
-                    which generates client SDKs and OpenAPI specifications. Through this you can build fully typed
-                    client/server connections which help you to move fast and detect errors early. It also helps to
-                    automatically provide client SDKs to your customers so that they can easily integrate your API.
-                </p>
+                <h2 id="sdk" class="fusio-sub-headline h4 fw-normal">🛠️ AI Framework</h2>
+                <p class="lead">Fusio is not just an API management platform, it also acts as an <b>AI framework</b>
+                for building and running AI-generated backend logic safely. Instead of letting AI operate in an uncontrolled
+                environment, Fusio provides a solid, hand-crafted foundation where AI-generated code can be executed,
+                validated, and managed in a secure and predictable way.</p>
+                <p class="lead mb-5">By embedding AI capabilities directly into the Fusio platform, you get the best of both
+                worlds: A stable, well-defined API framework and the flexibility of AI-assisted development. AI-generated
+                actions, schemas, and endpoints run inside Fusio's controlled execution environment. This ensures that
+                generated code follows your platform rules, permissions, and security model. The result is safe AI-powered
+                API development without compromising reliability, maintainability, or security.</p>
             </div>
         </div>
     </div>
@@ -175,6 +179,21 @@ def handle(ExecuteRequest request, ExecuteContext context, Connector connector, 
                     which allows you to invoke every operation via JsonRPC. While we generally recommend to use REST APIs
                     there are some circumstances where JsonRPC can be useful.</p>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-light mt-4 pt-4 mb-4 pb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 id="sdk" class="fusio-sub-headline h4 fw-normal">📦 SDK</h2>
+                <p class="lead mb-5">Fusio includes a sophisticated <a href="https://docs.fusio-project.org/docs/use_cases/api_gateway/generate_sdk">code generator</a>
+                    which generates client SDKs and OpenAPI specifications. Through this you can build fully typed
+                    client/server connections which help you to move fast and detect errors early. It also helps to
+                    automatically provide client SDKs to your customers so that they can easily integrate your API.
+                </p>
             </div>
         </div>
     </div>
