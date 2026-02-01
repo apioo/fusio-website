@@ -133,8 +133,8 @@ def handle(ExecuteRequest request, ExecuteContext context, Connector connector, 
                 <h2 id="sdk" class="fusio-sub-headline h4 fw-normal">🛠️ AI Framework</h2>
                 <p class="lead">Fusio is not just an API management platform, it also acts as an <b>AI framework</b>
                 for building and running AI-generated backend logic safely. Instead of letting AI operate in an uncontrolled
-                environment, Fusio provides a solid, hand-crafted foundation where AI-generated code can be executed,
-                validated, and managed in a secure and predictable way.</p>
+                environment, Fusio provides a solid, hand-crafted foundation where <a href="<?php echo $router->getAbsolutePath([\App\Controller\AI::class, 'show']); ?>">AI-generated code</a>
+                can be executed, validated, and managed in a secure and predictable way.</p>
                 <p class="lead mb-5">By embedding AI capabilities directly into the Fusio platform, you get the best of both
                 worlds: A stable, well-defined API framework and the flexibility of AI-assisted development. AI-generated
                 actions, schemas, and endpoints run inside Fusio's controlled execution environment. This ensures that
