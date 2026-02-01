@@ -29,11 +29,10 @@
             <div class="col-lg-6 text-center text-lg-start">
                 <h3 class="display-6" id="operation"><i class="bi bi-robot"></i> AI Agents</h3>
                 <p class="lead">Fusio allows you to connect multiple AI agents and LLM providers to your platform. These
-                AI connections can be used to build custom API endpoint logic, automate workflows, and generate backend functionality.</p>
+                AI connections can be used to build custom API endpoint logic and automate workflows.</p>
                 <p class="lead">All Fusio operations are available as tools for AI agents. This means your AI can create
-                actions and schemas directly inside your Fusio instance. While we can’t remove the market dominance of
-                some LLM providers, Fusio gives you full freedom to switch AI providers at any time. You stay
-                vendor-independent and future-proof your AI-powered API architecture.</p>
+                actions and schemas directly inside your Fusio instance. While we can't remove the market dominance of
+                some LLM providers, Fusio gives you full freedom to switch AI providers at any time.</p>
             </div>
         </div>
         <div class="row g-4 py-4">
