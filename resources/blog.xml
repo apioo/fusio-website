@@ -35,7 +35,7 @@ features page</a>.
         <p>The new Agent Designer allows you to build custom action logic through a simple conversational prompt. To get
         a first impression, take a look at the following screenshot:</p>
         <div class="mt-4 mb-4 text-center">
-            <img src="/website/fusio-project.org/public/img/blog/fusio-6.3-released/agent_designer.png" alt="Agent Designer" class="img-fluid">
+            <img src="/img/blog/fusio-6.3-released/agent_designer.png" alt="Agent Designer" class="img-fluid">
         </div>
         <p>On the left, you see a chat-style prompt similar to what you know from other LLM providers. When the LLM
         returns a response, Fusio parses the generated code and loads it directly into the editor on the right.</p>
