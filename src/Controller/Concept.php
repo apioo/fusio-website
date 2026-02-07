@@ -23,7 +23,7 @@ class Concept extends ControllerAbstract
     {
         $data = [
             'title' => 'Concept | Fusio',
-            'description' => 'Fusio is an open-source API management platform built for developers. Discover our mission to make creating, managing, and scaling APIs effortless.',
+            'description' => 'Fusio is an open-source API & AI management platform built for developers. Discover our mission to make creating, managing, and scaling APIs effortless.',
             'keywords' => 'Fusio, API Gateway, Developer Portal, API Builder, Monetization, Rate Limiting, SDK Generation, OpenAPI Generation, SPA Backend, Webhook Support, OAuth2 Authorization, MCP Integration',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
         ];

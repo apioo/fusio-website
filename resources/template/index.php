@@ -11,7 +11,7 @@ https://github.com/apioo/fusio
     <div class="row">
       <div class="col p-lg-5 mx-auto my-5 text-center">
         <h1 class="display-4 fw-normal">Fusio</h1>
-        <p class="lead fw-normal">Open Source API Management for Builders.</p>
+        <p class="lead fw-normal">Open Source API & AI Management for Builders.</p>
         <a href="https://mailchi.mp/948c47451634/fusio" class="btn btn-secondary">Subscribe</a>
         <a href="<?php echo $router->getAbsolutePath([\App\Controller\Demo::class, 'show']); ?>" class="btn btn-primary">Demo</a>
       </div>
@@ -54,7 +54,7 @@ https://github.com/apioo/fusio
     <div class="row g-4 py-4">
         <div class="col-lg-6 text-center text-lg-end">
             <h3 class="display-6">Analytics</h3>
-            <p class="lead">Monitor all essential API metrics at a glance through the Fusio dashboard.</p>
+            <p class="lead">Monitor key API metrics and usage in real time through the Fusio analytics dashboard.</p>
         </div>
         <div class="col-lg-6">
             <div class="fusio-right-image shadow-lg rounded-5 border-1" style="background-image:url('<?php echo $base; ?>/img/screens/backend_dashboard_small.png');"></div>
@@ -66,7 +66,16 @@ https://github.com/apioo/fusio
         </div>
         <div class="col-lg-6 text-center text-lg-start">
             <h3 class="display-6">Development</h3>
-            <p class="lead">Develop endpoints effortlessly using built-in actions or by crafting your own custom logic.</p>
+            <p class="lead">Build API endpoints quickly using built-in actions or by implementing your own custom logic.</p>
+        </div>
+    </div>
+    <div class="row g-4 py-4">
+        <div class="col-lg-6 text-center text-lg-end">
+            <h3 class="display-6">Operation</h3>
+            <p class="lead">Expose your actions as REST API endpoints or MCP tools to make them accessible to apps, services, and AI agents.</p>
+        </div>
+        <div class="col-lg-6">
+            <div class="fusio-right-image shadow-lg rounded-5 border-1" style="background-image:url('<?php echo $base; ?>/img/screens/backend_operation_small.png');"></div>
         </div>
     </div>
 </div>
