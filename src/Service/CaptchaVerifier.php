@@ -2,20 +2,17 @@
 
 namespace App\Service;
 
-use GuzzleHttp\Client;
+use Google\Cloud\RecaptchaEnterprise\V1\Assessment;
+use Google\Cloud\RecaptchaEnterprise\V1\Client\RecaptchaEnterpriseServiceClient;
+use Google\Cloud\RecaptchaEnterprise\V1\CreateAssessmentRequest;
+use Google\Cloud\RecaptchaEnterprise\V1\Event;
 use PSX\Framework\Config\ConfigInterface;
-use PSX\Framework\Environment\IPResolver;
-use PSX\Json;
+use Throwable;
 
 readonly class CaptchaVerifier
 {
-    private Client $httpClient;
-    private string $secret;
-
-    public function __construct(ConfigInterface $config, private IPResolver $ipResolver)
+    public function __construct(private ConfigInterface $config)
     {
-        $this->httpClient = new Client();
-        $this->secret = $config->get('recaptcha_secret');
     }
 
     public function verify(?string $recaptchaResponse): bool
@@ -29,25 +26,26 @@ readonly class CaptchaVerifier
             return false;
         }
 
-        $response = $this->httpClient->post('https://www.google.com/recaptcha/api/siteverify', [
-            'headers' => [
-                'User-Agent' => 'fusio-project.org'
-            ],
-            'form_params' => [
-                'secret'   => $this->secret,
-                'response' => $recaptchaResponse,
-                'remoteip' => $this->ipResolver->resolveByEnvironment(),
-            ],
-            'verify' => false
-        ]);
+        $client = new RecaptchaEnterpriseServiceClient(['apiKey' => $this->config->get('google_api_key')]);
+        $projectName = $client->projectName($this->config->get('google_project_name'));
 
-        if ($response->getStatusCode() == 200) {
-            $data = Json\Parser::decode((string) $response->getBody());
-            if (isset($data->success) && $data->success === true) {
-                return true;
-            }
+        $event = (new Event())
+            ->setSiteKey($this->config->get('google_recaptcha_key'))
+            ->setToken($recaptchaResponse);
+
+        $assessment = (new Assessment())
+            ->setEvent($event);
+
+        $request = (new CreateAssessmentRequest())
+            ->setParent($projectName)
+            ->setAssessment($assessment);
+
+        try {
+            $response = $client->createAssessment($request);
+
+            return $response->getTokenProperties()->getValid() === true;
+        } catch (Throwable) {
+            return false;
         }
-
-        return false;
     }
 }

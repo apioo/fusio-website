@@ -37,7 +37,8 @@
 
       <hr>
 
-      <form method="post" id="contactForm">
+      <form method="POST" id="contactForm">
+        <input type="hidden" id="captcha" name="captcha" value="">
         <div class="mb-3">
           <label for="email" class="form-label fw-bold">Your email</label>
           <input type="email" class="form-control" id="email" name="email" placeholder="user@acme.com" required>
@@ -46,16 +47,21 @@
           <label for="message" class="form-label fw-bold">Your message</label>
           <textarea id="message" name="message" rows="5" class="form-control" placeholder="My message" required></textarea>
         </div>
-        <button class="g-recaptcha btn btn-primary" data-sitekey="<?php echo $recaptcha_key; ?>" data-callback="onSubmit" data-action="submit">Submit</button>
+          <input type="button" class="btn btn-primary" id="contactButton" name="contactButton" value="Contact">
       </form>
     </div>
   </div>
 </div>
 
 <script>
-function onSubmit(token) {
-  document.getElementById("contactForm").submit();
-}
+    document.getElementById('contactButton').addEventListener('click', function(e) {
+        e.preventDefault();
+        grecaptcha.enterprise.ready(async () => {
+            const token = await grecaptcha.enterprise.execute('<?php echo $recaptcha_key; ?>', {action: 'SUBMIT'});
+            document.getElementById('captcha').setAttribute('value', token);
+            document.getElementById("contactForm").submit();
+        });
+    }, false);
 </script>
 
 <?php include(__DIR__ . '/inc/footer.php'); ?>

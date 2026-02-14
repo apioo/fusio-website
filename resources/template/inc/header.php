@@ -25,7 +25,7 @@
 <?php if(isset($bootstrap_icons)): ?>  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <?php endif; ?>
   <script async src="<?php echo $base; ?>/dist/app.min.js"></script>
-<?php if(isset($recaptcha_key)): ?>  <script src="https://www.google.com/recaptcha/api.js"></script>
+<?php if(isset($recaptcha_key)): ?>  <script src="https://www.google.com/recaptcha/enterprise.js?render=<?php echo $recaptcha_key; ?>"></script>
 <?php endif; ?>
   <script>
     var _paq = window._paq = window._paq || [];

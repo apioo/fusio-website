@@ -5,8 +5,9 @@ use function Symfony\Component\DependencyInjection\Loader\Configurator\env;
 
 return [
 
-    'recaptcha_key'           => env('APP_RECAPTCHA_KEY')->string(),
-    'recaptcha_secret'        => env('APP_RECAPTCHA_SECRET')->string(),
+    'google_recaptcha_key'    => env('APP_GOOGLE_RECAPTCHA_KEY')->string(),
+    'google_project_name'     => env('APP_GOOGLE_PROJECT_NAME')->string(),
+    'google_api_key'          => env('APP_GOOGLE_API_KEY')->string(),
 
     // the blog source xml file containing all posts
     'blog_file'               => __DIR__ . '/resources/blog.xml',
@@ -29,7 +30,7 @@ return [
     'psx_url'                 => env('APP_URL')->string(),
 
     // The input path 'index.php/' or '' if every request is served to the index.php file
-    'psx_dispatch'            => '',
+    'psx_dispatch'            => 'index.php/',
 
     // Defines the current environment i.e. prod or dev
     'psx_env'                 => env('APP_ENV')->string(),

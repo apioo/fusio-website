@@ -6,7 +6,8 @@
     "symfony/mailer": "^7.0",
     "symfony/aha-send-mailer": "^7.0",
     "fusio/marketplace": "^0.2.0",
-    "chriskapp/blog": "^0.1.2"
+    "chriskapp/blog": "^0.1.2",
+    "google/cloud-recaptcha-enterprise": "^2.3"
   },
   "autoload": {
     "psr-4": {
