@@ -17,11 +17,6 @@ readonly class CaptchaVerifier
 
     public function verify(?string $recaptchaResponse): bool
     {
-        if (empty($this->secret)) {
-            // in case at our local instance is no secret configured we ignore it
-            return true;
-        }
-
         if (empty($recaptchaResponse)) {
             return false;
         }
