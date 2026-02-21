@@ -70,6 +70,10 @@ class Contact extends ControllerAbstract
                 throw new RuntimeException('Provided an invalid message');
             }
 
+            if (preg_match('/^[A-Za-z0-9]+$/', $payload->message)) {
+                throw new RuntimeException('Provided an invalid message');
+            }
+
             $message = (new Email())
                 ->subject('[Fusio] Contact')
                 ->from('info@fusio-project.org')
