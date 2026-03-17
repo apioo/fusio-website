@@ -1,194 +1,184 @@
 <?php include(__DIR__ . '/inc/header.php'); ?>
 
-<!--
-Hey developer, like Fusio our complete website is also open source. If you find any errors or you want to improve
-specific parts feel free to simply create a PR at this repository. If you want to see the Fusio repository s.
-https://github.com/apioo/fusio
--->
-
-<div class="fusio-headline">
-  <div class="container">
-    <div class="row">
-      <div class="col p-lg-5 mx-auto my-5 text-center">
-        <h1 class="display-4 fw-normal">Fusio</h1>
-        <p class="lead fw-normal">Open Source API & AI Management for Builders.</p>
-        <a href="https://mailchi.mp/948c47451634/fusio" class="btn btn-secondary">Subscribe</a>
-        <a href="<?php echo $router->getAbsolutePath([\App\Controller\Demo::class, 'show']); ?>" class="btn btn-primary">Demo</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="bg-dark text-center pt-3 pb-3">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <a href="https://youtube.com/@FusioAPI" class="text-decoration-none text-light"><img src="<?php echo $base; ?>/img/youtube-64.png" width="32" height="32" alt="Youtube Logo"> <span class="d-none d-lg-inline">Youtube</span></a>
-      </div>
-      <div class="col">
-        <a href="https://github.com/apioo/fusio" class="text-decoration-none text-light"><img src="<?php echo $base; ?>/img/github-64.png" width="32" height="32" alt="Github Logo"> <span class="d-none d-lg-inline">Github</span></a>
-      </div>
-      <div class="col">
-        <a href="https://twitter.com/FusioAPI" class="text-decoration-none text-light"><img src="<?php echo $base; ?>/img/twitter-64.png" width="32" height="32" alt="Twitter Logo"> <span class="d-none d-lg-inline">Twitter</span></a>
-      </div>
-      <div class="col">
-        <a href="https://bsky.app/profile/fusioapi.bsky.social" class="text-decoration-none text-light"><img src="<?php echo $base; ?>/img/bluesky-64.png" width="32" height="32" alt="Bluesky Logo"> <span class="d-none d-lg-inline">Bluesky</span></a>
-      </div>
-      <div class="col">
-        <a rel="me" href="https://fosstodon.org/@fusio" class="text-decoration-none text-light"><img src="<?php echo $base; ?>/img/mastodon-64.png" width="32" height="32" alt="Mastodon Logo"> <span class="d-none d-lg-inline">Mastodon</span></a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="bg-light pt-5 mb-4 pb-5">
-    <div class="container">
-        <div class="text-center mt-5 mb-5">
-            <h2 class="display-5 fw-bold text-body-emphasis">Build efficient API solutions with <span class="fusio-text-animation">Fusio</span>.</h2>
-            <p class="lead mb-4">Whether you're creating an API gateway, powering your <abbr title="Single-Page-Application">SPA</abbr> backend, or launching an API product, Fusio provides the tools to build it efficiently.</p>
+<section class="container mx-auto px-6 pt-32 pb-20 relative z-10">
+    <div class="flex flex-col lg:flex-row items-center gap-16">
+        <div class="lg:w-1/2">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 mb-8">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+                </span>
+                <span class="text-xs font-bold text-orange-500 uppercase tracking-widest">Major Release 7.0</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black text-white mb-6 leading-[0.9] tracking-tighter">
+                API Management <br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">for the AI Era.</span>
+            </h1>
+            <p class="text-xl text-slate-200 mb-10 max-w-xl leading-relaxed">
+                The open-source API engine that connects your logic to the world, built for developers, optimized for AI agents.
+            </p>
+            <div class="flex flex-wrap gap-5 items-center text-center sm:text-left">
+                <a href="https://mailchi.mp/948c47451634/fusio" class="w-full sm:w-auto bg-orange-500 text-white px-8 py-4 rounded-full font-bold hover:bg-orange-600 shadow-2xl transition-all">
+                    Get Updates
+                </a>
+                <a href="<?php echo $router->getAbsolutePath([\App\Controller\Demo::class, 'show']); ?>" class="w-full sm:w-auto bg-white/5 backdrop-blur-md border border-white/10 text-white px-8 py-4 rounded-full font-bold hover:bg-white/10 transition-all">
+                    Try Live Demo
+                </a>
+            </div>
         </div>
-    </div>
-</div>
-
-<div class="container mt-4 mb-4">
-    <div class="row g-4 py-4">
-        <div class="col-lg-6 text-center text-lg-end">
-            <h3 class="display-6">Analytics</h3>
-            <p class="lead">Monitor key API metrics and usage in real time through the Fusio analytics dashboard.</p>
-        </div>
-        <div class="col-lg-6">
-            <div class="fusio-right-image shadow-lg rounded-5 border-1" style="background-image:url('<?php echo $base; ?>/img/screens/backend_dashboard_small.png');"></div>
-        </div>
-    </div>
-    <div class="row g-4 py-4">
-        <div class="col-lg-6">
-            <div class="fusio-left-image shadow-lg rounded-5 border-1" style="background-image:url('<?php echo $base; ?>/img/screens/backend_action_designer_small.png');"></div>
-        </div>
-        <div class="col-lg-6 text-center text-lg-start">
-            <h3 class="display-6">Development</h3>
-            <p class="lead">Build API endpoints quickly using built-in actions or by implementing your own custom logic.</p>
-        </div>
-    </div>
-    <div class="row g-4 py-4">
-        <div class="col-lg-6 text-center text-lg-end">
-            <h3 class="display-6">Operation</h3>
-            <p class="lead">Expose your actions as REST API endpoints or MCP tools to make them accessible to apps, services, and AI agents.</p>
-        </div>
-        <div class="col-lg-6">
-            <div class="fusio-right-image shadow-lg rounded-5 border-1" style="background-image:url('<?php echo $base; ?>/img/screens/backend_operation_small.png');"></div>
-        </div>
-    </div>
-</div>
-
-<div class="bg-light mt-4 pt-5 mb-4 pb-5">
-    <div class="container">
-        <div class="row">
-            <div class="col text-center">
-                <blockquote class="display-4">"With Fusio, we’re empowering the API economy to drive real digital transformation."</blockquote>
-                <cite>Christoph Kappestein, Developer of Fusio</cite>
+        <div class="lg:w-1/2 relative">
+            <div class="absolute -inset-10 bg-orange-600/20 blur-[120px] rounded-full opacity-40 animate-pulse"></div>
+            <div class="relative z-10 animate-float bg-slate-900 border border-white/10 p-1.5 rounded-2xl shadow-[0_30px_60px_rgba(0,0,0,0.6)]">
+                <div class="flex gap-1.5 mb-2 px-3 pt-2">
+                    <div class="w-2.5 h-2.5 rounded-full bg-red-500/50"></div>
+                    <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/50"></div>
+                    <div class="w-2.5 h-2.5 rounded-full bg-green-500/50"></div>
+                </div>
+                <img src="https://www.fusio-project.org/img/screens/backend_dashboard_small.png" alt="Fusio Backend Dashboard" class="w-full h-auto rounded-lg" />
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="container mt-4 mb-4">
-  <div class="row g-4 py-4 row-cols-1 row-cols-lg-3 text-center">
-    <div class="feature col">
-      <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-1 mb-3 rounded-5">
-        <span class="m-3">🔄</span>
-      </div>
-      <h3 class="fs-4">Database API Gateway</h3>
-      <p>Great for unlocking legacy data systems or enabling mobile app access.</p>
+<section class="bg-slate-950 py-24">
+    <div class="container mx-auto px-6">
+        <div class="mb-16">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Core <span class="text-orange-500">Capabilities.</span></h2>
+            <p class="text-slate-400 text-lg max-w-2xl">
+                Fusio is a complete API management platform designed to turn your technical logic into scalable digital value.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <div class="md:col-span-2 lg:col-span-3 bg-slate-900/40 border border-slate-800 p-8 rounded-3xl group hover:border-orange-500/50 transition-all">
+                <div class="flex flex-col h-full justify-between">
+                    <div>
+                        <div class="w-10 h-10 bg-orange-500/10 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Logic Engine</h3>
+                        <p class="text-slate-400">Build custom backend logic with reusable actions. Fusio handles the boilerplate so you can focus on the code.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="md:col-span-2 lg:col-span-3 bg-slate-900/40 border border-slate-800 p-8 rounded-3xl group hover:border-orange-500/50 transition-all">
+                <div class="flex flex-col h-full justify-between">
+                    <div>
+                        <div class="w-10 h-10 bg-orange-500/10 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2 1 3 3 3h10c2 0 3-1 3-3V7c0-2-1-3-3-3H7c-2 0-3 1-3 3zM9 12h6M9 16h6" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Instant Data-to-API</h3>
+                        <p class="text-slate-400">Expose relational and NoSQL databases as professional REST APIs instantly without writing CRUD logic.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="md:col-span-2 lg:col-span-2 bg-slate-900/40 border border-slate-800 p-8 rounded-3xl hover:border-orange-500/50 transition">
+                <h3 class="text-xl font-bold text-white mb-2">MCP Native Gateway</h3>
+                <p class="text-slate-400 text-sm">Seamlessly expose and control your APIs as tools for AI models and autonomous agents.</p>
+            </div>
+            <div class="md:col-span-2 lg:col-span-2 bg-slate-900/40 border border-slate-800 p-8 rounded-3xl hover:border-orange-500/50 transition">
+                <h3 class="text-xl font-bold text-white mb-2">Agentic Workflows</h3>
+                <p class="text-slate-400 text-sm">A dedicated framework to build, deploy, and monitor custom AI agents within your infrastructure.</p>
+            </div>
+            <div class="md:col-span-2 lg:col-span-2 bg-slate-900/40 border border-slate-800 p-8 rounded-3xl hover:border-orange-500/50 transition">
+                <h3 class="text-xl font-bold text-white mb-2">AI-Assisted Dev</h3>
+                <p class="text-slate-400 text-sm">Generate sophisticated backend logic and schemas using natural language prompts.</p>
+            </div>
+            <div class="md:col-span-2 lg:col-span-2 bg-slate-900/40 border border-slate-800 p-8 rounded-3xl hover:border-orange-500/50 transition">
+                <h3 class="text-xl font-bold text-white mb-2">Service Orchestrator</h3>
+                <p class="text-slate-400 text-sm">Securely route, transform, and coordinate traffic between distributed microservices.</p>
+            </div>
+            <div class="md:col-span-2 lg:col-span-2 bg-slate-900/40 border border-slate-800 p-8 rounded-3xl hover:border-orange-500/50 transition">
+                <h3 class="text-xl font-bold text-white mb-2">Marketplace & Billing</h3>
+                <p class="text-slate-400 text-sm">Monetize your APIs with built-in subscription plans, quotas, and automated rate limiting.</p>
+            </div>
+            <div class="md:col-span-2 lg:col-span-2 bg-slate-900/40 border border-slate-800 p-8 rounded-3xl hover:border-orange-500/50 transition">
+                <h3 class="text-xl font-bold text-white mb-2">Developer Portal</h3>
+                <p class="text-slate-400 text-sm">Provide your consumers with automated documentation, testing consoles, and SDKs.</p>
+            </div>
+            <div class="md:col-span-3 bg-slate-900/40 border border-slate-800 p-8 rounded-3xl hover:border-orange-500/50 transition flex items-center justify-between group">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-1">SDK Automation</h3>
+                    <p class="text-slate-400 text-sm">Automatically generate client libraries for every major programming language.</p>
+                </div>
+                <div class="text-4xl font-black text-slate-800 group-hover:text-orange-500/20 transition">SDK</div>
+            </div>
+            <div class="md:col-span-3 bg-slate-900/40 border border-slate-800 p-8 rounded-3xl hover:border-orange-500/50 transition flex items-center justify-between group">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-1">Real-time Observability</h3>
+                    <p class="text-slate-400 text-sm">Track usage metrics, performance bottlenecks, and system errors in a unified dashboard.</p>
+                </div>
+                <div class="text-4xl font-black text-slate-800 group-hover:text-orange-500/20 transition">LIVE</div>
+            </div>
+        </div>
     </div>
-    <div class="feature col">
-      <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
-        <span class="m-3">🧠</span>
-      </div>
-      <h3 class="fs-4">API Business Logic</h3>
-      <p>Perfect for enterprise use cases requiring tailored backend logic.</p>
-    </div>
-    <div class="feature col">
-      <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
-        <span class="m-3">🕸️</span>
-      </div>
-      <h3 class="fs-4">Gateway for Microservices</h3>
-      <p>Useful for modern service-oriented architectures or hybrid systems.</p>
-    </div>
-    <div class="feature col">
-      <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
-        <span class="m-3">🌐</span>
-      </div>
-      <h3 class="fs-4">API Developer Portal</h3>
-      <p>Ideal for SaaS providers offering APIs to external developers.</p>
-    </div>
-    <div class="feature col">
-      <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
-        <span class="m-3">💸</span>
-      </div>
-      <h3 class="fs-4">API Monetization</h3>
-      <p>Enable freemium or tiered access models with minimal effort.</p>
-    </div>
-    <div class="feature col">
-      <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
-        <span class="m-3">⚡</span>
-      </div>
-      <h3 class="fs-4">MCP Integration</h3>
-      <p>Leverage the Model Context Protocol to enable AI-driven access and control of API endpoints.</p>
-    </div>
-    <div class="feature col">
-      <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
-        <span class="m-3">📊</span>
-      </div>
-      <h3 class="fs-4">API Usage Analytics</h3>
-      <p>Essential for maintaining quality of service and detecting issues early.</p>
-    </div>
-    <div class="feature col">
-      <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
-        <span class="m-3">📰</span>
-      </div>
-      <h3 class="fs-4">Headless CMS Backend</h3>
-      <p>Great for CMS-like applications where content is managed through APIs.</p>
-    </div>
-    <div class="feature col">
-      <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-5">
-        <span class="m-3">📡</span>
-      </div>
-      <h3 class="fs-4">SDK Automation</h3>
-      <p>Automatically generate SDKs (e.g., PHP, TypeScript, Python) based on your defined API schema.</p>
-    </div>
-  </div>
-</div>
+</section>
 
-<div class="px-4 py-5 my-5 bg-dark">
-  <div style="max-width:720px;margin:0 auto;">
-    <iframe loading="lazy" width="560" height="315" src="https://www.youtube-nocookie.com/embed/Iz-VmMYviaY?si=dJ1SFjG5z2r8H8IP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col text-end">
-      <a href="https://github.com/apioo/fusio-website/blob/main/resources/template/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"><i class="bi bi-pen-fill"></i> Edit this page</a>
+<section class="relative py-32 overflow-hidden">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-orange-500/10 blur-[120px] -z-10"></div>
+    <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="flex justify-center mb-8">
+                <svg class="w-12 h-12 text-orange-500/40" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H11.017C10.4647 13 10.017 12.5523 10.017 12V9C10.017 6.23858 12.2556 4 15.017 4H19.017C21.7784 4 24.017 6.23858 24.017 9V15C24.017 18.3137 21.3307 21 18.017 21H14.017ZM0.0170898 21L0.0170898 18C0.0170898 16.8954 0.91252 16 2.01709 16H5.01709C5.56937 16 6.01709 15.5523 6.01709 15V9C6.01709 8.44772 5.56937 8 5.01709 8H1.01709C0.464804 8 0.0170898 8.44772 0.0170898 9V12C0.0170898 12.5523 -0.430626 13 -0.98291 13H-2.98291C-3.5352 13 -3.98291 12.5523 -3.98291 12V9C-3.98291 6.23858 -1.74433 4 1.01709 4H5.01709C7.77851 4 10.0171 6.23858 10.0171 9V15C10.0171 18.3137 7.3308 21 4.01709 21H0.0170898Z" />
+                </svg>
+            </div>
+            <blockquote class="text-3xl md:text-5xl font-bold text-white leading-tight mb-10 tracking-tight italic">
+                "Fusio turns business logic into <span class="text-orange-500">universal capabilities</span> for the web, mobile, and AI agents."
+            </blockquote>
+            <div class="flex items-center justify-center gap-4">
+                <div class="text-left">
+                    <div class="text-lg font-bold text-white">Christoph Kappestein</div>
+                    <div class="text-sm text-slate-500 uppercase tracking-widest font-medium">Developer of Fusio</div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+</section>
 
-<script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Fusio",
-    "description": "Self-Hosted API Management for Builders",
-    "url": "https://www.fusio-project.org/",
-    "applicationCategory": "API Management",
-    "downloadUrl": "https://www.fusio-project.org/download",
-    "license": "https://github.com/apioo/fusio/blob/master/LICENSE",
-    "operatingSystem": "Windows, Linux, OSX",
-    "author": {
-      "@type": "Person",
-      "@id": "https://chrisk.app"
-    }
-  }
-</script>
+<section class="bg-slate-950 py-24 relative overflow-hidden">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-orange-500/5 via-transparent to-transparent blur-3xl pointer-events-none"></div>
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-3xl mx-auto text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">See Fusio in <span class="text-orange-500">Action.</span></h2>
+            <p class="text-slate-400 text-lg">
+                Watch how to build a production-ready API from scratch, generate SDKs, and integrate with AI agents using the Model Context Protocol.
+            </p>
+        </div>
+        <div class="max-w-5xl mx-auto relative group">
+            <div class="absolute -inset-4 bg-orange-500/20 rounded-[2.5rem] blur-2xl opacity-0 group-hover:opacity-100 transition duration-700 pointer-events-none"></div>
+            <div class="relative bg-slate-900 border border-white/10 p-2 rounded-[2rem] shadow-2xl overflow-hidden">
+                <div class="aspect-video rounded-[1.5rem] overflow-hidden bg-black">
+                    <iframe
+                            class="w-full h-full"
+                            src="https://www.youtube.com/embed/Iz-VmMYviaY?si=uV6p533W89u-rM-X"
+                            title="Fusio Introduction Video"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+                <div class="text-center">
+                    <span class="block text-white font-bold">13 Min</span>
+                    <span class="text-xs text-slate-500 uppercase tracking-widest">Full Walkthrough</span>
+                </div>
+                <div class="text-center">
+                    <span class="block text-white font-bold">SDK Gen</span>
+                    <span class="text-xs text-slate-500 uppercase tracking-widest">Live Demo</span>
+                </div>
+                <div class="text-center">
+                    <span class="block text-white font-bold">MCP Server</span>
+                    <span class="text-xs text-slate-500 uppercase tracking-widest">AI Integration</span>
+                </div>
+                <div class="text-center">
+                    <span class="block text-white font-bold">PHP/JS/Python</span>
+                    <span class="text-xs text-slate-500 uppercase tracking-widest">Language Support</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <?php include(__DIR__ . '/inc/footer.php'); ?>

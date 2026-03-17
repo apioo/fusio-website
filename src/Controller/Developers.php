@@ -10,19 +10,14 @@ use PSX\Framework\Http\Writer\Template;
 use PSX\Framework\Loader\ReverseRouter;
 use PSX\Http\Exception\InternalServerErrorException;
 
-class Download extends ControllerAbstract
+class Developers extends ControllerAbstract
 {
-    private Table\Release $releaseTable;
-    private ReverseRouter $reverseRouter;
-
-    public function __construct(Table\Release $releaseTable, ReverseRouter $reverseRouter)
+    public function __construct(private Table\Release $releaseTable, private ReverseRouter $reverseRouter)
     {
-        $this->releaseTable = $releaseTable;
-        $this->reverseRouter = $reverseRouter;
     }
 
     #[Get]
-    #[Path('/download')]
+    #[Path('/developers')]
     public function show(): mixed
     {
         $release = $this->releaseTable->findLatestRelease();
@@ -31,9 +26,9 @@ class Download extends ControllerAbstract
         }
 
         $data = [
-            'title' => 'Download | Fusio',
-            'description' => 'Download Fusio as a standalone file or Docker image for easy installation and deployment of the open-source API management platform.',
-            'keywords' => 'Fusio, API management, open-source API platform, Fusio download, Docker image, Fusio setup, Fusio installation, API development tools, Fusio API platform, Fusio Docker Compose, Fusio database setup, Fusio deployment guide',
+            'title' => 'Developers',
+            'description' => 'Everything you need to build, deploy, and scale with Fusio. From core installation to multi-language SDKs and API specifications.',
+            'keywords' => '',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
             'tagName' => $release->getTagName(),
             'htmlUrl' => $release->getHtmlUrl(),
@@ -42,7 +37,7 @@ class Download extends ControllerAbstract
             'publishedAt' => $release->getPublishedAt()->toDateTime()->format('Y-m-d'),
         ];
 
-        $templateFile = __DIR__ . '/../../resources/template/download.php';
+        $templateFile = __DIR__ . '/../../resources/template/developers.php';
         return new Template($data, $templateFile, $this->reverseRouter);
     }
 }

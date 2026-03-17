@@ -1,83 +1,90 @@
 <?php include(__DIR__ . '/inc/header.php'); ?>
 
-<div class="fusio-headline">
-  <div class="container">
-    <div class="row">
-      <div class="col p-4 mx-auto text-center">
-        <h1 class="display-4 fw-normal">Worker</h1>
-      </div>
-    </div>
-  </div>
-</div>
+<?php include(__DIR__ . '/inc/sub_header.php'); ?>
 
-<div class="container mt-4 pt-4 mb-4 pb-4">
-  <div class="row">
-    <div class="col">
-      <p>The following list shows worker which allow you to implement actions in a different programming languages. More
-        information about the <a href="https://docs.fusio-project.org/docs/use_cases/api_gateway/worker">worker system</a> at
-        our documentation.</p>
-    </div>
-  </div>
-</div>
+<section class="py-20 pb-32">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-3 text-center">
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h2 class="my-0 fw-normal fs-5">Java</h2>
-          </div>
-          <img src="<?php echo $base; ?>/img/sdk/java.png" class="rounded mx-auto d-block mt-3" />
-          <div class="card-body">
-            <p>Worker implementation written in Java.</p>
-            <a href="https://github.com/apioo/fusio-worker-java" class="btn btn-primary">GitHub</a>
-            <a href="https://hub.docker.com/r/fusio/worker-java" class="btn btn-secondary">Docker</a>
-          </div>
+            <div class="group p-8 rounded-[2.5rem] bg-slate-900/40 border border-white/5 hover:border-orange-500/30 transition-all duration-500">
+                <div class="flex items-center gap-6 mb-8">
+                    <div class="w-14 h-14 bg-slate-950 rounded-2xl flex items-center justify-center border border-white/10 group-hover:border-orange-500/50 transition-colors">
+                        <span class="text-xl font-mono font-bold text-orange-500">Ph</span>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">PHP Worker</h3>
+                        <p class="text-xs text-slate-500 uppercase tracking-widest font-mono">Native Runtime</p>
+                    </div>
+                </div>
+                <p class="text-slate-400 mb-10 leading-relaxed">
+                    The reference implementation written in PHP. Provides the highest level of integration with the Fusio core engine.
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://github.com/apioo/fusio-worker-php" target="_blank" class="flex-1 text-center py-3 bg-white/5 hover:bg-white/10 rounded-xl text-xs font-bold border border-white/5 transition">GitHub</a>
+                    <a href="https://hub.docker.com/r/fusio/worker-php" target="_blank" class="flex-1 text-center py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-bold transition shadow-lg shadow-blue-600/20">Docker</a>
+                </div>
+            </div>
+
+            <div class="group p-8 rounded-[2.5rem] bg-slate-900/40 border border-white/5 hover:border-yellow-500/30 transition-all duration-500">
+                <div class="flex items-center gap-6 mb-8">
+                    <div class="w-14 h-14 bg-slate-950 rounded-2xl flex items-center justify-center border border-white/10 group-hover:border-yellow-500/50 transition-colors">
+                        <span class="text-xl font-mono font-bold text-yellow-500">Js</span>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">JavaScript Worker</h3>
+                        <p class="text-xs text-slate-500 uppercase tracking-widest font-mono">Node.js Runtime</p>
+                    </div>
+                </div>
+                <p class="text-slate-400 mb-10 leading-relaxed">
+                    Enables high-performance asynchronous action logic using the Node.js ecosystem and NPM packages.
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://github.com/apioo/fusio-worker-javascript" target="_blank" class="flex-1 text-center py-3 bg-white/5 hover:bg-white/10 rounded-xl text-xs font-bold border border-white/5 transition">GitHub</a>
+                    <a href="https://hub.docker.com/r/fusio/worker-javascript" target="_blank" class="flex-1 text-center py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-bold transition shadow-lg shadow-blue-600/20">Docker</a>
+                </div>
+            </div>
+
+            <div class="group p-8 rounded-[2.5rem] bg-slate-900/40 border border-white/5 hover:border-blue-400/30 transition-all duration-500">
+                <div class="flex items-center gap-6 mb-8">
+                    <div class="w-14 h-14 bg-slate-950 rounded-2xl flex items-center justify-center border border-white/10 group-hover:border-blue-400/50 transition-colors">
+                        <span class="text-xl font-mono font-bold text-blue-400">Py</span>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">Python Worker</h3>
+                        <p class="text-xs text-slate-500 uppercase tracking-widest font-mono">CPython Runtime</p>
+                    </div>
+                </div>
+                <p class="text-slate-400 mb-10 leading-relaxed">
+                    Perfect for AI integration and data science tasks. Allows you to use Python libraries directly within your API actions.
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://github.com/apioo/fusio-worker-python" target="_blank" class="flex-1 text-center py-3 bg-white/5 hover:bg-white/10 rounded-xl text-xs font-bold border border-white/5 transition">GitHub</a>
+                    <a href="https://hub.docker.com/r/fusio/worker-python" target="_blank" class="flex-1 text-center py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-bold transition shadow-lg shadow-blue-600/20">Docker</a>
+                </div>
+            </div>
+
+            <div class="group p-8 rounded-[2.5rem] bg-slate-900/40 border border-white/5 hover:border-red-500/30 transition-all duration-500">
+                <div class="flex items-center gap-6 mb-8">
+                    <div class="w-14 h-14 bg-slate-950 rounded-2xl flex items-center justify-center border border-white/10 group-hover:border-red-500/50 transition-colors">
+                        <span class="text-xl font-mono font-bold text-red-500">Jv</span>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">Java Worker</h3>
+                        <p class="text-xs text-slate-500 uppercase tracking-widest font-mono">JVM / Groovy Runtime</p>
+                    </div>
+                </div>
+                <p class="text-slate-400 mb-10 leading-relaxed">
+                    Enterprise-grade runtime for heavy lifting. Supports Java and Groovy for complex business logic and legacy integrations.
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://github.com/apioo/fusio-worker-java" target="_blank" class="flex-1 text-center py-3 bg-white/5 hover:bg-white/10 rounded-xl text-xs font-bold border border-white/5 transition">GitHub</a>
+                    <a href="https://hub.docker.com/r/fusio/worker-java" target="_blank" class="flex-1 text-center py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-bold transition shadow-lg shadow-blue-600/20">Docker</a>
+                </div>
+            </div>
+
         </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h2 class="my-0 fw-normal fs-5">Javascript</h2>
-          </div>
-          <img src="<?php echo $base; ?>/img/sdk/es6.png" class="rounded mx-auto d-block mt-3" />
-          <div class="card-body">
-            <p>Worker implementation written in Javascript running on Nodejs.</p>
-            <a href="https://github.com/apioo/fusio-worker-javascript" class="btn btn-primary">GitHub</a>
-            <a href="https://hub.docker.com/r/fusio/worker-javascript" class="btn btn-secondary">Docker</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h2 class="my-0 fw-normal fs-5">PHP</h2>
-          </div>
-          <img src="<?php echo $base; ?>/img/sdk/php.png" class="rounded mx-auto d-block mt-3" />
-          <div class="card-body">
-            <p>Worker implementation written in PHP.</p>
-            <a href="https://github.com/apioo/fusio-worker-php" class="btn btn-primary">GitHub</a>
-            <a href="https://hub.docker.com/r/fusio/worker-php" class="btn btn-secondary">Docker</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h2 class="my-0 fw-normal fs-5">Python</h2>
-          </div>
-          <img src="<?php echo $base; ?>/img/sdk/python.png" class="rounded mx-auto d-block mt-3" />
-          <div class="card-body">
-            <p>Worker implementation written in Python.</p>
-            <a href="https://github.com/apioo/fusio-worker-python" class="btn btn-primary">GitHub</a>
-            <a href="https://hub.docker.com/r/fusio/worker-javascript" class="btn btn-secondary">Docker</a>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-</div>
+</section>
 
 <div class="container">
   <div class="row">

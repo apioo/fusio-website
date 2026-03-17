@@ -1,174 +1,140 @@
 <?php include(__DIR__ . '/inc/header.php'); ?>
 
-<div class="fusio-headline">
-  <div class="container">
-    <div class="row">
-      <div class="col p-4 mx-auto text-center">
-        <h1 class="display-4 fw-normal">Ecosystem</h1>
-      </div>
-    </div>
-  </div>
-</div>
+<?php include(__DIR__ . '/inc/sub_header.php'); ?>
 
-<div class="container mt-4 pt-4 mb-4 pb-4">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <p class="text-center lead">Besides our core product, we offer additional services to augment the functionality of Fusio.</p>
+<section class="relative z-10 py-24 bg-slate-950/50">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md hover:border-orange-500/50 transition-all group">
+                <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mb-6 text-orange-500 group-hover:scale-110 transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Marketplace::class, 'show']); ?>">Marketplace</a></h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    The place to share apps and actions. Register your credentials under <code>System / Config</code> to install apps directly from your local dashboard.
+                </p>
+                <a href="<?php echo $router->getAbsolutePath([\App\Controller\Marketplace::class, 'show']); ?>" class="text-orange-500 text-sm font-bold hover:underline">Explore Marketplace →</a>
+            </div>
+            <div class="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md hover:border-orange-500/50 transition-all group">
+                <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mb-6 text-orange-500 group-hover:scale-110 transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4"><a href="https://sdkgen.app/">SDKgen</a></h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    Generate client SDKs for C#, Go, Java, and Python. Seamlessly interact with your API by providing your SDKgen credentials in Fusio.
+                </p>
+                <a href="https://sdkgen.app/" class="text-orange-500 text-sm font-bold hover:underline">Learn more →</a>
+            </div>
+            <div class="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md hover:border-orange-500/50 transition-all group">
+                <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mb-6 text-orange-500 group-hover:scale-110 transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4"><a href="https://typehub.cloud/">TypeHub</a></h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    API and data design platform. Discovery and tracking for your API specification, ensuring a clean history of how your API evolves.
+                </p>
+                <a href="https://app.typehub.cloud/" class="text-orange-500 text-sm font-bold hover:underline">Discover APIs →</a>
+            </div>
+            <div class="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md hover:border-orange-500/50 transition-all group">
+                <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mb-6 text-orange-500 group-hover:scale-110 transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4"><a href="https://apigen.app/">APIgen</a></h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    Low-code generator that creates fully working Fusio APIs and Angular CRUD apps based on your data models.
+                </p>
+            </div>
+            <div class="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md hover:border-orange-500/50 transition-all group">
+                <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mb-6 text-orange-500 group-hover:scale-110 transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4"><a href="https://apimon.app/">APImon</a></h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    Specialized API monitoring and uptime pages for Fusio installations. Get notified instantly about changes or downtime.
+                </p>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-            <h2 id="marketplace" class="fusio-sub-headline h4 fw-normal"><i class="bi bi-shop-window"></i> <a href="https://www.fusio-project.org/marketplace">Marketplace</a></h2>
-            <p class="lead mb-5">The Fusio marketplace is the place to share apps and actions with other Fusio users,
-            it helps to quickly build your API by using existing code from other users. You can register and configure
-            the credentials at your local Fusio installation under System / Config s. <code>marketplace_client_id</code>
-            and <code>marketplace_client_secret</code> then you can use the panel under Development / Marketplace to
-            install apps or actions.</p>
-
-            <h2 id="sdkgen" class="fusio-sub-headline h4 fw-normal"><i class="bi bi-archive-fill"></i> <a href="https://sdkgen.app/">SDKgen</a></h2>
-            <p class="lead mb-5">SDK as a service platform which helps you to generate client SDKs for your API in
-            different languages like <code>CSharp</code>, <code>Go</code>, <code>Java</code> and <code>Python</code>
-            which helps your customers to interact with your API. Therefor you need to register at the SDKgen app and
-            provide the credentials under System / Config s. <code>sdkgen_client_id</code> and <code>sdkgen_client_secret</code>.
-            Then you can generate the SDK directly at the backend under Development / SDK.</p>
-
-            <h2 id="typehub" class="fusio-sub-headline h4 fw-normal"><i class="bi bi-box-fill"></i> <a href="https://typehub.cloud/">TypeHub</a></h2>
-            <p class="lead mb-5">API and data design platform, basically you can push your API specification to this
-            platform so that users can simply discover your API. It tracks all changes of your API so that you have
-            always a clean history how your API evolves.</p>
-
-            <h2 id="apigen" class="fusio-sub-headline h4 fw-normal"><i class="bi bi-gear"></i> <a href="https://apigen.app/">APIgen</a></h2>
-            <p class="lead mb-5">Service which generates fully working Fusio APIs based on a data model. It also
-            includes a simple Angular frontend app to CRUD your models. It can be seen as low-code generator to quickly
-            generate CRUD APIs but the generated code is clean and can be also used as foundation for your next app.</p>
-
-            <h2 id="apimon" class="fusio-sub-headline h4 fw-normal"><i class="bi bi-search"></i> <a href="https://apimon.app/">APImon</a></h2>
-            <p class="lead mb-5">Simple API monitoring service which helps to monitor your Fusio installation. It is
-            optimized for Fusio, but it can be also used for different API endpoints. APImon invokes your endpoints in
-            specific intervals and notifies you about changes. It also includes an uptime page for your users for
-            example take a look at the <a href="https://api.apimon.app/status/fusio_marketplace">uptime page</a> of the
-            marketplace API.</p>
+<section class="py-32 bg-slate-950/80 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 40px 40px;"></div>
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div>
+                <h2 class="text-4xl md:text-5xl font-black text-white tracking-tighter mb-4">The Open-Source Core</h2>
+                <p class="text-slate-400 max-w-xl">
+                    Fusio is built on a foundation of specialized, innovative tools. These projects are developed in the open and power thousands of APIs worldwide.
+                </p>
+            </div>
+            <a href="https://github.com/apioo" target="_blank" class="flex items-center gap-2 text-sm font-bold text-orange-500 hover:text-orange-400 transition group">
+                VIEW GITHUB ORGANIZATION
+                <svg class="w-4 h-4 transform group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
         </div>
-      </div>
-    </div>
-</div>
-
-<div class="container mt-4 pt-4 mb-4 pb-4">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <p class="text-center lead">The following list shows interesting open-source projects related to Fusio.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+            <div class="group p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/[0.07] hover:border-orange-500/30 transition-all duration-300">
+                <div class="flex justify-between items-start mb-8">
+                    <span class="text-[10px] font-bold text-orange-500/80 uppercase tracking-widest px-2 py-1 rounded-md bg-orange-500/10 border border-orange-500/20">Main Engine</span>
+                    <span class="text-xs font-mono text-slate-600">ID: 0x01</span>
+                </div>
+                <h4 class="text-xl font-bold text-white mb-2 group-hover:text-orange-500 transition">
+                    <a href="https://github.com/apioo/fusio">Fusio</a>
+                </h4>
+                <p class="text-sm text-slate-400 leading-relaxed mb-6">Self-Hosted API Management for Builders. The central orchestrator for your logic and security.</p>
+            </div>
+            <div class="group p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/[0.07] hover:border-orange-500/30 transition-all duration-300">
+                <div class="flex justify-between items-start mb-8">
+                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest px-2 py-1 rounded-md bg-white/5 border border-white/10">Scaffold</span>
+                    <span class="text-xs font-mono text-slate-600">ID: 0x02</span>
+                </div>
+                <h4 class="text-xl font-bold text-white mb-2 group-hover:text-orange-500 transition">
+                    <a href="https://github.com/apioo/fusio-framework">Framework</a>
+                </h4>
+                <p class="text-sm text-slate-400 leading-relaxed mb-6">Starter repository designed to help you leverage Fusio as a professional PHP framework foundation.</p>
+            </div>
+            <div class="group p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/[0.07] hover:border-orange-500/30 transition-all duration-300">
+                <div class="flex justify-between items-start mb-8">
+                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest px-2 py-1 rounded-md bg-white/5 border border-white/10">Deployment</span>
+                    <span class="text-xs font-mono text-slate-600">ID: 0x03</span>
+                </div>
+                <h4 class="text-xl font-bold text-white mb-2 group-hover:text-orange-500 transition">
+                    <a href="https://github.com/apioo/fusio-plant">Plant</a>
+                </h4>
+                <p class="text-sm text-slate-400 leading-relaxed mb-6">Server panel to easily self-host Fusio and other apps on your own infrastructure with one click.</p>
+            </div>
+            <div class="group p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/[0.07] hover:border-orange-500/30 transition-all duration-300">
+                <div class="flex justify-between items-start mb-8">
+                    <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest px-2 py-1 rounded-md bg-blue-500/10 border border-blue-500/20">Core Logic</span>
+                    <span class="text-xs font-mono text-slate-600">ID: 0x04</span>
+                </div>
+                <h4 class="text-xl font-bold text-white mb-2 group-hover:text-orange-500 transition">
+                    <a href="https://phpsx.org/">PSX</a>
+                </h4>
+                <p class="text-sm text-slate-400 leading-relaxed mb-6">An innovative PHP framework dedicated to building fully typed and high-performance REST APIs.</p>
+            </div>
+            <div class="group p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/[0.07] hover:border-orange-500/30 transition-all duration-300">
+                <div class="flex justify-between items-start mb-8">
+                    <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest px-2 py-1 rounded-md bg-blue-500/10 border border-blue-500/20">Modeling</span>
+                    <span class="text-xs font-mono text-slate-600">ID: 0x05</span>
+                </div>
+                <h4 class="text-xl font-bold text-white mb-2 group-hover:text-orange-500 transition">
+                    <a href="https://typeschema.org/">TypeSchema</a>
+                </h4>
+                <p class="text-sm text-slate-400 leading-relaxed mb-6">JSON format to describe data models in a language neutral format for better interoperability.</p>
+            </div>
+            <div class="group p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/[0.07] hover:border-orange-500/30 transition-all duration-300">
+                <div class="flex justify-between items-start mb-8">
+                    <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest px-2 py-1 rounded-md bg-blue-500/10 border border-blue-500/20">Standard</span>
+                    <span class="text-xs font-mono text-slate-600">ID: 0x06</span>
+                </div>
+                <h4 class="text-xl font-bold text-white mb-2 group-hover:text-orange-500 transition">
+                    <a href="https://typeapi.org/">TypeAPI</a>
+                </h4>
+                <p class="text-sm text-slate-400 leading-relaxed mb-6">An OpenAPI alternative to describe REST APIs for type-safe code generation across languages.</p>
             </div>
         </div>
     </div>
-</div>
-
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-  <div class="container mt-4 pt-4 mb-4 pb-4">
-    <div class="row row-cols-1 row-cols-md-3 text-center">
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h2 class="my-0 fw-normal">Fusio</h2>
-          </div>
-          <div class="card-body">
-            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
-              <i class="bi bi-house p-4"></i>
-            </div>
-            <p>Self-Hosted API Management for Builders.</p>
-            <a href="https://github.com/apioo/fusio" class="btn btn-primary">GitHub</a>
-            <a href="https://docs.fusio-project.org/" class="btn btn-secondary">Docs</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h2 class="my-0 fw-normal">Framework</h2>
-          </div>
-          <div class="card-body">
-            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
-              <i class="bi bi-play-circle-fill p-4"></i>
-            </div>
-            <p>Starter repository to use Fusio as a framework.</p>
-            <a href="https://github.com/apioo/fusio-framework" class="btn btn-primary">GitHub</a>
-            <a href="https://docs.fusio-project.org/docs/ecosystem/framework" class="btn btn-secondary">Docs</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h2 class="my-0 fw-normal">Plant</h2>
-          </div>
-          <div class="card-body">
-            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
-              <i class="bi bi-server p-4"></i>
-            </div>
-            <p>Plant is a server panel to easily self-host Fusio and other apps on your server.</p>
-            <a href="https://github.com/apioo/fusio-plant" class="btn btn-primary">GitHub</a>
-            <a href="https://docs.fusio-project.org/docs/ecosystem/plant" class="btn btn-secondary">Docs</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h2 class="my-0 fw-normal">PSX</h2>
-          </div>
-          <div class="card-body">
-            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
-              <i class="bi bi-wrench p-4"></i>
-            </div>
-            <p>An innovative PHP framework dedicated to build fully typed REST APIs.</p>
-            <a href="https://phpsx.org/" class="btn btn-primary">Website</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h2 class="my-0 fw-normal">TypeSchema</h2>
-          </div>
-          <div class="card-body">
-            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
-              <i class="bi bi-file-post p-4"></i>
-            </div>
-            <p>A JSON format to describe data models in a language neutral format.</p>
-            <a href="https://typeschema.org/" class="btn btn-primary">Website</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h2 class="my-0 fw-normal">TypeAPI</h2>
-          </div>
-          <div class="card-body">
-            <div class="d-inline-flex align-items-center justify-content-center text-bg-dark bg-gradient fs-2 mb-3 rounded-5">
-              <i class="bi bi-droplet-fill p-4"></i>
-            </div>
-            <p>An OpenAPI alternative to describe REST APIs for type-safe code generation.</p>
-            <a href="https://typeapi.org/" class="btn btn-primary">Website</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col text-end">
-      <a href="https://github.com/apioo/fusio-website/blob/main/resources/template/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"><i class="bi bi-pen-fill"></i> Edit this page</a>
-    </div>
-  </div>
-</div>
+</section>
 
 <?php include(__DIR__ . '/inc/footer.php'); ?>

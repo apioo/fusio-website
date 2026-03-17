@@ -22,7 +22,8 @@ class Integration extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
-            'title' => 'Integration | Fusio',
+            'title' => 'Integration',
+            'description' => 'Explore reference implementations and boilerplate projects. These samples demonstrate how to authenticate, consume, and interact with the Fusio API across different ecosystems.',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
         ];
 

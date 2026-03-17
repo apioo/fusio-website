@@ -23,8 +23,8 @@ class Demo extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
-            'title' => 'Demo | Fusio',
-            'description' => 'Experience Fusio firsthand by exploring our hosted demo. Access the API, backend, developer portal, and ReDoc to discover what Fusio can do.',
+            'title' => 'Demo',
+            'description' => 'Explore a fully hosted Fusio instance. Test the management interface, the developer portal, and the API engine in real-time.',
             'keywords' => 'Fusio demo, open-source API management, Fusio API, Fusio backend, Fusio developer portal, Fusio ReDoc, API management demo, Fusio features, Fusio exploration',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
         ];
