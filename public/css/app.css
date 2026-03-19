@@ -1,5 +1,9 @@
 
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@layer components {
+}
 
 body {
     font-family: 'Inter', sans-serif;
@@ -59,3 +63,26 @@ body {
 .custom-scrollbar::-webkit-scrollbar-track { background: rgba(255,255,255,0.02); }
 .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 10px; }
 .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(249,115,22,0.4); }
+
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+/* Stop the text from rotating with the container */
+.animate-\[spin_20s_linear_infinite\] > div {
+    animation: counter-spin 20s linear infinite;
+}
+@keyframes counter-spin {
+    from { transform: rotate(0deg) translateX(-50%); }
+    to { transform: rotate(-360deg) translateX(-50%); }
+}
+/* Special transform for side-nodes */
+.animate-\[spin_20s_linear_infinite\] > div:nth-child(3),
+.animate-\[spin_20s_linear_infinite\] > div:nth-child(4) {
+    animation: counter-spin-side 20s linear infinite;
+}
+@keyframes counter-spin-side {
+    from { transform: rotate(0deg) translateY(-50%); }
+    to { transform: rotate(-360deg) translateY(-50%); }
+}

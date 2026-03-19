@@ -32,7 +32,7 @@
                 <div>
                     <h3 class="text-2xl font-bold text-white mb-2 text-blue-400">Docker</h3>
                     <p class="text-sm text-slate-500 mb-6">The fastest way to spin up a production-ready instance.</p>
-                    <p class="text-xs text-slate-400 leading-relaxed mb-8">Includes pre-configured PHP-FPM, Nginx, and essential extensions.</p>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-8">Based on php:8.4-apache and essential PHP extensions.</p>
                 </div>
                 <a href="https://hub.docker.com/r/fusio/fusio" class="w-full py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-2xl text-center font-bold transition shadow-lg shadow-blue-600/20">Docker Hub</a>
             </div>
@@ -242,13 +242,33 @@
     </div>
 </section>
 
-
-<div class="container">
-  <div class="row">
-    <div class="col text-end">
-      <a href="https://github.com/apioo/fusio-website/blob/main/resources/template/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"><i class="bi bi-pen-fill"></i> Edit this page</a>
+<section class="border-t border-white/5 bg-slate-950/40 py-6 group">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-6">
+                <div class="flex items-center gap-3 px-3 py-1.5 rounded-md bg-white/[0.03] border border-white/5">
+                    <span class="text-[10px] font-black text-slate-600 uppercase tracking-widest">SHA1</span>
+                    <code class="text-[11px] font-mono font-bold text-slate-400">
+                        <?php echo sha1_file(__FILE__); ?>
+                    </code>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="https://github.com/apioo/fusio-website/blob/main/resources/template/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"
+                   class="group/link flex items-center gap-2 text-[10px] font-black text-slate-500 hover:text-orange-500 transition-colors uppercase tracking-widest">
+                    <svg class="w-3.5 h-3.5 opacity-50 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Improve this page
+                </a>
+                <div class="hidden sm:block w-1 h-1 rounded-full bg-white/10"></div>
+                <a href="https://github.com/apioo/fusio/issues"
+                   class="text-[10px] font-black text-slate-600 hover:text-white transition-colors uppercase tracking-widest">
+                    Report Issue
+                </a>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+</section>
 
 <?php include(__DIR__ . '/inc/footer.php'); ?>

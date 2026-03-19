@@ -22,7 +22,7 @@ class Brand extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
-            'title' => 'Brand | Fusio',
+            'title' => 'Brand',
             'description' => 'Access the official Fusio brand assets to help maintain consistency in your communications and marketing materials.',
             'keywords' => 'Fusio brand, Fusio logo, branding guidelines, Fusio colors, API platform branding, Fusio visual identity, Fusio design assets, Fusio marketing materials',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),

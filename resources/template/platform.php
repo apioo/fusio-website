@@ -295,53 +295,33 @@
     </div>
 </section>
 
-<section class="py-24 bg-slate-950 border-t border-white/5">
-    <div class="container mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold text-white mb-12">Join the Community</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <a href="#" class="p-6 glass-card rounded-2xl hover:border-orange-500 transition">
-                <h4 class="text-white font-bold mb-1">Contribute</h4>
-                <span class="text-xs text-slate-500 italic">GitHub Repository</span>
-            </a>
-            <a href="#" class="p-6 glass-card rounded-2xl hover:border-orange-500 transition">
-                <h4 class="text-white font-bold mb-1">Engage</h4>
-                <span class="text-xs text-slate-500 italic">Discord & Twitter</span>
-            </a>
-            <a href="#" class="p-6 glass-card rounded-2xl hover:border-orange-500 transition">
-                <h4 class="text-white font-bold mb-1">Support</h4>
-                <span class="text-xs text-slate-500 italic">Donate & Grow</span>
-            </a>
-            <a href="#" class="p-6 glass-card rounded-2xl hover:border-orange-500 transition">
-                <h4 class="text-white font-bold mb-1">Consulting</h4>
-                <span class="text-xs text-slate-500 italic">Tailored Solutions</span>
-            </a>
+<section class="border-t border-white/5 bg-slate-950/40 py-6 group">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-6">
+                <div class="flex items-center gap-3 px-3 py-1.5 rounded-md bg-white/[0.03] border border-white/5">
+                    <span class="text-[10px] font-black text-slate-600 uppercase tracking-widest">SHA1</span>
+                    <code class="text-[11px] font-mono font-bold text-slate-400">
+                        <?php echo sha1_file(__FILE__); ?>
+                    </code>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="https://github.com/apioo/fusio-website/blob/main/resources/template/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"
+                   class="group/link flex items-center gap-2 text-[10px] font-black text-slate-500 hover:text-orange-500 transition-colors uppercase tracking-widest">
+                    <svg class="w-3.5 h-3.5 opacity-50 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Improve this page
+                </a>
+                <div class="hidden sm:block w-1 h-1 rounded-full bg-white/10"></div>
+                <a href="https://github.com/apioo/fusio/issues"
+                   class="text-[10px] font-black text-slate-600 hover:text-white transition-colors uppercase tracking-widest">
+                    Report Issue
+                </a>
+            </div>
         </div>
     </div>
 </section>
-
-
-<style>
-    @keyframes spin {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-    }
-    /* Stop the text from rotating with the container */
-    .animate-\[spin_20s_linear_infinite\] > div {
-        animation: counter-spin 20s linear infinite;
-    }
-    @keyframes counter-spin {
-        from { transform: rotate(0deg) translateX(-50%); }
-        to { transform: rotate(-360deg) translateX(-50%); }
-    }
-    /* Special transform for side-nodes */
-    .animate-\[spin_20s_linear_infinite\] > div:nth-child(3),
-    .animate-\[spin_20s_linear_infinite\] > div:nth-child(4) {
-        animation: counter-spin-side 20s linear infinite;
-    }
-    @keyframes counter-spin-side {
-        from { transform: rotate(0deg) translateY(-50%); }
-        to { transform: rotate(-360deg) translateY(-50%); }
-    }
-</style>
 
 <?php include(__DIR__ . '/inc/footer.php'); ?>

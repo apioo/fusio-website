@@ -36,7 +36,8 @@ class Imprint extends ControllerAbstract
         }
 
         $data = [
-            'title' => 'Imprint | Fusio',
+            'title' => 'Imprint',
+            'description' => 'Official provider identification and legal disclosure for the Fusio project and its digital ecosystem.',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
             'imprint' => $imprint,
         ];

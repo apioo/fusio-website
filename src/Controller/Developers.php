@@ -27,7 +27,7 @@ class Developers extends ControllerAbstract
 
         $data = [
             'title' => 'Developers',
-            'description' => 'Everything you need to build, deploy, and scale with Fusio. From core installation to multi-language SDKs and API specifications.',
+            'description' => 'Everything you need to build, deploy, and scale with Fusio. From installation to multi-language SDKs and API specifications.',
             'keywords' => '',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
             'tagName' => $release->getTagName(),

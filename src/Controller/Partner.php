@@ -22,8 +22,8 @@ class Partner extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
-            'title' => 'Partner | Fusio',
-            'description' => 'Discover partners of Fusio, an open-source API & AI management platform. Learn how JetBrains and other collaborators support Fusio to advance API development.',
+            'title' => 'Partner',
+            'description' => 'A dedicated list of partners and organizations who actively support the development and growth of the Fusio open-source API management platform.',
             'keywords' => 'Fusio, API management, open-source API platform, Fusio partners, JetBrains, Fusio collaboration, API development, Fusio project partners, Fusio sponsorship, open-source collaboration',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
         ];

@@ -70,9 +70,14 @@
                         Ecosystem
                     </a>
                 </div>
-                    <div class="group relative py-4">
+                <div class="group relative py-4">
                     <a href="<?php echo $router->getAbsolutePath([\App\Controller\Developers::class, 'show']); ?>" class="flex items-center gap-1 text-slate-300 group-hover:text-white transition">
                         Developers
+                    </a>
+                </div>
+                <div class="group relative py-4">
+                    <a href="<?php echo $router->getAbsolutePath([\App\Controller\Marketplace::class, 'show']); ?>" class="flex items-center gap-1 text-slate-300 group-hover:text-white transition">
+                        Marketplace
                     </a>
                 </div>
                 <a href="<?php echo $router->getAbsolutePath([\Chriskapp\Blog\Controller\Index::class, 'show']); ?>" class="text-slate-300 hover:text-white transition">Blog</a>

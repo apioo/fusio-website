@@ -6,9 +6,8 @@ use App\Table;
 use PSX\Api\Attribute\Get;
 use PSX\Api\Attribute\Path;
 use PSX\Framework\Controller\ControllerAbstract;
-use PSX\Framework\Http\Writer\Template;
 use PSX\Framework\Loader\ReverseRouter;
-use PSX\Http\Exception\InternalServerErrorException;
+use PSX\Http\Exception\MovedPermanentlyException;
 
 class Download extends ControllerAbstract
 {
@@ -25,24 +24,6 @@ class Download extends ControllerAbstract
     #[Path('/download')]
     public function show(): mixed
     {
-        $release = $this->releaseTable->findLatestRelease();
-        if (empty($release)) {
-            throw new InternalServerErrorException('Could not find latest release');
-        }
-
-        $data = [
-            'title' => 'Download | Fusio',
-            'description' => 'Download Fusio as a standalone file or Docker image for easy installation and deployment of the open-source API management platform.',
-            'keywords' => 'Fusio, API management, open-source API platform, Fusio download, Docker image, Fusio setup, Fusio installation, API development tools, Fusio API platform, Fusio Docker Compose, Fusio database setup, Fusio deployment guide',
-            'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
-            'tagName' => $release->getTagName(),
-            'htmlUrl' => $release->getHtmlUrl(),
-            'assetSize' => $release->getAssetSize(),
-            'assetName' => $release->getAssetName(),
-            'publishedAt' => $release->getPublishedAt()->toDateTime()->format('Y-m-d'),
-        ];
-
-        $templateFile = __DIR__ . '/../../resources/template/download.php';
-        return new Template($data, $templateFile, $this->reverseRouter);
+        throw new MovedPermanentlyException($this->reverseRouter->getUrl([Developers::class, 'show']));
     }
 }

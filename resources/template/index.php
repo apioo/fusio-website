@@ -1,5 +1,11 @@
 <?php include(__DIR__ . '/inc/header.php'); ?>
 
+<!--
+Hey developer, like Fusio our complete website is also open source. If you find any errors or you want to improve
+specific parts feel free to simply create a PR at this repository. If you want to see the Fusio repository s.
+https://github.com/apioo/fusio
+-->
+
 <section class="container mx-auto px-6 pt-32 pb-20 relative z-10">
     <div class="flex flex-col lg:flex-row items-center gap-16">
         <div class="lg:w-1/2">
@@ -176,6 +182,87 @@
                     <span class="block text-white font-bold">PHP/JS/Python</span>
                     <span class="text-xs text-slate-500 uppercase tracking-widest">Language Support</span>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-24 border-t border-white/5 bg-slate-950/20">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            <a href="https://youtube.com/@FusioAPI" target="_blank" class="group relative p-8 rounded-3xl bg-slate-900/40 border border-white/5 hover:border-red-500/30 transition-all duration-500 overflow-hidden">
+                <div class="relative z-10">
+                    <div class="w-16 h-16 mb-6 rounded-2xl bg-slate-950/50 border border-white/5 p-3 flex items-center justify-center group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300">
+                        <img src="<?php echo $base; ?>/img/youtube-64.png" alt="YouTube" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all">
+                    </div>
+                    <span class="block text-[10px] font-black text-slate-500 uppercase tracking-widest group-hover:text-white transition-colors">YouTube</span>
+                    <span class="block text-[9px] font-mono text-slate-700 mt-1 uppercase">@FusioAPI</span>
+                </div>
+            </a>
+            <a href="https://github.com/apioo/fusio" target="_blank" class="group relative p-8 rounded-3xl bg-slate-900/40 border border-white/5 hover:border-white/20 transition-all duration-500 overflow-hidden">
+                <div class="relative z-10">
+                    <div class="w-16 h-16 mb-6 rounded-2xl bg-slate-950/50 border border-white/5 p-3 flex items-center justify-center group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300">
+                        <img src="<?php echo $base; ?>/img/github-64.png" alt="GitHub" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all">
+                    </div>
+                    <span class="block text-[10px] font-black text-slate-500 uppercase tracking-widest group-hover:text-white transition-colors">GitHub</span>
+                    <span class="block text-[9px] font-mono text-slate-700 mt-1 uppercase">apioo/fusio</span>
+                </div>
+            </a>
+            <a href="https://twitter.com/FusioAPI" target="_blank" class="group relative p-8 rounded-3xl bg-slate-900/40 border border-white/5 hover:border-sky-400/30 transition-all duration-500 overflow-hidden">
+                <div class="relative z-10">
+                    <div class="w-16 h-16 mb-6 rounded-2xl bg-slate-950/50 border border-white/5 p-3 flex items-center justify-center group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300">
+                        <img src="<?php echo $base; ?>/img/twitter-64.png" alt="Twitter" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all">
+                    </div>
+                    <span class="block text-[10px] font-black text-slate-500 uppercase tracking-widest group-hover:text-white transition-colors">Twitter</span>
+                    <span class="block text-[9px] font-mono text-slate-700 mt-1 uppercase">@FusioAPI</span>
+                </div>
+            </a>
+            <a href="https://bsky.app/profile/fusioapi.bsky.social" target="_blank" class="group relative p-8 rounded-3xl bg-slate-900/40 border border-white/5 hover:border-blue-500/30 transition-all duration-500 overflow-hidden">
+                <div class="relative z-10">
+                    <div class="w-16 h-16 mb-6 rounded-2xl bg-slate-950/50 border border-white/5 p-3 flex items-center justify-center group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300">
+                        <img src="<?php echo $base; ?>/img/bluesky-64.png" alt="BlueSky" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all">
+                    </div>
+                    <span class="block text-[10px] font-black text-slate-500 uppercase tracking-widest group-hover:text-white transition-colors">BlueSky</span>
+                    <span class="block text-[9px] font-mono text-slate-700 mt-1 uppercase">fusioapi.bsky</span>
+                </div>
+            </a>
+            <a href="https://fosstodon.org/@fusio" target="_blank" class="group relative p-8 rounded-3xl bg-slate-900/40 border border-white/5 hover:border-indigo-400/30 transition-all duration-500 overflow-hidden">
+                <div class="relative z-10">
+                    <div class="w-16 h-16 mb-6 rounded-2xl bg-slate-950/50 border border-white/5 p-3 flex items-center justify-center group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300">
+                        <img src="<?php echo $base; ?>/img/mastodon-64.png" alt="Fosstodon" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all">
+                    </div>
+                    <span class="block text-[10px] font-black text-slate-500 uppercase tracking-widest group-hover:text-white transition-colors">Fosstodon</span>
+                    <span class="block text-[9px] font-mono text-slate-700 mt-1 uppercase">@fusio</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="border-t border-white/5 bg-slate-950/40 py-6 group">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-6">
+                <div class="flex items-center gap-3 px-3 py-1.5 rounded-md bg-white/[0.03] border border-white/5">
+                    <span class="text-[10px] font-black text-slate-600 uppercase tracking-widest">SHA1</span>
+                    <code class="text-[11px] font-mono font-bold text-slate-400">
+                        <?php echo sha1_file(__FILE__); ?>
+                    </code>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="https://github.com/apioo/fusio-website/blob/main/resources/template/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"
+                   class="group/link flex items-center gap-2 text-[10px] font-black text-slate-500 hover:text-orange-500 transition-colors uppercase tracking-widest">
+                    <svg class="w-3.5 h-3.5 opacity-50 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Improve this page
+                </a>
+                <div class="hidden sm:block w-1 h-1 rounded-full bg-white/10"></div>
+                <a href="https://github.com/apioo/fusio/issues"
+                   class="text-[10px] font-black text-slate-600 hover:text-white transition-colors uppercase tracking-widest">
+                    Report Issue
+                </a>
             </div>
         </div>
     </div>

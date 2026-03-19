@@ -4,4 +4,7 @@ module.exports = {
     content: [
         "./resources/template/**/*.php",
     ],
+    plugins: [
+        require('@tailwindcss/typography'),
+    ],
 }
