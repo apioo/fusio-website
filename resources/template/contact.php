@@ -101,16 +101,26 @@
                     </div>
                 </div>
                 <div class="lg:col-span-5">
-                    <div class="h-full p-8 md:p-12 rounded-[2.5rem] bg-gradient-to-br from-orange-500/10 to-transparent border border-orange-500/20 flex flex-col justify-between">
+                    <div class="h-full p-8 md:p-12 rounded-[2.5rem] bg-gradient-to-br from-emerald-500/10 to-transparent border border-emerald-500/20 flex flex-col justify-between group">
                         <div>
-                            <h3 class="text-sm font-black text-orange-500 uppercase tracking-widest mb-4">Consulting Services</h3>
+                            <div class="flex items-center gap-2 mb-6">
+                                <div class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></div>
+                                <span class="text-[10px] font-black text-emerald-500 uppercase tracking-widest">Idealistic Open Source</span>
+                            </div>
+                            <h3 class="text-sm font-black text-white uppercase tracking-widest mb-4">Project Sustainability</h3>
                             <p class="text-lg text-slate-300 mb-6 leading-relaxed">
-                                Need professional architectural guidance? Our GitHub sponsor consulting tier provides direct access to the core developers for your enterprise deployment.
+                                Fusio is a community-first project built on the ideal of high-quality, accessible API infrastructure. Your donations directly empower our developers to maintain the core engine and keep the ecosystem independent and free for everyone.
                             </p>
                         </div>
-                        <a href="https://github.com/sponsors/chriskapp" target="_blank" class="inline-flex items-center gap-2 text-xs font-black text-white hover:text-orange-400 transition-colors uppercase tracking-[0.2em]">
-                            View Sponsor Tiers <span class="text-lg">↗</span>
-                        </a>
+                        <div class="space-y-4">
+                            <a href="https://github.com/sponsors/chriskapp/sponsorships" target="_blank" class="flex items-center justify-between p-4 bg-emerald-500 hover:bg-emerald-600 text-white rounded-2xl transition-all shadow-lg shadow-emerald-500/10">
+                                <span class="text-xs font-black uppercase tracking-widest">Support on GitHub</span>
+                                <span class="text-xl">❤</span>
+                            </a>
+                            <p class="text-[10px] text-slate-500 font-mono text-center uppercase tracking-tighter">
+                                Every contribution secures the project's future.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
