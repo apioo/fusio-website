@@ -2,12 +2,6 @@
 
 <?php include(__DIR__ . '/inc/sub_header.php'); ?>
 
-<!--
-Hey developer, if you want to add an adapter you only need to set the keyword "fusio-adapter" in your composer.json file
-see also https://github.com/apioo/fusio-adapter-sql/blob/master/composer.json as example. Our fetcher will then
-automatically find your repository and add it to this list.
--->
-
 <section class="py-12 bg-slate-950/40">
     <div class="container mx-auto px-6">
         <div class="mb-8">
