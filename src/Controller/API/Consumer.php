@@ -22,7 +22,7 @@ class Consumer extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
-            'title' => 'Consumer API | Fusio',
+            'title' => 'Consumer API',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
             'filter' => 'consumer',
         ];

@@ -22,7 +22,7 @@ class System extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
-            'title' => 'System API | Fusio',
+            'title' => 'System API',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
             'filter' => 'system',
         ];
