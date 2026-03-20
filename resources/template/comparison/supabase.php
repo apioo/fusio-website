@@ -1,166 +1,120 @@
 <?php include(__DIR__ . '/../inc/header.php'); ?>
 
-<div class="fusio-headline">
-    <div class="container">
-        <div class="row">
-            <div class="col p-4 mx-auto text-center">
-                <h1 class="display-4 fw-normal">Compare Fusio to Supabase</h1>
-            </div>
-        </div>
-    </div>
-</div>
+<?php include(__DIR__ . '/../inc/sub_header.php'); ?>
 
-<div class="container mt-4 pt-4 mb-4 pb-4">
-    <div class="row">
-        <p class="lead">This page compares <a href="https://www.fusio-project.org/">Fusio</a>, an open-source API management platform focused on building and managing APIs, with <a href="https://supabase.com/">Supabase</a>, an open-source Backend-as-a-Service (BaaS) platform that provides a managed PostgreSQL backend, real-time features, authentication, storage, and auto-generated APIs.</p>
-    </div>
-</div>
-
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h2 class="fusio-sub-headline h4 fw-normal">🔍 Feature Comparison</h2>
-                <table class="table">
+<section class="py-12 bg-slate-950/40">
+    <div class="container mx-auto px-6">
+        <div class="rounded-[2.5rem] bg-slate-900/40 border border-white/5 overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
                     <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>Fusio</th>
-                        <th>Supabase</th>
+                    <tr class="bg-white/5 border-b border-white/10">
+                        <th class="p-8 text-[10px] font-black text-slate-500 uppercase tracking-widest">Architectural Focus</th>
+                        <th class="p-8 text-[10px] font-black text-emerald-500 uppercase tracking-widest text-center">Fusio (API Management)</th>
+                        <th class="p-8 text-[10px] font-black text-slate-300 uppercase tracking-widest text-center">Supabase (BaaS)</th>
                     </tr>
                     </thead>
-                    <tbody>
-                    <tr>
-                        <td>Type</td>
-                        <td>API management platform</td>
-                        <td>Backend-as-a-Service (BaaS)</td>
+                    <tbody class="text-sm text-slate-300">
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Data Access</span>
+                            <span class="text-[11px] text-slate-500 italic">How clients interact with data</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="text-emerald-500 font-mono text-xs italic">Governed REST/OpenAPI</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="text-slate-400 font-mono text-xs italic">Direct DB-to-Client (PostgREST)</span>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>Primary Focus</td>
-                        <td>Build, expose, and secure REST APIs</td>
-                        <td>Full backend: DB, auth, real-time, storage, functions</td>
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Business Logic</span>
+                            <span class="text-[11px] text-slate-500 italic">Custom server-side code</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-[10px] font-bold">Deep Integration (Actions)</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="px-3 py-1 bg-white/5 text-slate-500 rounded-full text-[10px] font-bold">Edge Functions / Database Triggers</span>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>Open Source</td>
-                        <td>✅ Yes (Apache 2.0)</td>
-                        <td>✅ Yes (MIT)</td>
-                    </tr>
-                    <tr>
-                        <td>Hosting</td>
-                        <td>Self-hosted (Docker, Composer)</td>
-                        <td>Supabase Cloud or self-hosted (Docker)</td>
-                    </tr>
-                    <tr>
-                        <td>Database</td>
-                        <td>Connects to SQL DBs</td>
-                        <td>Built-in PostgreSQL</td>
-                    </tr>
-                    <tr>
-                        <td>API Generation</td>
-                        <td>Manual or CRUD actions</td>
-                        <td>Auto-generated REST; GraphQL is supported via the pg_graphql extension</td>
-                    </tr>
-                    <tr>
-                        <td>Authentication</td>
-                        <td>Built-in OAuth2</td>
-                        <td>Built-in Supabase Auth (JWT, OAuth)</td>
-                    </tr>
-                    <tr>
-                        <td>Real-time</td>
-                        <td>⚠️ Possible via custom logic</td>
-                        <td>✅ Built-in real-time via Postgres events</td>
-                    </tr>
-                    <tr>
-                        <td>Custom Logic</td>
-                        <td>PHP/JS/SQL actions</td>
-                        <td>Edge Functions (TypeScript)</td>
-                    </tr>
-                    <tr>
-                        <td>Storage</td>
-                        <td>⚠️ External via filesystem or connectors</td>
-                        <td>✅ Object storage (S3-compatible)</td>
-                    </tr>
-                    <tr>
-                        <td>Preferred Use Case</td>
-                        <td>API first & backend logic</td>
-                        <td>Full backend for web/mobile apps</td>
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Self-Hosting</span>
+                            <span class="text-[11px] text-slate-500 italic">Control over deployment</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="text-emerald-500 text-lg">●</span>
+                            <span class="block text-[10px] text-slate-500 mt-1 uppercase italic">Native & Lightweight</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="text-slate-500 text-lg">●</span>
+                            <span class="block text-[10px] text-slate-500 mt-1 uppercase italic">Docker-based (Complex)</span>
+                        </td>
                     </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-    </div>
-</div>
-
-<div class="container mt-4 pt-4 mb-4 pb-4">
-    <div class="row">
-        <div class="col-12">
-            <h2 class="fusio-sub-headline h4 fw-normal">🎯 Key Differences</h2>
-            <p class="lead">The main difference between Fusio and Supabase lies in their architectural focus and backend responsibilities.</p>
-        </div>
-        <div class="col-6">
-            <p><b>Fusio</b> is an API management platform designed to give developers direct control over creating, managing, and securing APIs:</p>
-            <ul>
-                <li>Create structured REST APIs with custom logic</li>
-                <li>Connect to external SQL databases (MySQL, PostgreSQL, etc.)</li>
-                <li>Secure endpoints with a built-in OAuth2 server and scopes</li>
-                <li>Automatically generate OpenAPI documentation</li>
-                <li>Implement backend workflows using PHP, JavaScript, or SQL</li>
-            </ul>
-            <p>Fusio is focused on API design, backend logic, and lifecycle workflows, making it suitable for structured API systems.</p>
-        </div>
-        <div class="col-6">
-            <p><b>Supabase</b> is a full-stack backend platform that provides a ready-to-use PostgreSQL database with auto-generated APIs and integrated backend services:</p>
-            <ul>
-                <li>Managed PostgreSQL database with REST and GraphQL APIs</li>
-                <li>Built-in user authentication and access control</li>
-                <li>Real-time database subscriptions and events</li>
-                <li>Object storage for files</li>
-                <li>Edge Functions for serverless logic</li>
-            </ul>
-            <p>Supabase is focused on providing a complete backend stack that handles database, auth, real-time updates, storage, and serverless functions out-of-the-box.</p>
-        </div>
-    </div>
-</div>
-
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="fusio-sub-headline h4 fw-normal">📌 When to Choose Which</h2>
-            </div>
-            <div class="col-6">
-                <p>Choose <b>Fusio</b> if:</p>
-                <ul>
-                    <li>You need full control over API design, security, and logic</li>
-                    <li>You want to self-host or integrate existing databases</li>
-                    <li>You prefer structured API management with OAuth2 and OpenAPI workflows</li>
-                    <li>Your project is API-first or backend developer-centric</li>
-                    <li>You want a provider-independent stack (no hosted BaaS required)</li>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24">
+            <div class="p-10 rounded-[2rem] bg-slate-900/20 border border-white/5">
+                <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-sm">Choose Fusio if...</h3>
+                <ul class="space-y-4 text-sm text-slate-400">
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-emerald-500 mt-1">→</span>
+                        "You need to provide a professional API product with a developer portal and SDKs for 3rd parties."
+                    </li>
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-emerald-500 mt-1">→</span>
+                        "Your logic is complex and requires more than just database triggers (e.g., integrating multiple APIs)."
+                    </li>
                 </ul>
-                <p>Fusio is ideal for building custom, secure, production APIs with fine-grained access controls.</p>
             </div>
-            <div class="col-6">
-                <p>Choose <b>Supabase</b> if:</p>
-                <ul>
-                    <li>You want a complete backend platform for web or mobile apps</li>
-                    <li>You prefer instant API generation from your database schema</li>
-                    <li>You need built-in authentication, real-time features, and storage</li>
-                    <li>You’re comfortable with PostgreSQL and JavaScript/TypeScript workflows</li>
-                    <li>You want the option of managed hosting with minimal setup</li>
+            <div class="p-10 rounded-[2rem] bg-slate-900/20 border border-white/5">
+                <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-sm">Choose Supabase if...</h3>
+                <ul class="space-y-4 text-sm text-slate-400">
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-slate-600 mt-1">→</span>
+                        "You are building a mobile or web app and want an instant database with built-in Auth and Realtime."
+                    </li>
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-slate-600 mt-1">→</span>
+                        "You prefer a 'Firebase-style' experience where the frontend talks directly to the infrastructure."
+                    </li>
                 </ul>
-                <p>Supabase is excellent for rapidly building full-stack applications with less backend overhead.</p>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="container">
-    <div class="row">
-        <div class="col text-end">
-            <a href="https://github.com/apioo/fusio-website/blob/main/resources/template/compare/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"><i class="bi bi-pen-fill"></i> Edit this page</a>
+<section class="border-t border-white/5 bg-slate-950/40 py-6 group">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-6">
+                <div class="flex items-center gap-3 px-3 py-1.5 rounded-md bg-white/[0.03] border border-white/5">
+                    <span class="text-[10px] font-black text-slate-600 uppercase tracking-widest">SHA1</span>
+                    <code class="text-[11px] font-mono font-bold text-slate-400">
+                        <?php echo sha1_file(__FILE__); ?>
+                    </code>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="https://github.com/apioo/fusio-website/blob/main/resources/template/comparison/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"
+                   class="group/link flex items-center gap-2 text-[10px] font-black text-slate-500 hover:text-orange-500 transition-colors uppercase tracking-widest">
+                    <svg class="w-3.5 h-3.5 opacity-50 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Improve this page
+                </a>
+                <div class="hidden sm:block w-1 h-1 rounded-full bg-white/10"></div>
+                <a href="https://github.com/apioo/fusio/issues"
+                   class="text-[10px] font-black text-slate-600 hover:text-white transition-colors uppercase tracking-widest">
+                    Report Issue
+                </a>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
 <?php include(__DIR__ . '/../inc/footer.php'); ?>

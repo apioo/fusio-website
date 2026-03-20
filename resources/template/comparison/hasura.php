@@ -4,58 +4,59 @@
 
 <section class="py-12 bg-slate-950/40">
     <div class="container mx-auto px-6">
+
         <div class="rounded-[2.5rem] bg-slate-900/40 border border-white/5 overflow-hidden">
             <div class="overflow-x-auto">
                 <table class="w-full text-left border-collapse">
                     <thead>
                     <tr class="bg-white/5 border-b border-white/10">
-                        <th class="p-8 text-[10px] font-black text-slate-500 uppercase tracking-widest">Platform Focus</th>
-                        <th class="p-8 text-[10px] font-black text-orange-500 uppercase tracking-widest text-center">Fusio (API Engine)</th>
-                        <th class="p-8 text-[10px] font-black text-slate-300 uppercase tracking-widest text-center">Ghost (Publishing)</th>
+                        <th class="p-8 text-[10px] font-black text-slate-500 uppercase tracking-widest">Core Engine</th>
+                        <th class="p-8 text-[10px] font-black text-cyan-500 uppercase tracking-widest text-center">Fusio (PHP/REST)</th>
+                        <th class="p-8 text-[10px] font-black text-slate-300 uppercase tracking-widest text-center">Hasura (Haskell/GraphQL)</th>
                     </tr>
                     </thead>
                     <tbody class="text-sm text-slate-300">
                     <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
                         <td class="p-8">
-                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Primary Purpose</span>
-                            <span class="text-[11px] text-slate-500 italic">Core value proposition</span>
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">API Paradigm</span>
+                            <span class="text-[11px] text-slate-500 italic">Primary way to consume data</span>
                         </td>
-                        <td class="p-8 text-center text-emerald-400 italic">Build & Manage API Products</td>
-                        <td class="p-8 text-center text-orange-400 italic">Content Delivery & Memberships</td>
+                        <td class="p-8 text-center font-mono text-xs text-emerald-400 italic">Standard REST / OpenAPI</td>
+                        <td class="p-8 text-center font-mono text-xs text-cyan-400 italic">GraphQL (Queries/Subscriptions)</td>
                     </tr>
                     <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
                         <td class="p-8">
-                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Data Flexibility</span>
-                            <span class="text-[11px] text-slate-500 italic">Customizing the schema</span>
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Business Logic</span>
+                            <span class="text-[11px] text-slate-500 italic">Adding custom behavior</span>
                         </td>
                         <td class="p-8 text-center">
-                            <span class="px-3 py-1 bg-white/5 text-slate-400 rounded-full text-[10px] font-bold">Infinite (Define any Entity)</span>
+                            <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-[10px] font-bold">Native Actions (In-App)</span>
                         </td>
                         <td class="p-8 text-center">
-                            <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-[10px] font-bold">Rigid (Posts, Pages, Authors)</span>
+                            <span class="px-3 py-1 bg-white/5 text-slate-500 rounded-full text-[10px] font-bold">Remote Schemas / Actions (Webhooks)</span>
                         </td>
                     </tr>
                     <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
                         <td class="p-8">
-                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Backend Scripting</span>
-                            <span class="text-[11px] text-slate-500 italic">Custom server-side code</span>
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Performance Strategy</span>
+                            <span class="text-[11px] text-slate-500 italic">Scaling & optimization</span>
+                        </td>
+                        <td class="p-8 text-center font-mono text-xs italic">Application Caching & PHP 8+</td>
+                        <td class="p-8 text-center font-mono text-xs italic">JIT SQL Compilation (Haskell)</td>
+                    </tr>
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">External Developer Experience</span>
+                            <span class="text-[11px] text-slate-500 italic">Onboarding third parties</span>
                         </td>
                         <td class="p-8 text-center">
                             <span class="text-emerald-500 text-lg">●</span>
-                            <span class="block text-[10px] text-slate-500 mt-1 uppercase italic">Native PHP/JS/SQL Actions</span>
+                            <span class="block text-[10px] text-slate-500 mt-1 uppercase italic">Built-in Portal & SDKs</span>
                         </td>
                         <td class="p-8 text-center">
                             <span class="text-slate-700 text-lg">○</span>
-                            <span class="block text-[10px] text-slate-500 mt-1 uppercase italic text-slate-600">Webhooks / External Logic</span>
+                            <span class="block text-[10px] text-slate-500 mt-1 uppercase italic text-slate-600">Console / GraphiQL Explorer</span>
                         </td>
-                    </tr>
-                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
-                        <td class="p-8">
-                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Monetization Type</span>
-                            <span class="text-[11px] text-slate-500 italic">How you make money</span>
-                        </td>
-                        <td class="p-8 text-center font-mono text-xs">API Quotas & Usage Tiers</td>
-                        <td class="p-8 text-center font-mono text-xs font-bold text-orange-400">Paid Newsletter Subscriptions</td>
                     </tr>
                     </tbody>
                 </table>
@@ -67,25 +68,25 @@
                 <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-sm">Choose Fusio if...</h3>
                 <ul class="space-y-4 text-sm text-slate-400">
                     <li class="flex items-start gap-3 italic">
-                        <span class="text-orange-500 mt-1">→</span>
-                        "You need to build a specialized API that integrates various data sources and offers a portal for external developers."
+                        <span class="text-cyan-500 mt-1">→</span>
+                        "You need a standardized REST API with versioning and a dedicated portal for 3rd party developers."
                     </li>
                     <li class="flex items-start gap-3 italic">
-                        <span class="text-orange-500 mt-1">→</span>
-                        "Your project requires a flexible data model beyond simple posts and pages."
+                        <span class="text-cyan-500 mt-1">→</span>
+                        "You want to host custom logic (PHP/JS) directly within the API engine rather than managing external webhooks."
                     </li>
                 </ul>
             </div>
             <div class="p-10 rounded-[2rem] bg-slate-900/20 border border-white/5">
-                <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-sm">Choose Ghost if...</h3>
+                <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-sm">Choose Hasura if...</h3>
                 <ul class="space-y-4 text-sm text-slate-400">
                     <li class="flex items-start gap-3 italic">
                         <span class="text-slate-600 mt-1">→</span>
-                        "You are building a content-rich site (blog, magazine, newsletter) and need a top-tier authoring experience."
+                        "You want a unified 'Supergraph' that lets clients query and join data across multiple databases in one call."
                     </li>
                     <li class="flex items-start gap-3 italic">
                         <span class="text-slate-600 mt-1">→</span>
-                        "You want out-of-the-box support for memberships, paid tiers, and SEO without any manual configuration."
+                        "You require native, high-performance real-time subscriptions (websockets) out of the box."
                     </li>
                 </ul>
             </div>

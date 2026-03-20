@@ -1,183 +1,126 @@
 <?php include(__DIR__ . '/../inc/header.php'); ?>
 
-<div class="fusio-headline">
-    <div class="container">
-        <div class="row">
-            <div class="col p-4 mx-auto text-center">
-                <h1 class="display-4 fw-normal">Compare Fusio to Symfony</h1>
-            </div>
-        </div>
-    </div>
-</div>
+<?php include(__DIR__ . '/../inc/sub_header.php'); ?>
 
-<div class="container mt-4 pt-4 mb-4 pb-4">
-    <div class="row">
-        <p class="lead">This page compares <a href="https://www.fusio-project.org/">Fusio</a>, an open-source API management platform for building and managing APIs, with <a href="https://symfony.com/">Symfony</a>, a robust open-source PHP web application framework. While both are used in backend development, they serve very different purposes within the software stack.</p>
-    </div>
-</div>
+<section class="py-12 bg-slate-950/40">
+    <div class="container mx-auto px-6">
 
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h2 class="fusio-sub-headline h4 fw-normal">🔍 Feature Comparison</h2>
-                <table class="table">
+        <div class="rounded-[2.5rem] bg-slate-900/40 border border-white/5 overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
                     <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>Fusio</th>
-                        <th>Symfony</th>
+                    <tr class="bg-white/5 border-b border-white/10">
+                        <th class="p-8 text-[10px] font-black text-slate-500 uppercase tracking-widest">Development Philosophy</th>
+                        <th class="p-8 text-[10px] font-black text-red-500 uppercase tracking-widest text-center">Fusio (Platform)</th>
+                        <th class="p-8 text-[10px] font-black text-slate-300 uppercase tracking-widest text-center">Symfony (Framework)</th>
                     </tr>
                     </thead>
-                    <tbody>
-                    <tr>
-                        <td>Type</td>
-                        <td>API management platform</td>
-                        <td>PHP web application framework</td>
+                    <tbody class="text-sm text-slate-300">
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Ecosystem Role</span>
+                            <span class="text-[11px] text-slate-500 italic">How they relate to each other</span>
+                        </td>
+                        <td class="p-8 text-center text-emerald-400 italic">Powered by Symfony Components</td>
+                        <td class="p-8 text-center text-slate-400 italic">Foundation for PHP Applications</td>
                     </tr>
-                    <tr>
-                        <td>Primary Use Case</td>
-                        <td>Build, secure, and manage REST APIs</td>
-                        <td>Build full web and application backends</td>
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Out-of-the-Box API Tools</span>
+                            <span class="text-[11px] text-slate-500 italic">Portal, OAuth2, SDKs</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-[10px] font-bold">Standard Features</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="px-3 py-1 bg-white/5 text-slate-500 rounded-full text-[10px] font-bold">Manual Implementation Required</span>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>Open Source</td>
-                        <td>✅ Yes (Apache 2.0)</td>
-                        <td>✅ Yes (MIT)</td>
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Architectural Control</span>
+                            <span class="text-[11px] text-slate-500 italic">Freedom vs. Structure</span>
+                        </td>
+                        <td class="p-8 text-center font-mono text-xs">Opinionated API Lifecycle</td>
+                        <td class="p-8 text-center font-mono text-xs text-red-400 italic">Complete Creative Freedom</td>
                     </tr>
-                    <tr>
-                        <td>API Generation</td>
-                        <td>Manual definitions + generators</td>
-                        <td>Not built-in (requires custom code or API Platform)</td>
-                    </tr>
-                    <tr>
-                        <td>Authentication & Security</td>
-                        <td>Built-in OAuth2</td>
-                        <td>Security component (auth, voters, firewalls)</td>
-                    </tr>
-                    <tr>
-                        <td>Custom Logic</td>
-                        <td>PHP/JS/SQL actions</td>
-                        <td>Full backend code with MVC, services, DI</td>
-                    </tr>
-                    <tr>
-                        <td>Database Support</td>
-                        <td>Multiple SQL backends</td>
-                        <td>Any via Doctrine or other libraries</td>
-                    </tr>
-                    <tr>
-                        <td>Documentation</td>
-                        <td>Auto-generated OpenAPI</td>
-                        <td>Framework docs; API docs manual</td>
-                    </tr>
-                    <tr>
-                        <td>Extensibility</td>
-                        <td>High via actions/plugins</td>
-                        <td>Extremely high via bundles/components</td>
-                    </tr>
-                    <tr>
-                        <td>Target Audience</td>
-                        <td>API developers and API products</td>
-                        <td>Backend developers building full apps</td>
-                    </tr>
-                    <tr>
-                        <td>Deployment</td>
-                        <td>Self-hosted</td>
-                        <td>Self-hosted</td>
-                    </tr>
-                    <tr>
-                        <td>Typical Projects</td>
-                        <td>API systems and gateways</td>
-                        <td>Web apps, services, APIs</td>
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Development Speed</span>
+                            <span class="text-[11px] text-slate-500 italic">Time to production API</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="text-emerald-500 text-lg">●</span>
+                            <span class="block text-[10px] text-slate-500 mt-1 uppercase italic italic italic">Configuration & UI Driven</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="text-slate-500 text-lg">●</span>
+                            <span class="block text-[10px] text-slate-500 mt-1 uppercase italic">Code & Bundle Driven</span>
+                        </td>
                     </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-    </div>
-</div>
 
-<div class="container mt-4 pt-4 mb-4 pb-4">
-    <div class="row">
-        <div class="col-12">
-            <h2 class="fusio-sub-headline h4 fw-normal">🎯 Key Differences</h2>
-            <p class="lead">The main difference between Fusio and Symfony lies in their fundamental purpose and abstraction level within backend development.</p>
-        </div>
-        <div class="col-6">
-            <p><b>Fusio</b> is a full API management platform designed for developers who want to define, secure, document, and manage RESTful APIs out of the box:</p>
-            <ul>
-                <li>Build structured REST APIs with custom backend logic</li>
-                <li>Provide unified API management features such as OAuth2 and analytics</li>
-                <li>Automatically generate and document OpenAPI APIs</li>
-                <li>Focus squarely on API lifecycle and developer workflows</li>
-                <li>Integrate easily with multiple existing databases and backend systems</li>
-            </ul>
-            <p>Fusio is API-first by design and provides a rich set of tools specifically for API creation and management.</p>
-        </div>
-        <div class="col-6">
-            <p><b>Symfony</b> is a general-purpose web application framework that provides reusable PHP components and a foundation for building entire backend systems:</p>
-            <ul>
-                <li>Offers a modular architecture and MVC pattern for web and API development</li>
-                <li>Provides powerful tools like routing, templating, form handling, and services</li>
-                <li>Uses a dependency injection container and best-practice conventions</li>
-                <li>Can serve APIs, web pages, or complex backend logic</li>
-                <li>Requires developers to write controllers, routes, and services manually</li>
-            </ul>
-            <p>Symfony excels at building custom applications of any scale, but it does not ship with built-in API management tooling like OAuth2 servers or API docs by default, those typically come through libraries or extensions like API Platform.</p>
-        </div>
-    </div>
-</div>
-
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="fusio-sub-headline h4 fw-normal">📌 When to Choose Which</h2>
-            </div>
-            <div class="col-6">
-                <p>Choose <b>Fusio</b> if:</p>
-                <ul>
-                    <li>You need a dedicated API platform with built-in management, security, and documentation</li>
-                    <li>You want to quickly build and expose REST APIs without assembling multiple components</li>
-                    <li>Your project focuses on API products, gateways, or multi-tenant API access</li>
-                    <li>You prefer tools optimized specifically for API lifecycle workflows</li>
-                    <li>You want auto-generated OpenAPI docs and developer portal features</li>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24">
+            <div class="p-10 rounded-[2rem] bg-slate-900/20 border border-white/5">
+                <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-sm">Choose Fusio if...</h3>
+                <ul class="space-y-4 text-sm text-slate-400">
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-red-500 mt-1">→</span>
+                        "You want to leverage Symfony's stability but don't want to spend weeks building your own API gateway, dev portal, and OAuth2 server."
+                    </li>
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-red-500 mt-1">→</span>
+                        "Your primary goal is to manage the API lifecycle (monetization, plans, documentation) rather than writing custom framework boilerplate."
+                    </li>
                 </ul>
-                <p>Fusio is ideal for teams focused on API infrastructure, API monetization, and API system governance.</p>
             </div>
-            <div class="col-6">
-                <p>Choose <b>Symfony</b> if:</p>
-                <ul>
-                    <li>You are building a full backend application, not just APIs</li>
-                    <li>You need maximum flexibility and control over application architecture</li>
-                    <li>You want to leverage a rich ecosystem of reusable PHP components</li>
-                    <li>Your project requires deep integration of business logic, services, and UI</li>
-                    <li>You plan to build APIs as part of a broader system (often paired with API Platform)</li>
+            <div class="p-10 rounded-[2rem] bg-slate-900/20 border border-white/5">
+                <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-sm">Choose Symfony if...</h3>
+                <ul class="space-y-4 text-sm text-slate-400">
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-slate-600 mt-1">→</span>
+                        "You are building a unique, non-API-centric application (like a complex CLI tool or a massive monolithic web app) that requires a custom architecture."
+                    </li>
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-slate-600 mt-1">→</span>
+                        "You prefer a 'decoupled' approach where you select only specific components for a highly tailored infrastructure."
+                    </li>
                 </ul>
-                <p>Symfony is ideal for backend developers building complex applications where API endpoints are just one part of the overall architecture.</p>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="container mt-4 pt-4 mb-4 pb-4">
-    <div class="row">
-        <div class="col-12">
-            <div class="alert alert-info">
-                Note: Fusio uses internally also many Symfony components, if you like to use the SDK and OpenAPI generation capabilities
-                with Symfony, you can take a look at the <a href="https://phpsx.org/">PSX Framework</a> which is also internally used by Fusio,
-                it provides a <a href="https://phpsx.org/integration/symfony/">Symfony Bundle</a> to include all needed services.
+<section class="border-t border-white/5 bg-slate-950/40 py-6 group">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-6">
+                <div class="flex items-center gap-3 px-3 py-1.5 rounded-md bg-white/[0.03] border border-white/5">
+                    <span class="text-[10px] font-black text-slate-600 uppercase tracking-widest">SHA1</span>
+                    <code class="text-[11px] font-mono font-bold text-slate-400">
+                        <?php echo sha1_file(__FILE__); ?>
+                    </code>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="https://github.com/apioo/fusio-website/blob/main/resources/template/comparison/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"
+                   class="group/link flex items-center gap-2 text-[10px] font-black text-slate-500 hover:text-orange-500 transition-colors uppercase tracking-widest">
+                    <svg class="w-3.5 h-3.5 opacity-50 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Improve this page
+                </a>
+                <div class="hidden sm:block w-1 h-1 rounded-full bg-white/10"></div>
+                <a href="https://github.com/apioo/fusio/issues"
+                   class="text-[10px] font-black text-slate-600 hover:text-white transition-colors uppercase tracking-widest">
+                    Report Issue
+                </a>
             </div>
         </div>
     </div>
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-end">
-            <a href="https://github.com/apioo/fusio-website/blob/main/resources/template/compare/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"><i class="bi bi-pen-fill"></i> Edit this page</a>
-        </div>
-    </div>
-</div>
+</section>
 
 <?php include(__DIR__ . '/../inc/footer.php'); ?>

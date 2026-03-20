@@ -1,305 +1,264 @@
 <?php include(__DIR__ . '/inc/header.php'); ?>
 
-<div class="fusio-headline">
-  <div class="container">
-    <div class="row">
-      <div class="col p-4 mx-auto text-center">
-        <h1 class="display-4 fw-normal">Comparison</h1>
-      </div>
-    </div>
-  </div>
-</div>
+<?php include(__DIR__ . '/inc/sub_header.php'); ?>
 
-<div class="container mt-4 pt-4 mb-4 pb-4">
-  <div class="row">
-    <div class="col">
-      <p class="lead">On this page, we provide a clear comparison between Fusio and other popular tools in the API ecosystem. We break down different categories of API solutions and explain where Fusio fits within each.
-        Our goal is to help you quickly understand the strengths and focus of each tool, so you can determine whether Fusio is the right open-source API management solution for your project or business needs.
-        Please note that every technology has its unique advantages and limitations. This comparison is designed to give you a balanced overview and guide you in choosing the best solution for your specific use case.</p>
+<section class="py-12 bg-slate-950/40">
+    <div class="container mx-auto px-6 space-y-24">
+        <section>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-4 sticky top-32">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="px-2 py-1 rounded bg-orange-500/10 text-orange-500 text-[10px] font-black uppercase tracking-widest">Network Tier</span>
+                    </div>
+                    <h2 class="text-3xl font-black text-white mb-4">API Gateway</h2>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        An API gateway acts as a single entry point for clients to access backend services. Fusio provides all common gateway features: Routing, Auth, and Rate Limiting, but adds an advanced developer portal and SDK generator to simplify user onboarding.
+                    </p>
+                </div>
+                <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="group p-6 rounded-3xl bg-slate-900/40 border border-white/5 hover:border-orange-500/30 transition-all">
+                        <div class="w-12 h-12 mb-6 rounded-xl bg-slate-950/60 p-2 flex items-center justify-center border border-white/5 group-hover:scale-105 transition-transform">
+                            <img src="<?php echo $base; ?>/img/compare/kong.png" alt="Kong" class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all">
+                        </div>
+                        <h4 class="text-white font-bold mb-4">Kong</h4>
+                        <div class="flex flex-col gap-2">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'kong']); ?>" class="text-[10px] font-black text-orange-500 uppercase tracking-widest">Fusio vs Kong →</a>
+                            <a href="https://konghq.com/" target="_blank" class="text-[10px] font-black text-slate-600 hover:text-white uppercase tracking-widest transition-colors">Official Site ↗</a>
+                        </div>
+                    </div>
+                    <div class="group p-6 rounded-3xl bg-slate-900/40 border border-white/5 hover:border-orange-500/30 transition-all">
+                        <div class="w-12 h-12 mb-6 rounded-xl bg-slate-950/60 p-2 flex items-center justify-center border border-white/5 group-hover:scale-105 transition-transform">
+                            <img src="<?php echo $base; ?>/img/compare/tyk.png" alt="Tyk" class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all">
+                        </div>
+                        <h4 class="text-white font-bold mb-4">Tyk</h4>
+                        <div class="flex flex-col gap-2">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'tyk']); ?>" class="text-[10px] font-black text-orange-500 uppercase tracking-widest">Fusio vs Tyk →</a>
+                            <a href="https://tyk.io/" target="_blank" class="text-[10px] font-black text-slate-600 hover:text-white uppercase tracking-widest transition-colors">Official Site ↗</a>
+                        </div>
+                    </div>
+                    <div class="group p-6 rounded-3xl bg-slate-900/40 border border-white/5 hover:border-orange-500/30 transition-all">
+                        <div class="w-12 h-12 mb-6 rounded-xl bg-slate-950/60 p-2 flex items-center justify-center border border-white/5 group-hover:scale-105 transition-transform">
+                            <img src="<?php echo $base; ?>/img/compare/wso2.png" alt="WSO2" class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all">
+                        </div>
+                        <h4 class="text-white font-bold mb-4">WSO2</h4>
+                        <div class="flex flex-col gap-2">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'wso2']); ?>" class="text-[10px] font-black text-orange-500 uppercase tracking-widest">Fusio vs WSO2 →</a>
+                            <a href="https://wso2.com/" target="_blank" class="text-[10px] font-black text-slate-600 hover:text-white uppercase tracking-widest transition-colors">Official Site ↗</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pt-24 border-t border-white/5">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-4 sticky top-32">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="px-2 py-1 rounded bg-emerald-500/10 text-emerald-500 text-[10px] font-black uppercase tracking-widest">Infrastructure Tier</span>
+                    </div>
+                    <h2 class="text-3xl font-black text-white mb-4">Backend as a Service</h2>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Fusio is an open-source, self-hosted alternative to BaaS providers. It targets developers who prioritize data sovereignty and vendor independence, offering a simplified backend development experience without the constraints of a proprietary cloud.
+                    </p>
+                </div>
+                <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="group p-6 rounded-3xl bg-slate-900/40 border border-white/5 hover:border-emerald-500/30 transition-all">
+                        <div class="w-12 h-12 mb-6 rounded-xl bg-slate-950/60 p-2 flex items-center justify-center border border-white/5 group-hover:scale-105 transition-transform">
+                            <img src="<?php echo $base; ?>/img/compare/firebase.png" alt="Firebase" class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all">
+                        </div>
+                        <h4 class="text-white font-bold mb-4">Firebase</h4>
+                        <div class="flex flex-col gap-2">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'firebase']); ?>" class="text-[10px] font-black text-emerald-500 uppercase tracking-widest">Fusio vs Firebase →</a>
+                            <a href="https://firebase.google.com/" target="_blank" class="text-[10px] font-black text-slate-600 hover:text-white uppercase tracking-widest transition-colors">Official Site ↗</a>
+                        </div>
+                    </div>
+                    <div class="group p-6 rounded-3xl bg-slate-900/40 border border-white/5 hover:border-emerald-500/30 transition-all">
+                        <div class="w-12 h-12 mb-6 rounded-xl bg-slate-950/60 p-2 flex items-center justify-center border border-white/5 group-hover:scale-105 transition-transform">
+                            <img src="<?php echo $base; ?>/img/compare/supabase.png" alt="Supabase" class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all">
+                        </div>
+                        <h4 class="text-white font-bold mb-4">Supabase</h4>
+                        <div class="flex flex-col gap-2">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'supabase']); ?>" class="text-[10px] font-black text-emerald-500 uppercase tracking-widest">Fusio vs Supabase →</a>
+                            <a href="https://supabase.com/" target="_blank" class="text-[10px] font-black text-slate-600 hover:text-white uppercase tracking-widest transition-colors">Official Site ↗</a>
+                        </div>
+                    </div>
+                    <div class="group p-6 rounded-3xl bg-slate-900/40 border border-white/5 hover:border-emerald-500/30 transition-all">
+                        <div class="w-12 h-12 mb-6 rounded-xl bg-slate-950/60 p-2 flex items-center justify-center border border-white/5 group-hover:scale-105 transition-transform">
+                            <img src="<?php echo $base; ?>/img/compare/appwrite.png" alt="Appwrite" class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all">
+                        </div>
+                        <h4 class="text-white font-bold mb-4">Appwrite</h4>
+                        <div class="flex flex-col gap-2">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'appwrite']); ?>" class="text-[10px] font-black text-emerald-500 uppercase tracking-widest">Fusio vs Appwrite →</a>
+                            <a href="https://appwrite.io/" target="_blank" class="text-[10px] font-black text-slate-600 hover:text-white uppercase tracking-widest transition-colors">Official Site ↗</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pt-24 border-t border-white/5">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-4 sticky top-32">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="px-2 py-1 rounded bg-blue-500/10 text-blue-500 text-[10px] font-black uppercase tracking-widest">Development Tier</span>
+                    </div>
+                    <h2 class="text-3xl font-black text-white mb-4">API Builder</h2>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Fusio provides a generator to automatically create a complete API based on various databases. Unlike simple builders that only offer REST or GraphQL mirroring, Fusio allows you to customize each endpoint and inject additional business logic.
+                    </p>
+                </div>
+                <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="group p-6 rounded-3xl bg-slate-900/40 border border-white/5 hover:border-blue-500/30 transition-all">
+                        <div class="w-12 h-12 mb-6 rounded-xl bg-slate-950/60 p-2 flex items-center justify-center border border-white/5 group-hover:scale-105 transition-transform">
+                            <img src="<?php echo $base; ?>/img/compare/postgrest.png" alt="PostgREST" class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all">
+                        </div>
+                        <h4 class="text-white font-bold mb-4 text-sm">PostgREST</h4>
+                        <div class="flex flex-col gap-2">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'postgrest']); ?>" class="text-[10px] font-black text-blue-500 uppercase tracking-widest">Fusio vs PostgREST →</a>
+                            <a href="https://postgrest.org/" target="_blank" class="text-[10px] font-black text-slate-600 hover:text-white uppercase tracking-widest transition-colors">Official Site ↗</a>
+                        </div>
+                    </div>
+                    <div class="group p-6 rounded-3xl bg-slate-900/40 border border-white/5 hover:border-blue-500/30 transition-all">
+                        <div class="w-12 h-12 mb-6 rounded-xl bg-slate-950/60 p-2 flex items-center justify-center border border-white/5 group-hover:scale-105 transition-transform">
+                            <img src="<?php echo $base; ?>/img/compare/hasura.png" alt="Hasura" class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all">
+                        </div>
+                        <h4 class="text-white font-bold mb-4 text-sm">Hasura</h4>
+                        <div class="flex flex-col gap-2">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'hasura']); ?>" class="text-[10px] font-black text-blue-500 uppercase tracking-widest">Fusio vs Hasura →</a>
+                            <a href="https://hasura.io/" target="_blank" class="text-[10px] font-black text-slate-600 hover:text-white uppercase tracking-widest transition-colors">Official Site ↗</a>
+                        </div>
+                    </div>
+                    <div class="group p-6 rounded-3xl bg-slate-900/40 border border-white/5 hover:border-blue-500/30 transition-all">
+                        <div class="w-12 h-12 mb-6 rounded-xl bg-slate-950/60 p-2 flex items-center justify-center border border-white/5 group-hover:scale-105 transition-transform">
+                            <img src="<?php echo $base; ?>/img/compare/dreamfactory.png" alt="DreamFactory" class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all">
+                        </div>
+                        <h4 class="text-white font-bold mb-4 text-sm">DreamFactory</h4>
+                        <div class="flex flex-col gap-2">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'dreamfactory']); ?>" class="text-[10px] font-black text-blue-500 uppercase tracking-widest">Fusio vs DreamFactory →</a>
+                            <a href="https://www.dreamfactory.com/" target="_blank" class="text-[10px] font-black text-slate-600 hover:text-white uppercase tracking-widest transition-colors">Official Site ↗</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pt-24 border-t border-white/5">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-4 sticky top-32">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="px-2 py-1 rounded bg-purple-500/10 text-purple-500 text-[10px] font-black uppercase tracking-widest">Content Tier</span>
+                    </div>
+                    <h2 class="text-3xl font-black text-white mb-4">Headless CMS</h2>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        While a CMS manages display content, Fusio acts as a lightweight alternative for "Entity-First" development. It focuses on structured data and CRUD APIs rather than presentation management.
+                    </p>
+                </div>
+                <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="group p-6 rounded-3xl bg-slate-900/40 border border-white/5 hover:border-purple-500/30 transition-all">
+                        <div class="w-12 h-12 mb-6 rounded-xl bg-slate-950/60 p-2 flex items-center justify-center border border-white/5 group-hover:scale-105 transition-transform">
+                            <img src="<?php echo $base; ?>/img/compare/strapi.png" alt="Strapi" class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all">
+                        </div>
+                        <h4 class="text-white font-bold mb-4 text-sm">Strapi</h4>
+                        <div class="flex flex-col gap-2">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'strapi']); ?>" class="text-[10px] font-black text-purple-500 uppercase tracking-widest">Fusio vs Strapi →</a>
+                            <a href="https://strapi.io/" target="_blank" class="text-[10px] font-black text-slate-600 hover:text-white uppercase tracking-widest transition-colors">Official Site ↗</a>
+                        </div>
+                    </div>
+                    <div class="group p-6 rounded-3xl bg-slate-900/40 border border-white/5 hover:border-purple-500/30 transition-all">
+                        <div class="w-12 h-12 mb-6 rounded-xl bg-slate-950/60 p-2 flex items-center justify-center border border-white/5 group-hover:scale-105 transition-transform">
+                            <img src="<?php echo $base; ?>/img/compare/ghost.png" alt="Ghost" class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all">
+                        </div>
+                        <h4 class="text-white font-bold mb-4 text-sm">Ghost</h4>
+                        <div class="flex flex-col gap-2">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'ghost']); ?>" class="text-[10px] font-black text-purple-500 uppercase tracking-widest">Fusio vs Ghost →</a>
+                            <a href="https://ghost.org/" target="_blank" class="text-[10px] font-black text-slate-600 hover:text-white uppercase tracking-widest transition-colors">Official Site ↗</a>
+                        </div>
+                    </div>
+                    <div class="group p-6 rounded-3xl bg-slate-900/40 border border-white/5 hover:border-purple-500/30 transition-all">
+                        <div class="w-12 h-12 mb-6 rounded-xl bg-slate-950/60 p-2 flex items-center justify-center border border-white/5 group-hover:scale-105 transition-transform">
+                            <img src="<?php echo $base; ?>/img/compare/directus.png" alt="Directus" class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all">
+                        </div>
+                        <h4 class="text-white font-bold mb-4 text-sm">Directus</h4>
+                        <div class="flex flex-col gap-2">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'directus']); ?>" class="text-[10px] font-black text-purple-500 uppercase tracking-widest">Fusio vs Directus →</a>
+                            <a href="https://directus.io/" target="_blank" class="text-[10px] font-black text-slate-600 hover:text-white uppercase tracking-widest transition-colors">Official Site ↗</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pt-24 border-t border-white/5">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-4 sticky top-32">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="px-2 py-1 rounded bg-red-500/10 text-red-500 text-[10px] font-black uppercase tracking-widest">Application Tier</span>
+                    </div>
+                    <h2 class="text-3xl font-black text-white mb-4">API Framework</h2>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Code-level frameworks leave governance and lifecycle management to you. Fusio bridges this gap by providing a repository-driven config that works with GIT, automating the repetitive "API Product" features like documentation and SDKs.
+                    </p>
+                </div>
+                <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="group p-6 rounded-3xl bg-slate-900/40 border border-white/5 hover:border-red-500/30 transition-all">
+                        <div class="w-12 h-12 mb-6 rounded-xl bg-slate-950/60 p-2 flex items-center justify-center border border-white/5 group-hover:scale-105 transition-transform">
+                            <img src="<?php echo $base; ?>/img/compare/symfony.png" alt="Symfony" class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all">
+                        </div>
+                        <h4 class="text-white font-bold mb-4 text-sm">Symfony</h4>
+                        <div class="flex flex-col gap-2">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'symfony']); ?>" class="text-[10px] font-black text-red-500 uppercase tracking-widest">Fusio vs Symfony →</a>
+                            <a href="https://symfony.com/" target="_blank" class="text-[10px] font-black text-slate-600 hover:text-white uppercase tracking-widest transition-colors">Official Site ↗</a>
+                        </div>
+                    </div>
+                    <div class="group p-6 rounded-3xl bg-slate-900/40 border border-white/5 hover:border-red-500/30 transition-all">
+                        <div class="w-12 h-12 mb-6 rounded-xl bg-slate-950/60 p-2 flex items-center justify-center border border-white/5 group-hover:scale-105 transition-transform">
+                            <img src="<?php echo $base; ?>/img/compare/laravel.png" alt="Laravel" class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all">
+                        </div>
+                        <h4 class="text-white font-bold mb-4 text-sm">Laravel</h4>
+                        <div class="flex flex-col gap-2">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'laravel']); ?>" class="text-[10px] font-black text-red-500 uppercase tracking-widest">Fusio vs Laravel →</a>
+                            <a href="https://laravel.com/" target="_blank" class="text-[10px] font-black text-slate-600 hover:text-white uppercase tracking-widest transition-colors">Official Site ↗</a>
+                        </div>
+                    </div>
+                    <div class="group p-6 rounded-3xl bg-slate-900/40 border border-white/5 hover:border-red-500/30 transition-all">
+                        <div class="w-12 h-12 mb-6 rounded-xl bg-slate-950/60 p-2 flex items-center justify-center border border-white/5 group-hover:scale-105 transition-transform">
+                            <img src="<?php echo $base; ?>/img/compare/api-platform.png" alt="API Platform" class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all">
+                        </div>
+                        <h4 class="text-white font-bold mb-4 text-sm">API Platform</h4>
+                        <div class="flex flex-col gap-2">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'api-platform']); ?>" class="text-[10px] font-black text-red-500 uppercase tracking-widest">Fusio vs API Platform →</a>
+                            <a href="https://api-platform.com/" target="_blank" class="text-[10px] font-black text-slate-600 hover:text-white uppercase tracking-widest transition-colors">Official Site ↗</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-  </div>
-</div>
+</section>
 
-<div class="container mt-4 pt-4 mb-4 pb-4">
-  <div class="row">
-    <div class="col">
-      <h2 class="fusio-sub-headline h4 fw-normal">🔀 API Gateway</h2>
-      <p>An API gateway acts as a single entry point for clients to access various backend services or APIs in a unified
-      manner, common features of an API gateway are: Request Routing, Load Balancing, Authentication, Rate Limiting,
-      Monitoring and Transformation and Aggregation.</p>
-      <p>Fusio provides out-of-the-box these common API gateway features, in addition it has also a focus to simplify
-        onboarding new users by providing a ready to use developer portal and an advanced SDK generator, which can help
-        integrating your API in different environments.</p>
+<section class="border-t border-white/5 bg-slate-950/40 py-6 group">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-6">
+                <div class="flex items-center gap-3 px-3 py-1.5 rounded-md bg-white/[0.03] border border-white/5">
+                    <span class="text-[10px] font-black text-slate-600 uppercase tracking-widest">SHA1</span>
+                    <code class="text-[11px] font-mono font-bold text-slate-400">
+                        <?php echo sha1_file(__FILE__); ?>
+                    </code>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="https://github.com/apioo/fusio-website/blob/main/resources/template/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"
+                   class="group/link flex items-center gap-2 text-[10px] font-black text-slate-500 hover:text-orange-500 transition-colors uppercase tracking-widest">
+                    <svg class="w-3.5 h-3.5 opacity-50 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Improve this page
+                </a>
+                <div class="hidden sm:block w-1 h-1 rounded-full bg-white/10"></div>
+                <a href="https://github.com/apioo/fusio/issues"
+                   class="text-[10px] font-black text-slate-600 hover:text-white transition-colors uppercase tracking-widest">
+                    Report Issue
+                </a>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-3 text-center">
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h3 class="my-0 fw-bold">Kong</h3>
-          </div>
-          <img src="<?php echo $base; ?>/img/compare/kong.png" class="rounded mx-auto d-block mt-3" />
-          <div class="card-body">
-            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'kong']); ?>" class="btn btn-primary">Compare</a>
-            <a href="https://konghq.com/" class="btn btn-secondary">Website</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h3 class="my-0 fw-bold">Tyk</h3>
-          </div>
-          <img src="<?php echo $base; ?>/img/compare/tyk.png" class="rounded mx-auto d-block mt-3" />
-          <div class="card-body">
-            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'tyk']); ?>" class="btn btn-primary">Compare</a>
-            <a href="https://tyk.io/" class="btn btn-secondary">Website</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h3 class="my-0 fw-bold">WSO2</h3>
-          </div>
-          <img src="<?php echo $base; ?>/img/compare/wso2.png" class="rounded mx-auto d-block mt-3" />
-          <div class="card-body">
-            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'wso2']); ?>" class="btn btn-primary">Compare</a>
-            <a href="https://wso2.com/" class="btn btn-secondary">Website</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container mt-4 pt-4 mb-4 pb-4">
-  <div class="row">
-    <div class="col">
-      <h2 class="fusio-sub-headline h4 fw-normal">🧰 Backend as a Service</h2>
-      <p>Backend as a Service (BaaS) is a cloud computing model that provides developers with a way to outsource backend
-      infrastructure and services, allowing them to focus more on building the frontend and application logic. In a
-      BaaS model, the cloud service provider manages and hosts the backend infrastructure, databases, server-side logic,
-      user authentication, and other common backend functionalities, while developers interact with these services
-      through APIs or SDKs.</p>
-      <p>Fusio can be used as alternative to such BaaS providers, but it only simplifies backend development. It is
-      open-source, self-hosted and targets developers who like to build and host its own backend. This has some
-      advantages like data sovereignty and vendor independence but it comes with a little bit more complexity.</p>
-    </div>
-  </div>
-</div>
-
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-3 text-center">
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h3 class="my-0 fw-bold">Firebase</h3>
-          </div>
-          <img src="<?php echo $base; ?>/img/compare/firebase.png" class="rounded mx-auto d-block mt-3" />
-          <div class="card-body">
-            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'firebase']); ?>" class="btn btn-primary">Compare</a>
-            <a href="https://firebase.google.com/" class="btn btn-secondary">Website</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h3 class="my-0 fw-bold">Supabase</h3>
-          </div>
-          <img src="<?php echo $base; ?>/img/compare/supabase.png" class="rounded mx-auto d-block mt-3" />
-          <div class="card-body">
-            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'supabase']); ?>" class="btn btn-primary">Compare</a>
-            <a href="https://supabase.com/" class="btn btn-secondary">Website</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h3 class="my-0 fw-bold">Appwrite</h3>
-          </div>
-          <img src="<?php echo $base; ?>/img/compare/appwrite.png" class="rounded mx-auto d-block mt-3" />
-          <div class="card-body">
-            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'appwrite']); ?>" class="btn btn-primary">Compare</a>
-            <a href="https://appwrite.io/" class="btn btn-secondary">Website</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container mt-4 pt-4 mb-4 pb-4">
-  <div class="row">
-    <div class="col">
-      <h2 class="fusio-sub-headline h4 fw-normal">🧱 API Builder</h2>
-      <p>An API builder is a tool which can automatically generate ready to use REST APIs based on various data sources.
-      Most times an API builder simply offers a REST API on top of a database, so that your frontend application can
-      directly work with the exposed tables.</p>
-      <p>Fusio provides a generator to automatically generate a complete API based on various databases. Besides this
-      it has the advantage that you can easily customize each endpoint and operation and add additional logic which is
-      often not possible with simple API builder tools.</p>
-    </div>
-  </div>
-</div>
-
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-3 text-center">
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h3 class="my-0 fw-bold">PostgREST</h3>
-          </div>
-          <img src="<?php echo $base; ?>/img/compare/postgrest.png" class="rounded mx-auto d-block mt-3" />
-          <div class="card-body">
-            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'postgrest']); ?>" class="btn btn-primary">Compare</a>
-            <a href="https://postgrest.org/" class="btn btn-secondary">Website</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h3 class="my-0 fw-bold">DreamFactory</h3>
-          </div>
-          <img src="<?php echo $base; ?>/img/compare/dreamfactory.png" class="rounded mx-auto d-block mt-3" />
-          <div class="card-body">
-            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'dreamfactory']); ?>" class="btn btn-primary">Compare</a>
-            <a href="https://www.dreamfactory.com/" class="btn btn-secondary">Website</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container mt-4 pt-4 mb-4 pb-4">
-  <div class="row">
-    <div class="col">
-      <h2 class="fusio-sub-headline h4 fw-normal">🧠 Headless CMS</h2>
-      <p>A Headless CMS is a content management system that provides an interface for creating, managing, and organizing
-      digital content, but it differs from traditional CMSs in that it does not dictate how content is presented or
-      delivered to users. Instead of generating HTML pages for display, a headless CMS stores content in a structured
-      format (typically JSON) and exposes it via an API for retrieval by client-side applications or presentation layers.</p>
-      <p>Fusio can be used as a light weight headless CMS, most notable it has an entity generator which allows to
-      create complete CRUD APIs for an entity definition. Note Fusio does not provide a backend like most headless CMS
-      products where a user can manage the content, it only helps to implement custom domain APIs.</p>
-    </div>
-  </div>
-</div>
-
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-3 text-center">
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h3 class="my-0 fw-bold">Strapi</h3>
-          </div>
-          <img src="<?php echo $base; ?>/img/compare/strapi.png" class="rounded mx-auto d-block mt-3" />
-          <div class="card-body">
-            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'strapi']); ?>" class="btn btn-primary">Compare</a>
-            <a href="https://strapi.io/" class="btn btn-secondary">Website</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h3 class="my-0 fw-bold">Ghost</h3>
-          </div>
-          <img src="<?php echo $base; ?>/img/compare/ghost.png" class="rounded mx-auto d-block mt-3" />
-          <div class="card-body">
-            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'ghost']); ?>" class="btn btn-primary">Compare</a>
-            <a href="https://ghost.org/" class="btn btn-secondary">Website</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h3 class="my-0 fw-bold">Directus</h3>
-          </div>
-          <img src="<?php echo $base; ?>/img/compare/directus.png" class="rounded mx-auto d-block mt-3" />
-          <div class="card-body">
-            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'directus']); ?>" class="btn btn-primary">Compare</a>
-            <a href="https://directus.io/" class="btn btn-secondary">Website</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container mt-4 pt-4 mb-4 pb-4">
-  <div class="row">
-    <div class="col">
-      <h2 class="fusio-sub-headline h4 fw-normal">☁️ API Framework</h2>
-      <p>API frameworks provide code-level tools to build APIs, but leave lifecycle management, governance, and API product concerns to the developer.</p>
-      <p>Fusio provides also the possibility to store the complete Fusio configuration as config files in a GIT repository
-      so that there is no need to use the backend UI, take a look at our <a href="https://github.com/apioo/fusio-framework">example repository</a>
-      to see how this works.</p>
-    </div>
-  </div>
-</div>
-
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-3 text-center">
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h3 class="my-0 fw-bold">Symfony</h3>
-          </div>
-          <img src="<?php echo $base; ?>/img/compare/symfony.png" class="rounded mx-auto d-block mt-3" />
-          <div class="card-body">
-            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'symfony']); ?>" class="btn btn-primary">Compare</a>
-            <a href="https://symfony.com/" class="btn btn-secondary">Website</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h3 class="my-0 fw-bold">Laravel</h3>
-          </div>
-          <img src="<?php echo $base; ?>/img/compare/laravel.png" class="rounded mx-auto d-block mt-3" />
-          <div class="card-body">
-            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'laravel']); ?>" class="btn btn-primary">Compare</a>
-            <a href="https://laravel.com/" class="btn btn-secondary">Website</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3">
-          <div class="card-header py-3">
-            <h3 class="my-0 fw-bold">API Platform</h3>
-          </div>
-          <img src="<?php echo $base; ?>/img/compare/api-platform.png" class="rounded mx-auto d-block mt-3" />
-          <div class="card-body">
-            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'api-platform']); ?>" class="btn btn-primary">Compare</a>
-            <a href="https://api-platform.com/" class="btn btn-secondary">Website</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col text-end">
-      <a href="https://github.com/apioo/fusio-website/blob/main/resources/template/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"><i class="bi bi-pen-fill"></i> Edit this page</a>
-    </div>
-  </div>
-</div>
+</section>
 
 <?php include(__DIR__ . '/inc/footer.php'); ?>

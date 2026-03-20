@@ -1,160 +1,129 @@
 <?php include(__DIR__ . '/../inc/header.php'); ?>
 
-<div class="fusio-headline">
-    <div class="container">
-        <div class="row">
-            <div class="col p-4 mx-auto text-center">
-                <h1 class="display-4 fw-normal">Compare Fusio to PostgREST</h1>
-            </div>
-        </div>
-    </div>
-</div>
+<?php include(__DIR__ . '/../inc/sub_header.php'); ?>
 
-<div class="container mt-4 pt-4 mb-4 pb-4">
-    <div class="row">
-        <p class="lead">This page compares <a href="https://www.fusio-project.org/">Fusio</a>, an open-source API management platform focused on building and managing APIs, with <a href="https://docs.postgrest.org/">PostgREST</a>, an open-source tool that instantly exposes a PostgreSQL database as a RESTful API. While both tools work with relational data, they fulfill very different use cases in the API ecosystem.</p>
-    </div>
-</div>
-
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h2 class="fusio-sub-headline h4 fw-normal">🔍 Feature Comparison</h2>
-                <table class="table">
+<section class="py-12 bg-slate-950/40">
+    <div class="container mx-auto px-6">
+        <div class="rounded-[2.5rem] bg-slate-900/40 border border-white/5 overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
                     <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>Fusio</th>
-                        <th>PostgREST</th>
+                    <tr class="bg-white/5 border-b border-white/10">
+                        <th class="p-8 text-[10px] font-black text-slate-500 uppercase tracking-widest">Architectural Focus</th>
+                        <th class="p-8 text-[10px] font-black text-blue-500 uppercase tracking-widest text-center">Fusio (API Management)</th>
+                        <th class="p-8 text-[10px] font-black text-slate-300 uppercase tracking-widest text-center">PostgREST (Data Proxy)</th>
                     </tr>
                     </thead>
-                    <tbody>
-                    <tr>
-                        <td>Type</td>
-                        <td>API management platform</td>
-                        <td>REST API generator for PostgreSQL</td>
+                    <tbody class="text-sm text-slate-300">
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Database Engine</span>
+                            <span class="text-[11px] text-slate-500 italic">Compatibility range</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="text-blue-400 font-mono text-xs italic">Agnostic (MySQL, PG, Oracle, MSSQL)</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="text-slate-400 font-mono text-xs italic text-orange-400">PostgreSQL Only</span>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>Primary Use Case</td>
-                        <td>Build, manage, secure, customize APIs</td>
-                        <td>Auto-generate REST API from PostgreSQL schema</td>
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Business Logic</span>
+                            <span class="text-[11px] text-slate-500 italic">Extending beyond CRUD</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-[10px] font-bold">Native Actions (PHP, JS, SQL)</span>
+                        </td>
+                        <td class="p-8 text-center text-slate-600 italic">Stored Procedures (PL/pgSQL)</td>
                     </tr>
-                    <tr>
-                        <td>Open Source</td>
-                        <td>✅ Yes (Apache 2.0)</td>
-                        <td>✅ Yes (MIT)</td>
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Developer Portal</span>
+                            <span class="text-[11px] text-slate-500 italic">Self-service & Onboarding</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="text-emerald-500 text-lg">●</span>
+                            <span class="block text-[10px] text-slate-500 mt-1 uppercase italic">Full Portal + SDK Generation</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="text-slate-700 text-lg">○</span>
+                            <span class="block text-[10px] text-slate-500 mt-1 uppercase italic text-slate-600">Spec-only (Swagger/OpenAPI)</span>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>Self-Hosted</td>
-                        <td>✅ Yes (Docker/Composer)</td>
-                        <td>✅ Yes (single binary)</td>
-                    </tr>
-                    <tr>
-                        <td>Database Support</td>
-                        <td>Multiple SQL databases</td>
-                        <td>PostgreSQL only</td>
-                    </tr>
-                    <tr>
-                        <td>API Generation</td>
-                        <td>Custom definitions + CRUD generator</td>
-                        <td>Automatic from database schema</td>
-                    </tr>
-                    <tr>
-                        <td>Authentication</td>
-                        <td>Built-in OAuth2</td>
-                        <td>JWT & PostgreSQL role based</td>
-                    </tr>
-                    <tr>
-                        <td>OpenAPI Documentation</td>
-                        <td>✅ Auto-generated</td>
-                        <td>⚠️ Auto-generated OpenAPI spec endpoint</td>
-                    </tr>
-                    <tr>
-                        <td>Custom Logic</td>
-                        <td>PHP/JS/SQL actions</td>
-                        <td>PostgreSQL stored procedures only</td>
-                    </tr>
-                    <tr>
-                        <td>Extensibility</td>
-                        <td>High (actions/plugins)</td>
-                        <td>Limited to database functions/views</td>
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Runtime Performance</span>
+                            <span class="text-[11px] text-slate-500 italic">Execution overhead</span>
+                        </td>
+                        <td class="p-8 text-center font-mono text-xs">High (Compiled/Swoole)</td>
+                        <td class="p-8 text-center">
+                            <span class="text-blue-500 font-mono text-xs font-bold uppercase tracking-widest">Extreme (Haskell-based)</span>
+                        </td>
                     </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-    </div>
-</div>
 
-<div class="container mt-4 pt-4 mb-4 pb-4">
-    <div class="row">
-        <div class="col-12">
-            <h2 class="fusio-sub-headline h4 fw-normal">🎯 Key Differences</h2>
-            <p class="lead">The main difference between Fusio and PostgREST lies in how they approach API creation and flexibility.</p>
-        </div>
-        <div class="col-6">
-            <p><b>Fusio</b> is a full API management platform designed to help developers define, implement, secure, and document APIs with control and extensibility:</p>
-            <ul>
-                <li>Create structured REST APIs with custom logic across multiple SQL databases</li>
-                <li>Manage access and security with a built-in OAuth2 server</li>
-                <li>Automatically generate OpenAPI documentation for APIs</li>
-                <li>Implement backend workflows using PHP, JavaScript, or SQL actions</li>
-                <li>Customize behavior far beyond simple CRUD operations</li>
-            </ul>
-            <p>Fusio is built for API lifecycle management, custom business logic, and developer workflows.</p>
-        </div>
-        <div class="col-6">
-            <p><b>PostgREST</b> is a lightweight, database-first REST API generator that turns your PostgreSQL database into a RESTful API with minimal setup:</p>
-            <ul>
-                <li>Automatically expose tables, views, and stored procedures as REST endpoints</li>
-                <li>Respect PostgreSQL role-based access control and JWT authentication</li>
-                <li>Serve APIs with minimal overhead between database and HTTP layer</li>
-                <li>Delegate logic to PostgreSQL functions and database constraints</li>
-            </ul>
-            <p>PostgREST focuses on instant API generation from PostgreSQL schemas with very little custom backend code.</p>
-        </div>
-    </div>
-</div>
-
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="fusio-sub-headline h4 fw-normal">📌 When to Choose Which</h2>
-            </div>
-            <div class="col-6">
-                <p>Choose <b>Fusio</b> if:</p>
-                <ul>
-                    <li>You need full control over how your APIs are defined and behave</li>
-                    <li>You want built-in API management features like OAuth2, rate limits, versioning, and documentation</li>
-                    <li>Your project requires custom logic and business workflows beyond basic CRUD</li>
-                    <li>You need to support multiple database backends (MySQL, PostgreSQL, SQLite, etc.)</li>
-                    <li>You want an API platform with developer portals and lifecycle tools</li>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24">
+            <div class="p-10 rounded-[2rem] bg-slate-900/20 border border-white/5">
+                <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-sm">Choose Fusio if...</h3>
+                <ul class="space-y-4 text-sm text-slate-400">
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-blue-500 mt-1">→</span>
+                        "You need a platform that can orchestrate data between multiple different database types or external services."
+                    </li>
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-blue-500 mt-1">→</span>
+                        "You want to provide a professional API product with a developer portal, subscription management, and auto-generated SDKs."
+                    </li>
                 </ul>
-                <p>Fusio is ideal for complex API systems, enterprise needs, and long-term maintainable backend APIs.</p>
             </div>
-            <div class="col-6">
-                <p>Choose <b>PostgREST</b> if:</p>
-                <ul>
-                    <li>You are working exclusively with PostgreSQL</li>
-                    <li>You want a zero-boilerplate REST API directly from your database schema</li>
-                    <li>You are comfortable defining logic through SQL stored procedures and database constraints</li>
-                    <li>You want to rapidly prototype or build database-centric applications</li>
-                    <li>You don't need extensive API management tooling or custom middleware</li>
+            <div class="p-10 rounded-[2rem] bg-slate-900/20 border border-white/5">
+                <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-sm">Choose PostgREST if...</h3>
+                <ul class="space-y-4 text-sm text-slate-400">
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-slate-600 mt-1">→</span>
+                        "You are committed to PostgreSQL and want the fastest possible way to expose your schema with zero boilerplate."
+                    </li>
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-slate-600 mt-1">→</span>
+                        "Your performance requirements are extreme and your logic can live comfortably within SQL stored procedures."
+                    </li>
                 </ul>
-                <p>PostgREST excels for data-driven applications and internal tools where database schema is the primary source of truth.</p>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="container">
-    <div class="row">
-        <div class="col text-end">
-            <a href="https://github.com/apioo/fusio-website/blob/main/resources/template/compare/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"><i class="bi bi-pen-fill"></i> Edit this page</a>
+<section class="border-t border-white/5 bg-slate-950/40 py-6 group">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-6">
+                <div class="flex items-center gap-3 px-3 py-1.5 rounded-md bg-white/[0.03] border border-white/5">
+                    <span class="text-[10px] font-black text-slate-600 uppercase tracking-widest">SHA1</span>
+                    <code class="text-[11px] font-mono font-bold text-slate-400">
+                        <?php echo sha1_file(__FILE__); ?>
+                    </code>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="https://github.com/apioo/fusio-website/blob/main/resources/template/comparison/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"
+                   class="group/link flex items-center gap-2 text-[10px] font-black text-slate-500 hover:text-orange-500 transition-colors uppercase tracking-widest">
+                    <svg class="w-3.5 h-3.5 opacity-50 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Improve this page
+                </a>
+                <div class="hidden sm:block w-1 h-1 rounded-full bg-white/10"></div>
+                <a href="https://github.com/apioo/fusio/issues"
+                   class="text-[10px] font-black text-slate-600 hover:text-white transition-colors uppercase tracking-widest">
+                    Report Issue
+                </a>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
 <?php include(__DIR__ . '/../inc/footer.php'); ?>

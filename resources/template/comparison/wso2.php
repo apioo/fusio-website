@@ -1,171 +1,127 @@
 <?php include(__DIR__ . '/../inc/header.php'); ?>
 
-<div class="fusio-headline">
-    <div class="container">
-        <div class="row">
-            <div class="col p-4 mx-auto text-center">
-                <h1 class="display-4 fw-normal">Compare Fusio to WSO2</h1>
-            </div>
-        </div>
-    </div>
-</div>
+<?php include(__DIR__ . '/../inc/sub_header.php'); ?>
 
-<div class="container mt-4 pt-4 mb-4 pb-4">
-    <div class="row">
-        <p class="lead">This page compares <a href="https://www.fusio-project.org/">Fusio</a>, an open-source API management platform focused on building and managing APIs, with <a href="https://wso2.com/">WSO2 API Manager</a>, a comprehensive enterprise-grade open-source API management solution. While both tools support API workflows, they address different scopes and use cases within the API ecosystem.</p>
-    </div>
-</div>
+<section class="py-12 bg-slate-950/40">
+    <div class="container mx-auto px-6">
 
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h2 class="fusio-sub-headline h4 fw-normal">🔍 Feature Comparison</h2>
-                <table class="table">
+        <div class="rounded-[2.5rem] bg-slate-900/40 border border-white/5 overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
                     <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>Fusio</th>
-                        <th>WSO2 API Manager</th>
+                    <tr class="bg-white/5 border-b border-white/10">
+                        <th class="p-8 text-[10px] font-black text-slate-500 uppercase tracking-widest">Enterprise Capability</th>
+                        <th class="p-8 text-[10px] font-black text-blue-400 uppercase tracking-widest text-center">Fusio (Developer-Centric)</th>
+                        <th class="p-8 text-[10px] font-black text-slate-300 uppercase tracking-widest text-center">WSO2 (Enterprise-Grade)</th>
                     </tr>
                     </thead>
-                    <tbody>
-                    <tr>
-                        <td>Type</td>
-                        <td>Full API management platform</td>
-                        <td>Full-lifecycle API management platform</td>
+                    <tbody class="text-sm text-slate-300">
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Scope of Tool</span>
+                            <span class="text-[11px] text-slate-500 italic">Core focus of the software</span>
+                        </td>
+                        <td class="p-8 text-center font-mono text-xs">API Construction & Lifecycle</td>
+                        <td class="p-8 text-center font-mono text-xs text-slate-500">Full Integration Platform (iPaaS)</td>
                     </tr>
-                    <tr>
-                        <td>Primary Use Case</td>
-                        <td>Build, secure, and manage APIs</td>
-                        <td>Enterprise API governance, security, and scaling</td>
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Logic Execution</span>
+                            <span class="text-[11px] text-slate-500 italic">Where the code runs</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-[10px] font-bold">Native Implementation (PHP)</span>
+                        </td>
+                        <td class="p-8 text-center font-mono text-xs">Proxying External Services</td>
                     </tr>
-                    <tr>
-                        <td>Admin UI</td>
-                        <td>✅ Integrated web interface</td>
-                        <td>✅ Comprehensive dashboard</td>
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Setup & Maintenance</span>
+                            <span class="text-[11px] text-slate-500 italic">Operational overhead</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="text-emerald-500 text-lg">●</span>
+                            <span class="block text-[10px] text-slate-500 mt-1 uppercase italic italic">Lightweight / Single-app</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="text-red-500 text-lg">●</span>
+                            <span class="block text-[10px] text-slate-500 mt-1 uppercase italic">High / Multi-component</span>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>OAuth2 / Auth Support</td>
-                        <td>✅ Built-in OAuth2 server</td>
-                        <td>✅ Advanced OAuth2 / OIDC, API key, mutual TLS support</td>
-                    </tr>
-                    <tr>
-                        <td>API Documentation</td>
-                        <td>✅ Auto-generated OpenAPI</td>
-                        <td>✅ Integrated API publishing & docs</td>
-                    </tr>
-                    <tr>
-                        <td>API Creation</td>
-                        <td>✅ Backend logic & action execution</td>
-                        <td>⚠️ API design within tool; backend implementation external</td>
-                    </tr>
-                    <tr>
-                        <td>Gateway & Traffic Control</td>
-                        <td>Integrated routing & middleware (not a dedicated edge gateway)</td>
-                        <td>Robust gateway with traffic control & policy enforcement</td>
-                    </tr>
-                    <tr>
-                        <td>Analytics & Monitoring</td>
-                        <td>Integrated basic analytics</td>
-                        <td>Advanced analytics, usage insights, observability</td>
-                    </tr>
-                    <tr>
-                        <td>Extensibility</td>
-                        <td>PHP/JS actions</td>
-                        <td>Java-based extensions, plugin ecosystem</td>
-                    </tr>
-                    <tr>
-                        <td>Deployment</td>
-                        <td>Self-hosted (Docker, Composer)</td>
-                        <td>Self-hosted, cloud, hybrid, Kubernetes</td>
-                    </tr>
-                    <tr>
-                        <td>Enterprise Features</td>
-                        <td>⚠️ Focused on developer needs</td>
-                        <td>✅ Full life cycle, developer portal, monetization</td>
-                    </tr>
-                    <tr>
-                        <td>Target Audience</td>
-                        <td>Developers & small teams</td>
-                        <td>Large organizations & enterprise API programs</td>
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Advanced Governance</span>
+                            <span class="text-[11px] text-slate-500 italic">Monetization & B2B flows</span>
+                        </td>
+                        <td class="p-8 text-center text-slate-600 italic">Basic / Extensions required</td>
+                        <td class="p-8 text-center">
+                            <span class="text-blue-500 text-lg">●</span>
+                            <span class="block text-[10px] text-slate-500 mt-1 uppercase italic">Native Enterprise Features</span>
+                        </td>
                     </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-    </div>
-</div>
 
-<div class="container mt-4 pt-4 mb-4 pb-4">
-    <div class="row">
-        <div class="col-12">
-            <h2 class="fusio-sub-headline h4 fw-normal">🎯 Key Differences</h2>
-            <p class="lead">The main difference between Fusio and WSO2 API Manager lies in the scope and complexity of API management they address.</p>
-        </div>
-        <div class="col-6">
-            <p><b>Fusio</b> is a developer-centric API management platform focused on building and managing APIs with minimal overhead:</p>
-            <ul>
-                <li>Design and implement APIs from scratch</li>
-                <li>Define request and response schemas</li>
-                <li>Secure APIs using a built-in OAuth2 server and scopes</li>
-                <li>Manage users and applications through a centralized admin UI</li>
-                <li>Automatically generate OpenAPI documentation</li>
-                <li>Execute backend logic using extensible actions (PHP or JavaScript)</li>
-            </ul>
-            <p>Fusio is responsible for API creation, logic, and lifecycle management in a lightweight and integrated way.</p>
-        </div>
-        <div class="col-6">
-            <p><b>WSO2 API Manager</b> is an enterprise-grade full-lifecycle API management solution designed for large organizations:</p>
-            <ul>
-                <li>Publish and manage APIs across their entire lifecycle</li>
-                <li>Provide a robust API gateway with traffic control and policy enforcement</li>
-                <li>Support advanced security (OAuth2, OIDC, mTLS, SSO, API keys)</li>
-                <li>Offer developer portals, subscription plans, and monetization</li>
-                <li>Deliver advanced analytics, observability, and governance features</li>
-                <li>Integrate deeply with enterprise identity and infrastructure systems</li>
-            </ul>
-            <p>WSO2 API Manager is responsible for enterprise governance, security, and large-scale API operations.</p>
-        </div>
-    </div>
-</div>
-
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="fusio-sub-headline h4 fw-normal">📌 When to Choose Which</h2>
-            </div>
-            <div class="col-6">
-                <p>Choose <b>Fusio</b> if:</p>
-                <ul>
-                    <li>You want a developer-friendly platform to build and manage APIs end-to-end.</li>
-                    <li>Built-in OAuth2 support, auto-generated docs, and extensibility are priorities.</li>
-                    <li>You prefer a lightweight, self-contained solution with minimal infrastructure overhead.</li>
-                    <li>You are a small team, startup, or backend developer working on API products.</li>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24">
+            <div class="p-10 rounded-[2rem] bg-slate-900/20 border border-white/5">
+                <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-sm">Choose Fusio if...</h3>
+                <ul class="space-y-4 text-sm text-slate-400">
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-blue-500 mt-1">→</span>
+                        "You need to build new API endpoints quickly and don't want to manage a separate gateway, publisher, and identity server."
+                    </li>
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-blue-500 mt-1">→</span>
+                        "You prefer a system that integrates implementation logic (actions) directly with management features."
+                    </li>
                 </ul>
-                <p>Fusio excels for projects where API logic and data access are central and need to be controlled within a single, integrated platform.</p>
             </div>
-            <div class="col-6">
-                <p>Choose <b>WSO2 API Manager</b> if:</p>
-                <ul>
-                    <li>You are building or governing large-scale enterprise APIs across teams and environments.</li>
-                    <li>You need advanced security, multi-tenant support, monetization, and developer portals.</li>
-                    <li>You operate in cloud, hybrid, or highly regulated environments.</li>
-                    <li>You require granular policy enforcement, traffic governance, and deep analytics.</li>
+            <div class="p-10 rounded-[2rem] bg-slate-900/20 border border-white/5">
+                <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-sm">Choose WSO2 if...</h3>
+                <ul class="space-y-4 text-sm text-slate-400">
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-slate-600 mt-1">→</span>
+                        "You are a large organization needing a 'one-stop' platform for API governance, multi-tenancy, and complex B2B monetization."
+                    </li>
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-slate-600 mt-1">→</span>
+                        "You have extensive legacy systems (SOAP, etc.) that need to be federated through a central enterprise bus."
+                    </li>
                 </ul>
-                <p>WSO2 API Manager is ideal for organizations with complex API programs looking for enterprise governance, scalability, and ecosystem management.</p>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="container">
-    <div class="row">
-        <div class="col text-end">
-            <a href="https://github.com/apioo/fusio-website/blob/main/resources/template/compare/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"><i class="bi bi-pen-fill"></i> Edit this page</a>
+<section class="border-t border-white/5 bg-slate-950/40 py-6 group">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-6">
+                <div class="flex items-center gap-3 px-3 py-1.5 rounded-md bg-white/[0.03] border border-white/5">
+                    <span class="text-[10px] font-black text-slate-600 uppercase tracking-widest">SHA1</span>
+                    <code class="text-[11px] font-mono font-bold text-slate-400">
+                        <?php echo sha1_file(__FILE__); ?>
+                    </code>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="https://github.com/apioo/fusio-website/blob/main/resources/template/comparison/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"
+                   class="group/link flex items-center gap-2 text-[10px] font-black text-slate-500 hover:text-orange-500 transition-colors uppercase tracking-widest">
+                    <svg class="w-3.5 h-3.5 opacity-50 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Improve this page
+                </a>
+                <div class="hidden sm:block w-1 h-1 rounded-full bg-white/10"></div>
+                <a href="https://github.com/apioo/fusio/issues"
+                   class="text-[10px] font-black text-slate-600 hover:text-white transition-colors uppercase tracking-widest">
+                    Report Issue
+                </a>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
 <?php include(__DIR__ . '/../inc/footer.php'); ?>

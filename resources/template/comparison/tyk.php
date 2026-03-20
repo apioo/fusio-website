@@ -1,161 +1,131 @@
 <?php include(__DIR__ . '/../inc/header.php'); ?>
 
-<div class="fusio-headline">
-    <div class="container">
-        <div class="row">
-            <div class="col p-4 mx-auto text-center">
-                <h1 class="display-4 fw-normal">Compare Fusio to Tyk</h1>
-            </div>
-        </div>
-    </div>
-</div>
+<?php include(__DIR__ . '/../inc/sub_header.php'); ?>
 
-<div class="container mt-4 pt-4 mb-4 pb-4">
-    <div class="row">
-        <p class="lead">This comparison explores the differences between <a href="https://www.fusio-project.org/">Fusio</a>, an open-source API management platform, and <a href="https://tyk.io/">Tyk</a>, an open-source API gateway and management solution. While both tools support APIs, they focus on different parts of the API lifecycle with Fusio centered on creating and managing APIs and Tyk emphasizing traffic control and scalability.</p>
-    </div>
-</div>
-
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h2 class="fusio-sub-headline h4 fw-normal">🔍 Feature Comparison</h2>
-                <table class="table">
+<section class="py-12 bg-slate-950/40">
+    <div class="container mx-auto px-6">
+        <div class="rounded-[2.5rem] bg-slate-900/40 border border-white/5 overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
                     <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>Fusio</th>
-                        <th>Tyk</th>
+                    <tr class="bg-white/5 border-b border-white/10">
+                        <th class="p-8 text-[10px] font-black text-slate-500 uppercase tracking-widest">Core Capability</th>
+                        <th class="p-8 text-[10px] font-black text-orange-500 uppercase tracking-widest text-center">Fusio (PHP-Based)</th>
+                        <th class="p-8 text-[10px] font-black text-slate-300 uppercase tracking-widest text-center">Tyk (Go-Based)</th>
                     </tr>
                     </thead>
-                    <tbody>
-                    <tr>
-                        <td>Type</td>
-                        <td>Full API management platform</td>
-                        <td>API gateway / API management</td>
+                    <tbody class="text-sm text-slate-300">
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Architectural Style</span>
+                            <span class="text-[11px] text-slate-500 italic">Core system design</span>
+                        </td>
+                        <td class="p-8 text-center font-mono text-xs">Application Platform</td>
+                        <td class="p-8 text-center font-mono text-xs">Cloud-Native Gateway</td>
                     </tr>
-                    <tr>
-                        <td>Primary Use Case</td>
-                        <td>Design, implement, and host APIs</td>
-                        <td>Route, secure, and scale API traffic</td>
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Protocol Support</span>
+                            <span class="text-[11px] text-slate-500 italic">Which APIs can it handle?</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="px-3 py-1 bg-white/5 text-slate-400 rounded-full text-[10px] font-bold">REST / JSON-RPC</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-[10px] font-bold">REST, GraphQL, gRPC, TCP</span>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>Admin UI</td>
-                        <td>✅ Built-in web interface</td>
-                        <td>✅ Dashboard available (OSS + extended UI)</td>
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Custom Logic</span>
+                            <span class="text-[11px] text-slate-500 italic">Writing backend code</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="text-emerald-500 text-lg">●</span>
+                            <span class="block text-[10px] text-slate-500 mt-1 uppercase italic italic">Native Actions (PHP/JS)</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="text-slate-500 text-lg">●</span>
+                            <span class="block text-[10px] text-slate-500 mt-1 uppercase italic">Middleware (Go/JS/Python)</span>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>Authentication Support</td>
-                        <td>✅ Built-in OAuth2</td>
-                        <td>✅ OAuth2 & JWT (with external IdP)</td>
-                    </tr>
-                    <tr>
-                        <td>API Documentation</td>
-                        <td>✅ Auto-generated OpenAPI</td>
-                        <td>⚠️ OpenAPI supported (import/export), not auto-generated</td>
-                    </tr>
-                    <tr>
-                        <td>Extensibility</td>
-                        <td>✅ Custom actions (PHP/JS)</td>
-                        <td>✅ Middleware/plugins (Go, JS, Python)</td>
-                    </tr>
-                    <tr>
-                        <td>Analytics & Logging</td>
-                        <td>✅ Integrated</td>
-                        <td>✅ Detailed with quotas & rate limits</td>
-                    </tr>
-                    <tr>
-                        <td>Protocol Support</td>
-                        <td>REST APIs</td>
-                        <td>REST, GraphQL, gRPC, TCP</td>
-                    </tr>
-                    <tr>
-                        <td>Deployment Options</td>
-                        <td>Self-hosted, Docker</td>
-                        <td>Self-hosted, hybrid, cloud, Kubernetes native</td>
-                    </tr>
-                    <tr>
-                        <td>Scalability Focus</td>
-                        <td>Moderate / application-level</td>
-                        <td>High / edge gateway & distributed systems</td>
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Developer Portal</span>
+                            <span class="text-[11px] text-slate-500 italic">Consumer self-service</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="text-emerald-500 text-lg">●</span>
+                            <span class="block text-[10px] text-slate-500 mt-1 uppercase italic italic">Integrated OSS</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="text-slate-500 text-lg">●</span>
+                            <span class="block text-[10px] text-slate-500 mt-1 uppercase italic">Available (OSS + Dashboard)</span>
+                        </td>
                     </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-    </div>
-</div>
 
-<div class="container mt-4 pt-4 mb-4 pb-4">
-    <div class="row">
-        <div class="col-12">
-            <h2 class="fusio-sub-headline h4 fw-normal">🎯 Key Differences</h2>
-            <p class="lead">The main difference between Fusio and Tyk lies in what part of the API stack they manage.</p>
-        </div>
-        <div class="col-6">
-            <p><b>Fusio</b> is a full API management platform that focuses on the complete API lifecycle:</p>
-            <ul>
-                <li>Design and implement APIs from scratch</li>
-                <li>Define request and response schemas</li>
-                <li>Secure APIs using a built-in OAuth2 server and scopes</li>
-                <li>Manage users and applications through a centralized admin UI</li>
-                <li>Automatically generate OpenAPI documentation</li>
-                <li>Execute backend logic using extensible actions (PHP or JavaScript)</li>
-            </ul>
-            <p>Fusio is responsible for API logic, lifecycle, and developer workflows.</p>
-        </div>
-        <div class="col-6">
-            <p><b>Tyk</b> is an API gateway and traffic management solution that focuses on API delivery and scalability:</p>
-            <ul>
-                <li>Route and proxy requests to existing APIs and microservices</li>
-                <li>Enforce authentication, rate limiting, and quotas</li>
-                <li>Apply policies and transformations through middleware and plugins</li>
-                <li>Support multiple protocols such as REST, GraphQL, and gRPC</li>
-                <li>Scale API traffic in cloud-native and Kubernetes environments</li>
-                <li>Integrate with external identity providers and enterprise systems</li>
-            </ul>
-            <p>Tyk is responsible for API access control, traffic enforcement, and scalability.</p>
-        </div>
-    </div>
-</div>
-
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="fusio-sub-headline h4 fw-normal">📌 When to Choose Which</h2>
-            </div>
-            <div class="col-6">
-                <p>Choose <b>Fusio</b> if:</p>
-                <ul>
-                    <li>You need a single platform to design, implement, and manage APIs from scratch.</li>
-                    <li>Built-in OAuth2 authentication, documentation, and developer workflows matter.</li>
-                    <li>You want a self-contained UI for API lifecycle tasks without assembling separate tools.</li>
-                    <li>Your API project is backend-centric with tight integration to application logic and data stores.</li>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24">
+            <div class="p-10 rounded-[2rem] bg-slate-900/20 border border-white/5">
+                <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-sm">Choose Fusio if...</h3>
+                <ul class="space-y-4 text-sm text-slate-400">
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-orange-500 mt-1">→</span>
+                        "You need to build and host new APIs from scratch, connecting directly to databases."
+                    </li>
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-orange-500 mt-1">→</span>
+                        "You want a unified system where API implementation and management live in one tool."
+                    </li>
                 </ul>
-                <p>Fusio is particularly suited for teams focused on API product development, backend services, and integrated API governance.</p>
             </div>
-            <div class="col-6">
-                <p>Choose <b>Tyk</b> if:</p>
-                <ul>
-                    <li>You already have APIs or microservices and need a high-performance gateway in front of them.</li>
-                    <li>Your priority is scalability, traffic control, and advanced policy enforcement.</li>
-                    <li>You want support for GraphQL or gRPC protocols, multi-cloud deployments, or Kubernetes-native workflows.</li>
-                    <li>You plan to leverage middleware plugins and enterprise features for large distributed systems.</li>
+            <div class="p-10 rounded-[2rem] bg-slate-900/20 border border-white/5">
+                <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-sm">Choose Tyk if...</h3>
+                <ul class="space-y-4 text-sm text-slate-400">
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-slate-600 mt-1">→</span>
+                        "You have a massive distributed microservice architecture and need a high-speed proxy."
+                    </li>
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-slate-600 mt-1">→</span>
+                        "You require native support for modern protocols like GraphQL and gRPC at the gateway level."
+                    </li>
                 </ul>
-                <p>Tyk is especially valuable for DevOps teams, cloud-native environments, and large-scale API infrastructures.</p>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="container">
-    <div class="row">
-        <div class="col text-end">
-            <a href="https://github.com/apioo/fusio-website/blob/main/resources/template/compare/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"><i class="bi bi-pen-fill"></i> Edit this page</a>
+<section class="border-t border-white/5 bg-slate-950/40 py-6 group">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-6">
+                <div class="flex items-center gap-3 px-3 py-1.5 rounded-md bg-white/[0.03] border border-white/5">
+                    <span class="text-[10px] font-black text-slate-600 uppercase tracking-widest">SHA1</span>
+                    <code class="text-[11px] font-mono font-bold text-slate-400">
+                        <?php echo sha1_file(__FILE__); ?>
+                    </code>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="https://github.com/apioo/fusio-website/blob/main/resources/template/comparison/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"
+                   class="group/link flex items-center gap-2 text-[10px] font-black text-slate-500 hover:text-orange-500 transition-colors uppercase tracking-widest">
+                    <svg class="w-3.5 h-3.5 opacity-50 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Improve this page
+                </a>
+                <div class="hidden sm:block w-1 h-1 rounded-full bg-white/10"></div>
+                <a href="https://github.com/apioo/fusio/issues"
+                   class="text-[10px] font-black text-slate-600 hover:text-white transition-colors uppercase tracking-widest">
+                    Report Issue
+                </a>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
 <?php include(__DIR__ . '/../inc/footer.php'); ?>

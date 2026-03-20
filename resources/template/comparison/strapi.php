@@ -1,159 +1,126 @@
 <?php include(__DIR__ . '/../inc/header.php'); ?>
 
-<div class="fusio-headline">
-    <div class="container">
-        <div class="row">
-            <div class="col p-4 mx-auto text-center">
-                <h1 class="display-4 fw-normal">Compare Fusio to Strapi</h1>
-            </div>
-        </div>
-    </div>
-</div>
+<?php include(__DIR__ . '/../inc/sub_header.php'); ?>
 
-<div class="container mt-4 pt-4 mb-4 pb-4">
-    <div class="row">
-        <p class="lead">This page compares <a href="https://www.fusio-project.org/">Fusio</a>, an open-source API management platform for building and managing structured APIs, with <a href="https://strapi.io/">Strapi</a>, a popular open-source headless CMS that automatically generates APIs from content models. While both provide APIs, they are designed for different developer workflows and use cases.</p>
-    </div>
-</div>
+<section class="py-12 bg-slate-950/40">
+    <div class="container mx-auto px-6">
 
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h2 class="fusio-sub-headline h4 fw-normal">🔍 Feature Comparison</h2>
-                <table class="table">
+        <div class="rounded-[2.5rem] bg-slate-900/40 border border-white/5 overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
                     <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>Fusio</th>
-                        <th>Strapi</th>
+                    <tr class="bg-white/5 border-b border-white/10">
+                        <th class="p-8 text-[10px] font-black text-slate-500 uppercase tracking-widest">Core Architecture</th>
+                        <th class="p-8 text-[10px] font-black text-indigo-400 uppercase tracking-widest text-center">Fusio (API Product)</th>
+                        <th class="p-8 text-[10px] font-black text-slate-300 uppercase tracking-widest text-center">Strapi (Headless CMS)</th>
                     </tr>
                     </thead>
-                    <tbody>
-                    <tr>
-                        <td>Type</td>
-                        <td>API management platform</td>
-                        <td>Headless CMS / API platform</td>
+                    <tbody class="text-sm text-slate-300">
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Primary User</span>
+                            <span class="text-[11px] text-slate-500 italic">Who spends the most time in the UI?</span>
+                        </td>
+                        <td class="p-8 text-center font-mono text-xs text-emerald-400 italic">API Architects / Backend Devs</td>
+                        <td class="p-8 text-center font-mono text-xs text-slate-400 italic">Content Editors / Marketers</td>
                     </tr>
-                    <tr>
-                        <td>Primary Use Case</td>
-                        <td>Build, secure, document, and manage REST APIs</td>
-                        <td>Manage content and auto-generate APIs</td>
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Custom Logic</span>
+                            <span class="text-[11px] text-slate-500 italic">How you add business rules</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-[10px] font-bold">Native Actions (PHP, JS, SQL)</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="px-3 py-1 bg-white/5 text-slate-500 rounded-full text-[10px] font-bold">Controllers, Middlewares, Policies</span>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>Open Source</td>
-                        <td>✅ Yes (Apache 2.0)</td>
-                        <td>✅ Yes (MIT)</td>
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">External Onboarding</span>
+                            <span class="text-[11px] text-slate-500 italic">Helping 3rd parties use your API</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="text-emerald-500 text-lg">●</span>
+                            <span class="block text-[10px] text-slate-500 mt-1 uppercase italic">Dev Portal + Subscription Plans</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="text-slate-700 text-lg">○</span>
+                            <span class="block text-[10px] text-slate-500 mt-1 uppercase italic text-slate-600">Static Docs (Swagger/plugin)</span>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>API Generation</td>
-                        <td>Manual API definitions + custom logic</td>
-                        <td>Auto-generated REST & GraphQL APIs</td>
-                    </tr>
-                    <tr>
-                        <td>Content Management UI</td>
-                        <td>⚠️ Admin UI for APIs</td>
-                        <td>✅ Full CMS interface</td>
-                    </tr>
-                    <tr>
-                        <td>Authentication & Security</td>
-                        <td>Built-in OAuth2 server</td>
-                        <td>Role-based access control (RBAC)</td>
-                    </tr>
-                    <tr>
-                        <td>Custom Logic</td>
-                        <td>PHP/JS/SQL actions</td>
-                        <td>Custom controllers, policies, plugins</td>
-                    </tr>
-                    <tr>
-                        <td>Database Support</td>
-                        <td>Multiple SQL backends</td>
-                        <td>Multiple DBs (PostgreSQL, MySQL, SQLite, etc.)</td>
-                    </tr>
-                    <tr>
-                        <td>Documentation</td>
-                        <td>Auto-generated OpenAPI</td>
-                        <td>Custom or plugin-based (e.g., GraphQL)</td>
-                    </tr>
-                    <tr>
-                        <td>Extensibility</td>
-                        <td>Actions/plugins</td>
-                        <td>Plugins & extensible admin panel</td>
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Identity Management</span>
+                            <span class="text-[11px] text-slate-500 italic">Auth standards</span>
+                        </td>
+                        <td class="p-8 text-center font-mono text-xs">Full OAuth2 / OpenID Connect</td>
+                        <td class="p-8 text-center font-mono text-xs text-slate-500">JWT / API Tokens</td>
                     </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-    </div>
-</div>
 
-<div class="container mt-4 pt-4 mb-4 pb-4">
-    <div class="row">
-        <div class="col-12">
-            <h2 class="fusio-sub-headline h4 fw-normal">🎯 Key Differences</h2>
-            <p class="lead">The main difference between Fusio and Strapi lies in what they’re optimized for and how they produce APIs.</p>
-        </div>
-        <div class="col-6">
-            <p><b>Fusio</b> is an API management platform focused on giving developers control over how APIs are defined, secured, and documented:</p>
-            <ul>
-                <li>Create structured REST APIs with custom backend logic</li>
-                <li>Secure access using a built-in OAuth2 server</li>
-                <li>Automatically generate OpenAPI documentation</li>
-                <li>Support multiple SQL backends and custom workflows</li>
-                <li>Provide API governance and lifecycle tooling</li>
-            </ul>
-            <p>Fusio emphasizes API lifecycle management, extensibility, and backend workflows above all.</p>
-        </div>
-        <div class="col-6">
-            <p><b>Strapi</b> is a headless CMS that automatically generates REST and GraphQL APIs from content models:</p>
-            <ul>
-                <li>Provide a visual content management interface</li>
-                <li>Auto-generate APIs from defined content types</li>
-                <li>Support both REST and GraphQL endpoints</li>
-                <li>Include built-in role-based access control (RBAC) for content permissions</li>
-                <li>Extend functionality with custom controllers, policies, and plugins</li>
-            </ul>
-            <p>Strapi focuses on content modeling, API scaffolding, and CMS workflows for apps where content delivery is central.</p>
-        </div>
-    </div>
-</div>
-
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="fusio-sub-headline h4 fw-normal">📌 When to Choose Which</h2>
-            </div>
-            <div class="col-6">
-                <p>Choose <b>Fusio</b> if:</p>
-                <ul>
-                    <li>You need full control over API design, security, and custom logic</li>
-                    <li>You want API lifecycle governance with a dedicated management platform</li>
-                    <li>You are building structured API products, developer portals, or service APIs</li>
-                    <li>OpenAPI documentation and OAuth2 workflows are important</li>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24">
+            <div class="p-10 rounded-[2rem] bg-slate-900/20 border border-white/5">
+                <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-sm">Choose Fusio if...</h3>
+                <ul class="space-y-4 text-sm text-slate-400">
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-indigo-400 mt-1">→</span>
+                        "You are building a complex API service that needs high-level governance, rate limiting, and monetization."
+                    </li>
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-indigo-400 mt-1">→</span>
+                        "Your API is the product itself (e.g., a SaaS API for developers) and you need a professional developer portal."
+                    </li>
                 </ul>
-                <p>Fusio is ideal for teams focused on API products and integrations where APIs are more than just content delivery.</p>
             </div>
-            <div class="col-6">
-                <p>Choose <b>Strapi</b> if:</p>
-                <ul>
-                    <li>You want to manage content and get APIs instantly</li>
-                    <li>You need a CMS UI for non-technical users</li>
-                    <li>Auto-generated REST and GraphQL APIs speed up development</li>
-                    <li>You value a visual interface for modeling content and permissions</li>
+            <div class="p-10 rounded-[2rem] bg-slate-900/20 border border-white/5">
+                <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-sm">Choose Strapi if...</h3>
+                <ul class="space-y-4 text-sm text-slate-400">
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-slate-600 mt-1">→</span>
+                        "You need a user-friendly interface for non-technical team members to write, edit, and publish content."
+                    </li>
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-slate-600 mt-1">→</span>
+                        "You are building a content-driven website or mobile app (blog, e-commerce catalog, portfolio) using Node.js."
+                    </li>
                 </ul>
-                <p>Strapi is great for content-driven applications, websites, and digital experiences where backend code should be minimal.</p>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="container">
-    <div class="row">
-        <div class="col text-end">
-            <a href="https://github.com/apioo/fusio-website/blob/main/resources/template/compare/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"><i class="bi bi-pen-fill"></i> Edit this page</a>
+<section class="border-t border-white/5 bg-slate-950/40 py-6 group">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-6">
+                <div class="flex items-center gap-3 px-3 py-1.5 rounded-md bg-white/[0.03] border border-white/5">
+                    <span class="text-[10px] font-black text-slate-600 uppercase tracking-widest">SHA1</span>
+                    <code class="text-[11px] font-mono font-bold text-slate-400">
+                        <?php echo sha1_file(__FILE__); ?>
+                    </code>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="https://github.com/apioo/fusio-website/blob/main/resources/template/comparison/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"
+                   class="group/link flex items-center gap-2 text-[10px] font-black text-slate-500 hover:text-orange-500 transition-colors uppercase tracking-widest">
+                    <svg class="w-3.5 h-3.5 opacity-50 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Improve this page
+                </a>
+                <div class="hidden sm:block w-1 h-1 rounded-full bg-white/10"></div>
+                <a href="https://github.com/apioo/fusio/issues"
+                   class="text-[10px] font-black text-slate-600 hover:text-white transition-colors uppercase tracking-widest">
+                    Report Issue
+                </a>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
 <?php include(__DIR__ . '/../inc/footer.php'); ?>
