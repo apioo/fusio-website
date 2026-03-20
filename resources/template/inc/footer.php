@@ -34,6 +34,7 @@
                         <li><a href="<?php echo $router->getAbsolutePath([\App\Controller\Adapter::class, 'show']); ?>" class="hover:text-orange-500 transition">Adapter</a></li>
                         <li><a href="<?php echo $router->getAbsolutePath([\App\Controller\Worker::class, 'show']); ?>" class="hover:text-orange-500 transition">Worker</a></li>
                         <li><a href="<?php echo $router->getAbsolutePath([\App\Controller\Integration::class, 'show']); ?>" class="hover:text-orange-500 transition">Integration</a></li>
+                        <li><a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'show']); ?>" class="hover:text-orange-500 transition">Comparison</a></li>
                         <li><a href="<?php echo $router->getAbsolutePath([\App\Controller\Partner::class, 'show']); ?>" class="hover:text-orange-500 transition">Partner</a></li>
                         <li><a href="<?php echo $router->getAbsolutePath([\App\Controller\Brand::class, 'show']); ?>" class="hover:text-orange-500 transition">Brand</a></li>
                         <li><a href="<?php echo $router->getAbsolutePath([\App\Controller\Contact::class, 'show']); ?>" class="hover:text-orange-500 transition">Contact</a></li>
