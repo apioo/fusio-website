@@ -139,7 +139,7 @@
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-[10px] font-bold text-orange-500 mb-6 uppercase tracking-widest">
                     AI-Native Architecture
                 </div>
-                <h4 class="text-3xl md:text-4xl font-black text-white mb-6 tracking-tighter">AI Agents: <br><span class="text-slate-500">Internal & External</span></h4>
+                <h3 class="text-3xl md:text-4xl font-black text-white mb-6 tracking-tighter">AI Agents: <br><span class="text-slate-500">Internal & External</span></h3>
                 <div class="space-y-6 text-slate-400 leading-relaxed">
                     <p>
                         Fusio bridges the gap between raw LLM power and secure execution. It acts as a <strong>controlled environment</strong> where AI can interact with your business logic without bypassing security layers.
@@ -194,15 +194,15 @@
         <div class="grid md:grid-cols-12 gap-6">
             <div class="md:col-span-12 p-8 bg-slate-900/50 border border-white/5 rounded-[2.5rem] flex flex-col lg:flex-row gap-8 hover:border-white/20 transition-all group reveal">
                 <div>
-                    <h4 class="text-2xl font-bold text-white mb-4">Polyglot Development</h4>
+                    <h3 class="text-2xl font-bold text-white mb-4">Polyglot Development</h3>
                     <p class="text-slate-400 mb-8">Build logic in your language of choice. Fusio's worker system handles the execution while providing seamless access to all your connections.</p>
                 </div>
                 <div class="lg:w-2/3 flex flex-col bg-slate-950 rounded-2xl overflow-hidden border border-white/10 font-mono text-xs shadow-2xl min-h-[350px]">
                     <div class="flex bg-white/5 border-b border-white/5 px-4 pt-2 gap-2 h-12 flex-shrink-0">
                         <button onclick="switchTab('php')" id="tab-php" class="tab-btn px-4 py-2 rounded-t-lg transition-all text-orange-500 border-b-2 border-orange-500 bg-white/5">PHP</button>
-                        <button onclick="switchTab('js')" id="tab-js" class="tab-btn px-4 py-2 rounded-t-lg transition-all text-slate-500 hover:text-slate-300">JavaScript</button>
-                        <button onclick="switchTab('python')" id="tab-python" class="tab-btn px-4 py-2 rounded-t-lg transition-all text-slate-500 hover:text-slate-300">Python</button>
-                        <button onclick="switchTab('java')" id="tab-java" class="tab-btn px-4 py-2 rounded-t-lg transition-all text-slate-500 hover:text-slate-300">Java/Groovy</button>
+                        <button onclick="switchTab('js')" id="tab-js" class="tab-btn px-4 py-2 rounded-t-lg transition-all text-slate-400 hover:text-slate-300">JavaScript</button>
+                        <button onclick="switchTab('python')" id="tab-python" class="tab-btn px-4 py-2 rounded-t-lg transition-all text-slate-400 hover:text-slate-300">Python</button>
+                        <button onclick="switchTab('java')" id="tab-java" class="tab-btn px-4 py-2 rounded-t-lg transition-all text-slate-400 hover:text-slate-300">Java/Groovy</button>
                     </div>
                     <div class="p-6 overflow-auto custom-scrollbar flex-grow bg-slate-950/50" style="height: 300px;">
             <pre id="content-php" class="tab-content text-slate-400"><code><span class="text-purple-400">use</span> Fusio\Worker;
@@ -211,7 +211,7 @@
 <span class="text-purple-400">return function</span>(Worker\ExecuteRequest $request, Worker\ExecuteContext $context, Engine\ConnectorInterface $connector, Engine\Response\FactoryInterface $response, Engine\DispatcherInterface $dispatcher, LoggerInterface $logger) {
     <span class="text-blue-400">$connection</span> = <span class="text-blue-400">$connector</span>->getConnection(<span class="text-green-400">'my_database'</span>);
 
-    <span class="text-slate-600">// @TODO implement my API endpoint logic</span>
+    <span class="text-green-400">// @TODO implement my API endpoint logic</span>
 
     <span class="text-purple-400">return</span> <span class="text-blue-400">$response</span>->build(<span class="text-orange-400">200</span>, [], [
         <span class="text-green-400">'hello'</span> => <span class="text-green-400">'world'</span>,
@@ -220,7 +220,7 @@
                         <pre id="content-js" class="tab-content hidden text-slate-400"><code><span class="text-purple-400">module.exports</span> = <span class="text-purple-400">async function</span>(request, context, connector, response, dispatcher, logger) {
     <span class="text-purple-400">const</span> connection = <span class="text-purple-400">await</span> connector.getConnection(<span class="text-green-400">'my_database'</span>);
 
-    <span class="text-slate-600">// @TODO implement my API endpoint logic</span>
+    <span class="text-green-400">// @TODO implement my API endpoint logic</span>
 
     <span class="text-purple-400">return</span> response.build(<span class="text-orange-400">200</span>, {}, {
         hello: <span class="text-green-400">'world'</span>
@@ -229,7 +229,7 @@
                         <pre id="content-python" class="tab-content hidden text-slate-400"><code><span class="text-purple-400">def</span> <span class="text-blue-400">handle</span>(request, context, connector, response, dispatcher, logger):
     connection = connector.get_connection(<span class="text-green-400">'my_database'</span>)
 
-    <span class="text-slate-600"># @TODO implement my API endpoint logic</span>
+    <span class="text-green-400"># @TODO implement my API endpoint logic</span>
 
     <span class="text-purple-400">return</span> response.build(<span class="text-orange-400">200</span>, <span class="text-purple-400">None</span>, {
         <span class="text-green-400">'hello'</span>: <span class="text-green-400">'world'</span>
@@ -239,7 +239,7 @@
 <span class="text-purple-400">def</span> <span class="text-blue-400">handle</span>(ExecuteRequest request, ExecuteContext context, Connector connector, ResponseBuilder response, Dispatcher dispatcher, Logger logger) {
     <span class="text-purple-400">def</span> connection = connector.getConnection(<span class="text-green-400">"my_database"</span>);
 
-    <span class="text-slate-600">// @TODO implement my API endpoint logic</span>
+    <span class="text-green-400">// @TODO implement my API endpoint logic</span>
 
     <span class="text-purple-400">return</span> res.build(<span class="text-orange-400">200</span>, [:], [
         hello: <span class="text-green-400">"world"</span>
@@ -253,7 +253,7 @@
                     <div class="w-10 h-10 bg-orange-500/10 rounded-xl flex items-center justify-center mb-6 text-orange-500">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
-                    <h4 class="text-xl font-bold text-white mb-2">Marketplace</h4>
+                    <h3 class="text-xl font-bold text-white mb-2">Marketplace</h3>
                     <p class="text-sm text-slate-400 leading-relaxed mb-6">Share and install entities directly from the community. A thriving hub for actions, schemas, and bundles.</p>
                 </div>
                 <a href="<?php echo $router->getAbsolutePath([\App\Controller\Marketplace::class, 'show']); ?>" class="text-xs font-bold text-orange-500 uppercase tracking-widest hover:underline">Explore Hub →</a>
@@ -262,17 +262,17 @@
                 <div class="w-10 h-10 bg-blue-500/10 rounded-xl flex items-center justify-center mb-6 text-blue-400">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </div>
-                <h4 class="text-xl font-bold text-white mb-4">Unified Protocols</h4>
+                <h3 class="text-xl font-bold text-white mb-4">Unified Protocols</h3>
                 <div class="space-y-2">
                     <div class="flex items-center justify-between px-3 py-2 bg-white/5 rounded-lg border border-white/5">
                         <span class="text-[10px] font-bold text-slate-300">MCP Tool</span>
                         <span class="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse"></span>
                     </div>
                     <div class="flex items-center justify-between px-3 py-2 bg-white/5 rounded-lg border border-white/5">
-                        <span class="text-[10px] font-bold text-slate-500">GraphQL</span>
+                        <span class="text-[10px] font-bold text-slate-400">GraphQL</span>
                     </div>
                     <div class="flex items-center justify-between px-3 py-2 bg-white/5 rounded-lg border border-white/5">
-                        <span class="text-[10px] font-bold text-slate-500">JsonRPC / REST</span>
+                        <span class="text-[10px] font-bold text-slate-400">JsonRPC / REST</span>
                     </div>
                 </div>
             </div>
@@ -280,15 +280,15 @@
                 <div class="w-10 h-10 bg-purple-500/10 rounded-xl flex items-center justify-center mb-6 text-purple-400">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </div>
-                <h4 class="text-xl font-bold text-white mb-4">Type-Safe SDKs</h4>
+                <h3 class="text-xl font-bold text-white mb-4">Type-Safe SDKs</h3>
                 <p class="text-sm text-slate-400 mb-6">Automated code generation for client/server harmony.</p>
-                <div class="flex gap-3 opacity-40 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition duration-500">
-                    <div class="text-[10px] font-mono font-bold bg-white/5 px-2 py-1 rounded border border-white/10">C#</div>
-                    <div class="text-[10px] font-mono font-bold bg-white/5 px-2 py-1 rounded border border-white/10">Go</div>
-                    <div class="text-[10px] font-mono font-bold bg-white/5 px-2 py-1 rounded border border-white/10">Java</div>
-                    <div class="text-[10px] font-mono font-bold bg-white/5 px-2 py-1 rounded border border-white/10">JavaScript</div>
-                    <div class="text-[10px] font-mono font-bold bg-white/5 px-2 py-1 rounded border border-white/10">PHP</div>
-                    <div class="text-[10px] font-mono font-bold bg-white/5 px-2 py-1 rounded border border-white/10">Python</div>
+                <div class="flex flex-wrap gap-2 opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition duration-500">
+                    <div class="text-[10px] font-mono font-bold bg-slate-800 text-slate-200 px-2 py-1 rounded border border-white/10 shadow-sm">C#</div>
+                    <div class="text-[10px] font-mono font-bold bg-slate-800 text-slate-200 px-2 py-1 rounded border border-white/10 shadow-sm">Go</div>
+                    <div class="text-[10px] font-mono font-bold bg-slate-800 text-slate-200 px-2 py-1 rounded border border-white/10 shadow-sm">Java</div>
+                    <div class="text-[10px] font-mono font-bold bg-slate-800 text-slate-200 px-2 py-1 rounded border border-white/10 shadow-sm">JavaScript</div>
+                    <div class="text-[10px] font-mono font-bold bg-slate-800 text-slate-200 px-2 py-1 rounded border border-white/10 shadow-sm">PHP</div>
+                    <div class="text-[10px] font-mono font-bold bg-slate-800 text-slate-200 px-2 py-1 rounded border border-white/10 shadow-sm">Python</div>
                 </div>
             </div>
         </div>
@@ -308,7 +308,7 @@
             </div>
             <div class="flex items-center gap-6">
                 <a href="https://github.com/apioo/fusio-website/blob/main/resources/template/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"
-                   class="group/link flex items-center gap-2 text-[10px] font-black text-slate-500 hover:text-orange-500 transition-colors uppercase tracking-widest">
+                   class="group/link flex items-center gap-2 text-[10px] font-black text-slate-400 hover:text-orange-500 transition-colors uppercase tracking-widest">
                     <svg class="w-3.5 h-3.5 opacity-50 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>

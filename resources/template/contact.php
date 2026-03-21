@@ -13,7 +13,7 @@
                             <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <h2 class="text-3xl font-black text-white mb-4 tracking-tighter"><span class="text-red-500"><?php echo $error; ?></span></h2>
+                    <div class="text-3xl font-black text-white mb-4 tracking-tighter"><span class="text-red-500"><?php echo $error; ?></span></di>
                     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <button onclick="window.history.back()" class="w-full sm:w-auto px-8 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-xs font-black text-white uppercase tracking-widest transition-all">
                             Back
@@ -52,7 +52,7 @@
                         </div>
                         <span class="text-[10px] font-mono text-emerald-500">Live</span>
                     </div>
-                    <h3 class="text-white font-bold mb-2">Discord Chat</h3>
+                    <h2 class="text-white font-bold mb-2">Discord Chat</h2>
                     <p class="text-xs text-slate-500 leading-relaxed mb-6">Real-time support and architectural discussions with the core team.</p>
                     <a href="https://discord.gg/eMrMgwsc6e" target="_blank" class="text-[10px] font-black text-slate-400 group-hover:text-orange-500 uppercase tracking-widest transition-colors">Join Server →</a>
                 </div>
@@ -64,7 +64,7 @@
                         </div>
                         <span class="text-[10px] font-mono text-slate-500 uppercase">OS</span>
                     </div>
-                    <h3 class="text-white font-bold mb-2">Issue Tracker</h3>
+                    <h2 class="text-white font-bold mb-2">Issue Tracker</h2>
                     <p class="text-xs text-slate-500 leading-relaxed mb-6">Report technical bugs, suggest features, and track the development roadmap.</p>
                     <a href="https://github.com/apioo/fusio/issues" target="_blank" class="text-[10px] font-black text-slate-400 group-hover:text-orange-500 uppercase tracking-widest transition-colors">Open Issues →</a>
                 </div>
@@ -76,7 +76,7 @@
                         </div>
                         <span class="text-[10px] font-mono text-slate-500 uppercase">Video</span>
                     </div>
-                    <h3 class="text-white font-bold mb-2">Tutorials</h3>
+                    <h class="text-white font-bold mb-2">Tutorials</h>
                     <p class="text-xs text-slate-500 leading-relaxed mb-6">Deep-dives into specific use cases and visual setup guides for Fusio.</p>
                     <a href="https://www.youtube.com/c/FusioAPI" target="_blank" class="text-[10px] font-black text-slate-400 group-hover:text-orange-500 uppercase tracking-widest transition-colors">Watch Now →</a>
                 </div>
@@ -94,8 +94,8 @@
                                 <label for="message" class="block text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] mb-4">02. Message Body</label>
                                 <textarea id="message" name="message" rows="6" placeholder="How can we assist your project?" class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-slate-600 focus:outline-none focus:border-orange-500/50 focus:ring-1 focus:ring-orange-500/20 transition-all resize-none"></textarea>
                             </div>
-                            <button type="submit" id="contactButton" name="contactButton" class="w-full md:w-auto px-10 py-4 bg-orange-500 hover:bg-orange-600 text-white font-black text-xs uppercase tracking-[0.2em] rounded-xl transition-all shadow-lg shadow-orange-500/20 active:scale-[0.98]">
-                                Dispatch Message →
+                            <button type="submit" id="contactButton" name="contactButton" class="w-full md:w-auto px-10 py-4 bg-orange-400 hover:bg-orange-300 text-slate-950 font-black text-xs uppercase tracking-[0.2em] rounded-xl transition-all shadow-lg shadow-orange-500/20 active:scale-[0.98] focus:ring-4 focus:ring-orange-500/30 outline-none">
+                                Dispatch Message
                             </button>
                         </form>
                     </div>
@@ -107,13 +107,13 @@
                                 <div class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></div>
                                 <span class="text-[10px] font-black text-emerald-500 uppercase tracking-widest">Idealistic Open Source</span>
                             </div>
-                            <h3 class="text-sm font-black text-white uppercase tracking-widest mb-4">Project Sustainability</h3>
+                            <h2 class="text-sm font-black text-white uppercase tracking-widest mb-4">Project Sustainability</h2>
                             <p class="text-lg text-slate-300 mb-6 leading-relaxed">
                                 Fusio is a community-first project built on the ideal of high-quality, accessible API infrastructure. Your donations directly empower our developers to maintain the core engine and keep the ecosystem independent and free for everyone.
                             </p>
                         </div>
                         <div class="space-y-4">
-                            <a href="https://github.com/sponsors/chriskapp/sponsorships" target="_blank" class="flex items-center justify-between p-4 bg-emerald-500 hover:bg-emerald-600 text-white rounded-2xl transition-all shadow-lg shadow-emerald-500/10">
+                            <a href="https://github.com/sponsors/chriskapp/sponsorships" target="_blank" class="flex items-center justify-between p-4 bg-emerald-700 hover:bg-emerald-600 text-white rounded-2xl transition-all shadow-lg shadow-emerald-500/10">
                                 <span class="text-xs font-black uppercase tracking-widest">Support on GitHub</span>
                                 <span class="text-xl">❤</span>
                             </a>

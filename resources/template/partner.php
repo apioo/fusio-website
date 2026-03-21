@@ -16,7 +16,7 @@
                 <div class="w-20 h-20 mb-6 rounded-2xl bg-slate-950/60 border border-white/5 p-4 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
                     <img src="<?php echo $base; ?>/img/partner/phpstorm.svg" alt="Partner Name" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all">
                 </div>
-                <h3 class="text-xl font-bold text-white mb-3">JetBrains</h3>
+                <h2 class="text-xl font-bold text-white mb-3">JetBrains</h2>
                 <a href="https://jb.gg/OpenSourceSupport" target="_blank" class="inline-flex items-center gap-2 text-[10px] font-black text-slate-500 group-hover:text-orange-500 uppercase tracking-widest transition-colors">
                     Visit Website <span>→</span>
                 </a>
@@ -28,7 +28,7 @@
                         <path d="M12 6v6m0 0v6m0-6h6m-6 0H6" stroke-width="2" stroke-linecap="round"/>
                     </svg>
                 </div>
-                <h3 class="text-lg font-bold text-slate-400 mb-2">Join the Ecosystem</h3>
+                <h2 class="text-lg font-bold text-slate-400 mb-2">Join the Ecosystem</h2>
                 <p class="text-xs text-slate-500 max-w-[200px] mb-6">Support the open source future of API management.</p>
                 <a href="https://github.com/sponsors/chriskapp" class="text-[10px] font-black text-slate-600 hover:text-white uppercase tracking-widest transition-colors">Get in Touch →</a>
             </div>

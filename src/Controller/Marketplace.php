@@ -31,13 +31,14 @@ class Marketplace extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
-            'title' => 'Marketplace',
-            'description' => 'The central exchange for the Fusio ecosystem where the community shares frontend apps and modular bundles.',
+            'title' => 'Marketplace | Fusio Extensions, Apps & API Bundles',
+            'description' => 'Browse the Fusio Marketplace to find community-built frontend apps, modular bundles, and custom actions. Accelerate your API development with ready-to-use extensions.',
             'keywords' => 'Fusio Marketplace, Fusio apps, API extensions, Fusio actions, community apps, Fusio backend, Fusio CLI, API management tools, Fusio integrations, open-source API apps, Fusio developer portal, Fusio extensions',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
+            'headline' => 'Marketplace',
+            'tagline' => 'The central exchange for the Fusio ecosystem where the community shares frontend apps and modular bundles.',
             'bundles' => $this->getBundles(),
             'apps' => $this->getApps(),
-            'bootstrap_icons' => true,
         ];
 
         $templateFile = __DIR__ . '/../../resources/template/marketplace.php';

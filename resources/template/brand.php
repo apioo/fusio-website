@@ -15,7 +15,7 @@
                         <img src="https://www.fusio-project.org/media/logo.svg" alt="Fusio Logo" class="w-32 h-32 object-contain drop-shadow-2xl">
                     </div>
                     <div class="p-8 md:p-12 bg-slate-950/20">
-                        <h3 class="text-xl font-bold text-white mb-6">Logos</h3>
+                        <h2 class="text-xl font-bold text-white mb-6">Logos</h2>
                         <div class="space-y-2">
                             <div class="flex items-center justify-between p-4 rounded-xl hover:bg-white/5 border border-transparent hover:border-white/5 transition-all group">
                                 <div class="flex items-center gap-4">

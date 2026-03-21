@@ -26,10 +26,12 @@ class Developers extends ControllerAbstract
         }
 
         $data = [
-            'title' => 'Developers',
-            'description' => 'Everything you need to build, deploy, and scale with Fusio. From installation to multi-language SDKs and API specifications.',
-            'keywords' => '',
+            'title' => 'Developer Hub | Docs, Installation & SDK Generation',
+            'description' => 'The definitive guide for Fusio developers. Access installation docs, multi-language SDKs, and API specifications to build, deploy, and scale your API products in minutes.',
+            'keywords' => 'Fusio Developer Documentation, API Management Installation, PHP API Framework, Deploy API Gateway, Multi-language API SDKs, API Specification Tools, Fusio Tutorial, Serverless API Deployment',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
+            'headline' => 'Developers',
+            'tagline' => 'Start building with Fusio. Access installation guides, multi-language SDKs, and full API specifications.',
             'tagName' => $release->getTagName(),
             'htmlUrl' => $release->getHtmlUrl(),
             'assetSize' => $release->getAssetSize(),

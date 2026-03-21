@@ -22,9 +22,11 @@ class Worker extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
-            'title' => 'Worker',
-            'description' => 'The execution runtimes for your business logic. Fusio workers allow you to implement actions in your preferred language while maintaining a unified API contract.',
-            'keywords' => 'Fusio Worker, API actions, Java worker, JavaScript worker, PHP worker, Python worker, Fusio API, custom actions, Fusio integrations, Fusio backend',
+            'title' => 'Multi-Language Workers | Polyglot API Execution Runtimes',
+            'description' => 'Execute business logic in your preferred language. Fusio Workers support Javascript, Python, PHP, and more, while maintaining a unified API contract.',
+            'keywords' => 'API Worker, Polyglot Backend, Serverless Runtimes, Fusio Worker, Multi-language API, Python API Logic, Javascript API Execution',
+            'headline' => 'Worker',
+            'tagline' => 'Execute logic in any language. Run your business code in Javascript, Python, or PHP via unified runtimes.',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
         ];
 

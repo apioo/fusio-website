@@ -32,9 +32,11 @@ class Adapter extends ControllerAbstract
         $communityAdapters = array_map($this->build(...), $communityAdapters);
 
         $data = [
-            'title' => 'Adapter',
-            'description' => 'Extend Fusio by connecting to different data sources or enhancing system capabilities. Browse our ecosystem of official and community-driven adapters.',
-            'keywords' => 'Fusio adapters, API integrations, MongoDB adapter, AWS adapter, Redis adapter, Fusio extensions, Fusio Composer, Fusio API connections, Fusio services',
+            'title' => 'API Adapters | Connect Data Sources & Services to Fusio',
+            'description' => 'Discover official and community-driven Fusio adapters. Easily connect your API to SQL, NoSQL, and 3rd-party services to automate data workflows.',
+            'keywords' => 'API Adapters, Database to REST, Fusio Extensions, SQL API Connector, NoSQL Integration, API Middleware, Custom Data Sources',
+            'headline' => 'Adapter',
+            'tagline' => 'Connect any data source. Browse official and community adapters for SQL, NoSQL, and 3rd-party services.',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
             'fusio' => $fusioAdapters,
             'community' => $communityAdapters,

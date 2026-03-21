@@ -11,7 +11,7 @@
                         <span class="text-xl font-mono font-bold text-orange-500">Ph</span>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-bold text-white">PHP Worker</h3>
+                        <h2 class="text-2xl font-bold text-white">PHP Worker</h2>
                         <p class="text-xs text-slate-500 uppercase tracking-widest font-mono">PHP Runtime</p>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                         <span class="text-xl font-mono font-bold text-yellow-500">Js</span>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-bold text-white">JavaScript Worker</h3>
+                        <h2 class="text-2xl font-bold text-white">JavaScript Worker</h2>
                         <p class="text-xs text-slate-500 uppercase tracking-widest font-mono">Node.js Runtime</p>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                         <span class="text-xl font-mono font-bold text-blue-400">Py</span>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-bold text-white">Python Worker</h3>
+                        <h2 class="text-2xl font-bold text-white">Python Worker</h2>
                         <p class="text-xs text-slate-500 uppercase tracking-widest font-mono">Python Runtime</p>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                         <span class="text-xl font-mono font-bold text-red-500">Jv</span>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-bold text-white">Java Worker</h3>
+                        <h2 class="text-2xl font-bold text-white">Java Worker</h2>
                         <p class="text-xs text-slate-500 uppercase tracking-widest font-mono">JVM / Groovy Runtime</p>
                     </div>
                 </div>

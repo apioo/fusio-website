@@ -22,8 +22,11 @@ class Integration extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
-            'title' => 'Integration',
-            'description' => 'Explore reference implementations and boilerplate projects. These samples demonstrate how to authenticate, consume, and interact with the Fusio API across different ecosystems.',
+            'title' => 'API Integrations | Reference Implementations & Boilerplates',
+            'description' => 'Accelerate development with Fusio integration samples. Explore boilerplate projects for authentication, API consumption, and cross-ecosystem interaction.',
+            'keywords' => 'API Integration Samples, Fusio Boilerplate, API Authentication Example, REST API Reference, GitHub API Starter, Fusio Integration Guide',
+            'headline' => 'Integration',
+            'tagline' => 'Build faster with reference implementations and code samples for authentication and API consumption.',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
         ];
 

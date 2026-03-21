@@ -23,10 +23,12 @@ class Comparison extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
-            'title' => 'Comparison',
-            'description' => 'Compare Fusio with leading API management platforms like Supabase, Firebase, Kong, Tyk, and WSO2.',
-            'keywords' => 'Fusio, API management, Supabase, Firebase, Kong, Tyk, WSO2, API gateway, backend-as-a-service, open-source API platform, self-hosted API, API development, API comparison, Fusio vs Supabase, Fusio vs Firebase, API management platforms',
+            'title' => 'API Management Comparisons | Fusio vs. Leading Platforms',
+            'description' => 'See how Fusio stacks up against Supabase, Firebase, Kong, and Tyk. A technical comparison of features, self-hosting, and API governance capabilities.',
+            'keywords' => 'API Management Comparison, Fusio vs Supabase, Fusio vs Firebase, Open Source API Gateway, Fusio vs Kong, Tyk Alternative, WSO2 vs Fusio',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
+            'headline' => 'Comparison',
+            'tagline' => 'See how Fusio stacks up against Supabase, Kong, and Tyk to find the right tool for your architecture.',
         ];
 
         $templateFile = __DIR__ . '/../../resources/template/comparison.php';
@@ -45,9 +47,11 @@ class Comparison extends ControllerAbstract
         }
 
         $data = [
-            'title' => ucfirst($type) . ' alternative',
-            'description' => $this->getDescription($type),
-            'keywords' => 'Fusio, API management, ' . ucfirst($type) . ', open-source API platform, self-hosted API, API development, Fusio vs ' . ucfirst($type) . ', API management platforms',
+            'title' => 'Fusio vs ' . ucfirst($type),
+            'description' => 'An in-depth technical comparison between Fusio and ' . ucfirst($type) . '. Explore differences to find the right tool for your project.',
+            'keywords' => 'Fusio vs ' . ucfirst($type) . ', ' . ucfirst($type) . ' alternative, self-hosted ' . ucfirst($type) . ', ' . ucfirst($type) . ' vs Fusio features, API management comparison, open source backend',
+            'headline' => ucfirst($type) . ' alternative',
+            'tagline' => $this->getDescription($type),
             'canonical' => $this->reverseRouter->getUrl([self::class, 'detail'], ['app' => $type]),
         ];
 

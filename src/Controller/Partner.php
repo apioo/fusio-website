@@ -22,10 +22,12 @@ class Partner extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
-            'title' => 'Partner',
-            'description' => 'A dedicated list of partners and organizations who actively support the development and growth of the Fusio open-source API management platform.',
-            'keywords' => 'Fusio, API management, open-source API platform, Fusio partners, JetBrains, Fusio collaboration, API development, Fusio project partners, Fusio sponsorship, open-source collaboration',
+            'title' => 'Official Partners | Supporting the Fusio API Ecosystem',
+            'description' => 'Meet the organizations and partners driving the growth of the Fusio open-source platform. Join our network of API management specialists and contributors.',
+            'keywords' => 'Fusio Partners, Open Source Support, API Ecosystem, Tech Partnerships, Fusio Contributors, Enterprise API Support, Community Partners',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
+            'headline' => 'Partner',
+            'tagline' => 'Organizations and experts actively contributing to the growth and sustainability of the Fusio platform.',
         ];
 
         $templateFile = __DIR__ . '/../../resources/template/partner.php';

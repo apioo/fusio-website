@@ -15,7 +15,7 @@
                         <div class="h-12 w-10 bg-slate-950 rounded-lg border border-white/10 flex items-center justify-center p-1.5 group-hover:border-orange-500/30 transition-all overflow-hidden flex-shrink-0">
                             <img src="<?php echo $base; ?>/img/sdk/php.png" alt="PHP Logo" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500">
                         </div>
-                        <h4 class="font-bold text-slate-200 group-hover:text-white">PHP CLI</h4>
+                        <h3 class="font-bold text-slate-200 group-hover:text-white">PHP CLI</h3>
                     </div>
                     <a href="https://github.com/apioo/fusio-sample-php-cli" target="_blank" class="block text-center py-2 bg-white/5 hover:bg-white/10 rounded-lg text-[10px] font-bold tracking-widest uppercase transition border border-white/5">GitHub Repository</a>
                 </div>
@@ -24,7 +24,7 @@
                         <div class="h-12 w-10 bg-slate-950 rounded-lg border border-white/10 flex items-center justify-center p-1.5 group-hover:border-orange-500/30 transition-all overflow-hidden flex-shrink-0">
                             <img src="<?php echo $base; ?>/img/sdk/python.png" alt="Python Logo" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500">
                         </div>
-                        <h4 class="font-bold text-slate-200 group-hover:text-white">Python CLI</h4>
+                        <h3 class="font-bold text-slate-200 group-hover:text-white">Python CLI</h3>
                     </div>
                     <a href="https://github.com/apioo/fusio-sample-python-cli" target="_blank" class="block text-center py-2 bg-white/5 hover:bg-white/10 rounded-lg text-[10px] font-bold tracking-widest uppercase transition border border-white/5">GitHub Repository</a>
                 </div>
@@ -33,7 +33,7 @@
                         <div class="h-12 w-10 bg-slate-950 rounded-lg border border-white/10 flex items-center justify-center p-1.5 group-hover:border-orange-500/30 transition-all overflow-hidden flex-shrink-0">
                             <img src="<?php echo $base; ?>/img/sdk/go.png" alt="Go Logo" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500">
                         </div>
-                        <h4 class="font-bold text-slate-200 group-hover:text-white">Go CLI</h4>
+                        <h3 class="font-bold text-slate-200 group-hover:text-white">Go CLI</h3>
                     </div>
                     <a href="https://github.com/apioo/fusio-sample-go-cli" target="_blank" class="block text-center py-2 bg-white/5 hover:bg-white/10 rounded-lg text-[10px] font-bold tracking-widest uppercase transition border border-white/5">GitHub Repository</a>
                 </div>
@@ -42,7 +42,7 @@
                         <div class="h-12 w-10 bg-slate-950 rounded-lg border border-white/10 flex items-center justify-center p-1.5 group-hover:border-orange-500/30 transition-all overflow-hidden flex-shrink-0">
                             <img src="<?php echo $base; ?>/img/sdk/csharp.png" alt="C# Logo" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500">
                         </div>
-                        <h4 class="font-bold text-slate-200 group-hover:text-white">C# .NET</h4>
+                        <h3 class="font-bold text-slate-200 group-hover:text-white">C# .NET</h3>
                     </div>
                     <a href="https://github.com/apioo/fusio-sample-csharp-cli" target="_blank" class="block text-center py-2 bg-white/5 hover:bg-white/10 rounded-lg text-[10px] font-bold tracking-widest uppercase transition border border-white/5">GitHub Repository</a>
                 </div>
@@ -51,7 +51,7 @@
                         <div class="h-12 w-10 bg-slate-950 rounded-lg border border-white/10 flex items-center justify-center p-1.5 group-hover:border-orange-500/30 transition-all overflow-hidden flex-shrink-0">
                             <img src="<?php echo $base; ?>/img/sdk/java.png" alt="Java Logo" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500">
                         </div>
-                        <h4 class="font-bold text-slate-200 group-hover:text-white">Java CLI</h4>
+                        <h3 class="font-bold text-slate-200 group-hover:text-white">Java CLI</h3>
                     </div>
                     <a href="https://github.com/apioo/fusio-sample-java-cli" target="_blank" class="block text-center py-2 bg-white/5 hover:bg-white/10 rounded-lg text-[10px] font-bold tracking-widest uppercase transition border border-white/5">GitHub Repository</a>
                 </div>

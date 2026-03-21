@@ -20,10 +20,12 @@ class Platform extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
-            'title' => 'Platform',
-            'description' => 'An overview of the core entities and unique concepts that form the foundation of the Fusio API management platform.',
-            'keywords' => '',
+            'title' => 'Platform | Open Source API Management & Backend Logic Engine',
+            'description' => 'Explore the core architecture of Fusio. Learn how our open-source API management platform uses Actions, Schemas, and Connections to automate your API lifecycle and backend logic.',
+            'keywords' => 'Open Source API Management, API Lifecycle Automation, Self-hosted API Gateway, Backend API Logic Engine, Fusio Architecture, API Governance Platform, REST API Construction Kit',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
+            'headline' => 'Platform',
+            'tagline' => 'An overview of the core entities and unique concepts that form the foundation of the Fusio API management platform.',
         ];
 
         $templateFile = __DIR__ . '/../../resources/template/platform.php';

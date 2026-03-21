@@ -22,10 +22,12 @@ class Ecosystem extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
-            'title' => 'Ecosystem',
-            'description' => 'Besides our core product, we offer additional services and open-source projects to augment the functionality of Fusio.',
-            'keywords' => 'Fusio, API management, SDKgen, APIgen, APImon, TypeHub, TypeAPI, TypeSchema, PSX, Fusio Marketplace, Fusio Framework, Plant server panel, API tools, API integrations, open-source API tools, API development ecosystem',
+            'title' => 'Ecosystem | Open Source API Tools, TypeAPI & SDKgen',
+            'description' => 'Extend Fusio with a powerful ecosystem of open-source tools. From SDKgen for client libraries to TypeAPI for better specifications, discover the projects powering modern API development.',
+            'keywords' => 'Fusio Ecosystem, SDKgen, TypeAPI, TypeSchema, API Documentation Tools, Automated SDK Generation, Open Source API Tools, TypeHub, API Monitoring Service, PSX Framework',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
+            'headline' => 'Ecosystem',
+            'tagline' => 'Besides our core product, we offer additional services and open-source projects to augment the functionality of Fusio.',
         ];
 
         $templateFile = __DIR__ . '/../../resources/template/ecosystem.php';

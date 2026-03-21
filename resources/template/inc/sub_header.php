@@ -6,24 +6,13 @@
     </div>
     <div class="container mx-auto px-6 relative z-10">
         <div class="max-w-4xl">
-            <!--
-            <?php if(isset($breadcrump)): ?>
-                <nav class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-500 mb-6">
-                    <a href="<?php echo $base; ?>" class="hover:text-orange-500 transition">Home</a>
-                    <?php foreach($breadcrump as $title => $link): ?>
-                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></svg>
-                        <a href="<?php echo $link; ?>" class="text-slate-300"><?php echo $title; ?></a>
-                    <?php endforeach; ?>
-                </nav>
-            <?php endif; ?>
-            -->
             <h1 class="text-4xl md:text-6xl font-black text-white mb-6 tracking-tighter">
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">
-                    <?php echo $title; ?>
+                    <?php echo $headline; ?>
                 </span>
             </h1>
             <p class="text-lg md:text-xl text-slate-400 max-w-2xl leading-relaxed">
-                <?php echo $description; ?>
+                <?php echo $tagline; ?>
             </p>
         </div>
     </div>

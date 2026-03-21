@@ -33,7 +33,7 @@
             </p>
             <div class="flex items-center justify-between pt-8 border-t border-white/5">
                 <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 bg-slate-950 rounded-lg border border-white/10 flex items-center justify-center text-slate-500 group-hover:text-orange-500 group-hover:border-orange-500/30 transition-all">
+                    <div class="w-10 h-10 bg-slate-950 rounded-lg border border-white/10 flex items-center justify-center text-slate-400 group-hover:text-orange-500 group-hover:border-orange-500/30 transition-all">
                         <span class="text-xs font-mono font-bold tracking-tighter"><?php echo strtoupper(substr($row->author_name, 0, 2)); ?></span>
                     </div>
                     <span class="text-sm font-bold text-slate-300"><a href="<?php echo $row->author_uri; ?>"><?php echo $row->author_name; ?></a></span>

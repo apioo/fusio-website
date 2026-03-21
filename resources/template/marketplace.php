@@ -7,7 +7,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-20">
             <a href="https://marketplace.fusio-project.org/login" class="group p-8 rounded-[2rem] bg-slate-900/40 border border-white/5 hover:bg-white/[0.02] hover:border-white/10 transition-all flex items-center justify-between">
                 <div>
-                    <h3 class="text-lg font-bold text-white mb-1 group-hover:text-orange-500 transition-colors">Sign In</h3>
+                    <div class="text-lg font-bold text-white mb-1 group-hover:text-orange-500 transition-colors">Sign In</div>
                     <p class="text-xs text-slate-500">Access your developer dashboard and managed assets.</p>
                 </div>
                 <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-slate-400 group-hover:text-white transition-colors">
@@ -16,7 +16,7 @@
             </a>
             <a href="https://marketplace.fusio-project.org/register" class="group p-8 rounded-[2rem] bg-orange-500/5 border border-orange-500/20 hover:bg-orange-500/10 hover:border-orange-500/40 transition-all flex items-center justify-between">
                 <div>
-                    <h3 class="text-lg font-bold text-white mb-1 group-hover:text-orange-400 transition-colors">Register</h3>
+                    <div class="text-lg font-bold text-white mb-1 group-hover:text-orange-400 transition-colors">Register</div>
                     <p class="text-xs text-slate-500">Create a new developer account to publish extensions.</p>
                 </div>
                 <div class="w-12 h-12 rounded-xl bg-orange-500/20 flex items-center justify-center text-orange-500 group-hover:scale-110 transition-transform">
@@ -26,7 +26,7 @@
         </div>
         <section class="mb-24">
             <div class="flex items-center gap-4 mb-8">
-                <span class="text-[10px] font-black text-orange-500 uppercase tracking-widest">01. Apps</span>
+                <h2 class="text-[10px] font-black text-orange-500 uppercase tracking-widest">01. Apps</h2>
                 <div class="h-px w-12 bg-orange-500/20"></div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -47,7 +47,7 @@
         </section>
         <section class="mt-8">
             <div class="flex items-center gap-4 mb-8">
-                <span class="text-[10px] font-black text-blue-500 uppercase tracking-widest">02. Bundles</span>
+                <h2 class="text-[10px] font-black text-blue-500 uppercase tracking-widest">02. Bundles</h2>
                 <div class="h-px w-12 bg-blue-500/20"></div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">

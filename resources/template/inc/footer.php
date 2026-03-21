@@ -19,7 +19,7 @@
                     </div>
                 </div>
                 <div>
-                    <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Links</h4>
+                    <p class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Links</p>
                     <ul class="space-y-4 text-sm text-slate-400">
                         <li><a href="https://docs.fusio-project.org/" class="hover:text-orange-500 transition">Documentation</a></li>
                         <li><a href="https://typehub.cloud/" class="hover:text-orange-500 transition">TypeHub</a></li>
@@ -29,7 +29,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Resources</h4>
+                    <p class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Resources</p>
                     <ul class="space-y-4 text-sm text-slate-400">
                         <li><a href="<?php echo $router->getAbsolutePath([\App\Controller\Adapter::class, 'show']); ?>" class="hover:text-orange-500 transition">Adapter</a></li>
                         <li><a href="<?php echo $router->getAbsolutePath([\App\Controller\Worker::class, 'show']); ?>" class="hover:text-orange-500 transition">Worker</a></li>
@@ -42,7 +42,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Community</h4>
+                    <p class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Community</p>
                     <ul class="space-y-4 text-sm text-slate-400">
                         <li><a href="https://github.com/apioo/fusio" class="hover:text-orange-500 transition">GitHub</a>
                         </li>
@@ -55,14 +55,14 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Comparison</h4>
+                    <p class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Comparison</p>
                     <ul class="space-y-4 text-sm text-slate-400">
-                        <li><a href="https://www.fusio-project.org/comparison/kong" class="hover:text-orange-500 transition">vs Kong</a></li>
-                        <li><a href="https://www.fusio-project.org/comparison/tyk" class="hover:text-orange-500 transition">vs Tyk</a></li>
-                        <li><a href="https://www.fusio-project.org/comparison/wso2" class="hover:text-orange-500 transition">vs WSO2</a></li>
-                        <li><a href="https://www.fusio-project.org/comparison/firebase" class="hover:text-orange-500 transition">vs Firebase</a></li>
-                        <li><a href="https://www.fusio-project.org/comparison/supabase" class="hover:text-orange-500 transition">vs Supabase</a></li>
-                        <li><a href="https://www.fusio-project.org/comparison/appwrite" class="hover:text-orange-500 transition">vs Appwrite</a></li>
+                        <li><a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'kong']); ?>" class="hover:text-orange-500 transition">vs Kong</a></li>
+                        <li><a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'tyk']); ?>" class="hover:text-orange-500 transition">vs Tyk</a></li>
+                        <li><a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'wso2']); ?>" class="hover:text-orange-500 transition">vs WSO2</a></li>
+                        <li><a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'firebase']); ?>" class="hover:text-orange-500 transition">vs Firebase</a></li>
+                        <li><a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'supabase']); ?>" class="hover:text-orange-500 transition">vs Supabase</a></li>
+                        <li><a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'appwrite']); ?>" class="hover:text-orange-500 transition">vs Appwrite</a></li>
                     </ul>
                 </div>
             </div>

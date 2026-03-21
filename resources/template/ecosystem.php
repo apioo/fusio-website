@@ -9,7 +9,7 @@
                 <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mb-6 text-orange-500 group-hover:scale-110 transition">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
                 </div>
-                <h3 class="text-2xl font-bold text-white mb-4"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Marketplace::class, 'show']); ?>">Marketplace</a></h3>
+                <h2 class="text-2xl font-bold text-white mb-4"><a href="<?php echo $router->getAbsolutePath([\App\Controller\Marketplace::class, 'show']); ?>">Marketplace</a></h2>
                 <p class="text-slate-400 text-sm leading-relaxed mb-6">
                     The place to share apps and actions. Register your credentials under <code>System / Config</code> to install apps directly from your local dashboard.
                 </p>
@@ -19,7 +19,7 @@
                 <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mb-6 text-orange-500 group-hover:scale-110 transition">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
                 </div>
-                <h3 class="text-2xl font-bold text-white mb-4"><a href="https://sdkgen.app/">SDKgen</a></h3>
+                <h2 class="text-2xl font-bold text-white mb-4"><a href="https://sdkgen.app/">SDKgen</a></h2>
                 <p class="text-slate-400 text-sm leading-relaxed mb-6">
                     Generate client SDKs for C#, Go, Java, and Python. Seamlessly interact with your API by providing your SDKgen credentials in Fusio.
                 </p>
@@ -29,7 +29,7 @@
                 <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mb-6 text-orange-500 group-hover:scale-110 transition">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
                 </div>
-                <h3 class="text-2xl font-bold text-white mb-4"><a href="https://typehub.cloud/">TypeHub</a></h3>
+                <h2 class="text-2xl font-bold text-white mb-4"><a href="https://typehub.cloud/">TypeHub</a></h2>
                 <p class="text-slate-400 text-sm leading-relaxed mb-6">
                     API and data design platform. Discovery and tracking for your API specification, ensuring a clean history of how your API evolves.
                 </p>
@@ -39,7 +39,7 @@
                 <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mb-6 text-orange-500 group-hover:scale-110 transition">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                 </div>
-                <h3 class="text-2xl font-bold text-white mb-4"><a href="https://apigen.app/">APIgen</a></h3>
+                <h2 class="text-2xl font-bold text-white mb-4"><a href="https://apigen.app/">APIgen</a></h2>
                 <p class="text-slate-400 text-sm leading-relaxed mb-6">
                     Low-code generator that creates fully working Fusio APIs and Angular CRUD apps based on your data models.
                 </p>
@@ -48,7 +48,7 @@
                 <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mb-6 text-orange-500 group-hover:scale-110 transition">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
                 </div>
-                <h3 class="text-2xl font-bold text-white mb-4"><a href="https://apimon.app/">APImon</a></h3>
+                <h2 class="text-2xl font-bold text-white mb-4"><a href="https://apimon.app/">APImon</a></h2>
                 <p class="text-slate-400 text-sm leading-relaxed mb-6">
                     Specialized API monitoring and uptime pages for Fusio installations. Get notified instantly about changes or downtime.
                 </p>
@@ -78,9 +78,9 @@
                     <span class="text-[10px] font-bold text-orange-500/80 uppercase tracking-widest px-2 py-1 rounded-md bg-orange-500/10 border border-orange-500/20">Main Engine</span>
                     <span class="text-xs font-mono text-slate-600">ID: 0x01</span>
                 </div>
-                <h4 class="text-xl font-bold text-white mb-2 group-hover:text-orange-500 transition">
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-orange-500 transition">
                     <a href="https://github.com/apioo/fusio">Fusio</a>
-                </h4>
+                </h3>
                 <p class="text-sm text-slate-400 leading-relaxed mb-6">Self-Hosted API Management for Builders. The central orchestrator for your logic and security.</p>
             </div>
             <div class="group p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/[0.07] hover:border-orange-500/30 transition-all duration-300">
@@ -88,9 +88,9 @@
                     <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest px-2 py-1 rounded-md bg-white/5 border border-white/10">Scaffold</span>
                     <span class="text-xs font-mono text-slate-600">ID: 0x02</span>
                 </div>
-                <h4 class="text-xl font-bold text-white mb-2 group-hover:text-orange-500 transition">
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-orange-500 transition">
                     <a href="https://github.com/apioo/fusio-framework">Framework</a>
-                </h4>
+                </h3>
                 <p class="text-sm text-slate-400 leading-relaxed mb-6">Starter repository designed to help you leverage Fusio as a professional PHP framework foundation.</p>
             </div>
             <div class="group p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/[0.07] hover:border-orange-500/30 transition-all duration-300">
@@ -98,9 +98,9 @@
                     <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest px-2 py-1 rounded-md bg-white/5 border border-white/10">Deployment</span>
                     <span class="text-xs font-mono text-slate-600">ID: 0x03</span>
                 </div>
-                <h4 class="text-xl font-bold text-white mb-2 group-hover:text-orange-500 transition">
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-orange-500 transition">
                     <a href="https://github.com/apioo/fusio-plant">Plant</a>
-                </h4>
+                </h3>
                 <p class="text-sm text-slate-400 leading-relaxed mb-6">Server panel to easily self-host Fusio and other apps on your own infrastructure with one click.</p>
             </div>
             <div class="group p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/[0.07] hover:border-orange-500/30 transition-all duration-300">
@@ -108,9 +108,9 @@
                     <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest px-2 py-1 rounded-md bg-blue-500/10 border border-blue-500/20">Core Logic</span>
                     <span class="text-xs font-mono text-slate-600">ID: 0x04</span>
                 </div>
-                <h4 class="text-xl font-bold text-white mb-2 group-hover:text-orange-500 transition">
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-orange-500 transition">
                     <a href="https://phpsx.org/">PSX</a>
-                </h4>
+                </h3>
                 <p class="text-sm text-slate-400 leading-relaxed mb-6">An innovative PHP framework dedicated to building fully typed and high-performance REST APIs.</p>
             </div>
             <div class="group p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/[0.07] hover:border-orange-500/30 transition-all duration-300">
@@ -118,9 +118,9 @@
                     <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest px-2 py-1 rounded-md bg-blue-500/10 border border-blue-500/20">Modeling</span>
                     <span class="text-xs font-mono text-slate-600">ID: 0x05</span>
                 </div>
-                <h4 class="text-xl font-bold text-white mb-2 group-hover:text-orange-500 transition">
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-orange-500 transition">
                     <a href="https://typeschema.org/">TypeSchema</a>
-                </h4>
+                </h3>
                 <p class="text-sm text-slate-400 leading-relaxed mb-6">JSON format to describe data models in a language neutral format for better interoperability.</p>
             </div>
             <div class="group p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/[0.07] hover:border-orange-500/30 transition-all duration-300">
@@ -128,9 +128,9 @@
                     <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest px-2 py-1 rounded-md bg-blue-500/10 border border-blue-500/20">Standard</span>
                     <span class="text-xs font-mono text-slate-600">ID: 0x06</span>
                 </div>
-                <h4 class="text-xl font-bold text-white mb-2 group-hover:text-orange-500 transition">
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-orange-500 transition">
                     <a href="https://typeapi.org/">TypeAPI</a>
-                </h4>
+                </h3>
                 <p class="text-sm text-slate-400 leading-relaxed mb-6">An OpenAPI alternative to describe REST APIs for type-safe code generation across languages.</p>
             </div>
         </div>
