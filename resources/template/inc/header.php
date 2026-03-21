@@ -18,13 +18,13 @@
     <link rel="preload" href="<?php echo $base; ?>/dist/app.min.css" as="style"/>
     <link rel="preload" href="<?php echo $base; ?>/dist/app.min.js" as="script"/>
     <link rel="icon" href="<?php echo $base; ?>/img/fusio_32px.png" type="image/png"/>
-    <link rel="stylesheet" href="<?php echo $base; ?>/dist/app.min.css"/>
+    <link rel="stylesheet" href="<?php echo $base; ?>/dist/app.min.css?cache=1774124398"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono&display=swap">
     <link rel="alternate" href="<?php echo $router->getAbsolutePath([\Chriskapp\Blog\Controller\Feed::class, 'show']); ?>" type="application/atom+xml" title="Fusio Blog"/>
     <?php if (isset($canonical)): ?>
     <link rel="canonical" href="<?php echo $canonical; ?>"/>
     <?php endif; ?>
-    <script async src="<?php echo $base; ?>/dist/app.min.js"></script>
+    <script async src="<?php echo $base; ?>/dist/app.min.js?cache=1774124398"></script>
     <?php if (isset($recaptcha_key)): ?>
     <script src="https://www.google.com/recaptcha/enterprise.js?render=<?php echo $recaptcha_key; ?>"></script>
     <?php endif; ?>
