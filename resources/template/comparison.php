@@ -24,7 +24,7 @@
                             <h3 class="text-white font-bold text-lg tracking-tight">Kong</h3>
                         </div>
                         <div class="flex flex-col gap-3">
-                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'kong']); ?>" class="w-full py-3 px-4 text-orange-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg shadow-orange-500/10">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'kong']); ?>" class="w-full py-3 px-4 text-orange-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg">
                                 Fusio vs Kong
                             </a>
                             <a href="https://konghq.com/" target="_blank" rel="noopener" class="w-full py-3 px-4 bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white text-[11px] font-black uppercase tracking-widest text-center rounded-xl border border-white/10 transition-all">
@@ -40,7 +40,7 @@
                             <h3 class="text-white font-bold text-lg tracking-tight">Tyk</h3>
                         </div>
                         <div class="flex flex-col gap-3">
-                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'tyk']); ?>" class="w-full py-3 px-4 text-orange-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg shadow-orange-500/10">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'tyk']); ?>" class="w-full py-3 px-4 text-orange-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg">
                                 Fusio vs Tyk
                             </a>
                             <a href="https://tyk.io/" target="_blank" rel="noopener" class="w-full py-3 px-4 bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white text-[11px] font-black uppercase tracking-widest text-center rounded-xl border border-white/10 transition-all">
@@ -56,7 +56,7 @@
                             <h3 class="text-white font-bold text-lg tracking-tight">WSO2</h3>
                         </div>
                         <div class="flex flex-col gap-3">
-                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'wso2']); ?>" class="w-full py-3 px-4 text-orange-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg shadow-orange-500/10">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'wso2']); ?>" class="w-full py-3 px-4 text-orange-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg">
                                 Fusio vs WSO2
                             </a>
                             <a href="https://wso2.com/" target="_blank" rel="noopener" class="w-full py-3 px-4 bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white text-[11px] font-black uppercase tracking-widest text-center rounded-xl border border-white/10 transition-all">
@@ -87,7 +87,7 @@
                             <h3 class="text-white font-bold text-lg tracking-tight">Firebase</h3>
                         </div>
                         <div class="flex flex-col gap-3">
-                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'firebase']); ?>" class="w-full py-3 px-4 text-emerald-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg shadow-emerald-500/10">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'firebase']); ?>" class="w-full py-3 px-4 text-emerald-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg">
                                 Fusio vs Firebase
                             </a>
                             <a href="https://firebase.google.com/" target="_blank" rel="noopener" class="w-full py-3 px-4 bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white text-[11px] font-black uppercase tracking-widest text-center rounded-xl border border-white/10 transition-all">
@@ -103,7 +103,7 @@
                             <h3 class="text-white font-bold text-lg tracking-tight">Supabase</h3>
                         </div>
                         <div class="flex flex-col gap-3">
-                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'supabase']); ?>" class="w-full py-3 px-4 text-emerald-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg shadow-emerald-500/10">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'supabase']); ?>" class="w-full py-3 px-4 text-emerald-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg">
                                 Fusio vs Supabase
                             </a>
                             <a href="https://supabase.com/" target="_blank" rel="noopener" class="w-full py-3 px-4 bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white text-[11px] font-black uppercase tracking-widest text-center rounded-xl border border-white/10 transition-all">
@@ -119,7 +119,7 @@
                             <h3 class="text-white font-bold text-lg tracking-tight">Appwrite</h3>
                         </div>
                         <div class="flex flex-col gap-3">
-                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'appwrite']); ?>" class="w-full py-3 px-4 text-emerald-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg shadow-emerald-500/10">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'appwrite']); ?>" class="w-full py-3 px-4 text-emerald-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg">
                                 Fusio vs Appwrite
                             </a>
                             <a href="https://appwrite.io/" target="_blank" rel="noopener" class="w-full py-3 px-4 bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white text-[11px] font-black uppercase tracking-widest text-center rounded-xl border border-white/10 transition-all">
@@ -150,7 +150,7 @@
                             <h3 class="text-white font-bold text-lg tracking-tight">PostgREST</h3>
                         </div>
                         <div class="flex flex-col gap-3">
-                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'postgrest']); ?>" class="w-full py-3 px-4 text-blue-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg shadow-blue-500/10">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'postgrest']); ?>" class="w-full py-3 px-4 text-blue-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg">
                                 Fusio vs PostgREST
                             </a>
                             <a href="https://postgrest.org/" target="_blank" rel="noopener" class="w-full py-3 px-4 bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white text-[11px] font-black uppercase tracking-widest text-center rounded-xl border border-white/10 transition-all">
@@ -166,7 +166,7 @@
                             <h3 class="text-white font-bold text-lg tracking-tight">Hasura</h3>
                         </div>
                         <div class="flex flex-col gap-3">
-                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'hasura']); ?>" class="w-full py-3 px-4 text-blue-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg shadow-blue-500/10">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'hasura']); ?>" class="w-full py-3 px-4 text-blue-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg">
                                 Fusio vs Hasura
                             </a>
                             <a href="https://hasura.io/" target="_blank" rel="noopener" class="w-full py-3 px-4 bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white text-[11px] font-black uppercase tracking-widest text-center rounded-xl border border-white/10 transition-all">
@@ -182,7 +182,7 @@
                             <h3 class="text-white font-bold text-lg tracking-tight">DreamFactory</h3>
                         </div>
                         <div class="flex flex-col gap-3">
-                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'dreamfactory']); ?>" class="w-full py-3 px-4 text-blue-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg shadow-blue-500/10">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'dreamfactory']); ?>" class="w-full py-3 px-4 text-blue-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg">
                                 Fusio vs DreamFactory
                             </a>
                             <a href="https://www.dreamfactory.com/" target="_blank" rel="noopener" class="w-full py-3 px-4 bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white text-[11px] font-black uppercase tracking-widest text-center rounded-xl border border-white/10 transition-all">
@@ -213,7 +213,7 @@
                             <h3 class="text-white font-bold text-lg tracking-tight">Strapi</h3>
                         </div>
                         <div class="flex flex-col gap-3">
-                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'strapi']); ?>" class="w-full py-3 px-4 text-purple-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg shadow-purple-500/10">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'strapi']); ?>" class="w-full py-3 px-4 text-purple-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg">
                                 Fusio vs Strapi
                             </a>
                             <a href="https://strapi.io/" target="_blank" rel="noopener" class="w-full py-3 px-4 bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white text-[11px] font-black uppercase tracking-widest text-center rounded-xl border border-white/10 transition-all">
@@ -229,7 +229,7 @@
                             <h3 class="text-white font-bold text-lg tracking-tight">Ghost</h3>
                         </div>
                         <div class="flex flex-col gap-3">
-                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'ghost']); ?>" class="w-full py-3 px-4 text-purple-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg shadow-purple-500/10">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'ghost']); ?>" class="w-full py-3 px-4 text-purple-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg">
                                 Fusio vs Ghost
                             </a>
                             <a href="https://ghost.org/" target="_blank" rel="noopener" class="w-full py-3 px-4 bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white text-[11px] font-black uppercase tracking-widest text-center rounded-xl border border-white/10 transition-all">
@@ -245,7 +245,7 @@
                             <h3 class="text-white font-bold text-lg tracking-tight">Directus</h3>
                         </div>
                         <div class="flex flex-col gap-3">
-                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'directus']); ?>" class="w-full py-3 px-4 text-purple-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg shadow-purple-500/10">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'directus']); ?>" class="w-full py-3 px-4 text-purple-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg">
                                 Fusio vs Directus
                             </a>
                             <a href="https://directus.io/" target="_blank" rel="noopener" class="w-full py-3 px-4 bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white text-[11px] font-black uppercase tracking-widest text-center rounded-xl border border-white/10 transition-all">
@@ -276,7 +276,7 @@
                             <h3 class="text-white font-bold text-lg tracking-tight">Symfony</h3>
                         </div>
                         <div class="flex flex-col gap-3">
-                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'symfony']); ?>" class="w-full py-3 px-4 text-red-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg shadow-purple-500/10">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'symfony']); ?>" class="w-full py-3 px-4 text-red-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg">
                                 Fusio vs Symfony
                             </a>
                             <a href="https://symfony.com/" target="_blank" rel="noopener" class="w-full py-3 px-4 bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white text-[11px] font-black uppercase tracking-widest text-center rounded-xl border border-white/10 transition-all">
@@ -292,7 +292,7 @@
                             <h3 class="text-white font-bold text-lg tracking-tight">Laravel</h3>
                         </div>
                         <div class="flex flex-col gap-3">
-                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'laravel']); ?>" class="w-full py-3 px-4 text-red-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg shadow-purple-500/10">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'laravel']); ?>" class="w-full py-3 px-4 text-red-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg">
                                 Fusio vs Laravel
                             </a>
                             <a href="https://laravel.com/" target="_blank" rel="noopener" class="w-full py-3 px-4 bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white text-[11px] font-black uppercase tracking-widest text-center rounded-xl border border-white/10 transition-all">
@@ -308,7 +308,7 @@
                             <h3 class="text-white font-bold text-lg tracking-tight">API Platform</h3>
                         </div>
                         <div class="flex flex-col gap-3">
-                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'api-platform']); ?>" class="w-full py-3 px-4 text-red-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg shadow-purple-500/10">
+                            <a href="<?php echo $router->getAbsolutePath([\App\Controller\Comparison::class, 'detail'], ['app' => 'api-platform']); ?>" class="w-full py-3 px-4 text-red-500 text-[11px] font-black uppercase tracking-widest text-center rounded-xl transition-all shadow-lg">
                                 Fusio vs API Platform
                             </a>
                             <a href="https://api-platform.com/" target="_blank" rel="noopener" class="w-full py-3 px-4 bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white text-[11px] font-black uppercase tracking-widest text-center rounded-xl border border-white/10 transition-all">
