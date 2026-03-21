@@ -15,14 +15,10 @@ use Sdkgen\Client\Credentials\Anonymous;
 
 class Marketplace extends ControllerAbstract
 {
-    private CacheItemPoolInterface $cache;
-    private ReverseRouter $reverseRouter;
     private Client $client;
 
-    public function __construct(CacheItemPoolInterface $cache, ReverseRouter $reverseRouter)
+    public function __construct(private CacheItemPoolInterface $cache, private ReverseRouter $reverseRouter)
     {
-        $this->cache = $cache;
-        $this->reverseRouter = $reverseRouter;
         $this->client = new Client('https://api.fusio-project.org', new Anonymous());
     }
 
@@ -31,13 +27,14 @@ class Marketplace extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
-            'title' => 'Marketplace | Fusio',
-            'description' => 'Explore the Fusio Marketplace to find and install community-contributed apps and actions that enhance your Fusio API instance. Easily extend functionality via the backend or CLI.',
+            'title' => 'Marketplace | Fusio Extensions, Apps & API Bundles',
+            'description' => 'Browse the Fusio Marketplace to find community-built frontend apps, modular bundles, and custom actions. Accelerate your API development with ready-to-use extensions.',
             'keywords' => 'Fusio Marketplace, Fusio apps, API extensions, Fusio actions, community apps, Fusio backend, Fusio CLI, API management tools, Fusio integrations, open-source API apps, Fusio developer portal, Fusio extensions',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
+            'headline' => 'Marketplace',
+            'tagline' => 'The central exchange for the Fusio ecosystem where the community shares frontend apps and modular bundles.',
             'bundles' => $this->getBundles(),
             'apps' => $this->getApps(),
-            'bootstrap_icons' => true,
         ];
 
         $templateFile = __DIR__ . '/../../resources/template/marketplace.php';

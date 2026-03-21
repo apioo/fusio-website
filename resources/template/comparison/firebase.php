@@ -1,161 +1,133 @@
 <?php include(__DIR__ . '/../inc/header.php'); ?>
 
-<div class="fusio-headline">
-    <div class="container">
-        <div class="row">
-            <div class="col p-4 mx-auto text-center">
-                <h1 class="display-4 fw-normal">Compare Fusio to Firebase</h1>
-            </div>
-        </div>
-    </div>
-</div>
+<?php include(__DIR__ . '/../inc/sub_header.php'); ?>
 
-<div class="container mt-4 pt-4 mb-4 pb-4">
-    <div class="row">
-        <p class="lead">This page compares <a href="https://www.fusio-project.org/">Fusio</a>, an open-source API management platform, with <a href="https://firebase.google.com/">Firebase</a>, Google's proprietary Backend-as-a-Service (BaaS) platform. Both can be used in backend development workflows, but they target different needs, architectures, and development styles.</p>
-    </div>
-</div>
-
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h2 class="fusio-sub-headline h4 fw-normal">🔍 Feature Comparison</h2>
-                <table class="table">
+<section class="py-12 bg-slate-950/40">
+    <div class="container mx-auto px-6">
+        <div class="rounded-[2.5rem] bg-slate-900/40 border border-white/5 overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
                     <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>Fusio</th>
-                        <th>Firebase</th>
+                    <tr class="bg-white/5 border-b border-white/10">
+                        <th class="p-8 text-[10px] font-black text-slate-500 uppercase tracking-widest">Platform Core</th>
+                        <th class="p-8 text-[10px] font-black text-amber-500 uppercase tracking-widest text-center">Fusio (Open Source)</th>
+                        <th class="p-8 text-[10px] font-black text-slate-300 uppercase tracking-widest text-center">Firebase (Proprietary)</th>
                     </tr>
                     </thead>
-                    <tbody>
-                    <tr>
-                        <td>Type</td>
-                        <td>API management platform</td>
-                        <td>Backend-as-a-Service (BaaS)</td>
+                    <tbody class="text-sm text-slate-300">
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Primary Database</span>
+                            <span class="text-[11px] text-slate-500 italic">Data structure and storage</span>
+                        </td>
+                        <td class="p-8 text-center font-mono text-xs text-emerald-400">Relational (MySQL, Postgres, etc.)</td>
+                        <td class="p-8 text-center font-mono text-xs text-slate-500">NoSQL (Firestore / Realtime DB)*</td>
                     </tr>
-                    <tr>
-                        <td>Primary Use Case</td>
-                        <td>Build, manage, and expose REST APIs</td>
-                        <td>Rapid mobile/web app backend (auth, DB, hosting)</td>
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">API Standards</span>
+                            <span class="text-[11px] text-slate-500 italic">Interoperability and docs</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-[10px] font-bold uppercase">Native OpenAPI / REST</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="px-3 py-1 bg-white/5 text-slate-500 rounded-full text-[10px] font-bold uppercase">Proprietary SDK-based</span>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>Open Source</td>
-                        <td>✅ Yes (Apache 2.0)</td>
-                        <td>❌ Proprietary</td>
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Portability</span>
+                            <span class="text-[11px] text-slate-500 italic">Ease of moving providers</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="text-emerald-500 text-lg">●</span>
+                            <span class="block text-[10px] text-slate-500 mt-1 uppercase">Any Cloud / On-Premise</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="text-red-500 text-lg">●</span>
+                            <span class="block text-[10px] text-slate-500 mt-1 uppercase italic">Google Cloud Only</span>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>Hosting</td>
-                        <td>Self-hosted</td>
-                        <td>Google Cloud (managed)</td>
-                    </tr>
-                    <tr>
-                        <td>Database Integration</td>
-                        <td>SQL (MySQL, PostgreSQL, etc.)</td>
-                        <td>NoSQL (Firestore, Realtime DB)</td>
-                    </tr>
-                    <tr>
-                        <td>API Documentation</td>
-                        <td>✅ Auto-generated OpenAPI</td>
-                        <td>⚠️ SDK-based docs, no OpenAPI support</td>
-                    </tr>
-                    <tr>
-                        <td>Custom Logic</td>
-                        <td>PHP/JS/SQL actions</td>
-                        <td>Cloud Functions (JS/TS)</td>
-                    </tr>
-                    <tr>
-                        <td>Authentication</td>
-                        <td>Built-in OAuth2</td>
-                        <td>Firebase Auth (SDK)</td>
-                    </tr>
-                    <tr>
-                        <td>Serverless Backend</td>
-                        <td>⚠️ Not serverless-focused</td>
-                        <td>✅ Cloud Functions + managed hosting</td>
-                    </tr>
-                    <tr>
-                        <td>Real-Time Features</td>
-                        <td>⚠️ Manual</td>
-                        <td>✅ Native real-time DB/connectivity</td>
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Cost Predictability</span>
+                            <span class="text-[11px] text-slate-500 italic">Scaling behavior</span>
+                        </td>
+                        <td class="p-8 text-center font-mono text-xs">Fixed (Infrastructure-based)</td>
+                        <td class="p-8 text-center font-mono text-xs text-orange-400 italic">Variable (Usage-based meters)</td>
                     </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-    </div>
-</div>
 
-<div class="container mt-4 pt-4 mb-4 pb-4">
-    <div class="row">
-        <div class="col-12">
-            <h2 class="fusio-sub-headline h4 fw-normal">🎯 Key Differences</h2>
-            <p class="lead">The main difference between Fusio and Firebase lies in how they approach backend development and API provisioning.</p>
-        </div>
-        <div class="col-6">
-            <p><b>Fusio</b> is a self-hosted API management platform built for developers who want full control over API design, security, and backend logic:</p>
-            <ul>
-                <li>Create structured REST APIs with complete backend logic</li>
-                <li>Define schemas and access control with built-in OAuth2</li>
-                <li>Automatically generate OpenAPI documentation</li>
-                <li>Expose and integrate with SQL databases directly</li>
-                <li>Customize logic using PHP, JavaScript, or SQL</li>
-            </ul>
-            <p>Fusio gives you control over your backend, hosting, and data sovereignty without vendor lock-in.</p>
-        </div>
-        <div class="col-6">
-            <p><b>Firebase</b> is a fully managed backend platform provided by Google Cloud:</p>
-            <ul>
-                <li>Real-time and Firestore NoSQL databases</li>
-                <li>User authentication, file storage, and hosting</li>
-                <li>Serverless backend via Cloud Functions</li>
-                <li>Deep integration with Google Cloud and mobile SDKs</li>
-                <li>Global CDN and managed infrastructure for apps</li>
-            </ul>
-            <p>Firebase focuses on rapid development, real-time features, and managed services without self-hosting overhead.</p>
-        </div>
-    </div>
-</div>
-
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="fusio-sub-headline h4 fw-normal">📌 When to Choose Which</h2>
-            </div>
-            <div class="col-6">
-                <p>Choose <b>Fusio</b> if:</p>
-                <ul>
-                    <li>You need full control over your APIs and backend</li>
-                    <li>You want to host your own infrastructure (self-hosted, Docker, etc.)</li>
-                    <li>You prefer working with SQL databases, structured APIs, and OpenAPI docs</li>
-                    <li>You need built-in OAuth2 and customizable API security</li>
-                    <li>You’re building APIs for internal services, enterprise workflows, or long-term maintenance</li>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24">
+            <div class="p-10 rounded-[2rem] bg-slate-900/20 border border-white/5">
+                <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-sm">Choose Fusio if...</h3>
+                <ul class="space-y-4 text-sm text-slate-400">
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-amber-500 mt-1">→</span>
+                        "You need a standard REST API that can be consumed by any HTTP client without a specific SDK."
+                    </li>
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-amber-500 mt-1">→</span>
+                        "Data sovereignty and the ability to self-host on your own hardware are mission-critical."
+                    </li>
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-amber-500 mt-1">→</span>
+                        "You prefer working with relational data (SQL) and want auto-generated OpenAPI documentation."
+                    </li>
                 </ul>
-                <p>Fusio is ideal for developers and teams who want fine-grained control over API logic and hosting.</p>
             </div>
-            <div class="col-6">
-                <p>Choose <b>Firebase</b> if:</p>
-                <ul>
-                    <li>You want to rapidly develop backend functionality for mobile or web apps</li>
-                    <li>You need real-time database features and managed services</li>
-                    <li>You prefer a serverless backend with minimal infrastructure setup</li>
-                    <li>You are comfortable with Google Cloud ecosystem and SDK-first workflows</li>
-                    <li>Your project benefits from built-in hosting, auth, and integrations</li>
+            <div class="p-10 rounded-[2rem] bg-slate-900/20 border border-white/5">
+                <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-sm">Choose Firebase if...</h3>
+                <ul class="space-y-4 text-sm text-slate-400">
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-slate-600 mt-1">→</span>
+                        "Real-time synchronization (like chat or live collaboration) is the core feature of your app."
+                    </li>
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-slate-600 mt-1">→</span>
+                        "You want a zero-configuration backend and don't mind being locked into the Google Cloud ecosystem."
+                    </li>
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-slate-600 mt-1">→</span>
+                        "You are building a mobile-first application where the Firebase SDKs provide significant offline-sync value."
+                    </li>
                 </ul>
-                <p>Firebase is especially good for MVPs, prototypes, and frontend-centric apps looking to ship quickly.</p>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="container">
-    <div class="row">
-        <div class="col text-end">
-            <a href="https://github.com/apioo/fusio-website/blob/main/resources/template/compare/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"><i class="bi bi-pen-fill"></i> Edit this page</a>
+<section class="border-t border-white/5 bg-slate-950/40 py-6 group">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-6">
+                <div class="flex items-center gap-3 px-3 py-1.5 rounded-md bg-white/[0.03] border border-white/5">
+                    <span class="text-[10px] font-black text-slate-600 uppercase tracking-widest">SHA1</span>
+                    <code class="text-[11px] font-mono font-bold text-slate-400">
+                        <?php echo sha1_file(__FILE__); ?>
+                    </code>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="https://github.com/apioo/fusio-website/blob/main/resources/template/comparison/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"
+                   class="group/link flex items-center gap-2 text-[10px] font-black text-slate-500 hover:text-orange-500 transition-colors uppercase tracking-widest">
+                    <svg class="w-3.5 h-3.5 opacity-50 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Improve this page
+                </a>
+                <div class="hidden sm:block w-1 h-1 rounded-full bg-white/10"></div>
+                <a href="https://github.com/apioo/fusio/issues"
+                   class="text-[10px] font-black text-slate-600 hover:text-white transition-colors uppercase tracking-widest">
+                    Report Issue
+                </a>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
 <?php include(__DIR__ . '/../inc/footer.php'); ?>

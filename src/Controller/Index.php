@@ -10,11 +10,8 @@ use PSX\Framework\Loader\ReverseRouter;
 
 class Index extends ControllerAbstract
 {
-    private ReverseRouter $reverseRouter;
-
-    public function __construct(ReverseRouter $reverseRouter)
+    public function __construct(private ReverseRouter $reverseRouter)
     {
-        $this->reverseRouter = $reverseRouter;
     }
 
     #[Get]
@@ -22,7 +19,7 @@ class Index extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
-            'title' => 'Open Source API & AI Management Platform | Fusio',
+            'title' => 'Open Source API & AI Management Platform',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
         ];
 

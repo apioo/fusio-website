@@ -1,157 +1,130 @@
 <?php include(__DIR__ . '/../inc/header.php'); ?>
 
-<div class="fusio-headline">
-    <div class="container">
-        <div class="row">
-            <div class="col p-4 mx-auto text-center">
-                <h1 class="display-4 fw-normal">Compare Fusio to Kong</h1>
-            </div>
-        </div>
-    </div>
-</div>
+<?php include(__DIR__ . '/../inc/sub_header.php'); ?>
 
-<div class="container mt-4 pt-4 mb-4 pb-4">
-    <div class="row">
-        <p class="lead">This page compares <a href="https://www.fusio-project.org/">Fusio</a>, an open-source API management platform, with <a href="https://konghq.com/">Kong</a>, an open-source API gateway. While both projects operate in the API space, they address different layers of the API lifecycle and are often used for different purposes.</p>
-    </div>
-</div>
+<section class="py-12 bg-slate-950/40">
+    <div class="container mx-auto px-6">
 
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h2 class="fusio-sub-headline h4 fw-normal">🔍 Feature Comparison</h2>
-                <table class="table">
+        <div class="rounded-[2.5rem] bg-slate-900/40 border border-white/5 overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
                     <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>Fusio</th>
-                        <th>Kong</th>
+                    <tr class="bg-white/5 border-b border-white/10">
+                        <th class="p-8 text-[10px] font-black text-slate-500 uppercase tracking-widest">Feature Capability</th>
+                        <th class="p-8 text-[10px] font-black text-orange-500 uppercase tracking-widest text-center">Fusio (Open Source)</th>
+                        <th class="p-8 text-[10px] font-black text-slate-300 uppercase tracking-widest text-center">Kong (Gateway)</th>
                     </tr>
                     </thead>
-                    <tbody>
-                    <tr>
-                        <td>Project Type</td>
-                        <td>API management platform</td>
-                        <td>API gateway / reverse proxy</td>
+                    <tbody class="text-sm text-slate-300">
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Primary Role</span>
+                            <span class="text-[11px] text-slate-500 italic">Core architectural focus</span>
+                        </td>
+                        <td class="p-8 text-center font-mono text-xs">API Management & Implementation</td>
+                        <td class="p-8 text-center font-mono text-xs text-slate-500">Cloud-Native API Gateway</td>
                     </tr>
-                    <tr>
-                        <td>Primary Purpose</td>
-                        <td>Build, manage, and secure APIs</td>
-                        <td>Route, secure, and control API traffic</td>
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Business Logic</span>
+                            <span class="text-[11px] text-slate-500 italic">Executing code at the edge</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-[10px] font-bold">Native (PHP, SQL, JS)</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="px-3 py-1 bg-white/5 text-slate-500 rounded-full text-[10px] font-bold">Plugin Based (Lua/Go)</span>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>API Creation</td>
-                        <td>✅ Built-in API design and implementation</td>
-                        <td>❌ APIs must already exist</td>
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Developer Portal</span>
+                            <span class="text-[11px] text-slate-500 italic">User onboarding and self-service</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="text-emerald-500 text-lg">●</span>
+                            <span class="block text-[10px] text-slate-500 mt-1 uppercase">Included</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="text-slate-700 text-lg">○</span>
+                            <span class="block text-[10px] text-slate-500 mt-1 uppercase text-slate-600 italic">Enterprise Only</span>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>Admin UI</td>
-                        <td>✅ Web-based admin interface</td>
-                        <td>⚠️ Admin API (OSS), web UI mainly in enterprise</td>
-                    </tr>
-                    <tr>
-                        <td>Authentication</td>
-                        <td>✅ Built-in OAuth2 server</td>
-                        <td>⚠️ OAuth2 via plugin</td>
-                    </tr>
-                    <tr>
-                        <td>API Documentation</td>
-                        <td>✅ Automatic OpenAPI generation</td>
-                        <td>⚠️ OpenAPI supported via plugins or external tooling</td>
-                    </tr>
-                    <tr>
-                        <td>Extensibility</td>
-                        <td>✅ Custom actions (PHP / JavaScript)</td>
-                        <td>✅ Plugin system (Lua-based)</td>
-                    </tr>
-                    <tr>
-                        <td>Scalability Focus</td>
-                        <td>Application-level APIs</td>
-                        <td>High-throughput, edge traffic</td>
-                    </tr>
-                    <tr>
-                        <td>Cloud / Kubernetes</td>
-                        <td>Supported</td>
-                        <td>First-class focus</td>
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Scaling Performance</span>
+                            <span class="text-[11px] text-slate-500 italic">Throughput capacity</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="text-slate-400 font-mono text-xs">High (PHP-FPM/Swoole)</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="text-orange-500 font-mono text-xs">Ultra-High (Nginx/Lua)</span>
+                        </td>
                     </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-    </div>
-</div>
 
-<div class="container mt-4 pt-4 mb-4 pb-4">
-    <div class="row">
-        <div class="col-12">
-            <h2 class="fusio-sub-headline h4 fw-normal">🎯 Key Differences</h2>
-            <p class="lead">The main difference between Fusio and Kong lies in what part of the API stack they manage.</p>
-        </div>
-        <div class="col-6">
-            <p><b>Fusio</b> is a <b>full API management platform</b>. It allows you to:</p>
-            <ul>
-                <li>Design and implement APIs</li>
-                <li>Define request/response schemas</li>
-                <li>Secure endpoints using OAuth2 and scopes</li>
-                <li>Manage users and applications</li>
-                <li>Generate API documentation</li>
-                <li>Execute backend logic through extensible actions</li>
-            </ul>
-            <p>Fusio is responsible for the <b>entire API lifecycle</b>, from creation to consumption.</p>
-        </div>
-        <div class="col-6">
-            <p><b>Kong</b>, on the other hand, is an <b>API gateway</b>. It sits in front of existing services and focuses on:</p>
-            <ul>
-                <li>Request routing and load balancing</li>
-                <li>Authentication and authorization via plugins</li>
-                <li>Rate limiting, logging, and traffic control</li>
-                <li>High performance and scalability</li>
-                <li>Cloud-native and Kubernetes-based deployments</li>
-            </ul>
-            <p>Kong does <b>not create APIs</b>; it manages and controls access to APIs that already exist.</p>
-        </div>
-    </div>
-</div>
-
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="fusio-sub-headline h4 fw-normal">📌 When to Choose Which</h2>
-            </div>
-            <div class="col-6">
-                <p>Choose <b>Fusio</b> if:</p>
-                <ul>
-                    <li>You want to build APIs from scratch</li>
-                    <li>You need an all-in-one API management solution</li>
-                    <li>You want built-in OAuth2, OpenAPI documentation, and developer tooling</li>
-                    <li>You prefer a centralized admin UI for API, user, and app management</li>
-                    <li>You want a backend-focused API platform with minimal external components</li>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24">
+            <div class="p-10 rounded-[2rem] bg-slate-900/20 border border-white/5">
+                <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-sm">Choose Fusio if...</h3>
+                <ul class="space-y-4 text-sm text-slate-400">
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-orange-500 mt-1">→</span>
+                        "You want to build the API directly within the platform using SQL or PHP actions."
+                    </li>
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-orange-500 mt-1">→</span>
+                        "You need a ready-to-use Developer Portal and SDK generation out-of-the-box."
+                    </li>
                 </ul>
-                <p>Fusio is well suited for backend developers, internal APIs, SaaS products, and custom API platforms.</p>
             </div>
-            <div class="col-6">
-                <p>Choose <b>Kong</b> if:</p>
-                <ul>
-                    <li>You already have APIs or microservices in place</li>
-                    <li>You need a high-performance gateway at the edge</li>
-                    <li>You operate in cloud-native or Kubernetes environments</li>
-                    <li>You want fine-grained traffic control through plugins</li>
-                    <li>You need to scale API traffic across distributed systems</li>
+            <div class="p-10 rounded-[2rem] bg-slate-900/20 border border-white/5">
+                <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-sm">Choose Kong if...</h3>
+                <ul class="space-y-4 text-sm text-slate-400">
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-slate-600 mt-1">→</span>
+                        "You have existing microservices and only need a high-speed routing and security proxy."
+                    </li>
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-slate-600 mt-1">→</span>
+                        "You require ultra-low latency at a scale of millions of requests per second."
+                    </li>
                 </ul>
-                <p>Kong is ideal for DevOps-driven architectures and large-scale API traffic management.</p>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="container">
-    <div class="row">
-        <div class="col text-end">
-            <a href="https://github.com/apioo/fusio-website/blob/main/resources/template/compare/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"><i class="bi bi-pen-fill"></i> Edit this page</a>
+<section class="border-t border-white/5 bg-slate-950/40 py-6 group">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-6">
+                <div class="flex items-center gap-3 px-3 py-1.5 rounded-md bg-white/[0.03] border border-white/5">
+                    <span class="text-[10px] font-black text-slate-600 uppercase tracking-widest">SHA1</span>
+                    <code class="text-[11px] font-mono font-bold text-slate-400">
+                        <?php echo sha1_file(__FILE__); ?>
+                    </code>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="https://github.com/apioo/fusio-website/blob/main/resources/template/comparison/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"
+                   class="group/link flex items-center gap-2 text-[10px] font-black text-slate-500 hover:text-orange-500 transition-colors uppercase tracking-widest">
+                    <svg class="w-3.5 h-3.5 opacity-50 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Improve this page
+                </a>
+                <div class="hidden sm:block w-1 h-1 rounded-full bg-white/10"></div>
+                <a href="https://github.com/apioo/fusio/issues"
+                   class="text-[10px] font-black text-slate-600 hover:text-white transition-colors uppercase tracking-widest">
+                    Report Issue
+                </a>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
 <?php include(__DIR__ . '/../inc/footer.php'); ?>

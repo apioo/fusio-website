@@ -10,11 +10,8 @@ use PSX\Framework\Loader\ReverseRouter;
 
 class Brand extends ControllerAbstract
 {
-    private ReverseRouter $reverseRouter;
-
-    public function __construct(ReverseRouter $reverseRouter)
+    public function __construct(private ReverseRouter $reverseRouter)
     {
-        $this->reverseRouter = $reverseRouter;
     }
 
     #[Get]
@@ -22,10 +19,12 @@ class Brand extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
-            'title' => 'Brand | Fusio',
-            'description' => 'Access the official Fusio brand assets to help maintain consistency in your communications and marketing materials.',
-            'keywords' => 'Fusio brand, Fusio logo, branding guidelines, Fusio colors, API platform branding, Fusio visual identity, Fusio design assets, Fusio marketing materials',
+            'title' => 'Brand Assets & Media Kit | Official Fusio Logos & Guidelines',
+            'description' => 'Download official Fusio brand assets, logos, and style guides. Ensure consistent communication when featuring the Fusio API platform in your projects.',
+            'keywords' => 'Fusio Brand Assets, API Management Logo, Fusio Media Kit, Brand Guidelines, Open Source Branding, Vector Logos, Style Guide',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
+            'headline' => 'Brand',
+            'tagline' => 'Official logos and brand guidelines for featuring Fusio in your marketing materials and technical content.',
         ];
 
         $templateFile = __DIR__ . '/../../resources/template/brand.php';

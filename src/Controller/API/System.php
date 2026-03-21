@@ -10,11 +10,8 @@ use PSX\Framework\Loader\ReverseRouter;
 
 class System extends ControllerAbstract
 {
-    private ReverseRouter $reverseRouter;
-
-    public function __construct(ReverseRouter $reverseRouter)
+    public function __construct(private ReverseRouter $reverseRouter)
     {
-        $this->reverseRouter = $reverseRouter;
     }
 
     #[Get]
@@ -22,7 +19,7 @@ class System extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
-            'title' => 'System API | Fusio',
+            'title' => 'System API',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
             'filter' => 'system',
         ];

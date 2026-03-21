@@ -7,15 +7,11 @@ use PSX\Api\Attribute\Path;
 use PSX\Framework\Controller\ControllerAbstract;
 use PSX\Framework\Http\Writer\Template;
 use PSX\Framework\Loader\ReverseRouter;
-use PSX\Http\Environment\HttpContextInterface;
 
 class Demo extends ControllerAbstract
 {
-    private ReverseRouter $reverseRouter;
-
-    public function __construct(ReverseRouter $reverseRouter)
+    public function __construct(private ReverseRouter $reverseRouter)
     {
-        $this->reverseRouter = $reverseRouter;
     }
 
     #[Get]
@@ -23,10 +19,12 @@ class Demo extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
-            'title' => 'Demo | Fusio',
-            'description' => 'Experience Fusio firsthand by exploring our hosted demo. Access the API, backend, developer portal, and ReDoc to discover what Fusio can do.',
-            'keywords' => 'Fusio demo, open-source API management, Fusio API, Fusio backend, Fusio developer portal, Fusio ReDoc, API management demo, Fusio features, Fusio exploration',
+            'title' => 'Live API Sandbox | Interactive Fusio Demo & Developer Portal',
+            'description' => 'Test drive Fusio in a fully hosted sandbox. Explore the management interface, the developer portal, and the API engine in real-time with no installation required.',
+            'keywords' => 'Live API Demo, Fusio Sandbox, Interactive API Management, Test Drive Fusio, API Portal Demo, Open Source API Gateway Demo, Try Fusio Online',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
+            'headline' => 'Demo',
+            'tagline' => 'Explore a fully hosted Fusio instance. Test the management interface, the developer portal, and the API engine in real-time.',
         ];
 
         $templateFile = __DIR__ . '/../../resources/template/demo.php';

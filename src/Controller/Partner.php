@@ -10,11 +10,8 @@ use PSX\Framework\Loader\ReverseRouter;
 
 class Partner extends ControllerAbstract
 {
-    private ReverseRouter $reverseRouter;
-
-    public function __construct(ReverseRouter $reverseRouter)
+    public function __construct(private ReverseRouter $reverseRouter)
     {
-        $this->reverseRouter = $reverseRouter;
     }
 
     #[Get]
@@ -22,10 +19,12 @@ class Partner extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
-            'title' => 'Partner | Fusio',
-            'description' => 'Discover partners of Fusio, an open-source API & AI management platform. Learn how JetBrains and other collaborators support Fusio to advance API development.',
-            'keywords' => 'Fusio, API management, open-source API platform, Fusio partners, JetBrains, Fusio collaboration, API development, Fusio project partners, Fusio sponsorship, open-source collaboration',
+            'title' => 'Official Partners | Supporting the Fusio API Ecosystem',
+            'description' => 'Meet the organizations and partners driving the growth of the Fusio open-source platform. Join our network of API management specialists and contributors.',
+            'keywords' => 'Fusio Partners, Open Source Support, API Ecosystem, Tech Partnerships, Fusio Contributors, Enterprise API Support, Community Partners',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
+            'headline' => 'Partner',
+            'tagline' => 'Organizations and experts actively contributing to the growth and sustainability of the Fusio platform.',
         ];
 
         $templateFile = __DIR__ . '/../../resources/template/partner.php';

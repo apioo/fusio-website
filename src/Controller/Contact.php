@@ -21,17 +21,8 @@ class Contact extends ControllerAbstract
 {
     private const TO_RECEIVER = 'christoph.kappestein@gmail.com';
 
-    private CaptchaVerifier $captchaVerifier;
-    private MailerInterface $mailer;
-    private ReverseRouter $reverseRouter;
-    private ConfigInterface $config;
-
-    public function __construct(CaptchaVerifier $captchaVerifier, MailerInterface $mailer, ReverseRouter $reverseRouter, ConfigInterface $config)
+    public function __construct(private CaptchaVerifier $captchaVerifier, private MailerInterface $mailer, private ReverseRouter $reverseRouter, private ConfigInterface $config)
     {
-        $this->captchaVerifier = $captchaVerifier;
-        $this->mailer = $mailer;
-        $this->reverseRouter = $reverseRouter;
-        $this->config = $config;
     }
 
     #[Get]
@@ -39,10 +30,12 @@ class Contact extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
-            'title' => 'Contact | Fusio',
-            'description' => 'Contact Fusio for support, consulting, or questions. Connect via form, Discord, GitHub, and YouTube to get help with your API projects.',
-            'keywords' => 'Fusio contact, Fusio support, Fusio inquiries, Fusio consulting, Fusio community, Fusio Discord, Fusio GitHub, Fusio YouTube, Fusio API management, Fusio assistance',
+            'title' => 'Contact the Fusio Team | Developer Support & Inquiries',
+            'description' => 'Get in touch with the creators of Fusio. Contact our development team for project inquiries, technical feedback, or partnership opportunities.',
+            'keywords' => 'Contact Fusio, API Support, Developer Feedback, Project Inquiries, Fusio Team, Open Source Contact, Technical Support',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
+            'headline' => 'Contact',
+            'tagline' => 'Have questions or feedback? Reach out to the Fusio development team directly for support or inquiries.',
             'recaptcha_key' => $this->config->get('google_recaptcha_key'),
         ];
 
@@ -94,8 +87,12 @@ class Contact extends ControllerAbstract
         }
 
         $data = [
-            'title' => 'Contact | Fusio',
+            'title' => 'Contact the Fusio Team | Developer Support & Inquiries',
+            'description' => 'Get in touch with the creators of Fusio. Contact our development team for project inquiries, technical feedback, or partnership opportunities.',
+            'keywords' => 'Contact Fusio, API Support, Developer Feedback, Project Inquiries, Fusio Team, Open Source Contact, Technical Support',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
+            'headline' => 'Contact',
+            'tagline' => 'Have questions or feedback? Reach out to the Fusio development team directly for support or inquiries.',
             'success' => $success,
             'error' => $error,
             'recaptcha_key' => $this->config->get('google_recaptcha_key'),

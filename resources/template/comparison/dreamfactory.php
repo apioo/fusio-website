@@ -1,161 +1,125 @@
 <?php include(__DIR__ . '/../inc/header.php'); ?>
 
-<div class="fusio-headline">
-    <div class="container">
-        <div class="row">
-            <div class="col p-4 mx-auto text-center">
-                <h1 class="display-4 fw-normal">Compare Fusio to DreamFactory</h1>
-            </div>
-        </div>
-    </div>
-</div>
+<?php include(__DIR__ . '/../inc/sub_header.php'); ?>
 
-<div class="container mt-4 pt-4 mb-4 pb-4">
-    <div class="row">
-        <p class="lead">This page compares <a href="https://www.fusio-project.org/">Fusio</a>, an open-source API management platform for building and managing APIs, with <a href="https://www.dreamfactory.com/">DreamFactory</a>, an open-source–core REST API automation platform that instantly generates secure APIs for databases and backend services. While both help expose backend data via APIs, they approach the problem from different angles.</p>
-    </div>
-</div>
-
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h2 class="fusio-sub-headline h4 fw-normal">🔍 Feature Comparison</h2>
-                <table class="table">
+<section class="py-12 bg-slate-950/40">
+    <div class="container mx-auto px-6">
+        <div class="rounded-[2.5rem] bg-slate-900/40 border border-white/5 overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
                     <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>Fusio</th>
-                        <th>DreamFactory</th>
+                    <tr class="bg-white/5 border-b border-white/10">
+                        <th class="p-8 text-[10px] font-black text-slate-500 uppercase tracking-widest">Platform Core</th>
+                        <th class="p-8 text-[10px] font-black text-blue-500 uppercase tracking-widest text-center">Fusio (OSS Focused)</th>
+                        <th class="p-8 text-[10px] font-black text-slate-300 uppercase tracking-widest text-center">DreamFactory (Enterprise)</th>
                     </tr>
                     </thead>
-                    <tbody>
-                    <tr>
-                        <td>Type</td>
-                        <td>API management platform</td>
-                        <td>API generation & management platform</td>
+                    <tbody class="text-sm text-slate-300">
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">API Generation</span>
+                            <span class="text-[11px] text-slate-500 italic">How endpoints are born</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="px-3 py-1 bg-white/5 text-slate-400 rounded-full text-[10px] font-bold">Structured Design-First</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-[10px] font-bold">Fully Automated Mirroring</span>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>Open Source</td>
-                        <td>✅ Yes (Apache 2.0)</td>
-                        <td>✅ Yes (Open-source core (commercial extensions available))</td>
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Scripting & Logic</span>
+                            <span class="text-[11px] text-slate-500 italic">Customizing the request flow</span>
+                        </td>
+                        <td class="p-8 text-center font-mono text-xs italic">Native Actions (PHP, JS, SQL)</td>
+                        <td class="p-8 text-center font-mono text-xs italic text-slate-500">Event Scripts (V8, Node, PHP)</td>
                     </tr>
-                    <tr>
-                        <td>API Generation</td>
-                        <td>Manual definitions + CRUD generator</td>
-                        <td>Instant API generation from databases/services</td>
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Dev Experience</span>
+                            <span class="text-[11px] text-slate-500 italic">Onboarding & SDKs</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="text-emerald-500 text-lg">●</span>
+                            <span class="block text-[10px] text-slate-500 mt-1 uppercase italic">Full Portal + SDK Generator</span>
+                        </td>
+                        <td class="p-8 text-center">
+                            <span class="text-slate-700 text-lg">○</span>
+                            <span class="block text-[10px] text-slate-500 mt-1 uppercase italic text-slate-600">Standard Swagger/OpenAPI</span>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>API Documentation</td>
-                        <td>Auto-generated OpenAPI</td>
-                        <td>Auto-generated Swagger docs</td>
-                    </tr>
-                    <tr>
-                        <td>Authentication & Security</td>
-                        <td>Built-in OAuth2 server, scopes</td>
-                        <td>RBAC, OAuth, API keys (LDAP/SAML/AD in enterprise editions)</td>
-                    </tr>
-                    <tr>
-                        <td>Database Support</td>
-                        <td>Multiple SQL backends</td>
-                        <td>Over 20 SQL/NoSQL data sources</td>
-                    </tr>
-                    <tr>
-                        <td>Custom Logic</td>
-                        <td>PHP/JS/SQL actions</td>
-                        <td>Server-side scripting (NodeJS/PHP/Python)</td>
-                    </tr>
-                    <tr>
-                        <td>Extensibility</td>
-                        <td>High (backend actions/plugins)</td>
-                        <td>Flexible scripting & transformations</td>
-                    </tr>
-                    <tr>
-                        <td>Deployment</td>
-                        <td>Self-hosted (Docker, Composer)</td>
-                        <td>Self-hosted (Docker, VM, bare metal)</td>
-                    </tr>
-                    <tr>
-                        <td>Use Case Focus</td>
-                        <td>API lifecycle and developer workflows</td>
-                        <td>Rapid API exposure for data & backend services</td>
+                    <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
+                        <td class="p-8">
+                            <span class="block font-bold text-white uppercase text-xs tracking-tight">Licensing</span>
+                            <span class="text-[11px] text-slate-500 italic">Cost of ownership</span>
+                        </td>
+                        <td class="p-8 text-center text-emerald-400 font-bold uppercase tracking-tighter">AGPL Open Source</td>
+                        <td class="p-8 text-center text-slate-500 font-bold uppercase tracking-tighter">Proprietary / Commercial</td>
                     </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-    </div>
-</div>
 
-<div class="container mt-4 pt-4 mb-4 pb-4">
-    <div class="row">
-        <div class="col-12">
-            <h2 class="fusio-sub-headline h4 fw-normal">🎯 Key Differences</h2>
-            <p class="lead">The main difference between Fusio and DreamFactory lies in how they approach API creation, management, and customization.</p>
-        </div>
-        <div class="col-6">
-            <p><b>Fusio</b> is a full API management platform that gives developers fine-grained control over how APIs are defined and behave:</p>
-            <ul>
-                <li>Build and manage structured APIs with custom logic</li>
-                <li>Integrate with multiple SQL databases using connectors</li>
-                <li>Provide fine-tuned access control using a built-in OAuth2 server</li>
-                <li>Automatically generate OpenAPI documentation</li>
-                <li>Implement complex backend workflows using PHP, JavaScript, or SQL actions</li>
-            </ul>
-            <p>Fusio focuses on API lifecycle, security policies, and extensibility across a variety of backend systems.</p>
-        </div>
-        <div class="col-6">
-            <p><b>DreamFactory</b> is an API automation and runtime platform that generates secure REST APIs with minimal setup and provides centralized API access:</p>
-            <ul>
-                <li>Instantly generate REST APIs for over 20 database and data service types</li>
-                <li>Provide a comprehensive admin console for managing APIs</li>
-                <li>Apply role-based access control with support for OAuth, LDAP, SAML, API keys</li>
-                <li>Auto-generate interactive Swagger (OpenAPI) documentation</li>
-                <li>Customize API behavior with server-side scripting (NodeJS, PHP, Python)</li>
-            </ul>
-            <p>DreamFactory focuses on rapidly exposing backend systems and data sources via secure, ready-to-use APIs.</p>
-        </div>
-    </div>
-</div>
-
-<div class="bg-light mt-4 pt-4 mb-4 pb-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="fusio-sub-headline h4 fw-normal">📌 When to Choose Which</h2>
-            </div>
-            <div class="col-6">
-                <p>Choose <b>Fusio</b> if:</p>
-                <ul>
-                    <li>You need full control over API design, security, and custom logic</li>
-                    <li>You want an API platform with rich developer and lifecycle tooling</li>
-                    <li>Your project relies on multi-database or complex enterprise backends</li>
-                    <li>You want to integrate OAuth2, scopes, versioning, and detailed API governance</li>
-                    <li>You need flexible self-hosting and provider-independent deployment</li>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24">
+            <div class="p-10 rounded-[2rem] bg-slate-900/20 border border-white/5">
+                <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-sm">Choose Fusio if...</h3>
+                <ul class="space-y-4 text-sm text-slate-400">
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-blue-500 mt-1">→</span>
+                        "You want to build a public-facing API product where you control every endpoint's structure and logic."
+                    </li>
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-blue-500 mt-1">→</span>
+                        "You need a transparent, open-source platform that includes an integrated developer portal out of the box."
+                    </li>
                 </ul>
-                <p>Fusio is ideal when APIs are a core product and require structured workflows and deep extensibility.</p>
             </div>
-            <div class="col-6">
-                <p>Choose <b>DreamFactory</b> if:</p>
-                <ul>
-                    <li>You want to instantly expose databases and backend services as REST APIs</li>
-                    <li>You prefer auto-generated API documentation and endpoints</li>
-                    <li>You need enterprise-ready authentication (RBAC, OAuth, LDAP, SAML)</li>
-                    <li>You work with legacy systems or many different data sources</li>
-                    <li>You want to use server-side scripting to customize API behavior without heavy coding</li>
+            <div class="p-10 rounded-[2rem] bg-slate-900/20 border border-white/5">
+                <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-sm">Choose DreamFactory if...</h3>
+                <ul class="space-y-4 text-sm text-slate-400">
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-slate-600 mt-1">→</span>
+                        "You have hundreds of disparate databases (SQL, NoSQL, SOAP) that you need to expose as REST instantly."
+                    </li>
+                    <li class="flex items-start gap-3 italic">
+                        <span class="text-slate-600 mt-1">→</span>
+                        "You are an enterprise team that values a high-touch commercial support model and vast connector libraries."
+                    </li>
                 </ul>
-                <p>DreamFactory is excellent for rapid integration projects, data-centric APIs, and backend abstraction layers.</p>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="container">
-    <div class="row">
-        <div class="col text-end">
-            <a href="https://github.com/apioo/fusio-website/blob/main/resources/template/compare/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"><i class="bi bi-pen-fill"></i> Edit this page</a>
+<section class="border-t border-white/5 bg-slate-950/40 py-6 group">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-6">
+                <div class="flex items-center gap-3 px-3 py-1.5 rounded-md bg-white/[0.03] border border-white/5">
+                    <span class="text-[10px] font-black text-slate-600 uppercase tracking-widest">SHA1</span>
+                    <code class="text-[11px] font-mono font-bold text-slate-400">
+                        <?php echo sha1_file(__FILE__); ?>
+                    </code>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="https://github.com/apioo/fusio-website/blob/main/resources/template/comparison/<?php echo pathinfo(__FILE__, PATHINFO_BASENAME); ?>"
+                   class="group/link flex items-center gap-2 text-[10px] font-black text-slate-500 hover:text-orange-500 transition-colors uppercase tracking-widest">
+                    <svg class="w-3.5 h-3.5 opacity-50 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Improve this page
+                </a>
+                <div class="hidden sm:block w-1 h-1 rounded-full bg-white/10"></div>
+                <a href="https://github.com/apioo/fusio/issues"
+                   class="text-[10px] font-black text-slate-600 hover:text-white transition-colors uppercase tracking-widest">
+                    Report Issue
+                </a>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
 <?php include(__DIR__ . '/../inc/footer.php'); ?>

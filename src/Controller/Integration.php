@@ -10,11 +10,8 @@ use PSX\Framework\Loader\ReverseRouter;
 
 class Integration extends ControllerAbstract
 {
-    private ReverseRouter $reverseRouter;
-
-    public function __construct(ReverseRouter $reverseRouter)
+    public function __construct(private ReverseRouter $reverseRouter)
     {
-        $this->reverseRouter = $reverseRouter;
     }
 
     #[Get]
@@ -22,8 +19,12 @@ class Integration extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
-            'title' => 'Integration | Fusio',
+            'title' => 'API Integrations | Reference Implementations & Boilerplates',
+            'description' => 'Accelerate development with Fusio integration samples. Explore boilerplate projects for authentication, API consumption, and cross-ecosystem interaction.',
+            'keywords' => 'API Integration Samples, Fusio Boilerplate, API Authentication Example, REST API Reference, GitHub API Starter, Fusio Integration Guide',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
+            'headline' => 'Integration',
+            'tagline' => 'Build faster with reference implementations and code samples for authentication and API consumption.',
         ];
 
         $templateFile = __DIR__ . '/../../resources/template/integration.php';

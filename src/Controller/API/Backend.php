@@ -10,11 +10,8 @@ use PSX\Framework\Loader\ReverseRouter;
 
 class Backend extends ControllerAbstract
 {
-    private ReverseRouter $reverseRouter;
-
-    public function __construct(ReverseRouter $reverseRouter)
+    public function __construct(private ReverseRouter $reverseRouter)
     {
-        $this->reverseRouter = $reverseRouter;
     }
 
     #[Get]
@@ -22,7 +19,7 @@ class Backend extends ControllerAbstract
     public function show(): mixed
     {
         $data = [
-            'title' => 'Backend API | Fusio',
+            'title' => 'Backend API',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
             'filter' => 'backend',
         ];

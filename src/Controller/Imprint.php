@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use Psr\Cache\CacheItemPoolInterface;
-use Psr\SimpleCache\CacheInterface;
 use PSX\Api\Attribute\Get;
 use PSX\Api\Attribute\Path;
 use PSX\Framework\Controller\ControllerAbstract;
@@ -36,8 +35,12 @@ class Imprint extends ControllerAbstract
         }
 
         $data = [
-            'title' => 'Imprint | Fusio',
+            'title' => 'Imprint & Legal Disclosure | Fusio Project Identification',
+            'description' => 'Official legal disclosure and provider identification for the Fusio project. View the terms and regulatory information for our digital ecosystem.',
+            'keywords' => 'Fusio Imprint, Legal Disclosure, Provider Identification, Terms of Service, Project Governance, Legal Information, Regulatory Compliance',
             'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
+            'headline' => 'Imprint',
+            'tagline' => 'Provider identification, legal disclosures, and regulatory information for the Fusio project.',
             'imprint' => $imprint,
         ];
 
