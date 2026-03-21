@@ -113,7 +113,7 @@
                             </p>
                         </div>
                         <div class="space-y-4">
-                            <a href="https://github.com/sponsors/chriskapp/sponsorships" target="_blank" class="flex items-center justify-between p-4 bg-emerald-700 hover:bg-emerald-600 text-white rounded-2xl transition-all shadow-lg shadow-emerald-500/10">
+                            <a href="https://github.com/sponsors/chriskapp" target="_blank" class="flex items-center justify-between p-4 bg-emerald-700 hover:bg-emerald-600 text-white rounded-2xl transition-all shadow-lg shadow-emerald-500/10">
                                 <span class="text-xs font-black uppercase tracking-widest">Support on GitHub</span>
                                 <span class="text-xl">❤</span>
                             </a>
