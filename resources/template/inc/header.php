@@ -29,7 +29,6 @@
     <script src="https://www.google.com/recaptcha/enterprise.js?render=<?php echo $recaptcha_key; ?>"></script>
     <?php endif; ?>
     <script>
-        /*
         var _paq = window._paq = window._paq || [];
         _paq.push(['trackPageView']);
         _paq.push(['enableLinkTracking']);
@@ -40,7 +39,6 @@
             var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
             g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
         })();
-        */
     </script>
 </head>
 <body class="bg-slate-950 bg-space-fixed text-slate-300 antialiased">
