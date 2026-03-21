@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use App\Table;
 use PSX\Api\Attribute\Get;
 use PSX\Api\Attribute\Path;
 use PSX\Framework\Controller\ControllerAbstract;
@@ -11,13 +10,8 @@ use PSX\Http\Exception\MovedPermanentlyException;
 
 class Download extends ControllerAbstract
 {
-    private Table\Release $releaseTable;
-    private ReverseRouter $reverseRouter;
-
-    public function __construct(Table\Release $releaseTable, ReverseRouter $reverseRouter)
+    public function __construct(private ReverseRouter $reverseRouter)
     {
-        $this->releaseTable = $releaseTable;
-        $this->reverseRouter = $reverseRouter;
     }
 
     #[Get]

@@ -15,14 +15,10 @@ use Sdkgen\Client\Credentials\Anonymous;
 
 class Marketplace extends ControllerAbstract
 {
-    private CacheItemPoolInterface $cache;
-    private ReverseRouter $reverseRouter;
     private Client $client;
 
-    public function __construct(CacheItemPoolInterface $cache, ReverseRouter $reverseRouter)
+    public function __construct(private CacheItemPoolInterface $cache, private ReverseRouter $reverseRouter)
     {
-        $this->cache = $cache;
-        $this->reverseRouter = $reverseRouter;
         $this->client = new Client('https://api.fusio-project.org', new Anonymous());
     }
 

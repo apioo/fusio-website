@@ -7,7 +7,6 @@ use PSX\Api\Attribute\Path;
 use PSX\Framework\Controller\ControllerAbstract;
 use PSX\Framework\Http\Writer\Template;
 use PSX\Framework\Loader\ReverseRouter;
-use PSX\Http\Environment\HttpContextInterface;
 
 class Platform extends ControllerAbstract
 {

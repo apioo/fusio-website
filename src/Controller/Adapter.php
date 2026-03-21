@@ -12,13 +12,8 @@ use PSX\Record\RecordInterface;
 
 class Adapter extends ControllerAbstract
 {
-    private Table\Adapter $adapterTable;
-    private ReverseRouter $reverseRouter;
-
-    public function __construct(Table\Adapter $adapterTable, ReverseRouter $reverseRouter)
+    public function __construct(private Table\Adapter $adapterTable, private ReverseRouter $reverseRouter)
     {
-        $this->adapterTable = $adapterTable;
-        $this->reverseRouter = $reverseRouter;
     }
 
     #[Get]

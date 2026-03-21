@@ -7,15 +7,11 @@ use PSX\Api\Attribute\Path;
 use PSX\Framework\Controller\ControllerAbstract;
 use PSX\Framework\Http\Writer\Template;
 use PSX\Framework\Loader\ReverseRouter;
-use PSX\Http\Exception\NotFoundException;
 
 class Comparison extends ControllerAbstract
 {
-    private ReverseRouter $reverseRouter;
-
-    public function __construct(ReverseRouter $reverseRouter)
+    public function __construct(private ReverseRouter $reverseRouter)
     {
-        $this->reverseRouter = $reverseRouter;
     }
 
     #[Get]
@@ -50,9 +46,9 @@ class Comparison extends ControllerAbstract
             'title' => 'Fusio vs ' . ucfirst($type),
             'description' => 'An in-depth technical comparison between Fusio and ' . ucfirst($type) . '. Explore differences to find the right tool for your project.',
             'keywords' => 'Fusio vs ' . ucfirst($type) . ', ' . ucfirst($type) . ' alternative, self-hosted ' . ucfirst($type) . ', ' . ucfirst($type) . ' vs Fusio features, API management comparison, open source backend',
+            'canonical' => $this->reverseRouter->getUrl([self::class, 'detail'], ['app' => $type]),
             'headline' => ucfirst($type) . ' alternative',
             'tagline' => $this->getDescription($type),
-            'canonical' => $this->reverseRouter->getUrl([self::class, 'detail'], ['app' => $type]),
         ];
 
         $templateFile = __DIR__ . '/../../resources/template/comparison/' . $type . '.php';

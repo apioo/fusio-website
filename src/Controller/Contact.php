@@ -21,17 +21,8 @@ class Contact extends ControllerAbstract
 {
     private const TO_RECEIVER = 'christoph.kappestein@gmail.com';
 
-    private CaptchaVerifier $captchaVerifier;
-    private MailerInterface $mailer;
-    private ReverseRouter $reverseRouter;
-    private ConfigInterface $config;
-
-    public function __construct(CaptchaVerifier $captchaVerifier, MailerInterface $mailer, ReverseRouter $reverseRouter, ConfigInterface $config)
+    public function __construct(private CaptchaVerifier $captchaVerifier, private MailerInterface $mailer, private ReverseRouter $reverseRouter, private ConfigInterface $config)
     {
-        $this->captchaVerifier = $captchaVerifier;
-        $this->mailer = $mailer;
-        $this->reverseRouter = $reverseRouter;
-        $this->config = $config;
     }
 
     #[Get]

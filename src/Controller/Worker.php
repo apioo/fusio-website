@@ -10,11 +10,8 @@ use PSX\Framework\Loader\ReverseRouter;
 
 class Worker extends ControllerAbstract
 {
-    private ReverseRouter $reverseRouter;
-
-    public function __construct(ReverseRouter $reverseRouter)
+    public function __construct(private ReverseRouter $reverseRouter)
     {
-        $this->reverseRouter = $reverseRouter;
     }
 
     #[Get]
@@ -25,9 +22,9 @@ class Worker extends ControllerAbstract
             'title' => 'Multi-Language Workers | Polyglot API Execution Runtimes',
             'description' => 'Execute business logic in your preferred language. Fusio Workers support Javascript, Python, PHP, and more, while maintaining a unified API contract.',
             'keywords' => 'API Worker, Polyglot Backend, Serverless Runtimes, Fusio Worker, Multi-language API, Python API Logic, Javascript API Execution',
+            'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
             'headline' => 'Worker',
             'tagline' => 'Execute logic in any language. Run your business code in Javascript, Python, or PHP via unified runtimes.',
-            'canonical' => $this->reverseRouter->getUrl([self::class, 'show']),
         ];
 
         $templateFile = __DIR__ . '/../../resources/template/worker.php';
