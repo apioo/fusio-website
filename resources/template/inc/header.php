@@ -51,7 +51,7 @@
                     <img src="<?php echo $base; ?>/img/fusio_64px.png" alt="Logo" width="32" height="32" class="d-inline-block align-text-top">
                 </div>
                 <span class="text-xl font-extrabold text-white tracking-tighter">
-                    <a href="<?php echo $base; ?>">Fusio</a>
+                    <a href="<?php echo $url; ?>">Fusio</a>
                 </span>
             </div>
             <div class="hidden lg:flex items-center gap-8 text-sm font-semibold">
