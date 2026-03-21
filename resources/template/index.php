@@ -53,7 +53,7 @@ https://github.com/apioo/fusio
     <div class="max-w-7xl mx-auto">
         <div class="text-center mb-20">
             <h2 class="text-4xl md:text-5xl font-black text-white mb-6 tracking-tighter">
-                Core <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-rose-500">Capabilities</span>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-rose-500">Features</span>
             </h2>
             <p class="text-slate-400 max-w-2xl mx-auto text-lg">
                 Fusio is a complete API management platform designed to turn your technical logic into scalable digital value.
