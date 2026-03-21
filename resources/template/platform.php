@@ -295,6 +295,74 @@
     </div>
 </section>
 
+<section class="bg-slate-950 py-24 px-6 border-t border-white/5">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+            <div class="max-w-xl">
+                <h2 class="text-3xl md:text-4xl font-black text-white mb-4 tracking-tighter uppercase">
+                    Technical <span class="text-orange-500">Showcase</span>
+                </h2>
+                <p class="text-slate-400 text-sm md:text-base leading-relaxed">
+                    Watch Fusio in action. From AI-assisted logic generation to enterprise-grade API orchestration, see how we solve complex backend challenges.
+                </p>
+            </div>
+            <a href="https://www.youtube.com/@FusioAPI" target="_blank" class="text-xs font-bold text-slate-500 hover:text-orange-500 uppercase tracking-widest transition-colors flex items-center gap-2">
+                Visit YouTube Channel ↗
+            </a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="group flex flex-col bg-slate-900/40 rounded-3xl border border-white/5 overflow-hidden hover:border-orange-500/30 transition-all duration-500 shadow-2xl">
+                <div class="relative aspect-video overflow-hidden">
+                    <iframe
+                            class="w-full h-full grayscale-[0.5] group-hover:grayscale-0 transition-all duration-700"
+                            src="https://www.youtube.com/embed/LhAPQL23myk"
+                            title="Agent Action AI Development"
+                            frameborder="0" allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2 py-0.5 rounded bg-orange-500/10 border border-orange-500/20 text-orange-500 text-[9px] font-bold uppercase tracking-tighter">Feature Highlight</span>
+                        <span class="text-slate-600 text-[10px] font-mono">04:22</span>
+                    </div>
+                    <h3 class="text-white font-bold text-base mb-2">Agent Action AI Development</h3>
+                    <p class="text-slate-500 text-xs leading-relaxed">
+                        See how Fusio 6.3 uses LLMs to generate, debug, and deploy custom API logic in real-time.
+                    </p>
+                </div>
+            </div>
+            <div class="group flex flex-col bg-slate-900/40 rounded-3xl border border-white/5 overflow-hidden hover:border-blue-500/30 transition-all duration-500">
+                <div class="relative aspect-video bg-slate-950 flex items-center justify-center">
+                    <div class="text-slate-700 text-xs font-mono uppercase tracking-[0.3em]">Tutorial Coming Soon</div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2 py-0.5 rounded bg-blue-500/10 border border-blue-500/20 text-blue-500 text-[9px] font-bold uppercase tracking-tighter">SDK Automation</span>
+                    </div>
+                    <h3 class="text-white font-bold text-base mb-2">Automated SDK Generation</h3>
+                    <p class="text-slate-500 text-xs leading-relaxed">
+                        Learn how to instantly generate C#, Go, and Java client libraries from your Fusio definitions.
+                    </p>
+                </div>
+            </div>
+            <div class="group flex flex-col bg-slate-900/40 rounded-3xl border border-white/5 overflow-hidden hover:border-emerald-500/30 transition-all duration-500">
+                <div class="relative aspect-video bg-slate-950 flex items-center justify-center">
+                    <div class="text-slate-700 text-xs font-mono uppercase tracking-[0.3em]">Tutorial Coming Soon</div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-500 text-[9px] font-bold uppercase tracking-tighter">Monetization</span>
+                    </div>
+                    <h3 class="text-white font-bold text-base mb-2">Building an API Product</h3>
+                    <p class="text-slate-500 text-xs leading-relaxed">
+                        A deep dive into setting up subscription plans, quotas, and billing logic for your API.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="border-t border-white/5 bg-slate-950/40 py-6 group">
     <div class="container mx-auto px-6">
         <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
