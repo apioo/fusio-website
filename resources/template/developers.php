@@ -48,7 +48,7 @@
         <div class="flex flex-col lg:flex-row justify-between items-end gap-8 mb-12">
             <div class="max-w-2xl">
                 <h2 class="text-xs font-bold text-emerald-400 uppercase tracking-[0.3em] mb-6">02. Software Development Kits</h2>
-                <p class="text-slate-400">Connect with the Fusio API using our type-safe SDKs. We offer native support for major languages and frameworks, with the ability to auto-generate custom SDKs for your specific API.</p>
+                <p class="text-slate-400">Connect with the Fusio API using our type-safe SDKs.</p>
             </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
