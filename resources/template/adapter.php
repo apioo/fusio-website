@@ -92,7 +92,7 @@
             <div class="bg-slate-950 rounded-[1.4rem] p-8">
                 <h2 class="text-2xl font-bold text-white mb-4">Want to build your own?</h2>
                 <p class="text-slate-400 text-sm mb-6">Add "fusio-adapter" to your composer.json to automatically get listed in the community section.</p>
-                <a href="https://docs.fusio-project.org/docs/concepts/adapter" class="text-orange-500 font-bold hover:underline">Read the Documentation →</a>
+                <a href="https://docs.fusio-project.org/docs/internal/adapter" class="text-orange-500 font-bold hover:underline">Read the Documentation →</a>
             </div>
         </div>
     </div>
