@@ -16,8 +16,8 @@ and assist in building custom endpoint logic and schemas.</p>
 
 <p>The adapter and AI features are based on the new <a href="https://ai.symfony.com/">Symfony AI</a> components. All AI
 features are optional and still experimental, but we wanted to make them available early to gather feedback from our
-users. You can find more information about these features on our dedicated <a href="https://www.fusio-project.org/ai">AI
-features page</a>.
+users. You can find more information about these features at our <a href="https://docs.fusio-project.org/docs/ai/">AI
+documentation</a> page.
 
 <p>The following list covers the most important changes in this release:</p>
 
@@ -1200,10 +1200,10 @@ we are rolling out our website and documentation update.</p>
 
 <p>We have identified and described 5 use cases of Fusio, we have gathered these use cases over the
 years working with our users and we think this should help new users to see how Fusio can be used.
-These use cases are now listed in the <a href="https://docs.fusio-project.org/docs/use_cases/">documentation</a>
-and also at the <a href="https://www.fusio-project.org/use-cases">website</a>.</p>
+These use cases are now listed in the <a href="https://docs.fusio-project.org/docs/">documentation</a>
+and also at the <a href="https://www.fusio-project.org/">website</a>.</p>
 
-<p>Besides this we have updated our <a href="https://www.fusio-project.org/sdk">SDK page</a> which now lists
+<p>Besides this we have updated our <a href="https://www.fusio-project.org/developers">SDK page</a> which now lists
 our additional C# and Python SDK and also provides direct links to examples. At the documentation we have also rewritten
 many pages for the latest 5.0 release and added more screenshots and explanations how to configure specific actions.</p>
 
