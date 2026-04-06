@@ -1,6 +1,132 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <entry>
+        <title>Fusio 7.0 released</title>
+        <updated>2026-04-06T10:32:00Z</updated>
+        <summary>
+            This post announces the release of the next major version 7.0
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>We are excited to announce the next major release 7.0 of Fusio. This version introduces a new
+<a href="https://docs.fusio-project.org/docs/ai/">Agent concept</a> which allows you to build custom agents and expose
+them as REST API. It is possible to describe the response of an agent with a schema to produce structured output. The
+same agent logic can be also used internally to develop and configure your Fusio platform, by default we install
+internal agents to solve specific tasks i.e. to build custom actions or schemas by describing your logic in natural
+language. This new Agent concept has evolved from the Intent idea which we have introduced in the 6.3 version.
+We have added a new Agent connection which uses the <a href="https://ai.symfony.com/">Symfony AI</a> components to
+handle the communication with the LLM provider.</p>
+
+<p>As next major feature we have built a new taxonomy system which helps you to categorize your entities. This can be
+especially useful for larger systems to group them into i.e. features or any other category. With this change we have
+also introduced a new query language for the backend which allows you to filter every list by every column on the table,
+for example in the action list you could filter like <code>class: Fusio.Adapter.Worker.Action.WorkerPHP</code> to list
+only actions using the <code>WorkerPHP</code> class. This works similar to query languages like the GitHub or Jira query
+language.</p>
+
+<p>The last big feature is the introduction of a new commit log for actions and schemas. If you save now an action or
+schema we insert every change into a dedicated commit table. This allows us to track and show every change in a
+changelog. We use this commit table if you move an operation to "Stable", then we fix the action and schema config to
+the latest commit so that further changes do not affect the endpoint directly. This is especially useful to evolve your
+system without breaking existing clients.</p>
+
+<p>The following list covers the most important changes in this release:</p>
+
+<ul>
+    <li>
+        <b>Added a new taxonomy system <a href="https://github.com/apioo/fusio/issues/666">#666</a></b>
+        <p></p>
+        <p>We have added a new taxonomy system which allows you to assign a taxonomy to one of the following main
+        entites: Operation, Action, Schema, Event, Cronjob, Trigger. Through this you can group them i.e. into features
+        or any other category.</p>
+    </li>
+    <li>
+        <b>Added action and schema commit log and freeze production config</b>
+        <p>A new action and schema commit table was introduced to record every change. Those changes are then visible at
+        a changelog which you can see at the backend.</p>
+        <div class="mt-4 mb-4 text-center">
+            <img src="/website/fusio-project.org/public/img/blog/fusio-7.0-released/action_changelog.png" alt="Action Changelog" class="img-fluid">
+        </div>
+        <p>If you move an operation to "Stable" Fusio will now fix the schema and action to a specific commit so that
+        further changes do not directly affect the API. This helps to make your API development more stable so that
+        existing clients do not break with any change.</p>
+    </li>
+    <li>
+        <b>Added new agent concept to allow users to build custom agents</b>
+        <p>We have added a new Agent concept which allows you to build custom AI agents for your use case. At the
+        backend you can configure such an agent by describing an initial prompt and the tools which the agent is able
+        to use. Each agent can use every available operation as tool, which gives the agent a powerful way to interact
+        with your business logic.</p>
+        <div class="mt-4 mb-4 text-center">
+            <img src="/website/fusio-project.org/public/img/blog/fusio-7.0-released/agent_detail.png" alt="Agent Detail" class="img-fluid">
+        </div>
+    </li>
+    <li>
+        <b>Added AgentCall action which helps to build API an endpoint for custom agents</b>
+        <p>The <code>AgentCall</code> action allows you to invoke an Agent, through this you can expose your Agent logic
+        via REST API.</p>
+    </li>
+    <li>
+        <b>New backend filter query language</b>
+        <p>A new query language was introduced to filter every list by all possible columns on a table. For example
+        you can simply query <code>id: 1</code> to search for a record with the id 1.</p>
+    </li>
+    <li>
+        <b>Implemented four internal agents: architect, action, schema and database</b>
+        <p>For new installations we install by default the Action, Schema, Architect, Database and General agent which
+        help you to build and configure your Fusio system.</p>
+    </li>
+    <li>
+        <b>Migrate connection intents to agent designer</b>
+        <p>All previous intent logic is now moved to the new agent concept. The Agent designer is still available but
+        only to send direct messages to the agent without tracking those messages.</p>
+    </li>
+    <li>
+        <b>Migrated to Angular 21</b>
+        <p>We have migrated the Backend and Developer app to Angular 21.</p>
+    </li>
+    <li>
+        <b>Fix restore tenant handling</b>
+        <p>We have added missing tenant handling when restoring a record.</p>
+    </li>
+    <li>
+        <b>Improved error response in case in invalid payload was provided <a href="https://github.com/apioo/fusio/issues/668">#668</a></b>
+        <p>We have improved the error response in case a user has provided i.e. invalid JSON or XML payload, in this
+        case we now return a proper 400er response.</p>
+    </li>
+    <li>
+        <b>Add additional action response factory methods</b>
+        <p>We have added additional methods to the <code>Response\Factory</code> which simplifies returning a response.
+        For errors this uses the common error structure so that you do not need to build this by yourself. For example,
+        you can now use the following methods in your action:</p>
+        <pre><code>$response->ok(['foo' => 'bar']);
+$response->created(['foo' => 'bar']);
+$response->accepted(['foo' => 'bar']);
+$response->noContent();
+$response->badRequest('Message');
+$response->forbidden('Message');
+$response->notFound('Message');
+$response->conflict('Message');
+$response->gone('Message');
+$response->internalServerError('Message');
+$response->notImplemented('Message');</code></pre>
+    </li>
+</ul>
+
+<p>For this major release we have also updated our website and <a href="https://docs.fusio-project.org/">documentation</a>
+to provide a modern look and help new users get started with Fusio. We are really excited about the possibilities with
+this new Fusio version and we also would like to thank or community and sponsors to support such an open source project.
+If you want to provide some feedback take a look at our GitHub <a href="https://github.com/apioo/fusio/discussions">discussions</a> or
+<a href="https://github.com/apioo/fusio/issues">issues</a> page.</p>
+
+<p>Best regards<br>
+Christoph</p>
+
+]]></content>
+    </entry>
+    <entry>
         <title>Fusio 6.3 released</title>
         <updated>2026-02-01T10:28:00Z</updated>
         <summary>
