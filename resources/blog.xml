@@ -107,6 +107,11 @@ $response->gone('Message');
 $response->internalServerError('Message');
 $response->notImplemented('Message');</code></pre>
     </li>
+    <li>
+        <b>Add development specification panel</b>
+        <p>We have added new specification panel to the development section which allows you to preview and publish your
+        current API specification to the typehub.cloud platform.</p>
+    </li>
 </ul>
 
 <p>Alongside this major release, we have refreshed our website and <a href="https://docs.fusio-project.org/">documentation</a>
