@@ -315,7 +315,7 @@
                 <div class="relative aspect-video overflow-hidden">
                     <iframe
                             class="w-full h-full grayscale-[0.5] group-hover:grayscale-0 transition-all duration-700"
-                            src="https://www.youtube.com/watch?v=GVkIbZqssWg"
+                            src="https://www.youtube.com/embed/GVkIbZqssWg?si=KXECRfcum-zwTt6k"
                             title="Fusio 7.0 - REST API Agent Development"
                             frameborder="0" allowfullscreen>
                     </iframe>
