@@ -315,6 +315,26 @@
                 <div class="relative aspect-video overflow-hidden">
                     <iframe
                             class="w-full h-full grayscale-[0.5] group-hover:grayscale-0 transition-all duration-700"
+                            src="https://www.youtube.com/watch?v=GVkIbZqssWg"
+                            title="Fusio 7.0 - REST API Agent Development"
+                            frameborder="0" allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2 py-0.5 rounded bg-orange-500/10 border border-orange-500/20 text-orange-500 text-[9px] font-bold uppercase tracking-tighter">Feature Highlight</span>
+                        <span class="text-slate-600 text-[10px] font-mono">04:50</span>
+                    </div>
+                    <h3 class="text-white font-bold text-base mb-2">REST API Agent Development</h3>
+                    <p class="text-slate-500 text-xs leading-relaxed">
+                        Shows the new Fusio 7.0 Architect Agent to build complete REST APIs based on a prompt.
+                    </p>
+                </div>
+            </div>
+            <div class="group flex flex-col bg-slate-900/40 rounded-3xl border border-white/5 overflow-hidden hover:border-orange-500/30 transition-all duration-500 shadow-2xl">
+                <div class="relative aspect-video overflow-hidden">
+                    <iframe
+                            class="w-full h-full grayscale-[0.5] group-hover:grayscale-0 transition-all duration-700"
                             src="https://www.youtube.com/embed/LhAPQL23myk"
                             title="Agent Action AI Development"
                             frameborder="0" allowfullscreen>
@@ -342,20 +362,6 @@
                     <h3 class="text-white font-bold text-base mb-2">Automated SDK Generation</h3>
                     <p class="text-slate-500 text-xs leading-relaxed">
                         Learn how to instantly generate C#, Go, and Java client libraries from your Fusio definitions.
-                    </p>
-                </div>
-            </div>
-            <div class="group flex flex-col bg-slate-900/40 rounded-3xl border border-white/5 overflow-hidden hover:border-emerald-500/30 transition-all duration-500">
-                <div class="relative aspect-video bg-slate-950 flex items-center justify-center">
-                    <div class="text-slate-700 text-xs font-mono uppercase tracking-[0.3em]">Tutorial Coming Soon</div>
-                </div>
-                <div class="p-6">
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-500 text-[9px] font-bold uppercase tracking-tighter">Monetization</span>
-                    </div>
-                    <h3 class="text-white font-bold text-base mb-2">Building an API Product</h3>
-                    <p class="text-slate-500 text-xs leading-relaxed">
-                        A deep dive into setting up subscription plans, quotas, and billing logic for your API.
                     </p>
                 </div>
             </div>
