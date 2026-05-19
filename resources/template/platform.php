@@ -335,33 +335,39 @@
                 <div class="relative aspect-video overflow-hidden">
                     <iframe
                             class="w-full h-full grayscale-[0.5] group-hover:grayscale-0 transition-all duration-700"
-                            src="https://www.youtube.com/embed/LhAPQL23myk"
-                            title="Agent Action AI Development"
+                            src="https://www.youtube.com/embed/yXzw9x6W0Ck"
+                            title="Fusio 7.0 - VSCode Extension REST API Development"
                             frameborder="0" allowfullscreen>
                     </iframe>
                 </div>
                 <div class="p-6">
                     <div class="flex items-center gap-2 mb-3">
                         <span class="px-2 py-0.5 rounded bg-orange-500/10 border border-orange-500/20 text-orange-500 text-[9px] font-bold uppercase tracking-tighter">Feature Highlight</span>
-                        <span class="text-slate-600 text-[10px] font-mono">04:22</span>
+                        <span class="text-slate-600 text-[10px] font-mono">03:28</span>
                     </div>
-                    <h3 class="text-white font-bold text-base mb-2">Agent Action AI Development</h3>
+                    <h3 class="text-white font-bold text-base mb-2">VSCode Extension REST API Development</h3>
                     <p class="text-slate-500 text-xs leading-relaxed">
-                        See how Fusio 6.3 uses LLMs to generate, debug, and deploy custom API logic in real-time.
+                        See how we can use the Fusio VSCode Extension to build custom actions.
                     </p>
                 </div>
             </div>
             <div class="group flex flex-col bg-slate-900/40 rounded-3xl border border-white/5 overflow-hidden hover:border-blue-500/30 transition-all duration-500">
-                <div class="relative aspect-video bg-slate-950 flex items-center justify-center">
-                    <div class="text-slate-700 text-xs font-mono uppercase tracking-[0.3em]">Tutorial Coming Soon</div>
+                <div class="relative aspect-video overflow-hidden">
+                    <iframe
+                            class="w-full h-full grayscale-[0.5] group-hover:grayscale-0 transition-all duration-700"
+                            src="https://www.youtube.com/embed/XaMftVgOUkQ"
+                            title="Fusio 7.0 - Custom Agent Development"
+                            frameborder="0" allowfullscreen>
+                    </iframe>
                 </div>
                 <div class="p-6">
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="px-2 py-0.5 rounded bg-blue-500/10 border border-blue-500/20 text-blue-500 text-[9px] font-bold uppercase tracking-tighter">SDK Automation</span>
+                        <span class="px-2 py-0.5 rounded bg-orange-500/10 border border-orange-500/20 text-orange-500 text-[9px] font-bold uppercase tracking-tighter">Feature Highlight</span>
+                        <span class="text-slate-600 text-[10px] font-mono">08:09</span>
                     </div>
-                    <h3 class="text-white font-bold text-base mb-2">Automated SDK Generation</h3>
+                    <h3 class="text-white font-bold text-base mb-2">Custom Agent Development</h3>
                     <p class="text-slate-500 text-xs leading-relaxed">
-                        Learn how to instantly generate C#, Go, and Java client libraries from your Fusio definitions.
+                        Shows how you can build custom AI agents with Fusio.
                     </p>
                 </div>
             </div>

@@ -145,7 +145,7 @@ https://github.com/apioo/fusio
         <div class="max-w-3xl mx-auto text-center mb-16">
             <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">See Fusio in <span class="text-orange-500">Action.</span></h2>
             <p class="text-slate-400 text-lg">
-                Watch how to build a production-ready API from scratch, generate SDKs, and integrate with AI agents using the Model Context Protocol.
+                Watch how to build a production-ready API from scratch, generate SDKs, and integrate with AI agents.
             </p>
         </div>
         <div class="max-w-5xl mx-auto relative group">
@@ -154,7 +154,7 @@ https://github.com/apioo/fusio
                 <div class="aspect-video rounded-[1.5rem] overflow-hidden bg-black">
                     <iframe
                             class="w-full h-full"
-                            src="https://www.youtube.com/embed/Iz-VmMYviaY?si=uV6p533W89u-rM-X"
+                            src="https://www.youtube.com/embed/U7QYGKknw_Q"
                             title="Fusio Introduction Video"
                             frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -165,20 +165,20 @@ https://github.com/apioo/fusio
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
                 <div class="text-center">
-                    <span class="block text-white font-bold">13 Min</span>
+                    <span class="block text-white font-bold">15 Min</span>
                     <span class="text-xs text-slate-400 uppercase tracking-widest">Full Walkthrough</span>
                 </div>
                 <div class="text-center">
-                    <span class="block text-white font-bold">SDK Gen</span>
+                    <span class="block text-white font-bold">Agent Integration</span>
                     <span class="text-xs text-slate-400 uppercase tracking-widest">Live Demo</span>
                 </div>
                 <div class="text-center">
-                    <span class="block text-white font-bold">MCP Server</span>
-                    <span class="text-xs text-slate-400 uppercase tracking-widest">AI Integration</span>
+                    <span class="block text-white font-bold">HTTP Proxy</span>
+                    <span class="text-xs text-slate-400 uppercase tracking-widest">Action</span>
                 </div>
                 <div class="text-center">
-                    <span class="block text-white font-bold">PHP/JS/Python</span>
-                    <span class="text-xs text-slate-400 uppercase tracking-widest">Language Support</span>
+                    <span class="block text-white font-bold">Worker</span>
+                    <span class="text-xs text-slate-400 uppercase tracking-widest">Custom Logic</span>
                 </div>
             </div>
         </div>
