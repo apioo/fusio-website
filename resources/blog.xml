@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <!--
     <entry>
         <title>Fusio 7.0 released</title>
-        <updated>2026-04-06T10:35:00Z</updated>
+        <updated>2026-05-23T18:21:00Z</updated>
         <summary>
             This post announces the release of the next major version 7.0
         </summary>
@@ -18,7 +17,8 @@ agent logic can also be used internally to develop and configure your Fusio plat
 agents to handle specific tasks such as building custom actions or schemas by describing your logic in natural language.
 This new Agent concept has evolved from the Intent idea which we have introduced in version 6.3. Additionally, we have
 added a new Agent connection that utilizes <a href="https://ai.symfony.com/">Symfony AI</a> components to manage
-communication with LLM providers.</p>
+communication with LLM providers. These AI features are of course complete optional, and you can use Fusio without
+them.</p>
 
 <p>Another major feature is the new taxonomy system, designed to help you categorize your entities. This is particularly
 useful for organizing larger systems into features or custom groups. Alongside this, we have introduced a new backend
@@ -37,7 +37,6 @@ existing client integrations.</p>
 <ul>
     <li>
         <b>Added a new taxonomy system <a href="https://github.com/apioo/fusio/issues/666">#666</a></b>
-        <p></p>
         <p>You can now assign taxonomies to main entities including Operations, Actions, Schemas, Events, Cronjobs, and
         Triggers to group them by feature or category.</p>
     </li>
@@ -60,7 +59,7 @@ existing client integrations.</p>
         </div>
     </li>
     <li>
-        <b>Added AgentCall action which helps to build API an endpoint for custom agents</b>
+        <b>Added AgentCall action which helps to build an API endpoint for custom agents</b>
         <p>The new <code>AgentCall</code> action allows you to invoke an agent directly, making it easy to expose agent
         logic through a REST endpoint.</p>
     </li>
@@ -125,7 +124,6 @@ Christoph</p>
 
 ]]></content>
     </entry>
-    -->
     <entry>
         <title>Fusio 6.3 released</title>
         <updated>2026-02-01T10:28:00Z</updated>
