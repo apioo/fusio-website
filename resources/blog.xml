@@ -1,6 +1,83 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <entry>
+        <title>Fusio 7.1 released</title>
+        <updated>2026-07-18T22:30:00Z</updated>
+        <summary>
+            This post announces the release of the next version 7.1
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>We are excited to announce the release of Fusio 7.1. This minor version expands on the agent concept introduced in
+the 7.0 release. You can now mark an agent as either private or public, similar to an operation. Making an agent public
+allows developers to use it directly in the developer portal. Additionally, these agent endpoints can be used to
+integrate custom agent capabilities directly into your app.</p>
+
+<p>We have also added the ability to configure an agent's temperature, as well as the cost (in points) a user must spend
+to invoke it. This integrates seamlessly with the same points system already used for operations.</p>
+
+<p>Besides the agent improvements, we have significantly extended the TypeHub integration. From the specification panel,
+you can now push your local API specification to <a href="https://typehub.cloud/">TypeHub</a>, our API design platform
+that tracks all API changes and provides client SDKs. It is also possible to tag a release through Fusio. Every schema
+and action configuration receives a version tag, allowing users to request a specific version via the
+<code>API-Version</code> header.</p>
+
+<p>Another great addition is the open availability of all <a href="https://sdkgen.app/">SDKgen</a> code generators.
+Previously, users had to register an account to access generators like Java, Python, or C#. Now, every Fusio user can
+use them directly and anonymously.</p>
+
+<p>The following list covers the most important changes in this release:</p>
+
+<ul>
+    <li>
+        <b>Added consumer agent</b>
+        <p>You can now interact with public agents through the new <code>/consumer/agent</code> and <code>/agent/:agent_id/message</code> endpoints.</p>
+    </li>
+    <li>
+        <b>Add option to mark agent as public</b>
+        <p>In the backend, agents can now be configured as either public or private.</p>
+    </li>
+    <li>
+        <b>Add option to configure temperature and costs for an agent</b>
+        <p>It is now possible to configure the temperature for each agent. You can also set a point cost that a user must pay to invoke the agent.</p>
+    </li>
+    <li>
+        <b>Added basic agent message dialog to developer portal</b>
+        <p>The developer portal now features a basic agent panel, allowing users to interact directly with a public agent.</p>
+    </li>
+    <li>
+        <b>Added agent to deployment</b>
+        <p>Agents can now be managed via the deployment system, meaning you can define your agent configurations and system prompts using YAML and Markdown files.</p>
+    </li>
+    <li>
+        <b>All SDKgen generators are now available without credentials</b>
+        <p>The C#, Go, Java, and Python SDK generators can now be used directly without requiring account credentials.</p>
+    </li>
+    <li>
+        <b>Improved TypeHub integration add option to create a tag and see the changelog</b>
+        <p>The <a href="https://typehub.cloud/">TypeHub</a> integration has been expanded, allowing you to push your API specification directly to TypeHub to track changes and generate client SDKs for your users.</p>
+    </li>
+    <li>
+        <b>Freeze action config on specification tag</b>
+        <p>Tagging a version through the Specification panel now internally creates a snapshot tag of the current action and schema configuration states.</p>
+    </li>
+    <li>
+        <b>Consider Api-Version header and load fitting config on request</b>
+        <p>Fusio now evaluates the <code>API-Version</code> header to load the matching configuration on request. This provides a robust way to version your API without breaking existing client integrations.</p>
+    </li>
+</ul>
+
+<p>If you want to provide some feedback take a look at our GitHub <a href="https://github.com/apioo/fusio/discussions">discussions</a> or
+<a href="https://github.com/apioo/fusio/issues">issues</a> page.</p>
+
+<p>Best regards<br>
+Christoph</p>
+
+]]></content>
+    </entry>
+    <entry>
         <title>Fusio 7.0 released</title>
         <updated>2026-05-23T18:21:00Z</updated>
         <summary>
