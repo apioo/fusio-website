@@ -1,12 +1,12 @@
 {
   "require": {
     "php": ">=8.1",
-    "psx/framework": "^7.0",
+    "psx/framework": "^8.0",
     "symfony/dotenv": "^7.0",
     "symfony/mailer": "^7.0",
     "symfony/aha-send-mailer": "^7.0",
     "fusio/marketplace": "^0.2.0",
-    "chriskapp/blog": "^0.1.2",
+    "chriskapp/blog": "^0.2.0",
     "google/cloud-recaptcha-enterprise": "^2.3"
   },
   "autoload": {
