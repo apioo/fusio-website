@@ -1,6 +1,102 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <entry>
+        <title>Fusio 7.2 released</title>
+        <updated>2026-10-05T10:17:00Z</updated>
+        <summary>
+            This post announces the release of the next version 7.2
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>We are happy to announce the release of Fusio 7.2. This minor version comes with an integrated proof-of-work based
+captcha system so that you are protected out-of-the-box without the need to configure an ReCaptcha key. Also we have
+introduced a new introduction action which allows us to create dynamic introduction texts for an agent. Each agent can
+now handle also a <code>ref_id</code> which allows us to have a conversation for a specific record, through this it is
+now also possible in the backend to modify an existing action or schema through an agent. Also we have added a custom
+agent registry at the frontend which helps to build complete customized frontend experiences for your agent.</p>
+
+<p>The following list covers the most important changes in this release:</p>
+
+<ul>
+    <li>
+        <b>Add missing API descriptions</b>
+        <p>We have added many missing descriptions to our API specification which helps humans and agents to better
+        understand the API.</p>
+    </li>
+    <li>
+        <b>Add kind property</b>
+        <p>The Fusio API now returns a <code>kind</code> property for every response object. The kind is also an uri
+        which uniquely identifies the object i.e. <a href="https://typehub.cloud/s/fusio/sdk/7.0.14/System_About">https://typehub.cloud/s/fusio/sdk/7.0.14/System_About</a>.
+        At the same time it is also a visitable URL to get all schema information about the object which is hosted at
+        our <a href="https://typehub.cloud/">TypeHub</a> platform. Note this change is only related to the Fusio
+        internal API and does not affect the API which you build with Fusio.</p>
+    </li>
+    <li>
+        <b>Implemented proof of work captcha system</b>
+        <p>We have implemented a new proof-of-work captcha system which replaces the ReCaptcha integration. Previously
+        users always needed to configure a Google ReCaptcha API key to protect i.e. the registration API endpoint.
+        Fusio has now an integrated solution which works out-of-the-box so that you do not need to depend on this
+        external system.</p>
+    </li>
+    <li>
+        <b>Add stricter rate limits to the authorization endpoints</b>
+        <p>With the introduction of the new captcha system we have also set more strict rate-limits on the authorization
+        endpoints to protect from brute-force attacks.</p>
+    </li>
+    <li>
+        <b>Updated mcp/sdk package</b>
+        <p>The <code>mcp/sdk</code> package was updated to the latest <code>0.14</code> version which is in use at our
+        Agent system.</p>
+    </li>
+    <li>
+        <b>Add option to configure an agent introduction action</b>
+        <p>It is now possible to configure a an introduction action at each agent. This action gets executed on every
+        agent request and the response of this action can be used as variables inside the introduction text. If such an
+        action is configured the introduction text becomes a twig template where you can access the dynamic values which
+        are returned by the action. For example take a look at the existing schema agent where we have an introduction
+        action to load an existing schema.</p>
+        <div class="mt-4 mb-4 text-center">
+            <img src="/img/blog/fusio-7.2-released/agent_introduction_action.png" alt="Schema Agent introduction action" class="img-fluid">
+        </div>
+    </li>
+    <li>
+        <b>Add and handle reference id at an agent</b>
+        <p>Every agent now supports a <code>ref_id</code> for example s. <code>/apps/fusio/agent/3/chat?ref_id=1</code>.
+        Through this all chat messages refer to the provided id and are only visible in the context of this id. Through
+        this you can i.e. edit an existing record with an agent.</p>
+    </li>
+    <li>
+        <b>Add option to edit existing schema or action through an agent</b>
+        <p>We have implemented this <code>ref_id</code> at our backend app which now allows you to modify an existing
+        action or schema through an agent.</p>
+    </li>
+    <li>
+        <b>Add custom agent registry</b>
+        <p>The agent registry is a frontend logic which enables you to build complete custom frontends for your agent.
+        At the backend app we use this to register our custom agents like s.</p>
+        <pre><code>provideAgentChatTypes([
+    [1, {type: Architect, label: 'Architect'}],
+    [2, {type: Action, label: 'Action'}],
+    [3, {type: Schema, label: 'Schema'}],
+    [4, {type: Database, label: 'Database'}],
+    [5, {type: Seed, label: 'Seed'}],
+])</code></pre>
+        <p>In your app you only need to assign a specific type integer and then you can build complete custom agent
+        interfaces for your use-case.</p>
+    </li>
+</ul>
+
+<p>If you want to provide some feedback take a look at our GitHub <a href="https://github.com/apioo/fusio/discussions">discussions</a> or
+<a href="https://github.com/apioo/fusio/issues">issues</a> page.</p>
+
+<p>Best regards<br>
+Christoph</p>
+
+]]></content>
+    </entry>
+    <entry>
         <title>Fusio 7.1 released</title>
         <updated>2026-07-18T22:30:00Z</updated>
         <summary>
