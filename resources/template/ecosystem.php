@@ -89,7 +89,7 @@
                     <span class="text-xs font-mono text-slate-600">ID: 0x02</span>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2 group-hover:text-orange-500 transition">
-                    <a href="https://github.com/apioo/fusio-framework">Framework</a>
+                    <a href="<?php echo $router->getAbsolutePath([\App\Controller\Project\Framework::class, 'show']); ?>">Framework</a>
                 </h3>
                 <p class="text-sm text-slate-400 leading-relaxed mb-6">Starter repository designed to help you leverage Fusio as a professional PHP framework foundation.</p>
             </div>
@@ -99,14 +99,24 @@
                     <span class="text-xs font-mono text-slate-600">ID: 0x03</span>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2 group-hover:text-orange-500 transition">
-                    <a href="https://github.com/apioo/fusio-plant">Plant</a>
+                    <a href="<?php echo $router->getAbsolutePath([\App\Controller\Project\Plant::class, 'show']); ?>">Plant</a>
                 </h3>
                 <p class="text-sm text-slate-400 leading-relaxed mb-6">Server panel to easily self-host Fusio and other apps on your own infrastructure with one click.</p>
             </div>
             <div class="group p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/[0.07] hover:border-orange-500/30 transition-all duration-300">
                 <div class="flex justify-between items-start mb-8">
-                    <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest px-2 py-1 rounded-md bg-blue-500/10 border border-blue-500/20">Core Logic</span>
+                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest px-2 py-1 rounded-md bg-white/5 border border-white/10">Database API</span>
                     <span class="text-xs font-mono text-slate-600">ID: 0x04</span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-orange-500 transition">
+                    <a href="<?php echo $router->getAbsolutePath([\App\Controller\Project\Grid::class, 'show']); ?>">Grid</a>
+                </h3>
+                <p class="text-sm text-slate-400 leading-relaxed mb-6">Connect to any MySQL, PostgreSQL, or SQLite database to automatically expose your table schemas as secure, type-safe REST endpoints.</p>
+            </div>
+            <div class="group p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/[0.07] hover:border-orange-500/30 transition-all duration-300">
+                <div class="flex justify-between items-start mb-8">
+                    <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest px-2 py-1 rounded-md bg-blue-500/10 border border-blue-500/20">Core Logic</span>
+                    <span class="text-xs font-mono text-slate-600">ID: 0x05</span>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2 group-hover:text-orange-500 transition">
                     <a href="https://phpsx.org/">PSX</a>
@@ -116,7 +126,7 @@
             <div class="group p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/[0.07] hover:border-orange-500/30 transition-all duration-300">
                 <div class="flex justify-between items-start mb-8">
                     <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest px-2 py-1 rounded-md bg-blue-500/10 border border-blue-500/20">Modeling</span>
-                    <span class="text-xs font-mono text-slate-600">ID: 0x05</span>
+                    <span class="text-xs font-mono text-slate-600">ID: 0x06</span>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2 group-hover:text-orange-500 transition">
                     <a href="https://typeschema.org/">TypeSchema</a>
@@ -126,7 +136,7 @@
             <div class="group p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/[0.07] hover:border-orange-500/30 transition-all duration-300">
                 <div class="flex justify-between items-start mb-8">
                     <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest px-2 py-1 rounded-md bg-blue-500/10 border border-blue-500/20">Standard</span>
-                    <span class="text-xs font-mono text-slate-600">ID: 0x06</span>
+                    <span class="text-xs font-mono text-slate-600">ID: 0x07</span>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2 group-hover:text-orange-500 transition">
                     <a href="https://typeapi.org/">TypeAPI</a>

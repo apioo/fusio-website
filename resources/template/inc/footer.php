@@ -21,6 +21,9 @@
                 <div>
                     <p class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Links</p>
                     <ul class="space-y-4 text-sm text-slate-400">
+                        <li><a href="<?php echo $router->getAbsolutePath([\App\Controller\Project\Framework::class, 'show']); ?>" class="hover:text-orange-500 transition">Framework</a></li>
+                        <li><a href="<?php echo $router->getAbsolutePath([\App\Controller\Project\Plant::class, 'show']); ?>" class="hover:text-orange-500 transition">Plant</a></li>
+                        <li><a href="<?php echo $router->getAbsolutePath([\App\Controller\Project\Grid::class, 'show']); ?>" class="hover:text-orange-500 transition">Grid</a></li>
                         <li><a href="https://docs.fusio-project.org/" class="hover:text-orange-500 transition">Documentation</a></li>
                         <li><a href="https://typehub.cloud/" class="hover:text-orange-500 transition">TypeHub</a></li>
                         <li><a href="https://typeapi.org/" class="hover:text-orange-500 transition">TypeAPI</a></li>
