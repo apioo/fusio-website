@@ -28,7 +28,7 @@
                     <span class="w-3 h-3 rounded-full bg-emerald-500/60"></span>
                     <span class="ml-4 text-[10px] font-mono text-slate-500 uppercase tracking-widest">Installation (as root on Ubuntu)</span>
                 </div>
-                <pre class="p-6 text-xs md:text-sm font-mono text-slate-300 leading-relaxed overflow-x-auto">curl -s https://raw.githubusercontent.com/apioo/fusio-plant/refs/heads/main/install.sh -o ./install.sh
+                <pre class="p-6 text-xs md:text-sm font-mono text-slate-300 leading-relaxed overflow-hidden">curl -s https://raw.githubusercontent.com/apioo/fusio-plant/refs/heads/main/install.sh -o ./install.sh
 chmod +x ./install.sh
 ./install.sh</pre>
                 <p class="px-6 pb-6 text-xs text-slate-500 leading-relaxed">
