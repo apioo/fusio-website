@@ -115,8 +115,18 @@
             </div>
             <div class="group p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/[0.07] hover:border-orange-500/30 transition-all duration-300">
                 <div class="flex justify-between items-start mb-8">
-                    <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest px-2 py-1 rounded-md bg-blue-500/10 border border-blue-500/20">Core Logic</span>
+                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest px-2 py-1 rounded-md bg-white/5 border border-white/10">Notifications</span>
                     <span class="text-xs font-mono text-slate-600">ID: 0x05</span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-orange-500 transition">
+                    <a href="<?php echo $router->getAbsolutePath([\App\Controller\Project\Pulse::class, 'show']); ?>">Pulse</a>
+                </h3>
+                <p class="text-sm text-slate-400 leading-relaxed mb-6">Self-hosted notification gateway to send chat, email, push and SMS messages through a single API.</p>
+            </div>
+            <div class="group p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/[0.07] hover:border-orange-500/30 transition-all duration-300">
+                <div class="flex justify-between items-start mb-8">
+                    <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest px-2 py-1 rounded-md bg-blue-500/10 border border-blue-500/20">Core Logic</span>
+                    <span class="text-xs font-mono text-slate-600">ID: 0x06</span>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2 group-hover:text-orange-500 transition">
                     <a href="https://phpsx.org/">PSX</a>
@@ -126,7 +136,7 @@
             <div class="group p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/[0.07] hover:border-orange-500/30 transition-all duration-300">
                 <div class="flex justify-between items-start mb-8">
                     <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest px-2 py-1 rounded-md bg-blue-500/10 border border-blue-500/20">Modeling</span>
-                    <span class="text-xs font-mono text-slate-600">ID: 0x06</span>
+                    <span class="text-xs font-mono text-slate-600">ID: 0x07</span>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2 group-hover:text-orange-500 transition">
                     <a href="https://typeschema.org/">TypeSchema</a>
@@ -136,7 +146,7 @@
             <div class="group p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/[0.07] hover:border-orange-500/30 transition-all duration-300">
                 <div class="flex justify-between items-start mb-8">
                     <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest px-2 py-1 rounded-md bg-blue-500/10 border border-blue-500/20">Standard</span>
-                    <span class="text-xs font-mono text-slate-600">ID: 0x07</span>
+                    <span class="text-xs font-mono text-slate-600">ID: 0x08</span>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2 group-hover:text-orange-500 transition">
                     <a href="https://typeapi.org/">TypeAPI</a>
