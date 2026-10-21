@@ -1,6 +1,83 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <entry>
+        <title>Fusio 7.2.1 released</title>
+        <updated>2026-10-21T23:00:00Z</updated>
+        <summary>
+            This post announces the release of the next version 7.2.1
+        </summary>
+        <category term="fusio" />
+        <category term="announcement" />
+        <content type="html"><![CDATA[
+
+<p>We are happy to announce the release of Fusio 7.2.1. This patch version is released earlier due to the recent remote
+code execution vulnerabilities s. CVE-2026-109618 and CVE-2026-109619. With this release we update our docker image to
+fix the issue, if you self-host Fusio we strongly encouraged to update your PHP version immediately.</p>
+
+<p>The following list covers the most important changes in this release:</p>
+
+<ul>
+    <li>
+        <b>Add "search" query parameter to the SQL-Select-All action</b>
+        <p>The action now supports a <code>search</code> query parameter to define more complex conditions, this query
+        language is also already used at the backend. For example you can say <code>column_a: foo AND column_b: bar</code></p>
+    </li>
+    <li>
+        <b>Internally reuse SQL and Filesystem actions</b>
+        <p>Previously we had duplicated the code at the Fusio backend and in the actions to i.e. get data from a table
+        or list files. At the backend we now extend the existing action classes which reduces duplicate code.</p>
+    </li>
+    <li>
+        <b>Add FTP adapter</b>
+        <p>We have added a new <a href="https://github.com/apioo/fusio-adapter-ftp">FTP adapter</a> which provides a
+        "Ftp" connection. Internally it also uses the Flysystem so it has the same interface as the local file adapter.</p>
+    </li>
+    <li>
+        <b>Added Grid project</b>
+        <p>We have introduced a new Fusio based side-project called <a href="https://www.fusio-project.org/grid">Grid</a>
+        which basically helps to expose a database as REST API. Therefor you only need to run the <code>grid:setup</code>
+        command and it connects to a remote DB and configures all operations, action and schemas at your Fusio instance
+        to expose all tables as endpoint.</p>
+    </li>
+    <li>
+        <b>Added Pulse project</b>
+        <p>We have introduced another Fusio based side-project called <a href="https://www.fusio-project.org/pulse">Pulse</a>
+        which is a notification gateway based on the <a href="https://symfony.com/doc/current/notifier.html">Symfony Notifier</a>
+        components. It comes with ready to use endpoints to send chat, email, push and sms messages, you only need to
+        configure a provider.</p>
+    </li>
+    <li>
+        <b>Update OpenAPI version to 3.1.2</b>
+        <p>Internally the models and OpenAPI version was updated to the version 3.1.2.</p>
+    </li>
+    <li>
+        <b>Add refresh token status check</b>
+        <p>An issue which was reported by a security researcher that it was possible to use a refresh token even if the
+        token was not active. The refresh token lookup now includes a status active check.</p>
+    </li>
+    <li>
+        <b>Fix OAuth2 redirect uri host check <a href="https://github.com/apioo/fusio-impl/pull/65">#65</a></b>
+        <p>A fix in our OAuth2 redirect uri host check which previously had allowed other domains i.e. if your app had
+        configured a domain like <code>http://google.com</code> the domain <code>http://notgoogle.com</code> could be
+        used, this is now fixed and only all sub-domains of a specific domain are allowed.</p>
+    </li>
+    <li>
+        <b>Update our docker image to fix CVE-2026-109618 and CVE-2026-109619</b>
+        <p>We have update our docker image to the latest PHP <code>8.4.27</code> version which fixes two critical
+        vulnerabilities that can allow unauthenticated remote code execution. All Fusio users are strongly encouraged to
+        update immediately.</p>
+    </li>
+</ul>
+
+<p>If you want to provide some feedback take a look at our GitHub <a href="https://github.com/apioo/fusio/discussions">discussions</a> or
+<a href="https://github.com/apioo/fusio/issues">issues</a> page.</p>
+
+<p>Best regards<br>
+Christoph</p>
+
+]]></content>
+    </entry>
+    <entry>
         <title>Fusio 7.2 released</title>
         <updated>2026-10-05T10:17:00Z</updated>
         <summary>
